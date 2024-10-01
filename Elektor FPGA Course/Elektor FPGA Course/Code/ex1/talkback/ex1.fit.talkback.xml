@@ -1,0 +1,860 @@
+
+<!--
+This XML file (created on Wed Jan 25 09:59:16 2006) contains limited information
+from the compilation of logic designs using Quartus II software (BUT NOT THE
+LOGIC DESIGN FILES) that will be transmitted to Altera Corporation through
+operation of the "TalkBack" feature.  To enable/disable this feature, run
+qtb_install.exe located in your quartus/bin folder.  For more information, go
+to www.altera.com/products/software/download/dnl-download_license.html
+-->
+<talkback>
+<ver>5.1</ver>
+<schema>quartus_version_5.1_build_176.xsd</schema><license>
+	<host_id>0004615a8257</host_id>
+	<nic_id>0004615a8257</nic_id>
+	<cdrive_id>6c1257ae</cdrive_id>
+</license>
+<tool>
+	<name>Quartus II</name>
+	<version>5.1</version>
+	<build>Build 176</build>
+	<binary_type>32</binary_type>
+	<acs_patches>
+		<acs_patch>.15</acs_patch>
+	</acs_patches>
+	<module>quartus_fit.exe</module>
+	<edition>Web Edition</edition>
+	<compilation_end_time>Wed Jan 25 09:59:16 2006</compilation_end_time>
+</tool>
+<machine>
+	<os>Windows XP</os>
+	<cpu>
+		<proc_count>1</proc_count>
+		<cpu_freq units="MHz">1503</cpu_freq>
+	</cpu>
+	<ram units="MB">512</ram>
+</machine>
+<top_file>C:/altera/FPGA_course/ex1/ex1</top_file>
+<resource_usage_summary>
+	<rsc name="Total logic elements" util="1" max=" 12060 " type="int">4 </rsc>
+	<rsc name="-- Combinational with no register" type="int">4</rsc>
+	<rsc name="-- Register only" type="int">0</rsc>
+	<rsc name="-- Combinational with a register" type="int">0</rsc>
+	<rsc name="Logic element usage by number of LUT inputs" type="text"></rsc>
+	<rsc name="-- 4 input functions" type="int">2</rsc>
+	<rsc name="-- 3 input functions" type="int">0</rsc>
+	<rsc name="-- 2 input functions" type="int">2</rsc>
+	<rsc name="-- 1 input functions" type="int">0</rsc>
+	<rsc name="-- 0 input functions" type="int">0</rsc>
+	<rsc name="Logic elements by mode" type="text"></rsc>
+	<rsc name="-- normal mode" type="int">4</rsc>
+	<rsc name="-- arithmetic mode" type="int">0</rsc>
+	<rsc name="-- qfbk mode" type="int">0</rsc>
+	<rsc name="-- register cascade mode" type="int">0</rsc>
+	<rsc name="-- synchronous clear/load mode" type="int">0</rsc>
+	<rsc name="-- asynchronous clear/load mode" type="int">0</rsc>
+	<rsc name="Total LABs" util="1" max=" 1206 " type="int">1 </rsc>
+	<rsc name="Logic elements in carry chains" type="int">0</rsc>
+	<rsc name="User inserted logic elements" type="int">0</rsc>
+	<rsc name="Virtual pins" type="int">0</rsc>
+	<rsc name="I/O pins" util="6" max=" 185 " type="int">11 </rsc>
+	<rsc name="-- Clock pins" util="0" max=" 2 " type="int">0 </rsc>
+	<rsc name="Global signals" type="int">0</rsc>
+	<rsc name="M4Ks" util="0" max=" 52 " type="int">0 </rsc>
+	<rsc name="Total memory bits" util="0" max=" 239616 " type="int">0 </rsc>
+	<rsc name="Total RAM block bits" util="0" max=" 239616 " type="int">0 </rsc>
+	<rsc name="PLLs" util="0" max=" 2 " type="int">0 </rsc>
+	<rsc name="Global clocks" util="0" max=" 8 " type="int">0 </rsc>
+	<rsc name="Maximum fan-out node" type="text">SWITCH1</rsc>
+	<rsc name="Maximum fan-out" type="int">5</rsc>
+	<rsc name="Highest non-global fan-out signal" type="text">SWITCH1</rsc>
+	<rsc name="Highest non-global fan-out" type="int">5</rsc>
+	<rsc name="Total fan-out" type="int">19</rsc>
+	<rsc name="Average fan-out" type="float">1.12</rsc>
+</resource_usage_summary>
+<non_global_high_fan_out_signals>
+	<row>
+		<name>inst5~1</name>
+		<fan_out>1</fan_out>
+	</row>
+	<row>
+		<name>inst6~8</name>
+		<fan_out>1</fan_out>
+	</row>
+	<row>
+		<name>inst7~18</name>
+		<fan_out>1</fan_out>
+	</row>
+	<row>
+		<name>inst8~11</name>
+		<fan_out>2</fan_out>
+	</row>
+	<row>
+		<name>SWITCH1</name>
+		<fan_out>5</fan_out>
+	</row>
+	<row>
+		<name>SWITCH2</name>
+		<fan_out>5</fan_out>
+	</row>
+	<row>
+		<name>SWITCH4</name>
+		<fan_out>2</fan_out>
+	</row>
+	<row>
+		<name>SWITCH3</name>
+		<fan_out>2</fan_out>
+	</row>
+</non_global_high_fan_out_signals>
+<interconnect_usage_summary>
+	<rsc name="M4K buffers" util="0" max=" 1872 " type="int">0 </rsc>
+	<rsc name="Local interconnects" util="1" max=" 43552 " type="int">11 </rsc>
+	<rsc name="LUT chains" util="0" max=" 10854 " type="int">0 </rsc>
+	<rsc name="R4s" util="1" max=" 28560 " type="int">11 </rsc>
+	<rsc name="C4s" util="1" max=" 30600 " type="int">10 </rsc>
+	<rsc name="Global clocks" util="0" max=" 8 " type="int">0 </rsc>
+	<rsc name="LAB clocks" util="0" max=" 312 " type="int">0 </rsc>
+	<rsc name="Direct links" util="0" max=" 43552 " type="int">0 </rsc>
+</interconnect_usage_summary>
+<mep_data>
+	<command_line>quartus_fit --read_settings_files=off --write_settings_files=off ex1 -c ex1</command_line>
+</mep_data>
+<software_data>
+	<smart_recompile>off</smart_recompile>
+</software_data>
+<messages>
+	<info>Info: Quartus II Fitter was successful. 0 errors, 0 warnings</info>
+	<info>Info: Elapsed time: 00:00:08</info>
+	<info>Info: Processing ended: Wed Jan 25 09:59:16 2006</info>
+	<info>Info: Completed Auto Delay Chain Operation</info>
+	<info>Info: Delay annotation completed successfully</info>
+</messages>
+<fitter_settings>
+	<row>
+		<option>Device</option>
+		<setting>EP1C12F256C7</setting>
+	</row>
+	<row>
+		<option>SignalProbe signals routed during normal compilation</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Use smart compilation</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Router Timing Optimization Level</option>
+		<setting>Normal</setting>
+		<default_value>Normal</default_value>
+	</row>
+	<row>
+		<option>Placement Effort Multiplier</option>
+		<setting>1.0</setting>
+		<default_value>1.0</default_value>
+	</row>
+	<row>
+		<option>Router Effort Multiplier</option>
+		<setting>1.0</setting>
+		<default_value>1.0</default_value>
+	</row>
+	<row>
+		<option>Optimize Hold Timing</option>
+		<setting>IO Paths and Minimum TPD Paths</setting>
+		<default_value>IO Paths and Minimum TPD Paths</default_value>
+	</row>
+	<row>
+		<option>Optimize Fast-Corner Timing</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Optimize Timing</option>
+		<setting>Normal compilation</setting>
+		<default_value>Normal compilation</default_value>
+	</row>
+	<row>
+		<option>Optimize IOC Register Placement for Timing</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Limit to One Fitting Attempt</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Final Placement Optimizations</option>
+		<setting>Automatically</setting>
+		<default_value>Automatically</default_value>
+	</row>
+	<row>
+		<option>Fitter Aggressive Routability Optimizations</option>
+		<setting>Automatically</setting>
+		<default_value>Automatically</default_value>
+	</row>
+	<row>
+		<option>Fitter Initial Placement Seed</option>
+		<setting>1</setting>
+		<default_value>1</default_value>
+	</row>
+	<row>
+		<option>Slow Slew Rate</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>PCI I/O</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Weak Pull-Up Resistor</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Enable Bus-Hold Circuitry</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Auto Global Memory Control Signals</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Auto Packed Registers -- Cyclone</option>
+		<setting>Auto</setting>
+		<default_value>Auto</default_value>
+	</row>
+	<row>
+		<option>Auto Delay Chains</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Auto Merge PLLs</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Perform Physical Synthesis for Combinational Logic</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Perform Register Duplication</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Perform Register Retiming</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Perform Asynchronous Signal Pipelining</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Fitter Effort</option>
+		<setting>Auto Fit</setting>
+		<default_value>Auto Fit</default_value>
+	</row>
+	<row>
+		<option>Physical Synthesis Effort Level</option>
+		<setting>Normal</setting>
+		<default_value>Normal</default_value>
+	</row>
+	<row>
+		<option>Logic Cell Insertion - Logic Duplication</option>
+		<setting>Auto</setting>
+		<default_value>Auto</default_value>
+	</row>
+	<row>
+		<option>Auto Register Duplication</option>
+		<setting>Off</setting>
+		<default_value>Off</default_value>
+	</row>
+	<row>
+		<option>Auto Global Clock</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+	<row>
+		<option>Auto Global Register Control Signals</option>
+		<setting>On</setting>
+		<default_value>On</default_value>
+	</row>
+</fitter_settings>
+<fitter_device_options>
+	<row>
+		<option>Enable user-supplied start-up clock (CLKUSR)</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Enable device-wide reset (DEV_CLRn)</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Enable device-wide output enable (DEV_OE)</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Enable INIT_DONE output</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Configuration scheme</option>
+		<setting>Active Serial</setting>
+	</row>
+	<row>
+		<option>Error detection CRC</option>
+		<setting>Off</setting>
+	</row>
+	<row>
+		<option>Reserve ASDO pin after configuration.</option>
+		<setting>As input tri-stated</setting>
+	</row>
+	<row>
+		<option>Reserve all unused pins</option>
+		<setting>As input tri-stated</setting>
+	</row>
+	<row>
+		<option>Base pin-out file on sameframe device</option>
+		<setting>Off</setting>
+	</row>
+</fitter_device_options>
+<input_pins>
+	<row>
+		<name>SWITCH1</name>
+		<pin__>T15</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>52</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>1</cell_number>
+		<combinational_fan_out>5</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<power_up_high>no</power_up_high>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>SWITCH2</name>
+		<pin__>T13</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>48</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>0</cell_number>
+		<combinational_fan_out>5</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<power_up_high>no</power_up_high>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>SWITCH3</name>
+		<pin__>P14</pin__>
+		<i_o_bank>3</i_o_bank>
+		<x_coordinate>53</x_coordinate>
+		<y_coordinate>1</y_coordinate>
+		<cell_number>0</cell_number>
+		<combinational_fan_out>2</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<power_up_high>no</power_up_high>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+	<row>
+		<name>SWITCH4</name>
+		<pin__>M14</pin__>
+		<i_o_bank>3</i_o_bank>
+		<x_coordinate>53</x_coordinate>
+		<y_coordinate>5</y_coordinate>
+		<cell_number>2</cell_number>
+		<combinational_fan_out>2</combinational_fan_out>
+		<registered_fan_out>0</registered_fan_out>
+		<global>no</global>
+		<input_register>no</input_register>
+		<power_up_high>no</power_up_high>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+	</row>
+</input_pins>
+<output_pins>
+	<row>
+		<name>LED1</name>
+		<pin__>N13</pin__>
+		<i_o_bank>3</i_o_bank>
+		<x_coordinate>53</x_coordinate>
+		<y_coordinate>1</y_coordinate>
+		<cell_number>1</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>LED2</name>
+		<pin__>M13</pin__>
+		<i_o_bank>3</i_o_bank>
+		<x_coordinate>53</x_coordinate>
+		<y_coordinate>4</y_coordinate>
+		<cell_number>0</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>LED3</name>
+		<pin__>N12</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>44</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>1</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>LED4</name>
+		<pin__>P12</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>48</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>2</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>LED5</name>
+		<pin__>M12</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>46</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>0</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>LED6</name>
+		<pin__>R12</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>48</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>1</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+	<row>
+		<name>LED7</name>
+		<pin__>T11</pin__>
+		<i_o_bank>4</i_o_bank>
+		<x_coordinate>32</x_coordinate>
+		<y_coordinate>0</y_coordinate>
+		<cell_number>0</cell_number>
+		<output_register>no</output_register>
+		<output_enable_register>no</output_enable_register>
+		<power_up_high>no</power_up_high>
+		<slow_slew_rate>no</slow_slew_rate>
+		<pci_i_o_enabled>no</pci_i_o_enabled>
+		<open_drain>no</open_drain>
+		<tri_primitive>no</tri_primitive>
+		<bus_hold>no</bus_hold>
+		<weak_pull_up>Off</weak_pull_up>
+		<i_o_standard>LVTTL</i_o_standard>
+		<current_strength>24mA</current_strength>
+		<termination>Off</termination>
+		<location_assigned_by>User</location_assigned_by>
+		<load>Unspecified</load>
+	</row>
+</output_pins>
+<i_o_bank_usage>
+	<row>
+		<i_o_bank>1</i_o_bank>
+		<usage>2 / 44 ( 5 % )</usage>
+		<vccio_voltage>3.3V</vccio_voltage>
+	</row>
+	<row>
+		<i_o_bank>2</i_o_bank>
+		<usage>0 / 48 ( 0 % )</usage>
+		<vccio_voltage>3.3V</vccio_voltage>
+	</row>
+	<row>
+		<i_o_bank>3</i_o_bank>
+		<usage>4 / 45 ( 9 % )</usage>
+		<vccio_voltage>3.3V</vccio_voltage>
+	</row>
+	<row>
+		<i_o_bank>4</i_o_bank>
+		<usage>7 / 48 ( 15 % )</usage>
+		<vccio_voltage>3.3V</vccio_voltage>
+	</row>
+</i_o_bank_usage>
+<advanced_data___general>
+	<row>
+		<name>Status Code</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Desired User Slack</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Fit Attempts</name>
+		<value>1</value>
+	</row>
+</advanced_data___general>
+<advanced_data___placement_preparation>
+	<row>
+		<name>Auto Fit Point 1 - Fit Attempt 1</name>
+		<value>ff</value>
+	</row>
+	<row>
+		<name>Mid Wire Use - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Mid Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Internal Atom Count - Fit Attempt 1</name>
+		<value>5</value>
+	</row>
+	<row>
+		<name>LE/ALM Count - Fit Attempt 1</name>
+		<value>5</value>
+	</row>
+	<row>
+		<name>LAB Count - Fit Attempt 1</name>
+		<value>2</value>
+	</row>
+	<row>
+		<name>Outputs per Lab - Fit Attempt 1</name>
+		<value>2.000</value>
+	</row>
+	<row>
+		<name>Inputs per LAB - Fit Attempt 1</name>
+		<value>2.000</value>
+	</row>
+	<row>
+		<name>Global Inputs per LAB - Fit Attempt 1</name>
+		<value>0.000</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;non-global clock / CE pair + async load&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;ce + sync load&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;non-global controls&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;un-route combination&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;non-global with asyn_clear&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;un-route with async_clear&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;non-global async clear + sync clear&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;global non-clock/non-asynch_clear&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;ygr_cl_ngclk_gclkce_sload_aload_constraint&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;global control signals&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;clock / ce pair constraint&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;aload_aclr pair with aload used&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;aload_aclr pair&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;sload_sclear pair&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;invert_a constraint&apos; - Fit Attempt 1</name>
+		<value>0:1;1:1</value>
+	</row>
+	<row>
+		<name>LAB Constraint &apos;has placement constraint&apos; - Fit Attempt 1</name>
+		<value>0:2</value>
+	</row>
+	<row>
+		<name>LEs in Chains - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>LEs in Long Chains - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>LABs with Chains - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>LABs with Multiple Chains - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Time - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+</advanced_data___placement_preparation>
+<advanced_data___placement>
+	<row>
+		<name>Auto Fit Point 2 - Fit Attempt 1</name>
+		<value>ff</value>
+	</row>
+	<row>
+		<name>Early Wire Use - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Early Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Auto Fit Point 3 - Fit Attempt 1</name>
+		<value>ff</value>
+	</row>
+	<row>
+		<name>Mid Wire Use - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Mid Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Auto Fit Point 4 - Fit Attempt 1</name>
+		<value>ff</value>
+	</row>
+	<row>
+		<name>Late Wire Use - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Late Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Auto Fit Point 5 - Fit Attempt 1</name>
+		<value>ff</value>
+	</row>
+	<row>
+		<name>Time - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Time in tsm_dat.dll - Fit Attempt 1</name>
+		<value>0.031</value>
+	</row>
+	<row>
+		<name>Time in tsm_tan.dll - Fit Attempt 1</name>
+		<value>0.024</value>
+	</row>
+</advanced_data___placement>
+<advanced_data___routing>
+	<row>
+		<name>Early Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Mid Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Late Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Late Slack - Fit Attempt 1</name>
+		<value>2147483639</value>
+	</row>
+	<row>
+		<name>Late Wire Use - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Time - Fit Attempt 1</name>
+		<value>0</value>
+	</row>
+	<row>
+		<name>Time in tsm_dat.dll - Fit Attempt 1</name>
+		<value>0.006</value>
+	</row>
+	<row>
+		<name>Time in tsm_tan.dll - Fit Attempt 1</name>
+		<value>0.012</value>
+	</row>
+</advanced_data___routing>
+<compilation_summary>
+	<flow_status>Successful - Wed Jan 25 09:59:16 2006</flow_status>
+	<quartus_ii_version>5.1 Build 176 10/26/2005 SP 0.15 SJ Web Edition</quartus_ii_version>
+	<revision_name>ex1</revision_name>
+	<top_level_entity_name>ex1</top_level_entity_name>
+	<family>Cyclone</family>
+	<device>EP1C12F256C7</device>
+	<timing_models>Final</timing_models>
+	<met_timing_requirements>N/A</met_timing_requirements>
+	<total_logic_elements>4 / 12,060 ( &lt; 1 % )</total_logic_elements>
+	<total_pins>11 / 185 ( 6 % )</total_pins>
+	<total_virtual_pins>0</total_virtual_pins>
+	<total_memory_bits>0 / 239,616 ( 0 % )</total_memory_bits>
+	<total_plls>0 / 2 ( 0 % )</total_plls>
+</compilation_summary>
+<compile_id>837B74F2</compile_id>
+<files>
+	<top>C:/altera/FPGA_course/ex1/ex1.bdf</top>
+	<extensions>
+		<ext ext_name="bdf">1</ext>
+	</extensions>
+	<sub_files>
+		<sub_file>C:/altera/FPGA_course/ex1/ex1.bdf</sub_file>
+	</sub_files>
+</files>
+<architecture>
+	<family>Cyclone</family>
+	<auto_device>OFF</auto_device>
+	<device>EP1C12F256C7</device>
+</architecture>
+<pkg_io>
+	<pin_std count="11">LVTTL</pin_std>
+	<pin_std count="2">LVCMOS</pin_std>
+</pkg_io>
+<research>
+	<le_sclr>0</le_sclr>
+	<le_aclr>0</le_aclr>
+	<le_aload>0</le_aload>
+	<le_sload>0</le_sload>
+	<le_inverta>0</le_inverta>
+	<le_carry_in>0</le_carry_in>
+	<le_ce>0</le_ce>
+	<le_clk>0</le_clk>
+	<le_ce_sload>0</le_ce_sload>
+	<pin_sclr>0</pin_sclr>
+	<pin_aclr>0</pin_aclr>
+	<pin_ce_in>0</pin_ce_in>
+	<pin_ce_out>0</pin_ce_out>
+</research>
+</talkback>

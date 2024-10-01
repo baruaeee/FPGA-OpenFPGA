@@ -1,0 +1,1487 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.5.0 #1020 (May  8 2005)
+                              4 ; This file generated Mon May 08 16:15:29 2006
+                              5 ;--------------------------------------------------------
+                              6 	.module firmware
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _main
+                             13 	.globl _print_voltage
+                             14 	.globl _convert_ad_to_volt
+                             15 	.globl _P3
+                             16 	.globl _P2
+                             17 	.globl _P1
+                             18 	.globl _P0
+                             19 	.globl _print_voltage_PARM_3
+                             20 	.globl _print_voltage_PARM_2
+                             21 	.globl _strbuf
+                             22 ;--------------------------------------------------------
+                             23 ; special function registers
+                             24 ;--------------------------------------------------------
+                             25 	.area RSEG    (DATA)
+                    0080     26 _P0	=	0x0080
+                    0090     27 _P1	=	0x0090
+                    00A0     28 _P2	=	0x00a0
+                    00B0     29 _P3	=	0x00b0
+                             30 ;--------------------------------------------------------
+                             31 ; special function bits 
+                             32 ;--------------------------------------------------------
+                             33 	.area RSEG    (DATA)
+                             34 ;--------------------------------------------------------
+                             35 ; overlayable register banks 
+                             36 ;--------------------------------------------------------
+                             37 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      38 	.ds 8
+                             39 ;--------------------------------------------------------
+                             40 ; internal ram data
+                             41 ;--------------------------------------------------------
+                             42 	.area DSEG    (DATA)
+                             43 ;--------------------------------------------------------
+                             44 ; overlayable items in internal ram 
+                             45 ;--------------------------------------------------------
+                             46 	.area	OSEG    (OVR,DATA)
+   0000                      47 _print_voltage_sloc0_1_0::
+   0000                      48 	.ds 1
+   0001                      49 _print_voltage_sloc1_1_0::
+   0001                      50 	.ds 2
+                             51 ;--------------------------------------------------------
+                             52 ; Stack segment in internal ram 
+                             53 ;--------------------------------------------------------
+                             54 	.area	SSEG	(DATA)
+   0000                      55 __start__stack:
+   0000                      56 	.ds	1
+                             57 
+                             58 ;--------------------------------------------------------
+                             59 ; indirectly addressable internal ram data
+                             60 ;--------------------------------------------------------
+                             61 	.area ISEG    (DATA)
+                             62 ;--------------------------------------------------------
+                             63 ; bit data
+                             64 ;--------------------------------------------------------
+                             65 	.area BSEG    (BIT)
+                             66 ;--------------------------------------------------------
+                             67 ; paged external ram data
+                             68 ;--------------------------------------------------------
+                             69 	.area PSEG    (PAG,XDATA)
+                             70 ;--------------------------------------------------------
+                             71 ; external ram data
+                             72 ;--------------------------------------------------------
+                             73 	.area XSEG    (XDATA)
+   0000                      74 _strbuf::
+   0000                      75 	.ds 32
+   0020                      76 _convert_ad_to_volt_ad_result_1_1::
+   0020                      77 	.ds 2
+   0022                      78 _convert_ad_to_volt_weights_1_1::
+   0022                      79 	.ds 16
+   0032                      80 _convert_ad_to_volt_result_1_1::
+   0032                      81 	.ds 2
+   0034                      82 _print_voltage_PARM_2::
+   0034                      83 	.ds 2
+   0036                      84 _print_voltage_PARM_3::
+   0036                      85 	.ds 1
+   0037                      86 _print_voltage_str_1_1::
+   0037                      87 	.ds 3
+   003A                      88 _print_voltage_nibble_1_1::
+   003A                      89 	.ds 16
+                             90 ;--------------------------------------------------------
+                             91 ; external initialized ram data
+                             92 ;--------------------------------------------------------
+                             93 	.area XISEG   (XDATA)
+                             94 	.area CSEG    (CODE)
+                             95 	.area GSINIT0 (CODE)
+                             96 	.area GSINIT1 (CODE)
+                             97 	.area GSINIT2 (CODE)
+                             98 	.area GSINIT3 (CODE)
+                             99 	.area GSINIT4 (CODE)
+                            100 	.area GSINIT5 (CODE)
+                            101 ;--------------------------------------------------------
+                            102 ; interrupt vector 
+                            103 ;--------------------------------------------------------
+                            104 	.area CSEG    (CODE)
+   0000                     105 __interrupt_vect:
+   0000 02s00r00            106 	ljmp	__sdcc_gsinit_startup
+                            107 ;--------------------------------------------------------
+                            108 ; global & static initialisations
+                            109 ;--------------------------------------------------------
+                            110 	.area CSEG    (CODE)
+                            111 	.area GSINIT  (CODE)
+                            112 	.area GSFINAL (CODE)
+                            113 	.area GSINIT  (CODE)
+                            114 	.globl __sdcc_gsinit_startup
+                            115 	.globl __sdcc_program_startup
+                            116 	.globl __start__stack
+                            117 	.globl __mcs51_genXINIT
+                            118 	.globl __mcs51_genXRAMCLEAR
+                            119 	.globl __mcs51_genRAMCLEAR
+                            120 	.area GSFINAL (CODE)
+   0000 02s00r03            121 	ljmp	__sdcc_program_startup
+                            122 ;--------------------------------------------------------
+                            123 ; Home
+                            124 ;--------------------------------------------------------
+                            125 	.area HOME    (CODE)
+                            126 	.area CSEG    (CODE)
+                            127 ;--------------------------------------------------------
+                            128 ; code
+                            129 ;--------------------------------------------------------
+                            130 	.area CSEG    (CODE)
+   0003                     131 __sdcc_program_startup:
+   0003 12s03r25            132 	lcall	_main
+                            133 ;	return from main will lock up
+   0006 80 FE               134 	sjmp .
+                            135 ;------------------------------------------------------------
+                            136 ;Allocation info for local variables in function 'convert_ad_to_volt'
+                            137 ;------------------------------------------------------------
+                            138 ;ad_result                 Allocated with name '_convert_ad_to_volt_ad_result_1_1'
+                            139 ;weights                   Allocated with name '_convert_ad_to_volt_weights_1_1'
+                            140 ;result                    Allocated with name '_convert_ad_to_volt_result_1_1'
+                            141 ;------------------------------------------------------------
+                            142 ;firmware.c:14: unsigned int convert_ad_to_volt (unsigned int ad_result)
+                            143 ;	-----------------------------------------
+                            144 ;	 function convert_ad_to_volt
+                            145 ;	-----------------------------------------
+   0008                     146 _convert_ad_to_volt:
+                    0002    147 	ar2 = 0x02
+                    0003    148 	ar3 = 0x03
+                    0004    149 	ar4 = 0x04
+                    0005    150 	ar5 = 0x05
+                    0006    151 	ar6 = 0x06
+                    0007    152 	ar7 = 0x07
+                    0000    153 	ar0 = 0x00
+                    0001    154 	ar1 = 0x01
+                            155 ;     genReceive
+   0008 AA 83               156 	mov	r2,dph
+   000A E5 82               157 	mov	a,dpl
+   000C 90s00r20            158 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   000F F0                  159 	movx	@dptr,a
+   0010 A3                  160 	inc	dptr
+   0011 EA                  161 	mov	a,r2
+   0012 F0                  162 	movx	@dptr,a
+                            163 ;firmware.c:16: const unsigned int weights[8] = {25000,12500,6250,3125,1563,781,390,195};		// Weights of the databits in A/D conversion in 0,1 mV units
+                            164 ;     genPointerSet
+                            165 ;     genFarPointerSet
+   0013 90s00r22            166 	mov	dptr,#_convert_ad_to_volt_weights_1_1
+   0016 74 A8               167 	mov	a,#0xA8
+   0018 F0                  168 	movx	@dptr,a
+   0019 A3                  169 	inc	dptr
+   001A 74 61               170 	mov	a,#0x61
+   001C F0                  171 	movx	@dptr,a
+                            172 ;     genPointerSet
+                            173 ;     genFarPointerSet
+   001D 90s00r24            174 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0002)
+   0020 74 D4               175 	mov	a,#0xD4
+   0022 F0                  176 	movx	@dptr,a
+   0023 A3                  177 	inc	dptr
+   0024 74 30               178 	mov	a,#0x30
+   0026 F0                  179 	movx	@dptr,a
+                            180 ;     genPointerSet
+                            181 ;     genFarPointerSet
+   0027 90s00r26            182 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0004)
+   002A 74 6A               183 	mov	a,#0x6A
+   002C F0                  184 	movx	@dptr,a
+   002D A3                  185 	inc	dptr
+   002E 74 18               186 	mov	a,#0x18
+   0030 F0                  187 	movx	@dptr,a
+                            188 ;     genPointerSet
+                            189 ;     genFarPointerSet
+   0031 90s00r28            190 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0006)
+   0034 74 35               191 	mov	a,#0x35
+   0036 F0                  192 	movx	@dptr,a
+   0037 A3                  193 	inc	dptr
+   0038 74 0C               194 	mov	a,#0x0C
+   003A F0                  195 	movx	@dptr,a
+                            196 ;     genPointerSet
+                            197 ;     genFarPointerSet
+   003B 90s00r2A            198 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0008)
+   003E 74 1B               199 	mov	a,#0x1B
+   0040 F0                  200 	movx	@dptr,a
+   0041 A3                  201 	inc	dptr
+   0042 74 06               202 	mov	a,#0x06
+   0044 F0                  203 	movx	@dptr,a
+                            204 ;     genPointerSet
+                            205 ;     genFarPointerSet
+   0045 90s00r2C            206 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x000a)
+   0048 74 0D               207 	mov	a,#0x0D
+   004A F0                  208 	movx	@dptr,a
+   004B A3                  209 	inc	dptr
+   004C 74 03               210 	mov	a,#0x03
+   004E F0                  211 	movx	@dptr,a
+                            212 ;     genPointerSet
+                            213 ;     genFarPointerSet
+   004F 90s00r2E            214 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x000c)
+   0052 74 86               215 	mov	a,#0x86
+   0054 F0                  216 	movx	@dptr,a
+   0055 A3                  217 	inc	dptr
+   0056 74 01               218 	mov	a,#0x01
+   0058 F0                  219 	movx	@dptr,a
+                            220 ;     genPointerSet
+                            221 ;     genFarPointerSet
+   0059 90s00r30            222 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x000e)
+   005C 74 C3               223 	mov	a,#0xC3
+   005E F0                  224 	movx	@dptr,a
+   005F A3                  225 	inc	dptr
+                            226 ;	Peephole 181	changed mov to clr
+                            227 ;firmware.c:18: result=0;
+                            228 ;     genAssign
+                            229 ;	Peephole 219	removed redundant clear
+   0060 E4                  230 	clr	a
+   0061 F0                  231 	movx	@dptr,a
+   0062 90s00r32            232 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   0065 F0                  233 	movx	@dptr,a
+   0066 A3                  234 	inc	dptr
+   0067 F0                  235 	movx	@dptr,a
+                            236 ;firmware.c:19: if (ad_result & 0x80) result +=weights[0];
+                            237 ;     genAssign
+   0068 90s00r20            238 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   006B E0                  239 	movx	a,@dptr
+   006C FA                  240 	mov	r2,a
+   006D A3                  241 	inc	dptr
+   006E E0                  242 	movx	a,@dptr
+   006F FB                  243 	mov	r3,a
+                            244 ;     genAnd
+   0070 EA                  245 	mov	a,r2
+                            246 ;     genIfxJump
+                            247 ;	Peephole 111	removed ljmp by inverse jump logic
+   0071 30 E7 10            248 	jnb	acc.7,00102$
+   0074                     249 00127$:
+                            250 ;     genPointerGet
+                            251 ;     genFarPointerGet
+   0074 90s00r22            252 	mov	dptr,#_convert_ad_to_volt_weights_1_1
+   0077 E0                  253 	movx	a,@dptr
+   0078 FA                  254 	mov	r2,a
+   0079 A3                  255 	inc	dptr
+   007A E0                  256 	movx	a,@dptr
+   007B FB                  257 	mov	r3,a
+                            258 ;     genAssign
+   007C 90s00r32            259 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   007F EA                  260 	mov	a,r2
+   0080 F0                  261 	movx	@dptr,a
+   0081 A3                  262 	inc	dptr
+   0082 EB                  263 	mov	a,r3
+   0083 F0                  264 	movx	@dptr,a
+   0084                     265 00102$:
+                            266 ;firmware.c:20: if (ad_result & 0x40) result +=weights[1];
+                            267 ;     genAssign
+   0084 90s00r20            268 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   0087 E0                  269 	movx	a,@dptr
+   0088 FA                  270 	mov	r2,a
+   0089 A3                  271 	inc	dptr
+   008A E0                  272 	movx	a,@dptr
+   008B FB                  273 	mov	r3,a
+                            274 ;     genAnd
+   008C EA                  275 	mov	a,r2
+                            276 ;     genIfxJump
+                            277 ;	Peephole 111	removed ljmp by inverse jump logic
+   008D 30 E6 1A            278 	jnb	acc.6,00104$
+   0090                     279 00128$:
+                            280 ;     genPointerGet
+                            281 ;     genFarPointerGet
+   0090 90s00r24            282 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0002)
+   0093 E0                  283 	movx	a,@dptr
+   0094 FA                  284 	mov	r2,a
+   0095 A3                  285 	inc	dptr
+   0096 E0                  286 	movx	a,@dptr
+   0097 FB                  287 	mov	r3,a
+                            288 ;     genAssign
+   0098 90s00r32            289 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   009B E0                  290 	movx	a,@dptr
+   009C FC                  291 	mov	r4,a
+   009D A3                  292 	inc	dptr
+   009E E0                  293 	movx	a,@dptr
+   009F FD                  294 	mov	r5,a
+                            295 ;     genPlus
+   00A0 90s00r32            296 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            297 ;	Peephole 236.g	used r2 instead of ar2
+   00A3 EA                  298 	mov	a,r2
+                            299 ;	Peephole 236.a	used r4 instead of ar4
+   00A4 2C                  300 	add	a,r4
+   00A5 F0                  301 	movx	@dptr,a
+                            302 ;	Peephole 236.g	used r3 instead of ar3
+   00A6 EB                  303 	mov	a,r3
+                            304 ;	Peephole 236.b	used r5 instead of ar5
+   00A7 3D                  305 	addc	a,r5
+   00A8 A3                  306 	inc	dptr
+   00A9 F0                  307 	movx	@dptr,a
+   00AA                     308 00104$:
+                            309 ;firmware.c:21: if (ad_result & 0x20) result +=weights[2];
+                            310 ;     genAssign
+   00AA 90s00r20            311 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   00AD E0                  312 	movx	a,@dptr
+   00AE FA                  313 	mov	r2,a
+   00AF A3                  314 	inc	dptr
+   00B0 E0                  315 	movx	a,@dptr
+   00B1 FB                  316 	mov	r3,a
+                            317 ;     genAnd
+   00B2 EA                  318 	mov	a,r2
+                            319 ;     genIfxJump
+                            320 ;	Peephole 111	removed ljmp by inverse jump logic
+   00B3 30 E5 1A            321 	jnb	acc.5,00106$
+   00B6                     322 00129$:
+                            323 ;     genPointerGet
+                            324 ;     genFarPointerGet
+   00B6 90s00r26            325 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0004)
+   00B9 E0                  326 	movx	a,@dptr
+   00BA FA                  327 	mov	r2,a
+   00BB A3                  328 	inc	dptr
+   00BC E0                  329 	movx	a,@dptr
+   00BD FB                  330 	mov	r3,a
+                            331 ;     genAssign
+   00BE 90s00r32            332 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   00C1 E0                  333 	movx	a,@dptr
+   00C2 FC                  334 	mov	r4,a
+   00C3 A3                  335 	inc	dptr
+   00C4 E0                  336 	movx	a,@dptr
+   00C5 FD                  337 	mov	r5,a
+                            338 ;     genPlus
+   00C6 90s00r32            339 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            340 ;	Peephole 236.g	used r2 instead of ar2
+   00C9 EA                  341 	mov	a,r2
+                            342 ;	Peephole 236.a	used r4 instead of ar4
+   00CA 2C                  343 	add	a,r4
+   00CB F0                  344 	movx	@dptr,a
+                            345 ;	Peephole 236.g	used r3 instead of ar3
+   00CC EB                  346 	mov	a,r3
+                            347 ;	Peephole 236.b	used r5 instead of ar5
+   00CD 3D                  348 	addc	a,r5
+   00CE A3                  349 	inc	dptr
+   00CF F0                  350 	movx	@dptr,a
+   00D0                     351 00106$:
+                            352 ;firmware.c:22: if (ad_result & 0x10) result +=weights[3];
+                            353 ;     genAssign
+   00D0 90s00r20            354 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   00D3 E0                  355 	movx	a,@dptr
+   00D4 FA                  356 	mov	r2,a
+   00D5 A3                  357 	inc	dptr
+   00D6 E0                  358 	movx	a,@dptr
+   00D7 FB                  359 	mov	r3,a
+                            360 ;     genAnd
+   00D8 EA                  361 	mov	a,r2
+                            362 ;     genIfxJump
+                            363 ;	Peephole 111	removed ljmp by inverse jump logic
+   00D9 30 E4 1A            364 	jnb	acc.4,00108$
+   00DC                     365 00130$:
+                            366 ;     genPointerGet
+                            367 ;     genFarPointerGet
+   00DC 90s00r28            368 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0006)
+   00DF E0                  369 	movx	a,@dptr
+   00E0 FA                  370 	mov	r2,a
+   00E1 A3                  371 	inc	dptr
+   00E2 E0                  372 	movx	a,@dptr
+   00E3 FB                  373 	mov	r3,a
+                            374 ;     genAssign
+   00E4 90s00r32            375 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   00E7 E0                  376 	movx	a,@dptr
+   00E8 FC                  377 	mov	r4,a
+   00E9 A3                  378 	inc	dptr
+   00EA E0                  379 	movx	a,@dptr
+   00EB FD                  380 	mov	r5,a
+                            381 ;     genPlus
+   00EC 90s00r32            382 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            383 ;	Peephole 236.g	used r2 instead of ar2
+   00EF EA                  384 	mov	a,r2
+                            385 ;	Peephole 236.a	used r4 instead of ar4
+   00F0 2C                  386 	add	a,r4
+   00F1 F0                  387 	movx	@dptr,a
+                            388 ;	Peephole 236.g	used r3 instead of ar3
+   00F2 EB                  389 	mov	a,r3
+                            390 ;	Peephole 236.b	used r5 instead of ar5
+   00F3 3D                  391 	addc	a,r5
+   00F4 A3                  392 	inc	dptr
+   00F5 F0                  393 	movx	@dptr,a
+   00F6                     394 00108$:
+                            395 ;firmware.c:23: if (ad_result & 0x08) result +=weights[4];
+                            396 ;     genAssign
+   00F6 90s00r20            397 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   00F9 E0                  398 	movx	a,@dptr
+   00FA FA                  399 	mov	r2,a
+   00FB A3                  400 	inc	dptr
+   00FC E0                  401 	movx	a,@dptr
+   00FD FB                  402 	mov	r3,a
+                            403 ;     genAnd
+   00FE EA                  404 	mov	a,r2
+                            405 ;     genIfxJump
+                            406 ;	Peephole 111	removed ljmp by inverse jump logic
+   00FF 30 E3 1A            407 	jnb	acc.3,00110$
+   0102                     408 00131$:
+                            409 ;     genPointerGet
+                            410 ;     genFarPointerGet
+   0102 90s00r2A            411 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x0008)
+   0105 E0                  412 	movx	a,@dptr
+   0106 FA                  413 	mov	r2,a
+   0107 A3                  414 	inc	dptr
+   0108 E0                  415 	movx	a,@dptr
+   0109 FB                  416 	mov	r3,a
+                            417 ;     genAssign
+   010A 90s00r32            418 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   010D E0                  419 	movx	a,@dptr
+   010E FC                  420 	mov	r4,a
+   010F A3                  421 	inc	dptr
+   0110 E0                  422 	movx	a,@dptr
+   0111 FD                  423 	mov	r5,a
+                            424 ;     genPlus
+   0112 90s00r32            425 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            426 ;	Peephole 236.g	used r2 instead of ar2
+   0115 EA                  427 	mov	a,r2
+                            428 ;	Peephole 236.a	used r4 instead of ar4
+   0116 2C                  429 	add	a,r4
+   0117 F0                  430 	movx	@dptr,a
+                            431 ;	Peephole 236.g	used r3 instead of ar3
+   0118 EB                  432 	mov	a,r3
+                            433 ;	Peephole 236.b	used r5 instead of ar5
+   0119 3D                  434 	addc	a,r5
+   011A A3                  435 	inc	dptr
+   011B F0                  436 	movx	@dptr,a
+   011C                     437 00110$:
+                            438 ;firmware.c:24: if (ad_result & 0x04) result +=weights[5];
+                            439 ;     genAssign
+   011C 90s00r20            440 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   011F E0                  441 	movx	a,@dptr
+   0120 FA                  442 	mov	r2,a
+   0121 A3                  443 	inc	dptr
+   0122 E0                  444 	movx	a,@dptr
+   0123 FB                  445 	mov	r3,a
+                            446 ;     genAnd
+   0124 EA                  447 	mov	a,r2
+                            448 ;     genIfxJump
+                            449 ;	Peephole 111	removed ljmp by inverse jump logic
+   0125 30 E2 1A            450 	jnb	acc.2,00112$
+   0128                     451 00132$:
+                            452 ;     genPointerGet
+                            453 ;     genFarPointerGet
+   0128 90s00r2C            454 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x000a)
+   012B E0                  455 	movx	a,@dptr
+   012C FA                  456 	mov	r2,a
+   012D A3                  457 	inc	dptr
+   012E E0                  458 	movx	a,@dptr
+   012F FB                  459 	mov	r3,a
+                            460 ;     genAssign
+   0130 90s00r32            461 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   0133 E0                  462 	movx	a,@dptr
+   0134 FC                  463 	mov	r4,a
+   0135 A3                  464 	inc	dptr
+   0136 E0                  465 	movx	a,@dptr
+   0137 FD                  466 	mov	r5,a
+                            467 ;     genPlus
+   0138 90s00r32            468 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            469 ;	Peephole 236.g	used r2 instead of ar2
+   013B EA                  470 	mov	a,r2
+                            471 ;	Peephole 236.a	used r4 instead of ar4
+   013C 2C                  472 	add	a,r4
+   013D F0                  473 	movx	@dptr,a
+                            474 ;	Peephole 236.g	used r3 instead of ar3
+   013E EB                  475 	mov	a,r3
+                            476 ;	Peephole 236.b	used r5 instead of ar5
+   013F 3D                  477 	addc	a,r5
+   0140 A3                  478 	inc	dptr
+   0141 F0                  479 	movx	@dptr,a
+   0142                     480 00112$:
+                            481 ;firmware.c:25: if (ad_result & 0x02) result +=weights[6];
+                            482 ;     genAssign
+   0142 90s00r20            483 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   0145 E0                  484 	movx	a,@dptr
+   0146 FA                  485 	mov	r2,a
+   0147 A3                  486 	inc	dptr
+   0148 E0                  487 	movx	a,@dptr
+   0149 FB                  488 	mov	r3,a
+                            489 ;     genAnd
+   014A EA                  490 	mov	a,r2
+                            491 ;     genIfxJump
+                            492 ;	Peephole 111	removed ljmp by inverse jump logic
+   014B 30 E1 1A            493 	jnb	acc.1,00114$
+   014E                     494 00133$:
+                            495 ;     genPointerGet
+                            496 ;     genFarPointerGet
+   014E 90s00r2E            497 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x000c)
+   0151 E0                  498 	movx	a,@dptr
+   0152 FA                  499 	mov	r2,a
+   0153 A3                  500 	inc	dptr
+   0154 E0                  501 	movx	a,@dptr
+   0155 FB                  502 	mov	r3,a
+                            503 ;     genAssign
+   0156 90s00r32            504 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   0159 E0                  505 	movx	a,@dptr
+   015A FC                  506 	mov	r4,a
+   015B A3                  507 	inc	dptr
+   015C E0                  508 	movx	a,@dptr
+   015D FD                  509 	mov	r5,a
+                            510 ;     genPlus
+   015E 90s00r32            511 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            512 ;	Peephole 236.g	used r2 instead of ar2
+   0161 EA                  513 	mov	a,r2
+                            514 ;	Peephole 236.a	used r4 instead of ar4
+   0162 2C                  515 	add	a,r4
+   0163 F0                  516 	movx	@dptr,a
+                            517 ;	Peephole 236.g	used r3 instead of ar3
+   0164 EB                  518 	mov	a,r3
+                            519 ;	Peephole 236.b	used r5 instead of ar5
+   0165 3D                  520 	addc	a,r5
+   0166 A3                  521 	inc	dptr
+   0167 F0                  522 	movx	@dptr,a
+   0168                     523 00114$:
+                            524 ;firmware.c:26: if (ad_result & 0x01) result +=weights[7];
+                            525 ;     genAssign
+   0168 90s00r20            526 	mov	dptr,#_convert_ad_to_volt_ad_result_1_1
+   016B E0                  527 	movx	a,@dptr
+   016C FA                  528 	mov	r2,a
+   016D A3                  529 	inc	dptr
+   016E E0                  530 	movx	a,@dptr
+   016F FB                  531 	mov	r3,a
+                            532 ;     genAnd
+   0170 EA                  533 	mov	a,r2
+                            534 ;     genIfxJump
+                            535 ;	Peephole 111	removed ljmp by inverse jump logic
+   0171 30 E0 1A            536 	jnb	acc.0,00116$
+   0174                     537 00134$:
+                            538 ;     genPointerGet
+                            539 ;     genFarPointerGet
+   0174 90s00r30            540 	mov	dptr,#(_convert_ad_to_volt_weights_1_1 + 0x000e)
+   0177 E0                  541 	movx	a,@dptr
+   0178 FA                  542 	mov	r2,a
+   0179 A3                  543 	inc	dptr
+   017A E0                  544 	movx	a,@dptr
+   017B FB                  545 	mov	r3,a
+                            546 ;     genAssign
+   017C 90s00r32            547 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   017F E0                  548 	movx	a,@dptr
+   0180 FC                  549 	mov	r4,a
+   0181 A3                  550 	inc	dptr
+   0182 E0                  551 	movx	a,@dptr
+   0183 FD                  552 	mov	r5,a
+                            553 ;     genPlus
+   0184 90s00r32            554 	mov	dptr,#_convert_ad_to_volt_result_1_1
+                            555 ;	Peephole 236.g	used r2 instead of ar2
+   0187 EA                  556 	mov	a,r2
+                            557 ;	Peephole 236.a	used r4 instead of ar4
+   0188 2C                  558 	add	a,r4
+   0189 F0                  559 	movx	@dptr,a
+                            560 ;	Peephole 236.g	used r3 instead of ar3
+   018A EB                  561 	mov	a,r3
+                            562 ;	Peephole 236.b	used r5 instead of ar5
+   018B 3D                  563 	addc	a,r5
+   018C A3                  564 	inc	dptr
+   018D F0                  565 	movx	@dptr,a
+   018E                     566 00116$:
+                            567 ;firmware.c:27: return (result);
+                            568 ;     genAssign
+   018E 90s00r32            569 	mov	dptr,#_convert_ad_to_volt_result_1_1
+   0191 E0                  570 	movx	a,@dptr
+   0192 FA                  571 	mov	r2,a
+   0193 A3                  572 	inc	dptr
+   0194 E0                  573 	movx	a,@dptr
+                            574 ;     genRet
+                            575 ;	Peephole 235	loading dph directly from a(ccumulator), r3 not set
+   0195 8A 82               576 	mov	dpl,r2
+   0197 F5 83               577 	mov	dph,a
+   0199                     578 00117$:
+   0199 22                  579 	ret
+                            580 ;------------------------------------------------------------
+                            581 ;Allocation info for local variables in function 'print_voltage'
+                            582 ;------------------------------------------------------------
+                            583 ;dat                       Allocated with name '_print_voltage_PARM_2'
+                            584 ;position                  Allocated with name '_print_voltage_PARM_3'
+                            585 ;str                       Allocated with name '_print_voltage_str_1_1'
+                            586 ;nibble                    Allocated with name '_print_voltage_nibble_1_1'
+                            587 ;count                     Allocated with name '_print_voltage_count_1_1'
+                            588 ;sloc0                     Allocated with name '_print_voltage_sloc0_1_0'
+                            589 ;sloc1                     Allocated with name '_print_voltage_sloc1_1_0'
+                            590 ;------------------------------------------------------------
+                            591 ;firmware.c:30: void print_voltage(char* str,unsigned int dat,unsigned char position)
+                            592 ;	-----------------------------------------
+                            593 ;	 function print_voltage
+                            594 ;	-----------------------------------------
+   019A                     595 _print_voltage:
+                            596 ;     genReceive
+   019A AA F0               597 	mov	r2,b
+   019C AB 83               598 	mov	r3,dph
+   019E E5 82               599 	mov	a,dpl
+   01A0 90s00r37            600 	mov	dptr,#_print_voltage_str_1_1
+   01A3 F0                  601 	movx	@dptr,a
+   01A4 A3                  602 	inc	dptr
+   01A5 EB                  603 	mov	a,r3
+   01A6 F0                  604 	movx	@dptr,a
+   01A7 A3                  605 	inc	dptr
+   01A8 EA                  606 	mov	a,r2
+   01A9 F0                  607 	movx	@dptr,a
+                            608 ;firmware.c:32: const char nibble[16] = {'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
+                            609 ;     genPointerSet
+                            610 ;     genFarPointerSet
+   01AA 90s00r3A            611 	mov	dptr,#_print_voltage_nibble_1_1
+   01AD 74 30               612 	mov	a,#0x30
+   01AF F0                  613 	movx	@dptr,a
+                            614 ;     genPointerSet
+                            615 ;     genFarPointerSet
+   01B0 90s00r3B            616 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0001)
+   01B3 74 31               617 	mov	a,#0x31
+   01B5 F0                  618 	movx	@dptr,a
+                            619 ;     genPointerSet
+                            620 ;     genFarPointerSet
+   01B6 90s00r3C            621 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0002)
+   01B9 74 32               622 	mov	a,#0x32
+   01BB F0                  623 	movx	@dptr,a
+                            624 ;     genPointerSet
+                            625 ;     genFarPointerSet
+   01BC 90s00r3D            626 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0003)
+   01BF 74 33               627 	mov	a,#0x33
+   01C1 F0                  628 	movx	@dptr,a
+                            629 ;     genPointerSet
+                            630 ;     genFarPointerSet
+   01C2 90s00r3E            631 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0004)
+   01C5 74 34               632 	mov	a,#0x34
+   01C7 F0                  633 	movx	@dptr,a
+                            634 ;     genPointerSet
+                            635 ;     genFarPointerSet
+   01C8 90s00r3F            636 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0005)
+   01CB 74 35               637 	mov	a,#0x35
+   01CD F0                  638 	movx	@dptr,a
+                            639 ;     genPointerSet
+                            640 ;     genFarPointerSet
+   01CE 90s00r40            641 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0006)
+   01D1 74 36               642 	mov	a,#0x36
+   01D3 F0                  643 	movx	@dptr,a
+                            644 ;     genPointerSet
+                            645 ;     genFarPointerSet
+   01D4 90s00r41            646 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0007)
+   01D7 74 37               647 	mov	a,#0x37
+   01D9 F0                  648 	movx	@dptr,a
+                            649 ;     genPointerSet
+                            650 ;     genFarPointerSet
+   01DA 90s00r42            651 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0008)
+   01DD 74 38               652 	mov	a,#0x38
+   01DF F0                  653 	movx	@dptr,a
+                            654 ;     genPointerSet
+                            655 ;     genFarPointerSet
+   01E0 90s00r43            656 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x0009)
+   01E3 74 39               657 	mov	a,#0x39
+   01E5 F0                  658 	movx	@dptr,a
+                            659 ;     genPointerSet
+                            660 ;     genFarPointerSet
+   01E6 90s00r44            661 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x000a)
+   01E9 74 61               662 	mov	a,#0x61
+   01EB F0                  663 	movx	@dptr,a
+                            664 ;     genPointerSet
+                            665 ;     genFarPointerSet
+   01EC 90s00r45            666 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x000b)
+   01EF 74 62               667 	mov	a,#0x62
+   01F1 F0                  668 	movx	@dptr,a
+                            669 ;     genPointerSet
+                            670 ;     genFarPointerSet
+   01F2 90s00r46            671 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x000c)
+   01F5 74 63               672 	mov	a,#0x63
+   01F7 F0                  673 	movx	@dptr,a
+                            674 ;     genPointerSet
+                            675 ;     genFarPointerSet
+   01F8 90s00r47            676 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x000d)
+   01FB 74 64               677 	mov	a,#0x64
+   01FD F0                  678 	movx	@dptr,a
+                            679 ;     genPointerSet
+                            680 ;     genFarPointerSet
+   01FE 90s00r48            681 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x000e)
+   0201 74 65               682 	mov	a,#0x65
+   0203 F0                  683 	movx	@dptr,a
+                            684 ;     genPointerSet
+                            685 ;     genFarPointerSet
+   0204 90s00r49            686 	mov	dptr,#(_print_voltage_nibble_1_1 + 0x000f)
+   0207 74 66               687 	mov	a,#0x66
+   0209 F0                  688 	movx	@dptr,a
+                            689 ;firmware.c:35: while (dat>=10000) {count++; dat=dat-10000;}		// extract the 1Volt-units
+                            690 ;     genAssign
+   020A 7A 00               691 	mov	r2,#0x00
+   020C 7B 00               692 	mov	r3,#0x00
+                            693 ;     genAssign
+   020E 90s00r34            694 	mov	dptr,#_print_voltage_PARM_2
+   0211 E0                  695 	movx	a,@dptr
+   0212 FC                  696 	mov	r4,a
+   0213 A3                  697 	inc	dptr
+   0214 E0                  698 	movx	a,@dptr
+   0215 FD                  699 	mov	r5,a
+   0216                     700 00101$:
+                            701 ;     genCmpLt
+                            702 ;     genCmp
+   0216 C3                  703 	clr	c
+   0217 EC                  704 	mov	a,r4
+   0218 94 10               705 	subb	a,#0x10
+   021A ED                  706 	mov	a,r5
+   021B 94 27               707 	subb	a,#0x27
+                            708 ;     genIfxJump
+                            709 ;	Peephole 112.b	changed ljmp to sjmp
+                            710 ;	Peephole 160	removed sjmp by inverse jump logic
+   021D 40 0F               711 	jc	00103$
+   021F                     712 00118$:
+                            713 ;     genPlus
+                            714 ;     genPlusIncr
+   021F 0A                  715 	inc	r2
+   0220 BA 00 01            716 	cjne	r2,#0x00,00119$
+   0223 0B                  717 	inc	r3
+   0224                     718 00119$:
+                            719 ;     genMinus
+   0224 EC                  720 	mov	a,r4
+   0225 24 F0               721 	add	a,#0xf0
+   0227 FC                  722 	mov	r4,a
+   0228 ED                  723 	mov	a,r5
+   0229 34 D8               724 	addc	a,#0xd8
+   022B FD                  725 	mov	r5,a
+                            726 ;	Peephole 112.b	changed ljmp to sjmp
+   022C 80 E8               727 	sjmp	00101$
+   022E                     728 00103$:
+                            729 ;firmware.c:36: str [position]=nibble[count];
+                            730 ;     genIpush
+   022E C0 04               731 	push	ar4
+   0230 C0 05               732 	push	ar5
+                            733 ;     genAssign
+   0232 90s00r37            734 	mov	dptr,#_print_voltage_str_1_1
+   0235 E0                  735 	movx	a,@dptr
+   0236 FE                  736 	mov	r6,a
+   0237 A3                  737 	inc	dptr
+   0238 E0                  738 	movx	a,@dptr
+   0239 FF                  739 	mov	r7,a
+   023A A3                  740 	inc	dptr
+   023B E0                  741 	movx	a,@dptr
+   023C F8                  742 	mov	r0,a
+                            743 ;     genAssign
+   023D 90s00r36            744 	mov	dptr,#_print_voltage_PARM_3
+   0240 E0                  745 	movx	a,@dptr
+   0241 F5*00               746 	mov	_print_voltage_sloc0_1_0,a
+                            747 ;     genPlus
+   0243 E5*00               748 	mov	a,_print_voltage_sloc0_1_0
+                            749 ;	Peephole 236.a	used r6 instead of ar6
+   0245 2E                  750 	add	a,r6
+   0246 FC                  751 	mov	r4,a
+                            752 ;	Peephole 181	changed mov to clr
+   0247 E4                  753 	clr	a
+                            754 ;	Peephole 236.b	used r7 instead of ar7
+   0248 3F                  755 	addc	a,r7
+   0249 FD                  756 	mov	r5,a
+   024A 88 01               757 	mov	ar1,r0
+                            758 ;     genPlus
+                            759 ;	Peephole 236.g	used r2 instead of ar2
+   024C EA                  760 	mov	a,r2
+   024D 24r3A               761 	add	a,#_print_voltage_nibble_1_1
+   024F F5 82               762 	mov	dpl,a
+                            763 ;	Peephole 236.g	used r3 instead of ar3
+   0251 EB                  764 	mov	a,r3
+   0252 34s00               765 	addc	a,#(_print_voltage_nibble_1_1 >> 8)
+   0254 F5 83               766 	mov	dph,a
+                            767 ;     genPointerGet
+                            768 ;     genFarPointerGet
+   0256 E0                  769 	movx	a,@dptr
+                            770 ;     genPointerSet
+                            771 ;     genGenPointerSet
+                            772 ;	Peephole 191	removed redundant mov
+   0257 FA                  773 	mov	r2,a
+   0258 8C 82               774 	mov	dpl,r4
+   025A 8D 83               775 	mov	dph,r5
+   025C 89 F0               776 	mov	b,r1
+   025E 12s00r00            777 	lcall	__gptrput
+                            778 ;firmware.c:37: str [position+1]='.';
+                            779 ;     genCast
+   0261 85*00*01            780 	mov	_print_voltage_sloc1_1_0,_print_voltage_sloc0_1_0
+   0264 75*02 00            781 	mov	(_print_voltage_sloc1_1_0 + 1),#0x00
+                            782 ;     genPlus
+                            783 ;     genPlusIncr
+   0267 74 01               784 	mov	a,#0x01
+   0269 25*01               785 	add	a,_print_voltage_sloc1_1_0
+   026B FA                  786 	mov	r2,a
+                            787 ;	Peephole 181	changed mov to clr
+   026C E4                  788 	clr	a
+   026D 35*02               789 	addc	a,(_print_voltage_sloc1_1_0 + 1)
+   026F FB                  790 	mov	r3,a
+                            791 ;     genPlus
+                            792 ;	Peephole 236.g	used r2 instead of ar2
+   0270 EA                  793 	mov	a,r2
+                            794 ;	Peephole 236.a	used r6 instead of ar6
+   0271 2E                  795 	add	a,r6
+   0272 FE                  796 	mov	r6,a
+                            797 ;	Peephole 236.g	used r3 instead of ar3
+   0273 EB                  798 	mov	a,r3
+                            799 ;	Peephole 236.b	used r7 instead of ar7
+   0274 3F                  800 	addc	a,r7
+   0275 FF                  801 	mov	r7,a
+                            802 ;     genPointerSet
+                            803 ;     genGenPointerSet
+   0276 8E 82               804 	mov	dpl,r6
+   0278 8F 83               805 	mov	dph,r7
+   027A 88 F0               806 	mov	b,r0
+   027C 74 2E               807 	mov	a,#0x2E
+   027E 12s00r00            808 	lcall	__gptrput
+                            809 ;firmware.c:43: str [position+3]=nibble[count];
+                            810 ;     genIpop
+   0281 D0 05               811 	pop	ar5
+   0283 D0 04               812 	pop	ar4
+                            813 ;firmware.c:39: while (dat>=1000) {count++; dat=dat-1000;}			// extract the 0.1Volt-units
+                            814 ;     genAssign
+   0285 7A 00               815 	mov	r2,#0x00
+   0287 7B 00               816 	mov	r3,#0x00
+                            817 ;     genAssign
+   0289                     818 00104$:
+                            819 ;     genCmpLt
+                            820 ;     genCmp
+   0289 C3                  821 	clr	c
+   028A EC                  822 	mov	a,r4
+   028B 94 E8               823 	subb	a,#0xE8
+   028D ED                  824 	mov	a,r5
+   028E 94 03               825 	subb	a,#0x03
+                            826 ;     genIfxJump
+                            827 ;	Peephole 112.b	changed ljmp to sjmp
+                            828 ;	Peephole 160	removed sjmp by inverse jump logic
+   0290 40 0F               829 	jc	00106$
+   0292                     830 00120$:
+                            831 ;     genPlus
+                            832 ;     genPlusIncr
+   0292 0A                  833 	inc	r2
+   0293 BA 00 01            834 	cjne	r2,#0x00,00121$
+   0296 0B                  835 	inc	r3
+   0297                     836 00121$:
+                            837 ;     genMinus
+   0297 EC                  838 	mov	a,r4
+   0298 24 18               839 	add	a,#0x18
+   029A FC                  840 	mov	r4,a
+   029B ED                  841 	mov	a,r5
+   029C 34 FC               842 	addc	a,#0xfc
+   029E FD                  843 	mov	r5,a
+                            844 ;	Peephole 112.b	changed ljmp to sjmp
+   029F 80 E8               845 	sjmp	00104$
+   02A1                     846 00106$:
+                            847 ;firmware.c:40: str [position+2]=nibble[count];
+                            848 ;     genIpush
+   02A1 C0 04               849 	push	ar4
+   02A3 C0 05               850 	push	ar5
+                            851 ;     genPlus
+                            852 ;     genPlusIncr
+   02A5 74 02               853 	mov	a,#0x02
+   02A7 25*01               854 	add	a,_print_voltage_sloc1_1_0
+   02A9 FE                  855 	mov	r6,a
+                            856 ;	Peephole 181	changed mov to clr
+   02AA E4                  857 	clr	a
+   02AB 35*02               858 	addc	a,(_print_voltage_sloc1_1_0 + 1)
+   02AD FF                  859 	mov	r7,a
+                            860 ;     genAssign
+   02AE 90s00r37            861 	mov	dptr,#_print_voltage_str_1_1
+   02B1 E0                  862 	movx	a,@dptr
+   02B2 F8                  863 	mov	r0,a
+   02B3 A3                  864 	inc	dptr
+   02B4 E0                  865 	movx	a,@dptr
+   02B5 F9                  866 	mov	r1,a
+   02B6 A3                  867 	inc	dptr
+   02B7 E0                  868 	movx	a,@dptr
+   02B8 FC                  869 	mov	r4,a
+                            870 ;     genPlus
+                            871 ;	Peephole 236.g	used r6 instead of ar6
+   02B9 EE                  872 	mov	a,r6
+                            873 ;	Peephole 236.a	used r0 instead of ar0
+   02BA 28                  874 	add	a,r0
+   02BB FE                  875 	mov	r6,a
+                            876 ;	Peephole 236.g	used r7 instead of ar7
+   02BC EF                  877 	mov	a,r7
+                            878 ;	Peephole 236.b	used r1 instead of ar1
+   02BD 39                  879 	addc	a,r1
+   02BE FF                  880 	mov	r7,a
+   02BF 8C 05               881 	mov	ar5,r4
+                            882 ;     genPlus
+                            883 ;	Peephole 236.g	used r2 instead of ar2
+   02C1 EA                  884 	mov	a,r2
+   02C2 24r3A               885 	add	a,#_print_voltage_nibble_1_1
+   02C4 F5 82               886 	mov	dpl,a
+                            887 ;	Peephole 236.g	used r3 instead of ar3
+   02C6 EB                  888 	mov	a,r3
+   02C7 34s00               889 	addc	a,#(_print_voltage_nibble_1_1 >> 8)
+   02C9 F5 83               890 	mov	dph,a
+                            891 ;     genPointerGet
+                            892 ;     genFarPointerGet
+   02CB E0                  893 	movx	a,@dptr
+                            894 ;     genPointerSet
+                            895 ;     genGenPointerSet
+                            896 ;	Peephole 191	removed redundant mov
+   02CC FA                  897 	mov	r2,a
+   02CD 8E 82               898 	mov	dpl,r6
+   02CF 8F 83               899 	mov	dph,r7
+   02D1 8D F0               900 	mov	b,r5
+   02D3 12s00r00            901 	lcall	__gptrput
+                            902 ;firmware.c:43: str [position+3]=nibble[count];
+                            903 ;     genIpop
+   02D6 D0 05               904 	pop	ar5
+   02D8 D0 04               905 	pop	ar4
+                            906 ;firmware.c:42: while (dat>=100) {count++; dat=dat-100;}		// extract the 0.01Volt-units
+                            907 ;     genAssign
+   02DA 7A 00               908 	mov	r2,#0x00
+   02DC 7B 00               909 	mov	r3,#0x00
+                            910 ;     genAssign
+   02DE                     911 00107$:
+                            912 ;     genCmpLt
+                            913 ;     genCmp
+   02DE C3                  914 	clr	c
+   02DF EC                  915 	mov	a,r4
+   02E0 94 64               916 	subb	a,#0x64
+   02E2 ED                  917 	mov	a,r5
+   02E3 94 00               918 	subb	a,#0x00
+                            919 ;     genIfxJump
+                            920 ;	Peephole 112.b	changed ljmp to sjmp
+                            921 ;	Peephole 160	removed sjmp by inverse jump logic
+   02E5 40 0F               922 	jc	00109$
+   02E7                     923 00122$:
+                            924 ;     genPlus
+                            925 ;     genPlusIncr
+   02E7 0A                  926 	inc	r2
+   02E8 BA 00 01            927 	cjne	r2,#0x00,00123$
+   02EB 0B                  928 	inc	r3
+   02EC                     929 00123$:
+                            930 ;     genMinus
+   02EC EC                  931 	mov	a,r4
+   02ED 24 9C               932 	add	a,#0x9c
+   02EF FC                  933 	mov	r4,a
+   02F0 ED                  934 	mov	a,r5
+   02F1 34 FF               935 	addc	a,#0xff
+   02F3 FD                  936 	mov	r5,a
+                            937 ;	Peephole 112.b	changed ljmp to sjmp
+   02F4 80 E8               938 	sjmp	00107$
+   02F6                     939 00109$:
+                            940 ;firmware.c:43: str [position+3]=nibble[count];
+                            941 ;     genPlus
+                            942 ;     genPlusIncr
+   02F6 74 03               943 	mov	a,#0x03
+   02F8 25*01               944 	add	a,_print_voltage_sloc1_1_0
+   02FA FC                  945 	mov	r4,a
+                            946 ;	Peephole 181	changed mov to clr
+   02FB E4                  947 	clr	a
+   02FC 35*02               948 	addc	a,(_print_voltage_sloc1_1_0 + 1)
+   02FE FD                  949 	mov	r5,a
+                            950 ;     genAssign
+   02FF 90s00r37            951 	mov	dptr,#_print_voltage_str_1_1
+   0302 E0                  952 	movx	a,@dptr
+   0303 FE                  953 	mov	r6,a
+   0304 A3                  954 	inc	dptr
+   0305 E0                  955 	movx	a,@dptr
+   0306 FF                  956 	mov	r7,a
+   0307 A3                  957 	inc	dptr
+   0308 E0                  958 	movx	a,@dptr
+   0309 F8                  959 	mov	r0,a
+                            960 ;     genPlus
+                            961 ;	Peephole 236.g	used r4 instead of ar4
+   030A EC                  962 	mov	a,r4
+                            963 ;	Peephole 236.a	used r6 instead of ar6
+   030B 2E                  964 	add	a,r6
+   030C FE                  965 	mov	r6,a
+                            966 ;	Peephole 236.g	used r5 instead of ar5
+   030D ED                  967 	mov	a,r5
+                            968 ;	Peephole 236.b	used r7 instead of ar7
+   030E 3F                  969 	addc	a,r7
+   030F FF                  970 	mov	r7,a
+                            971 ;     genPlus
+                            972 ;	Peephole 236.g	used r2 instead of ar2
+   0310 EA                  973 	mov	a,r2
+   0311 24r3A               974 	add	a,#_print_voltage_nibble_1_1
+   0313 F5 82               975 	mov	dpl,a
+                            976 ;	Peephole 236.g	used r3 instead of ar3
+   0315 EB                  977 	mov	a,r3
+   0316 34s00               978 	addc	a,#(_print_voltage_nibble_1_1 >> 8)
+   0318 F5 83               979 	mov	dph,a
+                            980 ;     genPointerGet
+                            981 ;     genFarPointerGet
+   031A E0                  982 	movx	a,@dptr
+                            983 ;     genPointerSet
+                            984 ;     genGenPointerSet
+                            985 ;	Peephole 191	removed redundant mov
+   031B FA                  986 	mov	r2,a
+   031C 8E 82               987 	mov	dpl,r6
+   031E 8F 83               988 	mov	dph,r7
+   0320 88 F0               989 	mov	b,r0
+                            990 ;	Peephole 253.b	replaced lcall/ret with ljmp
+   0322 02s00r00            991 	ljmp	__gptrput
+                            992 ;------------------------------------------------------------
+                            993 ;Allocation info for local variables in function 'main'
+                            994 ;------------------------------------------------------------
+                            995 ;ad0                       Allocated with name '_main_ad0_1_1'
+                            996 ;ad1                       Allocated with name '_main_ad1_1_1'
+                            997 ;ad2                       Allocated with name '_main_ad2_1_1'
+                            998 ;ad3                       Allocated with name '_main_ad3_1_1'
+                            999 ;count                     Allocated with name '_main_count_1_1'
+                           1000 ;count2                    Allocated with name '_main_count2_1_1'
+                           1001 ;------------------------------------------------------------
+                           1002 ;firmware.c:47: void main (void)
+                           1003 ;	-----------------------------------------
+                           1004 ;	 function main
+                           1005 ;	-----------------------------------------
+   0325                    1006 _main:
+                           1007 ;firmware.c:52: P1=0x00;	// Disable the LED's
+                           1008 ;     genAssign
+   0325 75 90 00           1009 	mov	_P1,#0x00
+                           1010 ;firmware.c:54: I2C_init();
+                           1011 ;     genCall
+   0328 12s00r00           1012 	lcall	_I2C_init
+                           1013 ;firmware.c:55: for (count=0;count<20;count++)
+                           1014 ;     genAssign
+   032B 7A 00              1015 	mov	r2,#0x00
+   032D 7B 00              1016 	mov	r3,#0x00
+   032F                    1017 00107$:
+                           1018 ;     genCmpLt
+                           1019 ;     genCmp
+   032F C3                 1020 	clr	c
+   0330 EA                 1021 	mov	a,r2
+   0331 94 14              1022 	subb	a,#0x14
+   0333 EB                 1023 	mov	a,r3
+   0334 94 00              1024 	subb	a,#0x00
+                           1025 ;     genIfxJump
+                           1026 ;	Peephole 108	removed ljmp by inverse jump logic
+   0336 50 14              1027 	jnc	00110$
+   0338                    1028 00140$:
+                           1029 ;firmware.c:56: for (count2=0;count2<0x0ffe;count2++);
+                           1030 ;     genAssign
+   0338 7C FE              1031 	mov	r4,#0xFE
+   033A 7D 0F              1032 	mov	r5,#0x0F
+   033C                    1033 00106$:
+                           1034 ;     genDjnz
+                           1035 ;     genMinus
+                           1036 ;     genMinusDec
+   033C 1C                 1037 	dec	r4
+   033D BC FF 01           1038 	cjne	r4,#0xff,00141$
+   0340 1D                 1039 	dec	r5
+   0341                    1040 00141$:
+                           1041 ;     genIfx
+   0341 EC                 1042 	mov	a,r4
+   0342 4D                 1043 	orl	a,r5
+                           1044 ;     genIfxJump
+                           1045 ;	Peephole 109	removed ljmp by inverse jump logic
+   0343 70 F7              1046 	jnz	00106$
+   0345                    1047 00142$:
+                           1048 ;firmware.c:55: for (count=0;count<20;count++)
+                           1049 ;     genPlus
+                           1050 ;     genPlusIncr
+                           1051 ;	tail increment optimized
+   0345 0A                 1052 	inc	r2
+   0346 BA 00 E6           1053 	cjne	r2,#0x00,00107$
+   0349 0B                 1054 	inc	r3
+                           1055 ;	Peephole 112.b	changed ljmp to sjmp
+   034A 80 E3              1056 	sjmp	00107$
+   034C                    1057 00110$:
+                           1058 ;firmware.c:57: I2C_init();
+                           1059 ;     genCall
+   034C 12s00r00           1060 	lcall	_I2C_init
+                           1061 ;firmware.c:58: LCD_init();
+                           1062 ;     genCall
+   034F 12s00r00           1063 	lcall	_LCD_init
+                           1064 ;firmware.c:59: LCD_write_line (" ex9: 4-channel",0);
+                           1065 ;     genAssign
+   0352 90s00r00           1066 	mov	dptr,#_LCD_write_line_PARM_2
+                           1067 ;	Peephole 181	changed mov to clr
+   0355 E4                 1068 	clr	a
+   0356 F0                 1069 	movx	@dptr,a
+                           1070 ;     genCall
+                           1071 ;	Peephole 182.a	used 16 bit load of DPTR
+   0357 90s05r7A           1072 	mov	dptr,#__str_0
+   035A 75 F0 02           1073 	mov	b,#0x02
+   035D 12s00r00           1074 	lcall	_LCD_write_line
+                           1075 ;firmware.c:60: LCD_write_line (" A/D-conversion",1);
+                           1076 ;     genAssign
+   0360 90s00r00           1077 	mov	dptr,#_LCD_write_line_PARM_2
+   0363 74 01              1078 	mov	a,#0x01
+   0365 F0                 1079 	movx	@dptr,a
+                           1080 ;     genCall
+                           1081 ;	Peephole 182.a	used 16 bit load of DPTR
+   0366 90s05r8A           1082 	mov	dptr,#__str_1
+   0369 75 F0 02           1083 	mov	b,#0x02
+   036C 12s00r00           1084 	lcall	_LCD_write_line
+                           1085 ;firmware.c:64: for (count=0;count<2000;count++)
+                           1086 ;     genAssign
+   036F 7A 00              1087 	mov	r2,#0x00
+   0371 7B 00              1088 	mov	r3,#0x00
+   0373                    1089 00114$:
+                           1090 ;     genCmpLt
+                           1091 ;     genCmp
+   0373 C3                 1092 	clr	c
+   0374 EA                 1093 	mov	a,r2
+   0375 94 D0              1094 	subb	a,#0xD0
+   0377 EB                 1095 	mov	a,r3
+   0378 94 07              1096 	subb	a,#0x07
+                           1097 ;     genIfxJump
+                           1098 ;	Peephole 108	removed ljmp by inverse jump logic
+   037A 50 14              1099 	jnc	00102$
+   037C                    1100 00143$:
+                           1101 ;firmware.c:65: for (count2=0;count2<0x0ffe;count2++);
+                           1102 ;     genAssign
+   037C 7C FE              1103 	mov	r4,#0xFE
+   037E 7D 0F              1104 	mov	r5,#0x0F
+   0380                    1105 00113$:
+                           1106 ;     genDjnz
+                           1107 ;     genMinus
+                           1108 ;     genMinusDec
+   0380 1C                 1109 	dec	r4
+   0381 BC FF 01           1110 	cjne	r4,#0xff,00144$
+   0384 1D                 1111 	dec	r5
+   0385                    1112 00144$:
+                           1113 ;     genIfx
+   0385 EC                 1114 	mov	a,r4
+   0386 4D                 1115 	orl	a,r5
+                           1116 ;     genIfxJump
+                           1117 ;	Peephole 109	removed ljmp by inverse jump logic
+   0387 70 F7              1118 	jnz	00113$
+   0389                    1119 00145$:
+                           1120 ;firmware.c:64: for (count=0;count<2000;count++)
+                           1121 ;     genPlus
+                           1122 ;     genPlusIncr
+                           1123 ;	tail increment optimized
+   0389 0A                 1124 	inc	r2
+   038A BA 00 E6           1125 	cjne	r2,#0x00,00114$
+   038D 0B                 1126 	inc	r3
+                           1127 ;firmware.c:70: while (1)
+                           1128 ;	Peephole 112.b	changed ljmp to sjmp
+   038E 80 E3              1129 	sjmp	00114$
+   0390                    1130 00102$:
+                           1131 ;firmware.c:72: I2C_start();
+                           1132 ;     genCall
+   0390 12s00r00           1133 	lcall	_I2C_start
+                           1134 ;firmware.c:73: I2C_send (0x9e);			// Send adres for IC x Write operation
+                           1135 ;     genCall
+   0393 75 82 9E           1136 	mov	dpl,#0x9E
+   0396 12s00r00           1137 	lcall	_I2C_send
+                           1138 ;firmware.c:74: I2C_send (0x44);			// Set Output active, Auto increment and Channel 0
+                           1139 ;     genCall
+   0399 75 82 44           1140 	mov	dpl,#0x44
+   039C 12s00r00           1141 	lcall	_I2C_send
+                           1142 ;firmware.c:75: I2C_send (0x80);
+                           1143 ;     genCall
+   039F 75 82 80           1144 	mov	dpl,#0x80
+   03A2 12s00r00           1145 	lcall	_I2C_send
+                           1146 ;firmware.c:76: I2C_stop();
+                           1147 ;     genCall
+   03A5 12s00r00           1148 	lcall	_I2C_stop
+                           1149 ;firmware.c:77: I2C_start();
+                           1150 ;     genCall
+   03A8 12s00r00           1151 	lcall	_I2C_start
+                           1152 ;firmware.c:78: I2C_send (0x9f);			// Send adres for IC x Read operation
+                           1153 ;     genCall
+   03AB 75 82 9F           1154 	mov	dpl,#0x9F
+   03AE 12s00r00           1155 	lcall	_I2C_send
+                           1156 ;firmware.c:79: I2C_get(1);					// Read last ADC conversion, and start A/D conversion on channel 0
+                           1157 ;     genCall
+   03B1 75 82 01           1158 	mov	dpl,#0x01
+   03B4 12s00r00           1159 	lcall	_I2C_get
+                           1160 ;firmware.c:80: ad0=I2C_get (1);			// Read ADC conversion on channel 0, and start A/D conversion on channel 1
+                           1161 ;     genCall
+   03B7 75 82 01           1162 	mov	dpl,#0x01
+   03BA 12s00r00           1163 	lcall	_I2C_get
+   03BD AA 82              1164 	mov	r2,dpl
+                           1165 ;firmware.c:81: ad1=I2C_get (1);			// Read ADC conversion on channel 1, and start A/D conversion on channel 2
+                           1166 ;     genCall
+   03BF 75 82 01           1167 	mov	dpl,#0x01
+   03C2 C0 02              1168 	push	ar2
+   03C4 12s00r00           1169 	lcall	_I2C_get
+   03C7 AB 82              1170 	mov	r3,dpl
+   03C9 D0 02              1171 	pop	ar2
+                           1172 ;firmware.c:82: ad2=I2C_get (1);			// Read ADC conversion on channel 2, and start A/D conversion on channel 3
+                           1173 ;     genCall
+   03CB 75 82 01           1174 	mov	dpl,#0x01
+   03CE C0 02              1175 	push	ar2
+   03D0 C0 03              1176 	push	ar3
+   03D2 12s00r00           1177 	lcall	_I2C_get
+   03D5 AC 82              1178 	mov	r4,dpl
+   03D7 D0 03              1179 	pop	ar3
+   03D9 D0 02              1180 	pop	ar2
+                           1181 ;firmware.c:83: ad3=I2C_get (0);			// Read ADC conversion on channel 3, and start A/D conversion on channel 0
+                           1182 ;     genCall
+   03DB 75 82 00           1183 	mov	dpl,#0x00
+   03DE C0 02              1184 	push	ar2
+   03E0 C0 03              1185 	push	ar3
+   03E2 C0 04              1186 	push	ar4
+   03E4 12s00r00           1187 	lcall	_I2C_get
+   03E7 AD 82              1188 	mov	r5,dpl
+   03E9 D0 04              1189 	pop	ar4
+   03EB D0 03              1190 	pop	ar3
+   03ED D0 02              1191 	pop	ar2
+                           1192 ;firmware.c:84: I2C_stop();
+                           1193 ;     genCall
+   03EF C0 02              1194 	push	ar2
+   03F1 C0 03              1195 	push	ar3
+   03F3 C0 04              1196 	push	ar4
+   03F5 C0 05              1197 	push	ar5
+   03F7 12s00r00           1198 	lcall	_I2C_stop
+   03FA D0 05              1199 	pop	ar5
+   03FC D0 04              1200 	pop	ar4
+   03FE D0 03              1201 	pop	ar3
+   0400 D0 02              1202 	pop	ar2
+                           1203 ;firmware.c:88: sprintf(strbuf,"1: .  V 2: .  V ");
+                           1204 ;     genIpush
+   0402 C0 02              1205 	push	ar2
+   0404 C0 03              1206 	push	ar3
+   0406 C0 04              1207 	push	ar4
+   0408 C0 05              1208 	push	ar5
+   040A 74r9A              1209 	mov	a,#__str_2
+   040C C0 E0              1210 	push	acc
+   040E 74s05              1211 	mov	a,#(__str_2 >> 8)
+   0410 C0 E0              1212 	push	acc
+   0412 74 02              1213 	mov	a,#0x02
+   0414 C0 E0              1214 	push	acc
+                           1215 ;     genIpush
+   0416 74r00              1216 	mov	a,#_strbuf
+   0418 C0 E0              1217 	push	acc
+   041A 74s00              1218 	mov	a,#(_strbuf >> 8)
+   041C C0 E0              1219 	push	acc
+   041E 74 01              1220 	mov	a,#0x01
+   0420 C0 E0              1221 	push	acc
+                           1222 ;     genCall
+   0422 12s00r00           1223 	lcall	_sprintf
+   0425 E5 81              1224 	mov	a,sp
+   0427 24 FA              1225 	add	a,#0xfa
+   0429 F5 81              1226 	mov	sp,a
+   042B D0 05              1227 	pop	ar5
+   042D D0 04              1228 	pop	ar4
+   042F D0 03              1229 	pop	ar3
+   0431 D0 02              1230 	pop	ar2
+                           1231 ;firmware.c:89: ad2=convert_ad_to_volt(ad2);
+                           1232 ;     genCast
+   0433 7E 00              1233 	mov	r6,#0x00
+                           1234 ;     genCall
+   0435 8C 82              1235 	mov	dpl,r4
+   0437 8E 83              1236 	mov	dph,r6
+   0439 C0 02              1237 	push	ar2
+   043B C0 03              1238 	push	ar3
+   043D C0 05              1239 	push	ar5
+   043F 12s00r08           1240 	lcall	_convert_ad_to_volt
+   0442 AC 82              1241 	mov	r4,dpl
+   0444 AE 83              1242 	mov	r6,dph
+   0446 D0 05              1243 	pop	ar5
+   0448 D0 03              1244 	pop	ar3
+   044A D0 02              1245 	pop	ar2
+                           1246 ;     genCast
+                           1247 ;firmware.c:90: ad3=convert_ad_to_volt(ad3);
+                           1248 ;     genCast
+   044C 7E 00              1249 	mov	r6,#0x00
+                           1250 ;     genCall
+   044E 8D 82              1251 	mov	dpl,r5
+   0450 8E 83              1252 	mov	dph,r6
+   0452 C0 02              1253 	push	ar2
+   0454 C0 03              1254 	push	ar3
+   0456 C0 04              1255 	push	ar4
+   0458 12s00r08           1256 	lcall	_convert_ad_to_volt
+   045B AD 82              1257 	mov	r5,dpl
+   045D AE 83              1258 	mov	r6,dph
+   045F D0 04              1259 	pop	ar4
+   0461 D0 03              1260 	pop	ar3
+   0463 D0 02              1261 	pop	ar2
+                           1262 ;     genCast
+                           1263 ;firmware.c:91: print_voltage (strbuf,convert_ad_to_volt(ad0),2);
+                           1264 ;     genCast
+   0465 7E 00              1265 	mov	r6,#0x00
+                           1266 ;     genCall
+   0467 8A 82              1267 	mov	dpl,r2
+   0469 8E 83              1268 	mov	dph,r6
+   046B C0 03              1269 	push	ar3
+   046D C0 04              1270 	push	ar4
+   046F C0 05              1271 	push	ar5
+   0471 12s00r08           1272 	lcall	_convert_ad_to_volt
+   0474 AA 82              1273 	mov	r2,dpl
+   0476 AE 83              1274 	mov	r6,dph
+   0478 D0 05              1275 	pop	ar5
+   047A D0 04              1276 	pop	ar4
+   047C D0 03              1277 	pop	ar3
+                           1278 ;     genAssign
+   047E 90s00r34           1279 	mov	dptr,#_print_voltage_PARM_2
+   0481 EA                 1280 	mov	a,r2
+   0482 F0                 1281 	movx	@dptr,a
+   0483 A3                 1282 	inc	dptr
+   0484 EE                 1283 	mov	a,r6
+   0485 F0                 1284 	movx	@dptr,a
+                           1285 ;     genAssign
+   0486 90s00r36           1286 	mov	dptr,#_print_voltage_PARM_3
+   0489 74 02              1287 	mov	a,#0x02
+   048B F0                 1288 	movx	@dptr,a
+                           1289 ;     genCall
+                           1290 ;	Peephole 182.a	used 16 bit load of DPTR
+   048C 90s00r00           1291 	mov	dptr,#_strbuf
+   048F 75 F0 01           1292 	mov	b,#0x01
+   0492 C0 03              1293 	push	ar3
+   0494 C0 04              1294 	push	ar4
+   0496 C0 05              1295 	push	ar5
+   0498 12s01r9A           1296 	lcall	_print_voltage
+   049B D0 05              1297 	pop	ar5
+   049D D0 04              1298 	pop	ar4
+   049F D0 03              1299 	pop	ar3
+                           1300 ;firmware.c:92: print_voltage (strbuf,convert_ad_to_volt(ad1),10);
+                           1301 ;     genCast
+   04A1 7A 00              1302 	mov	r2,#0x00
+                           1303 ;     genCall
+   04A3 8B 82              1304 	mov	dpl,r3
+   04A5 8A 83              1305 	mov	dph,r2
+   04A7 C0 04              1306 	push	ar4
+   04A9 C0 05              1307 	push	ar5
+   04AB 12s00r08           1308 	lcall	_convert_ad_to_volt
+   04AE AA 82              1309 	mov	r2,dpl
+   04B0 AB 83              1310 	mov	r3,dph
+   04B2 D0 05              1311 	pop	ar5
+   04B4 D0 04              1312 	pop	ar4
+                           1313 ;     genAssign
+   04B6 90s00r34           1314 	mov	dptr,#_print_voltage_PARM_2
+   04B9 EA                 1315 	mov	a,r2
+   04BA F0                 1316 	movx	@dptr,a
+   04BB A3                 1317 	inc	dptr
+   04BC EB                 1318 	mov	a,r3
+   04BD F0                 1319 	movx	@dptr,a
+                           1320 ;     genAssign
+   04BE 90s00r36           1321 	mov	dptr,#_print_voltage_PARM_3
+   04C1 74 0A              1322 	mov	a,#0x0A
+   04C3 F0                 1323 	movx	@dptr,a
+                           1324 ;     genCall
+                           1325 ;	Peephole 182.a	used 16 bit load of DPTR
+   04C4 90s00r00           1326 	mov	dptr,#_strbuf
+   04C7 75 F0 01           1327 	mov	b,#0x01
+   04CA C0 04              1328 	push	ar4
+   04CC C0 05              1329 	push	ar5
+   04CE 12s01r9A           1330 	lcall	_print_voltage
+   04D1 D0 05              1331 	pop	ar5
+   04D3 D0 04              1332 	pop	ar4
+                           1333 ;firmware.c:93: LCD_write_line (strbuf,0);
+                           1334 ;     genAssign
+   04D5 90s00r00           1335 	mov	dptr,#_LCD_write_line_PARM_2
+                           1336 ;	Peephole 181	changed mov to clr
+   04D8 E4                 1337 	clr	a
+   04D9 F0                 1338 	movx	@dptr,a
+                           1339 ;     genCall
+                           1340 ;	Peephole 182.a	used 16 bit load of DPTR
+   04DA 90s00r00           1341 	mov	dptr,#_strbuf
+   04DD 75 F0 01           1342 	mov	b,#0x01
+   04E0 C0 04              1343 	push	ar4
+   04E2 C0 05              1344 	push	ar5
+   04E4 12s00r00           1345 	lcall	_LCD_write_line
+   04E7 D0 05              1346 	pop	ar5
+   04E9 D0 04              1347 	pop	ar4
+                           1348 ;firmware.c:94: sprintf(strbuf,"3: .  V 4: .  V ");
+                           1349 ;     genIpush
+   04EB C0 04              1350 	push	ar4
+   04ED C0 05              1351 	push	ar5
+   04EF 74rAB              1352 	mov	a,#__str_3
+   04F1 C0 E0              1353 	push	acc
+   04F3 74s05              1354 	mov	a,#(__str_3 >> 8)
+   04F5 C0 E0              1355 	push	acc
+   04F7 74 02              1356 	mov	a,#0x02
+   04F9 C0 E0              1357 	push	acc
+                           1358 ;     genIpush
+   04FB 74r00              1359 	mov	a,#_strbuf
+   04FD C0 E0              1360 	push	acc
+   04FF 74s00              1361 	mov	a,#(_strbuf >> 8)
+   0501 C0 E0              1362 	push	acc
+   0503 74 01              1363 	mov	a,#0x01
+   0505 C0 E0              1364 	push	acc
+                           1365 ;     genCall
+   0507 12s00r00           1366 	lcall	_sprintf
+   050A E5 81              1367 	mov	a,sp
+   050C 24 FA              1368 	add	a,#0xfa
+   050E F5 81              1369 	mov	sp,a
+   0510 D0 05              1370 	pop	ar5
+   0512 D0 04              1371 	pop	ar4
+                           1372 ;firmware.c:95: print_voltage (strbuf,ad2,2);
+                           1373 ;     genCast
+   0514 90s00r34           1374 	mov	dptr,#_print_voltage_PARM_2
+   0517 EC                 1375 	mov	a,r4
+   0518 F0                 1376 	movx	@dptr,a
+   0519 A3                 1377 	inc	dptr
+                           1378 ;	Peephole 181	changed mov to clr
+   051A E4                 1379 	clr	a
+   051B F0                 1380 	movx	@dptr,a
+                           1381 ;     genAssign
+   051C 90s00r36           1382 	mov	dptr,#_print_voltage_PARM_3
+   051F 74 02              1383 	mov	a,#0x02
+   0521 F0                 1384 	movx	@dptr,a
+                           1385 ;     genCall
+                           1386 ;	Peephole 182.a	used 16 bit load of DPTR
+   0522 90s00r00           1387 	mov	dptr,#_strbuf
+   0525 75 F0 01           1388 	mov	b,#0x01
+   0528 C0 05              1389 	push	ar5
+   052A 12s01r9A           1390 	lcall	_print_voltage
+   052D D0 05              1391 	pop	ar5
+                           1392 ;firmware.c:96: print_voltage (strbuf,ad3,10);
+                           1393 ;     genCast
+   052F 90s00r34           1394 	mov	dptr,#_print_voltage_PARM_2
+   0532 ED                 1395 	mov	a,r5
+   0533 F0                 1396 	movx	@dptr,a
+   0534 A3                 1397 	inc	dptr
+                           1398 ;	Peephole 181	changed mov to clr
+   0535 E4                 1399 	clr	a
+   0536 F0                 1400 	movx	@dptr,a
+                           1401 ;     genAssign
+   0537 90s00r36           1402 	mov	dptr,#_print_voltage_PARM_3
+   053A 74 0A              1403 	mov	a,#0x0A
+   053C F0                 1404 	movx	@dptr,a
+                           1405 ;     genCall
+                           1406 ;	Peephole 182.a	used 16 bit load of DPTR
+   053D 90s00r00           1407 	mov	dptr,#_strbuf
+   0540 75 F0 01           1408 	mov	b,#0x01
+   0543 12s01r9A           1409 	lcall	_print_voltage
+                           1410 ;firmware.c:97: LCD_write_line (strbuf,1);
+                           1411 ;     genAssign
+   0546 90s00r00           1412 	mov	dptr,#_LCD_write_line_PARM_2
+   0549 74 01              1413 	mov	a,#0x01
+   054B F0                 1414 	movx	@dptr,a
+                           1415 ;     genCall
+                           1416 ;	Peephole 182.a	used 16 bit load of DPTR
+   054C 90s00r00           1417 	mov	dptr,#_strbuf
+   054F 75 F0 01           1418 	mov	b,#0x01
+   0552 12s00r00           1419 	lcall	_LCD_write_line
+                           1420 ;firmware.c:101: for (count=0;count<10;count++)
+                           1421 ;     genAssign
+   0555 7A 00              1422 	mov	r2,#0x00
+   0557 7B 00              1423 	mov	r3,#0x00
+   0559                    1424 00121$:
+                           1425 ;     genCmpLt
+                           1426 ;     genCmp
+   0559 C3                 1427 	clr	c
+   055A EA                 1428 	mov	a,r2
+   055B 94 0A              1429 	subb	a,#0x0A
+   055D EB                 1430 	mov	a,r3
+   055E 94 00              1431 	subb	a,#0x00
+                           1432 ;     genIfxJump
+   0560 40 03              1433 	jc	00146$
+   0562 02s03r90           1434 	ljmp	00102$
+   0565                    1435 00146$:
+                           1436 ;firmware.c:102: for (count2=0;count2<0x0ffe;count2++);
+                           1437 ;     genAssign
+   0565 7C FE              1438 	mov	r4,#0xFE
+   0567 7D 0F              1439 	mov	r5,#0x0F
+   0569                    1440 00120$:
+                           1441 ;     genDjnz
+                           1442 ;     genMinus
+                           1443 ;     genMinusDec
+   0569 1C                 1444 	dec	r4
+   056A BC FF 01           1445 	cjne	r4,#0xff,00147$
+   056D 1D                 1446 	dec	r5
+   056E                    1447 00147$:
+                           1448 ;     genIfx
+   056E EC                 1449 	mov	a,r4
+   056F 4D                 1450 	orl	a,r5
+                           1451 ;     genIfxJump
+                           1452 ;	Peephole 109	removed ljmp by inverse jump logic
+   0570 70 F7              1453 	jnz	00120$
+   0572                    1454 00148$:
+                           1455 ;firmware.c:101: for (count=0;count<10;count++)
+                           1456 ;     genPlus
+                           1457 ;     genPlusIncr
+                           1458 ;	tail increment optimized
+   0572 0A                 1459 	inc	r2
+   0573 BA 00 E3           1460 	cjne	r2,#0x00,00121$
+   0576 0B                 1461 	inc	r3
+                           1462 ;	Peephole 112.b	changed ljmp to sjmp
+   0577 80 E0              1463 	sjmp	00121$
+   0579                    1464 00125$:
+   0579 22                 1465 	ret
+                           1466 	.area CSEG    (CODE)
+   057A                    1467 __str_0:
+   057A 20 65 78 39 3A 20  1468 	.ascii " ex9: 4-channel"
+        34 2D 63 68 61 6E
+        6E 65 6C
+   0589 00                 1469 	.db 0x00
+   058A                    1470 __str_1:
+   058A 20 41 2F 44 2D 63  1471 	.ascii " A/D-conversion"
+        6F 6E 76 65 72 73
+        69 6F 6E
+   0599 00                 1472 	.db 0x00
+   059A                    1473 __str_2:
+   059A 31 3A 20 2E 20 20  1474 	.ascii "1: .  V 2: .  V "
+        56 20 32 3A 20 2E
+        20 20 56 20
+   05AA 00                 1475 	.db 0x00
+   05AB                    1476 __str_3:
+   05AB 33 3A 20 2E 20 20  1477 	.ascii "3: .  V 4: .  V "
+        56 20 34 3A 20 2E
+        20 20 56 20
+   05BB 00                 1478 	.db 0x00
+                           1479 	.area XINIT   (CODE)

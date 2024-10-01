@@ -1,0 +1,19 @@
+@echo Compile...
+@echo.
+@echo main...
+@sdcc main.c -c --model-small
+@echo scan_key...
+@sdcc scan_key.c -c --model-small
+@echo usb...
+@sdcc usb.c -c --model-small
+@echo Linking...
+@sdcc main.rel scan_key.rel usb.rel --model-small
+@echo.
+@echo Deleting old HEx....
+@echo.
+@del usb.hex
+@echo.
+@echo Copying IHX to HEX
+@echo.
+@ren main.ihx usb.hex
+@pause

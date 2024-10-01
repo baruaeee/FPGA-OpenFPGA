@@ -1,0 +1,105 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--inst4 is inst4
+--operation mode is normal
+
+inst4_lut_out = SWITCH3;
+inst4 = DFFEAS(inst4_lut_out, SWITCH4, !SWITCH2, , , VCC, SWITCH1, , );
+
+
+--inst14 is inst14
+--operation mode is normal
+
+inst14_lut_out = SWITCH3;
+inst14 = DFFEAS(inst14_lut_out, SWITCH4, VCC, , SWITCH1, , , , );
+
+
+--inst2 is inst2
+--operation mode is normal
+
+inst2 = !SWITCH1 & (inst2 # SWITCH2);
+
+
+--A1L3 is inst6~8
+--operation mode is normal
+
+A1L3 = SWITCH4 & !SWITCH3 # !SWITCH4 & (A1L3);
+
+
+--SWITCH1 is SWITCH1
+--operation mode is input
+
+SWITCH1 = INPUT();
+
+
+--SWITCH2 is SWITCH2
+--operation mode is input
+
+SWITCH2 = INPUT();
+
+
+--SWITCH3 is SWITCH3
+--operation mode is input
+
+SWITCH3 = INPUT();
+
+
+--SWITCH4 is SWITCH4
+--operation mode is input
+
+SWITCH4 = INPUT();
+
+
+--LED1 is LED1
+--operation mode is output
+
+LED1 = OUTPUT(!inst2);
+
+
+--LED2 is LED2
+--operation mode is output
+
+LED2 = OUTPUT(!A1L3);
+
+
+--LED3 is LED3
+--operation mode is output
+
+LED3 = OUTPUT(inst4);
+
+
+--LED4 is LED4
+--operation mode is output
+
+LED4 = OUTPUT(inst14);
+
+
+--LED5 is LED5
+--operation mode is output
+
+LED5 = OUTPUT(GND);
+
+
+--LED6 is LED6
+--operation mode is output
+
+LED6 = OUTPUT(GND);
+
+
+--LED7 is LED7
+--operation mode is output
+
+LED7 = OUTPUT(GND);
+
+

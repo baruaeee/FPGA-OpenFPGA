@@ -1,0 +1,105 @@
+Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+33
+1719
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+Latch_VHDL
+# storage
+db|ex6_VHDL_flipflop.(1).cnf
+db|ex6_VHDL_flipflop.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Latch_VHDL.vhd
+fb4855ab871a2454d1eae6ebd1b7d7f
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+Latch_VHDL:inst
+}
+# end
+# entity
+D_ff_VHDL
+# storage
+db|ex6_VHDL_flipflop.(2).cnf
+db|ex6_VHDL_flipflop.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+D_ff_VHDL.vhd
+d87342b38c5473b276442649ac929c
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+D_ff_VHDL:inst1
+}
+# end
+# entity
+ex6_VHDL_flipflop
+# storage
+db|ex6_VHDL_flipflop.(0).cnf
+db|ex6_VHDL_flipflop.(0).cnf
+# case_insensitive
+# source_file
+ex6_VHDL_flipflop.bdf
+065986c3c8932165ac99c84a6f3447
+23
+# hierarchies {
+|
+}
+# end
+# entity
+D_ff_set_reset_VHDL
+# storage
+db|ex6_VHDL_flipflop.(3).cnf
+db|ex6_VHDL_flipflop.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+D_ff_set_reset_VHDL.vhd
+f114ff3aeca3919be954be9af9e131c3
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+D_ff_set_reset_VHDL:inst2
+}
+# end
+# complete
+

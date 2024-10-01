@@ -1,0 +1,101 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_Q is D_ff_VHDL:inst1|Q at LC_X52_Y1_N4
+--operation mode is normal
+
+C1_Q_lut_out = SWITCH2;
+C1_Q = DFFEAS(C1_Q_lut_out, GLOBAL(SWITCH1), VCC, , , , , , );
+
+
+--D1_Q is D_ff_set_reset_VHDL:inst2|Q at LC_X52_Y1_N2
+--operation mode is normal
+
+D1_Q_lut_out = SWITCH2;
+D1_Q = DFFEAS(D1_Q_lut_out, GLOBAL(SWITCH1), !SWITCH4, , , VCC, SWITCH3, , );
+
+
+--B1_Q is Latch_VHDL:inst|Q at LC_X52_Y1_N5
+--operation mode is normal
+
+B1_Q = GLOBAL(SWITCH1) & SWITCH2 # !GLOBAL(SWITCH1) & (B1_Q);
+
+
+--SWITCH2 is SWITCH2 at PIN_T13
+--operation mode is input
+
+SWITCH2 = INPUT();
+
+
+--SWITCH1 is SWITCH1 at PIN_T15
+--operation mode is input
+
+SWITCH1 = INPUT();
+
+
+--SWITCH4 is SWITCH4 at PIN_M14
+--operation mode is input
+
+SWITCH4 = INPUT();
+
+
+--SWITCH3 is SWITCH3 at PIN_P14
+--operation mode is input
+
+SWITCH3 = INPUT();
+
+
+--LED1 is LED1 at PIN_N13
+--operation mode is output
+
+LED1 = OUTPUT(B1_Q);
+
+
+--LED2 is LED2 at PIN_M13
+--operation mode is output
+
+LED2 = OUTPUT(C1_Q);
+
+
+--LED3 is LED3 at PIN_N12
+--operation mode is output
+
+LED3 = OUTPUT(D1_Q);
+
+
+--LED4 is LED4 at PIN_P12
+--operation mode is output
+
+LED4 = OUTPUT(GND);
+
+
+--LED5 is LED5 at PIN_M12
+--operation mode is output
+
+LED5 = OUTPUT(GND);
+
+
+--LED6 is LED6 at PIN_R12
+--operation mode is output
+
+LED6 = OUTPUT(GND);
+
+
+--LED7 is LED7 at PIN_T11
+--operation mode is output
+
+LED7 = OUTPUT(GND);
+
+
+
+

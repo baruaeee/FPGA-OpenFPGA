@@ -1,0 +1,884 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'tcpip\open_ether.c', time: Wed Dec 13 13:00:40 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+	.include <reg52.def>
+	P0    = $80
+	sevseg_ctrl  = $C0;
+  sevseg_data0 = $C1;
+  sevseg_data1 = $C2;
+  sevseg_data2 = $C3;
+  sevseg_data3 = $C4;
+  sevseg_en    = $C5;
+  _sevseg_ctrl  = sevseg_ctrl;
+  _sevseg_data0 = sevseg_data0;
+  _sevseg_data1 = sevseg_data1;
+  _sevseg_data2 = sevseg_data2;
+  _sevseg_data3 = sevseg_data3;
+  _sevseg_en    = sevseg_en;
+
+ .export _set_mac_add ; void set_mac_add(xdata unsigned char *)
+ .segment _set_mac_add_formal_near, size 0, fill, notext, sclass dram
+ .segment _set_mac_add_local_near, size 0, fill, notext, sclass dram
+ .sgraph _set_mac_add_formal_near, _set_mac_add_local_near, __set_mac_add
+
+ .segment __set_mac_add
+_set_mac_add: ; (leaf function) void set_mac_add(xdata unsigned char *)
+ ; parameter 'addr' in 'RW67' assigned to 'RW01'
+ mov R0,AR6
+ mov R1,AR7
+ .line "tcpip\open_ether.c" 28 0
+ mov A,#1
+ add A,R1
+ mov R7,A
+ clr A
+ addc A,R0
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R7,A
+ mov R3,AR7
+ mov R2,#0
+ mov DPH,AR0
+ mov DPL,AR1
+ movx A,@DPTR
+ mov R7,A
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov R6,AR4
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_1
+?_2:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_1:
+ djnz B,?_2
+ mov R7,A
+ orl A,R3
+ mov R7,A
+ mov A,R6
+ orl A,R2
+ mov R6,A
+ clr A
+ mov R5,A
+ mov R4,A
+ mov DPTR,#53316
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 30 2
+ mov A,#2
+ add A,R1
+ mov R7,A
+ clr A
+ addc A,R0
+ mov R6,A
+ mov R4,#XDS
+ lcall __gen_read32_i4
+ mov DPTR,#53312
+ lcall __st_dptr_r47
+ ret
+; end of function set_mac_add
+; used: R01234567 BR-------- DPTR ACC PSW B
+
+ .export _Init_Mac ; unsigned char Init_Mac(void)
+ .hide
+ .segment _Init_Mac_formal_near, size 0, fill, notext, sclass dram
+ .segment _Init_Mac_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Init_Mac_formal_near, _Init_Mac_local_near, __Init_Mac
+ .sgraph _Init_Mac_local_near, _set_mac_add_formal_near, __Init_Mac, 0
+ .segment _set_mac_add_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __Init_Mac
+_Init_Mac: ; unsigned char Init_Mac(void)
+ .line "tcpip\open_ether.c" 33 21
+ mov DPTR,#53248
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ inc DPTR
+ mov A,#8
+ movx @DPTR,A
+ inc DPTR
+ clr A
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 38 1
+ mov DPTR,#53248
+ lcall __ld_dptr_r47
+ anl AR6,#247
+ clr A
+ mov R5,A
+ mov R4,A
+ mov DPTR,#53248
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 39 2
+ mov DPTR,#53283
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 40 2
+ mov DPTR,#53272
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#64
+ movx @DPTR,A
+ inc DPTR
+ mov A,#6
+ movx @DPTR,A
+ inc DPTR
+ clr A
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 41 2
+ mov DPTR,#53263
+ mov A,#18
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 42 2
+ mov DPTR,#53267
+ mov A,#12
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 43 2
+ mov DPTR,#53271
+ mov A,#18
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 44 2
+ mov DPTR,#53276
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#15
+ movx @DPTR,A
+ inc DPTR
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#63
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 45 2
+ mov DPTR,#53287
+ clr A
+ movx @DPTR,A
+ ; variable 'rxtx_bd' assigned to register 'B1_RW89'
+ .line "tcpip\open_ether.c" 68 2
+ mov AR8,#212
+ .line "tcpip\open_ether.c" 69 6
+ clr A
+ mov AR9,A
+ mov R1,A
+ ; variable 'i' assigned to register 'R1'
+?9:
+ .line "tcpip\open_ether.c" 69 25
+ mov R5,AR1
+ mov R4,#0
+ mov R7,#3
+ mov R6,AR4
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_3
+?_4:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_3:
+ djnz B,?_4
+ mov R7,A
+ mov A,AR9
+ add A,R7
+ mov R3,A
+ mov A,AR8
+ addc A,R6
+ mov R2,A
+ clr A
+ mov R4,A
+ mov R5,A
+ mov R6,#88
+ mov R7,#0
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 71 4
+ mov R5,AR1
+ mov R4,#0
+ mov R7,#3
+ mov R6,AR4
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_5
+?_6:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_5:
+ djnz B,?_6
+ mov R7,A
+ mov A,AR9
+ add A,R7
+ mov R7,A
+ mov A,AR8
+ addc A,R6
+ mov R6,A
+ mov A,#4
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R6,AR4
+ mov R7,AR5
+ mov R4,#6
+ mov R5,#0
+ lcall __mul_i2
+ clr A
+ add A,R7
+ mov R7,A
+ mov A,#24
+ addc A,R6
+ mov R6,A
+ clr A
+ mov R5,A
+ mov R4,A
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 72 2
+ inc R1
+ .line "tcpip\open_ether.c" 69 13
+ cjne R1,#1,?_7
+ sjmp ?_8
+?_7:
+ ljmp ?9
+?_8:
+ .line "tcpip\open_ether.c" 73 2
+ mov R6,AR8
+ mov R7,AR9
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r47
+ orl AR6,#32
+ mov R2,AR8
+ mov R3,AR9
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 76 2
+ mov R6,#212
+ mov R7,#0
+ mov A,#8
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ ; variable 'rxtx_bd' assigned to register 'B1_RW89'
+ mov AR8,R6
+ mov AR9,R7
+ .line "tcpip\open_ether.c" 79 6
+ clr A
+ mov R1,A
+ ; variable 'i' assigned to register 'R1'
+?13:
+ .line "tcpip\open_ether.c" 79 25
+ mov R5,AR1
+ mov R4,#0
+ mov R7,#3
+ mov R6,AR4
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_9
+?_10:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_9:
+ djnz B,?_10
+ mov R7,A
+ mov A,AR9
+ add A,R7
+ mov R3,A
+ mov A,AR8
+ addc A,R6
+ mov R2,A
+ mov R5,#16
+ clr A
+ mov R6,A
+ mov R7,A
+ mov B,R5
+ inc B
+ sjmp ?_11
+?_12:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_11:
+ djnz B,?_12
+ mov R7,A
+ mov R7,A
+ orl AR6,#128
+ orl AR6,#64
+ clr A
+ mov R5,A
+ mov R4,A
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 81 4
+ mov R5,AR1
+ mov R4,#0
+ mov R7,#3
+ mov R6,AR4
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_13
+?_14:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_13:
+ djnz B,?_14
+ mov R7,A
+ mov A,AR9
+ add A,R7
+ mov R7,A
+ mov A,AR8
+ addc A,R6
+ mov R6,A
+ mov A,#4
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R6,AR4
+ mov R7,AR5
+ mov R4,#6
+ mov R5,#0
+ lcall __mul_i2
+ clr A
+ mov R5,A
+ mov R4,A
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 82 2
+ inc R1
+ .line "tcpip\open_ether.c" 79 13
+ cjne R1,#4,?_15
+ sjmp ?_16
+?_15:
+ ljmp ?13
+?_16:
+ .line "tcpip\open_ether.c" 83 2
+ mov A,#24
+ add A,AR9
+ mov AR9,A
+ clr A
+ addc A,AR8
+ mov AR8,A
+ mov R6,AR8
+ mov R7,AR9
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r47
+ orl AR6,#32
+ mov R2,AR8
+ mov R3,AR9
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 85 2
+ mov R6,#((_my_mac)>>8)&255
+ mov R7,#(_my_mac)&255
+ lcall _set_mac_add
+ .line "tcpip\open_ether.c" 87 2
+ mov R4,#255
+ mov R5,#255
+ mov R6,#255
+ mov R7,#255
+ mov DPTR,#53255
+ mov A,R7
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 88 2
+ mov DPTR,#53259
+ mov A,#127
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 95 2
+ mov DPTR,#53248
+ lcall __ld_dptr_r47
+ orl AR7,#67
+ orl AR6,#160
+ mov DPTR,#53248
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 97 9
+ clr A
+ mov R7,A
+ ret
+; end of function Init_Mac
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _init_rx ; void init_rx(void)
+ .segment _init_rx_formal_near, size 0, fill, notext, sclass dram
+ .segment _init_rx_local_near, size 0, fill, notext, sclass dram
+ .sgraph _init_rx_formal_near, _init_rx_local_near, __init_rx
+
+ .segment __init_rx
+_init_rx: ; (leaf function) void init_rx(void)
+ .line "tcpip\open_ether.c" 102 19
+ mov R6,_rx_bd
+ mov R7,_rx_bd+1
+ mov A,#6
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ ; variable 'ptmp' assigned to register 'RW67'
+ .line "tcpip\open_ether.c" 106 4
+ orl AR6,#224
+ mov _pRxPtr,R6
+ mov _pRxPtr+1,R7
+ ret
+; end of function init_rx
+; used: R------67 BR-------- DPTR ACC PSW
+
+ .export _find_RX_Buffer ; xdata oeth_bd *find_RX_Buffer(void)
+ .segment _find_RX_Buffer_formal_near, size 0, fill, notext, sclass dram
+ .segment _find_RX_Buffer_local_near, size 0, fill, notext, sclass dram
+ .sgraph _find_RX_Buffer_formal_near, _find_RX_Buffer_local_near, __find_RX_Buffer
+
+ .segment __find_RX_Buffer
+_find_RX_Buffer: ; (leaf function) xdata oeth_bd *find_RX_Buffer(void)
+ .line "tcpip\open_ether.c" 109 32
+ mov R6,#212
+ mov R7,#0
+ mov A,#8
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ ; variable 'rx_bd' assigned to register 'RW45'
+ .line "tcpip\open_ether.c" 112 6
+ clr A
+ mov R3,A
+ ; variable 'i' assigned to register 'R3'
+?21:
+ .line "tcpip\open_ether.c" 112 30
+ mov A,#2
+ add A,R5
+ mov R7,A
+ clr A
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ mov R7,#0
+ anl AR6,#128
+ mov A,R6
+ orl A,R7
+ .line "tcpip\open_ether.c" 113 39
+ jz ?23
+ .line "tcpip\open_ether.c" 117 2
+ inc R3
+ mov A,#8
+ add A,R5
+ mov R5,A
+ clr A
+ addc A,R4
+ mov R4,A
+ .line "tcpip\open_ether.c" 112 10
+ mov R7,#4
+ clr C
+ mov A,R3
+ subb A,R7
+ jc ?21
+?23:
+ .line "tcpip\open_ether.c" 118 5
+ cjne R3,#4,?27
+ .line "tcpip\open_ether.c" 118 19
+ clr A
+ mov R6,A
+ mov R7,A
+ sjmp ?20
+?27:
+ .line "tcpip\open_ether.c" 119 9
+ mov R6,AR4
+ mov R7,AR5
+?20:
+ ret
+; end of function find_RX_Buffer
+; used: R---34567 BR-------- DPTR ACC PSW
+
+ .segment neardata, sclass dram
+ .export _pTxPtr ; xdata unsigned char *near pTxPtr
+_pTxPtr: ; xdata unsigned char *near pTxPtr
+ .dc.w 0
+ .export _RequestSend_Phy ; void RequestSend_Phy(unsigned int)
+ .segment _RequestSend_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _RequestSend_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _RequestSend_Phy_formal_near, _RequestSend_Phy_local_near, __RequestSend_Phy
+
+ .segment __RequestSend_Phy
+_RequestSend_Phy: ; (leaf function) void RequestSend_Phy(unsigned int)
+ ; parameter 'FrameSize' in 'RW67'
+ .line "tcpip\open_ether.c" 135 36
+ mov DPTR,#54272
+ lcall __st_dptr_r67
+ .line "tcpip\open_ether.c" 139 2
+ mov R4,#212
+ mov R5,#0
+ mov A,#2
+ add A,R5
+ mov R3,A
+ clr A
+ addc A,R4
+ mov R2,A
+ mov R4,#120
+ mov R5,#0
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r45
+ .line "tcpip\open_ether.c" 140 2
+ mov R4,#212
+ mov R5,#0
+ mov A,#4
+ add A,R5
+ mov R5,A
+ clr A
+ addc A,R4
+ mov R4,A
+ clr A
+ mov R0,A
+ mov R1,A
+ mov R2,#24
+ mov R3,#0
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r03
+ .line "tcpip\open_ether.c" 141 2
+ mov _pTxPtr,#248
+ mov _pTxPtr+1,#0
+ ret
+; end of function RequestSend_Phy
+; used: R01234567 BR-------- DPTR ACC PSW
+
+ .export _CommitSend_Phy ; void CommitSend_Phy(void)
+ .segment _CommitSend_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _CommitSend_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _CommitSend_Phy_formal_near, _CommitSend_Phy_local_near, __CommitSend_Phy
+
+ .segment __CommitSend_Phy
+_CommitSend_Phy: ; (leaf function) void CommitSend_Phy(void)
+ .line "tcpip\open_ether.c" 145 22
+ mov R6,#212
+ mov R7,#0
+ mov A,#2
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov AR8,R6
+ mov AR9,R7
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ mov A,R7
+ mov R5,A
+ mov A,R6
+ orl A,#200
+ mov R4,A
+ mov R6,AR8
+ mov R7,AR9
+ mov DPH,R6
+ mov DPL,R7
+ lcall __st_dptr_r45
+ ret
+; end of function CommitSend_Phy
+; used: R----4567 BR01------ DPTR ACC PSW
+
+ .export _Read_Frame_word_Phy ; unsigned int Read_Frame_word_Phy(void)
+ .segment _Read_Frame_word_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _Read_Frame_word_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Read_Frame_word_Phy_formal_near, _Read_Frame_word_Phy_local_near, __Read_Frame_word_Phy
+
+ .segment __Read_Frame_word_Phy
+_Read_Frame_word_Phy: ; (leaf function) unsigned int Read_Frame_word_Phy(void)
+ .line "tcpip\open_ether.c" 150 39
+ mov R6,_pRxPtr
+ mov R7,_pRxPtr+1
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ ; variable 'tmp' assigned to register 'RW67'
+ .line "tcpip\open_ether.c" 152 2
+ mov A,#2
+ add A,_pRxPtr+1
+ mov _pRxPtr+1,A
+ clr A
+ addc A,_pRxPtr
+ mov _pRxPtr,A
+ ret
+; end of function Read_Frame_word_Phy
+; used: R------67 BR-------- DPTR ACC PSW
+
+ .export _Read_Frame_long_Phy ; unsigned long Read_Frame_long_Phy(void)
+ .segment _Read_Frame_long_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _Read_Frame_long_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Read_Frame_long_Phy_formal_near, _Read_Frame_long_Phy_local_near, __Read_Frame_long_Phy
+
+ .segment __Read_Frame_long_Phy
+_Read_Frame_long_Phy: ; (leaf function) unsigned long Read_Frame_long_Phy(void)
+ .line "tcpip\open_ether.c" 156 40
+ mov R6,_pRxPtr
+ mov R7,_pRxPtr+1
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r47
+ ; variable 'tmp' assigned to register 'RL4567'
+ .line "tcpip\open_ether.c" 158 2
+ mov A,#4
+ add A,_pRxPtr+1
+ mov _pRxPtr+1,A
+ clr A
+ addc A,_pRxPtr
+ mov _pRxPtr,A
+ ret
+; end of function Read_Frame_long_Phy
+; used: R----4567 BR-------- DPTR ACC PSW
+
+ .export _Read_Frame_xdata_Phy ; void Read_Frame_xdata_Phy(xdata unsigned char *, unsigned int)
+ .segment _Read_Frame_xdata_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _Read_Frame_xdata_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Read_Frame_xdata_Phy_formal_near, _Read_Frame_xdata_Phy_local_near, __Read_Frame_xdata_Phy
+
+ .segment __Read_Frame_xdata_Phy
+_Read_Frame_xdata_Phy: ; (leaf function) void Read_Frame_xdata_Phy(xdata unsigned char *, unsigned int)
+ ; parameter 'ps' in 'RW67' assigned to 'RW45'
+ ; parameter 'len' in 'RW45' assigned to 'RW01'
+ mov R0,AR4
+ mov R1,AR5
+ mov R4,AR6
+ mov R5,AR7
+ .line "tcpip\open_ether.c" 162 52
+ sjmp ?35
+?34:
+ .line "tcpip\open_ether.c" 163 15
+ mov AR8,R4
+ mov AR9,R5
+ mov R2,AR8
+ mov R3,AR9
+ mov A,#1
+ add A,R3
+ mov R5,A
+ clr A
+ addc A,R2
+ mov R4,A
+ mov R6,_pRxPtr
+ mov R7,_pRxPtr+1
+ mov A,#1
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov _pRxPtr,R2
+ mov _pRxPtr+1,R3
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R3,A
+ mov DPH,AR8
+ mov DPL,AR9
+ mov A,R3
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 165 2
+?35:
+ .line "tcpip\open_ether.c" 163 8
+ mov R6,AR0
+ mov R7,AR1
+ mov A,#255
+ add A,R7
+ mov R1,A
+ mov A,#255
+ addc A,R6
+ mov R0,A
+ mov A,R6
+ orl A,R7
+ jnz ?34
+ ret
+; end of function Read_Frame_xdata_Phy
+; used: R01234567 BR01------ DPTR ACC PSW
+
+ .export _Write_Frame_word_Phy ; void Write_Frame_word_Phy(unsigned int)
+ .segment _Write_Frame_word_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _Write_Frame_word_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Write_Frame_word_Phy_formal_near, _Write_Frame_word_Phy_local_near, __Write_Frame_word_Phy
+
+ .segment __Write_Frame_word_Phy
+_Write_Frame_word_Phy: ; (leaf function) void Write_Frame_word_Phy(unsigned int)
+ ; parameter 'Data' in 'RW67'
+ .line "tcpip\open_ether.c" 169 37
+ mov R4,_pTxPtr
+ mov R5,_pTxPtr+1
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\open_ether.c" 171 2
+ mov A,#2
+ add A,_pTxPtr+1
+ mov _pTxPtr+1,A
+ clr A
+ addc A,_pTxPtr
+ mov _pTxPtr,A
+ ret
+; end of function Write_Frame_word_Phy
+; used: R----4567 BR-------- DPTR ACC PSW
+
+ .export _Write_Frame_long_Phy ; void Write_Frame_long_Phy(unsigned long)
+ .segment _Write_Frame_long_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _Write_Frame_long_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Write_Frame_long_Phy_formal_near, _Write_Frame_long_Phy_local_near, __Write_Frame_long_Phy
+
+ .segment __Write_Frame_long_Phy
+_Write_Frame_long_Phy: ; (leaf function) void Write_Frame_long_Phy(unsigned long)
+ ; parameter 'Data' in 'RL4567'
+ .line "tcpip\open_ether.c" 174 45
+ mov R2,_pTxPtr
+ mov R3,_pTxPtr+1
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\open_ether.c" 176 2
+ mov A,#4
+ add A,_pTxPtr+1
+ mov _pTxPtr+1,A
+ clr A
+ addc A,_pTxPtr
+ mov _pTxPtr,A
+ ret
+; end of function Write_Frame_long_Phy
+; used: R--234567 BR-------- DPTR ACC PSW
+
+ .export _Write_Frame_xdata_Phy ; void Write_Frame_xdata_Phy(xdata unsigned char *, unsigned int)
+ .segment _Write_Frame_xdata_Phy_formal_near, size 0, fill, notext, sclass dram
+ .segment _Write_Frame_xdata_Phy_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Write_Frame_xdata_Phy_formal_near, _Write_Frame_xdata_Phy_local_near, __Write_Frame_xdata_Phy
+
+ .segment __Write_Frame_xdata_Phy
+_Write_Frame_xdata_Phy: ; (leaf function) void Write_Frame_xdata_Phy(xdata unsigned char *, unsigned int)
+ ; parameter 'ps' in 'RW67' assigned to 'RW45'
+ ; parameter 'len' in 'RW45' assigned to 'RW01'
+ mov R0,AR4
+ mov R1,AR5
+ mov R4,AR6
+ mov R5,AR7
+ .line "tcpip\open_ether.c" 179 54
+ sjmp ?41
+?40:
+ .line "tcpip\open_ether.c" 180 15
+ mov AR8,_pTxPtr
+ mov AR9,_pTxPtr+1
+ mov A,#1
+ add A,AR9
+ mov _pTxPtr+1,A
+ clr A
+ addc A,AR8
+ mov _pTxPtr,A
+ mov R6,AR4
+ mov R7,AR5
+ mov A,#1
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R3,A
+ mov DPH,AR8
+ mov DPL,AR9
+ mov A,R3
+ movx @DPTR,A
+ .line "tcpip\open_ether.c" 182 2
+?41:
+ .line "tcpip\open_ether.c" 180 8
+ mov R6,AR0
+ mov R7,AR1
+ mov A,#255
+ add A,R7
+ mov R1,A
+ mov A,#255
+ addc A,R6
+ mov R0,A
+ mov A,R6
+ orl A,R7
+ jnz ?40
+ ret
+; end of function Write_Frame_xdata_Phy
+; used: R01234567 BR01------ DPTR ACC PSW
+
+ .import _rx_bd ; xdata oeth_bd *near rx_bd
+ .segment nearbss, sclass dram, notext
+ .export _pRxPtr ; xdata unsigned char *near pRxPtr
+_pRxPtr: ; xdata unsigned char *near pRxPtr
+ .ds.b 2
+ .import _my_mac ; xdata unsigned char my_mac[6]
+ .end
+; *END* (889 lines)

@@ -1,0 +1,1242 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'fg1_http.c', time: Thu Dec 14 11:33:34 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+	.include <reg52.def>
+	sevseg_ctrl  = $C0;
+  sevseg_data0 = $C1;
+  sevseg_data1 = $C2;
+  sevseg_data2 = $C3;
+  sevseg_data3 = $C4;
+  sevseg_en    = $C5;
+  _sevseg_ctrl  = sevseg_ctrl;
+  _sevseg_data0 = sevseg_data0;
+  _sevseg_data1 = sevseg_data1;
+  _sevseg_data2 = sevseg_data2;
+  _sevseg_data3 = sevseg_data3;
+  _sevseg_en    = sevseg_en;
+
+  ps2_ctrl    = $d8;
+  ps2_rxf     = ps2_ctrl.0;
+  ps2_ovf     = ps2_ctrl.1;
+  ps2_rx_busy = ps2_ctrl.2;
+  ps2_tx_busy = ps2_ctrl.3;
+  ps2_ack     = ps2_ctrl.4;
+  ps2_init    = ps2_ctrl.7;
+  ps2_data    = $0xd9;
+  _ps2_ctrl    = ps2_ctrl;
+  _ps2_rxf     = ps2_rxf;
+  _ps2_ovf     = ps2_ovf;
+  _ps2_rx_busy = ps2_rx_busy;
+  _ps2_tx_busy = ps2_tx_busy;
+  _ps2_ack     = ps2_ack;
+  _ps2_init    = ps2_init;
+  _ps2_data    = ps2_data;
+  bank_sel   = $f9;
+  bank_en    = $f8;
+  vgaen      = bank_en.4;
+  sramb0     = bank_en.5;
+  sramen     = bank_en.6;
+  ethdis     = bank_en.7;
+
+  _bank_sel   = bank_sel;
+  _bank_en    = bank_en;
+  _vgaen      = vgaen;
+  _sramb0     = sramb0;
+  _sramen     = sramen;
+  _ethdis     = ethdis;
+ .segment data, sclass xram
+ .export _hitcnt ; xdata unsigned int hitcnt
+_hitcnt: ; xdata unsigned int hitcnt
+ .dc.w 0
+ .export _ad_measure ; void ad_measure(void)
+ .hide
+ .segment _ad_measure_formal_near, size 0, fill, notext, sclass dram
+ .segment _ad_measure_local_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_formal_near, _ad_measure_local_near, __ad_measure
+ .sgraph _ad_measure_local_near, _I2C_start_formal_near, __ad_measure, 0
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_send_formal_near, __ad_measure, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_send_formal_near, __ad_measure, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_send_formal_near, __ad_measure, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_stop_formal_near, __ad_measure, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_start_formal_near, __ad_measure, 0
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_send_formal_near, __ad_measure, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_get_formal_near, __ad_measure, 0
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_get_formal_near, __ad_measure, 0
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _sprintf_formal_near, __ad_measure, 0
+ .segment _sprintf_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_get_formal_near, __ad_measure, 0
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _sprintf_formal_near, __ad_measure, 0
+ .segment _sprintf_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_get_formal_near, __ad_measure, 0
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _sprintf_formal_near, __ad_measure, 0
+ .segment _sprintf_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_get_formal_near, __ad_measure, 0
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _sprintf_formal_near, __ad_measure, 0
+ .segment _sprintf_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _ad_measure_local_near, _I2C_stop_formal_near, __ad_measure, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __ad_measure
+_ad_measure: ; void ad_measure(void)
+ .line "fg1_http.c" 61 22
+ lcall _I2C_start
+ .line "fg1_http.c" 63 1
+ mov R7,#158
+ lcall _I2C_send
+ .line "fg1_http.c" 64 1
+ mov R7,#68
+ lcall _I2C_send
+ .line "fg1_http.c" 65 1
+ mov R7,#128
+ lcall _I2C_send
+ .line "fg1_http.c" 66 1
+ lcall _I2C_stop
+ .line "fg1_http.c" 67 1
+ lcall _I2C_start
+ .line "fg1_http.c" 68 1
+ mov R7,#159
+ lcall _I2C_send
+ .line "fg1_http.c" 69 1
+ mov R7,#1
+ lcall _I2C_get
+ .line "fg1_http.c" 71 1
+ mov R7,#1
+ lcall _I2C_get
+ mov R6,#0
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i9)>>8)&255
+ mov R7,#(?i9)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,#((_aval_0)>>8)&255
+ mov R7,#(_aval_0)&255
+ mov R4,#XDS
+ lcall _sprintf
+ .line "fg1_http.c" 72 2
+ mov R7,#1
+ lcall _I2C_get
+ mov R6,#0
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i9)>>8)&255
+ mov R7,#(?i9)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,#((_aval_1)>>8)&255
+ mov R7,#(_aval_1)&255
+ mov R4,#XDS
+ lcall _sprintf
+ .line "fg1_http.c" 73 2
+ mov R7,#1
+ lcall _I2C_get
+ mov R6,#0
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i9)>>8)&255
+ mov R7,#(?i9)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,#((_aval_2)>>8)&255
+ mov R7,#(_aval_2)&255
+ mov R4,#XDS
+ lcall _sprintf
+ .line "fg1_http.c" 74 2
+ clr A
+ mov R7,A
+ lcall _I2C_get
+ mov R6,#0
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i9)>>8)&255
+ mov R7,#(?i9)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,#((_aval_3)>>8)&255
+ mov R7,#(_aval_3)&255
+ mov R4,#XDS
+ lcall _sprintf
+ .line "fg1_http.c" 76 1
+ lcall _I2C_stop
+ ret
+; end of function ad_measure
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _set_chkbox ; void set_chkbox(unsigned char, xdata unsigned char *)
+ .hide
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .segment _set_chkbox_local_near, size 2, fill, notext, sclass dram
+ .sgraph _set_chkbox_formal_near, _set_chkbox_local_near, __set_chkbox
+?set_chkbox_bfr = _set_chkbox_local_near+0 ; xdata unsigned char *
+ .sgraph _set_chkbox_local_near, _strcpy_formal_near, __set_chkbox, 2
+ .segment _strcpy_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __set_chkbox
+_set_chkbox: ; void set_chkbox(unsigned char, xdata unsigned char *)
+ ; parameter 'val' in 'R7'
+ ; parameter 'bfr' in 'RW45' moved and assigned to local '?set_chkbox_bfr'
+ mov ?set_chkbox_bfr,R4
+ mov ?set_chkbox_bfr+1,R5
+ .line "fg1_http.c" 79 44
+ mov A,R7
+ jz ?11
+ .line "fg1_http.c" 80 10
+ mov R6,#((?i13)>>8)&255
+ mov R7,#(?i13)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,?set_chkbox_bfr
+ mov R7,?set_chkbox_bfr+1
+ mov R4,#XDS
+ lcall _strcpy
+ .line "fg1_http.c" 82 2
+ sjmp ?12
+?11:
+ .line "fg1_http.c" 82 7
+ mov DPH,?set_chkbox_bfr
+ mov DPL,?set_chkbox_bfr+1
+ mov R6,DPH
+ mov R7,DPL
+ inc R7
+ mov A,R7
+ jnz ?__1
+ inc R6
+?__1:
+ ; variable 'bfr' assigned to register 'RW67'
+ mov A,#32
+ movx @DPTR,A
+ .line "fg1_http.c" 84 4
+ mov DPH,R6
+ mov DPL,R7
+ clr A
+ movx @DPTR,A
+ .line "fg1_http.c" 85 2
+?12:
+ ret
+; end of function set_chkbox
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+
+ .export _eval_io ; void eval_io(void)
+ .hide
+ .segment _eval_io_formal_near, size 0, fill, notext, sclass dram
+ .segment _eval_io_local_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_formal_near, _eval_io_local_near, __eval_io
+ .sgraph _eval_io_local_near, _sprintf_formal_near, __eval_io, 0
+ .segment _sprintf_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _eval_io_local_near, _set_chkbox_formal_near, __eval_io, 0
+ .segment _set_chkbox_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __eval_io
+_eval_io: ; void eval_io(void)
+ .line "fg1_http.c" 88 19
+ mov R7,_sevseg_data0
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_2
+?_3:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_2:
+ djnz B,?_3
+ mov R5,A
+ mov R7,_sevseg_data1
+ mov R6,#0
+ mov A,R5
+ orl A,R7
+ mov R7,A
+ mov A,R4
+ orl A,R6
+ mov R6,A
+ ; variable 'tmp' assigned to register 'RW67'
+ .line "fg1_http.c" 90 2
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i16)>>8)&255
+ mov R7,#(?i16)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,#((_sevseg)>>8)&255
+ mov R7,#(_sevseg)&255
+ mov R4,#XDS
+ lcall _sprintf
+ .line "fg1_http.c" 91 2
+ mov R4,#((_En0)>>8)&255
+ mov R5,#(_En0)&255
+ mov R7,_sevseg_en
+ anl AR7,#1
+ lcall _set_chkbox
+ .line "fg1_http.c" 92 2
+ mov R4,#((_En1)>>8)&255
+ mov R5,#(_En1)&255
+ mov R7,_sevseg_en
+ anl AR7,#2
+ lcall _set_chkbox
+ .line "fg1_http.c" 93 2
+ mov R4,#((_En2)>>8)&255
+ mov R5,#(_En2)&255
+ mov R7,_sevseg_en
+ anl AR7,#4
+ lcall _set_chkbox
+ .line "fg1_http.c" 94 2
+ mov R4,#((_En3)>>8)&255
+ mov R5,#(_En3)&255
+ mov R7,_sevseg_en
+ anl AR7,#8
+ lcall _set_chkbox
+ .line "fg1_http.c" 96 2
+ mov R4,#((_C0)>>8)&255
+ mov R5,#(_C0)&255
+ mov R7,_P1
+ anl AR7,#2
+ lcall _set_chkbox
+ .line "fg1_http.c" 97 2
+ mov R4,#((_C1)>>8)&255
+ mov R5,#(_C1)&255
+ mov R7,_P1
+ anl AR7,#4
+ lcall _set_chkbox
+ .line "fg1_http.c" 98 2
+ mov R4,#((_C2)>>8)&255
+ mov R5,#(_C2)&255
+ mov R7,_P1
+ anl AR7,#8
+ lcall _set_chkbox
+ .line "fg1_http.c" 99 2
+ mov R4,#((_C3)>>8)&255
+ mov R5,#(_C3)&255
+ mov R7,_P1
+ anl AR7,#16
+ lcall _set_chkbox
+ .line "fg1_http.c" 100 2
+ mov R4,#((_C4)>>8)&255
+ mov R5,#(_C4)&255
+ mov R7,_P1
+ anl AR7,#32
+ lcall _set_chkbox
+ .line "fg1_http.c" 101 2
+ mov R4,#((_C5)>>8)&255
+ mov R5,#(_C5)&255
+ mov R7,_P1
+ anl AR7,#64
+ lcall _set_chkbox
+ .line "fg1_http.c" 102 2
+ mov R4,#((_C6)>>8)&255
+ mov R5,#(_C6)&255
+ mov R7,_P1
+ anl AR7,#128
+ lcall _set_chkbox
+ ret
+; end of function eval_io
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _atox_chr ; unsigned char atox_chr(char)
+ .segment _atox_chr_formal_near, size 0, fill, notext, sclass dram
+ .segment _atox_chr_local_near, size 0, fill, notext, sclass dram
+ .sgraph _atox_chr_formal_near, _atox_chr_local_near, __atox_chr
+
+ .segment __atox_chr
+_atox_chr: ; (leaf function) unsigned char atox_chr(char)
+ ; parameter 'xchr' in 'R7'
+ .line "fg1_http.c" 106 34
+ mov A,#208
+ add A,R7
+ mov R5,A
+ ; variable 'tmp' assigned to register 'R5'
+ .line "fg1_http.c" 108 5
+ mov R7,#9
+ setb C
+ mov A,R5
+ subb A,R7
+ jc ?18
+ .line "fg1_http.c" 108 12
+ mov A,#249
+ add A,R5
+ mov R5,A
+?18:
+ .line "fg1_http.c" 109 8
+ mov R7,AR5
+ ret
+; end of function atox_chr
+; used: R-----5-7 BR-------- ACC PSW
+
+ .export _isxdigit ; unsigned char isxdigit(char)
+ .hide
+ .segment _isxdigit_formal_near, size 0, fill, notext, sclass dram
+ .segment _isxdigit_local_near, size 0, fill, notext, sclass dram
+ .sgraph _isxdigit_formal_near, _isxdigit_local_near, __isxdigit
+ .sgraph _isxdigit_local_near, _toupper_formal_near, __isxdigit, 0
+ .segment _toupper_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __isxdigit
+_isxdigit: ; unsigned char isxdigit(char)
+ ; parameter 'xchr' in 'R7'
+ .line "fg1_http.c" 112 34
+ lcall _toupper
+ mov R5,AR7
+ ; variable 'xchr' assigned to register 'R5'
+ .line "fg1_http.c" 114 5
+ mov R7,#48
+ clr C
+ mov A,R5
+ subb A,R7
+ jc ?24
+ mov R7,#57
+ setb C
+ mov A,R5
+ subb A,R7
+ jc ?23
+?24:
+ mov R7,#65
+ clr C
+ mov A,R5
+ subb A,R7
+ jc ?21
+ mov R7,#70
+ setb C
+ mov A,R5
+ subb A,R7
+ jnc ?21
+?23:
+ .line "fg1_http.c" 115 37
+ mov R7,#1
+ sjmp ?20
+?21:
+ .line "fg1_http.c" 116 9
+ clr A
+ mov R7,A
+?20:
+ ret
+; end of function isxdigit
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _atox ; unsigned short atox(xdata char *)
+ .hide
+ .segment _atox_formal_near, size 0, fill, notext, sclass dram
+ .segment _atox_local_near, size 4, fill, notext, sclass dram
+ .sgraph _atox_formal_near, _atox_local_near, __atox
+?atox_s = _atox_local_near+0 ; xdata char *
+?atox_n = _atox_local_near+2 ; unsigned short
+ .sgraph _atox_local_near, _isxdigit_formal_near, __atox, 4
+ .segment _isxdigit_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _atox_local_near, _toupper_formal_near, __atox, 4
+ .segment _toupper_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _atox_local_near, _atox_chr_formal_near, __atox, 4
+ .segment _atox_chr_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __atox
+_atox: ; unsigned short atox(xdata char *)
+ ; parameter 's' in 'RW67' moved and assigned to local '?atox_s'
+ mov ?atox_s,R6
+ mov ?atox_s+1,R7
+ ; variable 'n' allocated as 'auto'
+ .line "fg1_http.c" 119 34
+ clr A
+ mov ?atox_n,A
+ mov ?atox_n+1,A
+ ljmp ?28
+?27:
+ .line "fg1_http.c" 123 12
+ mov DPH,?atox_s
+ mov DPL,?atox_s+1
+ movx A,@DPTR
+ mov R7,A
+ lcall _isxdigit
+ mov A,R7
+ jz ?30
+ .line "fg1_http.c" 124 22
+ mov DPH,?atox_s
+ mov DPL,?atox_s+1
+ movx A,@DPTR
+ mov R7,A
+ lcall _toupper
+ lcall _atox_chr
+ mov R5,AR7
+ ; variable 'tmp' assigned to register 'R5'
+ .line "fg1_http.c" 126 4
+ sjmp ?31
+?30:
+ .line "fg1_http.c" 126 10
+ clr A
+ mov R5,A
+?31:
+ .line "fg1_http.c" 127 4
+ mov R3,AR5
+ mov R2,#0
+ mov R5,#4
+ mov R6,?atox_n
+ mov R7,?atox_n+1
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_10
+?_11:
+ clr C
+ rlc A
+ xch A,R6
+ rlc A
+ xch A,R6
+?_10:
+ djnz B,?_11
+ mov R7,A
+ orl A,R3
+ mov R7,A
+ mov A,R6
+ orl A,R2
+ mov R6,A
+ mov ?atox_n,R6
+ mov ?atox_n+1,R7
+ .line "fg1_http.c" 128 4
+ inc ?atox_s+1
+ mov A,?atox_s+1
+ jnz ?_12
+ inc ?atox_s
+?_12:
+ .line "fg1_http.c" 129 2
+?28:
+ .line "fg1_http.c" 123 8
+ mov DPH,?atox_s
+ mov DPL,?atox_s+1
+ movx A,@DPTR
+ mov R7,A
+ jz ?_13
+ ljmp ?27
+?_13:
+ .line "fg1_http.c" 130 9
+ mov R6,?atox_n
+ mov R7,?atox_n+1
+ ret
+; end of function atox
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+
+ .export _main ; void main(void)
+
+; *** RESET POINT ***
+ .export __reset
+ .segment ___reset, org $0
+ __reset: ljmp __startup
+
+ .hide
+ .segment _main_formal_near, size 0, fill, notext, sclass dram, root
+ .segment _main_local_near, size 16, fill, notext, sclass dram
+ .sgraph _main_formal_near, _main_local_near, __main
+?i75 = _main_local_near+3 ; unsigned char
+?main_pc = _main_local_near+1 ; xdata unsigned char *
+?i76 = _main_local_near+4 ; xdata unsigned char *
+?main_socket = _main_local_near+0 ; unsigned char
+?main_3_en_tmp = _main_local_near+1 ; unsigned char
+?main_3_p1_tmp = _main_local_near+2 ; unsigned char
+?main_1_bfr = _main_local_near+0 ; char [16]
+ .sgraph _main_local_near, _I2C_init_formal_near, __main, 0
+ .segment _I2C_init_formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _LCD_init_formal_near, __main, 0
+ .segment _LCD_init_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _Init_net_formal_near, __main, 0
+ .segment _Init_net_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _puts_formal_near, __main, 0
+ .segment _puts_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _DHCP_SetIP_formal_near, __main, 0
+ .segment _DHCP_SetIP_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _LCD_write_line_formal_near, __main, 16
+ .segment _LCD_write_line_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _sprintf_formal_near, __main, 16
+ .segment _sprintf_formal_near, size 8, fill, notext, sclass dram
+ .sgraph _main_local_near, _LCD_write_line_formal_near, __main, 16
+ .segment _LCD_write_line_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _poll_webserver_formal_near, __main, 0
+ .segment _poll_webserver_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_name_formal_near, __main, 1
+ .segment _webpage_name_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _ad_measure_formal_near, __main, 3
+ .segment _ad_measure_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 3
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _eval_io_formal_near, __main, 3
+ .segment _eval_io_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 3
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 3
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _url_getarg_no_formal_near, __main, 3
+ .segment _url_getarg_no_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _url_getarg_str_formal_near, __main, 4
+ .segment _url_getarg_str_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 6
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _atox_formal_near, __main, 6
+ .segment _atox_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 4
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _sprintf_formal_near, __main, 1
+ .segment _sprintf_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 0
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __main
+_main: ; void main(void)
+ .line "fg1_http.c" 136 15
+ mov _TMOD,#1
+ .line "fg1_http.c" 143 2
+ mov _SCON,#82
+ .line "fg1_http.c" 144 2
+ clr A
+ mov _T2CON,A
+ .line "fg1_http.c" 145 2
+ mov _RCAP2L,#174
+ .line "fg1_http.c" 146 2
+ mov _RCAP2H,#255
+ .line "fg1_http.c" 147 2
+ mov _T2CON,#48
+ .line "fg1_http.c" 148 2
+ setb _TR2
+ .line "fg1_http.c" 149 2
+ setb _TR0
+ .line "fg1_http.c" 151 1
+ mov DPTR,#_hitcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "fg1_http.c" 152 1
+ mov _sevseg_ctrl,#1
+ .line "fg1_http.c" 153 1
+ clr A
+ mov _sevseg_data0,A
+ .line "fg1_http.c" 154 1
+ clr A
+ mov _sevseg_data1,A
+ .line "fg1_http.c" 155 1
+ clr A
+ mov _sevseg_en,A
+ .line "fg1_http.c" 156 1
+ clr A
+ mov _P1,A
+ .line "fg1_http.c" 157 1
+ lcall _I2C_init
+ .line "fg1_http.c" 158 1
+ mov R6,#0
+ mov R7,#100
+ lcall __wait_ms
+ .line "fg1_http.c" 159 1
+ lcall _LCD_init
+ .line "fg1_http.c" 163 4
+ lcall _Init_net
+ mov A,R7
+ jz ?33
+ .line "fg1_http.c" 163 16
+ mov R6,#((?i35)>>8)&255
+ mov R7,#(?i35)&255
+ mov R4,#COS
+ lcall _puts
+ .line "fg1_http.c" 165 2
+ mov _sevseg_en,#255
+ .line "fg1_http.c" 166 2
+ mov _sevseg_data0,#1
+ .line "fg1_http.c" 167 6
+?36:
+ .line "fg1_http.c" 167 9
+ sjmp ?36
+?33:
+ .line "fg1_http.c" 173 0
+ mov DPTR,#_my_ip
+ clr A
+ movx @DPTR,A
+ .line "fg1_http.c" 173 20
+ mov DPTR,#_my_ip+1
+ clr A
+ movx @DPTR,A
+ .line "fg1_http.c" 173 39
+ mov DPTR,#_my_ip+2
+ clr A
+ movx @DPTR,A
+ .line "fg1_http.c" 173 58
+ mov DPTR,#_my_ip+3
+ clr A
+ movx @DPTR,A
+ .line "fg1_http.c" 173 77
+ lcall _DHCP_SetIP
+ ; variable 'bfr' allocated as 'auto'
+ .line "fg1_http.c" 175 1
+ clr A
+ mov R3,A
+ mov R6,#((?i40)>>8)&255
+ mov R7,#(?i40)&255
+ mov R4,#COS
+ lcall _LCD_write_line
+ .line "fg1_http.c" 178 4
+ mov DPTR,#_my_ip+3
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _sprintf_formal_near+6,R6
+ mov _sprintf_formal_near+7,R7
+ mov DPTR,#_my_ip+2
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _sprintf_formal_near+4,R6
+ mov _sprintf_formal_near+5,R7
+ mov DPTR,#_my_ip+1
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _sprintf_formal_near+2,R6
+ mov _sprintf_formal_near+3,R7
+ mov DPTR,#_my_ip
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i41)>>8)&255
+ mov R7,#(?i41)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_1_bfr
+ mov R4,#NES
+ lcall _sprintf
+ .line "fg1_http.c" 179 4
+ mov R3,#1
+ mov R7,#?main_1_bfr
+ mov R4,#NES
+ lcall _LCD_write_line
+ .line "fg1_http.c" 181 1
+ clr A
+ mov R3,A
+ ; variable 'i' assigned to register 'R3'
+?42:
+ .line "fg1_http.c" 185 18
+ mov R7,AR3
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#50
+ lcall __mul_i2
+ mov A,#(_uc_socket)&255
+ add A,R7
+ mov DPL,A
+ mov A,#((_uc_socket)>>8)&255
+ addc A,R6
+ mov DPH,A
+ mov A,#2
+ movx @DPTR,A
+ .line "fg1_http.c" 185 48
+ mov R7,AR3
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#50
+ lcall __mul_i2
+ mov R4,#((_uc_socket+14)>>8)&255
+ mov R5,#(_uc_socket+14)&255
+ mov A,R5
+ add A,R7
+ mov R5,A
+ mov A,R4
+ addc A,R6
+ mov R4,A
+ mov R6,#0
+ mov R7,#80
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "fg1_http.c" 185 76
+ inc R3
+ .line "fg1_http.c" 185 9
+ cjne R3,#2,?42
+ .line "fg1_http.c" 185 77
+?46:
+ .line "fg1_http.c" 187 8
+ lcall _poll_webserver
+ mov R4,AR6
+ mov R5,AR7
+ ; variable 'res' assigned to register 'RW45'
+ .line "fg1_http.c" 193 5
+ mov R7,#0
+ mov A,R4
+ mov R6,A
+ cjne R7,#0,?46
+ cjne R6,#144,?46
+ .line "fg1_http.c" 193 28
+ mov R7,AR5
+ ; variable 'socket' allocated as 'auto'
+ mov ?main_socket,R7
+ .line "fg1_http.c" 196 3
+ lcall _webpage_name
+ ; variable 'pc' allocated as 'auto'
+ mov ?main_pc,R6
+ mov ?main_pc+1,R7
+ .line "fg1_http.c" 200 6
+ mov DPH,?main_pc
+ mov DPL,?main_pc+1
+ movx A,@DPTR
+ mov R7,A
+ cjne R7,#97,?52
+ .line "fg1_http.c" 200 16
+ lcall _ad_measure
+ .line "fg1_http.c" 202 4
+ mov R4,#((_ad_disp)>>8)&255
+ mov R5,#(_ad_disp)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 203 3
+ sjmp ?46
+?52:
+ .line "fg1_http.c" 203 12
+ mov DPH,?main_pc
+ mov DPL,?main_pc+1
+ movx A,@DPTR
+ mov R7,A
+ cjne R7,#105,?54
+ .line "fg1_http.c" 203 21
+ lcall _eval_io
+ .line "fg1_http.c" 205 4
+ mov R4,#((_io)>>8)&255
+ mov R5,#(_io)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 208 3
+ sjmp ?46
+?54:
+ .line "fg1_http.c" 208 12
+ mov DPH,?main_pc
+ mov DPL,?main_pc+1
+ movx A,@DPTR
+ mov R7,A
+ cjne R7,#114,?_23
+ sjmp ?_24
+?_23:
+ ljmp ?56
+?_24:
+ ; variable 'en_tmp' allocated as 'auto'
+ .line "fg1_http.c" 208 21
+ clr A
+ mov ?main_3_en_tmp,A
+ ; variable 'p1_tmp' allocated as 'auto'
+ .line "fg1_http.c" 209 34
+ clr A
+ mov ?main_3_p1_tmp,A
+ .line "fg1_http.c" 210 4
+ mov R4,#((_reply)>>8)&255
+ mov R5,#(_reply)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 214 8
+?58:
+ .line "fg1_http.c" 214 11
+ lcall _url_getarg_no
+ ; variable 'i' allocated as 'auto'
+ mov ?i75,R7
+ .line "fg1_http.c" 216 9
+ mov A,?i75
+ jnz ?62
+ .line "fg1_http.c" 216 13
+ ljmp ?60
+?62:
+ .line "fg1_http.c" 217 6
+ lcall _url_getarg_str
+ ; variable 'pc' allocated as 'auto'
+ mov ?i76,R6
+ mov ?i76+1,R7
+ .line "fg1_http.c" 219 9
+ mov R5,#1
+ mov R7,?i75
+ clr C
+ mov A,R7
+ subb A,R5
+ jc ?64
+ mov R5,#4
+ mov R7,?i75
+ setb C
+ mov A,R7
+ subb A,R5
+ jnc ?64
+ .line "fg1_http.c" 219 23
+ mov R6,#((?i68)>>8)&255
+ mov R7,#(?i68)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,?i76
+ mov R7,?i76+1
+ mov R4,#XDS
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?58
+ .line "fg1_http.c" 220 29
+ mov R7,?i75
+ mov R5,AR7
+ dec R5
+ mov R7,#1
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_29
+?_30:
+ clr C
+ rlc A
+?_29:
+ djnz B,?_30
+ mov R5,A
+ mov R7,?main_3_en_tmp
+ mov A,R7
+ orl A,R5
+ mov R7,A
+ mov ?main_3_en_tmp,R7
+ .line "fg1_http.c" 222 8
+ ljmp ?58
+?64:
+ .line "fg1_http.c" 223 15
+ mov A,#5
+ xrl A,?i75
+ jnz ?69
+ .line "fg1_http.c" 223 20
+ mov R6,?i76
+ mov R7,?i76+1
+ lcall _atox
+ mov R4,AR6
+ mov R5,AR7
+ ; variable 'tmp' assigned to register 'RW45'
+ .line "fg1_http.c" 225 8
+ mov R7,#8
+ mov R6,AR4
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_32
+?_33:
+ xch A,R6
+ clr C
+ rrc A
+ xch A,R6
+ rrc A
+?_32:
+ djnz B,?_33
+ mov R7,A
+ mov _sevseg_data0,R7
+ .line "fg1_http.c" 226 8
+ mov A,R5
+ mov R7,A
+ mov R6,#0
+ mov _sevseg_data1,R7
+ .line "fg1_http.c" 227 6
+ ljmp ?58
+?69:
+ .line "fg1_http.c" 227 15
+ mov R5,#6
+ mov R7,?i75
+ clr C
+ mov A,R7
+ subb A,R5
+ jnc ?_34
+ ljmp ?58
+?_34:
+ mov R5,#12
+ mov R7,?i75
+ setb C
+ mov A,R7
+ subb A,R5
+ jc ?_35
+ ljmp ?58
+?_35:
+ .line "fg1_http.c" 227 30
+ mov R6,#((?i68)>>8)&255
+ mov R7,#(?i68)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,?i76
+ mov R7,?i76+1
+ mov R4,#XDS
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jz ?_36
+ ljmp ?58
+?_36:
+ .line "fg1_http.c" 228 29
+ mov R7,?i75
+ mov A,#251
+ add A,R7
+ mov R5,A
+ mov R7,#1
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_37
+?_38:
+ clr C
+ rlc A
+?_37:
+ djnz B,?_38
+ mov R5,A
+ mov R7,?main_3_p1_tmp
+ mov A,R7
+ orl A,R5
+ mov R7,A
+ mov ?main_3_p1_tmp,R7
+ .line "fg1_http.c" 230 8
+ ljmp ?58
+?60:
+ .line "fg1_http.c" 234 4
+ mov _P1,?main_3_p1_tmp
+ .line "fg1_http.c" 235 4
+ mov _sevseg_en,?main_3_en_tmp
+ .line "fg1_http.c" 237 3
+ ljmp ?46
+?56:
+ .line "fg1_http.c" 237 8
+ mov DPTR,#_hitcnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__2
+ inc R6
+?__2:
+ mov DPTR,#_hitcnt
+ lcall __st_dptr_r67
+ .line "fg1_http.c" 239 4
+ mov DPTR,#_hitcnt
+ lcall __ld_dptr_r67
+ mov _sprintf_formal_near,R6
+ mov _sprintf_formal_near+1,R7
+ mov R6,#((?i9)>>8)&255
+ mov R7,#(?i9)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R6,#((_Hcnt)>>8)&255
+ mov R7,#(_Hcnt)&255
+ mov R4,#XDS
+ lcall _sprintf
+ .line "fg1_http.c" 240 4
+ mov R4,#((_home)>>8)&255
+ mov R5,#(_home)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 241 3
+ ljmp ?46
+; end of function main
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:16 bytes
+
+ .segment bss, sclass xram, notext
+ .export _Hcnt ; xdata unsigned char Hcnt[6]
+_Hcnt: ; xdata unsigned char Hcnt[6]
+ .ds.b 6
+ .export _C6 ; xdata unsigned char C6[8]
+_C6: ; xdata unsigned char C6[8]
+ .ds.b 8
+ .export _C5 ; xdata unsigned char C5[8]
+_C5: ; xdata unsigned char C5[8]
+ .ds.b 8
+ .export _C4 ; xdata unsigned char C4[8]
+_C4: ; xdata unsigned char C4[8]
+ .ds.b 8
+ .export _C3 ; xdata unsigned char C3[8]
+_C3: ; xdata unsigned char C3[8]
+ .ds.b 8
+ .export _C2 ; xdata unsigned char C2[8]
+_C2: ; xdata unsigned char C2[8]
+ .ds.b 8
+ .export _C1 ; xdata unsigned char C1[8]
+_C1: ; xdata unsigned char C1[8]
+ .ds.b 8
+ .export _C0 ; xdata unsigned char C0[8]
+_C0: ; xdata unsigned char C0[8]
+ .ds.b 8
+ .export _sevseg ; xdata unsigned char sevseg[5]
+_sevseg: ; xdata unsigned char sevseg[5]
+ .ds.b 5
+ .export _En3 ; xdata unsigned char En3[8]
+_En3: ; xdata unsigned char En3[8]
+ .ds.b 8
+ .export _En2 ; xdata unsigned char En2[8]
+_En2: ; xdata unsigned char En2[8]
+ .ds.b 8
+ .export _En1 ; xdata unsigned char En1[8]
+_En1: ; xdata unsigned char En1[8]
+ .ds.b 8
+ .export _En0 ; xdata unsigned char En0[8]
+_En0: ; xdata unsigned char En0[8]
+ .ds.b 8
+ .export _aval_3 ; xdata unsigned char aval_3[5]
+_aval_3: ; xdata unsigned char aval_3[5]
+ .ds.b 5
+ .export _aval_2 ; xdata unsigned char aval_2[5]
+_aval_2: ; xdata unsigned char aval_2[5]
+ .ds.b 5
+ .export _aval_1 ; xdata unsigned char aval_1[5]
+_aval_1: ; xdata unsigned char aval_1[5]
+ .ds.b 5
+ .export _aval_0 ; xdata unsigned char aval_0[5]
+_aval_0: ; xdata unsigned char aval_0[5]
+ .ds.b 5
+ .import _ad_disp ; code unsigned char ad_disp[]
+ .import _reply ; code unsigned char reply[]
+ .import _io ; code unsigned char io[]
+ .import _home ; code unsigned char home[]
+ .import _LCD_write_line ; void LCD_write_line(char *, unsigned char)
+ .import _LCD_init ; void LCD_init(void)
+ .import _I2C_get ; unsigned char I2C_get(unsigned char)
+ .import _I2C_send ; unsigned char I2C_send(unsigned char)
+ .import _I2C_init ; void I2C_init(void)
+ .import _I2C_stop ; void I2C_stop(void)
+ .import _I2C_start ; void I2C_start(void)
+ .import _DHCP_SetIP ; char DHCP_SetIP(void)
+ .import _webpage_bind ; void webpage_bind(unsigned char, code unsigned char *)
+ .import _url_getarg_str ; xdata unsigned char *url_getarg_str(void)
+ .import _url_getarg_no ; unsigned char url_getarg_no(void)
+ .import _webpage_name ; xdata unsigned char *webpage_name(void)
+ .import _poll_webserver ; unsigned int poll_webserver(void)
+ .import _Init_net ; unsigned char Init_net(void)
+ .import _uc_socket ; xdata UC_SOCKET uc_socket[2]
+ .import _my_ip ; xdata IP_ADR my_ip
+ .import _sevseg_en ; near unsigned char sevseg_en
+ .import _sevseg_data1 ; near unsigned char sevseg_data1
+ .import _sevseg_data0 ; near unsigned char sevseg_data0
+ .import _sevseg_ctrl ; near unsigned char sevseg_ctrl
+ .import _RCAP2H ; near unsigned char RCAP2H
+ .import _RCAP2L ; near unsigned char RCAP2L
+ .import _TR2 ; bit unsigned char TR2
+ .import _T2CON ; near unsigned char T2CON
+ .import _P1 ; near unsigned char P1
+ .import _TMOD ; near unsigned char TMOD
+ .import _TR0 ; bit unsigned char TR0
+ .import _SCON ; near unsigned char SCON
+ .import _toupper ; char toupper(char)
+ .import _strcpy ; far char *strcpy(far char *, far char *)
+ .import _strcmp ; int strcmp(far char *, far char *)
+ .import __wait_ms ; void _wait_ms(unsigned int) reentrant
+ .import _sprintf ; int sprintf(far char *, far char *, ...)
+ .import _puts ; int puts(far char *)
+ .segment lit
+?i68: ; code char [3]
+ .dc.b "ON",0
+?i41: ; code char [14]
+ .dc.b "%u.%u.%u.%u  ",0
+?i40: ; code char [17]
+ .dc.b "*FPGA-Webserver*",0
+?i35: ; code char [14]
+ .dc.b "<NET FAILURE>",0
+?i16: ; code char [3]
+ .dc.b "%x",0
+?i13: ; code char [8]
+ .dc.b "checked",0
+?i9: ; code char [3]
+ .dc.b "%u",0
+ .export PRINTF_TYPE_u
+PRINTF_TYPE_u=1
+ .export PRINTF_TYPE_x
+PRINTF_TYPE_x=1
+ .end
+; *END* (828 lines)

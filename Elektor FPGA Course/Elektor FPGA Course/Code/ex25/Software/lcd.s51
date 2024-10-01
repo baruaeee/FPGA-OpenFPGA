@@ -1,0 +1,640 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'lcd.c', time: Thu Dec 14 11:33:35 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+ .export _LCD_write_dat ; void LCD_write_dat(unsigned char)
+ .hide
+ .segment _LCD_write_dat_formal_near, size 0, fill, notext, sclass dram
+ .segment _LCD_write_dat_local_near, size 1, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_formal_near, _LCD_write_dat_local_near, __LCD_write_dat
+?LCD_write_dat_dat = _LCD_write_dat_local_near+0 ; unsigned char
+ .sgraph _LCD_write_dat_local_near, _I2C_start_formal_near, __LCD_write_dat, 1
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_stop_formal_near, __LCD_write_dat, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_start_formal_near, __LCD_write_dat, 0
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_send_formal_near, __LCD_write_dat, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_dat_local_near, _I2C_stop_formal_near, __LCD_write_dat, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __LCD_write_dat
+_LCD_write_dat: ; void LCD_write_dat(unsigned char)
+ ; parameter 'dat' in 'R7' moved and assigned to local '?LCD_write_dat_dat'
+ mov ?LCD_write_dat_dat,R7
+ .line "lcd.c" 25 0
+ lcall _I2C_start
+ .line "lcd.c" 27 1
+ mov R7,#66
+ lcall _I2C_send
+ .line "lcd.c" 28 1
+ mov R7,?LCD_write_dat_dat
+ lcall _I2C_send
+ .line "lcd.c" 29 1
+ lcall _I2C_stop
+ .line "lcd.c" 30 2
+ lcall _I2C_start
+ .line "lcd.c" 31 1
+ mov R7,#64
+ lcall _I2C_send
+ .line "lcd.c" 32 1
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ orl A,#32
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 33 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 34 2
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#191
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 35 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 36 1
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ orl A,#128
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 37 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 38 1
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#127
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 39 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 40 1
+ lcall _I2C_stop
+ ret
+; end of function LCD_write_dat
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:1 bytes
+
+ .export _LCD_wait_ready ; void LCD_wait_ready(void)
+ .hide
+ .segment _LCD_wait_ready_formal_near, size 0, fill, notext, sclass dram
+ .segment _LCD_wait_ready_local_near, size 1, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_formal_near, _LCD_wait_ready_local_near, __LCD_wait_ready
+?LCD_wait_ready_dat = _LCD_wait_ready_local_near+0 ; unsigned char
+ .sgraph _LCD_wait_ready_local_near, _I2C_start_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_stop_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_start_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_stop_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_start_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_get_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_stop_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_start_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_send_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_wait_ready_local_near, _I2C_stop_formal_near, __LCD_wait_ready, 1
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __LCD_wait_ready
+_LCD_wait_ready: ; void LCD_wait_ready(void)
+ ; variable 'dat' allocated as 'auto'
+ .line "lcd.c" 45 0
+ mov ?LCD_wait_ready_dat,#128
+ ljmp ?4
+?3:
+ .line "lcd.c" 49 1
+ lcall _I2C_start
+ .line "lcd.c" 52 2
+ mov R7,#66
+ lcall _I2C_send
+ .line "lcd.c" 53 2
+ mov R7,#255
+ lcall _I2C_send
+ .line "lcd.c" 54 2
+ lcall _I2C_stop
+ .line "lcd.c" 56 2
+ lcall _I2C_start
+ .line "lcd.c" 57 5
+ mov R7,#64
+ lcall _I2C_send
+ .line "lcd.c" 58 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#223
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 59 5
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 60 3
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ orl A,#64
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 61 2
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 62 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ orl A,#128
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 63 5
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 64 2
+ lcall _I2C_stop
+ .line "lcd.c" 66 2
+ lcall _I2C_start
+ .line "lcd.c" 67 2
+ mov R7,#67
+ lcall _I2C_send
+ .line "lcd.c" 68 2
+ mov R7,#1
+ lcall _I2C_get
+ mov ?LCD_wait_ready_dat,R7
+ .line "lcd.c" 69 2
+ lcall _I2C_stop
+ .line "lcd.c" 71 2
+ lcall _I2C_start
+ .line "lcd.c" 72 5
+ mov R7,#64
+ lcall _I2C_send
+ .line "lcd.c" 73 2
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#127
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 74 5
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 75 2
+ lcall _I2C_stop
+ .line "lcd.c" 76 1
+?4:
+ .line "lcd.c" 48 8
+ mov R7,?LCD_wait_ready_dat
+ anl AR7,#128
+ mov A,R7
+ jz ?_1
+ ljmp ?3
+?_1:
+ ret
+; end of function LCD_wait_ready
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:1 bytes
+
+ .export _LCD_write_cmd ; void LCD_write_cmd(unsigned char)
+ .hide
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .segment _LCD_write_cmd_local_near, size 1, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_formal_near, _LCD_write_cmd_local_near, __LCD_write_cmd
+?LCD_write_cmd_dat = _LCD_write_cmd_local_near+0 ; unsigned char
+ .sgraph _LCD_write_cmd_local_near, _I2C_start_formal_near, __LCD_write_cmd, 1
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 1
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_stop_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_start_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_send_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_cmd_local_near, _I2C_stop_formal_near, __LCD_write_cmd, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __LCD_write_cmd
+_LCD_write_cmd: ; void LCD_write_cmd(unsigned char)
+ ; parameter 'dat' in 'R7' moved and assigned to local '?LCD_write_cmd_dat'
+ mov ?LCD_write_cmd_dat,R7
+ .line "lcd.c" 80 0
+ lcall _I2C_start
+ .line "lcd.c" 82 1
+ mov R7,#66
+ lcall _I2C_send
+ .line "lcd.c" 83 1
+ mov R7,?LCD_write_cmd_dat
+ lcall _I2C_send
+ .line "lcd.c" 84 1
+ lcall _I2C_stop
+ .line "lcd.c" 85 1
+ lcall _I2C_start
+ .line "lcd.c" 86 1
+ mov R7,#64
+ lcall _I2C_send
+ .line "lcd.c" 87 1
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#223
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 88 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 89 3
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#191
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 90 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 91 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 92 1
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ orl A,#128
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 93 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 94 1
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ anl A,#127
+ mov R7,A
+ mov DPTR,#_LCD_ctl_reg
+ mov A,R7
+ movx @DPTR,A
+ .line "lcd.c" 95 4
+ mov DPTR,#_LCD_ctl_reg
+ movx A,@DPTR
+ mov R7,A
+ lcall _I2C_send
+ .line "lcd.c" 96 1
+ lcall _I2C_stop
+ ret
+; end of function LCD_write_cmd
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:1 bytes
+
+ .export _LCD_init ; void LCD_init(void)
+ .hide
+ .segment _LCD_init_formal_near, size 0, fill, notext, sclass dram
+ .segment _LCD_init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_formal_near, _LCD_init_local_near, __LCD_init
+ .sgraph _LCD_init_local_near, _LCD_wait_ready_formal_near, __LCD_init, 0
+ .segment _LCD_wait_ready_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, _LCD_write_cmd_formal_near, __LCD_init, 0
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_init_local_near, __wait_ms_formal_near, __LCD_init, 0
+ .segment __wait_ms_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __LCD_init
+_LCD_init: ; void LCD_init(void)
+ .line "lcd.c" 101 0
+ mov DPTR,#_LCD_ctl_reg
+ clr A
+ movx @DPTR,A
+ .line "lcd.c" 103 2
+ lcall _LCD_wait_ready
+ .line "lcd.c" 104 2
+ mov R6,#0
+ mov R7,#35
+ lcall __wait_ms
+ .line "lcd.c" 106 2
+ mov R7,#56
+ lcall _LCD_write_cmd
+ .line "lcd.c" 107 2
+ mov R6,#0
+ mov R7,#2
+ lcall __wait_ms
+ .line "lcd.c" 108 2
+ mov R7,#56
+ lcall _LCD_write_cmd
+ .line "lcd.c" 109 2
+ mov R6,#0
+ mov R7,#2
+ lcall __wait_ms
+ .line "lcd.c" 110 2
+ mov R7,#12
+ lcall _LCD_write_cmd
+ .line "lcd.c" 111 2
+ mov R6,#0
+ mov R7,#1
+ lcall __wait_ms
+ .line "lcd.c" 112 2
+ mov R7,#1
+ lcall _LCD_write_cmd
+ .line "lcd.c" 113 2
+ mov R6,#0
+ mov R7,#2
+ lcall __wait_ms
+ .line "lcd.c" 114 2
+ mov R7,#2
+ lcall _LCD_write_cmd
+ .line "lcd.c" 115 2
+ mov R6,#0
+ mov R7,#2
+ lcall __wait_ms
+ .line "lcd.c" 116 2
+ mov R7,#6
+ lcall _LCD_write_cmd
+ .line "lcd.c" 117 2
+ mov R6,#0
+ mov R7,#1
+ lcall __wait_ms
+ .line "lcd.c" 118 2
+ mov R7,#64
+ lcall _LCD_write_cmd
+ .line "lcd.c" 119 2
+ mov R6,#0
+ mov R7,#1
+ lcall __wait_ms
+ .line "lcd.c" 120 2
+ mov R7,#128
+ lcall _LCD_write_cmd
+ .line "lcd.c" 121 2
+ mov R6,#0
+ mov R7,#1
+ lcall __wait_ms
+ ret
+; end of function LCD_init
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _LCD_write_line ; void LCD_write_line(char *, unsigned char)
+ .hide
+ .segment _LCD_write_line_formal_near, size 0, fill, notext, sclass dram
+ .segment _LCD_write_line_local_near, size 5, fill, notext, sclass dram
+ .sgraph _LCD_write_line_formal_near, _LCD_write_line_local_near, __LCD_write_line
+?LCD_write_line_nr = _LCD_write_line_local_near+4 ; unsigned char
+?LCD_write_line_str = _LCD_write_line_local_near+0 ; char *
+ .sgraph _LCD_write_line_local_near, _LCD_write_cmd_formal_near, __LCD_write_line, 5
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_line_local_near, _LCD_write_cmd_formal_near, __LCD_write_line, 5
+ .segment _LCD_write_cmd_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_line_local_near, _LCD_write_dat_formal_near, __LCD_write_line, 5
+ .segment _LCD_write_dat_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _LCD_write_line_local_near, _LCD_write_dat_formal_near, __LCD_write_line, 5
+ .segment _LCD_write_dat_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __LCD_write_line
+_LCD_write_line: ; void LCD_write_line(char *, unsigned char)
+ ; parameter 'str' in 'RL4567' moved and assigned to local '?LCD_write_line_str'
+ ; parameter 'line' in 'R3'
+ mov A,#?LCD_write_line_str
+ lcall __st_a_r47
+ ; variable 'nr' allocated as 'auto'
+ .line "lcd.c" 126 0
+ clr A
+ mov ?LCD_write_line_nr,A
+ .line "lcd.c" 128 5
+ mov A,R3
+ jnz ?9
+ .line "lcd.c" 128 14
+ mov R7,#128
+ lcall _LCD_write_cmd
+ sjmp ?12
+?9:
+ .line "lcd.c" 129 6
+ mov R7,#192
+ lcall _LCD_write_cmd
+ sjmp ?12
+?11:
+ .line "lcd.c" 130 28
+ mov AR8,?LCD_write_line_str
+ mov AR9,?LCD_write_line_str+1
+ mov AR10,?LCD_write_line_str+2
+ mov AR11,?LCD_write_line_str+3
+ clr A
+ mov R0,A
+ mov R1,A
+ mov R2,A
+ mov R3,#1
+ lcall __movel_8_4
+ lcall __add_i4
+ mov A,#?LCD_write_line_str
+ lcall __st_a_r47
+ lcall __movel_8_4
+ lcall __gen_read32_i1
+ lcall _LCD_write_dat
+ .line "lcd.c" 130 52
+ inc ?LCD_write_line_nr
+ .line "lcd.c" 130 57
+?12:
+ .line "lcd.c" 130 8
+ mov A,#?LCD_write_line_str
+ lcall __ld_a_r47
+ lcall __gen_read32_i1
+ mov A,R7
+ jz ?14
+ mov R5,#16
+ mov R7,?LCD_write_line_nr
+ clr C
+ mov A,R7
+ subb A,R5
+ jc ?11
+?14:
+ sjmp ?16
+?15:
+ .line "lcd.c" 132 17
+ mov R7,#32
+ lcall _LCD_write_dat
+ .line "lcd.c" 132 38
+?16:
+ .line "lcd.c" 132 8
+ mov R5,?LCD_write_line_nr
+ mov R7,AR5
+ inc R7
+ mov ?LCD_write_line_nr,R7
+ mov R7,#16
+ clr C
+ mov A,R5
+ subb A,R7
+ jc ?15
+ ret
+; end of function LCD_write_line
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:5 bytes
+
+ .import __wait_ms ; int _wait_ms()
+ .segment bss, sclass xram, notext
+ .export _LCD_ctl_reg ; xdata unsigned char LCD_ctl_reg
+_LCD_ctl_reg: ; xdata unsigned char LCD_ctl_reg
+ .ds.b 1
+ .import _I2C_get ; unsigned char I2C_get(unsigned char)
+ .import _I2C_send ; unsigned char I2C_send(unsigned char)
+ .import _I2C_stop ; void I2C_stop(void)
+ .import _I2C_start ; void I2C_start(void)
+ .end
+; *END* (333 lines)

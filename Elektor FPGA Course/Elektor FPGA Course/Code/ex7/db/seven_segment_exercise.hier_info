@@ -1,0 +1,171 @@
+|seven_segment_exercise
+DIG_2 <= digit_2.DB_MAX_OUTPUT_PORT_TYPE
+50MHz => sequencer:inst5.clk
+50MHz => pulse_generator:inst.clk
+DIG_1 <= digit_1.DB_MAX_OUTPUT_PORT_TYPE
+DIG_3 <= digit_3.DB_MAX_OUTPUT_PORT_TYPE
+DIG_A <= SEG[6].DB_MAX_OUTPUT_PORT_TYPE
+DIPSWITCH[0] => calculate_dif:inst8.a[0]
+DIPSWITCH[0] => calculate_sum:inst3.a[0]
+DIPSWITCH[0] => mux_4x4_to_1x4:inst6.val1[0]
+DIPSWITCH[1] => calculate_dif:inst8.a[1]
+DIPSWITCH[1] => calculate_sum:inst3.a[1]
+DIPSWITCH[1] => mux_4x4_to_1x4:inst6.val1[1]
+DIPSWITCH[2] => calculate_dif:inst8.a[2]
+DIPSWITCH[2] => calculate_sum:inst3.a[2]
+DIPSWITCH[2] => mux_4x4_to_1x4:inst6.val1[2]
+DIPSWITCH[3] => calculate_dif:inst8.a[3]
+DIPSWITCH[3] => calculate_sum:inst3.a[3]
+DIPSWITCH[3] => mux_4x4_to_1x4:inst6.val1[3]
+DIPSWITCH[4] => calculate_dif:inst8.b[0]
+DIPSWITCH[4] => calculate_sum:inst3.b[0]
+DIPSWITCH[4] => mux_4x4_to_1x4:inst6.val2[0]
+DIPSWITCH[5] => calculate_dif:inst8.b[1]
+DIPSWITCH[5] => calculate_sum:inst3.b[1]
+DIPSWITCH[5] => mux_4x4_to_1x4:inst6.val2[1]
+DIPSWITCH[6] => calculate_dif:inst8.b[2]
+DIPSWITCH[6] => calculate_sum:inst3.b[2]
+DIPSWITCH[6] => mux_4x4_to_1x4:inst6.val2[2]
+DIPSWITCH[7] => calculate_dif:inst8.b[3]
+DIPSWITCH[7] => calculate_sum:inst3.b[3]
+DIPSWITCH[7] => mux_4x4_to_1x4:inst6.val2[3]
+DIG_B <= SEG[5].DB_MAX_OUTPUT_PORT_TYPE
+DIG_C <= SEG[4].DB_MAX_OUTPUT_PORT_TYPE
+DIG_D <= SEG[3].DB_MAX_OUTPUT_PORT_TYPE
+DIG_E <= SEG[2].DB_MAX_OUTPUT_PORT_TYPE
+DIG_F <= SEG[1].DB_MAX_OUTPUT_PORT_TYPE
+DIG_G <= SEG[0].DB_MAX_OUTPUT_PORT_TYPE
+DIG_4 <= digit_4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seven_segment_exercise|sequencer:inst5
+clk => internal_select[0].CLK
+clk => internal_select[1].CLK
+clk_en => internal_select[0].ENA
+clk_en => internal_select[1].ENA
+digit1 <= Equal~0.DB_MAX_OUTPUT_PORT_TYPE
+digit2 <= Equal~1.DB_MAX_OUTPUT_PORT_TYPE
+digit3 <= Equal~2.DB_MAX_OUTPUT_PORT_TYPE
+digit4 <= Equal~3.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] <= internal_select[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= internal_select[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seven_segment_exercise|pulse_generator:inst
+clk => counter[14].CLK
+clk => counter[13].CLK
+clk => counter[12].CLK
+clk => counter[11].CLK
+clk => counter[10].CLK
+clk => counter[9].CLK
+clk => counter[8].CLK
+clk => counter[7].CLK
+clk => counter[6].CLK
+clk => counter[5].CLK
+clk => counter[4].CLK
+clk => counter[3].CLK
+clk => counter[2].CLK
+clk => counter[1].CLK
+clk => counter[0].CLK
+clk => slow_clk~reg0.CLK
+clk => counter[15].CLK
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seven_segment_exercise|to_seven_segment:inst4
+val[0] => Mux~0.IN19
+val[0] => Mux~1.IN19
+val[0] => Mux~2.IN19
+val[0] => Mux~3.IN19
+val[0] => Mux~4.IN19
+val[0] => Mux~5.IN19
+val[0] => Mux~6.IN19
+val[1] => Mux~0.IN18
+val[1] => Mux~1.IN18
+val[1] => Mux~2.IN18
+val[1] => Mux~3.IN18
+val[1] => Mux~4.IN18
+val[1] => Mux~5.IN18
+val[1] => Mux~6.IN18
+val[2] => Mux~0.IN17
+val[2] => Mux~1.IN17
+val[2] => Mux~2.IN17
+val[2] => Mux~3.IN17
+val[2] => Mux~4.IN17
+val[2] => Mux~5.IN17
+val[2] => Mux~6.IN17
+val[3] => Mux~0.IN16
+val[3] => Mux~1.IN16
+val[3] => Mux~2.IN16
+val[3] => Mux~3.IN16
+val[3] => Mux~4.IN16
+val[3] => Mux~5.IN16
+val[3] => Mux~6.IN16
+segments_out[0] <= Mux~6.DB_MAX_OUTPUT_PORT_TYPE
+segments_out[1] <= Mux~5.DB_MAX_OUTPUT_PORT_TYPE
+segments_out[2] <= Mux~4.DB_MAX_OUTPUT_PORT_TYPE
+segments_out[3] <= Mux~3.DB_MAX_OUTPUT_PORT_TYPE
+segments_out[4] <= Mux~2.DB_MAX_OUTPUT_PORT_TYPE
+segments_out[5] <= Mux~1.DB_MAX_OUTPUT_PORT_TYPE
+segments_out[6] <= Mux~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seven_segment_exercise|mux_4x4_to_1x4:inst6
+sel[0] => Equal~0.IN3
+sel[0] => Equal~1.IN3
+sel[0] => Equal~2.IN3
+sel[1] => Equal~0.IN2
+sel[1] => Equal~1.IN2
+sel[1] => Equal~2.IN2
+val1[0] => current~11.DATAB
+val1[1] => current~10.DATAB
+val1[2] => current~9.DATAB
+val1[3] => current~8.DATAB
+val2[0] => current~7.DATAB
+val2[1] => current~6.DATAB
+val2[2] => current~5.DATAB
+val2[3] => current~4.DATAB
+sum[0] => current~3.DATAB
+sum[1] => current~2.DATAB
+sum[2] => current~1.DATAB
+sum[3] => current~0.DATAB
+dif[0] => current~3.DATAA
+dif[1] => current~2.DATAA
+dif[2] => current~1.DATAA
+dif[3] => current~0.DATAA
+current[0] <= current~11.DB_MAX_OUTPUT_PORT_TYPE
+current[1] <= current~10.DB_MAX_OUTPUT_PORT_TYPE
+current[2] <= current~9.DB_MAX_OUTPUT_PORT_TYPE
+current[3] <= current~8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seven_segment_exercise|calculate_dif:inst8
+a[0] => add~0.IN8
+a[1] => add~0.IN7
+a[2] => add~0.IN6
+a[3] => add~0.IN5
+b[0] => add~0.IN4
+b[1] => add~0.IN3
+b[2] => add~0.IN2
+b[3] => add~0.IN1
+dif[0] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+dif[1] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+dif[2] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+dif[3] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|seven_segment_exercise|calculate_sum:inst3
+a[0] => add~0.IN4
+a[1] => add~0.IN3
+a[2] => add~0.IN2
+a[3] => add~0.IN1
+b[0] => add~0.IN8
+b[1] => add~0.IN7
+b[2] => add~0.IN6
+b[3] => add~0.IN5
+sum[0] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= add~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

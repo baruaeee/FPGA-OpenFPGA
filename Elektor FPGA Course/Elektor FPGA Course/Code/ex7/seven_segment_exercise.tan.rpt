@@ -1,0 +1,675 @@
+Timing Analyzer report for seven_segment_exercise
+Thu Mar 16 16:53:30 2006
+Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: '50MHz'
+  6. Clock Hold: '50MHz'
+  7. tco
+  8. tpd
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                         ;
++------------------------------+-----------+----------------------------------+----------------------------------+------------------------------------+------------------------------------+------------+----------+--------------+
+; Type                         ; Slack     ; Required Time                    ; Actual Time                      ; From                               ; To                                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-----------+----------------------------------+----------------------------------+------------------------------------+------------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A       ; None                             ; 12.419 ns                        ; sequencer:inst5|internal_select[1] ; DIG_C                              ; 50MHz      ; --       ; 0            ;
+; Worst-case tpd               ; N/A       ; None                             ; 15.972 ns                        ; DIPSWITCH[4]                       ; DIG_C                              ; --         ; --       ; 0            ;
+; Clock Setup: '50MHz'         ; 15.113 ns ; 50.00 MHz ( period = 20.000 ns ) ; 204.62 MHz ( period = 4.887 ns ) ; pulse_generator:inst|slow_clk      ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 0            ;
+; Clock Hold: '50MHz'          ; 1.098 ns  ; 50.00 MHz ( period = 20.000 ns ) ; N/A                              ; sequencer:inst5|internal_select[0] ; sequencer:inst5|internal_select[0] ; 50MHz      ; 50MHz    ; 0            ;
+; Total number of failed paths ;           ;                                  ;                                  ;                                    ;                                    ;            ;          ; 0            ;
++------------------------------+-----------+----------------------------------+----------------------------------+------------------------------------+------------------------------------+------------+----------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                ;
++-------------------------------------------------------+--------------------+------+-------+-------------+
+; Option                                                ; Setting            ; From ; To    ; Entity Name ;
++-------------------------------------------------------+--------------------+------+-------+-------------+
+; Device Name                                           ; EP1C12F256C7       ;      ;       ;             ;
+; Timing Models                                         ; Final              ;      ;       ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;       ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;       ;             ;
+; Number of paths to report                             ; 200                ;      ;       ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;       ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;       ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;       ;             ;
+; Default hold multicycle                               ; Same As Multicycle ;      ;       ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;       ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;       ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;       ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;       ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;       ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;       ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;       ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;       ;             ;
+; Clock Settings                                        ; external clock     ;      ; 50MHz ;             ;
++-------------------------------------------------------+--------------------+------+-------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; 50MHz           ; external_clock     ; User Pin ; 50.0 MHz         ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: '50MHz'                                                                                                                                                                                                                           ;
++-----------+----------------------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack     ; Actual fmax (period)                         ; From                               ; To                                 ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------+----------------------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; 15.113 ns ; 204.62 MHz ( period = 4.887 ns )             ; pulse_generator:inst|slow_clk      ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.717 ns                 ; 4.604 ns                ;
+; 15.115 ns ; 204.71 MHz ( period = 4.885 ns )             ; pulse_generator:inst|slow_clk      ; sequencer:inst5|internal_select[0] ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.717 ns                 ; 4.602 ns                ;
+; 15.363 ns ; 215.66 MHz ( period = 4.637 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.406 ns                ;
+; 15.428 ns ; 218.72 MHz ( period = 4.572 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.341 ns                ;
+; 15.637 ns ; 229.20 MHz ( period = 4.363 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.132 ns                ;
+; 15.639 ns ; 229.31 MHz ( period = 4.361 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.130 ns                ;
+; 15.702 ns ; 232.67 MHz ( period = 4.298 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.067 ns                ;
+; 15.704 ns ; 232.77 MHz ( period = 4.296 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.065 ns                ;
+; 15.720 ns ; 233.64 MHz ( period = 4.280 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 4.049 ns                ;
+; 15.807 ns ; 238.49 MHz ( period = 4.193 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.962 ns                ;
+; 15.811 ns ; 238.72 MHz ( period = 4.189 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.958 ns                ;
+; 15.826 ns ; 239.58 MHz ( period = 4.174 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.943 ns                ;
+; 15.853 ns ; 241.14 MHz ( period = 4.147 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.916 ns                ;
+; 15.855 ns ; 241.25 MHz ( period = 4.145 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.914 ns                ;
+; 15.909 ns ; 244.44 MHz ( period = 4.091 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.860 ns                ;
+; 15.918 ns ; 244.98 MHz ( period = 4.082 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.851 ns                ;
+; 15.920 ns ; 245.10 MHz ( period = 4.080 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.849 ns                ;
+; 15.954 ns ; 247.16 MHz ( period = 4.046 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.815 ns                ;
+; 15.981 ns ; 248.82 MHz ( period = 4.019 ns )             ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.788 ns                ;
+; 16.032 ns ; 252.02 MHz ( period = 3.968 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.737 ns                ;
+; 16.033 ns ; 252.08 MHz ( period = 3.967 ns )             ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.736 ns                ;
+; 16.045 ns ; 252.84 MHz ( period = 3.955 ns )             ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.724 ns                ;
+; 16.088 ns ; 255.62 MHz ( period = 3.912 ns )             ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.681 ns                ;
+; 16.103 ns ; 256.61 MHz ( period = 3.897 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.666 ns                ;
+; 16.109 ns ; 257.00 MHz ( period = 3.891 ns )             ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.660 ns                ;
+; 16.115 ns ; 257.40 MHz ( period = 3.885 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.654 ns                ;
+; 16.122 ns ; 257.86 MHz ( period = 3.878 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.647 ns                ;
+; 16.132 ns ; 258.53 MHz ( period = 3.868 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.637 ns                ;
+; 16.160 ns ; 260.42 MHz ( period = 3.840 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.609 ns                ;
+; 16.187 ns ; 262.26 MHz ( period = 3.813 ns )             ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.582 ns                ;
+; 16.221 ns ; 264.62 MHz ( period = 3.779 ns )             ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.548 ns                ;
+; 16.251 ns ; 266.74 MHz ( period = 3.749 ns )             ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.518 ns                ;
+; 16.268 ns ; 267.95 MHz ( period = 3.732 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.501 ns                ;
+; 16.284 ns ; 269.11 MHz ( period = 3.716 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.485 ns                ;
+; 16.307 ns ; 270.78 MHz ( period = 3.693 ns )             ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.462 ns                ;
+; 16.309 ns ; 270.93 MHz ( period = 3.691 ns )             ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.460 ns                ;
+; 16.309 ns ; 270.93 MHz ( period = 3.691 ns )             ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.460 ns                ;
+; 16.335 ns ; 272.85 MHz ( period = 3.665 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.434 ns                ;
+; 16.338 ns ; 273.07 MHz ( period = 3.662 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.431 ns                ;
+; 16.354 ns ; 274.27 MHz ( period = 3.646 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.415 ns                ;
+; 16.357 ns ; 274.50 MHz ( period = 3.643 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.412 ns                ;
+; 16.367 ns ; 275.25 MHz ( period = 3.633 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.402 ns                ;
+; 16.398 ns ; 277.62 MHz ( period = 3.602 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.371 ns                ;
+; 16.412 ns ; 278.71 MHz ( period = 3.588 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.357 ns                ;
+; 16.413 ns ; 278.78 MHz ( period = 3.587 ns )             ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.356 ns                ;
+; 16.425 ns ; 279.72 MHz ( period = 3.575 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.344 ns                ;
+; 16.427 ns ; 279.88 MHz ( period = 3.573 ns )             ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.342 ns                ;
+; 16.439 ns ; 280.82 MHz ( period = 3.561 ns )             ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.330 ns                ;
+; 16.450 ns ; 281.69 MHz ( period = 3.550 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.319 ns                ;
+; 16.455 ns ; 282.09 MHz ( period = 3.545 ns )             ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.314 ns                ;
+; 16.490 ns ; 284.90 MHz ( period = 3.510 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.279 ns                ;
+; 16.503 ns ; 285.96 MHz ( period = 3.497 ns )             ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.266 ns                ;
+; 16.504 ns ; 286.04 MHz ( period = 3.496 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.265 ns                ;
+; 16.508 ns ; 286.37 MHz ( period = 3.492 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.261 ns                ;
+; 16.510 ns ; 286.53 MHz ( period = 3.490 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.259 ns                ;
+; 16.521 ns ; 287.44 MHz ( period = 3.479 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.248 ns                ;
+; 16.523 ns ; 287.60 MHz ( period = 3.477 ns )             ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.246 ns                ;
+; 16.525 ns ; 287.77 MHz ( period = 3.475 ns )             ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.244 ns                ;
+; 16.536 ns ; 288.68 MHz ( period = 3.464 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.233 ns                ;
+; 16.539 ns ; 288.93 MHz ( period = 3.461 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.230 ns                ;
+; 16.553 ns ; 290.11 MHz ( period = 3.447 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.216 ns                ;
+; 16.573 ns ; 291.80 MHz ( period = 3.427 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.196 ns                ;
+; 16.577 ns ; 292.14 MHz ( period = 3.423 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.192 ns                ;
+; 16.580 ns ; 292.40 MHz ( period = 3.420 ns )             ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.189 ns                ;
+; 16.583 ns ; 292.65 MHz ( period = 3.417 ns )             ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.186 ns                ;
+; 16.585 ns ; 292.83 MHz ( period = 3.415 ns )             ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.184 ns                ;
+; 16.590 ns ; 293.26 MHz ( period = 3.410 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.179 ns                ;
+; 16.599 ns ; 294.03 MHz ( period = 3.401 ns )             ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.170 ns                ;
+; 16.604 ns ; 294.46 MHz ( period = 3.396 ns )             ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.165 ns                ;
+; 16.612 ns ; 295.16 MHz ( period = 3.388 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.157 ns                ;
+; 16.614 ns ; 295.33 MHz ( period = 3.386 ns )             ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.155 ns                ;
+; 16.619 ns ; 295.77 MHz ( period = 3.381 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.150 ns                ;
+; 16.644 ns ; 297.97 MHz ( period = 3.356 ns )             ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.125 ns                ;
+; 16.663 ns ; 299.67 MHz ( period = 3.337 ns )             ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.106 ns                ;
+; 16.664 ns ; 299.76 MHz ( period = 3.336 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.105 ns                ;
+; 16.679 ns ; 301.11 MHz ( period = 3.321 ns )             ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.090 ns                ;
+; 16.689 ns ; 302.02 MHz ( period = 3.311 ns )             ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.080 ns                ;
+; 16.691 ns ; 302.21 MHz ( period = 3.309 ns )             ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.078 ns                ;
+; 16.702 ns ; 303.21 MHz ( period = 3.298 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.067 ns                ;
+; 16.729 ns ; 305.72 MHz ( period = 3.271 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.040 ns                ;
+; 16.731 ns ; 305.90 MHz ( period = 3.269 ns )             ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.038 ns                ;
+; 16.731 ns ; 305.90 MHz ( period = 3.269 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.038 ns                ;
+; 16.738 ns ; 306.56 MHz ( period = 3.262 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.031 ns                ;
+; 16.742 ns ; 306.94 MHz ( period = 3.258 ns )             ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.027 ns                ;
+; 16.751 ns ; 307.79 MHz ( period = 3.249 ns )             ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.018 ns                ;
+; 16.755 ns ; 308.17 MHz ( period = 3.245 ns )             ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 3.014 ns                ;
+; 16.785 ns ; 311.04 MHz ( period = 3.215 ns )             ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.984 ns                ;
+; 16.797 ns ; 312.21 MHz ( period = 3.203 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.972 ns                ;
+; 16.799 ns ; 312.40 MHz ( period = 3.201 ns )             ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.970 ns                ;
+; 16.801 ns ; 312.60 MHz ( period = 3.199 ns )             ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.968 ns                ;
+; 16.802 ns ; 312.70 MHz ( period = 3.198 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.967 ns                ;
+; 16.812 ns ; 313.68 MHz ( period = 3.188 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.957 ns                ;
+; 16.813 ns ; 313.77 MHz ( period = 3.187 ns )             ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.956 ns                ;
+; 16.818 ns ; 314.27 MHz ( period = 3.182 ns )             ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.951 ns                ;
+; 16.820 ns ; 314.47 MHz ( period = 3.180 ns )             ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.949 ns                ;
+; 16.821 ns ; 314.56 MHz ( period = 3.179 ns )             ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.948 ns                ;
+; 16.824 ns ; 314.86 MHz ( period = 3.176 ns )             ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.945 ns                ;
+; 16.842 ns ; 316.66 MHz ( period = 3.158 ns )             ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.927 ns                ;
+; 16.857 ns ; 318.17 MHz ( period = 3.143 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.912 ns                ;
+; 16.858 ns ; 318.27 MHz ( period = 3.142 ns )             ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.911 ns                ;
+; 16.866 ns ; 319.08 MHz ( period = 3.134 ns )             ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.903 ns                ;
+; 16.879 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.890 ns                ;
+; 16.884 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.885 ns                ;
+; 16.885 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.884 ns                ;
+; 16.886 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.883 ns                ;
+; 16.893 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.876 ns                ;
+; 16.897 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.872 ns                ;
+; 16.903 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.866 ns                ;
+; 16.905 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.864 ns                ;
+; 16.907 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.862 ns                ;
+; 16.915 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.854 ns                ;
+; 16.917 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.852 ns                ;
+; 16.930 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.839 ns                ;
+; 16.931 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.838 ns                ;
+; 16.940 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.829 ns                ;
+; 16.945 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.824 ns                ;
+; 16.947 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.822 ns                ;
+; 16.957 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.812 ns                ;
+; 16.957 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.812 ns                ;
+; 16.988 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.781 ns                ;
+; 16.998 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.771 ns                ;
+; 17.008 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.761 ns                ;
+; 17.011 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.758 ns                ;
+; 17.015 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.754 ns                ;
+; 17.021 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.748 ns                ;
+; 17.027 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.742 ns                ;
+; 17.044 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.725 ns                ;
+; 17.079 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.690 ns                ;
+; 17.090 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.679 ns                ;
+; 17.101 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.668 ns                ;
+; 17.103 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.666 ns                ;
+; 17.108 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.661 ns                ;
+; 17.118 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.651 ns                ;
+; 17.133 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.636 ns                ;
+; 17.134 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.635 ns                ;
+; 17.164 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.605 ns                ;
+; 17.181 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.588 ns                ;
+; 17.197 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.572 ns                ;
+; 17.209 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.560 ns                ;
+; 17.216 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.553 ns                ;
+; 17.235 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[2]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.534 ns                ;
+; 17.241 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.528 ns                ;
+; 17.242 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.527 ns                ;
+; 17.243 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.526 ns                ;
+; 17.299 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.470 ns                ;
+; 17.304 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.465 ns                ;
+; 17.313 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.456 ns                ;
+; 17.316 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.453 ns                ;
+; 17.332 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.437 ns                ;
+; 17.333 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.436 ns                ;
+; 17.334 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.435 ns                ;
+; 17.362 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.407 ns                ;
+; 17.444 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.325 ns                ;
+; 17.466 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.303 ns                ;
+; 17.485 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.284 ns                ;
+; 17.487 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.282 ns                ;
+; 17.504 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[2]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.265 ns                ;
+; 17.508 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.261 ns                ;
+; 17.509 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.260 ns                ;
+; 17.556 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.213 ns                ;
+; 17.559 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[1]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.210 ns                ;
+; 17.578 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.191 ns                ;
+; 17.582 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.187 ns                ;
+; 17.616 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.153 ns                ;
+; 17.639 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.130 ns                ;
+; 17.649 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.120 ns                ;
+; 17.658 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.111 ns                ;
+; 17.680 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.089 ns                ;
+; 17.731 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.038 ns                ;
+; 17.754 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 2.015 ns                ;
+; 17.830 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.939 ns                ;
+; 17.832 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.937 ns                ;
+; 17.842 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.927 ns                ;
+; 17.843 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[0]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.926 ns                ;
+; 17.843 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[2]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.926 ns                ;
+; 17.927 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.842 ns                ;
+; 17.987 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.782 ns                ;
+; 17.995 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.774 ns                ;
+; 18.036 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.733 ns                ;
+; 18.037 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.732 ns                ;
+; 18.164 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.605 ns                ;
+; 18.247 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.522 ns                ;
+; 18.269 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.500 ns                ;
+; 18.287 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.482 ns                ;
+; 18.287 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[1]    ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.482 ns                ;
+; 18.400 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.369 ns                ;
+; 18.534 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.235 ns                ;
+; 18.646 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; sequencer:inst5|internal_select[1] ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 1.123 ns                ;
+; 18.780 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 0.989 ns                ;
+; 18.845 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; sequencer:inst5|internal_select[0] ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 0.924 ns                ;
+; 18.856 ns ; Restricted to 320.1 MHz ( period = 3.12 ns ) ; sequencer:inst5|internal_select[0] ; sequencer:inst5|internal_select[0] ; 50MHz      ; 50MHz    ; 20.000 ns                   ; 19.769 ns                 ; 0.913 ns                ;
++-----------+----------------------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: '50MHz'                                                                                                                                                                                  ;
++---------------+------------------------------------+------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack ; From                               ; To                                 ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++---------------+------------------------------------+------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; 1.098 ns      ; sequencer:inst5|internal_select[0] ; sequencer:inst5|internal_select[0] ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 0.913 ns                 ;
+; 1.109 ns      ; sequencer:inst5|internal_select[0] ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 0.924 ns                 ;
+; 1.174 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 0.989 ns                 ;
+; 1.308 ns      ; sequencer:inst5|internal_select[1] ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.123 ns                 ;
+; 1.420 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.235 ns                 ;
+; 1.436 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.251 ns                 ;
+; 1.554 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.369 ns                 ;
+; 1.667 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.482 ns                 ;
+; 1.667 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[1]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.482 ns                 ;
+; 1.685 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.500 ns                 ;
+; 1.707 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.522 ns                 ;
+; 1.777 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.592 ns                 ;
+; 1.790 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.605 ns                 ;
+; 1.851 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.666 ns                 ;
+; 1.853 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.668 ns                 ;
+; 1.857 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.672 ns                 ;
+; 1.917 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.732 ns                 ;
+; 1.918 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.733 ns                 ;
+; 1.947 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.762 ns                 ;
+; 1.959 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.774 ns                 ;
+; 1.967 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.782 ns                 ;
+; 2.027 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.842 ns                 ;
+; 2.067 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.882 ns                 ;
+; 2.069 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.884 ns                 ;
+; 2.093 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.908 ns                 ;
+; 2.111 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[0]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.926 ns                 ;
+; 2.111 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[2]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.926 ns                 ;
+; 2.112 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.927 ns                 ;
+; 2.122 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.937 ns                 ;
+; 2.124 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 1.939 ns                 ;
+; 2.190 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.005 ns                 ;
+; 2.205 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.020 ns                 ;
+; 2.223 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.038 ns                 ;
+; 2.229 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.044 ns                 ;
+; 2.270 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.085 ns                 ;
+; 2.270 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.085 ns                 ;
+; 2.272 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.087 ns                 ;
+; 2.274 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.089 ns                 ;
+; 2.296 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.111 ns                 ;
+; 2.301 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.116 ns                 ;
+; 2.305 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.120 ns                 ;
+; 2.338 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.153 ns                 ;
+; 2.340 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.155 ns                 ;
+; 2.343 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.158 ns                 ;
+; 2.362 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.177 ns                 ;
+; 2.364 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.179 ns                 ;
+; 2.372 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.187 ns                 ;
+; 2.376 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.191 ns                 ;
+; 2.383 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[1]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.198 ns                 ;
+; 2.384 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.199 ns                 ;
+; 2.435 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.250 ns                 ;
+; 2.438 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[2]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.253 ns                 ;
+; 2.446 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.261 ns                 ;
+; 2.459 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[5]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.274 ns                 ;
+; 2.469 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.284 ns                 ;
+; 2.488 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.303 ns                 ;
+; 2.490 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.305 ns                 ;
+; 2.508 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.323 ns                 ;
+; 2.526 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.341 ns                 ;
+; 2.570 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.385 ns                 ;
+; 2.578 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.393 ns                 ;
+; 2.580 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.395 ns                 ;
+; 2.587 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.402 ns                 ;
+; 2.592 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.407 ns                 ;
+; 2.614 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.429 ns                 ;
+; 2.620 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.435 ns                 ;
+; 2.621 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.436 ns                 ;
+; 2.622 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.437 ns                 ;
+; 2.634 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.449 ns                 ;
+; 2.638 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.453 ns                 ;
+; 2.644 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.459 ns                 ;
+; 2.646 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.461 ns                 ;
+; 2.650 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.465 ns                 ;
+; 2.655 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.470 ns                 ;
+; 2.704 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[3]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.519 ns                 ;
+; 2.705 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[2]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.520 ns                 ;
+; 2.711 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.526 ns                 ;
+; 2.713 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.528 ns                 ;
+; 2.724 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.539 ns                 ;
+; 2.726 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.541 ns                 ;
+; 2.728 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.543 ns                 ;
+; 2.738 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.553 ns                 ;
+; 2.745 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.560 ns                 ;
+; 2.747 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.562 ns                 ;
+; 2.748 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.563 ns                 ;
+; 2.760 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.575 ns                 ;
+; 2.764 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.579 ns                 ;
+; 2.780 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.595 ns                 ;
+; 2.808 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.623 ns                 ;
+; 2.811 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.626 ns                 ;
+; 2.820 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.635 ns                 ;
+; 2.836 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.651 ns                 ;
+; 2.837 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.652 ns                 ;
+; 2.838 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.653 ns                 ;
+; 2.842 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.657 ns                 ;
+; 2.851 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.666 ns                 ;
+; 2.854 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.669 ns                 ;
+; 2.860 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.675 ns                 ;
+; 2.862 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.677 ns                 ;
+; 2.875 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.690 ns                 ;
+; 2.906 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.721 ns                 ;
+; 2.915 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.730 ns                 ;
+; 2.925 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.740 ns                 ;
+; 2.927 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.742 ns                 ;
+; 2.929 ns      ; pulse_generator:inst|counter[13]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.744 ns                 ;
+; 2.933 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.748 ns                 ;
+; 2.939 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.754 ns                 ;
+; 2.941 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.756 ns                 ;
+; 2.943 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.758 ns                 ;
+; 2.948 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.763 ns                 ;
+; 2.966 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.781 ns                 ;
+; 2.997 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.812 ns                 ;
+; 2.997 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.812 ns                 ;
+; 3.000 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.815 ns                 ;
+; 3.006 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.821 ns                 ;
+; 3.007 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.822 ns                 ;
+; 3.009 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.824 ns                 ;
+; 3.013 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.828 ns                 ;
+; 3.014 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.829 ns                 ;
+; 3.016 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.831 ns                 ;
+; 3.029 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.844 ns                 ;
+; 3.035 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.850 ns                 ;
+; 3.049 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.864 ns                 ;
+; 3.049 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.864 ns                 ;
+; 3.056 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.871 ns                 ;
+; 3.061 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.876 ns                 ;
+; 3.067 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.882 ns                 ;
+; 3.067 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.882 ns                 ;
+; 3.080 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.895 ns                 ;
+; 3.086 ns      ; pulse_generator:inst|counter[11]   ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.901 ns                 ;
+; 3.108 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.923 ns                 ;
+; 3.112 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.927 ns                 ;
+; 3.112 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[7]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.927 ns                 ;
+; 3.124 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.939 ns                 ;
+; 3.131 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.946 ns                 ;
+; 3.140 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.955 ns                 ;
+; 3.141 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.956 ns                 ;
+; 3.150 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.965 ns                 ;
+; 3.153 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.968 ns                 ;
+; 3.155 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.970 ns                 ;
+; 3.159 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.974 ns                 ;
+; 3.160 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.975 ns                 ;
+; 3.167 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 2.982 ns                 ;
+; 3.199 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.014 ns                 ;
+; 3.214 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.029 ns                 ;
+; 3.219 ns      ; pulse_generator:inst|counter[6]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.034 ns                 ;
+; 3.223 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.038 ns                 ;
+; 3.225 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.040 ns                 ;
+; 3.252 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.067 ns                 ;
+; 3.263 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.078 ns                 ;
+; 3.267 ns      ; pulse_generator:inst|counter[1]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.082 ns                 ;
+; 3.279 ns      ; pulse_generator:inst|counter[10]   ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.094 ns                 ;
+; 3.282 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.097 ns                 ;
+; 3.310 ns      ; pulse_generator:inst|counter[2]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.125 ns                 ;
+; 3.333 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.148 ns                 ;
+; 3.337 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.152 ns                 ;
+; 3.342 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.157 ns                 ;
+; 3.350 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.165 ns                 ;
+; 3.353 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.168 ns                 ;
+; 3.369 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.184 ns                 ;
+; 3.371 ns      ; pulse_generator:inst|counter[15]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.186 ns                 ;
+; 3.373 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.188 ns                 ;
+; 3.374 ns      ; pulse_generator:inst|counter[7]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.189 ns                 ;
+; 3.381 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|slow_clk      ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.196 ns                 ;
+; 3.393 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.208 ns                 ;
+; 3.393 ns      ; pulse_generator:inst|counter[0]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.208 ns                 ;
+; 3.401 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.216 ns                 ;
+; 3.416 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.231 ns                 ;
+; 3.424 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[12]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.239 ns                 ;
+; 3.425 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.240 ns                 ;
+; 3.429 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.244 ns                 ;
+; 3.431 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.246 ns                 ;
+; 3.444 ns      ; pulse_generator:inst|counter[3]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.259 ns                 ;
+; 3.462 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[13]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.277 ns                 ;
+; 3.488 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[10]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.303 ns                 ;
+; 3.527 ns      ; pulse_generator:inst|counter[4]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.342 ns                 ;
+; 3.535 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[15]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.350 ns                 ;
+; 3.556 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.371 ns                 ;
+; 3.558 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.373 ns                 ;
+; 3.581 ns      ; pulse_generator:inst|counter[9]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.396 ns                 ;
+; 3.619 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.434 ns                 ;
+; 3.645 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[14]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.460 ns                 ;
+; 3.645 ns      ; pulse_generator:inst|counter[12]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.460 ns                 ;
+; 3.668 ns      ; pulse_generator:inst|counter[8]    ; pulse_generator:inst|counter[11]   ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.483 ns                 ;
+; 3.684 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[9]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.499 ns                 ;
+; 4.034 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[8]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.849 ns                 ;
+; 4.036 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.851 ns                 ;
+; 4.101 ns      ; pulse_generator:inst|counter[5]    ; pulse_generator:inst|counter[4]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 3.916 ns                 ;
+; 4.250 ns      ; pulse_generator:inst|counter[14]   ; pulse_generator:inst|counter[6]    ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.185 ns                  ; 4.065 ns                 ;
+; 4.839 ns      ; pulse_generator:inst|slow_clk      ; sequencer:inst5|internal_select[0] ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.237 ns                  ; 4.602 ns                 ;
+; 4.841 ns      ; pulse_generator:inst|slow_clk      ; sequencer:inst5|internal_select[1] ; 50MHz      ; 50MHz    ; 0.000 ns                   ; -0.237 ns                  ; 4.604 ns                 ;
++---------------+------------------------------------+------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; tco                                                                                         ;
++-------+--------------+------------+------------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                               ; To    ; From Clock ;
++-------+--------------+------------+------------------------------------+-------+------------+
+; N/A   ; None         ; 12.419 ns  ; sequencer:inst5|internal_select[1] ; DIG_C ; 50MHz      ;
+; N/A   ; None         ; 12.417 ns  ; sequencer:inst5|internal_select[1] ; DIG_D ; 50MHz      ;
+; N/A   ; None         ; 12.198 ns  ; sequencer:inst5|internal_select[1] ; DIG_E ; 50MHz      ;
+; N/A   ; None         ; 12.179 ns  ; sequencer:inst5|internal_select[0] ; DIG_C ; 50MHz      ;
+; N/A   ; None         ; 12.177 ns  ; sequencer:inst5|internal_select[0] ; DIG_D ; 50MHz      ;
+; N/A   ; None         ; 12.057 ns  ; sequencer:inst5|internal_select[1] ; DIG_F ; 50MHz      ;
+; N/A   ; None         ; 11.958 ns  ; sequencer:inst5|internal_select[0] ; DIG_E ; 50MHz      ;
+; N/A   ; None         ; 11.906 ns  ; sequencer:inst5|internal_select[1] ; DIG_B ; 50MHz      ;
+; N/A   ; None         ; 11.904 ns  ; sequencer:inst5|internal_select[1] ; DIG_G ; 50MHz      ;
+; N/A   ; None         ; 11.902 ns  ; sequencer:inst5|internal_select[1] ; DIG_A ; 50MHz      ;
+; N/A   ; None         ; 11.817 ns  ; sequencer:inst5|internal_select[0] ; DIG_F ; 50MHz      ;
+; N/A   ; None         ; 11.666 ns  ; sequencer:inst5|internal_select[0] ; DIG_B ; 50MHz      ;
+; N/A   ; None         ; 11.664 ns  ; sequencer:inst5|internal_select[0] ; DIG_G ; 50MHz      ;
+; N/A   ; None         ; 11.662 ns  ; sequencer:inst5|internal_select[0] ; DIG_A ; 50MHz      ;
+; N/A   ; None         ; 8.000 ns   ; sequencer:inst5|internal_select[1] ; DIG_4 ; 50MHz      ;
+; N/A   ; None         ; 7.754 ns   ; sequencer:inst5|internal_select[0] ; DIG_4 ; 50MHz      ;
+; N/A   ; None         ; 7.245 ns   ; sequencer:inst5|internal_select[1] ; DIG_1 ; 50MHz      ;
+; N/A   ; None         ; 7.240 ns   ; sequencer:inst5|internal_select[1] ; DIG_3 ; 50MHz      ;
+; N/A   ; None         ; 7.238 ns   ; sequencer:inst5|internal_select[1] ; DIG_2 ; 50MHz      ;
+; N/A   ; None         ; 6.995 ns   ; sequencer:inst5|internal_select[0] ; DIG_3 ; 50MHz      ;
+; N/A   ; None         ; 6.991 ns   ; sequencer:inst5|internal_select[0] ; DIG_1 ; 50MHz      ;
+; N/A   ; None         ; 6.988 ns   ; sequencer:inst5|internal_select[0] ; DIG_2 ; 50MHz      ;
++-------+--------------+------------+------------------------------------+-------+------------+
+
+
++--------------------------------------------------------------------+
+; tpd                                                                ;
++-------+-------------------+-----------------+--------------+-------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From         ; To    ;
++-------+-------------------+-----------------+--------------+-------+
+; N/A   ; None              ; 15.972 ns       ; DIPSWITCH[4] ; DIG_C ;
+; N/A   ; None              ; 15.970 ns       ; DIPSWITCH[4] ; DIG_D ;
+; N/A   ; None              ; 15.751 ns       ; DIPSWITCH[4] ; DIG_E ;
+; N/A   ; None              ; 15.610 ns       ; DIPSWITCH[4] ; DIG_F ;
+; N/A   ; None              ; 15.459 ns       ; DIPSWITCH[4] ; DIG_B ;
+; N/A   ; None              ; 15.457 ns       ; DIPSWITCH[4] ; DIG_G ;
+; N/A   ; None              ; 15.455 ns       ; DIPSWITCH[4] ; DIG_A ;
+; N/A   ; None              ; 15.421 ns       ; DIPSWITCH[5] ; DIG_D ;
+; N/A   ; None              ; 15.340 ns       ; DIPSWITCH[5] ; DIG_C ;
+; N/A   ; None              ; 15.203 ns       ; DIPSWITCH[5] ; DIG_E ;
+; N/A   ; None              ; 15.065 ns       ; DIPSWITCH[5] ; DIG_F ;
+; N/A   ; None              ; 14.935 ns       ; DIPSWITCH[6] ; DIG_C ;
+; N/A   ; None              ; 14.930 ns       ; DIPSWITCH[6] ; DIG_D ;
+; N/A   ; None              ; 14.914 ns       ; DIPSWITCH[5] ; DIG_B ;
+; N/A   ; None              ; 14.910 ns       ; DIPSWITCH[5] ; DIG_G ;
+; N/A   ; None              ; 14.908 ns       ; DIPSWITCH[5] ; DIG_A ;
+; N/A   ; None              ; 14.738 ns       ; DIPSWITCH[0] ; DIG_C ;
+; N/A   ; None              ; 14.736 ns       ; DIPSWITCH[0] ; DIG_D ;
+; N/A   ; None              ; 14.708 ns       ; DIPSWITCH[6] ; DIG_E ;
+; N/A   ; None              ; 14.553 ns       ; DIPSWITCH[6] ; DIG_F ;
+; N/A   ; None              ; 14.517 ns       ; DIPSWITCH[0] ; DIG_E ;
+; N/A   ; None              ; 14.412 ns       ; DIPSWITCH[2] ; DIG_C ;
+; N/A   ; None              ; 14.410 ns       ; DIPSWITCH[6] ; DIG_G ;
+; N/A   ; None              ; 14.407 ns       ; DIPSWITCH[2] ; DIG_D ;
+; N/A   ; None              ; 14.407 ns       ; DIPSWITCH[6] ; DIG_B ;
+; N/A   ; None              ; 14.404 ns       ; DIPSWITCH[6] ; DIG_A ;
+; N/A   ; None              ; 14.376 ns       ; DIPSWITCH[0] ; DIG_F ;
+; N/A   ; None              ; 14.225 ns       ; DIPSWITCH[0] ; DIG_B ;
+; N/A   ; None              ; 14.223 ns       ; DIPSWITCH[0] ; DIG_G ;
+; N/A   ; None              ; 14.221 ns       ; DIPSWITCH[0] ; DIG_A ;
+; N/A   ; None              ; 14.185 ns       ; DIPSWITCH[2] ; DIG_E ;
+; N/A   ; None              ; 14.168 ns       ; DIPSWITCH[1] ; DIG_D ;
+; N/A   ; None              ; 14.087 ns       ; DIPSWITCH[1] ; DIG_C ;
+; N/A   ; None              ; 14.030 ns       ; DIPSWITCH[2] ; DIG_F ;
+; N/A   ; None              ; 14.009 ns       ; DIPSWITCH[3] ; DIG_C ;
+; N/A   ; None              ; 14.004 ns       ; DIPSWITCH[3] ; DIG_D ;
+; N/A   ; None              ; 13.950 ns       ; DIPSWITCH[1] ; DIG_E ;
+; N/A   ; None              ; 13.887 ns       ; DIPSWITCH[2] ; DIG_G ;
+; N/A   ; None              ; 13.884 ns       ; DIPSWITCH[2] ; DIG_B ;
+; N/A   ; None              ; 13.881 ns       ; DIPSWITCH[2] ; DIG_A ;
+; N/A   ; None              ; 13.812 ns       ; DIPSWITCH[1] ; DIG_F ;
+; N/A   ; None              ; 13.782 ns       ; DIPSWITCH[3] ; DIG_E ;
+; N/A   ; None              ; 13.661 ns       ; DIPSWITCH[1] ; DIG_B ;
+; N/A   ; None              ; 13.657 ns       ; DIPSWITCH[1] ; DIG_G ;
+; N/A   ; None              ; 13.655 ns       ; DIPSWITCH[1] ; DIG_A ;
+; N/A   ; None              ; 13.627 ns       ; DIPSWITCH[3] ; DIG_F ;
+; N/A   ; None              ; 13.517 ns       ; DIPSWITCH[7] ; DIG_C ;
+; N/A   ; None              ; 13.512 ns       ; DIPSWITCH[7] ; DIG_D ;
+; N/A   ; None              ; 13.484 ns       ; DIPSWITCH[3] ; DIG_G ;
+; N/A   ; None              ; 13.481 ns       ; DIPSWITCH[3] ; DIG_B ;
+; N/A   ; None              ; 13.478 ns       ; DIPSWITCH[3] ; DIG_A ;
+; N/A   ; None              ; 13.290 ns       ; DIPSWITCH[7] ; DIG_E ;
+; N/A   ; None              ; 13.135 ns       ; DIPSWITCH[7] ; DIG_F ;
+; N/A   ; None              ; 12.992 ns       ; DIPSWITCH[7] ; DIG_G ;
+; N/A   ; None              ; 12.989 ns       ; DIPSWITCH[7] ; DIG_B ;
+; N/A   ; None              ; 12.986 ns       ; DIPSWITCH[7] ; DIG_A ;
++-------+-------------------+-----------------+--------------+-------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+    Info: Processing started: Thu Mar 16 16:53:29 2006
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off seven_segment_exercise -c seven_segment_exercise --timing_analysis_only
+Info: Slack time is 15.113 ns for clock "50MHz" between source register "pulse_generator:inst|slow_clk" and destination register "sequencer:inst5|internal_select[1]"
+    Info: Fmax is 204.62 MHz (period= 4.887 ns)
+    Info: + Largest register to register requirement is 19.717 ns
+        Info: + Setup relationship between source and destination is 20.000 ns
+            Info: + Latch edge is 20.000 ns
+                Info: Clock period of Destination clock "50MHz" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Destination register is 1
+            Info: - Launch edge is 0.000 ns
+                Info: Clock period of Source clock "50MHz" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Source register is 1
+        Info: + Largest clock skew is -0.052 ns
+            Info: + Shortest clock path from clock "50MHz" to destination register is 2.816 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_G16; Fanout = 19; CLK Node = '50MHz'
+                Info: 2: + IC(0.888 ns) + CELL(0.629 ns) = 2.816 ns; Loc. = LC_X52_Y20_N5; Fanout = 19; REG Node = 'sequencer:inst5|internal_select[1]'
+                Info: Total cell delay = 1.928 ns ( 68.47 % )
+                Info: Total interconnect delay = 0.888 ns ( 31.53 % )
+            Info: - Longest clock path from clock "50MHz" to source register is 2.868 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_G16; Fanout = 19; CLK Node = '50MHz'
+                Info: 2: + IC(0.940 ns) + CELL(0.629 ns) = 2.868 ns; Loc. = LC_X11_Y23_N7; Fanout = 2; REG Node = 'pulse_generator:inst|slow_clk'
+                Info: Total cell delay = 1.928 ns ( 67.22 % )
+                Info: Total interconnect delay = 0.940 ns ( 32.78 % )
+        Info: - Micro clock to output delay of source is 0.198 ns
+        Info: - Micro setup delay of destination is 0.033 ns
+    Info: - Longest register to register delay is 4.604 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X11_Y23_N7; Fanout = 2; REG Node = 'pulse_generator:inst|slow_clk'
+        Info: 2: + IC(4.181 ns) + CELL(0.423 ns) = 4.604 ns; Loc. = LC_X52_Y20_N5; Fanout = 19; REG Node = 'sequencer:inst5|internal_select[1]'
+        Info: Total cell delay = 0.423 ns ( 9.19 % )
+        Info: Total interconnect delay = 4.181 ns ( 90.81 % )
+Info: Minimum slack time is 1.098 ns for clock "50MHz" between source register "sequencer:inst5|internal_select[0]" and destination register "sequencer:inst5|internal_select[0]"
+    Info: + Shortest register to register delay is 0.913 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X52_Y20_N3; Fanout = 16; REG Node = 'sequencer:inst5|internal_select[0]'
+        Info: 2: + IC(0.640 ns) + CELL(0.273 ns) = 0.913 ns; Loc. = LC_X52_Y20_N3; Fanout = 16; REG Node = 'sequencer:inst5|internal_select[0]'
+        Info: Total cell delay = 0.273 ns ( 29.90 % )
+        Info: Total interconnect delay = 0.640 ns ( 70.10 % )
+    Info: - Smallest register to register requirement is -0.185 ns
+        Info: + Hold relationship between source and destination is 0.000 ns
+            Info: + Latch edge is 0.000 ns
+                Info: Clock period of Destination clock "50MHz" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Destination register is 1
+                Info: Multicycle Hold factor for Destination register is 1
+            Info: - Launch edge is 0.000 ns
+                Info: Clock period of Source clock "50MHz" is 20.000 ns with  offset of 0.000 ns and duty cycle of 50
+                Info: Multicycle Setup factor for Source register is 1
+                Info: Multicycle Hold factor for Source register is 1
+        Info: + Smallest clock skew is 0.000 ns
+            Info: + Longest clock path from clock "50MHz" to destination register is 2.816 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_G16; Fanout = 19; CLK Node = '50MHz'
+                Info: 2: + IC(0.888 ns) + CELL(0.629 ns) = 2.816 ns; Loc. = LC_X52_Y20_N3; Fanout = 16; REG Node = 'sequencer:inst5|internal_select[0]'
+                Info: Total cell delay = 1.928 ns ( 68.47 % )
+                Info: Total interconnect delay = 0.888 ns ( 31.53 % )
+            Info: - Shortest clock path from clock "50MHz" to source register is 2.816 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_G16; Fanout = 19; CLK Node = '50MHz'
+                Info: 2: + IC(0.888 ns) + CELL(0.629 ns) = 2.816 ns; Loc. = LC_X52_Y20_N3; Fanout = 16; REG Node = 'sequencer:inst5|internal_select[0]'
+                Info: Total cell delay = 1.928 ns ( 68.47 % )
+                Info: Total interconnect delay = 0.888 ns ( 31.53 % )
+        Info: - Micro clock to output delay of source is 0.198 ns
+        Info: + Micro hold delay of destination is 0.013 ns
+Info: tco from clock "50MHz" to destination pin "DIG_C" through register "sequencer:inst5|internal_select[1]" is 12.419 ns
+    Info: + Longest clock path from clock "50MHz" to source register is 2.816 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_G16; Fanout = 19; CLK Node = '50MHz'
+        Info: 2: + IC(0.888 ns) + CELL(0.629 ns) = 2.816 ns; Loc. = LC_X52_Y20_N5; Fanout = 19; REG Node = 'sequencer:inst5|internal_select[1]'
+        Info: Total cell delay = 1.928 ns ( 68.47 % )
+        Info: Total interconnect delay = 0.888 ns ( 31.53 % )
+    Info: + Micro clock to output delay of source is 0.198 ns
+    Info: + Longest register to pin delay is 9.405 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X52_Y20_N5; Fanout = 19; REG Node = 'sequencer:inst5|internal_select[1]'
+        Info: 2: + IC(0.599 ns) + CELL(0.390 ns) = 0.989 ns; Loc. = LC_X52_Y20_N8; Fanout = 3; COMB Node = 'calculate_sum:inst3|add~706'
+        Info: 3: + IC(1.086 ns) + CELL(0.522 ns) = 2.597 ns; Loc. = LC_X52_Y19_N1; Fanout = 1; COMB Node = 'calculate_sum:inst3|add~679'
+        Info: 4: + IC(1.074 ns) + CELL(0.522 ns) = 4.193 ns; Loc. = LC_X52_Y20_N6; Fanout = 7; COMB Node = 'calculate_sum:inst3|add~684'
+        Info: 5: + IC(1.197 ns) + CELL(0.258 ns) = 5.648 ns; Loc. = LC_X52_Y21_N6; Fanout = 1; COMB Node = 'to_seven_segment:inst4|segments_out[4]~193'
+        Info: 6: + IC(1.892 ns) + CELL(1.865 ns) = 9.405 ns; Loc. = PIN_C13; Fanout = 0; PIN Node = 'DIG_C'
+        Info: Total cell delay = 3.557 ns ( 37.82 % )
+        Info: Total interconnect delay = 5.848 ns ( 62.18 % )
+Info: Longest tpd from source pin "DIPSWITCH[4]" to destination pin "DIG_C" is 15.972 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_P15; Fanout = 2; PIN Node = 'DIPSWITCH[4]'
+    Info: 2: + IC(5.999 ns) + CELL(0.258 ns) = 7.556 ns; Loc. = LC_X52_Y20_N8; Fanout = 3; COMB Node = 'calculate_sum:inst3|add~706'
+    Info: 3: + IC(1.086 ns) + CELL(0.522 ns) = 9.164 ns; Loc. = LC_X52_Y19_N1; Fanout = 1; COMB Node = 'calculate_sum:inst3|add~679'
+    Info: 4: + IC(1.074 ns) + CELL(0.522 ns) = 10.760 ns; Loc. = LC_X52_Y20_N6; Fanout = 7; COMB Node = 'calculate_sum:inst3|add~684'
+    Info: 5: + IC(1.197 ns) + CELL(0.258 ns) = 12.215 ns; Loc. = LC_X52_Y21_N6; Fanout = 1; COMB Node = 'to_seven_segment:inst4|segments_out[4]~193'
+    Info: 6: + IC(1.892 ns) + CELL(1.865 ns) = 15.972 ns; Loc. = PIN_C13; Fanout = 0; PIN Node = 'DIG_C'
+    Info: Total cell delay = 4.724 ns ( 29.58 % )
+    Info: Total interconnect delay = 11.248 ns ( 70.42 % )
+Info: All timing requirements were met. See Report window for more details.
+Info: Quartus II Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu Mar 16 16:53:30 2006
+    Info: Elapsed time: 00:00:01
+
+

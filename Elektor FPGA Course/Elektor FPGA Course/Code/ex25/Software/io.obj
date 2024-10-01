@@ -1,0 +1,281 @@
+objectfile:io.obj
+time:Thu Dec 14 11:33:35 2006
+cpuname:i8051
+import:_sevseg
+import:____io_size__
+import:_En0
+import:_En1
+import:_En2
+import:_En3
+import:_C2
+import:_C3
+import:_C0
+import:_C1
+import:_C6
+import:_C4
+import:_C5
+export:_io @0:0
+segment:__io @0:m u:7d5
+00 00 01 48 54 54 50 2f 31 2e 30 20 32 30 30 20
+4f 4b 0d 0a 43 6f 6e 74 65 6e 74 2d 74 79 70 65
+3a 20 74 65 78 74 2f 68 74 6d 6c 0d 0a 43 6f 6e
+6e 65 63 74 69 6f 6e 3a 20 63 6c 6f 73 65 0d 0a
+0d 0a 3c 68 74 6d 6c 3e 0d 0a 3c 68 65 61 64 3e
+0d 0a 3c 74 69 74 6c 65 3e 48 50 45 5f 6d 69 6e
+69 20 50 65 72 69 70 68 65 72 61 6c 73 3c 2f 74
+69 74 6c 65 3e 3c 2f 68 65 61 64 3e 0d 0a 3c 62
+6f 64 79 20 62 67 63 6f 6c 6f 72 3d 22 23 35 30
+35 30 35 30 22 20 74 65 78 74 3d 23 46 46 46 46
+30 30 3e 0d 0a 3c 70 20 61 6c 69 67 6e 3d 22 63
+65 6e 74 65 72 22 3e 3c 75 3e 3c 66 6f 6e 74 20
+73 69 7a 65 3d 22 36 22 3e 3c 62 3e 46 50 47 41
+20 50 65 72 69 70 68 65 72 61 6c 73 3c 2f 66 6f
+6e 74 3e 3c 2f 75 3e 3c 2f 62 3e 0d 0a 3c 70 3e
+26 6e 62 73 70 3b 3c 2f 70 3e 0d 0a 3c 66 6f 72
+6d 20 6d 65 74 68 6f 64 3d 22 47 45 54 22 20 61
+63 74 69 6f 6e 3d 22 72 65 70 6c 79 2e 68 74 6d
+6c 22 3e 0d 0a 3c 74 61 62 6c 65 20 62 6f 72 64
+65 72 3d 22 30 22 20 77 69 64 74 68 3d 22 31 30
+30 25 22 3e 3c 74 72 3e 0d 0a 3c 74 64 20 77 69
+64 74 68 3d 22 31 36 25 22 3e 3c 74 61 62 6c 65
+20 62 6f 72 64 65 72 3d 22 30 22 20 77 69 64 74
+68 3d 22 38 32 25 22 20 63 65 6c 6c 73 70 61 63
+69 6e 67 3d 22 33 22 3e 0d 0a 3c 74 72 3e 3c 74
+64 20 77 69 64 74 68 3d 22 35 35 25 22 20 72 6f
+77 73 70 61 6e 3d 22 37 22 3e 0d 0a 3c 70 20 61
+6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 3c 66
+6f 6e 74 20 73 69 7a 65 3d 22 34 22 3e 3c 62 3e
+37 2d 53 65 67 6d 65 6e 74 64 69 73 70 6c 61 79
+20 3a 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 70
+3e 0d 0a 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e
+74 65 72 22 3e 45 6e 61 62 6c 65 20 3c 69 6e 70
+75 74 20 74 79 70 65 3d 22 63 68 65 63 6b 62 6f
+78 22 20 6e 61 6d 65 3d 41 31 20 76 61 6c 75 65
+3d 22 4f 4e 22 20 ff 00 00 3e 3c 69 6e 70 75 74
+20 74 79 70 65 3d 22 63 68 65 63 6b 62 6f 78 22
+20 6e 61 6d 65 3d 41 32 20 76 61 6c 75 65 3d 22
+4f 4e 22 20 ff 00 00 3e 0d 0a 3c 69 6e 70 75 74
+20 74 79 70 65 3d 22 63 68 65 63 6b 62 6f 78 22
+20 6e 61 6d 65 3d 41 33 20 76 61 6c 75 65 3d 22
+4f 4e 22 20 ff 00 00 3e 3c 69 6e 70 75 74 20 74
+79 70 65 3d 22 63 68 65 63 6b 62 6f 78 22 20 6e
+61 6d 65 3d 41 34 20 76 61 6c 75 65 3d 22 4f 4e
+22 20 ff 00 00 3e 3c 2f 70 3e 0d 0a 3c 70 20 61
+6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 56 61
+6c 75 65 20 28 68 65 78 29 26 6e 62 73 70 3b 20
+3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78
+74 22 20 6e 61 6d 65 3d 41 35 20 73 69 7a 65 3d
+22 34 22 20 76 61 6c 75 65 3d 22 ff 00 00 22 3e
+3c 2f 70 3e 0d 0a 3c 70 3e 26 6e 62 73 70 3b 3c
+2f 74 64 3e 3c 74 64 20 77 69 64 74 68 3d 22 31
+34 35 25 22 20 61 6c 69 67 6e 3d 22 6c 65 66 74
+22 3e 0d 0a 3c 70 20 61 6c 69 67 6e 3d 22 63 65
+6e 74 65 72 22 3e 4c 65 64 20 37 20 3c 69 6e 70
+75 74 20 74 79 70 65 3d 22 63 68 65 63 6b 62 6f
+78 22 20 6e 61 6d 65 3d 41 36 20 76 61 6c 75 65
+3d 22 4f 4e 22 20 ff 00 00 3e 3c 2f 74 64 3e 3c
+2f 74 72 3e 0d 0a 3c 74 72 3e 3c 74 64 20 77 69
+64 74 68 3d 22 31 34 35 25 22 20 61 6c 69 67 6e
+3d 22 6c 65 66 74 22 3e 3c 70 20 61 6c 69 67 6e
+3d 22 63 65 6e 74 65 72 22 3e 4c 65 64 20 36 20
+3c 69 6e 70 75 74 20 74 79 70 65 3d 22 63 68 65
+63 6b 62 6f 78 22 20 6e 61 6d 65 3d 41 37 20 76
+61 6c 75 65 3d 22 4f 4e 22 20 ff 00 00 3e 3c 2f
+74 64 3e 3c 2f 74 72 3e 0d 0a 3c 74 72 3e 3c 74
+64 20 77 69 64 74 68 3d 22 31 34 35 25 22 20 61
+6c 69 67 6e 3d 22 6c 65 66 74 22 3e 3c 70 20 61
+6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 4c 65
+64 20 35 20 3c 69 6e 70 75 74 20 74 79 70 65 3d
+22 63 68 65 63 6b 62 6f 78 22 20 6e 61 6d 65 3d
+41 38 20 76 61 6c 75 65 3d 22 4f 4e 22 20 ff 00
+00 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 0d 0a 3c 74
+72 3e 3c 74 64 20 77 69 64 74 68 3d 22 31 34 35
+25 22 20 61 6c 69 67 6e 3d 22 6c 65 66 74 22 3e
+3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72
+22 3e 4c 65 64 20 34 20 3c 69 6e 70 75 74 20 74
+79 70 65 3d 22 63 68 65 63 6b 62 6f 78 22 20 6e
+61 6d 65 3d 41 39 20 76 61 6c 75 65 3d 22 4f 4e
+22 20 ff 00 00 3e 3c 2f 74 64 3e 3c 2f 74 72 3e
+0d 0a 3c 74 72 3e 3c 74 64 20 77 69 64 74 68 3d
+22 31 34 35 25 22 20 61 6c 69 67 6e 3d 22 6c 65
+66 74 22 3e 3c 70 20 61 6c 69 67 6e 3d 22 63 65
+6e 74 65 72 22 3e 4c 65 64 20 33 20 3c 69 6e 70
+75 74 20 74 79 70 65 3d 22 63 68 65 63 6b 62 6f
+78 22 20 6e 61 6d 65 3d 41 31 30 20 76 61 6c 75
+65 3d 22 4f 4e 22 20 ff 00 00 3e 3c 2f 74 64 3e
+3c 2f 74 72 3e 0d 0a 3c 74 72 3e 3c 74 64 20 77
+69 64 74 68 3d 22 31 34 35 25 22 20 61 6c 69 67
+6e 3d 22 6c 65 66 74 22 3e 3c 70 20 61 6c 69 67
+6e 3d 22 63 65 6e 74 65 72 22 3e 4c 65 64 20 32
+20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 63 68
+65 63 6b 62 6f 78 22 20 6e 61 6d 65 3d 41 31 31
+20 76 61 6c 75 65 3d 22 4f 4e 22 20 ff 00 00 3e
+3c 2f 74 64 3e 3c 2f 74 72 3e 0d 0a 3c 74 72 3e
+3c 74 64 20 77 69 64 74 68 3d 22 31 34 35 25 22
+20 61 6c 69 67 6e 3d 22 6c 65 66 74 22 3e 3c 70
+20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e
+4c 65 64 20 31 20 3c 69 6e 70 75 74 20 74 79 70
+65 3d 22 63 68 65 63 6b 62 6f 78 22 20 6e 61 6d
+65 3d 41 31 32 20 76 61 6c 75 65 3d 22 4f 4e 22
+20 ff 00 00 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 0d
+0a 3c 2f 74 61 62 6c 65 3e 3c 2f 74 64 3e 3c 2f
+74 72 3e 3c 2f 74 61 62 6c 65 3e 0d 0a 3c 70 3e
+26 6e 62 73 70 3b 3c 2f 70 3e 0d 0a 3c 70 3e 3c
+69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d
+69 74 22 20 76 61 6c 75 65 3d 22 53 65 74 20 50
+65 72 69 70 68 65 72 61 6c 73 22 20 6e 61 6d 65
+3d 41 31 34 3e 3c 2f 70 3e 0d 0a 3c 2f 66 6f 72
+6d 3e 0d 0a 0d 0a 3c 2f 74 72 3e 3c 2f 74 61 62
+6c 65 3e 3c 70 3e 26 6e 62 73 70 3b 3c 2f 70 3e
+3c 70 3e 4c 69 6e 6b 73 3a 3c 2f 70 3e 3c 2f 62
+3e 3c 2f 70 3e 0d 0a 3c 74 61 62 6c 65 20 62 6f
+72 64 65 72 3d 30 3e 0d 0a 3c 74 72 3e 3c 74 64
+3e 3c 61 20 68 72 65 66 3d 22 69 6f 2e 68 74 6d
+6c 22 3e 55 70 64 61 74 65 20 50 61 67 65 3a 3c
+2f 61 3e 3c 2f 74 64 3e 3c 74 64 3e 52 65 6c 6f
+61 64 20 70 61 67 65 20 77 69 74 68 20 63 75 72
+72 65 6e 74 20 73 65 74 74 69 6e 67 73 3c 2f 74
+64 3e 3c 2f 74 72 3e 0d 0a 3c 74 72 3e 3c 74 64
+3e 3c 61 20 68 72 65 66 3d 22 68 6f 6d 65 2e 68
+74 6d 6c 22 3e 42 61 63 6b 3c 2f 61 3e 3c 2f 74
+64 3e 3c 74 64 3e 54 6f 20 68 6f 6d 65 70 61 67
+65 3c 2f 74 64 3e 3c 2f 74 72 3e 0d 0a 3c 2f 74
+61 62 6c 65 3e 0d 0a 3c 2f 62 6f 64 79 3e 3c 2f
+68 74 6d 6c 3e
+src:io.s51 #0
+ref w_hl #0:b @0:0 ____io_size__ 3 -
+ref w_hl #0:23 @0:237 _En0
+ref w_hl #0:27 @0:265 _En1
+ref w_hl #0:2c @0:295 _En2
+ref w_hl #0:30 @0:2c3 _En3
+ref w_hl #0:36 @0:31c _sevseg
+ref w_hl #0:3e @0:397 _C0
+ref w_hl #0:45 @0:40b _C1
+ref w_hl #0:4c @0:47f _C2
+ref w_hl #0:53 @0:4f3 _C3
+ref w_hl #0:5a @0:568 _C4
+ref w_hl #0:61 @0:5dd _C5
+ref w_hl #0:68 @0:652 _C6
+objectdebug
+dtx ; ********************************************************
+dtx ; * io.s51 (Source: io.html)
+dtx ; * generated by WEBCODE 2004 (C) www.wickenhaeuser.de
+dtx ; ********************************************************
+dtx ; * extern code unsigned char io[];
+dtx 
+dtx   .segment __io
+dtx   .export _io
+dtx   .import ____io_size__
+dtx _io: 
+dco @0:0 u:2   .dc.w ____io_size__-3
+dco @0:2 u:1   .dc.b 1
+dco @0:3 u:11   .dc.b "HTTP/1.0 200 OK",13,10
+dco @0:14 u:19   .dc.b "Content-type: text/html",13,10
+dco @0:2d u:15   .dc.b "Connection: close",13,10,13,10
+dtx 
+dco @0:42 u:8   .dc.b "<html>",13,10
+dco @0:4a u:8   .dc.b "<head>",13,10
+dco @0:52 u:2c   .dc.b "<title>HPE_mini Peripherals</title></head>",13,10
+dco @0:7e u:27   .dc.b "<body bgcolor=",34,"#505050",34," text=#FFFF00>",13,10
+dco @0:a5 u:2c   .dc.b "<p align=",34,"center",34,"><u><font size=",34,"6",34,"><b>FPGA "
+dco @0:d1 u:1c   .dc.b "Peripherals</font></u></b>",13,10
+dco @0:ed u:f   .dc.b "<p>&nbsp;</p>",13,10
+dco @0:fc u:29   .dc.b "<form method=",34,"GET",34," action=",34,"reply.html",34,">",13,10
+dco @0:125 u:25   .dc.b "<table border=",34,"0",34," width=",34,"100%",34,"><tr>",13,10
+dco @0:14a u:29   .dc.b "<td width=",34,"16%",34,"><table border=",34,"0",34," width=",34
+dco @0:173 u:17   .dc.b "82%",34," cellspacing=",34,"3",34,">",13,10
+dco @0:18a u:22   .dc.b "<tr><td width=",34,"55%",34," rowspan=",34,"7",34,">",13,10
+dco @0:1ac u:2c   .dc.b "<p align=",34,"center",34,"><font size=",34,"4",34,"><b>7-Segmen"
+dco @0:1d8 u:1b   .dc.b "tdisplay :</b></font></p>",13,10
+dco @0:1f3 u:2f   .dc.b "<p align=",34,"center",34,">Enable <input type=",34,"checkbox",34
+dco @0:222 u:14   .dc.b " name=A1 value=",34,"ON",34," "
+dco @0:236 u:1   .dc.b 255
+dtx   .import _En0 ;  (char xdata*)En0
+dco @0:237 u:2   .dc.w _En0
+dco @0:239 u:2b   .dc.b "><input type=",34,"checkbox",34," name=A2 value=",34,"ON",34," "
+dco @0:264 u:1   .dc.b 255
+dtx   .import _En1 ;  (char xdata*)En1
+dco @0:265 u:2   .dc.w _En1
+dco @0:267 u:3   .dc.b ">",13,10
+dco @0:26a u:2a   .dc.b "<input type=",34,"checkbox",34," name=A3 value=",34,"ON",34," "
+dco @0:294 u:1   .dc.b 255
+dtx   .import _En2 ;  (char xdata*)En2
+dco @0:295 u:2   .dc.w _En2
+dco @0:297 u:2b   .dc.b "><input type=",34,"checkbox",34," name=A4 value=",34,"ON",34," "
+dco @0:2c2 u:1   .dc.b 255
+dtx   .import _En3 ;  (char xdata*)En3
+dco @0:2c3 u:2   .dc.w _En3
+dco @0:2c5 u:7   .dc.b "></p>",13,10
+dco @0:2cc u:32   .dc.b "<p align=",34,"center",34,">Value (hex)&nbsp; <input type=",34,"t"
+dco @0:2fe u:1d   .dc.b "ext",34," name=A5 size=",34,"4",34," value=",34
+dco @0:31b u:1   .dc.b 255
+dtx   .import _sevseg ;  (char xdata*)sevseg
+dco @0:31c u:2   .dc.w _sevseg
+dco @0:31e u:8   .dc.b 34,"></p>",13,10
+dco @0:326 u:2c   .dc.b "<p>&nbsp;</td><td width=",34,"145%",34," align=",34,"left",34,">"
+dco @0:352 u:2   .dc.b 13,10
+dco @0:354 u:2e   .dc.b "<p align=",34,"center",34,">Led 7 <input type=",34,"checkbox",34
+dco @0:382 u:14   .dc.b " name=A6 value=",34,"ON",34," "
+dco @0:396 u:1   .dc.b 255
+dtx   .import _C0 ;  (char xdata*)C0
+dco @0:397 u:2   .dc.w _C0
+dco @0:399 u:d   .dc.b "></td></tr>",13,10
+dco @0:3a6 u:2c   .dc.b "<tr><td width=",34,"145%",34," align=",34,"left",34,"><p align=",34
+dco @0:3d2 u:31   .dc.b "center",34,">Led 6 <input type=",34,"checkbox",34," name=A7 valu"
+dco @0:403 u:7   .dc.b "e=",34,"ON",34," "
+dco @0:40a u:1   .dc.b 255
+dtx   .import _C1 ;  (char xdata*)C1
+dco @0:40b u:2   .dc.w _C1
+dco @0:40d u:d   .dc.b "></td></tr>",13,10
+dco @0:41a u:2c   .dc.b "<tr><td width=",34,"145%",34," align=",34,"left",34,"><p align=",34
+dco @0:446 u:31   .dc.b "center",34,">Led 5 <input type=",34,"checkbox",34," name=A8 valu"
+dco @0:477 u:7   .dc.b "e=",34,"ON",34," "
+dco @0:47e u:1   .dc.b 255
+dtx   .import _C2 ;  (char xdata*)C2
+dco @0:47f u:2   .dc.w _C2
+dco @0:481 u:d   .dc.b "></td></tr>",13,10
+dco @0:48e u:2c   .dc.b "<tr><td width=",34,"145%",34," align=",34,"left",34,"><p align=",34
+dco @0:4ba u:31   .dc.b "center",34,">Led 4 <input type=",34,"checkbox",34," name=A9 valu"
+dco @0:4eb u:7   .dc.b "e=",34,"ON",34," "
+dco @0:4f2 u:1   .dc.b 255
+dtx   .import _C3 ;  (char xdata*)C3
+dco @0:4f3 u:2   .dc.w _C3
+dco @0:4f5 u:d   .dc.b "></td></tr>",13,10
+dco @0:502 u:2c   .dc.b "<tr><td width=",34,"145%",34," align=",34,"left",34,"><p align=",34
+dco @0:52e u:31   .dc.b "center",34,">Led 3 <input type=",34,"checkbox",34," name=A10 val"
+dco @0:55f u:8   .dc.b "ue=",34,"ON",34," "
+dco @0:567 u:1   .dc.b 255
+dtx   .import _C4 ;  (char xdata*)C4
+dco @0:568 u:2   .dc.w _C4
+dco @0:56a u:d   .dc.b "></td></tr>",13,10
+dco @0:577 u:2c   .dc.b "<tr><td width=",34,"145%",34," align=",34,"left",34,"><p align=",34
+dco @0:5a3 u:31   .dc.b "center",34,">Led 2 <input type=",34,"checkbox",34," name=A11 val"
+dco @0:5d4 u:8   .dc.b "ue=",34,"ON",34," "
+dco @0:5dc u:1   .dc.b 255
+dtx   .import _C5 ;  (char xdata*)C5
+dco @0:5dd u:2   .dc.w _C5
+dco @0:5df u:d   .dc.b "></td></tr>",13,10
+dco @0:5ec u:2c   .dc.b "<tr><td width=",34,"145%",34," align=",34,"left",34,"><p align=",34
+dco @0:618 u:31   .dc.b "center",34,">Led 1 <input type=",34,"checkbox",34," name=A12 val"
+dco @0:649 u:8   .dc.b "ue=",34,"ON",34," "
+dco @0:651 u:1   .dc.b 255
+dtx   .import _C6 ;  (char xdata*)C6
+dco @0:652 u:2   .dc.w _C6
+dco @0:654 u:d   .dc.b "></td></tr>",13,10
+dco @0:661 u:1c   .dc.b "</table></td></tr></table>",13,10
+dco @0:67d u:f   .dc.b "<p>&nbsp;</p>",13,10
+dco @0:68c u:2f   .dc.b "<p><input type=",34,"submit",34," value=",34,"Set Peripherals",34
+dco @0:6bb u:10   .dc.b " name=A14></p>",13,10
+dco @0:6cb u:9   .dc.b "</form>",13,10
+dco @0:6d4 u:2   .dc.b 13,10
+dco @0:6d6 u:31   .dc.b "</tr></table><p>&nbsp;</p><p>Links:</p></b></p>",13,10
+dco @0:707 u:12   .dc.b "<table border=0>",13,10
+dco @0:719 u:36   .dc.b "<tr><td><a href=",34,"io.html",34,">Update Page:</a></td><td>Rel"
+dco @0:74f u:2a   .dc.b "oad page with current settings</td></tr>",13,10
+dco @0:779 u:36   .dc.b "<tr><td><a href=",34,"home.html",34,">Back</a></td><td>To homepa"
+dco @0:7af u:e   .dc.b "ge</td></tr>",13,10
+dco @0:7bd u:a   .dc.b "</table>",13,10
+dco @0:7c7 u:e   .dc.b "</body></html>"
+dtx ; End
+def:_io @0:0
+objectend

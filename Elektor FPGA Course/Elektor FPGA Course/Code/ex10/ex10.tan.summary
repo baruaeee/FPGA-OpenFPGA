@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.654 ns
+From           : DOUT
+To             : PCM3006:inst6|SHIFTIN[0]
+From Clock     : --
+To Clock       : 12_288MHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.899 ns
+From           : PCM3006:inst6|LRCOUT_INT
+To             : LRCIN
+From Clock     : 12_288MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.879 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.318 ns
+From           : altera_internal_jtag~TMSUTAP
+To             : sld_hub:sld_hub_inst|sld_jtag_state_machine:jtag_state_machine|state[10]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: '12_288MHz'
+Slack          : 73.240 ns
+Required Time  : 12.29 MHz ( period = 81.380 ns )
+Actual Time    : 122.85 MHz ( period = 8.140 ns )
+From           : sld_signaltap:auto_signaltap_0|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:37:sm1|regoutff
+To             : sld_signaltap:auto_signaltap_0|sld_ela_control:ela_control|sld_ela_seg_state_machine:sm2|status_out[0]
+From Clock     : 12_288MHz
+To Clock       : 12_288MHz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 88.56 MHz ( period = 11.292 ns )
+From           : sld_hub:sld_hub_inst|sld_jtag_state_machine:jtag_state_machine|state[4]
+To             : sld_hub:sld_hub_inst|hub_tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Hold: '12_288MHz'
+Slack          : 0.761 ns
+Required Time  : 12.29 MHz ( period = 81.380 ns )
+Actual Time    : N/A
+From           : PCM3006:inst6|RIGHT_OUT[7]
+To             : PCM3006:inst6|L_IN[7]
+From Clock     : 12_288MHz
+To Clock       : 12_288MHz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

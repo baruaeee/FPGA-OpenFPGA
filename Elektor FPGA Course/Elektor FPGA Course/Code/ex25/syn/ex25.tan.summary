@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 19.065 ns
+From           : SRAM1_DB[10]
+To             : T8052:u0|T51:core51|SFR_RData_r[5]
+From Clock     : --
+To Clock       : clk_50MHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.144 ns
+From           : T8052:u0|T51:core51|T51_RAM_Altera:\Altera_MODEL:ram|iram_cyclone:IRAM|alt3pram:alt3pram_component|altdpram:altdpram_component1|altsyncram:ram_block|altsyncram_49p1:auto_generated|ram_block1a5~portb_address_reg7
+To             : SRAM1_ADR[14]
+From Clock     : clk_50MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 24.887 ns
+From           : SRAM1_DB[13]
+To             : SRAM1_ADR[14]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.006 ns
+From           : altera_internal_jtag
+To             : T8052:u0|bootrom:\int:boot_rom|altsyncram:altsyncram_component|altsyncram_ph71:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll0:\use_dll:dll|altpll:altpll_component|_clk0'
+Slack          : 10.515 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 33.92 MHz ( period = 29.485 ns )
+From           : SRAM1_DB[10]
+To             : T8052:u0|T51:core51|SFR_RData_r[5]
+From Clock     : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+To Clock       : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 74.31 MHz ( period = 13.458 ns )
+From           : T8052:u0|bootrom:\int:boot_rom|altsyncram:altsyncram_component|altsyncram_ph71:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]
+To             : sld_hub:sld_hub_inst|hub_tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'mtx_clk_pad_i'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 78.98 MHz ( period = 12.662 ns )
+From           : T8052:u0|Ethernet:\Eth:enet|eth_top:eth1|eth_txethmac:txethmac1|eth_txcounters:txcounters1|NibCnt[4]
+To             : T8052:u0|Ethernet:\Eth:enet|eth_top:eth1|eth_txethmac:txethmac1|eth_txcounters:txcounters1|NibCnt[14]
+From Clock     : mtx_clk_pad_i
+To Clock       : mtx_clk_pad_i
+Failed Paths   : 0
+
+Type           : Clock Setup: 'mrx_clk_pad_i'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 81.05 MHz ( period = 12.338 ns )
+From           : T8052:u0|Ethernet:\Eth:enet|eth_top:eth1|eth_rxethmac:rxethmac1|eth_rxcounters:rxcounters1|ByteCnt[4]
+To             : T8052:u0|Ethernet:\Eth:enet|eth_top:eth1|eth_maccontrol:maccontrol1|eth_receivecontrol:receivecontrol1|PauseTimer[15]
+From Clock     : mrx_clk_pad_i
+To Clock       : mrx_clk_pad_i
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll0:\use_dll:dll|altpll:altpll_component|_clk0'
+Slack          : 0.633 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : Graphiccard:\use_cg:GC|lineStart[8]
+To             : Graphiccard:\use_cg:GC|lineStart[8]
+From Clock     : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+To Clock       : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

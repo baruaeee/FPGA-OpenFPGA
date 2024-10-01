@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Aug 01 21:12:06 2006
+Quartus II Version : 6.0 Build 178 04/27/2006 SJ Web Edition
+Revision Name : ex14
+Top-level Entity Name : ex14
+Family : Cyclone
+Device : EP1C12F256C7
+Timing Models : Final
+Total logic elements : 2,719 / 12,060 ( 23 % )
+Total pins : 35 / 185 ( 19 % )
+Total virtual pins : 0
+Total memory bits : 103,296 / 239,616 ( 43 % )
+Total PLLs : 1 / 2 ( 50 % )

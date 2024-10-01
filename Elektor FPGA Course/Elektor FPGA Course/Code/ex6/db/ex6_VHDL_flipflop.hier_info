@@ -1,0 +1,40 @@
+|ex6_VHDL_flipflop
+LED1 <= LATCH_OUT.DB_MAX_OUTPUT_PORT_TYPE
+SWITCH1 => Latch_VHDL:inst.CLK
+SWITCH1 => D_ff_VHDL:inst1.CLK
+SWITCH1 => D_ff_set_reset_VHDL:inst2.CLK
+SWITCH2 => Latch_VHDL:inst.DATA
+SWITCH2 => D_ff_VHDL:inst1.DATA
+SWITCH2 => D_ff_set_reset_VHDL:inst2.DATA
+LED2 <= D_OUT1.DB_MAX_OUTPUT_PORT_TYPE
+LED3 <= D_OUT2.DB_MAX_OUTPUT_PORT_TYPE
+SWITCH4 => D_ff_set_reset_VHDL:inst2.RESET
+SWITCH3 => D_ff_set_reset_VHDL:inst2.SET
+LED4 <= <GND>
+LED5 <= <GND>
+LED6 <= <GND>
+LED7 <= <GND>
+
+
+|ex6_VHDL_flipflop|Latch_VHDL:inst
+CLK => Q$latch.LATCH_ENABLE
+DATA => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex6_VHDL_flipflop|D_ff_VHDL:inst1
+DATA => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex6_VHDL_flipflop|D_ff_set_reset_VHDL:inst2
+CLK => Q~reg0.CLK
+DATA => Q~reg0.DATAIN
+RESET => Q~0.IN0
+RESET => comb~1.IN0
+RESET => comb~0.IN0
+SET => Q~0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

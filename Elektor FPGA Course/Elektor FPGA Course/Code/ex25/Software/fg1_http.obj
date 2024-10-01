@@ -1,0 +1,1829 @@
+objectfile:fg1_http.obj
+time:Thu Dec 14 11:33:35 2006
+cpuname:i8051
+import:_ad_disp
+import:_strcmp
+import:_webpage_bind
+import:__st_dptr_r67
+import:_strcpy
+import:_toupper
+import:_webpage_name
+import:_I2C_start
+import:_reply
+import:__wait_ms
+import:_Init_net
+import:__ld_dptr_r67
+import:_I2C_send
+import:_my_ip
+import:__startup
+import:_puts
+import:_I2C_stop
+import:_LCD_write_line
+import:_url_getarg_str
+import:_sprintf
+import:_I2C_init
+import:_uc_socket
+import:_home
+import:_DHCP_SetIP
+import:_url_getarg_no
+import:_io
+import:__mul_i2
+import:_I2C_get
+import:_poll_webserver
+import:_LCD_init
+export:_atox_chr @12:0
+export:_ad_measure @8:0
+export:_eval_io @f:0
+export:_aval_2 @2b:68
+export:_aval_3 @2b:63
+export:_aval_0 @2b:72
+export:_aval_1 @2b:6d
+export:_Hcnt @2b:0
+export:_hitcnt @0:0
+export:_sevseg @2b:3e
+export:_En0 @2b:5b
+export:_En1 @2b:53
+export:_En2 @2b:4b
+export:_En3 @2b:43
+define:PRINTF_TYPE_x 1
+define:PRINTF_TYPE_u 1
+export:__reset @1a:0
+export:_isxdigit @16:0
+export:_atox @19:0
+export:_main @2a:0
+export:_set_chkbox @c:0
+export:_C2 @2b:26
+export:_C3 @2b:1e
+export:_C0 @2b:36
+export:_C1 @2b:2e
+export:_C6 @2b:6
+export:_C4 @2b:16
+export:_C5 @2b:e
+segment:data @0:m u:2 c:xram
+00 00
+segment:_ad_measure_formal_near @1:m s:0 u:0 n f c:dram
+segment:_ad_measure_local_near @2:m s:0 u:0 n f c:dram
+segment:_I2C_start_formal_near @3:m s:0 u:0 n f c:dram
+segment:_I2C_send_formal_near @4:m s:0 u:0 n f c:dram
+segment:_I2C_stop_formal_near @5:m s:0 u:0 n f c:dram
+segment:_I2C_get_formal_near @6:m s:0 u:0 n f c:dram
+segment:_sprintf_formal_near @7:m s:8 u:0 n f c:dram
+segment:__ad_measure @8:m u:b6
+12 00 00 7f 9e 12 00 00 7f 44 12 00 00 7f 80 12
+00 00 12 00 00 12 00 00 7f 9f 12 00 00 7f 01 12
+00 00 7f 01 12 00 00 7e 00 ef 2f ff ee 33 fe 8e
+00 8f 00 7e 00 7f 00 ab 07 aa 06 78 01 7e 00 7f
+00 7c 00 12 00 00 7f 01 12 00 00 7e 00 ef 2f ff
+ee 33 fe 8e 00 8f 00 7e 00 7f 00 ab 07 aa 06 78
+01 7e 00 7f 00 7c 00 12 00 00 7f 01 12 00 00 7e
+00 ef 2f ff ee 33 fe 8e 00 8f 00 7e 00 7f 00 ab
+07 aa 06 78 01 7e 00 7f 00 7c 00 12 00 00 e4 ff
+12 00 00 7e 00 ef 2f ff ee 33 fe 8e 00 8f 00 7e
+00 7f 00 ab 07 aa 06 78 01 7e 00 7f 00 7c 00 12
+00 00 12 00 00 22
+segment:_set_chkbox_formal_near @9:m s:0 u:0 n f c:dram
+segment:_set_chkbox_local_near @a:m s:2 u:0 n f c:dram
+segment:_strcpy_formal_near @b:m s:0 u:0 n f c:dram
+segment:__set_chkbox @c:m u:35
+8c 00 8d 00 ef 60 00 7e 00 7f 00 ab 07 aa 06 78
+01 ae 00 af 00 7c 00 12 00 00 80 00 85 00 83 85
+00 82 ae 83 af 82 0f ef 70 00 0e 74 20 f0 8e 83
+8f 82 e4 f0 22
+segment:_eval_io_formal_near @d:m s:0 u:0 n f c:dram
+segment:_eval_io_local_near @e:m s:0 u:0 n f c:dram
+segment:__eval_io @f:m u:be
+af c1 ad 07 7c 00 7f 08 ed 8f f0 05 f0 80 00 c3
+33 cc 33 cc d5 f0 00 fd af c2 7e 00 ed 4f ff ec
+4e fe 8e 00 8f 00 7e 00 7f 00 ab 07 aa 06 78 01
+7e 00 7f 00 7c 00 12 00 00 7c 00 7d 00 af c5 53
+07 01 12 00 00 7c 00 7d 00 af c5 53 07 02 12 00
+00 7c 00 7d 00 af c5 53 07 04 12 00 00 7c 00 7d
+00 af c5 53 07 08 12 00 00 7c 00 7d 00 af 90 53
+07 02 12 00 00 7c 00 7d 00 af 90 53 07 04 12 00
+00 7c 00 7d 00 af 90 53 07 08 12 00 00 7c 00 7d
+00 af 90 53 07 10 12 00 00 7c 00 7d 00 af 90 53
+07 20 12 00 00 7c 00 7d 00 af 90 53 07 40 12 00
+00 7c 00 7d 00 af 90 53 07 80 12 00 00 22
+segment:_atox_chr_formal_near @10:m s:0 u:0 n f c:dram
+segment:_atox_chr_local_near @11:m s:0 u:0 n f c:dram
+segment:__atox_chr @12:m u:12
+74 d0 2f fd 7f 09 d3 ed 9f 40 00 74 f9 2d fd af
+05 22
+segment:_isxdigit_formal_near @13:m s:0 u:0 n f c:dram
+segment:_isxdigit_local_near @14:m s:0 u:0 n f c:dram
+segment:_toupper_formal_near @15:m s:0 u:0 n f c:dram
+segment:__isxdigit @16:m u:28
+12 00 00 ad 07 7f 30 c3 ed 9f 40 00 7f 39 d3 ed
+9f 40 00 7f 41 c3 ed 9f 40 00 7f 46 d3 ed 9f 50
+00 7f 01 80 00 e4 ff 22
+segment:_atox_formal_near @17:m s:0 u:0 n f c:dram
+segment:_atox_local_near @18:m s:4 u:0 n f c:dram
+segment:__atox @19:m u:6b
+8e 00 8f 00 e4 f5 00 f5 00 02 00 00 85 00 83 85
+00 82 e0 ff 12 00 00 ef 60 00 85 00 83 85 00 82
+e0 ff 12 00 00 12 00 00 ad 07 80 00 e4 fd ab 05
+7a 00 7d 04 ae 00 af 00 ef 8d f0 05 f0 80 00 c3
+33 ce 33 ce d5 f0 00 ff 4b ff ee 4a fe 8e 00 8f
+00 05 00 e5 00 70 00 05 00 85 00 83 85 00 82 e0
+ff 60 00 02 00 00 ae 00 af 00 22
+segment:___reset @1a:0 u:3
+02 00 00
+segment:_main_formal_near @1b:m s:0 u:0 n f c:dram r
+segment:_main_local_near @1c:m s:10 u:0 n f c:dram
+segment:_I2C_init_formal_near @1d:m s:0 u:0 n f c:dram
+segment:_formal_near @1e:m s:0 u:0 n f c:dram
+segment:_LCD_init_formal_near @1f:m s:0 u:0 n f c:dram
+segment:_Init_net_formal_near @20:m s:0 u:0 n f c:dram
+segment:_puts_formal_near @21:m s:0 u:0 n f c:dram
+segment:_DHCP_SetIP_formal_near @22:m s:0 u:0 n f c:dram
+segment:_LCD_write_line_formal_near @23:m s:0 u:0 n f c:dram
+segment:_poll_webserver_formal_near @24:m s:0 u:0 n f c:dram
+segment:_webpage_name_formal_near @25:m s:0 u:0 n f c:dram
+segment:_webpage_bind_formal_near @26:m s:0 u:0 n f c:dram
+segment:_url_getarg_no_formal_near @27:m s:0 u:0 n f c:dram
+segment:_url_getarg_str_formal_near @28:m s:0 u:0 n f c:dram
+segment:_strcmp_formal_near @29:m s:0 u:0 n f c:dram
+segment:__main @2a:m u:27f
+75 89 01 75 98 52 e4 f5 c8 75 ca ae 75 cb ff 75
+c8 30 d2 ca d2 8c 90 00 00 e4 f0 a3 f0 75 c0 01
+e4 f5 c1 e4 f5 c2 e4 f5 c5 e4 f5 90 12 00 00 7e
+00 7f 64 12 00 00 12 00 00 12 00 00 ef 60 00 7e
+00 7f 00 7c 01 12 00 00 75 c5 ff 75 c1 01 80 00
+90 00 00 e4 f0 90 00 00 e4 f0 90 00 00 e4 f0 90
+00 00 e4 f0 12 00 00 e4 fb 7e 00 7f 00 7c 01 12
+00 00 90 00 00 e0 ff 7e 00 8e 00 8f 00 90 00 00
+e0 ff 7e 00 8e 00 8f 00 90 00 00 e0 ff 7e 00 8e
+00 8f 00 90 00 00 e0 ff 7e 00 8e 00 8f 00 7e 00
+7f 00 ab 07 aa 06 78 01 7f 00 7c 02 12 00 00 7b
+01 7f 00 7c 02 12 00 00 e4 fb af 03 e4 fe fc 7d
+32 12 00 00 74 00 2f f5 82 74 00 3e f5 83 74 02
+f0 af 03 e4 fe fc 7d 32 12 00 00 7c 00 7d 00 ed
+2f fd ec 3e fc 7e 00 7f 50 8c 83 8d 82 12 00 00
+0b bb 02 00 12 00 00 ac 06 ad 07 7f 00 ec fe bf
+00 00 be 90 00 af 05 8f 00 12 00 00 8e 00 8f 00
+85 00 83 85 00 82 e0 ff bf 61 00 12 00 00 7c 00
+7d 00 af 00 12 00 00 80 00 85 00 83 85 00 82 e0
+ff bf 69 00 12 00 00 7c 00 7d 00 af 00 12 00 00
+80 00 85 00 83 85 00 82 e0 ff bf 72 00 80 00 02
+00 00 e4 f5 00 e4 f5 00 7c 00 7d 00 af 00 12 00
+00 12 00 00 8f 00 e5 00 70 00 02 00 00 12 00 00
+8e 00 8f 00 7d 01 af 00 c3 ef 9d 40 00 7d 04 af
+00 d3 ef 9d 50 00 7e 00 7f 00 ab 07 aa 06 78 01
+ae 00 af 00 7c 00 12 00 00 ee 4f 70 00 af 00 ad
+07 1d 7f 01 ef 8d f0 05 f0 80 00 c3 33 d5 f0 00
+fd af 00 ef 4d ff 8f 00 02 00 00 74 05 65 00 70
+00 ae 00 af 00 12 00 00 ac 06 ad 07 7f 08 ae 04
+ed 8f f0 05 f0 80 00 ce c3 13 ce 13 d5 f0 00 ff
+8f c1 ed ff 7e 00 8f c2 02 00 00 7d 06 af 00 c3
+ef 9d 50 00 02 00 00 7d 0c af 00 d3 ef 9d 40 00
+02 00 00 7e 00 7f 00 ab 07 aa 06 78 01 ae 00 af
+00 7c 00 12 00 00 ee 4f 60 00 02 00 00 af 00 74
+fb 2f fd 7f 01 ef 8d f0 05 f0 80 00 c3 33 d5 f0
+00 fd af 00 ef 4d ff 8f 00 02 00 00 85 00 90 85
+00 c5 02 00 00 90 00 00 12 00 00 0f ef 70 00 0e
+90 00 00 12 00 00 90 00 00 12 00 00 8e 00 8f 00
+7e 00 7f 00 ab 07 aa 06 78 01 7e 00 7f 00 7c 00
+12 00 00 7c 00 7d 00 af 00 12 00 00 02 00 00
+segment:bss @2b:m u:77 n c:xram
+segment:lit @2c:m u:3e
+4f 4e 00 25 75 2e 25 75 2e 25 75 2e 25 75 20 20
+00 2a 46 50 47 41 2d 57 65 62 73 65 72 76 65 72
+2a 00 3c 4e 45 54 20 46 41 49 4c 55 52 45 3e 00
+25 78 00 63 68 65 63 6b 65 64 00 25 75 00
+sgraph:_ad_measure_formal_near _ad_measure_local_near __ad_measure
+sgraph:_ad_measure_local_near _I2C_stop_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _sprintf_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_get_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _sprintf_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_get_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _sprintf_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_get_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _sprintf_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_get_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_get_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_send_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_start_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_stop_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_send_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_send_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_send_formal_near __ad_measure 0
+sgraph:_ad_measure_local_near _I2C_start_formal_near __ad_measure 0
+sgraph:_set_chkbox_formal_near _set_chkbox_local_near __set_chkbox
+sgraph:_set_chkbox_local_near _strcpy_formal_near __set_chkbox 2
+sgraph:_eval_io_formal_near _eval_io_local_near __eval_io
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _set_chkbox_formal_near __eval_io 0
+sgraph:_eval_io_local_near _sprintf_formal_near __eval_io 0
+sgraph:_atox_chr_formal_near _atox_chr_local_near __atox_chr
+sgraph:_isxdigit_formal_near _isxdigit_local_near __isxdigit
+sgraph:_isxdigit_local_near _toupper_formal_near __isxdigit 0
+sgraph:_atox_formal_near _atox_local_near __atox
+sgraph:_atox_local_near _atox_chr_formal_near __atox 4
+sgraph:_atox_local_near _toupper_formal_near __atox 4
+sgraph:_atox_local_near _isxdigit_formal_near __atox 4
+sgraph:_main_formal_near _main_local_near __main
+sgraph:_main_local_near _webpage_bind_formal_near __main 0
+sgraph:_main_local_near _sprintf_formal_near __main 1
+sgraph:_main_local_near _strcmp_formal_near __main 4
+sgraph:_main_local_near _atox_formal_near __main 6
+sgraph:_main_local_near _strcmp_formal_near __main 6
+sgraph:_main_local_near _url_getarg_str_formal_near __main 4
+sgraph:_main_local_near _url_getarg_no_formal_near __main 3
+sgraph:_main_local_near _webpage_bind_formal_near __main 3
+sgraph:_main_local_near _webpage_bind_formal_near __main 3
+sgraph:_main_local_near _eval_io_formal_near __main 3
+sgraph:_main_local_near _webpage_bind_formal_near __main 3
+sgraph:_main_local_near _ad_measure_formal_near __main 3
+sgraph:_main_local_near _webpage_name_formal_near __main 1
+sgraph:_main_local_near _poll_webserver_formal_near __main 0
+sgraph:_main_local_near _LCD_write_line_formal_near __main 10
+sgraph:_main_local_near _sprintf_formal_near __main 10
+sgraph:_main_local_near _LCD_write_line_formal_near __main 10
+sgraph:_main_local_near _DHCP_SetIP_formal_near __main 0
+sgraph:_main_local_near _puts_formal_near __main 0
+sgraph:_main_local_near _Init_net_formal_near __main 0
+sgraph:_main_local_near _LCD_init_formal_near __main 0
+sgraph:_main_local_near _I2C_init_formal_near __main 0
+src:fg1_http.s51 #0
+src:C:\uC51\include\reg51.def #1
+src:C:\uC51\include\reg52.def #2
+src:C:\uC51\include\reg51.def #3
+ref w_hl #0:80 @8:1 _I2C_start
+ref w_hl #0:83 @8:6 _I2C_send
+ref w_hl #0:86 @8:b _I2C_send
+ref w_hl #0:89 @8:10 _I2C_send
+ref w_hl #0:8b @8:13 _I2C_stop
+ref w_hl #0:8d @8:16 _I2C_start
+ref w_hl #0:90 @8:1b _I2C_send
+ref w_hl #0:93 @8:20 _I2C_get
+ref w_hl #0:96 @8:25 _I2C_get
+ref byte #0:9e @8:30 @7:0
+ref byte #0:9f @8:32 @7:0 1 +
+ref byte #0:a0 @8:34 @2c:3b 8 >> 255 &
+ref byte #0:a1 @8:36 @2c:3b 255 &
+ref byte #0:a5 @8:3e _aval_0 8 >> 255 &
+ref byte #0:a6 @8:40 _aval_0 255 &
+ref w_hl #0:a8 @8:44 _sprintf
+ref w_hl #0:ab @8:49 _I2C_get
+ref byte #0:b3 @8:54 @7:0
+ref byte #0:b4 @8:56 @7:0 1 +
+ref byte #0:b5 @8:58 @2c:3b 8 >> 255 &
+ref byte #0:b6 @8:5a @2c:3b 255 &
+ref byte #0:ba @8:62 _aval_1 8 >> 255 &
+ref byte #0:bb @8:64 _aval_1 255 &
+ref w_hl #0:bd @8:68 _sprintf
+ref w_hl #0:c0 @8:6d _I2C_get
+ref byte #0:c8 @8:78 @7:0
+ref byte #0:c9 @8:7a @7:0 1 +
+ref byte #0:ca @8:7c @2c:3b 8 >> 255 &
+ref byte #0:cb @8:7e @2c:3b 255 &
+ref byte #0:cf @8:86 _aval_2 8 >> 255 &
+ref byte #0:d0 @8:88 _aval_2 255 &
+ref w_hl #0:d2 @8:8c _sprintf
+ref w_hl #0:d6 @8:91 _I2C_get
+ref byte #0:de @8:9c @7:0
+ref byte #0:df @8:9e @7:0 1 +
+ref byte #0:e0 @8:a0 @2c:3b 8 >> 255 &
+ref byte #0:e1 @8:a2 @2c:3b 255 &
+ref byte #0:e5 @8:aa _aval_3 8 >> 255 &
+ref byte #0:e6 @8:ac _aval_3 255 &
+ref w_hl #0:e8 @8:b0 _sprintf
+ref w_hl #0:ea @8:b3 _I2C_stop
+ref byte #0:fd @c:1 @a:0 0 +
+ref byte #0:fe @c:3 @a:0 0 + 1 +
+ref rbyte #0:101 @c:6 @c:1c
+ref byte #0:103 @c:8 @2c:33 8 >> 255 &
+ref byte #0:104 @c:a @2c:33 255 &
+ref byte #0:108 @c:12 @a:0 0 +
+ref byte #0:109 @c:14 @a:0 0 + 1 +
+ref w_hl #0:10b @c:18 _strcpy
+ref rbyte #0:10d @c:1b @c:34
+ref byte #0:110 @c:1d @a:0 0 +
+ref byte #0:111 @c:20 @a:0 0 + 1 +
+ref rbyte #0:116 @c:29 @c:2b
+ref rbyte #0:150 @f:e @f:14
+ref rbyte #0:158 @f:16 @f:f
+ref byte #0:164 @f:23 @7:0
+ref byte #0:165 @f:25 @7:0 1 +
+ref byte #0:166 @f:27 @2c:30 8 >> 255 &
+ref byte #0:167 @f:29 @2c:30 255 &
+ref byte #0:16b @f:31 _sevseg 8 >> 255 &
+ref byte #0:16c @f:33 _sevseg 255 &
+ref w_hl #0:16e @f:37 _sprintf
+ref byte #0:170 @f:3a _En0 8 >> 255 &
+ref byte #0:171 @f:3c _En0 255 &
+ref w_hl #0:174 @f:43 _set_chkbox
+ref byte #0:176 @f:46 _En1 8 >> 255 &
+ref byte #0:177 @f:48 _En1 255 &
+ref w_hl #0:17a @f:4f _set_chkbox
+ref byte #0:17c @f:52 _En2 8 >> 255 &
+ref byte #0:17d @f:54 _En2 255 &
+ref w_hl #0:180 @f:5b _set_chkbox
+ref byte #0:182 @f:5e _En3 8 >> 255 &
+ref byte #0:183 @f:60 _En3 255 &
+ref w_hl #0:186 @f:67 _set_chkbox
+ref byte #0:188 @f:6a _C0 8 >> 255 &
+ref byte #0:189 @f:6c _C0 255 &
+ref w_hl #0:18c @f:73 _set_chkbox
+ref byte #0:18e @f:76 _C1 8 >> 255 &
+ref byte #0:18f @f:78 _C1 255 &
+ref w_hl #0:192 @f:7f _set_chkbox
+ref byte #0:194 @f:82 _C2 8 >> 255 &
+ref byte #0:195 @f:84 _C2 255 &
+ref w_hl #0:198 @f:8b _set_chkbox
+ref byte #0:19a @f:8e _C3 8 >> 255 &
+ref byte #0:19b @f:90 _C3 255 &
+ref w_hl #0:19e @f:97 _set_chkbox
+ref byte #0:1a0 @f:9a _C4 8 >> 255 &
+ref byte #0:1a1 @f:9c _C4 255 &
+ref w_hl #0:1a4 @f:a3 _set_chkbox
+ref byte #0:1a6 @f:a6 _C5 8 >> 255 &
+ref byte #0:1a7 @f:a8 _C5 255 &
+ref w_hl #0:1aa @f:af _set_chkbox
+ref byte #0:1ac @f:b2 _C6 8 >> 255 &
+ref byte #0:1ad @f:b4 _C6 255 &
+ref w_hl #0:1b0 @f:bb _set_chkbox
+ref rbyte #0:1c7 @12:a @12:f
+ref w_hl #0:1e0 @16:1 _toupper
+ref rbyte #0:1e8 @16:b @16:13
+ref rbyte #0:1ed @16:12 @16:21
+ref rbyte #0:1f3 @16:19 @16:25
+ref rbyte #0:1f8 @16:20 @16:25
+ref rbyte #0:1fc @16:24 @16:27
+ref byte #0:218 @19:1 @18:0 0 +
+ref byte #0:219 @19:3 @18:0 0 + 1 +
+ref byte #0:21d @19:6 @18:0 2 +
+ref byte #0:21e @19:8 @18:0 2 + 1 +
+ref w_hl #0:21f @19:a @19:59
+ref byte #0:222 @19:d @18:0 0 +
+ref byte #0:223 @19:10 @18:0 0 + 1 +
+ref w_hl #0:226 @19:15 _isxdigit
+ref rbyte #0:228 @19:19 @19:2c
+ref byte #0:22a @19:1b @18:0 0 +
+ref byte #0:22b @19:1e @18:0 0 + 1 +
+ref w_hl #0:22e @19:23 _toupper
+ref w_hl #0:22f @19:26 _atox_chr
+ref rbyte #0:233 @19:2b @19:2e
+ref byte #0:23d @19:35 @18:0 2 +
+ref byte #0:23e @19:37 @18:0 2 + 1 +
+ref rbyte #0:242 @19:3e @19:44
+ref rbyte #0:24a @19:46 @19:3f
+ref byte #0:251 @19:4e @18:0 2 +
+ref byte #0:252 @19:50 @18:0 2 + 1 +
+ref byte #0:254 @19:52 @18:0 0 + 1 +
+ref byte #0:255 @19:54 @18:0 0 + 1 +
+ref rbyte #0:256 @19:56 @19:59
+ref byte #0:257 @19:58 @18:0 0 +
+ref byte #0:25c @19:5a @18:0 0 +
+ref byte #0:25d @19:5d @18:0 0 + 1 +
+ref rbyte #0:260 @19:62 @19:66
+ref w_hl #0:261 @19:64 @19:c
+ref byte #0:264 @19:67 @18:0 2 +
+ref byte #0:265 @19:69 @18:0 2 + 1 +
+ref w_hl #0:26f @1a:1 __startup
+ref w_hl #0:2bf @2a:17 _hitcnt
+ref w_hl #0:2d3 @2a:2d _I2C_init
+ref w_hl #0:2d7 @2a:34 __wait_ms
+ref w_hl #0:2d9 @2a:37 _LCD_init
+ref w_hl #0:2db @2a:3a _Init_net
+ref rbyte #0:2dd @2a:3e @2a:50
+ref byte #0:2df @2a:40 @2c:22 8 >> 255 &
+ref byte #0:2e0 @2a:42 @2c:22 255 &
+ref w_hl #0:2e2 @2a:46 _puts
+ref rbyte #0:2ea @2a:4f @2a:4e
+ref w_hl #0:2ed @2a:51 _my_ip
+ref w_hl #0:2f1 @2a:56 _my_ip 1 +
+ref w_hl #0:2f5 @2a:5b _my_ip 2 +
+ref w_hl #0:2f9 @2a:60 _my_ip 3 +
+ref w_hl #0:2fd @2a:65 _DHCP_SetIP
+ref byte #0:302 @2a:6a @2c:11 8 >> 255 &
+ref byte #0:303 @2a:6c @2c:11 255 &
+ref w_hl #0:305 @2a:70 _LCD_write_line
+ref w_hl #0:307 @2a:73 _my_ip 3 +
+ref byte #0:30b @2a:7a @7:0 6 +
+ref byte #0:30c @2a:7c @7:0 7 +
+ref w_hl #0:30d @2a:7e _my_ip 2 +
+ref byte #0:311 @2a:85 @7:0 4 +
+ref byte #0:312 @2a:87 @7:0 5 +
+ref w_hl #0:313 @2a:89 _my_ip 1 +
+ref byte #0:317 @2a:90 @7:0 2 +
+ref byte #0:318 @2a:92 @7:0 3 +
+ref w_hl #0:319 @2a:94 _my_ip
+ref byte #0:31d @2a:9b @7:0
+ref byte #0:31e @2a:9d @7:0 1 +
+ref byte #0:31f @2a:9f @2c:3 8 >> 255 &
+ref byte #0:320 @2a:a1 @2c:3 255 &
+ref byte #0:324 @2a:a9 @1c:0 0 +
+ref w_hl #0:326 @2a:ad _sprintf
+ref byte #0:329 @2a:b2 @1c:0 0 +
+ref w_hl #0:32b @2a:b6 _LCD_write_line
+ref w_hl #0:337 @2a:c2 __mul_i2
+ref byte #0:338 @2a:c5 _uc_socket 255 &
+ref byte #0:33b @2a:ca _uc_socket 8 >> 255 &
+ref w_hl #0:346 @2a:d9 __mul_i2
+ref byte #0:347 @2a:dc _uc_socket 14 + 8 >> 255 &
+ref byte #0:348 @2a:de _uc_socket 14 + 255 &
+ref w_hl #0:353 @2a:ee __st_dptr_r67
+ref rbyte #0:357 @2a:f3 @2a:ba
+ref w_hl #0:35b @2a:f5 _poll_webserver
+ref rbyte #0:363 @2a:101 @2a:f4
+ref rbyte #0:364 @2a:104 @2a:f4
+ref byte #0:368 @2a:108 @1c:0 0 +
+ref w_hl #0:36a @2a:10a _webpage_name
+ref byte #0:36c @2a:10d @1c:0 1 +
+ref byte #0:36d @2a:10f @1c:0 1 + 1 +
+ref byte #0:36f @2a:111 @1c:0 1 +
+ref byte #0:370 @2a:114 @1c:0 1 + 1 +
+ref rbyte #0:373 @2a:11a @2a:129
+ref w_hl #0:375 @2a:11c _ad_measure
+ref byte #0:377 @2a:11f _ad_disp 8 >> 255 &
+ref byte #0:378 @2a:121 _ad_disp 255 &
+ref byte #0:379 @2a:123 @1c:0 0 +
+ref w_hl #0:37a @2a:125 _webpage_bind
+ref rbyte #0:37c @2a:128 @2a:f4
+ref byte #0:37f @2a:12a @1c:0 1 +
+ref byte #0:380 @2a:12d @1c:0 1 + 1 +
+ref rbyte #0:383 @2a:133 @2a:142
+ref w_hl #0:385 @2a:135 _eval_io
+ref byte #0:387 @2a:138 _io 8 >> 255 &
+ref byte #0:388 @2a:13a _io 255 &
+ref byte #0:389 @2a:13c @1c:0 0 +
+ref w_hl #0:38a @2a:13e _webpage_bind
+ref rbyte #0:38c @2a:141 @2a:f4
+ref byte #0:38f @2a:143 @1c:0 1 +
+ref byte #0:390 @2a:146 @1c:0 1 + 1 +
+ref rbyte #0:393 @2a:14c @2a:14f
+ref rbyte #0:394 @2a:14e @2a:152
+ref w_hl #0:396 @2a:150 @2a:245
+ref byte #0:39b @2a:154 @1c:0 1 +
+ref byte #0:39f @2a:157 @1c:0 2 +
+ref byte #0:3a1 @2a:159 _reply 8 >> 255 &
+ref byte #0:3a2 @2a:15b _reply 255 &
+ref byte #0:3a3 @2a:15d @1c:0 0 +
+ref w_hl #0:3a4 @2a:15f _webpage_bind
+ref w_hl #0:3a8 @2a:162 _url_getarg_no
+ref byte #0:3aa @2a:165 @1c:0 3 +
+ref byte #0:3ac @2a:167 @1c:0 3 +
+ref rbyte #0:3ad @2a:169 @2a:16d
+ref w_hl #0:3af @2a:16b @2a:23c
+ref w_hl #0:3b2 @2a:16e _url_getarg_str
+ref byte #0:3b4 @2a:171 @1c:0 4 +
+ref byte #0:3b5 @2a:173 @1c:0 4 + 1 +
+ref byte #0:3b8 @2a:177 @1c:0 3 +
+ref rbyte #0:3bc @2a:17c @2a:1bb
+ref byte #0:3be @2a:180 @1c:0 3 +
+ref rbyte #0:3c2 @2a:185 @2a:1bb
+ref byte #0:3c4 @2a:187 @2c:0 8 >> 255 &
+ref byte #0:3c5 @2a:189 @2c:0 255 &
+ref byte #0:3c9 @2a:191 @1c:0 4 +
+ref byte #0:3ca @2a:193 @1c:0 4 + 1 +
+ref w_hl #0:3cc @2a:197 _strcmp
+ref rbyte #0:3cf @2a:19c @2a:161
+ref byte #0:3d1 @2a:19e @1c:0 3 +
+ref rbyte #0:3d8 @2a:1aa @2a:1ad
+ref rbyte #0:3dd @2a:1af @2a:1ab
+ref byte #0:3df @2a:1b2 @1c:0 1 +
+ref byte #0:3e3 @2a:1b7 @1c:0 1 +
+ref w_hl #0:3e5 @2a:1b9 @2a:161
+ref byte #0:3e9 @2a:1be @1c:0 3 +
+ref rbyte #0:3ea @2a:1c0 @2a:1eb
+ref byte #0:3ec @2a:1c2 @1c:0 4 +
+ref byte #0:3ed @2a:1c4 @1c:0 4 + 1 +
+ref w_hl #0:3ee @2a:1c6 _atox
+ref rbyte #0:3f8 @2a:1d6 @2a:1dc
+ref rbyte #0:400 @2a:1de @2a:1d7
+ref w_hl #0:409 @2a:1e9 @2a:161
+ref byte #0:40d @2a:1ee @1c:0 3 +
+ref rbyte #0:411 @2a:1f3 @2a:1f7
+ref w_hl #0:412 @2a:1f5 @2a:161
+ref byte #0:415 @2a:1fa @1c:0 3 +
+ref rbyte #0:419 @2a:1ff @2a:203
+ref w_hl #0:41a @2a:201 @2a:161
+ref byte #0:41d @2a:204 @2c:0 8 >> 255 &
+ref byte #0:41e @2a:206 @2c:0 255 &
+ref byte #0:422 @2a:20e @1c:0 4 +
+ref byte #0:423 @2a:210 @1c:0 4 + 1 +
+ref w_hl #0:425 @2a:214 _strcmp
+ref rbyte #0:428 @2a:219 @2a:21d
+ref w_hl #0:429 @2a:21b @2a:161
+ref byte #0:42c @2a:21e @1c:0 3 +
+ref rbyte #0:434 @2a:22b @2a:22e
+ref rbyte #0:439 @2a:230 @2a:22c
+ref byte #0:43b @2a:233 @1c:0 2 +
+ref byte #0:43f @2a:238 @1c:0 2 +
+ref w_hl #0:441 @2a:23a @2a:161
+ref byte #0:444 @2a:23d @1c:0 2 +
+ref byte #0:446 @2a:240 @1c:0 1 +
+ref w_hl #0:448 @2a:243 @2a:f4
+ref w_hl #0:44b @2a:246 _hitcnt
+ref w_hl #0:44c @2a:249 __ld_dptr_r67
+ref rbyte #0:44f @2a:24e @2a:250
+ref w_hl #0:452 @2a:251 _hitcnt
+ref w_hl #0:453 @2a:254 __st_dptr_r67
+ref w_hl #0:455 @2a:257 _hitcnt
+ref w_hl #0:456 @2a:25a __ld_dptr_r67
+ref byte #0:457 @2a:25d @7:0
+ref byte #0:458 @2a:25f @7:0 1 +
+ref byte #0:459 @2a:261 @2c:3b 8 >> 255 &
+ref byte #0:45a @2a:263 @2c:3b 255 &
+ref byte #0:45e @2a:26b _Hcnt 8 >> 255 &
+ref byte #0:45f @2a:26d _Hcnt 255 &
+ref w_hl #0:461 @2a:271 _sprintf
+ref byte #0:463 @2a:274 _home 8 >> 255 &
+ref byte #0:464 @2a:276 _home 255 &
+ref byte #0:465 @2a:278 @1c:0 0 +
+ref w_hl #0:466 @2a:27a _webpage_bind
+ref w_hl #0:468 @2a:27d @2a:f4
+objectdebug
+dtx ; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+dtx ; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+dtx ; sourcefile: 'fg1_http.c', time: Thu Dec 14 11:33:34 2006
+dtx 
+dtx  .hide
+dtx  .show
+dtx XDS=0
+dtx COS=1
+dtx NES=2
+dtx INS=2
+dtx .macro __line
+dtx lcall $0006 ; uC/51 debugger
+dtx .endmacro
+dtx         .include <reg51.def>
+dtx ; **** 8051 standard defs ***
+dtx ; common registers to all 8051's
+dtx         .hide
+dtx         .show
+dtx         .include <reg52.def>
+dtx ; **** 80C52 (extended) defs ***
+dtx 
+dtx         .hide
+dtx         .show
+dtx         sevseg_ctrl  = $C0;
+dtx   sevseg_data0 = $C1;
+dtx   sevseg_data1 = $C2;
+dtx   sevseg_data2 = $C3;
+dtx   sevseg_data3 = $C4;
+dtx   sevseg_en    = $C5;
+dtx   _sevseg_ctrl  = sevseg_ctrl;
+dtx   _sevseg_data0 = sevseg_data0;
+dtx   _sevseg_data1 = sevseg_data1;
+dtx   _sevseg_data2 = sevseg_data2;
+dtx   _sevseg_data3 = sevseg_data3;
+dtx   _sevseg_en    = sevseg_en;
+dtx 
+dtx   ps2_ctrl    = $d8;
+dtx   ps2_rxf     = ps2_ctrl.0;
+dtx   ps2_ovf     = ps2_ctrl.1;
+dtx   ps2_rx_busy = ps2_ctrl.2;
+dtx   ps2_tx_busy = ps2_ctrl.3;
+dtx   ps2_ack     = ps2_ctrl.4;
+dtx   ps2_init    = ps2_ctrl.7;
+dtx   ps2_data    = $0xd9;
+dtx   _ps2_ctrl    = ps2_ctrl;
+dtx   _ps2_rxf     = ps2_rxf;
+dtx   _ps2_ovf     = ps2_ovf;
+dtx   _ps2_rx_busy = ps2_rx_busy;
+dtx   _ps2_tx_busy = ps2_tx_busy;
+dtx   _ps2_ack     = ps2_ack;
+dtx   _ps2_init    = ps2_init;
+dtx   _ps2_data    = ps2_data;
+dtx   bank_sel   = $f9;
+dtx   bank_en    = $f8;
+dtx   vgaen      = bank_en.4;
+dtx   sramb0     = bank_en.5;
+dtx   sramen     = bank_en.6;
+dtx   ethdis     = bank_en.7;
+dtx 
+dtx   _bank_sel   = bank_sel;
+dtx   _bank_en    = bank_en;
+dtx   _vgaen      = vgaen;
+dtx   _sramb0     = sramb0;
+dtx   _sramen     = sramen;
+dtx   _ethdis     = ethdis;
+dtx  .segment data, sclass xram
+dtx  .export _hitcnt ; xdata unsigned int hitcnt
+dtx _hitcnt: ; xdata unsigned int hitcnt
+dco @0:0 u:2  .dc.w 0
+dtx  .export _ad_measure ; void ad_measure(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __ad_measure
+dtx _ad_measure: ; void ad_measure(void)
+dhl /*********************************************************************************
+dhl * FG1_HTTP.C
+dhl * 
+dhl * A simple dynamic Webserver on a FlexGate I
+dhl *
+dhl * (C) 2004 Wickenhaeuser
+dhl **********************************************************************************/
+dhl 
+dhl #include <stdio.h>
+dhl #include <string.h> 
+dhl #include <ctype.h>
+dhl #include <reg52.h>
+dhl 
+dhl #include "fpga_reg.h"
+dhl #include "tcpip/net.h"   // Basic network handling (public)
+dhl #include "tcpip/web_serv.h"  // Webserver
+dhl #include "tcpip/open_ether.h"
+dhl #include "tcpip/dhcp.h"
+dhl #include "i2c.h"
+dhl #include "lcd.h"
+dhl #include "fpga_reg.h"
+dhl 
+dhl // Declaration of the Pages
+dhl extern code unsigned char home[];
+dhl //extern code unsigned char form[];
+dhl extern code unsigned char io[];
+dhl extern code unsigned char reply[];
+dhl extern code unsigned char ad_disp[];
+dhl uint hitcnt=0;
+dhl 
+dhl // Dynamic Var (max.512+'\0'
+dhl // For ad_disp.html:
+dhl xdata uchar aval_0[5];
+dhl xdata uchar aval_1[5];
+dhl xdata uchar aval_2[5];
+dhl xdata uchar aval_3[5];
+dhl 
+dhl // For form.html:
+dhl /*xdata uchar name[21];
+dhl xdata uchar adr[5];
+dhl xdata uchar cont[12];*/
+dhl 
+dhl // For io.html:
+dhl xdata uchar En0[8];
+dhl xdata uchar En1[8];
+dhl xdata uchar En2[8];
+dhl xdata uchar En3[8];
+dhl xdata uchar sevseg[5];
+dhl 
+dhl xdata uchar C0[8];
+dhl xdata uchar C1[8];
+dhl xdata uchar C2[8];
+dhl xdata uchar C3[8];
+dhl xdata uchar C4[8];
+dhl xdata uchar C5[8];
+dhl xdata uchar C6[8];
+dhl xdata uchar Hcnt[6];
+dhl 
+dhl 
+dhl // Measures Channel 1-4
+dhl void ad_measure(void) {
+dco @8:0 u:3  lcall _I2C_start
+dhl   I2C_start();
+dhl         I2C_send (0x9e);                        // Send address for IC x Write operation
+dco @8:3 u:2  mov R7,#158
+dco @8:5 u:3  lcall _I2C_send
+dhl         I2C_send (0x44);                        // Set Output active, Auto increment and Channel 0
+dco @8:8 u:2  mov R7,#68
+dco @8:a u:3  lcall _I2C_send
+dhl         I2C_send (0x80);
+dco @8:d u:2  mov R7,#128
+dco @8:f u:3  lcall _I2C_send
+dhl         I2C_stop();
+dco @8:12 u:3  lcall _I2C_stop
+dhl         I2C_start();
+dco @8:15 u:3  lcall _I2C_start
+dhl         I2C_send (0x9f);                        // Send adres for IC x Read operation
+dco @8:18 u:2  mov R7,#159
+dco @8:1a u:3  lcall _I2C_send
+dhl         I2C_get(1);                                     // Read last ADC conversion, and start A/D con
+dco @8:1d u:2  mov R7,#1
+dco @8:1f u:3  lcall _I2C_get
+dhl 
+dhl         sprintf(aval_0,"%u",I2C_get(1)*2);
+dco @8:22 u:2  mov R7,#1
+dco @8:24 u:3  lcall _I2C_get
+dco @8:27 u:2  mov R6,#0
+dco @8:29 u:1  mov A,R7
+dco @8:2a u:1  add A,R7
+dco @8:2b u:1  mov R7,A
+dco @8:2c u:1  mov A,R6
+dco @8:2d u:1  rlc A
+dco @8:2e u:1  mov R6,A
+dco @8:2f u:2  mov _sprintf_formal_near,R6
+dco @8:31 u:2  mov _sprintf_formal_near+1,R7
+dco @8:33 u:2  mov R6,#((?i9)>>8)&255
+dco @8:35 u:2  mov R7,#(?i9)&255
+dco @8:37 u:2  mov R3,AR7
+dco @8:39 u:2  mov R2,AR6
+dco @8:3b u:2  mov R0,#COS
+dco @8:3d u:2  mov R6,#((_aval_0)>>8)&255
+dco @8:3f u:2  mov R7,#(_aval_0)&255
+dco @8:41 u:2  mov R4,#XDS
+dco @8:43 u:3  lcall _sprintf
+dhl   sprintf(aval_1,"%u",I2C_get(1)*2);
+dco @8:46 u:2  mov R7,#1
+dco @8:48 u:3  lcall _I2C_get
+dco @8:4b u:2  mov R6,#0
+dco @8:4d u:1  mov A,R7
+dco @8:4e u:1  add A,R7
+dco @8:4f u:1  mov R7,A
+dco @8:50 u:1  mov A,R6
+dco @8:51 u:1  rlc A
+dco @8:52 u:1  mov R6,A
+dco @8:53 u:2  mov _sprintf_formal_near,R6
+dco @8:55 u:2  mov _sprintf_formal_near+1,R7
+dco @8:57 u:2  mov R6,#((?i9)>>8)&255
+dco @8:59 u:2  mov R7,#(?i9)&255
+dco @8:5b u:2  mov R3,AR7
+dco @8:5d u:2  mov R2,AR6
+dco @8:5f u:2  mov R0,#COS
+dco @8:61 u:2  mov R6,#((_aval_1)>>8)&255
+dco @8:63 u:2  mov R7,#(_aval_1)&255
+dco @8:65 u:2  mov R4,#XDS
+dco @8:67 u:3  lcall _sprintf
+dhl   sprintf(aval_2,"%u",I2C_get(1)*2);
+dco @8:6a u:2  mov R7,#1
+dco @8:6c u:3  lcall _I2C_get
+dco @8:6f u:2  mov R6,#0
+dco @8:71 u:1  mov A,R7
+dco @8:72 u:1  add A,R7
+dco @8:73 u:1  mov R7,A
+dco @8:74 u:1  mov A,R6
+dco @8:75 u:1  rlc A
+dco @8:76 u:1  mov R6,A
+dco @8:77 u:2  mov _sprintf_formal_near,R6
+dco @8:79 u:2  mov _sprintf_formal_near+1,R7
+dco @8:7b u:2  mov R6,#((?i9)>>8)&255
+dco @8:7d u:2  mov R7,#(?i9)&255
+dco @8:7f u:2  mov R3,AR7
+dco @8:81 u:2  mov R2,AR6
+dco @8:83 u:2  mov R0,#COS
+dco @8:85 u:2  mov R6,#((_aval_2)>>8)&255
+dco @8:87 u:2  mov R7,#(_aval_2)&255
+dco @8:89 u:2  mov R4,#XDS
+dco @8:8b u:3  lcall _sprintf
+dhl   sprintf(aval_3,"%u",I2C_get(0)*2);
+dco @8:8e u:1  clr A
+dco @8:8f u:1  mov R7,A
+dco @8:90 u:3  lcall _I2C_get
+dco @8:93 u:2  mov R6,#0
+dco @8:95 u:1  mov A,R7
+dco @8:96 u:1  add A,R7
+dco @8:97 u:1  mov R7,A
+dco @8:98 u:1  mov A,R6
+dco @8:99 u:1  rlc A
+dco @8:9a u:1  mov R6,A
+dco @8:9b u:2  mov _sprintf_formal_near,R6
+dco @8:9d u:2  mov _sprintf_formal_near+1,R7
+dco @8:9f u:2  mov R6,#((?i9)>>8)&255
+dco @8:a1 u:2  mov R7,#(?i9)&255
+dco @8:a3 u:2  mov R3,AR7
+dco @8:a5 u:2  mov R2,AR6
+dco @8:a7 u:2  mov R0,#COS
+dco @8:a9 u:2  mov R6,#((_aval_3)>>8)&255
+dco @8:ab u:2  mov R7,#(_aval_3)&255
+dco @8:ad u:2  mov R4,#XDS
+dco @8:af u:3  lcall _sprintf
+dhl         
+dhl         I2C_stop();
+dco @8:b2 u:3  lcall _I2C_stop
+dco @8:b5 u:1  ret
+dtx ; end of function ad_measure
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _set_chkbox ; void set_chkbox(unsigned char, xdata unsigned char *)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __set_chkbox
+dtx _set_chkbox: ; void set_chkbox(unsigned char, xdata unsigned char *)
+dtx  ; parameter 'val' in 'R7'
+dtx  ; parameter 'bfr' in 'RW45' moved and assigned to local '?set_chkbox_bfr'
+dco @c:0 u:2  mov ?set_chkbox_bfr,R4
+dco @c:2 u:2  mov ?set_chkbox_bfr+1,R5
+dhl }
+dhl 
+dhl void set_chkbox(uchar val,xdata uchar* bfr) {
+dco @c:4 u:1  mov A,R7
+dco @c:5 u:2  jz ?11
+dhl   if(val) {
+dco @c:7 u:2  mov R6,#((?i13)>>8)&255
+dco @c:9 u:2  mov R7,#(?i13)&255
+dco @c:b u:2  mov R3,AR7
+dco @c:d u:2  mov R2,AR6
+dco @c:f u:2  mov R0,#COS
+dco @c:11 u:2  mov R6,?set_chkbox_bfr
+dco @c:13 u:2  mov R7,?set_chkbox_bfr+1
+dco @c:15 u:2  mov R4,#XDS
+dco @c:17 u:3  lcall _strcpy
+dhl     strcpy(bfr,"checked");
+dhl   }else{
+dco @c:1a u:2  sjmp ?12
+dtx ?11:
+dtx 
+dco @c:1c u:3  mov DPH,?set_chkbox_bfr
+dco @c:1f u:3  mov DPL,?set_chkbox_bfr+1
+dco @c:22 u:2  mov R6,DPH
+dco @c:24 u:2  mov R7,DPL
+dco @c:26 u:1  inc R7
+dco @c:27 u:1  mov A,R7
+dco @c:28 u:2  jnz ?__1
+dco @c:2a u:1  inc R6
+dtx ?__1:
+dtx  ; variable 'bfr' assigned to register 'RW67'
+dco @c:2b u:2  mov A,#32
+dco @c:2d u:1  movx @DPTR,A
+dhl     *bfr++=' ';
+dhl     *bfr++=0;
+dco @c:2e u:2  mov DPH,R6
+dco @c:30 u:2  mov DPL,R7
+dco @c:32 u:1  clr A
+dco @c:33 u:1  movx @DPTR,A
+dhl   }
+dtx ?12:
+dco @c:34 u:1  ret
+dtx ; end of function set_chkbox
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+dtx 
+dtx  .export _eval_io ; void eval_io(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __eval_io
+dtx _eval_io: ; void eval_io(void)
+dhl }
+dhl 
+dhl void eval_io(void) {
+dco @f:0 u:2  mov R7,_sevseg_data0
+dco @f:2 u:2  mov R5,AR7
+dco @f:4 u:2  mov R4,#0
+dco @f:6 u:2  mov R7,#8
+dco @f:8 u:1  mov A,R5
+dco @f:9 u:2  mov B,R7
+dco @f:b u:2  inc B
+dco @f:d u:2  sjmp ?_2
+dtx ?_3:
+dco @f:f u:1  clr C
+dco @f:10 u:1  rlc A
+dco @f:11 u:1  xch A,R4
+dco @f:12 u:1  rlc A
+dco @f:13 u:1  xch A,R4
+dtx ?_2:
+dco @f:14 u:3  djnz B,?_3
+dco @f:17 u:1  mov R5,A
+dco @f:18 u:2  mov R7,_sevseg_data1
+dco @f:1a u:2  mov R6,#0
+dco @f:1c u:1  mov A,R5
+dco @f:1d u:1  orl A,R7
+dco @f:1e u:1  mov R7,A
+dco @f:1f u:1  mov A,R4
+dco @f:20 u:1  orl A,R6
+dco @f:21 u:1  mov R6,A
+dtx  ; variable 'tmp' assigned to register 'RW67'
+dhl   unsigned short tmp=((unsigned short)sevseg_data0)<<8|sevseg_data1;
+dhl   sprintf(sevseg,"%x",tmp);
+dco @f:22 u:2  mov _sprintf_formal_near,R6
+dco @f:24 u:2  mov _sprintf_formal_near+1,R7
+dco @f:26 u:2  mov R6,#((?i16)>>8)&255
+dco @f:28 u:2  mov R7,#(?i16)&255
+dco @f:2a u:2  mov R3,AR7
+dco @f:2c u:2  mov R2,AR6
+dco @f:2e u:2  mov R0,#COS
+dco @f:30 u:2  mov R6,#((_sevseg)>>8)&255
+dco @f:32 u:2  mov R7,#(_sevseg)&255
+dco @f:34 u:2  mov R4,#XDS
+dco @f:36 u:3  lcall _sprintf
+dhl   set_chkbox(sevseg_en&0x01,En0);
+dco @f:39 u:2  mov R4,#((_En0)>>8)&255
+dco @f:3b u:2  mov R5,#(_En0)&255
+dco @f:3d u:2  mov R7,_sevseg_en
+dco @f:3f u:3  anl AR7,#1
+dco @f:42 u:3  lcall _set_chkbox
+dhl   set_chkbox(sevseg_en&0x02,En1);
+dco @f:45 u:2  mov R4,#((_En1)>>8)&255
+dco @f:47 u:2  mov R5,#(_En1)&255
+dco @f:49 u:2  mov R7,_sevseg_en
+dco @f:4b u:3  anl AR7,#2
+dco @f:4e u:3  lcall _set_chkbox
+dhl   set_chkbox(sevseg_en&0x04,En2);
+dco @f:51 u:2  mov R4,#((_En2)>>8)&255
+dco @f:53 u:2  mov R5,#(_En2)&255
+dco @f:55 u:2  mov R7,_sevseg_en
+dco @f:57 u:3  anl AR7,#4
+dco @f:5a u:3  lcall _set_chkbox
+dhl   set_chkbox(sevseg_en&0x08,En3);
+dco @f:5d u:2  mov R4,#((_En3)>>8)&255
+dco @f:5f u:2  mov R5,#(_En3)&255
+dco @f:61 u:2  mov R7,_sevseg_en
+dco @f:63 u:3  anl AR7,#8
+dco @f:66 u:3  lcall _set_chkbox
+dhl   
+dhl   set_chkbox(P1&2,C0);
+dco @f:69 u:2  mov R4,#((_C0)>>8)&255
+dco @f:6b u:2  mov R5,#(_C0)&255
+dco @f:6d u:2  mov R7,_P1
+dco @f:6f u:3  anl AR7,#2
+dco @f:72 u:3  lcall _set_chkbox
+dhl   set_chkbox(P1&4,C1);
+dco @f:75 u:2  mov R4,#((_C1)>>8)&255
+dco @f:77 u:2  mov R5,#(_C1)&255
+dco @f:79 u:2  mov R7,_P1
+dco @f:7b u:3  anl AR7,#4
+dco @f:7e u:3  lcall _set_chkbox
+dhl   set_chkbox(P1&8,C2);
+dco @f:81 u:2  mov R4,#((_C2)>>8)&255
+dco @f:83 u:2  mov R5,#(_C2)&255
+dco @f:85 u:2  mov R7,_P1
+dco @f:87 u:3  anl AR7,#8
+dco @f:8a u:3  lcall _set_chkbox
+dhl   set_chkbox(P1&0x10,C3);
+dco @f:8d u:2  mov R4,#((_C3)>>8)&255
+dco @f:8f u:2  mov R5,#(_C3)&255
+dco @f:91 u:2  mov R7,_P1
+dco @f:93 u:3  anl AR7,#16
+dco @f:96 u:3  lcall _set_chkbox
+dhl   set_chkbox(P1&0x20,C4);
+dco @f:99 u:2  mov R4,#((_C4)>>8)&255
+dco @f:9b u:2  mov R5,#(_C4)&255
+dco @f:9d u:2  mov R7,_P1
+dco @f:9f u:3  anl AR7,#32
+dco @f:a2 u:3  lcall _set_chkbox
+dhl   set_chkbox(P1&0x40,C5);
+dco @f:a5 u:2  mov R4,#((_C5)>>8)&255
+dco @f:a7 u:2  mov R5,#(_C5)&255
+dco @f:a9 u:2  mov R7,_P1
+dco @f:ab u:3  anl AR7,#64
+dco @f:ae u:3  lcall _set_chkbox
+dhl   set_chkbox(P1&0x80,C6);
+dco @f:b1 u:2  mov R4,#((_C6)>>8)&255
+dco @f:b3 u:2  mov R5,#(_C6)&255
+dco @f:b5 u:2  mov R7,_P1
+dco @f:b7 u:3  anl AR7,#128
+dco @f:ba u:3  lcall _set_chkbox
+dco @f:bd u:1  ret
+dtx ; end of function eval_io
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _atox_chr ; unsigned char atox_chr(char)
+dtx  .segment _atox_chr_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _atox_chr_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _atox_chr_formal_near, _atox_chr_local_near, __atox_chr
+dtx 
+dtx  .segment __atox_chr
+dtx _atox_chr: ; (leaf function) unsigned char atox_chr(char)
+dtx  ; parameter 'xchr' in 'R7'
+dhl   
+dhl }
+dhl 
+dhl unsigned char atox_chr(char xchr) {
+dco @12:0 u:2  mov A,#208
+dco @12:2 u:1  add A,R7
+dco @12:3 u:1  mov R5,A
+dtx  ; variable 'tmp' assigned to register 'R5'
+dhl         unsigned char tmp=xchr-'0';
+dhl         if (tmp>9) tmp-=7;
+dco @12:4 u:2  mov R7,#9
+dco @12:6 u:1  setb C
+dco @12:7 u:1  mov A,R5
+dco @12:8 u:1  subb A,R7
+dco @12:9 u:2  jc ?18
+dtx 
+dco @12:b u:2  mov A,#249
+dco @12:d u:1  add A,R5
+dco @12:e u:1  mov R5,A
+dtx ?18:
+dhl         return tmp;
+dco @12:f u:2  mov R7,AR5
+dco @12:11 u:1  ret
+dtx ; end of function atox_chr
+dtx ; used: R-----5-7 BR-------- ACC PSW
+dtx 
+dtx  .export _isxdigit ; unsigned char isxdigit(char)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __isxdigit
+dtx _isxdigit: ; unsigned char isxdigit(char)
+dtx  ; parameter 'xchr' in 'R7'
+dhl }
+dhl 
+dhl unsigned char isxdigit(char xchr) {
+dco @16:0 u:3  lcall _toupper
+dco @16:3 u:2  mov R5,AR7
+dtx  ; variable 'xchr' assigned to register 'R5'
+dhl   xchr=toupper(xchr);
+dhl   if((xchr>='0' && xchr<='9') ||
+dco @16:5 u:2  mov R7,#48
+dco @16:7 u:1  clr C
+dco @16:8 u:1  mov A,R5
+dco @16:9 u:1  subb A,R7
+dco @16:a u:2  jc ?24
+dco @16:c u:2  mov R7,#57
+dco @16:e u:1  setb C
+dco @16:f u:1  mov A,R5
+dco @16:10 u:1  subb A,R7
+dco @16:11 u:2  jc ?23
+dtx ?24:
+dco @16:13 u:2  mov R7,#65
+dco @16:15 u:1  clr C
+dco @16:16 u:1  mov A,R5
+dco @16:17 u:1  subb A,R7
+dco @16:18 u:2  jc ?21
+dco @16:1a u:2  mov R7,#70
+dco @16:1c u:1  setb C
+dco @16:1d u:1  mov A,R5
+dco @16:1e u:1  subb A,R7
+dco @16:1f u:2  jnc ?21
+dtx ?23:
+dhl     (xchr>='A' && xchr<='F')) return 1;
+dco @16:21 u:2  mov R7,#1
+dco @16:23 u:2  sjmp ?20
+dtx ?21:
+dhl   return 0;
+dco @16:25 u:1  clr A
+dco @16:26 u:1  mov R7,A
+dtx ?20:
+dco @16:27 u:1  ret
+dtx ; end of function isxdigit
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _atox ; unsigned short atox(xdata char *)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __atox
+dtx _atox: ; unsigned short atox(xdata char *)
+dtx  ; parameter 's' in 'RW67' moved and assigned to local '?atox_s'
+dco @19:0 u:2  mov ?atox_s,R6
+dco @19:2 u:2  mov ?atox_s+1,R7
+dtx  ; variable 'n' allocated as 'auto'
+dhl }
+dhl 
+dhl unsigned short atox(char xdata *s){
+dco @19:4 u:1  clr A
+dco @19:5 u:2  mov ?atox_n,A
+dco @19:7 u:2  mov ?atox_n+1,A
+dco @19:9 u:3  ljmp ?28
+dtx ?27:
+dhl   unsigned short n=0;
+dhl   unsigned char tmp;
+dhl 
+dhl   while(*s) {
+dco @19:c u:3  mov DPH,?atox_s
+dco @19:f u:3  mov DPL,?atox_s+1
+dco @19:12 u:1  movx A,@DPTR
+dco @19:13 u:1  mov R7,A
+dco @19:14 u:3  lcall _isxdigit
+dco @19:17 u:1  mov A,R7
+dco @19:18 u:2  jz ?30
+dhl     if (isxdigit(*s)) {
+dco @19:1a u:3  mov DPH,?atox_s
+dco @19:1d u:3  mov DPL,?atox_s+1
+dco @19:20 u:1  movx A,@DPTR
+dco @19:21 u:1  mov R7,A
+dco @19:22 u:3  lcall _toupper
+dco @19:25 u:3  lcall _atox_chr
+dco @19:28 u:2  mov R5,AR7
+dtx  ; variable 'tmp' assigned to register 'R5'
+dhl       tmp=atox_chr(toupper(*s));
+dhl     }else tmp=0;
+dco @19:2a u:2  sjmp ?31
+dtx ?30:
+dtx 
+dco @19:2c u:1  clr A
+dco @19:2d u:1  mov R5,A
+dtx ?31:
+dhl     n=(n<<4)|tmp;
+dco @19:2e u:2  mov R3,AR5
+dco @19:30 u:2  mov R2,#0
+dco @19:32 u:2  mov R5,#4
+dco @19:34 u:2  mov R6,?atox_n
+dco @19:36 u:2  mov R7,?atox_n+1
+dco @19:38 u:1  mov A,R7
+dco @19:39 u:2  mov B,R5
+dco @19:3b u:2  inc B
+dco @19:3d u:2  sjmp ?_10
+dtx ?_11:
+dco @19:3f u:1  clr C
+dco @19:40 u:1  rlc A
+dco @19:41 u:1  xch A,R6
+dco @19:42 u:1  rlc A
+dco @19:43 u:1  xch A,R6
+dtx ?_10:
+dco @19:44 u:3  djnz B,?_11
+dco @19:47 u:1  mov R7,A
+dco @19:48 u:1  orl A,R3
+dco @19:49 u:1  mov R7,A
+dco @19:4a u:1  mov A,R6
+dco @19:4b u:1  orl A,R2
+dco @19:4c u:1  mov R6,A
+dco @19:4d u:2  mov ?atox_n,R6
+dco @19:4f u:2  mov ?atox_n+1,R7
+dhl     s++;
+dco @19:51 u:2  inc ?atox_s+1
+dco @19:53 u:2  mov A,?atox_s+1
+dco @19:55 u:2  jnz ?_12
+dco @19:57 u:2  inc ?atox_s
+dtx ?_12:
+dhl   }
+dtx ?28:
+dtx 
+dco @19:59 u:3  mov DPH,?atox_s
+dco @19:5c u:3  mov DPL,?atox_s+1
+dco @19:5f u:1  movx A,@DPTR
+dco @19:60 u:1  mov R7,A
+dco @19:61 u:2  jz ?_13
+dco @19:63 u:3  ljmp ?27
+dtx ?_13:
+dhl   return n;
+dco @19:66 u:2  mov R6,?atox_n
+dco @19:68 u:2  mov R7,?atox_n+1
+dco @19:6a u:1  ret
+dtx ; end of function atox
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+dtx 
+dtx  .export _main ; void main(void)
+dtx 
+dtx ; *** RESET POINT ***
+dtx  .export __reset
+dtx  .segment ___reset, org $0
+dco @1a:0 u:3  __reset: ljmp __startup
+dtx 
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __main
+dtx _main: ; void main(void)
+dhl }
+dhl 
+dhl /**********************************************************************************
+dhl *  M A I N
+dhl **********************************************************************************/
+dhl void main(void){
+dco @2a:0 u:3  mov _TMOD,#1
+dhl  uint res;
+dhl  uchar i;
+dhl  uchar socket;
+dhl  xdata uchar *pc;
+dhl  
+dhl   TMOD = 1;
+dhl   SCON = 0x52;    /* SCON */ 
+dco @2a:3 u:3  mov _SCON,#82
+dhl   T2CON=0;
+dco @2a:6 u:1  clr A
+dco @2a:7 u:2  mov _T2CON,A
+dhl   RCAP2L=0xAE;                     // 9600 Baud @ 25 MHz
+dco @2a:9 u:3  mov _RCAP2L,#174
+dhl   RCAP2H=0xff;
+dco @2a:c u:3  mov _RCAP2H,#255
+dhl   T2CON=0x30;
+dco @2a:f u:3  mov _T2CON,#48
+dhl   TR2=1;
+dco @2a:12 u:2  setb _TR2
+dhl   TR0=1;
+dco @2a:14 u:2  setb _TR0
+dhl 
+dhl  hitcnt=0;
+dco @2a:16 u:3  mov DPTR,#_hitcnt
+dco @2a:19 u:1  clr A
+dco @2a:1a u:1  movx @DPTR,A
+dco @2a:1b u:1  inc DPTR
+dco @2a:1c u:1  movx @DPTR,A
+dhl  sevseg_ctrl=01;
+dco @2a:1d u:3  mov _sevseg_ctrl,#1
+dhl  sevseg_data0=0;
+dco @2a:20 u:1  clr A
+dco @2a:21 u:2  mov _sevseg_data0,A
+dhl  sevseg_data1=0;
+dco @2a:23 u:1  clr A
+dco @2a:24 u:2  mov _sevseg_data1,A
+dhl  sevseg_en=0;
+dco @2a:26 u:1  clr A
+dco @2a:27 u:2  mov _sevseg_en,A
+dhl  P1=0;
+dco @2a:29 u:1  clr A
+dco @2a:2a u:2  mov _P1,A
+dhl  I2C_init();
+dco @2a:2c u:3  lcall _I2C_init
+dhl  _wait_ms(100);
+dco @2a:2f u:2  mov R6,#0
+dco @2a:31 u:2  mov R7,#100
+dco @2a:33 u:3  lcall __wait_ms
+dhl  LCD_init();
+dco @2a:36 u:3  lcall _LCD_init
+dhl  
+dhl  // A HTTP-Server with only passive sockets requires only an IP address
+dhl 
+dhl  if(Init_net()) {
+dco @2a:39 u:3  lcall _Init_net
+dco @2a:3c u:1  mov A,R7
+dco @2a:3d u:2  jz ?33
+dtx 
+dco @2a:3f u:2  mov R6,#((?i35)>>8)&255
+dco @2a:41 u:2  mov R7,#(?i35)&255
+dco @2a:43 u:2  mov R4,#COS
+dco @2a:45 u:3  lcall _puts
+dhl   puts("<NET FAILURE>"); // Init Variables, Counter, ...
+dhl   sevseg_en=0xff;
+dco @2a:48 u:3  mov _sevseg_en,#255
+dhl   sevseg_data0=1;
+dco @2a:4b u:3  mov _sevseg_data0,#1
+dhl   for(;;);
+dtx ?36:
+dtx 
+dco @2a:4e u:2  sjmp ?36
+dtx ?33:
+dhl  }
+dhl 
+dhl  //COMPOSE_IP(my_ip,192,168,1,156); 
+dhl 
+dhl // Capture IP-Adress via DHCP
+dhl  COMPOSE_IP(my_ip,0,0,0,0);
+dco @2a:50 u:3  mov DPTR,#_my_ip
+dco @2a:53 u:1  clr A
+dco @2a:54 u:1  movx @DPTR,A
+dtx 
+dco @2a:55 u:3  mov DPTR,#_my_ip+1
+dco @2a:58 u:1  clr A
+dco @2a:59 u:1  movx @DPTR,A
+dtx 
+dco @2a:5a u:3  mov DPTR,#_my_ip+2
+dco @2a:5d u:1  clr A
+dco @2a:5e u:1  movx @DPTR,A
+dtx 
+dco @2a:5f u:3  mov DPTR,#_my_ip+3
+dco @2a:62 u:1  clr A
+dco @2a:63 u:1  movx @DPTR,A
+dtx 
+dco @2a:64 u:3  lcall _DHCP_SetIP
+dtx  ; variable 'bfr' allocated as 'auto'
+dhl  DHCP_SetIP();
+dhl  {
+dco @2a:67 u:1  clr A
+dco @2a:68 u:1  mov R3,A
+dco @2a:69 u:2  mov R6,#((?i40)>>8)&255
+dco @2a:6b u:2  mov R7,#(?i40)&255
+dco @2a:6d u:2  mov R4,#COS
+dco @2a:6f u:3  lcall _LCD_write_line
+dhl     char bfr[16];
+dhl     LCD_write_line("*FPGA-Webserver*",0);
+dhl     sprintf(bfr,"%u.%u.%u.%u  ",my_ip.bytes[0],my_ip.bytes[1],my_ip.bytes[2],my_ip.bytes[3]);
+dco @2a:72 u:3  mov DPTR,#_my_ip+3
+dco @2a:75 u:1  movx A,@DPTR
+dco @2a:76 u:1  mov R7,A
+dco @2a:77 u:2  mov R6,#0
+dco @2a:79 u:2  mov _sprintf_formal_near+6,R6
+dco @2a:7b u:2  mov _sprintf_formal_near+7,R7
+dco @2a:7d u:3  mov DPTR,#_my_ip+2
+dco @2a:80 u:1  movx A,@DPTR
+dco @2a:81 u:1  mov R7,A
+dco @2a:82 u:2  mov R6,#0
+dco @2a:84 u:2  mov _sprintf_formal_near+4,R6
+dco @2a:86 u:2  mov _sprintf_formal_near+5,R7
+dco @2a:88 u:3  mov DPTR,#_my_ip+1
+dco @2a:8b u:1  movx A,@DPTR
+dco @2a:8c u:1  mov R7,A
+dco @2a:8d u:2  mov R6,#0
+dco @2a:8f u:2  mov _sprintf_formal_near+2,R6
+dco @2a:91 u:2  mov _sprintf_formal_near+3,R7
+dco @2a:93 u:3  mov DPTR,#_my_ip
+dco @2a:96 u:1  movx A,@DPTR
+dco @2a:97 u:1  mov R7,A
+dco @2a:98 u:2  mov R6,#0
+dco @2a:9a u:2  mov _sprintf_formal_near,R6
+dco @2a:9c u:2  mov _sprintf_formal_near+1,R7
+dco @2a:9e u:2  mov R6,#((?i41)>>8)&255
+dco @2a:a0 u:2  mov R7,#(?i41)&255
+dco @2a:a2 u:2  mov R3,AR7
+dco @2a:a4 u:2  mov R2,AR6
+dco @2a:a6 u:2  mov R0,#COS
+dco @2a:a8 u:2  mov R7,#?main_1_bfr
+dco @2a:aa u:2  mov R4,#NES
+dco @2a:ac u:3  lcall _sprintf
+dhl     LCD_write_line(bfr,1);
+dco @2a:af u:2  mov R3,#1
+dco @2a:b1 u:2  mov R7,#?main_1_bfr
+dco @2a:b3 u:2  mov R4,#NES
+dco @2a:b5 u:3  lcall _LCD_write_line
+dhl //    printf("My MAC: %02x:%02x:%02x:%02x:%02x:%02x\n", my_mac[0],my_mac[1],my_mac[2],my_mac[3],my_mac
+dhl  }
+dco @2a:b8 u:1  clr A
+dco @2a:b9 u:1  mov R3,A
+dtx  ; variable 'i' assigned to register 'R3'
+dtx ?42:
+dhl 
+dhl 
+dhl  // Enable ALL (or less) Sockets  as General Server HTTP at port 80
+dhl  for(i=0;i<MAX_SOCK;i++) SOCKET_SETUP(i,SOCKET_TCP,80,FLAG_PASSIVE_OPEN);
+dco @2a:ba u:2  mov R7,AR3
+dco @2a:bc u:1  clr A
+dco @2a:bd u:1  mov R6,A
+dco @2a:be u:1  mov R4,A
+dco @2a:bf u:2  mov R5,#50
+dco @2a:c1 u:3  lcall __mul_i2
+dco @2a:c4 u:2  mov A,#(_uc_socket)&255
+dco @2a:c6 u:1  add A,R7
+dco @2a:c7 u:2  mov DPL,A
+dco @2a:c9 u:2  mov A,#((_uc_socket)>>8)&255
+dco @2a:cb u:1  addc A,R6
+dco @2a:cc u:2  mov DPH,A
+dco @2a:ce u:2  mov A,#2
+dco @2a:d0 u:1  movx @DPTR,A
+dtx 
+dco @2a:d1 u:2  mov R7,AR3
+dco @2a:d3 u:1  clr A
+dco @2a:d4 u:1  mov R6,A
+dco @2a:d5 u:1  mov R4,A
+dco @2a:d6 u:2  mov R5,#50
+dco @2a:d8 u:3  lcall __mul_i2
+dco @2a:db u:2  mov R4,#((_uc_socket+14)>>8)&255
+dco @2a:dd u:2  mov R5,#(_uc_socket+14)&255
+dco @2a:df u:1  mov A,R5
+dco @2a:e0 u:1  add A,R7
+dco @2a:e1 u:1  mov R5,A
+dco @2a:e2 u:1  mov A,R4
+dco @2a:e3 u:1  addc A,R6
+dco @2a:e4 u:1  mov R4,A
+dco @2a:e5 u:2  mov R6,#0
+dco @2a:e7 u:2  mov R7,#80
+dco @2a:e9 u:2  mov DPH,R4
+dco @2a:eb u:2  mov DPL,R5
+dco @2a:ed u:3  lcall __st_dptr_r67
+dtx 
+dco @2a:f0 u:1  inc R3
+dtx 
+dco @2a:f1 u:3  cjne R3,#2,?42
+dtx 
+dtx ?46:
+dhl  // * Now Net is ready to start *
+dhl  for(;;){
+dco @2a:f4 u:3  lcall _poll_webserver
+dco @2a:f7 u:2  mov R4,AR6
+dco @2a:f9 u:2  mov R5,AR7
+dtx  ; variable 'res' assigned to register 'RW45'
+dhl 
+dhl   // ENOUGH TIME IN THIS LOOP FOR OTHER JOBS...
+dhl 
+dhl   
+dhl   res=poll_webserver();
+dhl   if((res&0xFF00) ==EVENT_HTTP_REQUEST){
+dco @2a:fb u:2  mov R7,#0
+dco @2a:fd u:1  mov A,R4
+dco @2a:fe u:1  mov R6,A
+dco @2a:ff u:3  cjne R7,#0,?46
+dco @2a:102 u:3  cjne R6,#144,?46
+dtx 
+dco @2a:105 u:2  mov R7,AR5
+dtx  ; variable 'socket' allocated as 'auto'
+dco @2a:107 u:2  mov ?main_socket,R7
+dhl    socket=(uchar)res;
+dhl 
+dhl    pc=webpage_name(); // get name of requested page
+dco @2a:109 u:3  lcall _webpage_name
+dtx  ; variable 'pc' allocated as 'auto'
+dco @2a:10c u:2  mov ?main_pc,R6
+dco @2a:10e u:2  mov ?main_pc+1,R7
+dhl 
+dhl //   printf("'%s'/%u\n",pc,socket); // Show requested page and socket
+dhl 
+dhl    if(*pc=='a') {
+dco @2a:110 u:3  mov DPH,?main_pc
+dco @2a:113 u:3  mov DPL,?main_pc+1
+dco @2a:116 u:1  movx A,@DPTR
+dco @2a:117 u:1  mov R7,A
+dco @2a:118 u:3  cjne R7,#97,?52
+dtx 
+dco @2a:11b u:3  lcall _ad_measure
+dhl     ad_measure();
+dhl     webpage_bind(socket,ad_disp);
+dco @2a:11e u:2  mov R4,#((_ad_disp)>>8)&255
+dco @2a:120 u:2  mov R5,#(_ad_disp)&255
+dco @2a:122 u:2  mov R7,?main_socket
+dco @2a:124 u:3  lcall _webpage_bind
+dhl    }else if(*pc=='i'){
+dco @2a:127 u:2  sjmp ?46
+dtx ?52:
+dtx 
+dco @2a:129 u:3  mov DPH,?main_pc
+dco @2a:12c u:3  mov DPL,?main_pc+1
+dco @2a:12f u:1  movx A,@DPTR
+dco @2a:130 u:1  mov R7,A
+dco @2a:131 u:3  cjne R7,#105,?54
+dtx 
+dco @2a:134 u:3  lcall _eval_io
+dhl     eval_io();
+dhl     webpage_bind(socket,io);
+dco @2a:137 u:2  mov R4,#((_io)>>8)&255
+dco @2a:139 u:2  mov R5,#(_io)&255
+dco @2a:13b u:2  mov R7,?main_socket
+dco @2a:13d u:3  lcall _webpage_bind
+dhl //   }else if(*pc=='f'){
+dhl //    webpage_bind(socket,form);
+dhl    }else if(*pc=='r'){
+dco @2a:140 u:2  sjmp ?46
+dtx ?54:
+dtx 
+dco @2a:142 u:3  mov DPH,?main_pc
+dco @2a:145 u:3  mov DPL,?main_pc+1
+dco @2a:148 u:1  movx A,@DPTR
+dco @2a:149 u:1  mov R7,A
+dco @2a:14a u:3  cjne R7,#114,?_23
+dco @2a:14d u:2  sjmp ?_24
+dtx ?_23:
+dco @2a:14f u:3  ljmp ?56
+dtx ?_24:
+dtx  ; variable 'en_tmp' allocated as 'auto'
+dtx 
+dco @2a:152 u:1  clr A
+dco @2a:153 u:2  mov ?main_3_en_tmp,A
+dtx  ; variable 'p1_tmp' allocated as 'auto'
+dhl     unsigned char en_tmp=0,p1_tmp=0;
+dco @2a:155 u:1  clr A
+dco @2a:156 u:2  mov ?main_3_p1_tmp,A
+dhl     webpage_bind(socket,reply);
+dco @2a:158 u:2  mov R4,#((_reply)>>8)&255
+dco @2a:15a u:2  mov R5,#(_reply)&255
+dco @2a:15c u:2  mov R7,?main_socket
+dco @2a:15e u:3  lcall _webpage_bind
+dhl //    sevseg_en=0;
+dhl //    P1=0;
+dhl     //reply.html?A1=ON&A2=ON&A3=ON&A4=ON&A5=1234&A6=ON&A7=ON&A8=ON&A9=ON&A10=ON&A11=ON&A12=ON&A13=Peri
+dhl     for(;;){
+dtx ?58:
+dtx 
+dco @2a:161 u:3  lcall _url_getarg_no
+dtx  ; variable 'i' allocated as 'auto'
+dco @2a:164 u:2  mov ?i75,R7
+dhl       i=url_getarg_no();
+dhl       if(!i) break;
+dco @2a:166 u:2  mov A,?i75
+dco @2a:168 u:2  jnz ?62
+dtx 
+dco @2a:16a u:3  ljmp ?60
+dtx ?62:
+dhl       pc=url_getarg_str();
+dco @2a:16d u:3  lcall _url_getarg_str
+dtx  ; variable 'pc' allocated as 'auto'
+dco @2a:170 u:2  mov ?i76,R6
+dco @2a:172 u:2  mov ?i76+1,R7
+dhl //      printf("Arg A%u: '%s'\n",i,pc); // Opt. Show Args...
+dhl       if(i>=1 && i<=4) {
+dco @2a:174 u:2  mov R5,#1
+dco @2a:176 u:2  mov R7,?i75
+dco @2a:178 u:1  clr C
+dco @2a:179 u:1  mov A,R7
+dco @2a:17a u:1  subb A,R5
+dco @2a:17b u:2  jc ?64
+dco @2a:17d u:2  mov R5,#4
+dco @2a:17f u:2  mov R7,?i75
+dco @2a:181 u:1  setb C
+dco @2a:182 u:1  mov A,R7
+dco @2a:183 u:1  subb A,R5
+dco @2a:184 u:2  jnc ?64
+dtx 
+dco @2a:186 u:2  mov R6,#((?i68)>>8)&255
+dco @2a:188 u:2  mov R7,#(?i68)&255
+dco @2a:18a u:2  mov R3,AR7
+dco @2a:18c u:2  mov R2,AR6
+dco @2a:18e u:2  mov R0,#COS
+dco @2a:190 u:2  mov R6,?i76
+dco @2a:192 u:2  mov R7,?i76+1
+dco @2a:194 u:2  mov R4,#XDS
+dco @2a:196 u:3  lcall _strcmp
+dco @2a:199 u:1  mov A,R6
+dco @2a:19a u:1  orl A,R7
+dco @2a:19b u:2  jnz ?58
+dhl         if(!strcmp(pc,"ON")) {
+dco @2a:19d u:2  mov R7,?i75
+dco @2a:19f u:2  mov R5,AR7
+dco @2a:1a1 u:1  dec R5
+dco @2a:1a2 u:2  mov R7,#1
+dco @2a:1a4 u:1  mov A,R7
+dco @2a:1a5 u:2  mov B,R5
+dco @2a:1a7 u:2  inc B
+dco @2a:1a9 u:2  sjmp ?_29
+dtx ?_30:
+dco @2a:1ab u:1  clr C
+dco @2a:1ac u:1  rlc A
+dtx ?_29:
+dco @2a:1ad u:3  djnz B,?_30
+dco @2a:1b0 u:1  mov R5,A
+dco @2a:1b1 u:2  mov R7,?main_3_en_tmp
+dco @2a:1b3 u:1  mov A,R7
+dco @2a:1b4 u:1  orl A,R5
+dco @2a:1b5 u:1  mov R7,A
+dco @2a:1b6 u:2  mov ?main_3_en_tmp,R7
+dhl           en_tmp|=1<<(i-1);
+dhl         }
+dco @2a:1b8 u:3  ljmp ?58
+dtx ?64:
+dhl       }else if(i==5){
+dco @2a:1bb u:2  mov A,#5
+dco @2a:1bd u:2  xrl A,?i75
+dco @2a:1bf u:2  jnz ?69
+dtx 
+dco @2a:1c1 u:2  mov R6,?i76
+dco @2a:1c3 u:2  mov R7,?i76+1
+dco @2a:1c5 u:3  lcall _atox
+dco @2a:1c8 u:2  mov R4,AR6
+dco @2a:1ca u:2  mov R5,AR7
+dtx  ; variable 'tmp' assigned to register 'RW45'
+dhl         unsigned short tmp=atox(pc);
+dhl         sevseg_data0=tmp>>8;
+dco @2a:1cc u:2  mov R7,#8
+dco @2a:1ce u:2  mov R6,AR4
+dco @2a:1d0 u:1  mov A,R5
+dco @2a:1d1 u:2  mov B,R7
+dco @2a:1d3 u:2  inc B
+dco @2a:1d5 u:2  sjmp ?_32
+dtx ?_33:
+dco @2a:1d7 u:1  xch A,R6
+dco @2a:1d8 u:1  clr C
+dco @2a:1d9 u:1  rrc A
+dco @2a:1da u:1  xch A,R6
+dco @2a:1db u:1  rrc A
+dtx ?_32:
+dco @2a:1dc u:3  djnz B,?_33
+dco @2a:1df u:1  mov R7,A
+dco @2a:1e0 u:2  mov _sevseg_data0,R7
+dhl         sevseg_data1=tmp&0xff;
+dco @2a:1e2 u:1  mov A,R5
+dco @2a:1e3 u:1  mov R7,A
+dco @2a:1e4 u:2  mov R6,#0
+dco @2a:1e6 u:2  mov _sevseg_data1,R7
+dhl       }else if(i>=6 && i<=12) {
+dco @2a:1e8 u:3  ljmp ?58
+dtx ?69:
+dtx 
+dco @2a:1eb u:2  mov R5,#6
+dco @2a:1ed u:2  mov R7,?i75
+dco @2a:1ef u:1  clr C
+dco @2a:1f0 u:1  mov A,R7
+dco @2a:1f1 u:1  subb A,R5
+dco @2a:1f2 u:2  jnc ?_34
+dco @2a:1f4 u:3  ljmp ?58
+dtx ?_34:
+dco @2a:1f7 u:2  mov R5,#12
+dco @2a:1f9 u:2  mov R7,?i75
+dco @2a:1fb u:1  setb C
+dco @2a:1fc u:1  mov A,R7
+dco @2a:1fd u:1  subb A,R5
+dco @2a:1fe u:2  jc ?_35
+dco @2a:200 u:3  ljmp ?58
+dtx ?_35:
+dtx 
+dco @2a:203 u:2  mov R6,#((?i68)>>8)&255
+dco @2a:205 u:2  mov R7,#(?i68)&255
+dco @2a:207 u:2  mov R3,AR7
+dco @2a:209 u:2  mov R2,AR6
+dco @2a:20b u:2  mov R0,#COS
+dco @2a:20d u:2  mov R6,?i76
+dco @2a:20f u:2  mov R7,?i76+1
+dco @2a:211 u:2  mov R4,#XDS
+dco @2a:213 u:3  lcall _strcmp
+dco @2a:216 u:1  mov A,R6
+dco @2a:217 u:1  orl A,R7
+dco @2a:218 u:2  jz ?_36
+dco @2a:21a u:3  ljmp ?58
+dtx ?_36:
+dhl         if(!strcmp(pc,"ON")) {
+dco @2a:21d u:2  mov R7,?i75
+dco @2a:21f u:2  mov A,#251
+dco @2a:221 u:1  add A,R7
+dco @2a:222 u:1  mov R5,A
+dco @2a:223 u:2  mov R7,#1
+dco @2a:225 u:1  mov A,R7
+dco @2a:226 u:2  mov B,R5
+dco @2a:228 u:2  inc B
+dco @2a:22a u:2  sjmp ?_37
+dtx ?_38:
+dco @2a:22c u:1  clr C
+dco @2a:22d u:1  rlc A
+dtx ?_37:
+dco @2a:22e u:3  djnz B,?_38
+dco @2a:231 u:1  mov R5,A
+dco @2a:232 u:2  mov R7,?main_3_p1_tmp
+dco @2a:234 u:1  mov A,R7
+dco @2a:235 u:1  orl A,R5
+dco @2a:236 u:1  mov R7,A
+dco @2a:237 u:2  mov ?main_3_p1_tmp,R7
+dhl           p1_tmp|=1<<(i-5);
+dhl         }
+dco @2a:239 u:3  ljmp ?58
+dtx ?60:
+dhl       }
+dhl       // ignore other Args...
+dhl     }
+dhl     P1=p1_tmp;
+dco @2a:23c u:3  mov _P1,?main_3_p1_tmp
+dhl     sevseg_en=en_tmp;
+dco @2a:23f u:3  mov _sevseg_en,?main_3_en_tmp
+dhl     
+dhl    }else{
+dco @2a:242 u:3  ljmp ?46
+dtx ?56:
+dtx 
+dco @2a:245 u:3  mov DPTR,#_hitcnt
+dco @2a:248 u:3  lcall __ld_dptr_r67
+dco @2a:24b u:1  inc R7
+dco @2a:24c u:1  mov A,R7
+dco @2a:24d u:2  jnz ?__2
+dco @2a:24f u:1  inc R6
+dtx ?__2:
+dco @2a:250 u:3  mov DPTR,#_hitcnt
+dco @2a:253 u:3  lcall __st_dptr_r67
+dhl     hitcnt++;
+dhl     sprintf(Hcnt,"%u",hitcnt);
+dco @2a:256 u:3  mov DPTR,#_hitcnt
+dco @2a:259 u:3  lcall __ld_dptr_r67
+dco @2a:25c u:2  mov _sprintf_formal_near,R6
+dco @2a:25e u:2  mov _sprintf_formal_near+1,R7
+dco @2a:260 u:2  mov R6,#((?i9)>>8)&255
+dco @2a:262 u:2  mov R7,#(?i9)&255
+dco @2a:264 u:2  mov R3,AR7
+dco @2a:266 u:2  mov R2,AR6
+dco @2a:268 u:2  mov R0,#COS
+dco @2a:26a u:2  mov R6,#((_Hcnt)>>8)&255
+dco @2a:26c u:2  mov R7,#(_Hcnt)&255
+dco @2a:26e u:2  mov R4,#XDS
+dco @2a:270 u:3  lcall _sprintf
+dhl     webpage_bind(socket,home); // HOME
+dco @2a:273 u:2  mov R4,#((_home)>>8)&255
+dco @2a:275 u:2  mov R5,#(_home)&255
+dco @2a:277 u:2  mov R7,?main_socket
+dco @2a:279 u:3  lcall _webpage_bind
+dhl    }
+dco @2a:27c u:3  ljmp ?46
+dtx ; end of function main
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:16 bytes
+dtx 
+dtx  .segment bss, sclass xram, notext
+dtx  .export _Hcnt ; xdata unsigned char Hcnt[6]
+dtx _Hcnt: ; xdata unsigned char Hcnt[6]
+dco @2b:0 u:6  .ds.b 6
+dtx  .export _C6 ; xdata unsigned char C6[8]
+dtx _C6: ; xdata unsigned char C6[8]
+dco @2b:6 u:8  .ds.b 8
+dtx  .export _C5 ; xdata unsigned char C5[8]
+dtx _C5: ; xdata unsigned char C5[8]
+dco @2b:e u:8  .ds.b 8
+dtx  .export _C4 ; xdata unsigned char C4[8]
+dtx _C4: ; xdata unsigned char C4[8]
+dco @2b:16 u:8  .ds.b 8
+dtx  .export _C3 ; xdata unsigned char C3[8]
+dtx _C3: ; xdata unsigned char C3[8]
+dco @2b:1e u:8  .ds.b 8
+dtx  .export _C2 ; xdata unsigned char C2[8]
+dtx _C2: ; xdata unsigned char C2[8]
+dco @2b:26 u:8  .ds.b 8
+dtx  .export _C1 ; xdata unsigned char C1[8]
+dtx _C1: ; xdata unsigned char C1[8]
+dco @2b:2e u:8  .ds.b 8
+dtx  .export _C0 ; xdata unsigned char C0[8]
+dtx _C0: ; xdata unsigned char C0[8]
+dco @2b:36 u:8  .ds.b 8
+dtx  .export _sevseg ; xdata unsigned char sevseg[5]
+dtx _sevseg: ; xdata unsigned char sevseg[5]
+dco @2b:3e u:5  .ds.b 5
+dtx  .export _En3 ; xdata unsigned char En3[8]
+dtx _En3: ; xdata unsigned char En3[8]
+dco @2b:43 u:8  .ds.b 8
+dtx  .export _En2 ; xdata unsigned char En2[8]
+dtx _En2: ; xdata unsigned char En2[8]
+dco @2b:4b u:8  .ds.b 8
+dtx  .export _En1 ; xdata unsigned char En1[8]
+dtx _En1: ; xdata unsigned char En1[8]
+dco @2b:53 u:8  .ds.b 8
+dtx  .export _En0 ; xdata unsigned char En0[8]
+dtx _En0: ; xdata unsigned char En0[8]
+dco @2b:5b u:8  .ds.b 8
+dtx  .export _aval_3 ; xdata unsigned char aval_3[5]
+dtx _aval_3: ; xdata unsigned char aval_3[5]
+dco @2b:63 u:5  .ds.b 5
+dtx  .export _aval_2 ; xdata unsigned char aval_2[5]
+dtx _aval_2: ; xdata unsigned char aval_2[5]
+dco @2b:68 u:5  .ds.b 5
+dtx  .export _aval_1 ; xdata unsigned char aval_1[5]
+dtx _aval_1: ; xdata unsigned char aval_1[5]
+dco @2b:6d u:5  .ds.b 5
+dtx  .export _aval_0 ; xdata unsigned char aval_0[5]
+dtx _aval_0: ; xdata unsigned char aval_0[5]
+dco @2b:72 u:5  .ds.b 5
+dtx  .import _ad_disp ; code unsigned char ad_disp[]
+dtx  .import _reply ; code unsigned char reply[]
+dtx  .import _io ; code unsigned char io[]
+dtx  .import _home ; code unsigned char home[]
+dtx  .import _LCD_write_line ; void LCD_write_line(char *, unsigned char)
+dtx  .import _LCD_init ; void LCD_init(void)
+dtx  .import _I2C_get ; unsigned char I2C_get(unsigned char)
+dtx  .import _I2C_send ; unsigned char I2C_send(unsigned char)
+dtx  .import _I2C_init ; void I2C_init(void)
+dtx  .import _I2C_stop ; void I2C_stop(void)
+dtx  .import _I2C_start ; void I2C_start(void)
+dtx  .import _DHCP_SetIP ; char DHCP_SetIP(void)
+dtx  .import _webpage_bind ; void webpage_bind(unsigned char, code unsigned char *)
+dtx  .import _url_getarg_str ; xdata unsigned char *url_getarg_str(void)
+dtx  .import _url_getarg_no ; unsigned char url_getarg_no(void)
+dtx  .import _webpage_name ; xdata unsigned char *webpage_name(void)
+dtx  .import _poll_webserver ; unsigned int poll_webserver(void)
+dtx  .import _Init_net ; unsigned char Init_net(void)
+dtx  .import _uc_socket ; xdata UC_SOCKET uc_socket[2]
+dtx  .import _my_ip ; xdata IP_ADR my_ip
+dtx  .import _sevseg_en ; near unsigned char sevseg_en
+dtx  .import _sevseg_data1 ; near unsigned char sevseg_data1
+dtx  .import _sevseg_data0 ; near unsigned char sevseg_data0
+dtx  .import _sevseg_ctrl ; near unsigned char sevseg_ctrl
+dtx  .import _RCAP2H ; near unsigned char RCAP2H
+dtx  .import _RCAP2L ; near unsigned char RCAP2L
+dtx  .import _TR2 ; bit unsigned char TR2
+dtx  .import _T2CON ; near unsigned char T2CON
+dtx  .import _P1 ; near unsigned char P1
+dtx  .import _TMOD ; near unsigned char TMOD
+dtx  .import _TR0 ; bit unsigned char TR0
+dtx  .import _SCON ; near unsigned char SCON
+dtx  .import _toupper ; char toupper(char)
+dtx  .import _strcpy ; far char *strcpy(far char *, far char *)
+dtx  .import _strcmp ; int strcmp(far char *, far char *)
+dtx  .import __wait_ms ; void _wait_ms(unsigned int) reentrant
+dtx  .import _sprintf ; int sprintf(far char *, far char *, ...)
+dtx  .import _puts ; int puts(far char *)
+dtx  .segment lit
+dtx ?i68: ; code char [3]
+dco @2c:0 u:3  .dc.b "ON",0
+dtx ?i41: ; code char [14]
+dco @2c:3 u:e  .dc.b "%u.%u.%u.%u  ",0
+dtx ?i40: ; code char [17]
+dco @2c:11 u:11  .dc.b "*FPGA-Webserver*",0
+dtx ?i35: ; code char [14]
+dco @2c:22 u:e  .dc.b "<NET FAILURE>",0
+dtx ?i16: ; code char [3]
+dco @2c:30 u:3  .dc.b "%x",0
+dtx ?i13: ; code char [8]
+dco @2c:33 u:8  .dc.b "checked",0
+dtx ?i9: ; code char [3]
+dco @2c:3b u:3  .dc.b "%u",0
+dtx  .export PRINTF_TYPE_u
+dtx PRINTF_TYPE_u=1
+dtx  .export PRINTF_TYPE_x
+dtx PRINTF_TYPE_x=1
+dtx  .end
+dhl 
+dhl /*   for(;;){
+dhl     i=url_getarg_no();
+dhl     if(!i) break;
+dhl     pc=url_getarg_str();
+dhl 
+dhl     printf("Arg A%u: '%s'\n",i,pc); // Opt. Show Args...
+dhl 
+dhl     if(i==1) strcpy(name,pc); // Copy without regarding max. len...
+dhl     else if(i==2) strcpy(cont,pc);
+dhl     else if(i==3) strcpy(adr,pc);    
+dhl    }*/
+dhl 
+dhl 
+dhl #ifdef LED
+dhl   }else if(res==EVENT_SOCKET_IDLETIMER){
+dhl               LED^=1; // *** BLINK LED ***
+dhl #endif
+dhl   }
+dhl 
+dhl      // else{ *** add a user-task here *** }
+dhl 
+dhl   } // for(;;)
+dhl 
+dhl }
+dhl 
+dhl 
+dhl // EOF
+def:_atox_chr @12:0
+def:_ad_measure @8:0
+def:_eval_io @f:0
+def:_aval_2 @2b:68
+def:_aval_3 @2b:63
+def:_aval_0 @2b:72
+def:_aval_1 @2b:6d
+def:_Hcnt @2b:0
+def:_hitcnt @0:0
+def:_sevseg @2b:3e
+def:_En0 @2b:5b
+def:_En1 @2b:53
+def:_En2 @2b:4b
+def:_En3 @2b:43
+def:PRINTF_TYPE_x @m:1
+def:PRINTF_TYPE_u @m:1
+def:__reset @1a:0
+def:_isxdigit @16:0
+def:_atox @19:0
+def:_main @2a:0
+def:_set_chkbox @c:0
+def:_C2 @2b:26
+def:_C3 @2b:1e
+def:_C0 @2b:36
+def:_C1 @2b:2e
+def:_C6 @2b:6
+def:_C4 @2b:16
+def:_C5 @2b:e
+objectend

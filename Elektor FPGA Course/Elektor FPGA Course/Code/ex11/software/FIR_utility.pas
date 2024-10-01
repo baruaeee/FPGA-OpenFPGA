@@ -1,0 +1,192 @@
+unit FIR_utility;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ComCtrls, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Button1: TButton;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Label5: TLabel;
+    Edit4: TEdit;
+    Label4: TLabel;
+    Edit5: TEdit;
+    SaveDialog1: TSaveDialog;
+    procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    procedure SaveHex (HexFile : String);
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.DFM}
+
+const
+  nr_of_coef = 128;
+
+var
+  High_Freq : Integer;
+  Low_Freq : Integer;
+  Sample_Freq : Integer;
+  Gain : Integer;
+  coef : array [0 .. (nr_of_coef-1)] of SmallInt;
+  t_coef : array [0 .. (nr_of_coef-1)] of Extended;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+var
+  High_Freq_new : SmallInt;
+begin
+  if (Edit1.Modified=True and (Length(Edit1.Text)>0))then
+  try
+    High_Freq := StrToInt(Edit1.Text);
+    Edit1.Font.Color:= clWindowText;
+  except
+    on E: EConvertError do
+      Edit1.Font.Color:= clRed;
+
+  end;
+
+end;
+
+procedure TForm1.Edit2Change(Sender: TObject);
+begin
+  if (Edit2.Modified=True and (Length(Edit2.Text)>0))then
+  try
+    Low_Freq := StrToInt(Edit2.Text);
+    Edit2.Font.Color:= clWindowText;
+  except
+    on E: EConvertError do
+      Edit2.Font.Color:= clRed;
+  end;
+
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Sample_Freq:=48000; { Default Samplefrequnecy is 48kHz}
+  Gain :=65535 div 4;
+  High_Freq := 4000;
+  Low_Freq := 1000;
+end;
+
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  count : Integer;
+  x,k,Ohmega : Extended;
+  Xfile : textfile;
+  sigma : Extended;
+begin
+  sigma:=0;
+  if (High_Freq>0) then
+  begin
+    for count:=0 to (nr_of_coef-1) do
+    begin
+
+    // calculate the coefficient based on the lowpass-specs
+      k := count-(nr_of_coef/2); // K is nr of Sample. In the middle we have sample nr 0
+      Ohmega:=High_Freq * 2 * Pi;
+      x:= Ohmega * k /Sample_Freq;
+      if (x<>0) then
+        t_coef[count] := Round((  Gain * (High_freq/Sample_Freq) *(Sin (x)/x)))
+      else
+        t_coef[count]:= Round( Gain * (High_freq/Sample_Freq));
+// Substract the coefficient based on the highpass-specs
+      Ohmega:=Low_freq * 2 * Pi;
+      x:= Ohmega * k /Sample_Freq;
+
+      if (x<>0) then
+        t_coef[count] := t_coef[count] -  Round((  Gain * (Low_freq/Sample_Freq) *(Sin (x)/x)))
+      else
+        t_coef[count]:= t_coef[count] - Round( Gain* (Low_freq/Sample_Freq));
+
+
+
+    // Apply the Hanning window to the coefficients
+      t_coef[count]:= t_coef[count] * ( 0.5 + 0.5*(cos(2*pi*(k/(nr_of_coef )))) );
+
+      sigma:=sigma + t_coef[count];
+    end; // Count
+
+    for count:=0 to (nr_of_coef-1) do
+    begin
+    // Convert to a signed word
+      coef[count]:=Round(t_coef[count]);
+//       coef[count]:=Round ((65535/sigma  )*t_coef[count]);
+    end;
+
+    AssignFile (XFile,'.\coef.csv');
+    Rewrite (XFile);
+    for count:=0 to (nr_of_coef-1) do
+    begin
+      WriteLn (XFile,IntToStr( Round(coef[count])));
+    end;
+    CloseFile (XFile);
+    if (SaveDialog1.Execute) then
+    begin
+      SaveHex (SaveDialog1.FileName);
+    end;
+  end; // High_Freq >0
+end;
+procedure TForm1.SaveHex (HexFile : String);
+var
+  linecount,wordleft,bytesinline : Integer;
+  linelength,adr:Integer;
+  HFile : TextFile;
+  worddata : word;
+  CRCSTring : string;
+  CRC : Byte;
+begin
+  ShowMessage (HexFile);
+  wordleft:=nr_of_coef;
+  adr:=0;
+  AssignFile (HFile,HexFile);
+  Rewrite (HFile);
+  while (wordleft>0) do // As long as there are coefficients to be written, we will do so....
+  begin
+// Write a complete HEX-line
+    if (wordleft>=16) then linelength:=16 else linelength:=wordleft;
+    wordleft:=wordleft-linelength;
+    Write (HFile,':'+IntToHex(linelength*2,2));//+IntToHex((linelength*2),2));
+    CRC:=((linelength*2)mod 256);
+    Write (HFile,IntToHex((adr div 2),4)+'00');
+    CRC:=CRC+(adr div 2);
+//Write DATA
+    while (linelength>0) do
+    begin
+      worddata:=Round(coef[adr div 2]);
+      Write (HFile,IntToHex(worddata,4));
+      adr:=adr+2;
+      linelength:=linelength-1;
+      CRC:=CRC+(worddata mod 256);
+      worddata:=worddata shr 8;
+      CRC:=CRC+worddata;
+    end;
+    CRCString:=IntToHex(((0-CRC) mod 256),2);
+    if (Length(CRCString)>2) then
+      CRCString:=Copy(CRCString,Length(CRCString)-1,2);
+    WriteLn (HFile,CRCString);
+  end;
+  WriteLn (HFile,':00000001FF');
+  CloseFile(HFile);
+end;
+
+end.

@@ -1,0 +1,311 @@
+<session jtag_chain="ByteBlasterMV [LPT1]" jtag_device="@1: EP1C12 (0x020830DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance compilation_mode="full" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set is_expanded="true" name="signal_set: 2006/02/02 16:35:49  #0">
+      <clock name="50MHz" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="T8052:inst|P1_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[7]" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="T8052:inst|P1_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P1_out[7]" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|P1_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|P1_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[0]"/>
+          </bus>
+        </setup_view>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|P1_out" order="msb_to_lsb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|P1_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P1_in[0]"/>
+          </bus>
+        </data_view>
+      </presentation>
+      <trigger CRC="5E751EBD" is_expanded="true" name="trigger: 2006/02/02 16:35:49  #1" position="pre" segment_size="1" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node>
+              <op_node left="313" top="127" type="Advanced Trigger Level Result"/>
+            </op_node>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2006/03/25 22:59:42  #0">
+      <clock name="50MHz" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="P0_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Rd_RMW" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Sel" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Wr" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="P0_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="P0_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|IO_RData[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|P0_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Data_Out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Rd_RMW" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Sel" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="T8052:inst|T51_Port:tp0|Wr" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="P0_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="P0_out[7]"/>
+            <net is_signal_inverted="no" name="P0_out[6]"/>
+            <net is_signal_inverted="no" name="P0_out[5]"/>
+            <net is_signal_inverted="no" name="P0_out[4]"/>
+            <net is_signal_inverted="no" name="P0_out[3]"/>
+            <net is_signal_inverted="no" name="P0_out[2]"/>
+            <net is_signal_inverted="no" name="P0_out[1]"/>
+            <net is_signal_inverted="no" name="P0_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|P0_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Rd_RMW"/>
+          <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Wr"/>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|T51_Port:tp0|Data_Out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|IO_RData" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Sel"/>
+        </data_view>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="P0_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="P0_out[7]"/>
+            <net is_signal_inverted="no" name="P0_out[6]"/>
+            <net is_signal_inverted="no" name="P0_out[5]"/>
+            <net is_signal_inverted="no" name="P0_out[4]"/>
+            <net is_signal_inverted="no" name="P0_out[3]"/>
+            <net is_signal_inverted="no" name="P0_out[2]"/>
+            <net is_signal_inverted="no" name="P0_out[1]"/>
+            <net is_signal_inverted="no" name="P0_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|P0_in" order="msb_to_lsb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|P0_in[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Rd_RMW"/>
+          <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Wr"/>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|T51_Port:tp0|Data_Out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Data_Out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="T8052:inst|IO_RData" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[7]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[6]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[5]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[4]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[3]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[2]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[1]"/>
+            <net is_signal_inverted="no" name="T8052:inst|IO_RData[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="T8052:inst|T51_Port:tp0|Sel"/>
+        </setup_view>
+      </presentation>
+      <trigger CRC="69A93792" global_temp="1" is_expanded="true" name="trigger: 2006/03/25 23:37:12  #0" position="pre" segment_size="1" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">'T8052:inst|P0_in[6]' == low &amp;&amp; 'T8052:inst|T51_Port:tp0|Sel' == rising edge
+            
+            
+            <op_node>
+              <op_node left="313" top="127" type="Advanced Trigger Level Result"/>
+            </op_node>
+          </level>
+        </events>
+        <data global_temp="1" name="log: 2006/03/25 23:37:12  #1" sample_depth="256" trigger_position="32">11111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111001111110011111100101011111111111110011111100111111001010111111111111100111111001111110010101111111111111001111110011111100101011111111111110011111100111111001010111111111111100111111001111110010101111111111111001111110011111100101011111111111110011111100111111001010111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111000000001111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111111111111111111001111110010001111111111111111111110011111100100011111111111111111111100111111001000111111110000000011111001111110010001111111100000000111110011111100100011111111111110011111100111111001110111111111111100111111001111110011101111111100000000111110011111100100111111111000000001111100111111001001101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110001111100000010111111000000001111100011111000000101111110000000011111000111110000001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000101111110000000011111010111110100001011111100000000111110101111101000010111111000000001111101011111010000</data>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data hierarchy T8052:inst" value="1"/>
+      <single attribute="data hierarchy root" value="3"/>
+      <single attribute="data horizontal scroll position" value="83"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="83"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="8"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="16352"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="sof manager hidden" value="1"/>
+    <multi attribute="column width" size="18" value="34,34,214,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="9" value="999,679,0,126,0,50,10,0,0"/>
+  </global_info>
+</session>

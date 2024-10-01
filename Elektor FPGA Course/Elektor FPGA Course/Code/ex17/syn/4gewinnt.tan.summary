@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.057 ns
+From           : SWITCH1
+To             : T8052:u0|T51:core51|T51_RAM_Altera:\Altera_MODEL:ram|wrdata_r[6]
+From Clock     : --
+To Clock       : clk_50MHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.523 ns
+From           : T8052:u0|sevenseg_if:SevSeg|LedReg[1][0]
+To             : SevenSeg_D_o[0]
+From Clock     : clk_50MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.879 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.711 ns
+From           : altera_internal_jtag
+To             : sld_hub:sld_hub_inst|sld_dffex:IRSR|Q[6]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll0:\use_dll:dll|altpll:altpll_component|_clk0'
+Slack          : 19.674 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 49.20 MHz ( period = 20.326 ns )
+From           : T8052:u0|rom_cyclone:Altera_rom|altsyncram:altsyncram_component|altsyncram_1tk1:auto_generated|altsyncram_u0o2:altsyncram1|ram_block3a3~porta_address_reg11
+To             : T8052:u0|rom_cyclone:Altera_rom|altsyncram:altsyncram_component|altsyncram_1tk1:auto_generated|altsyncram_u0o2:altsyncram1|ram_block3a4~porta_address_reg9
+From Clock     : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+To Clock       : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 101.96 MHz ( period = 9.808 ns )
+From           : T8052:u0|xram_cyclone:Altera_ram|altsyncram:altsyncram_component|altsyncram_ulh1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]
+To             : sld_hub:sld_hub_inst|hub_tdo~1382
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll0:\use_dll:dll|altpll:altpll_component|_clk0'
+Slack          : 0.762 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : InputSync:ISSw3|q1[0]
+To             : InputSync:ISSw3|q1[1]
+From Clock     : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+To Clock       : altpll0:\use_dll:dll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

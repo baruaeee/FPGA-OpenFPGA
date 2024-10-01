@@ -1,0 +1,57 @@
+Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+33
+1719
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+ex3
+# storage
+db|ex3.(0).cnf
+db|ex3.(0).cnf
+# case_insensitive
+# source_file
+ex3.bdf
+25fdfc769a604232efa5902ae13b2c89
+23
+# hierarchies {
+|
+}
+# end
+# entity
+ex3_VHDL
+# storage
+db|ex3.(1).cnf
+db|ex3.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ex3_VHDL.vhd
+6bf25f49fd43aaa2f15d4b74e9e6786e
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+ex3_VHDL:inst
+}
+# end
+# complete
+

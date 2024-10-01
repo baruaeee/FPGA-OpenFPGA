@@ -1,0 +1,1482 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'tcpip\dhcp.c', time: Thu Dec 14 11:33:34 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+	.include <reg52.def>
+ .export _send_DHCP_DISCOVER ; void send_DHCP_DISCOVER(unsigned char, xdata unsigned char *)
+ .hide
+ .segment _send_DHCP_DISCOVER_formal_near, size 0, fill, notext, sclass dram
+ .segment _send_DHCP_DISCOVER_local_near, size 3, fill, notext, sclass dram
+ .sgraph _send_DHCP_DISCOVER_formal_near, _send_DHCP_DISCOVER_local_near, __send_DHCP_DISCOVER
+?send_DHCP_DISCOVER_pBfr = _send_DHCP_DISCOVER_local_near+0 ; xdata unsigned char *
+?send_DHCP_DISCOVER_sock = _send_DHCP_DISCOVER_local_near+2 ; unsigned char
+ .sgraph _send_DHCP_DISCOVER_local_near, _memset_formal_near, __send_DHCP_DISCOVER, 3
+ .segment _memset_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _send_DHCP_DISCOVER_local_near, _xram_fast_copy_formal_near, __send_DHCP_DISCOVER, 3
+ .segment _xram_fast_copy_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _send_DHCP_DISCOVER_local_near, _send_socket_udp_formal_near, __send_DHCP_DISCOVER, 0
+ .segment _send_socket_udp_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __send_DHCP_DISCOVER
+_send_DHCP_DISCOVER: ; void send_DHCP_DISCOVER(unsigned char, xdata unsigned char *)
+ ; parameter 'pBfr' in 'RW45' moved and assigned to local '?send_DHCP_DISCOVER_pBfr'
+ ; parameter 'sock' in 'R7' moved and assigned to local '?send_DHCP_DISCOVER_sock'
+ mov ?send_DHCP_DISCOVER_pBfr,R4
+ mov ?send_DHCP_DISCOVER_pBfr+1,R5
+ mov ?send_DHCP_DISCOVER_sock,R7
+ .line "tcpip\dhcp.c" 32 0
+ mov DPH,?send_DHCP_DISCOVER_pBfr
+ mov DPL,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 38 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ inc R7
+ mov A,R7
+ jnz ?__1
+ inc R6
+?__1:
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 39 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#2
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#6
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 40 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#3
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ clr A
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 41 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#4
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R4,#18
+ mov R5,#52
+ mov R6,#86
+ mov R7,#112
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\dhcp.c" 42 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#8
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ clr A
+ mov R6,A
+ mov R7,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\dhcp.c" 43 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#10
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ clr A
+ mov R6,A
+ mov R7,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\dhcp.c" 45 1
+ mov R2,#2
+ mov R3,#24
+ clr A
+ mov R5,A
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#12
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ lcall _memset
+ .line "tcpip\dhcp.c" 48 1
+ mov R2,#0
+ mov R3,#6
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#28
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ mov R6,#((_my_mac)>>8)&255
+ mov R7,#(_my_mac)&255
+ lcall _xram_fast_copy
+ .line "tcpip\dhcp.c" 50 1
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#236
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R4,#99
+ mov R5,#130
+ mov R6,#83
+ mov R7,#99
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\dhcp.c" 53 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#240
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#53
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 54 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#241
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 55 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#242
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 56 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#243
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#55
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 57 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#244
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#5
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 58 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#245
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 59 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#246
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#3
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 60 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#247
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#6
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 61 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#248
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#58
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 62 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#249
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#59
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 64 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#250
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#12
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 65 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#251
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#4
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 68 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#252
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#70
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 69 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#253
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#80
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 70 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#254
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#71
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 71 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ mov A,#255
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#65
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 72 0
+ mov R6,?send_DHCP_DISCOVER_pBfr
+ mov R7,?send_DHCP_DISCOVER_pBfr+1
+ clr A
+ add A,R7
+ mov R7,A
+ mov A,#1
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#255
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 73 1
+ mov R2,#2
+ mov R3,#36
+ mov R4,?send_DHCP_DISCOVER_pBfr
+ mov R5,?send_DHCP_DISCOVER_pBfr+1
+ mov R7,?send_DHCP_DISCOVER_sock
+ lcall _send_socket_udp
+ ret
+; end of function send_DHCP_DISCOVER
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+
+ .export _send_DHCP_REQUEST ; void send_DHCP_REQUEST(unsigned char, xdata unsigned char *)
+ .hide
+ .segment _send_DHCP_REQUEST_formal_near, size 0, fill, notext, sclass dram
+ .segment _send_DHCP_REQUEST_local_near, size 3, fill, notext, sclass dram
+ .sgraph _send_DHCP_REQUEST_formal_near, _send_DHCP_REQUEST_local_near, __send_DHCP_REQUEST
+?send_DHCP_REQUEST_pBfr = _send_DHCP_REQUEST_local_near+0 ; xdata unsigned char *
+?send_DHCP_REQUEST_sock = _send_DHCP_REQUEST_local_near+2 ; unsigned char
+ .sgraph _send_DHCP_REQUEST_local_near, _memset_formal_near, __send_DHCP_REQUEST, 3
+ .segment _memset_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _send_DHCP_REQUEST_local_near, _xram_fast_copy_formal_near, __send_DHCP_REQUEST, 3
+ .segment _xram_fast_copy_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _send_DHCP_REQUEST_local_near, _send_socket_udp_formal_near, __send_DHCP_REQUEST, 0
+ .segment _send_socket_udp_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __send_DHCP_REQUEST
+_send_DHCP_REQUEST: ; void send_DHCP_REQUEST(unsigned char, xdata unsigned char *)
+ ; parameter 'pBfr' in 'RW45' moved and assigned to local '?send_DHCP_REQUEST_pBfr'
+ ; parameter 'sock' in 'R7' moved and assigned to local '?send_DHCP_REQUEST_sock'
+ mov ?send_DHCP_REQUEST_pBfr,R4
+ mov ?send_DHCP_REQUEST_pBfr+1,R5
+ mov ?send_DHCP_REQUEST_sock,R7
+ .line "tcpip\dhcp.c" 78 0
+ mov DPH,?send_DHCP_REQUEST_pBfr
+ mov DPL,?send_DHCP_REQUEST_pBfr+1
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 83 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ inc R7
+ mov A,R7
+ jnz ?__2
+ inc R6
+?__2:
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 84 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#2
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#6
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 85 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#3
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ clr A
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 86 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#4
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R4,#18
+ mov R5,#52
+ mov R6,#86
+ mov R7,#112
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\dhcp.c" 87 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#8
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ clr A
+ mov R6,A
+ mov R7,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\dhcp.c" 88 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#10
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ mov R6,#128
+ mov R7,#0
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\dhcp.c" 90 1
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#12
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov DPTR,#_my_ip
+ lcall __ld_dptr_r47
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\dhcp.c" 91 1
+ mov R2,#2
+ mov R3,#20
+ clr A
+ mov R5,A
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#16
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ lcall _memset
+ .line "tcpip\dhcp.c" 92 1
+ mov R2,#0
+ mov R3,#6
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#28
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ mov R6,#((_my_mac)>>8)&255
+ mov R7,#(_my_mac)&255
+ lcall _xram_fast_copy
+ .line "tcpip\dhcp.c" 93 1
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#236
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R4,#99
+ mov R5,#130
+ mov R6,#83
+ mov R7,#99
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r47
+ .line "tcpip\dhcp.c" 96 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#240
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#53
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 97 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#241
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 98 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#242
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#3
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 101 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#243
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#55
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 102 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#244
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#5
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 103 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#245
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 104 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#246
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#3
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 106 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#247
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#6
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 107 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#248
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#58
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 108 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#249
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#59
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 110 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#250
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#12
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 111 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#251
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#4
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 113 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#252
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#70
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 114 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#253
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#80
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 115 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#254
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#71
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 116 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ mov A,#255
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#65
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 117 0
+ mov R6,?send_DHCP_REQUEST_pBfr
+ mov R7,?send_DHCP_REQUEST_pBfr+1
+ clr A
+ add A,R7
+ mov R7,A
+ mov A,#1
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#255
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 118 1
+ mov R2,#2
+ mov R3,#36
+ mov R4,?send_DHCP_REQUEST_pBfr
+ mov R5,?send_DHCP_REQUEST_pBfr+1
+ mov R7,?send_DHCP_REQUEST_sock
+ lcall _send_socket_udp
+ ret
+; end of function send_DHCP_REQUEST
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+
+ .export _DefaultNetConfig ; void DefaultNetConfig(void)
+ .segment _DefaultNetConfig_formal_near, size 0, fill, notext, sclass dram
+ .segment _DefaultNetConfig_local_near, size 0, fill, notext, sclass dram
+ .sgraph _DefaultNetConfig_formal_near, _DefaultNetConfig_local_near, __DefaultNetConfig
+
+ .segment __DefaultNetConfig
+_DefaultNetConfig: ; (leaf function) void DefaultNetConfig(void)
+ .line "tcpip\dhcp.c" 122 0
+ mov DPTR,#_my_ip
+ mov A,#192
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 124 22
+ mov DPTR,#_my_ip+1
+ mov A,#168
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 124 43
+ mov DPTR,#_my_ip+2
+ clr A
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 124 62
+ mov DPTR,#_my_ip+3
+ mov A,#1
+ movx @DPTR,A
+ ret
+; end of function DefaultNetConfig
+; used: R-------- BR-------- DPTR ACC
+
+ .export _SetupTimer ; void SetupTimer(void)
+ .segment _SetupTimer_formal_near, size 0, fill, notext, sclass dram
+ .segment _SetupTimer_local_near, size 0, fill, notext, sclass dram
+ .sgraph _SetupTimer_formal_near, _SetupTimer_local_near, __SetupTimer
+
+ .segment __SetupTimer
+_SetupTimer: ; (leaf function) void SetupTimer(void)
+ .line "tcpip\dhcp.c" 128 22
+ clr _TF1
+ clr _TR1
+ .line "tcpip\dhcp.c" 130 1
+ anl _TMOD,#15
+ .line "tcpip\dhcp.c" 131 1
+ orl _TMOD,#16
+ .line "tcpip\dhcp.c" 133 1
+ clr A
+ mov _TH1,A
+ .line "tcpip\dhcp.c" 134 1
+ clr A
+ mov _TL1,A
+ .line "tcpip\dhcp.c" 135 2
+ setb _TR1
+ .line "tcpip\dhcp.c" 136 2
+ clr _ET1
+ ret
+; end of function SetupTimer
+; used: R-------- BR-------- ACC
+
+ .export _DHCP_SetIP ; char DHCP_SetIP(void)
+ .hide
+ .segment _DHCP_SetIP_formal_near, size 0, fill, notext, sclass dram
+ .segment _DHCP_SetIP_local_near, size 6, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_formal_near, _DHCP_SetIP_local_near, __DHCP_SetIP
+?DHCP_SetIP_type = _DHCP_SetIP_local_near+0 ; unsigned char
+?i52 = _DHCP_SetIP_local_near+1 ; unsigned char
+?DHCP_SetIP_e = _DHCP_SetIP_local_near+4 ; unsigned char
+?i53 = _DHCP_SetIP_local_near+4 ; unsigned char
+?DHCP_SetIP_i = _DHCP_SetIP_local_near+5 ; unsigned char
+?i54 = _DHCP_SetIP_local_near+5 ; unsigned char
+?DHCP_SetIP_pbuf = _DHCP_SetIP_local_near+2 ; xdata unsigned char *
+?DHCP_SetIP_RetryCnt = _DHCP_SetIP_local_near+1 ; unsigned char
+?i51 = _DHCP_SetIP_local_near+0 ; unsigned char
+ .sgraph _DHCP_SetIP_local_near, _open_socket_udp_formal_near, __DHCP_SetIP, 2
+ .segment _open_socket_udp_formal_near, size 2, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _puts_formal_near, __DHCP_SetIP, 2
+ .segment _puts_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _allocate_tx_buf_formal_near, __DHCP_SetIP, 2
+ .segment _allocate_tx_buf_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _send_DHCP_DISCOVER_formal_near, __DHCP_SetIP, 5
+ .segment _send_DHCP_DISCOVER_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _SetupTimer_formal_near, __DHCP_SetIP, 5
+ .segment _SetupTimer_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _poll_net_formal_near, __DHCP_SetIP, 6
+ .segment _poll_net_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _parseDHCPMSG_formal_near, __DHCP_SetIP, 6
+ .segment _parseDHCPMSG_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _free_tx_buf_formal_near, __DHCP_SetIP, 4
+ .segment _free_tx_buf_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _close_socket_udp_formal_near, __DHCP_SetIP, 4
+ .segment _close_socket_udp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _DefaultNetConfig_formal_near, __DHCP_SetIP, 4
+ .segment _DefaultNetConfig_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _send_DHCP_REQUEST_formal_near, __DHCP_SetIP, 5
+ .segment _send_DHCP_REQUEST_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _SetupTimer_formal_near, __DHCP_SetIP, 5
+ .segment _SetupTimer_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _poll_net_formal_near, __DHCP_SetIP, 6
+ .segment _poll_net_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _parseDHCPMSG_formal_near, __DHCP_SetIP, 6
+ .segment _parseDHCPMSG_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _DefaultNetConfig_formal_near, __DHCP_SetIP, 4
+ .segment _DefaultNetConfig_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _free_tx_buf_formal_near, __DHCP_SetIP, 0
+ .segment _free_tx_buf_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _DHCP_SetIP_local_near, _close_socket_udp_formal_near, __DHCP_SetIP, 0
+ .segment _close_socket_udp_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __DHCP_SetIP
+_DHCP_SetIP: ; char DHCP_SetIP(void)
+ ; variable 'type' allocated as 'auto'
+ .line "tcpip\dhcp.c" 141 0
+ clr A
+ mov ?DHCP_SetIP_type,A
+ ; variable 'RetryCnt' allocated as 'auto'
+ .line "tcpip\dhcp.c" 151 1
+ clr A
+ mov ?DHCP_SetIP_RetryCnt,A
+ .line "tcpip\dhcp.c" 155 0
+ mov DPTR,#_uc_socket+50
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 155 35
+ mov DPTR,#_uc_socket+50+14
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#68
+ movx @DPTR,A
+ .line "tcpip\dhcp.c" 155 68
+ mov _open_socket_udp_formal_near,#0
+ mov _open_socket_udp_formal_near+1,#67
+ mov R0,#255
+ mov R1,#255
+ mov R2,#255
+ mov R3,#255
+ mov R7,#1
+ lcall _open_socket_udp
+ mov A,R6
+ orl A,R7
+ jz ?10
+ .line "tcpip\dhcp.c" 156 46
+ mov R6,#((?i12)>>8)&255
+ mov R7,#(?i12)&255
+ mov R4,#COS
+ lcall _puts
+ .line "tcpip\dhcp.c" 158 9
+ clr A
+ mov R7,A
+ ljmp ?9
+?10:
+ .line "tcpip\dhcp.c" 160 1
+ lcall _allocate_tx_buf
+ ; variable 'pbuf' allocated as 'auto'
+ mov ?DHCP_SetIP_pbuf,R6
+ mov ?DHCP_SetIP_pbuf+1,R7
+ ljmp ?14
+?13:
+ ; variable 'e' allocated as 'auto'
+ .line "tcpip\dhcp.c" 162 1
+ clr A
+ mov ?DHCP_SetIP_e,A
+ .line "tcpip\dhcp.c" 164 2
+ mov R4,?DHCP_SetIP_pbuf
+ mov R5,?DHCP_SetIP_pbuf+1
+ mov R7,#1
+ lcall _send_DHCP_DISCOVER
+ .line "tcpip\dhcp.c" 165 4
+ lcall _SetupTimer
+ ; variable 'i' allocated as 'auto'
+ .line "tcpip\dhcp.c" 167 6
+ clr A
+ mov ?DHCP_SetIP_i,A
+ sjmp ?19
+?16:
+ .line "tcpip\dhcp.c" 168 2
+ clr _TF1
+ sjmp ?21
+?20:
+ .line "tcpip\dhcp.c" 171 18
+ lcall _poll_net
+ mov R4,AR6
+ mov R5,AR7
+ ; variable 'res' assigned to register 'RW45'
+ .line "tcpip\dhcp.c" 173 8
+ mov R7,#0
+ mov A,R4
+ mov R6,A
+ cjne R7,#0,?23
+ cjne R6,#226,?23
+ .line "tcpip\dhcp.c" 174 7
+ mov A,R5
+ mov R7,A
+ mov R6,#0
+ lcall _parseDHCPMSG
+ mov ?DHCP_SetIP_type,R7
+ .line "tcpip\dhcp.c" 176 14
+ mov A,#2
+ xrl A,?DHCP_SetIP_type
+ jnz ?25
+ .line "tcpip\dhcp.c" 177 11
+ mov ?DHCP_SetIP_e,#1
+ .line "tcpip\dhcp.c" 180 11
+ sjmp ?22
+?25:
+ .line "tcpip\dhcp.c" 182 7
+?23:
+ .line "tcpip\dhcp.c" 185 6
+?21:
+ .line "tcpip\dhcp.c" 171 12
+ jnb _TF1,?20
+?22:
+ .line "tcpip\dhcp.c" 186 2
+ inc ?DHCP_SetIP_i
+?19:
+ .line "tcpip\dhcp.c" 167 14
+ mov R5,#32
+ mov R7,?DHCP_SetIP_i
+ clr C
+ mov A,AR7
+ subb A,AR5
+ jnc ?27
+ mov A,?DHCP_SetIP_e
+ jz ?16
+?27:
+ .line "tcpip\dhcp.c" 187 6
+ mov A,#2
+ xrl A,?DHCP_SetIP_type
+ .line "tcpip\dhcp.c" 187 17
+ jz ?15
+ .line "tcpip\dhcp.c" 189 13
+ mov R5,?DHCP_SetIP_RetryCnt
+ mov R7,AR5
+ inc R7
+ mov ?DHCP_SetIP_RetryCnt,R7
+ mov R7,#10
+ setb C
+ mov A,R5
+ subb A,R7
+ jc ?30
+ .line "tcpip\dhcp.c" 189 29
+ clr _TR1
+ .line "tcpip\dhcp.c" 192 3
+ mov R6,?DHCP_SetIP_pbuf
+ mov R7,?DHCP_SetIP_pbuf+1
+ lcall _free_tx_buf
+ .line "tcpip\dhcp.c" 193 3
+ mov R7,#1
+ lcall _close_socket_udp
+ .line "tcpip\dhcp.c" 194 3
+ lcall _DefaultNetConfig
+ .line "tcpip\dhcp.c" 195 10
+ clr A
+ mov R7,A
+ ljmp ?9
+?30:
+ .line "tcpip\dhcp.c" 197 1
+?14:
+ .line "tcpip\dhcp.c" 161 7
+ ljmp ?13
+?15:
+ ; variable 'RetryCnt' allocated as 'auto'
+ .line "tcpip\dhcp.c" 199 1
+ clr A
+ mov ?i51,A
+ ; variable 'type' allocated as 'auto'
+ .line "tcpip\dhcp.c" 200 1
+ clr A
+ mov ?i52,A
+ ljmp ?33
+?32:
+ ; variable 'e' allocated as 'auto'
+ .line "tcpip\dhcp.c" 205 1
+ clr A
+ mov ?i53,A
+ .line "tcpip\dhcp.c" 207 2
+ mov R4,?DHCP_SetIP_pbuf
+ mov R5,?DHCP_SetIP_pbuf+1
+ mov R7,#1
+ lcall _send_DHCP_REQUEST
+ .line "tcpip\dhcp.c" 208 4
+ lcall _SetupTimer
+ ; variable 'i' allocated as 'auto'
+ .line "tcpip\dhcp.c" 212 6
+ clr A
+ mov ?i54,A
+ sjmp ?38
+?35:
+ .line "tcpip\dhcp.c" 213 2
+ clr _TF1
+ sjmp ?40
+?39:
+ .line "tcpip\dhcp.c" 215 18
+ lcall _poll_net
+ mov R4,AR6
+ mov R5,AR7
+ ; variable 'res' assigned to register 'RW45'
+ .line "tcpip\dhcp.c" 217 8
+ mov R7,#0
+ mov A,R4
+ mov R6,A
+ cjne R7,#0,?42
+ cjne R6,#226,?42
+ .line "tcpip\dhcp.c" 218 5
+ mov A,R5
+ mov R7,A
+ mov R6,#0
+ lcall _parseDHCPMSG
+ mov ?i52,R7
+ .line "tcpip\dhcp.c" 220 10
+ mov A,#5
+ xrl A,?i52
+ jnz ?44
+ .line "tcpip\dhcp.c" 221 6
+ mov ?i53,#1
+ .line "tcpip\dhcp.c" 224 10
+ sjmp ?41
+?44:
+ .line "tcpip\dhcp.c" 226 5
+?42:
+ .line "tcpip\dhcp.c" 229 6
+?40:
+ .line "tcpip\dhcp.c" 215 12
+ jnb _TF1,?39
+?41:
+ .line "tcpip\dhcp.c" 230 2
+ inc ?i54
+?38:
+ .line "tcpip\dhcp.c" 212 14
+ mov R5,#32
+ mov R7,?i54
+ clr C
+ mov A,AR7
+ subb A,AR5
+ jnc ?46
+ mov A,?i53
+ jz ?35
+?46:
+ .line "tcpip\dhcp.c" 231 6
+ mov A,#5
+ xrl A,?i52
+ .line "tcpip\dhcp.c" 231 17
+ jz ?34
+ .line "tcpip\dhcp.c" 233 12
+ mov R5,?i51
+ mov R7,AR5
+ inc R7
+ mov ?i51,R7
+ mov R7,#10
+ setb C
+ mov A,R5
+ subb A,R7
+ jc ?49
+ .line "tcpip\dhcp.c" 233 28
+ lcall _DefaultNetConfig
+ .line "tcpip\dhcp.c" 237 3
+ sjmp ?34
+?49:
+ .line "tcpip\dhcp.c" 240 1
+?33:
+ .line "tcpip\dhcp.c" 204 7
+ ljmp ?32
+?34:
+ .line "tcpip\dhcp.c" 242 1
+ mov R6,?DHCP_SetIP_pbuf
+ mov R7,?DHCP_SetIP_pbuf+1
+ lcall _free_tx_buf
+ .line "tcpip\dhcp.c" 243 1
+ mov R7,#1
+ lcall _close_socket_udp
+ .line "tcpip\dhcp.c" 245 2
+ clr _TR1
+ .line "tcpip\dhcp.c" 246 8
+ mov R7,#1
+?9:
+ ret
+; end of function DHCP_SetIP
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:6 bytes
+
+ .export _parseDHCPMSG ; char parseDHCPMSG(unsigned char)
+ .hide
+ .segment _parseDHCPMSG_formal_near, size 0, fill, notext, sclass dram
+ .segment _parseDHCPMSG_local_near, size 7, fill, notext, sclass dram
+ .sgraph _parseDHCPMSG_formal_near, _parseDHCPMSG_local_near, __parseDHCPMSG
+?parseDHCPMSG_e = _parseDHCPMSG_local_near+3 ; xdata unsigned char *
+?i75 = _parseDHCPMSG_local_near+5 ; xdata unsigned char *
+?i74 = _parseDHCPMSG_local_near+5 ; xdata unsigned char *
+?i72 = _parseDHCPMSG_local_near+1 ; xdata unsigned char *
+?parseDHCPMSG_type = _parseDHCPMSG_local_near+0 ; unsigned char
+ .sgraph _parseDHCPMSG_local_near, _xram_fast_copy_formal_near, __parseDHCPMSG, 7
+ .segment _xram_fast_copy_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _parseDHCPMSG_local_near, _xram_fast_copy_formal_near, __parseDHCPMSG, 7
+ .segment _xram_fast_copy_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __parseDHCPMSG
+_parseDHCPMSG: ; char parseDHCPMSG(unsigned char)
+ ; parameter 'sock' in 'R7'
+ .line "tcpip\dhcp.c" 251 0
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#50
+ lcall __mul_i2
+ mov R4,#((_uc_socket+12)>>8)&255
+ mov R5,#(_uc_socket+12)&255
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ mov A,R7
+ xrl A,#67
+ orl A,R6
+ jnz ?57
+ .line "tcpip\dhcp.c" 257 1
+ mov DPTR,#_rcv_buf+16
+ lcall __ld_dptr_r47
+ mov DPTR,#_my_ip
+ lcall __st_dptr_r47
+ .line "tcpip\dhcp.c" 259 1
+?57:
+ ; variable 'type' allocated as 'auto'
+ .line "tcpip\dhcp.c" 260 1
+ clr A
+ mov ?parseDHCPMSG_type,A
+ .line "tcpip\dhcp.c" 261 1
+ mov R6,#((_rcv_buf)>>8)&255
+ mov R7,#(_rcv_buf)&255
+ ; variable 'p' assigned to register 'RW67'
+ .line "tcpip\dhcp.c" 262 1
+ mov A,#240
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ ; variable 'p' allocated as 'auto'
+ mov ?i72,R6
+ mov ?i72+1,R7
+ .line "tcpip\dhcp.c" 263 1
+ mov DPTR,#_rcv_len
+ lcall __ld_dptr_r67
+ mov A,#16
+ add A,R7
+ mov R7,A
+ mov A,#255
+ addc A,R6
+ mov R6,A
+ mov A,?i72+1
+ add A,R7
+ mov R7,A
+ mov A,?i72
+ addc A,R6
+ mov R6,A
+ ; variable 'e' allocated as 'auto'
+ mov ?parseDHCPMSG_e,R6
+ mov ?parseDHCPMSG_e+1,R7
+ ljmp ?60
+?59:
+ .line "tcpip\dhcp.c" 266 1
+ mov DPH,?i72
+ mov DPL,?i72+1
+ mov A,#1
+ add A,DPL
+ mov ?i72+1,A
+ clr A
+ addc A,DPH
+ mov ?i72,A
+ movx A,@DPTR
+ mov R5,A
+ xrl A,#53
+ jz ?67
+ mov R7,#53
+ setb C
+ mov A,R5
+ subb A,R7
+ jnc ?71
+ mov A,R5
+ jnz ?_21
+ ljmp ?63
+?_21:
+ mov A,R5
+ xrl A,#1
+ jz ?68
+ mov A,R5
+ xrl A,#3
+ jnz ?_23
+ ljmp ?69
+?_23:
+ ljmp ?62
+?71:
+ mov A,R5
+ cpl A
+ jz ?65
+ ljmp ?62
+ .line "tcpip\dhcp.c" 269 2
+?65:
+ .line "tcpip\dhcp.c" 271 14
+ mov R7,?parseDHCPMSG_type
+ ljmp ?56
+ .line "tcpip\dhcp.c" 273 4
+?67:
+ .line "tcpip\dhcp.c" 279 4
+ mov R6,?i72
+ mov R7,?i72+1
+ inc R7
+ mov A,R7
+ jnz ?__3
+ inc R6
+?__3:
+ ; variable 'p' assigned to register 'RW67'
+ .line "tcpip\dhcp.c" 280 4
+ mov DPH,R6
+ mov DPL,R7
+ mov A,#1
+ add A,DPL
+ mov ?i72+1,A
+ clr A
+ addc A,DPH
+ mov ?i72,A
+ movx A,@DPTR
+ mov R7,A
+ mov ?parseDHCPMSG_type,R7
+ .line "tcpip\dhcp.c" 281 4
+ ljmp ?63
+?68:
+ ; variable 'p' allocated as 'auto'
+ .line "tcpip\dhcp.c" 284 4
+ mov A,#1
+ add A,?i72+1
+ mov ?i74+1,A
+ clr A
+ addc A,?i72
+ mov ?i74,A
+ .line "tcpip\dhcp.c" 285 1
+ mov R2,#0
+ mov R3,#4
+ mov R4,#((_subnet_ip)>>8)&255
+ mov R5,#(_subnet_ip)&255
+ mov R6,?i74
+ mov R7,?i74+1
+ lcall _xram_fast_copy
+ .line "tcpip\dhcp.c" 286 4
+ mov A,#4
+ add A,?i74+1
+ mov ?i72+1,A
+ clr A
+ addc A,?i74
+ mov ?i72,A
+ .line "tcpip\dhcp.c" 287 4
+ sjmp ?63
+?69:
+ ; variable 'p' allocated as 'auto'
+ .line "tcpip\dhcp.c" 290 4
+ mov A,#1
+ add A,?i72+1
+ mov ?i75+1,A
+ clr A
+ addc A,?i72
+ mov ?i75,A
+ .line "tcpip\dhcp.c" 291 1
+ mov R2,#0
+ mov R3,#4
+ mov R4,#((_gateway_ip)>>8)&255
+ mov R5,#(_gateway_ip)&255
+ mov R6,?i75
+ mov R7,?i75+1
+ lcall _xram_fast_copy
+ .line "tcpip\dhcp.c" 292 4
+ mov A,#4
+ add A,?i75+1
+ mov ?i72+1,A
+ clr A
+ addc A,?i75
+ mov ?i72,A
+ .line "tcpip\dhcp.c" 293 4
+ sjmp ?63
+ .line "tcpip\dhcp.c" 302 4
+?62:
+ .line "tcpip\dhcp.c" 304 4
+ mov DPH,?i72
+ mov DPL,?i72+1
+ mov R6,DPH
+ mov R7,DPL
+ mov A,#1
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ ; variable 'p' assigned to register 'RW45'
+ movx A,@DPTR
+ mov R7,A
+ ; variable 'opt_len' assigned to register 'R7'
+ .line "tcpip\dhcp.c" 305 4
+ mov R6,#0
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov ?i72,R6
+ mov ?i72+1,R7
+ .line "tcpip\dhcp.c" 306 4
+?63:
+ .line "tcpip\dhcp.c" 308 1
+?60:
+ .line "tcpip\dhcp.c" 265 9
+ mov R6,?parseDHCPMSG_e
+ mov R7,?parseDHCPMSG_e+1
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#XDS
+ mov R6,?i72
+ mov R7,?i72+1
+ mov R4,#XDS
+ clr C
+ lcall __cmp_u4
+ jnc ?_25
+ ljmp ?59
+?_25:
+ .line "tcpip\dhcp.c" 310 11
+ mov R7,?parseDHCPMSG_type
+?56:
+ ret
+; end of function parseDHCPMSG
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:7 bytes
+
+ .import _xram_fast_copy ; void xram_fast_copy(xdata unsigned char *, xdata unsigned char *, unsigned int)
+ .import _memset ; void memset(xdata unsigned char *, char, unsigned int)
+ .import _poll_net ; unsigned int poll_net(void)
+ .import _close_socket_udp ; unsigned int close_socket_udp(unsigned char)
+ .import _send_socket_udp ; unsigned int send_socket_udp(unsigned char, xdata unsigned char *, unsigned int)
+ .import _open_socket_udp ; unsigned int open_socket_udp(unsigned char, unsigned long, unsigned int)
+ .import _free_tx_buf ; void free_tx_buf(xdata unsigned char *)
+ .import _allocate_tx_buf ; xdata unsigned char *allocate_tx_buf(void)
+ .import _rcv_len ; xdata unsigned int rcv_len
+ .import _rcv_buf ; xdata unsigned char rcv_buf[1400]
+ .import _uc_socket ; xdata UC_SOCKET uc_socket[2]
+ .import _gateway_ip ; xdata IP_ADR gateway_ip
+ .import _subnet_ip ; xdata IP_ADR subnet_ip
+ .import _my_ip ; xdata IP_ADR my_ip
+ .import _my_mac ; xdata unsigned char my_mac[6]
+ .import _puts ; int puts(far char *)
+ .import _ET1 ; bit unsigned char ET1
+ .import _TMOD ; near unsigned char TMOD
+ .import _TH1 ; near unsigned char TH1
+ .import _TL1 ; near unsigned char TL1
+ .import _TF1 ; bit unsigned char TF1
+ .import _TR1 ; bit unsigned char TR1
+ .segment lit
+?i12: ; code char [26]
+ .dc.b "Error opening UDP Socket",13,0
+ .end
+; *END* (1266 lines)

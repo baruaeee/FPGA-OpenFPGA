@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Dec 12 10:40:35 2006
+Quartus II Version : 6.0 Build 202 06/20/2006 SP 1 SJ Web Edition
+Revision Name : ex24
+Top-level Entity Name : T8052_Toplevel
+Family : Cyclone
+Device : EP1C12F256C6
+Timing Models : Final
+Total logic elements : 5,215 / 12,060 ( 43 % )
+Total pins : 101 / 185 ( 55 % )
+Total virtual pins : 0
+Total memory bits : 193,536 / 239,616 ( 81 % )
+Total PLLs : 1 / 2 ( 50 % )

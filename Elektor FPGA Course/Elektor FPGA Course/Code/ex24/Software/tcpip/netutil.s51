@@ -1,0 +1,184 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'tcpip\netutil.c', time: Wed Dec 13 13:00:41 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+ .export _net_match_ulong ; unsigned char net_match_ulong(unsigned long)
+ .hide
+ .segment _net_match_ulong_formal_near, size 0, fill, notext, sclass dram
+ .segment _net_match_ulong_local_near, size 4, fill, notext, sclass dram
+ .sgraph _net_match_ulong_formal_near, _net_match_ulong_local_near, __net_match_ulong
+?net_match_ulong_m = _net_match_ulong_local_near+0 ; unsigned long
+ .sgraph _net_match_ulong_local_near, _Read_Frame_long_Phy_formal_near, __net_match_ulong, 4
+ .segment _Read_Frame_long_Phy_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __net_match_ulong
+_net_match_ulong: ; unsigned char net_match_ulong(unsigned long)
+ ; parameter 'm' in 'RL4567' moved and assigned to local '?net_match_ulong_m'
+ mov A,#?net_match_ulong_m
+ lcall __st_a_r47
+ .line "tcpip\netutil.c" 32 38
+ lcall _Read_Frame_long_Phy
+ lcall __movel_4_0
+ mov A,#?net_match_ulong_m
+ lcall __ld_a_r47
+ clr C
+ lcall __cmp_i4
+ jz ?2
+ .line "tcpip\netutil.c" 33 37
+ mov R7,#1
+ sjmp ?1
+?2:
+ .line "tcpip\netutil.c" 34 8
+ clr A
+ mov R7,A
+?1:
+ ret
+; end of function net_match_ulong
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+
+ .export _net_match_uint ; unsigned char net_match_uint(unsigned int)
+ .hide
+ .segment _net_match_uint_formal_near, size 0, fill, notext, sclass dram
+ .segment _net_match_uint_local_near, size 2, fill, notext, sclass dram
+ .sgraph _net_match_uint_formal_near, _net_match_uint_local_near, __net_match_uint
+?net_match_uint_m = _net_match_uint_local_near+0 ; unsigned int
+ .sgraph _net_match_uint_local_near, _Read_Frame_word_Phy_formal_near, __net_match_uint, 2
+ .segment _Read_Frame_word_Phy_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __net_match_uint
+_net_match_uint: ; unsigned char net_match_uint(unsigned int)
+ ; parameter 'm' in 'RW67' moved and assigned to local '?net_match_uint_m'
+ mov ?net_match_uint_m,R6
+ mov ?net_match_uint_m+1,R7
+ .line "tcpip\netutil.c" 42 28
+ lcall _Read_Frame_word_Phy
+ mov R4,AR6
+ mov R5,AR7
+ mov R6,?net_match_uint_m
+ mov R7,?net_match_uint_m+1
+ mov A,R7
+ xrl A,R5
+ jnz ?_2
+ mov A,R6
+ xrl A,R4
+ jz ?5
+?_2:
+ .line "tcpip\netutil.c" 43 37
+ mov R7,#1
+ sjmp ?4
+?5:
+ .line "tcpip\netutil.c" 44 8
+ clr A
+ mov R7,A
+?4:
+ ret
+; end of function net_match_uint
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+
+	.segment __ip_check
+	.export _ip_check, _ip_check_more
+_ip_check:		; Adr: R6:R7, len: R4:R5, tmp: B
+	clr A		; R6:7 working reg. (delayed in R2:3)
+	mov R2,A
+	mov R3,A
+
+_ip_check_more:		; Adr: R6:R7, len: R4:R5, tmp: B, old_cs in R2:R3
+	mov DPL,R7
+	mov DPH,R6
+	mov R6,2	; CS Working register, copy from R2
+	mov R7,3	; R3
+	mov B,#0	;
+	mov A,R4	; omit 0 words len
+	orl A,R5
+	jz ?csx
+	mov A,R5	; prepare to use 2 djnz
+	jz ?cs1
+	inc R4
+?cs1:	movx A,@DPTR
+	inc DPTR
+	jnb B.0,?csh
+	add A,R7
+	mov R7,A
+	jnc ?cs2
+	inc R6
+	mov A,R6
+	jnz ?cs2
+	inc R7
+	sjmp ?cs2
+?csh:	add A,R6
+	mov R6,A
+	jnc ?cs2
+	inc R7
+	mov A,R7
+	jnz ?cs2
+	inc R6
+?cs2:	inc B
+	djnz R5,?cs1
+	djnz R4,?cs1
+?csx:
+	ret
+	.segment __xram_fast_copy
+	.export _xram_fast_copy
+_xram_fast_copy:
+	; src in R6/R7
+	; dest in R4/R5
+	; len in R2/R3
+	mov A,R3	; prepare to use 2 djnz
+	jz ?xfc1
+	inc R2
+?xfc1:	; get from source byte
+	mov DPL,R7
+	mov DPH,R6
+	movx A,@DPTR
+	inc DPTR
+	mov R7,DPL
+	mov R6,DPH
+	; write to dest byte
+	mov DPL,R5
+	mov DPH,R4
+	movx @DPTR,A
+	inc DPTR
+	mov R5,DPL
+	mov R4,DPH
+	; loop
+	djnz R3,?xfc1
+	djnz R2,?xfc1
+	ret
+ .import _Read_Frame_long_Phy ; unsigned long Read_Frame_long_Phy(void)
+ .import _Read_Frame_word_Phy ; unsigned int Read_Frame_word_Phy(void)
+ .end
+; *END* (39 lines)

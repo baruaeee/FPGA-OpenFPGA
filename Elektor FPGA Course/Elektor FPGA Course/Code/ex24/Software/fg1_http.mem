@@ -1,0 +1,296 @@
+binary:fg1_http.bin start:0 end:2d09 size:2d0a
+sclass:text start:0 end:2d09 size:2d0a
+sclass:xram start:0 end:31b size:31c
+sclass:dram start:20 end:43 size:24
+segment:___reset sclass:text start:0 end:2 size:3
+segment:___st_dptr_r23 sclass:text start:3 end:8 size:6
+segment:_irq_timer0int sclass:text start:b end:d size:3
+segment:___ldc_dptr_r45 sclass:text start:e end:15 size:8
+segment:___ldc_dptr_r23 sclass:text start:16 end:1d size:8
+segment:neardata sclass:dram start:40 end:43 size:4 load:1e
+segment:___ser_irq sclass:text start:23 end:25 size:3
+segment:__periodical_socket sclass:text start:26 end:5c size:37
+segment:__retransmit_socket sclass:text start:5d end:164 size:108
+segment:___ld_dptr_r03 sclass:text start:165 end:170 size:c
+segment:___ld_dptr_r47 sclass:text start:171 end:17c size:c
+segment:___init_all sclass:text start:17d end:186 size:a
+segment:___startup sclass:text start:187 end:1a1 size:1b
+segment:__process_TCP sclass:text start:1a2 end:388 size:1e7
+segment:__process_IP sclass:text start:389 end:45f size:d7
+segment:___wait_ms sclass:text start:460 end:472 size:13
+segment:__url_getarg_no sclass:text start:473 end:4ea size:78
+segment:___st_dptr_r45 sclass:text start:4eb end:4f0 size:6
+segment:___st_dptr_r47 sclass:text start:4f1 end:4fc size:c
+segment:__send_match_ok_TCP sclass:text start:4fd end:586 size:8a
+segment:__send_TCP sclass:text start:587 end:6c0 size:13a
+segment:___ld_dptr_r23 sclass:text start:6c1 end:6c6 size:6
+segment:___ld_dptr_r45 sclass:text start:6c7 end:6cc size:6
+segment:__state_machine_TCP sclass:text start:6cd end:a83 size:3b7
+segment:__final_timeout_socket sclass:text start:a84 end:aae size:2b
+segment:___ld_dptr_r67 sclass:text start:aaf end:ab4 size:6
+segment:___st_dptr_r03 sclass:text start:ab5 end:ac0 size:c
+segment:___st_dptr_r67 sclass:text start:ac1 end:ac6 size:6
+segment:__Init_net sclass:text start:ac7 end:ae9 size:23
+segment:__net_match_ulong sclass:text start:aea end:b06 size:1d
+segment:__timer0int sclass:text start:b07 end:b1e size:18
+segment:__net_match_uint sclass:text start:b1f end:b3c size:1e
+segment:__ip_check sclass:text start:b3d end:b72 size:36
+segment:__xram_fast_copy sclass:text start:b73 end:b8f size:1d
+segment:__main sclass:text start:b90 end:d17 size:188
+segment:__poll_webserver sclass:text start:d18 end:fd7 size:2c0
+segment:__url_getarg_str sclass:text start:fd8 end:102f size:58
+segment:__gendyn_html sclass:text start:1030 end:11c7 size:198
+segment:__home sclass:text start:11c8 end:138e size:1c7
+segment:__poll_net sclass:text start:138f end:160a size:27c
+segment:lit sclass:text start:160b end:171f size:115
+segment:__webpage_bind sclass:text start:1720 end:1795 size:76
+segment:__webpage_name sclass:text start:1796 end:17dc size:47
+segment:___init_neardata sclass:text start:17dd end:17ef size:13
+segment:__notready_socket_tcp sclass:text start:17f0 end:186e size:7f
+segment:___init_bss sclass:text start:186f end:1884 size:16
+segment:___init_data sclass:text start:1885 end:18b0 size:2c
+segment:__puts sclass:text start:18b1 end:18f2 size:42
+segment:__form sclass:text start:18f3 end:1bf9 size:307
+segment:__reply sclass:text start:1bfa end:1d45 size:14c
+segment:__send_socket_tcp sclass:text start:1d46 end:1e97 size:152
+segment:__close_socket_tcp sclass:text start:1e98 end:1f26 size:8f
+segment:___doprnt sclass:text start:1f27 end:20a1 size:17b
+segment:__send_incomming_reset_TCP sclass:text start:20a2 end:212d size:8c
+segment:___gw32_i1 sclass:text start:212e end:2141 size:14
+segment:__Read_Frame_long_Phy sclass:text start:2142 end:2158 size:17
+segment:___gr32_i4 sclass:text start:2159 end:2194 size:3c
+segment:___gr32_i2 sclass:text start:2195 end:21bc size:28
+segment:__Read_Frame_word_Phy sclass:text start:21bd end:21d3 size:17
+segment:__Write_Frame_long_Phy sclass:text start:21d4 end:21ea size:17
+segment:__Write_Frame_word_Phy sclass:text start:21eb end:2201 size:17
+segment:__CommitSend_Phy sclass:text start:2202 end:2229 size:28
+segment:___mul_i2 sclass:text start:222a end:2247 size:1e
+segment:___gr32_i1 sclass:text start:2248 end:2265 size:1e
+segment:___band_i4 sclass:text start:2266 end:2272 size:d
+segment:___st_a_r47 sclass:text start:2273 end:2280 size:e
+segment:__Init_Mac sclass:text start:2281 end:2465 size:1e5
+segment:___ser_vect sclass:text start:2466 end:2491 size:2c
+segment:___putc sclass:text start:2492 end:24ae size:1d
+segment:__init_rx sclass:text start:24af end:24c8 size:1a
+segment:___sub_i4 sclass:text start:24c9 end:24d6 size:e
+segment:__printf sclass:text start:24d7 end:24e4 size:e
+segment:__set_mac_add sclass:text start:24e5 end:253c size:58
+segment:__RequestSend_Phy sclass:text start:253d end:2578 size:3c
+segment:___div_u2 sclass:text start:2579 end:25f5 size:7d
+segment:___cmp_i4 sclass:text start:25f6 end:260e size:19
+segment:___st_a_r03 sclass:text start:260f end:261b size:d
+segment:__find_RX_Buffer sclass:text start:261c end:265b size:40
+segment:__Read_Frame_xdata_Phy sclass:text start:265c end:26a4 size:49
+segment:___movel_0_12 sclass:text start:26a5 end:26ad size:9
+segment:___bxor_i4 sclass:text start:26ae end:26ba size:d
+segment:__strcpy sclass:text start:26bb end:2723 size:69
+segment:__Write_Frame_xdata_Phy sclass:text start:2724 end:276a size:47
+segment:__send_request_ARP sclass:text start:276b end:280a size:a0
+segment:___indir_call sclass:text start:280b end:280f size:5
+segment:__process_UDP sclass:text start:2810 end:291c size:10d
+segment:___movel_4_8 sclass:text start:291d end:2925 size:9
+segment:__process_ARP sclass:text start:2926 end:2af5 size:1d0
+segment:___add_i4 sclass:text start:2af6 end:2b02 size:d
+segment:__process_ICMP sclass:text start:2b03 end:2c1f size:11d
+segment:__free_match_socket sclass:text start:2c20 end:2c6e size:4f
+segment:__allocate_tx_buf sclass:text start:2c6f end:2cb5 size:47
+segment:___movel_12_4 sclass:text start:2cb6 end:2cbe size:9
+segment:___movel_4_0 sclass:text start:2cbf end:2cc7 size:9
+segment:___ld_a_r47 sclass:text start:2cc8 end:2cd5 size:e
+segment:__free_tx_buf sclass:text start:2cd6 end:2cf8 size:23
+segment:___movel_8_4 sclass:text start:2cf9 end:2d01 size:9
+segment:data sclass:xram start:0 end:7 size:8 load:2d02
+segment:bss sclass:xram start:8 end:31b size:314 notext
+segment:_set_mac_add_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_strcpy_local_near sclass:dram start:23 maxsize:c notext fill
+segment:_url_getarg_str_local_near sclass:dram start:21 maxsize:0 notext fill
+segment:_puts_local_near sclass:dram start:20 maxsize:4 notext fill
+segment:_webpage_bind_formal_near sclass:dram start:23 maxsize:0 notext fill
+segment:_webpage_bind_local_near sclass:dram start:23 maxsize:0 notext fill
+segment:_putsl_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_url_getarg_str_formal_near sclass:dram start:21 maxsize:0 notext fill
+segment:__doprnt_local_near sclass:dram start:2c maxsize:f notext fill
+segment:__doprnt_formal_near sclass:dram start:2b maxsize:1 notext fill
+segment:_puts_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_strcpy_formal_near sclass:dram start:23 maxsize:0 notext fill
+segment:_main_local_near sclass:dram start:20 maxsize:3 notext fill
+segment:_printf_local_near sclass:dram start:2b maxsize:0 notext fill
+segment:_main_formal_near sclass:dram start:20 maxsize:1b notext fill
+segment:_printf_formal_near sclass:dram start:23 maxsize:8 notext fill
+segment:_process_ARP_formal_near sclass:dram start:24 maxsize:0 notext fill
+segment:_send_request_ARP_local_near sclass:dram start:23 maxsize:4 notext fill
+segment:_send_request_ARP_formal_near sclass:dram start:23 maxsize:0 notext fill
+segment:_free_match_socket_formal_near sclass:dram start:30 maxsize:0 notext fill
+segment:_free_match_socket_local_near sclass:dram start:30 maxsize:0 notext fill
+segment:_process_ARP_local_near sclass:dram start:24 maxsize:3 notext fill
+segment:_free_tx_buf_formal_near sclass:dram start:30 maxsize:0 notext fill
+segment:_allocate_tx_buf_local_near sclass:dram start:26 maxsize:0 notext fill
+segment:_net_match_uint_formal_near sclass:dram start:2a maxsize:0 notext fill
+segment:_free_tx_buf_local_near sclass:dram start:30 maxsize:0 notext fill
+segment:_net_match_ulong_formal_near sclass:dram start:24 maxsize:0 notext fill
+segment:_allocate_tx_buf_formal_near sclass:dram start:26 maxsize:0 notext fill
+segment:_send_TCP_formal_near sclass:dram start:30 maxsize:4 notext fill
+segment:_process_UDP_formal_near sclass:dram start:24 maxsize:0 notext fill
+segment:_process_UDP_local_near sclass:dram start:24 maxsize:c notext fill
+segment:_Write_Frame_xdata_Phy_local_near sclass:dram start:38 maxsize:0 notext fill
+segment:_process_ICMP_local_near sclass:dram start:29 maxsize:2 notext fill
+segment:_process_ICMP_formal_near sclass:dram start:29 maxsize:0 notext fill
+segment:_xram_fast_copy_formal_near sclass:dram start:30 maxsize:0 notext fill
+segment:_ip_check_formal_near sclass:dram start:3a maxsize:0 notext fill
+segment:nearbss sclass:dram start:3b end:3f size:5 notext
+segment:_send_TCP_local_near sclass:dram start:34 maxsize:6 notext fill
+segment:_RequestSend_Phy_formal_near sclass:dram start:3a maxsize:0 notext fill
+segment:_find_RX_Buffer_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_init_rx_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_find_RX_Buffer_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_RequestSend_Phy_local_near sclass:dram start:3a maxsize:0 notext fill
+segment:_Init_Mac_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_Init_Mac_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_CommitSend_Phy_local_near sclass:dram start:34 maxsize:0 notext fill
+segment:_init_rx_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_CommitSend_Phy_formal_near sclass:dram start:34 maxsize:0 notext fill
+segment:_send_incomming_reset_TCP_formal_near sclass:dram start:2e maxsize:0 notext fill
+segment:_Write_Frame_long_Phy_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_Write_Frame_long_Phy_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_Write_Frame_word_Phy_local_near sclass:dram start:38 maxsize:0 notext fill
+segment:_Read_Frame_xdata_Phy_local_near sclass:dram start:30 maxsize:0 notext fill
+segment:_Write_Frame_word_Phy_formal_near sclass:dram start:38 maxsize:0 notext fill
+segment:_Write_Frame_xdata_Phy_formal_near sclass:dram start:38 maxsize:0 notext fill
+segment:_Read_Frame_long_Phy_formal_near sclass:dram start:2c maxsize:0 notext fill
+segment:_Read_Frame_word_Phy_local_near sclass:dram start:2c maxsize:0 notext fill
+segment:_Read_Frame_word_Phy_formal_near sclass:dram start:2c maxsize:0 notext fill
+segment:_ip_check_more_formal_near sclass:dram start:3a maxsize:0 notext fill
+segment:_Read_Frame_xdata_Phy_formal_near sclass:dram start:30 maxsize:0 notext fill
+segment:_Read_Frame_long_Phy_local_near sclass:dram start:2c maxsize:0 notext fill
+segment:_set_mac_add_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_poll_net_local_near sclass:dram start:20 maxsize:5 notext fill
+segment:_poll_net_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_close_socket_tcp_local_near sclass:dram start:26 maxsize:2 notext fill
+segment:_close_socket_tcp_formal_near sclass:dram start:26 maxsize:0 notext fill
+segment:_Init_net_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_Init_net_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_webpage_name_local_near sclass:dram start:21 maxsize:0 notext fill
+segment:_webpage_name_formal_near sclass:dram start:21 maxsize:0 notext fill
+segment:_poll_webserver_local_near sclass:dram start:20 maxsize:8 notext fill
+segment:_gendyn_html_local_near sclass:dram start:28 maxsize:3 notext fill
+segment:_poll_webserver_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_net_match_uint_local_near sclass:dram start:2a maxsize:2 notext fill
+segment:_net_match_ulong_local_near sclass:dram start:24 maxsize:4 notext fill
+segment:_gendyn_html_formal_near sclass:dram start:28 maxsize:0 notext fill
+segment:_url_getarg_no_local_near sclass:dram start:20 maxsize:0 notext fill
+segment:_url_getarg_no_formal_near sclass:dram start:20 maxsize:0 notext fill
+segment:_periodical_socket_formal_near sclass:dram start:23 maxsize:0 notext fill
+segment:_retransmit_socket_local_near sclass:dram start:23 maxsize:4 notext fill
+segment:_retransmit_socket_formal_near sclass:dram start:23 maxsize:0 notext fill
+segment:_final_timeout_socket_formal_near sclass:dram start:24 maxsize:0 notext fill
+segment:_final_timeout_socket_local_near sclass:dram start:24 maxsize:0 notext fill
+segment:_periodical_socket_local_near sclass:dram start:23 maxsize:1 notext fill
+segment:_send_match_ok_TCP_local_near sclass:dram start:30 maxsize:0 notext fill
+segment:_send_match_ok_TCP_formal_near sclass:dram start:30 maxsize:0 notext fill
+segment:_process_TCP_local_near sclass:dram start:29 maxsize:7 notext fill
+segment:_process_TCP_formal_near sclass:dram start:29 maxsize:0 notext fill
+segment:_state_machine_TCP_local_near sclass:dram start:2e maxsize:2 notext fill
+segment:_state_machine_TCP_formal_near sclass:dram start:2e maxsize:0 notext fill
+segment:_send_incomming_reset_TCP_local_near sclass:dram start:2e maxsize:2 notext fill
+segment:_notready_socket_tcp_local_near sclass:dram start:26 maxsize:0 notext fill
+segment:_notready_socket_tcp_formal_near sclass:dram start:26 maxsize:0 notext fill
+segment:_send_socket_tcp_local_near sclass:dram start:26 maxsize:6 notext fill
+segment:_process_IP_local_near sclass:dram start:24 maxsize:5 notext fill
+segment:_process_IP_formal_near sclass:dram start:24 maxsize:0 notext fill
+segment:_send_socket_tcp_formal_near sclass:dram start:26 maxsize:0 notext fill
+sgraphmaxlevel:11 roots:1
+sgraph:0 segment:_main_formal_near level:0 explicitroot
+sgraph:0 segment:_main_local_near level:1
+sgraph:0 segment:_webpage_bind_formal_near level:2
+sgraph:0 segment:_url_getarg_str_formal_near level:2
+sgraph:0 segment:_puts_formal_near level:2
+sgraph:0 segment:_strcpy_formal_near level:2
+sgraph:0 segment:_printf_formal_near level:2
+sgraph:0 segment:_Init_net_formal_near level:2
+sgraph:0 segment:_webpage_name_formal_near level:2
+sgraph:0 segment:_poll_webserver_formal_near level:2
+sgraph:0 segment:_url_getarg_no_formal_near level:2
+sgraph:0 segment:_strcpy_local_near level:3
+sgraph:0 segment:_url_getarg_str_local_near level:3
+sgraph:0 segment:_puts_local_near level:3
+sgraph:0 segment:_webpage_bind_local_near level:3
+sgraph:0 segment:_printf_local_near level:3
+sgraph:0 segment:_Init_net_local_near level:3
+sgraph:0 segment:_webpage_name_local_near level:3
+sgraph:0 segment:_poll_webserver_local_near level:3
+sgraph:0 segment:_url_getarg_no_local_near level:3
+sgraph:0 segment:__doprnt_formal_near level:4
+sgraph:0 segment:_allocate_tx_buf_formal_near level:4
+sgraph:0 segment:_poll_net_formal_near level:4
+sgraph:0 segment:_close_socket_tcp_formal_near level:4
+sgraph:0 segment:_gendyn_html_formal_near level:4
+sgraph:0 segment:_notready_socket_tcp_formal_near level:4
+sgraph:0 segment:_send_socket_tcp_formal_near level:4
+sgraph:0 segment:__doprnt_local_near level:5
+sgraph:0 segment:_allocate_tx_buf_local_near level:5
+sgraph:0 segment:_poll_net_local_near level:5
+sgraph:0 segment:_close_socket_tcp_local_near level:5
+sgraph:0 segment:_gendyn_html_local_near level:5
+sgraph:0 segment:_notready_socket_tcp_local_near level:5
+sgraph:0 segment:_send_socket_tcp_local_near level:5
+sgraph:0 segment:_process_ARP_formal_near level:6
+sgraph:0 segment:_find_RX_Buffer_formal_near level:6
+sgraph:0 segment:_Init_Mac_formal_near level:6
+sgraph:0 segment:_init_rx_formal_near level:6
+sgraph:0 segment:_periodical_socket_formal_near level:6
+sgraph:0 segment:_process_IP_formal_near level:6
+sgraph:0 segment:_process_ARP_local_near level:7
+sgraph:0 segment:_find_RX_Buffer_local_near level:7
+sgraph:0 segment:_init_rx_local_near level:7
+sgraph:0 segment:_Init_Mac_local_near level:7
+sgraph:0 segment:_periodical_socket_local_near level:7
+sgraph:0 segment:_process_IP_local_near level:7
+sgraph:0 segment:_set_mac_add_formal_near level:8
+sgraph:0 segment:_net_match_ulong_formal_near level:8
+sgraph:0 segment:_process_UDP_formal_near level:8
+sgraph:0 segment:_process_ICMP_formal_near level:8
+sgraph:0 segment:_retransmit_socket_formal_near level:8
+sgraph:0 segment:_final_timeout_socket_formal_near level:8
+sgraph:0 segment:_process_TCP_formal_near level:8
+sgraph:0 segment:_process_UDP_local_near level:9
+sgraph:0 segment:_process_ICMP_local_near level:9
+sgraph:0 segment:_set_mac_add_local_near level:9
+sgraph:0 segment:_net_match_ulong_local_near level:9
+sgraph:0 segment:_retransmit_socket_local_near level:9
+sgraph:0 segment:_final_timeout_socket_local_near level:9
+sgraph:0 segment:_process_TCP_local_near level:9
+sgraph:0 segment:_send_request_ARP_formal_near level:10
+sgraph:0 segment:_net_match_uint_formal_near level:10
+sgraph:0 segment:_xram_fast_copy_formal_near level:10
+sgraph:0 segment:_Read_Frame_long_Phy_formal_near level:10
+sgraph:0 segment:_state_machine_TCP_formal_near level:10
+sgraph:0 segment:_send_request_ARP_local_near level:11
+sgraph:0 segment:_Read_Frame_long_Phy_local_near level:11
+sgraph:0 segment:_net_match_uint_local_near level:11
+sgraph:0 segment:_state_machine_TCP_local_near level:11
+sgraph:0 segment:_free_match_socket_formal_near level:12
+sgraph:0 segment:_send_incomming_reset_TCP_formal_near level:12
+sgraph:0 segment:_Write_Frame_long_Phy_formal_near level:12
+sgraph:0 segment:_Read_Frame_word_Phy_formal_near level:12
+sgraph:0 segment:_Read_Frame_xdata_Phy_formal_near level:12
+sgraph:0 segment:_send_match_ok_TCP_formal_near level:12
+sgraph:0 segment:_free_match_socket_local_near level:13
+sgraph:0 segment:_Write_Frame_long_Phy_local_near level:13
+sgraph:0 segment:_Read_Frame_xdata_Phy_local_near level:13
+sgraph:0 segment:_Read_Frame_word_Phy_local_near level:13
+sgraph:0 segment:_send_match_ok_TCP_local_near level:13
+sgraph:0 segment:_send_incomming_reset_TCP_local_near level:13
+sgraph:0 segment:_free_tx_buf_formal_near level:14
+sgraph:0 segment:_send_TCP_formal_near level:14
+sgraph:0 segment:_free_tx_buf_local_near level:15
+sgraph:0 segment:_send_TCP_local_near level:15
+sgraph:0 segment:_ip_check_formal_near level:16
+sgraph:0 segment:_RequestSend_Phy_formal_near level:16
+sgraph:0 segment:_CommitSend_Phy_formal_near level:16
+sgraph:0 segment:_Write_Frame_word_Phy_formal_near level:16
+sgraph:0 segment:_Write_Frame_xdata_Phy_formal_near level:16
+sgraph:0 segment:_ip_check_more_formal_near level:16
+sgraph:0 segment:_Write_Frame_xdata_Phy_local_near level:17
+sgraph:0 segment:_RequestSend_Phy_local_near level:17
+sgraph:0 segment:_CommitSend_Phy_local_near level:17
+sgraph:0 segment:_Write_Frame_word_Phy_local_near level:17

@@ -1,0 +1,91 @@
+|ex8_2
+LED1 <= SHIFT_OUT[0].DB_MAX_OUTPUT_PORT_TYPE
+50MHz => shift_reg:inst2.clk
+50MHz => pulse_generator:inst.clk
+50MHz => pattern:inst1.clk
+LED2 <= SHIFT_OUT[1].DB_MAX_OUTPUT_PORT_TYPE
+LED3 <= SHIFT_OUT[2].DB_MAX_OUTPUT_PORT_TYPE
+LED4 <= SHIFT_OUT[3].DB_MAX_OUTPUT_PORT_TYPE
+LED5 <= SHIFT_OUT[4].DB_MAX_OUTPUT_PORT_TYPE
+LED6 <= SHIFT_OUT[5].DB_MAX_OUTPUT_PORT_TYPE
+LED7 <= SHIFT_OUT[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex8_2|shift_reg:inst2
+clk => TEMP_OUT[5].CLK
+clk => TEMP_OUT[4].CLK
+clk => TEMP_OUT[3].CLK
+clk => TEMP_OUT[2].CLK
+clk => TEMP_OUT[1].CLK
+clk => TEMP_OUT[0].CLK
+clk => TEMP_OUT[6].CLK
+ce => TEMP_OUT[5].ENA
+ce => TEMP_OUT[4].ENA
+ce => TEMP_OUT[3].ENA
+ce => TEMP_OUT[2].ENA
+ce => TEMP_OUT[1].ENA
+ce => TEMP_OUT[0].ENA
+ce => TEMP_OUT[6].ENA
+shift_in => TEMP_OUT[0].DATAIN
+SHIFT_OUT[0] <= TEMP_OUT[0].DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_OUT[1] <= TEMP_OUT[1].DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_OUT[2] <= TEMP_OUT[2].DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_OUT[3] <= TEMP_OUT[3].DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_OUT[4] <= TEMP_OUT[4].DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_OUT[5] <= TEMP_OUT[5].DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_OUT[6] <= TEMP_OUT[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex8_2|pulse_generator:inst
+clk => counter[26].CLK
+clk => counter[25].CLK
+clk => counter[24].CLK
+clk => counter[23].CLK
+clk => counter[22].CLK
+clk => counter[21].CLK
+clk => counter[20].CLK
+clk => counter[19].CLK
+clk => counter[18].CLK
+clk => counter[17].CLK
+clk => counter[16].CLK
+clk => counter[15].CLK
+clk => counter[14].CLK
+clk => counter[13].CLK
+clk => counter[12].CLK
+clk => counter[11].CLK
+clk => counter[10].CLK
+clk => counter[9].CLK
+clk => counter[8].CLK
+clk => counter[7].CLK
+clk => counter[6].CLK
+clk => counter[5].CLK
+clk => counter[4].CLK
+clk => counter[3].CLK
+clk => counter[2].CLK
+clk => counter[1].CLK
+clk => counter[0].CLK
+clk => slow_enable~reg0.CLK
+clk => counter[27].CLK
+slow_enable <= slow_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex8_2|pattern:inst1
+clk => temp_out.CLK
+ce => ~NO_FANOUT~
+LED[0] => Equal~0.IN13
+LED[0] => Equal~1.IN13
+LED[1] => Equal~0.IN12
+LED[1] => Equal~1.IN12
+LED[2] => Equal~0.IN11
+LED[2] => Equal~1.IN11
+LED[3] => Equal~0.IN10
+LED[3] => Equal~1.IN10
+LED[4] => Equal~0.IN9
+LED[4] => Equal~1.IN9
+LED[5] => Equal~0.IN8
+LED[5] => Equal~1.IN8
+LED[6] => Equal~0.IN7
+LED[6] => Equal~1.IN7
+shift_out <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

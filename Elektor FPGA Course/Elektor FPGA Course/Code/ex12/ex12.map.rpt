@@ -1,0 +1,289 @@
+Analysis & Synthesis report for ex12
+Mon Jul 10 02:43:31 2006
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |ex12|cordic_core:inst1|state
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Source assignments for cordic_core:inst1
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Jul 10 02:43:30 2006        ;
+; Quartus II Version          ; 6.0 Build 202 06/20/2006 SP 1 SJ Web Edition ;
+; Revision Name               ; ex12                                         ;
+; Top-level Entity Name       ; ex12                                         ;
+; Family                      ; Cyclone                                      ;
+; Total logic elements        ; 529                                          ;
+; Total pins                  ; 15                                           ;
+; Total virtual pins          ; 0                                            ;
+; Total memory bits           ; 0                                            ;
+; Total PLLs                  ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                             ; EP1C12F256C7       ;                    ;
+; Top-level entity name                                              ; ex12               ; ex12               ;
+; Family name                                                        ; Cyclone            ; Stratix            ;
+; Use smart compilation                                              ; On                 ; Off                ;
+; State Machine Processing                                           ; One-Hot            ; Auto               ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; Off                ; Off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On                 ; On                 ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Cyclone                                  ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                  ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                             ; Off                ; Off                ;
+; Auto RAM Block Balancing                                           ; On                 ; On                 ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Maximum Number of M512 Memory Blocks                               ; Unlimited          ; Unlimited          ;
+; Maximum Number of M4K Memory Blocks                                ; Unlimited          ; Unlimited          ;
+; Maximum Number of M-RAM Memory Blocks                              ; Unlimited          ; Unlimited          ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                 ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                   ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                       ; Normal compilation ; Normal compilation ;
+; HDL message level                                                  ; Level2             ; Level2             ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                  ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------+
+; PCM3006.vhd                      ; yes             ; User VHDL File                     ; C:/altera/FPGA_course/ex12/PCM3006.vhd        ;
+; cordic_core.VHD                  ; yes             ; User VHDL File                     ; C:/altera/FPGA_course/ex12/cordic_core.VHD    ;
+; ex12.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/altera/FPGA_course/ex12/ex12.bdf           ;
+; mag_phase_accu.vhd               ; yes             ; User VHDL File                     ; C:/altera/FPGA_course/ex12/mag_phase_accu.vhd ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Total logic elements                        ; 529       ;
+;     -- Combinational with no register       ; 324       ;
+;     -- Register only                        ; 74        ;
+;     -- Combinational with a register        ; 131       ;
+;                                             ;           ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 194       ;
+;     -- 3 input functions                    ; 185       ;
+;     -- 2 input functions                    ; 74        ;
+;     -- 1 input functions                    ; 2         ;
+;     -- 0 input functions                    ; 0         ;
+;         -- Combinational cells for routing  ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 447       ;
+;     -- arithmetic mode                      ; 82        ;
+;     -- qfbk mode                            ; 0         ;
+;     -- register cascade mode                ; 0         ;
+;     -- synchronous clear/load mode          ; 37        ;
+;     -- asynchronous clear/load mode         ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 205       ;
+; Total logic cells in carry chains           ; 87        ;
+; I/O pins                                    ; 15        ;
+; Maximum fan-out node                        ; 12_288MHz ;
+; Maximum fan-out                             ; 205       ;
+; Total fan-out                               ; 1988      ;
+; Average fan-out                             ; 3.65      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; M4Ks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name       ;
++----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+
+; |ex12                      ; 529 (0)     ; 205          ; 0           ; 0    ; 15   ; 0            ; 324 (0)      ; 74 (0)            ; 131 (0)          ; 87 (0)          ; 0 (0)      ; |ex12                     ;
+;    |PCM3006:inst6|         ; 84 (84)     ; 73           ; 0           ; 0    ; 0    ; 0            ; 11 (11)      ; 40 (40)           ; 33 (33)          ; 8 (8)           ; 0 (0)      ; |ex12|PCM3006:inst6       ;
+;    |cordic_core:inst1|     ; 428 (428)   ; 116          ; 0           ; 0    ; 0    ; 0            ; 312 (312)    ; 34 (34)           ; 82 (82)          ; 63 (63)         ; 0 (0)      ; |ex12|cordic_core:inst1   ;
+;    |mag_phase_accu:inst|   ; 17 (17)     ; 16           ; 0           ; 0    ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |ex12|mag_phase_accu:inst ;
++----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------+
+; State Machine - |ex12|cordic_core:inst1|state                       ;
++------------------+------------------+------------------+------------+
+; Name             ; state.processing ; state.firststage ; state.idle ;
++------------------+------------------+------------------+------------+
+; state.idle       ; 0                ; 0                ; 0          ;
+; state.firststage ; 0                ; 1                ; 1          ;
+; state.processing ; 1                ; 0                ; 1          ;
++------------------+------------------+------------------+------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 205   ;
+; Number of registers using Synchronous Clear  ; 37    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 188   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |ex12|cordic_core:inst1|cur_phase[18]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ex12|mag_phase_accu:inst|PHASE_INT[8] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |ex12|cordic_core:inst1|pass_count[0]  ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |ex12|cordic_core:inst1|cur_sin[6]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ex12|cordic_core:inst1|cur_cos~36     ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |ex12|cordic_core:inst1|Add5           ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |ex12|cordic_core:inst1|Add1           ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ex12|cordic_core:inst1|Add1           ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |ex12|cordic_core:inst1|Add1           ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |ex12|cordic_core:inst1|Add1           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++-----------------------------------------------+
+; Source assignments for cordic_core:inst1      ;
++----------------+-------+------+---------------+
+; Assignment     ; Value ; From ; To            ;
++----------------+-------+------+---------------+
+; POWER_UP_LEVEL ; Low   ; -    ; pass_count[0] ;
+; POWER_UP_LEVEL ; Low   ; -    ; pass_count[1] ;
+; POWER_UP_LEVEL ; Low   ; -    ; pass_count[2] ;
+; POWER_UP_LEVEL ; Low   ; -    ; pass_count[3] ;
++----------------+-------+------+---------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jul 10 02:43:14 2006
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex12 -c ex12
+Info: Found 2 design units, including 1 entities, in source file PCM3006.vhd
+    Info: Found design unit 1: PCM3006-PCM3006_architecture
+    Info: Found entity 1: PCM3006
+Info: Found 2 design units, including 1 entities, in source file cordic_core.VHD
+    Info: Found design unit 1: cordic_core-descr
+    Info: Found entity 1: cordic_core
+Info: Found 1 design units, including 1 entities, in source file ex12.bdf
+    Info: Found entity 1: ex12
+Info: Found 2 design units, including 1 entities, in source file mag_phase_accu.vhd
+    Info: Found design unit 1: mag_phase_accu-mag_phase_accu_architecture
+    Info: Found entity 1: mag_phase_accu
+Info: Elaborating entity "ex12" for the top level hierarchy
+Info: Elaborating entity "PCM3006" for hierarchy "PCM3006:inst6"
+Info: Elaborating entity "cordic_core" for hierarchy "cordic_core:inst1"
+Info: Elaborating entity "mag_phase_accu" for hierarchy "mag_phase_accu:inst"
+Warning: Reduced register "cordic_core:inst1|des_phase[0]" with stuck data_in port to stuck value GND
+Warning: Reduced register "cordic_core:inst1|des_phase[1]" with stuck data_in port to stuck value GND
+Info: Duplicate registers merged to single register
+    Info: Duplicate register "PCM3006:inst6|COUNT[7]" merged to single register "PCM3006:inst6|LRCOUT_INT"
+    Info: Duplicate register "PCM3006:inst6|COUNT[2]" merged to single register "PCM3006:inst6|BCKOUT_INT"
+Info: Duplicate registers merged to single register
+    Info: Duplicate register "cordic_core:inst1|des_phase[18]" merged to single register "cordic_core:inst1|des_phase[17]"
+    Info: Duplicate register "cordic_core:inst1|des_phase[19]" merged to single register "cordic_core:inst1|des_phase[17]"
+Info: State machine "|ex12|cordic_core:inst1|state" contains 3 states
+Info: Selected One-Hot state machine encoding method for state machine "|ex12|cordic_core:inst1|state"
+Info: Encoding result for state machine "|ex12|cordic_core:inst1|state"
+    Info: Completed encoding using 3 state bits
+        Info: Encoded state bit "cordic_core:inst1|state.processing"
+        Info: Encoded state bit "cordic_core:inst1|state.firststage"
+        Info: Encoded state bit "cordic_core:inst1|state.idle"
+    Info: State "|ex12|cordic_core:inst1|state.idle" uses code string "000"
+    Info: State "|ex12|cordic_core:inst1|state.firststage" uses code string "011"
+    Info: State "|ex12|cordic_core:inst1|state.processing" uses code string "101"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "RESETn" stuck at VCC
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning: No output dependent on input pin "DOUT"
+Info: Implemented 544 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 4 output pins
+    Info: Implemented 529 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Processing ended: Mon Jul 10 02:43:30 2006
+    Info: Elapsed time: 00:00:16
+
+

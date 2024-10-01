@@ -1,0 +1,193 @@
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name ENABLE_DRC_SETTINGS OFF
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
+set_global_assignment -name OPTIMIZE_FAST_CORNER_TIMING OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING OFF
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name MUX_RESTRUCTURE AUTO
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP OFF
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_GATE_RETIME OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING OFF
+set_global_assignment -name IGNORE_LCELL_BUFFERS OFF
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL NORMAL
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		t51_elektor_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C12F256C6
+set_global_assignment -name TOP_LEVEL_ENTITY T8052_Toplevel
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:33:55  JUNE 18, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION "6.0 SP1"
+set_global_assignment -name USER_LIBRARIES "C:\\HGB_Work\\ARCADE_Cores\\usbhostslave\\RTL\\include/"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_location_assignment PIN_T11 -to LED[1]
+set_location_assignment PIN_R12 -to LED[2]
+set_location_assignment PIN_M12 -to LED[3]
+set_location_assignment PIN_P12 -to LED[4]
+set_location_assignment PIN_N12 -to LED[5]
+set_location_assignment PIN_M13 -to LED[6]
+set_location_assignment PIN_N13 -to LED[7]
+set_location_assignment PIN_H13 -to Ps2Clk_io
+set_location_assignment PIN_G15 -to Ps2Dat_io
+set_location_assignment PIN_G12 -to RxD232
+set_location_assignment PIN_M15 -to SCL
+set_location_assignment PIN_N16 -to SDA
+set_location_assignment PIN_D14 -to SevenSeg_D_o[0]
+set_location_assignment PIN_A15 -to SevenSeg_D_o[1]
+set_location_assignment PIN_C14 -to SevenSeg_D_o[2]
+set_location_assignment PIN_B14 -to SevenSeg_D_o[3]
+set_location_assignment PIN_C13 -to SevenSeg_D_o[4]
+set_location_assignment PIN_B16 -to SevenSeg_D_o[5]
+set_location_assignment PIN_C15 -to SevenSeg_D_o[6]
+set_location_assignment PIN_B15 -to SevenSeg_D_o[7]
+set_location_assignment PIN_F12 -to SevenSegEn_o[0]
+set_location_assignment PIN_E15 -to SevenSegEn_o[1]
+set_location_assignment PIN_D16 -to SevenSegEn_o[2]
+set_location_assignment PIN_D15 -to SevenSegEn_o[3]
+set_location_assignment PIN_E14 -to SevenSegEn_o[4]
+set_location_assignment PIN_T15 -to SWITCH1
+set_location_assignment PIN_T13 -to SWITCH2
+set_location_assignment PIN_P14 -to SWITCH3
+set_location_assignment PIN_M14 -to SWITCH4
+set_location_assignment PIN_G13 -to Txd232
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_G16 -to clk_50MHz
+
+#set_global_assignment -name SMART_RECOMPILE ON
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SRAM2_DB
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SRAM1_DB
+#set_global_assignment -name ENABLE_CLOCK_LATENCY ON
+#set_global_assignment -name ENABLE_RECOVERY_REMOVAL_ANALYSIS ON
+#set_global_assignment -name ENABLE_DRC_SETTINGS ON
+#set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+#set_global_assignment -name OPTIMIZE_FAST_CORNER_TIMING ON
+#set_global_assignment -name DO_COMBINED_ANALYSIS ON
+#set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
+#set_global_assignment -name STRATIXII_OPTIMIZATION_TECHNIQUE SPEED
+#set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE SPEED
+#set_global_assignment -name STRATIX_OPTIMIZATION_TECHNIQUE SPEED
+#set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE SPEED
+#set_global_assignment -name APEX20K_OPTIMIZATION_TECHNIQUE SPEED
+#set_global_assignment -name MERCURY_OPTIMIZATION_TECHNIQUE SPEED
+#set_global_assignment -name FLEX10K_OPTIMIZATION_TECHNIQUE SPEED
+#set_instance_assignment -name SYNTH_CRITICAL_CLOCK ON -to clk_50MHz
+#set_global_assignment -name MUX_RESTRUCTURE OFF
+#set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+#set_global_assignment -name ADV_NETLIST_OPT_SYNTH_GATE_RETIME OFF
+#set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+#set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+#set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+#set_global_assignment -name IGNORE_LCELL_BUFFERS ON
+#set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+#set_global_assignment -name EXTRACT_VERILOG_STATE_MACHINES OFF
+set_location_assignment PIN_E13 -to usb_conn
+set_location_assignment PIN_B13 -to usb_conn_ls
+set_location_assignment PIN_A13 -to usb_dn
+set_location_assignment PIN_D13 -to usb_dp
+set_location_assignment PIN_R13 -to DIPSW[0]
+set_location_assignment PIN_R15 -to DIPSW[1]
+set_location_assignment PIN_R14 -to DIPSW[2]
+set_location_assignment PIN_R16 -to DIPSW[3]
+set_location_assignment PIN_P15 -to DIPSW[4]
+set_location_assignment PIN_N14 -to DIPSW[5]
+set_location_assignment PIN_P13 -to DIPSW[6]
+set_location_assignment PIN_N15 -to DIPSW[7]
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/altpll48.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/rom_cyclone.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/xram_cyclone.vhd
+set_global_assignment -name VHDL_FILE "../rtl/unitPs2Keyboard/src/PS2Keyboard-e.vhd"
+set_global_assignment -name VHDL_FILE "../rtl/unitPs2Keyboard/src/PS2Keyboard-a.vhd"
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/InputSync.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_Pack.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_UART.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_ALU.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_Glue.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_MD.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_Port.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_RAM.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_TC01.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51_TC2.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/iram_cyclone.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/T51_RAM_altera.vhd
+set_global_assignment -name VHDL_FILE ../rtl/T51.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/sevenseg_if.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/T8052.vhd
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/include/wishBoneBus_h.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/include/usbConstants_h.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/include/usbHostControl_h.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/include/usbHostSlave_h.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/include/usbSerialInterfaceEngine_h.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/include/usbSlaveControl_h.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/USBSlaveControlBI.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/endpMux.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/fifoMux.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/sctxportarbiter.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/slavecontroller.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/slaveDirectcontrol.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/slaveGetpacket.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/slaveRxStatusMonitor.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/slaveSendpacket.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/slaveController/usbSlaveControl.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/writeUSBWireData.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/lineControlUpdate.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/processRxBit.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/processRxByte.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/processTxByte.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/readUSBWireData.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/siereceiver.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/SIETransmitter.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/updateCRC5.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/updateCRC16.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/usbSerialInterfaceEngine.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/serialInterfaceEngine/usbTxWireArbiter.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostSlaveMux/hostSlaveMuxBI.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostSlaveMux/hostSlaveMux.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/USBHostControlBI.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/directcontrol.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/getpacket.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/hctxportarbiter.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/hostcontroller.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/rxStatusMonitor.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/sendpacket.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/sendpacketarbiter.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/sendpacketcheckpreamble.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/sofcontroller.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/softransmit.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/speedCtrlMux.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/hostController/usbHostControl.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/busInterface/wishBoneBI.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/buffers/TxFifoBI.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/buffers/dpMem_dc.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/buffers/fifoRTL.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/buffers/RxFifo.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/buffers/RxFifoBI.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/buffers/TxFifo.v
+set_global_assignment -name VERILOG_FILE ../rtl/unitUSB/src/wrapper/usbHostSlave.v
+set_global_assignment -name VHDL_FILE ../rtl/unitUSB/src/USB.vhd
+set_global_assignment -name VHDL_FILE ../rtl/FPGA/T8052_Toplevel.vhd

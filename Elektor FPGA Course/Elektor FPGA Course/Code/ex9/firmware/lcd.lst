@@ -1,0 +1,767 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.5.0 #1020 (May  8 2005)
+                              4 ; This file generated Mon May 08 16:15:30 2006
+                              5 ;--------------------------------------------------------
+                              6 	.module lcd
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _LCD_write_line
+                             13 	.globl _LCD_write_cmd
+                             14 	.globl _LCD_wait_ready
+                             15 	.globl _LCD_write_dat
+                             16 	.globl _LCD_wait
+                             17 	.globl _LCD_write_line_PARM_2
+                             18 	.globl _LCD_ctl_reg
+                             19 	.globl _LCD_init
+                             20 ;--------------------------------------------------------
+                             21 ; special function registers
+                             22 ;--------------------------------------------------------
+                             23 	.area RSEG    (DATA)
+                             24 ;--------------------------------------------------------
+                             25 ; special function bits 
+                             26 ;--------------------------------------------------------
+                             27 	.area RSEG    (DATA)
+                             28 ;--------------------------------------------------------
+                             29 ; overlayable register banks 
+                             30 ;--------------------------------------------------------
+                             31 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      32 	.ds 8
+                             33 ;--------------------------------------------------------
+                             34 ; internal ram data
+                             35 ;--------------------------------------------------------
+                             36 	.area DSEG    (DATA)
+                             37 ;--------------------------------------------------------
+                             38 ; overlayable items in internal ram 
+                             39 ;--------------------------------------------------------
+                             40 	.area OSEG    (OVR,DATA)
+                             41 ;--------------------------------------------------------
+                             42 ; indirectly addressable internal ram data
+                             43 ;--------------------------------------------------------
+                             44 	.area ISEG    (DATA)
+                             45 ;--------------------------------------------------------
+                             46 ; bit data
+                             47 ;--------------------------------------------------------
+                             48 	.area BSEG    (BIT)
+                             49 ;--------------------------------------------------------
+                             50 ; paged external ram data
+                             51 ;--------------------------------------------------------
+                             52 	.area PSEG    (PAG,XDATA)
+                             53 ;--------------------------------------------------------
+                             54 ; external ram data
+                             55 ;--------------------------------------------------------
+                             56 	.area XSEG    (XDATA)
+   0000                      57 _LCD_ctl_reg::
+   0000                      58 	.ds 1
+   0001                      59 _LCD_write_dat_dat_1_1::
+   0001                      60 	.ds 1
+   0002                      61 _LCD_wait_ready_dat_1_1::
+   0002                      62 	.ds 1
+   0003                      63 _LCD_write_cmd_dat_1_1::
+   0003                      64 	.ds 1
+   0004                      65 _LCD_write_line_PARM_2::
+   0004                      66 	.ds 1
+   0005                      67 _LCD_write_line_str_1_1::
+   0005                      68 	.ds 3
+                             69 ;--------------------------------------------------------
+                             70 ; external initialized ram data
+                             71 ;--------------------------------------------------------
+                             72 	.area XISEG   (XDATA)
+                             73 	.area CSEG    (CODE)
+                             74 	.area GSINIT0 (CODE)
+                             75 	.area GSINIT1 (CODE)
+                             76 	.area GSINIT2 (CODE)
+                             77 	.area GSINIT3 (CODE)
+                             78 	.area GSINIT4 (CODE)
+                             79 	.area GSINIT5 (CODE)
+                             80 ;--------------------------------------------------------
+                             81 ; global & static initialisations
+                             82 ;--------------------------------------------------------
+                             83 	.area CSEG    (CODE)
+                             84 	.area GSINIT  (CODE)
+                             85 	.area GSFINAL (CODE)
+                             86 	.area GSINIT  (CODE)
+                             87 ;--------------------------------------------------------
+                             88 ; Home
+                             89 ;--------------------------------------------------------
+                             90 	.area HOME    (CODE)
+                             91 	.area CSEG    (CODE)
+                             92 ;--------------------------------------------------------
+                             93 ; code
+                             94 ;--------------------------------------------------------
+                             95 	.area CSEG    (CODE)
+                             96 ;------------------------------------------------------------
+                             97 ;Allocation info for local variables in function 'LCD_wait'
+                             98 ;------------------------------------------------------------
+                             99 ;x                         Allocated with name '_LCD_wait_x_1_1'
+                            100 ;------------------------------------------------------------
+                            101 ;lcd.c:14: void LCD_wait(void)
+                            102 ;	-----------------------------------------
+                            103 ;	 function LCD_wait
+                            104 ;	-----------------------------------------
+   0000                     105 _LCD_wait:
+                    0002    106 	ar2 = 0x02
+                    0003    107 	ar3 = 0x03
+                    0004    108 	ar4 = 0x04
+                    0005    109 	ar5 = 0x05
+                    0006    110 	ar6 = 0x06
+                    0007    111 	ar7 = 0x07
+                    0000    112 	ar0 = 0x00
+                    0001    113 	ar1 = 0x01
+                            114 ;lcd.c:18: while (x>0) {x--;}
+                            115 ;     genAssign
+   0000 7A FE               116 	mov	r2,#0xFE
+   0002 7B FF               117 	mov	r3,#0xFF
+   0004                     118 00101$:
+                            119 ;     genIfx
+   0004 EA                  120 	mov	a,r2
+   0005 4B                  121 	orl	a,r3
+                            122 ;     genIfxJump
+                            123 ;	Peephole 110	removed ljmp by inverse jump logic
+   0006 60 07               124 	jz	00104$
+   0008                     125 00108$:
+                            126 ;     genMinus
+                            127 ;     genMinusDec
+                            128 ;	tail decrement optimized
+   0008 1A                  129 	dec	r2
+   0009 BA FF F8            130 	cjne	r2,#0xff,00101$
+   000C 1B                  131 	dec	r3
+                            132 ;	Peephole 112.b	changed ljmp to sjmp
+   000D 80 F5               133 	sjmp	00101$
+   000F                     134 00104$:
+   000F 22                  135 	ret
+                            136 ;------------------------------------------------------------
+                            137 ;Allocation info for local variables in function 'LCD_write_dat'
+                            138 ;------------------------------------------------------------
+                            139 ;dat                       Allocated with name '_LCD_write_dat_dat_1_1'
+                            140 ;------------------------------------------------------------
+                            141 ;lcd.c:21: void LCD_write_dat (unsigned char dat)
+                            142 ;	-----------------------------------------
+                            143 ;	 function LCD_write_dat
+                            144 ;	-----------------------------------------
+   0010                     145 _LCD_write_dat:
+                            146 ;     genReceive
+   0010 E5 82               147 	mov	a,dpl
+   0012 90s00r01            148 	mov	dptr,#_LCD_write_dat_dat_1_1
+   0015 F0                  149 	movx	@dptr,a
+                            150 ;lcd.c:23: I2C_start();
+                            151 ;     genCall
+   0016 12s00r00            152 	lcall	_I2C_start
+                            153 ;lcd.c:24: I2C_send (LCD_I2C_DAT_ADR);		// select IC8 to write to LCD-data
+                            154 ;     genCall
+   0019 75 82 42            155 	mov	dpl,#0x42
+   001C 12s00r00            156 	lcall	_I2C_send
+                            157 ;lcd.c:25: I2C_send (dat);				// put data on LCD-data lines
+                            158 ;     genAssign
+   001F 90s00r01            159 	mov	dptr,#_LCD_write_dat_dat_1_1
+   0022 E0                  160 	movx	a,@dptr
+                            161 ;     genCall
+                            162 ;	Peephole 244.c	loading dpl from a instead of r2
+   0023 FA                  163 	mov	r2,a
+   0024 F5 82               164 	mov	dpl,a
+   0026 12s00r00            165 	lcall	_I2C_send
+                            166 ;lcd.c:26: I2C_stop  ();
+                            167 ;     genCall
+   0029 12s00r00            168 	lcall	_I2C_stop
+                            169 ;lcd.c:27: I2C_start();
+                            170 ;     genCall
+   002C 12s00r00            171 	lcall	_I2C_start
+                            172 ;lcd.c:28: I2C_send (LCD_I2C_CTL_ADR);		// select IC6 to write to control lines
+                            173 ;     genCall
+   002F 75 82 40            174 	mov	dpl,#0x40
+   0032 12s00r00            175 	lcall	_I2C_send
+                            176 ;lcd.c:29: LCD_ctl_reg |= LCD_RS;		// Registerselect '1' : select data
+                            177 ;     genAssign
+                            178 ;     genOr
+                            179 ;	Peephole 248.a	optimized or to xdata
+   0035 90s00r00            180 	mov	dptr,#_LCD_ctl_reg
+   0038 E0                  181 	movx	a,@dptr
+   0039 FA                  182 	mov	r2,a
+   003A 44 20               183 	orl	a,#0x20
+   003C F0                  184 	movx	@dptr,a
+                            185 ;lcd.c:30: I2C_send (LCD_ctl_reg);
+                            186 ;     genAssign
+   003D 90s00r00            187 	mov	dptr,#_LCD_ctl_reg
+   0040 E0                  188 	movx	a,@dptr
+                            189 ;     genCall
+                            190 ;	Peephole 244.c	loading dpl from a instead of r2
+   0041 FA                  191 	mov	r2,a
+   0042 F5 82               192 	mov	dpl,a
+   0044 12s00r00            193 	lcall	_I2C_send
+                            194 ;lcd.c:31: LCD_ctl_reg &= ~LCD_R_Wn;	// R/Wn '0' : write
+                            195 ;     genAssign
+                            196 ;     genAnd
+                            197 ;	Peephole 248.b	optimized and to xdata
+   0047 90s00r00            198 	mov	dptr,#_LCD_ctl_reg
+   004A E0                  199 	movx	a,@dptr
+   004B FA                  200 	mov	r2,a
+   004C 54 BF               201 	anl	a,#0xBF
+   004E F0                  202 	movx	@dptr,a
+                            203 ;lcd.c:32: I2C_send (LCD_ctl_reg);
+                            204 ;     genAssign
+   004F 90s00r00            205 	mov	dptr,#_LCD_ctl_reg
+   0052 E0                  206 	movx	a,@dptr
+                            207 ;     genCall
+                            208 ;	Peephole 244.c	loading dpl from a instead of r2
+   0053 FA                  209 	mov	r2,a
+   0054 F5 82               210 	mov	dpl,a
+   0056 12s00r00            211 	lcall	_I2C_send
+                            212 ;lcd.c:33: LCD_ctl_reg |= LCD_E;		// Enable '1' : validate cycle
+                            213 ;     genAssign
+                            214 ;     genOr
+                            215 ;	Peephole 248.a	optimized or to xdata
+   0059 90s00r00            216 	mov	dptr,#_LCD_ctl_reg
+   005C E0                  217 	movx	a,@dptr
+   005D FA                  218 	mov	r2,a
+   005E 44 80               219 	orl	a,#0x80
+   0060 F0                  220 	movx	@dptr,a
+                            221 ;lcd.c:34: I2C_send (LCD_ctl_reg);
+                            222 ;     genAssign
+   0061 90s00r00            223 	mov	dptr,#_LCD_ctl_reg
+   0064 E0                  224 	movx	a,@dptr
+                            225 ;     genCall
+                            226 ;	Peephole 244.c	loading dpl from a instead of r2
+   0065 FA                  227 	mov	r2,a
+   0066 F5 82               228 	mov	dpl,a
+   0068 12s00r00            229 	lcall	_I2C_send
+                            230 ;lcd.c:35: LCD_ctl_reg &= ~LCD_E;		// Enable '0' : end of cycle
+                            231 ;     genAssign
+                            232 ;     genAnd
+                            233 ;	Peephole 248.b	optimized and to xdata
+   006B 90s00r00            234 	mov	dptr,#_LCD_ctl_reg
+   006E E0                  235 	movx	a,@dptr
+   006F FA                  236 	mov	r2,a
+   0070 54 7F               237 	anl	a,#0x7F
+   0072 F0                  238 	movx	@dptr,a
+                            239 ;lcd.c:36: I2C_send (LCD_ctl_reg);
+                            240 ;     genAssign
+   0073 90s00r00            241 	mov	dptr,#_LCD_ctl_reg
+   0076 E0                  242 	movx	a,@dptr
+                            243 ;     genCall
+                            244 ;	Peephole 244.c	loading dpl from a instead of r2
+   0077 FA                  245 	mov	r2,a
+   0078 F5 82               246 	mov	dpl,a
+   007A 12s00r00            247 	lcall	_I2C_send
+                            248 ;lcd.c:37: I2C_stop();
+                            249 ;     genCall
+                            250 ;	Peephole 253.b	replaced lcall/ret with ljmp
+   007D 02s00r00            251 	ljmp	_I2C_stop
+                            252 ;------------------------------------------------------------
+                            253 ;Allocation info for local variables in function 'LCD_wait_ready'
+                            254 ;------------------------------------------------------------
+                            255 ;dat                       Allocated with name '_LCD_wait_ready_dat_1_1'
+                            256 ;------------------------------------------------------------
+                            257 ;lcd.c:41: void LCD_wait_ready(void)
+                            258 ;	-----------------------------------------
+                            259 ;	 function LCD_wait_ready
+                            260 ;	-----------------------------------------
+   0080                     261 _LCD_wait_ready:
+                            262 ;lcd.c:44: dat = 0x80;
+                            263 ;     genAssign
+   0080 90s00r02            264 	mov	dptr,#_LCD_wait_ready_dat_1_1
+   0083 74 80               265 	mov	a,#0x80
+   0085 F0                  266 	movx	@dptr,a
+                            267 ;lcd.c:45: while ((dat &0x80)!=0)
+   0086                     268 00101$:
+                            269 ;     genAssign
+   0086 90s00r02            270 	mov	dptr,#_LCD_wait_ready_dat_1_1
+   0089 E0                  271 	movx	a,@dptr
+   008A FA                  272 	mov	r2,a
+                            273 ;     genAnd
+   008B 53 02 80            274 	anl	ar2,#0x80
+                            275 ;     genCmpEq
+   008E BA 00 01            276 	cjne	r2,#0x00,00108$
+                            277 ;	Peephole 251.a	replaced ljmp to ret with ret
+   0091 22                  278 	ret
+   0092                     279 00108$:
+                            280 ;lcd.c:48: I2C_start();
+                            281 ;     genCall
+   0092 12s00r00            282 	lcall	_I2C_start
+                            283 ;lcd.c:49: I2C_send (LCD_I2C_DAT_ADR);		// select IC8 to write to LCD-data
+                            284 ;     genCall
+   0095 75 82 42            285 	mov	dpl,#0x42
+   0098 12s00r00            286 	lcall	_I2C_send
+                            287 ;lcd.c:50: I2C_send (0xff);		// set all outputs to high (and input)
+                            288 ;     genCall
+   009B 75 82 FF            289 	mov	dpl,#0xFF
+   009E 12s00r00            290 	lcall	_I2C_send
+                            291 ;lcd.c:51: I2C_stop  ();
+                            292 ;     genCall
+   00A1 12s00r00            293 	lcall	_I2C_stop
+                            294 ;lcd.c:53: I2C_start();
+                            295 ;     genCall
+   00A4 12s00r00            296 	lcall	_I2C_start
+                            297 ;lcd.c:54: I2C_send (LCD_I2C_CTL_ADR);		// select IC6 to write to control lines
+                            298 ;     genCall
+   00A7 75 82 40            299 	mov	dpl,#0x40
+   00AA 12s00r00            300 	lcall	_I2C_send
+                            301 ;lcd.c:55: LCD_ctl_reg &= ~LCD_RS;			// RS '0' : Control register
+                            302 ;     genAssign
+                            303 ;     genAnd
+                            304 ;	Peephole 248.b	optimized and to xdata
+   00AD 90s00r00            305 	mov	dptr,#_LCD_ctl_reg
+   00B0 E0                  306 	movx	a,@dptr
+   00B1 FA                  307 	mov	r2,a
+   00B2 54 DF               308 	anl	a,#0xDF
+   00B4 F0                  309 	movx	@dptr,a
+                            310 ;lcd.c:56: I2C_send (LCD_ctl_reg);
+                            311 ;     genAssign
+   00B5 90s00r00            312 	mov	dptr,#_LCD_ctl_reg
+   00B8 E0                  313 	movx	a,@dptr
+                            314 ;     genCall
+                            315 ;	Peephole 244.c	loading dpl from a instead of r2
+   00B9 FA                  316 	mov	r2,a
+   00BA F5 82               317 	mov	dpl,a
+   00BC 12s00r00            318 	lcall	_I2C_send
+                            319 ;lcd.c:57: LCD_ctl_reg |= LCD_R_Wn;		// R/Wn '1' : read
+                            320 ;     genAssign
+                            321 ;     genOr
+                            322 ;	Peephole 248.a	optimized or to xdata
+   00BF 90s00r00            323 	mov	dptr,#_LCD_ctl_reg
+   00C2 E0                  324 	movx	a,@dptr
+   00C3 FA                  325 	mov	r2,a
+   00C4 44 40               326 	orl	a,#0x40
+   00C6 F0                  327 	movx	@dptr,a
+                            328 ;lcd.c:58: I2C_send (LCD_ctl_reg);			// select control register to read
+                            329 ;     genAssign
+   00C7 90s00r00            330 	mov	dptr,#_LCD_ctl_reg
+   00CA E0                  331 	movx	a,@dptr
+                            332 ;     genCall
+                            333 ;	Peephole 244.c	loading dpl from a instead of r2
+   00CB FA                  334 	mov	r2,a
+   00CC F5 82               335 	mov	dpl,a
+   00CE 12s00r00            336 	lcall	_I2C_send
+                            337 ;lcd.c:59: LCD_ctl_reg |= LCD_E;			// Enable '1' : validate cycle
+                            338 ;     genAssign
+                            339 ;     genOr
+                            340 ;	Peephole 248.a	optimized or to xdata
+   00D1 90s00r00            341 	mov	dptr,#_LCD_ctl_reg
+   00D4 E0                  342 	movx	a,@dptr
+   00D5 FA                  343 	mov	r2,a
+   00D6 44 80               344 	orl	a,#0x80
+   00D8 F0                  345 	movx	@dptr,a
+                            346 ;lcd.c:60: I2C_send (LCD_ctl_reg);
+                            347 ;     genAssign
+   00D9 90s00r00            348 	mov	dptr,#_LCD_ctl_reg
+   00DC E0                  349 	movx	a,@dptr
+                            350 ;     genCall
+                            351 ;	Peephole 244.c	loading dpl from a instead of r2
+   00DD FA                  352 	mov	r2,a
+   00DE F5 82               353 	mov	dpl,a
+   00E0 12s00r00            354 	lcall	_I2C_send
+                            355 ;lcd.c:61: I2C_stop();
+                            356 ;     genCall
+   00E3 12s00r00            357 	lcall	_I2C_stop
+                            358 ;lcd.c:63: I2C_start();
+                            359 ;     genCall
+   00E6 12s00r00            360 	lcall	_I2C_start
+                            361 ;lcd.c:64: I2C_send (LCD_I2C_DAT_ADR+1);	// select IC8 to read from LCD-data
+                            362 ;     genCall
+   00E9 75 82 43            363 	mov	dpl,#0x43
+   00EC 12s00r00            364 	lcall	_I2C_send
+                            365 ;lcd.c:65: dat=I2C_get(1);					// read status
+                            366 ;     genCall
+   00EF 75 82 01            367 	mov	dpl,#0x01
+   00F2 12s00r00            368 	lcall	_I2C_get
+   00F5 E5 82               369 	mov	a,dpl
+                            370 ;     genAssign
+   00F7 90s00r02            371 	mov	dptr,#_LCD_wait_ready_dat_1_1
+   00FA F0                  372 	movx	@dptr,a
+                            373 ;lcd.c:66: I2C_stop();
+                            374 ;     genCall
+   00FB 12s00r00            375 	lcall	_I2C_stop
+                            376 ;lcd.c:68: I2C_start();
+                            377 ;     genCall
+   00FE 12s00r00            378 	lcall	_I2C_start
+                            379 ;lcd.c:69: I2C_send (LCD_I2C_CTL_ADR);		// select IC6 to write to control lines
+                            380 ;     genCall
+   0101 75 82 40            381 	mov	dpl,#0x40
+   0104 12s00r00            382 	lcall	_I2C_send
+                            383 ;lcd.c:70: LCD_ctl_reg &= ~LCD_E;			// Enable '0' : end of cycle
+                            384 ;     genAssign
+                            385 ;     genAnd
+                            386 ;	Peephole 248.b	optimized and to xdata
+   0107 90s00r00            387 	mov	dptr,#_LCD_ctl_reg
+   010A E0                  388 	movx	a,@dptr
+   010B FA                  389 	mov	r2,a
+   010C 54 7F               390 	anl	a,#0x7F
+   010E F0                  391 	movx	@dptr,a
+                            392 ;lcd.c:71: I2C_send (LCD_ctl_reg);
+                            393 ;     genAssign
+   010F 90s00r00            394 	mov	dptr,#_LCD_ctl_reg
+   0112 E0                  395 	movx	a,@dptr
+                            396 ;     genCall
+                            397 ;	Peephole 244.c	loading dpl from a instead of r2
+   0113 FA                  398 	mov	r2,a
+   0114 F5 82               399 	mov	dpl,a
+   0116 12s00r00            400 	lcall	_I2C_send
+                            401 ;lcd.c:72: I2C_stop();
+                            402 ;     genCall
+   0119 12s00r00            403 	lcall	_I2C_stop
+   011C 02s00r86            404 	ljmp	00101$
+   011F                     405 00104$:
+   011F 22                  406 	ret
+                            407 ;------------------------------------------------------------
+                            408 ;Allocation info for local variables in function 'LCD_write_cmd'
+                            409 ;------------------------------------------------------------
+                            410 ;dat                       Allocated with name '_LCD_write_cmd_dat_1_1'
+                            411 ;------------------------------------------------------------
+                            412 ;lcd.c:76: void LCD_write_cmd (unsigned char dat)
+                            413 ;	-----------------------------------------
+                            414 ;	 function LCD_write_cmd
+                            415 ;	-----------------------------------------
+   0120                     416 _LCD_write_cmd:
+                            417 ;     genReceive
+   0120 E5 82               418 	mov	a,dpl
+   0122 90s00r03            419 	mov	dptr,#_LCD_write_cmd_dat_1_1
+   0125 F0                  420 	movx	@dptr,a
+                            421 ;lcd.c:78: I2C_start();
+                            422 ;     genCall
+   0126 12s00r00            423 	lcall	_I2C_start
+                            424 ;lcd.c:79: I2C_send (LCD_I2C_DAT_ADR);		// select IC8 to write to LCD-data
+                            425 ;     genCall
+   0129 75 82 42            426 	mov	dpl,#0x42
+   012C 12s00r00            427 	lcall	_I2C_send
+                            428 ;lcd.c:80: I2C_send (dat);			// put data on LCD-data lines
+                            429 ;     genAssign
+   012F 90s00r03            430 	mov	dptr,#_LCD_write_cmd_dat_1_1
+   0132 E0                  431 	movx	a,@dptr
+                            432 ;     genCall
+                            433 ;	Peephole 244.c	loading dpl from a instead of r2
+   0133 FA                  434 	mov	r2,a
+   0134 F5 82               435 	mov	dpl,a
+   0136 12s00r00            436 	lcall	_I2C_send
+                            437 ;lcd.c:81: I2C_stop  ();
+                            438 ;     genCall
+   0139 12s00r00            439 	lcall	_I2C_stop
+                            440 ;lcd.c:82: I2C_start();
+                            441 ;     genCall
+   013C 12s00r00            442 	lcall	_I2C_start
+                            443 ;lcd.c:83: I2C_send (LCD_I2C_CTL_ADR);		// select IC6 to write to control lines
+                            444 ;     genCall
+   013F 75 82 40            445 	mov	dpl,#0x40
+   0142 12s00r00            446 	lcall	_I2C_send
+                            447 ;lcd.c:84: LCD_ctl_reg &= ~LCD_RS;			// RS '0' : Control register
+                            448 ;     genAssign
+                            449 ;     genAnd
+                            450 ;	Peephole 248.b	optimized and to xdata
+   0145 90s00r00            451 	mov	dptr,#_LCD_ctl_reg
+   0148 E0                  452 	movx	a,@dptr
+   0149 FA                  453 	mov	r2,a
+   014A 54 DF               454 	anl	a,#0xDF
+   014C F0                  455 	movx	@dptr,a
+                            456 ;lcd.c:85: I2C_send (LCD_ctl_reg);
+                            457 ;     genAssign
+   014D 90s00r00            458 	mov	dptr,#_LCD_ctl_reg
+   0150 E0                  459 	movx	a,@dptr
+                            460 ;     genCall
+                            461 ;	Peephole 244.c	loading dpl from a instead of r2
+   0151 FA                  462 	mov	r2,a
+   0152 F5 82               463 	mov	dpl,a
+   0154 12s00r00            464 	lcall	_I2C_send
+                            465 ;lcd.c:86: LCD_ctl_reg &= ~LCD_R_Wn;		// R/Wn '0' : write
+                            466 ;     genAssign
+                            467 ;     genAnd
+                            468 ;	Peephole 248.b	optimized and to xdata
+   0157 90s00r00            469 	mov	dptr,#_LCD_ctl_reg
+   015A E0                  470 	movx	a,@dptr
+   015B FA                  471 	mov	r2,a
+   015C 54 BF               472 	anl	a,#0xBF
+   015E F0                  473 	movx	@dptr,a
+                            474 ;lcd.c:87: I2C_send (LCD_ctl_reg);
+                            475 ;     genAssign
+   015F 90s00r00            476 	mov	dptr,#_LCD_ctl_reg
+   0162 E0                  477 	movx	a,@dptr
+                            478 ;     genCall
+                            479 ;	Peephole 244.c	loading dpl from a instead of r2
+   0163 FA                  480 	mov	r2,a
+   0164 F5 82               481 	mov	dpl,a
+   0166 12s00r00            482 	lcall	_I2C_send
+                            483 ;lcd.c:88: I2C_send (LCD_ctl_reg);
+                            484 ;     genAssign
+   0169 90s00r00            485 	mov	dptr,#_LCD_ctl_reg
+   016C E0                  486 	movx	a,@dptr
+                            487 ;     genCall
+                            488 ;	Peephole 244.c	loading dpl from a instead of r2
+   016D FA                  489 	mov	r2,a
+   016E F5 82               490 	mov	dpl,a
+   0170 12s00r00            491 	lcall	_I2C_send
+                            492 ;lcd.c:89: LCD_ctl_reg |= LCD_E;		// Enable '1' : validate cycle
+                            493 ;     genAssign
+                            494 ;     genOr
+                            495 ;	Peephole 248.a	optimized or to xdata
+   0173 90s00r00            496 	mov	dptr,#_LCD_ctl_reg
+   0176 E0                  497 	movx	a,@dptr
+   0177 FA                  498 	mov	r2,a
+   0178 44 80               499 	orl	a,#0x80
+   017A F0                  500 	movx	@dptr,a
+                            501 ;lcd.c:90: I2C_send (LCD_ctl_reg);
+                            502 ;     genAssign
+   017B 90s00r00            503 	mov	dptr,#_LCD_ctl_reg
+   017E E0                  504 	movx	a,@dptr
+                            505 ;     genCall
+                            506 ;	Peephole 244.c	loading dpl from a instead of r2
+   017F FA                  507 	mov	r2,a
+   0180 F5 82               508 	mov	dpl,a
+   0182 12s00r00            509 	lcall	_I2C_send
+                            510 ;lcd.c:91: LCD_ctl_reg &= ~LCD_E;		// Enable '0' : end of cycle
+                            511 ;     genAssign
+                            512 ;     genAnd
+                            513 ;	Peephole 248.b	optimized and to xdata
+   0185 90s00r00            514 	mov	dptr,#_LCD_ctl_reg
+   0188 E0                  515 	movx	a,@dptr
+   0189 FA                  516 	mov	r2,a
+   018A 54 7F               517 	anl	a,#0x7F
+   018C F0                  518 	movx	@dptr,a
+                            519 ;lcd.c:92: I2C_send (LCD_ctl_reg);
+                            520 ;     genAssign
+   018D 90s00r00            521 	mov	dptr,#_LCD_ctl_reg
+   0190 E0                  522 	movx	a,@dptr
+                            523 ;     genCall
+                            524 ;	Peephole 244.c	loading dpl from a instead of r2
+   0191 FA                  525 	mov	r2,a
+   0192 F5 82               526 	mov	dpl,a
+   0194 12s00r00            527 	lcall	_I2C_send
+                            528 ;lcd.c:93: I2C_stop();
+                            529 ;     genCall
+   0197 12s00r00            530 	lcall	_I2C_stop
+                            531 ;lcd.c:94: LCD_wait();		// Wait until command is executed
+                            532 ;     genCall
+                            533 ;	Peephole 253.b	replaced lcall/ret with ljmp
+   019A 02s00r00            534 	ljmp	_LCD_wait
+                            535 ;------------------------------------------------------------
+                            536 ;Allocation info for local variables in function 'LCD_init'
+                            537 ;------------------------------------------------------------
+                            538 ;------------------------------------------------------------
+                            539 ;lcd.c:97: void LCD_init(void)
+                            540 ;	-----------------------------------------
+                            541 ;	 function LCD_init
+                            542 ;	-----------------------------------------
+   019D                     543 _LCD_init:
+                            544 ;lcd.c:102: LCD_write_cmd (0x38);	// 8-bit 1/16 Dutycycle 5x7 dots
+                            545 ;     genCall
+   019D 75 82 38            546 	mov	dpl,#0x38
+   01A0 12s01r20            547 	lcall	_LCD_write_cmd
+                            548 ;lcd.c:103: LCD_wait_ready();
+                            549 ;     genCall
+   01A3 12s00r80            550 	lcall	_LCD_wait_ready
+                            551 ;lcd.c:104: LCD_write_cmd (0x38);	// 8-bit 1/16 Dutycycle 5x7 dots
+                            552 ;     genCall
+   01A6 75 82 38            553 	mov	dpl,#0x38
+   01A9 12s01r20            554 	lcall	_LCD_write_cmd
+                            555 ;lcd.c:105: LCD_wait_ready();
+                            556 ;     genCall
+   01AC 12s00r80            557 	lcall	_LCD_wait_ready
+                            558 ;lcd.c:108: LCD_write_cmd (0x0c);	
+                            559 ;     genCall
+   01AF 75 82 0C            560 	mov	dpl,#0x0C
+   01B2 12s01r20            561 	lcall	_LCD_write_cmd
+                            562 ;lcd.c:109: LCD_wait_ready();
+                            563 ;     genCall
+   01B5 12s00r80            564 	lcall	_LCD_wait_ready
+                            565 ;lcd.c:110: LCD_write_cmd (0x02);	// Undo shift
+                            566 ;     genCall
+   01B8 75 82 02            567 	mov	dpl,#0x02
+   01BB 12s01r20            568 	lcall	_LCD_write_cmd
+                            569 ;lcd.c:111: LCD_wait_ready();
+                            570 ;     genCall
+   01BE 12s00r80            571 	lcall	_LCD_wait_ready
+                            572 ;lcd.c:112: LCD_write_cmd (0x06);	// Cursor shifts right
+                            573 ;     genCall
+   01C1 75 82 06            574 	mov	dpl,#0x06
+   01C4 12s01r20            575 	lcall	_LCD_write_cmd
+                            576 ;lcd.c:113: LCD_wait_ready();
+                            577 ;     genCall
+   01C7 12s00r80            578 	lcall	_LCD_wait_ready
+                            579 ;lcd.c:114: LCD_write_cmd (0x0c);	// Display ON, cursor ON, blink OFF
+                            580 ;     genCall
+   01CA 75 82 0C            581 	mov	dpl,#0x0C
+   01CD 12s01r20            582 	lcall	_LCD_write_cmd
+                            583 ;lcd.c:115: LCD_wait_ready();
+                            584 ;     genCall
+   01D0 12s00r80            585 	lcall	_LCD_wait_ready
+                            586 ;lcd.c:116: LCD_write_cmd (0x40);	// CGRAM pointer 0
+                            587 ;     genCall
+   01D3 75 82 40            588 	mov	dpl,#0x40
+   01D6 12s01r20            589 	lcall	_LCD_write_cmd
+                            590 ;lcd.c:117: LCD_wait_ready();
+                            591 ;     genCall
+   01D9 12s00r80            592 	lcall	_LCD_wait_ready
+                            593 ;lcd.c:118: LCD_write_cmd (0x80);	// DDRAM pointer 0
+                            594 ;     genCall
+   01DC 75 82 80            595 	mov	dpl,#0x80
+   01DF 12s01r20            596 	lcall	_LCD_write_cmd
+                            597 ;lcd.c:119: LCD_wait_ready();
+                            598 ;     genCall
+   01E2 12s00r80            599 	lcall	_LCD_wait_ready
+                            600 ;lcd.c:120: LCD_write_cmd (0x01);
+                            601 ;     genCall
+   01E5 75 82 01            602 	mov	dpl,#0x01
+   01E8 12s01r20            603 	lcall	_LCD_write_cmd
+                            604 ;lcd.c:121: LCD_wait_ready();
+                            605 ;     genCall
+   01EB 12s00r80            606 	lcall	_LCD_wait_ready
+                            607 ;lcd.c:122: LCD_ctl_reg = 0x00;		// initialize control-lines
+                            608 ;     genAssign
+   01EE 90s00r00            609 	mov	dptr,#_LCD_ctl_reg
+                            610 ;	Peephole 181	changed mov to clr
+   01F1 E4                  611 	clr	a
+   01F2 F0                  612 	movx	@dptr,a
+   01F3                     613 00101$:
+   01F3 22                  614 	ret
+                            615 ;------------------------------------------------------------
+                            616 ;Allocation info for local variables in function 'LCD_write_line'
+                            617 ;------------------------------------------------------------
+                            618 ;line                      Allocated with name '_LCD_write_line_PARM_2'
+                            619 ;str                       Allocated with name '_LCD_write_line_str_1_1'
+                            620 ;nr                        Allocated with name '_LCD_write_line_nr_1_1'
+                            621 ;------------------------------------------------------------
+                            622 ;lcd.c:125: void LCD_write_line(char *str,unsigned char line)
+                            623 ;	-----------------------------------------
+                            624 ;	 function LCD_write_line
+                            625 ;	-----------------------------------------
+   01F4                     626 _LCD_write_line:
+                            627 ;     genReceive
+   01F4 AA F0               628 	mov	r2,b
+   01F6 AB 83               629 	mov	r3,dph
+   01F8 E5 82               630 	mov	a,dpl
+   01FA 90s00r05            631 	mov	dptr,#_LCD_write_line_str_1_1
+   01FD F0                  632 	movx	@dptr,a
+   01FE A3                  633 	inc	dptr
+   01FF EB                  634 	mov	a,r3
+   0200 F0                  635 	movx	@dptr,a
+   0201 A3                  636 	inc	dptr
+   0202 EA                  637 	mov	a,r2
+   0203 F0                  638 	movx	@dptr,a
+                            639 ;lcd.c:128: if (line==0) LCD_write_cmd (0x80);	// DDRAM pointer 0   (first line)
+                            640 ;     genAssign
+   0204 90s00r04            641 	mov	dptr,#_LCD_write_line_PARM_2
+   0207 E0                  642 	movx	a,@dptr
+                            643 ;     genCmpEq
+                            644 ;	Peephole 115.b	jump optimization
+   0208 FA                  645 	mov	r2,a
+   0209 60 02               646 	jz	00120$
+   020B                     647 00119$:
+                            648 ;	Peephole 112.b	changed ljmp to sjmp
+   020B 80 08               649 	sjmp	00102$
+   020D                     650 00120$:
+                            651 ;     genCall
+   020D 75 82 80            652 	mov	dpl,#0x80
+   0210 12s01r20            653 	lcall	_LCD_write_cmd
+                            654 ;	Peephole 112.b	changed ljmp to sjmp
+   0213 80 06               655 	sjmp	00116$
+   0215                     656 00102$:
+                            657 ;lcd.c:129: else LCD_write_cmd (0xc0);			// DDRAM pointer x40 (line nr 1)
+                            658 ;     genCall
+   0215 75 82 C0            659 	mov	dpl,#0xC0
+   0218 12s01r20            660 	lcall	_LCD_write_cmd
+                            661 ;lcd.c:130: while ((*str!=0)&&(nr<16)) {LCD_write_dat (*str++);nr++;} // write to the LCD-data register as
+   021B                     662 00116$:
+                            663 ;     genAssign
+   021B 90s00r05            664 	mov	dptr,#_LCD_write_line_str_1_1
+   021E E0                  665 	movx	a,@dptr
+   021F FA                  666 	mov	r2,a
+   0220 A3                  667 	inc	dptr
+   0221 E0                  668 	movx	a,@dptr
+   0222 FB                  669 	mov	r3,a
+   0223 A3                  670 	inc	dptr
+   0224 E0                  671 	movx	a,@dptr
+   0225 FC                  672 	mov	r4,a
+                            673 ;     genAssign
+   0226 7D 00               674 	mov	r5,#0x00
+   0228                     675 00105$:
+                            676 ;     genPointerGet
+                            677 ;     genGenPointerGet
+   0228 8A 82               678 	mov	dpl,r2
+   022A 8B 83               679 	mov	dph,r3
+   022C 8C F0               680 	mov	b,r4
+   022E 12s00r00            681 	lcall	__gptrget
+                            682 ;     genCmpEq
+                            683 ;	Peephole 112.b	changed ljmp to sjmp
+                            684 ;	Peephole 115.b	jump optimization
+   0231 FE                  685 	mov	r6,a
+   0232 60 2D               686 	jz	00118$
+   0234                     687 00121$:
+                            688 ;     genCmpLt
+                            689 ;     genCmp
+   0234 BD 10 00            690 	cjne	r5,#0x10,00122$
+   0237                     691 00122$:
+                            692 ;     genIfxJump
+                            693 ;	Peephole 108	removed ljmp by inverse jump logic
+   0237 50 28               694 	jnc	00118$
+   0239                     695 00123$:
+                            696 ;     genAssign
+                            697 ;     genPlus
+                            698 ;     genPlusIncr
+   0239 0A                  699 	inc	r2
+   023A BA 00 01            700 	cjne	r2,#0x00,00124$
+   023D 0B                  701 	inc	r3
+   023E                     702 00124$:
+                            703 ;     genAssign
+   023E 90s00r05            704 	mov	dptr,#_LCD_write_line_str_1_1
+   0241 EA                  705 	mov	a,r2
+   0242 F0                  706 	movx	@dptr,a
+   0243 A3                  707 	inc	dptr
+   0244 EB                  708 	mov	a,r3
+   0245 F0                  709 	movx	@dptr,a
+   0246 A3                  710 	inc	dptr
+   0247 EC                  711 	mov	a,r4
+   0248 F0                  712 	movx	@dptr,a
+                            713 ;     genCall
+   0249 8E 82               714 	mov	dpl,r6
+   024B C0 02               715 	push	ar2
+   024D C0 03               716 	push	ar3
+   024F C0 04               717 	push	ar4
+   0251 C0 05               718 	push	ar5
+   0253 12s00r10            719 	lcall	_LCD_write_dat
+   0256 D0 05               720 	pop	ar5
+   0258 D0 04               721 	pop	ar4
+   025A D0 03               722 	pop	ar3
+   025C D0 02               723 	pop	ar2
+                            724 ;     genPlus
+                            725 ;     genPlusIncr
+   025E 0D                  726 	inc	r5
+                            727 ;lcd.c:132: while (nr++<16) {LCD_write_dat (' ');} // fill the rest of the line with ' '
+                            728 ;	Peephole 112.b	changed ljmp to sjmp
+   025F 80 C7               729 	sjmp	00105$
+   0261                     730 00118$:
+                            731 ;     genAssign
+   0261 90s00r05            732 	mov	dptr,#_LCD_write_line_str_1_1
+   0264 EA                  733 	mov	a,r2
+   0265 F0                  734 	movx	@dptr,a
+   0266 A3                  735 	inc	dptr
+   0267 EB                  736 	mov	a,r3
+   0268 F0                  737 	movx	@dptr,a
+   0269 A3                  738 	inc	dptr
+   026A EC                  739 	mov	a,r4
+   026B F0                  740 	movx	@dptr,a
+                            741 ;     genAssign
+   026C 8D 02               742 	mov	ar2,r5
+   026E                     743 00108$:
+                            744 ;     genAssign
+   026E 8A 03               745 	mov	ar3,r2
+                            746 ;     genPlus
+                            747 ;     genPlusIncr
+   0270 0A                  748 	inc	r2
+                            749 ;     genCmpLt
+                            750 ;     genCmp
+   0271 BB 10 00            751 	cjne	r3,#0x10,00125$
+   0274                     752 00125$:
+                            753 ;     genIfxJump
+                            754 ;	Peephole 108	removed ljmp by inverse jump logic
+   0274 50 0C               755 	jnc	00111$
+   0276                     756 00126$:
+                            757 ;     genCall
+   0276 75 82 20            758 	mov	dpl,#0x20
+   0279 C0 02               759 	push	ar2
+   027B 12s00r10            760 	lcall	_LCD_write_dat
+   027E D0 02               761 	pop	ar2
+                            762 ;	Peephole 112.b	changed ljmp to sjmp
+   0280 80 EC               763 	sjmp	00108$
+   0282                     764 00111$:
+   0282 22                  765 	ret
+                            766 	.area CSEG    (CODE)
+                            767 	.area XINIT   (CODE)

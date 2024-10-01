@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.205 ns
+From           : shift_reg:inst2|TEMP_OUT[6]
+To             : LED7
+From Clock     : 50MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: '50MHz'
+Slack          : 14.859 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 194.51 MHz ( period = 5.141 ns )
+From           : pulse_generator:inst|counter[9]
+To             : pulse_generator:inst|counter[7]
+From Clock     : 50MHz
+To Clock       : 50MHz
+Failed Paths   : 0
+
+Type           : Clock Hold: '50MHz'
+Slack          : 0.771 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : shift_reg:inst2|TEMP_OUT[1]
+To             : shift_reg:inst2|TEMP_OUT[2]
+From Clock     : 50MHz
+To Clock       : 50MHz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

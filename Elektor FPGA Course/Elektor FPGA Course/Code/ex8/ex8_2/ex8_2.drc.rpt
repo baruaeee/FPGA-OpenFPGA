@@ -1,0 +1,198 @@
+Design Assistant report for ex8_2
+Thu Mar 16 11:04:25 2006
+Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant Summary
+  3. Design Assistant Settings
+  4. Information only Violations
+  5. Design Assistant Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Design Assistant Summary                                                ;
++-----------------------------------+-------------------------------------+
+; Design Assistant Status           ; Analyzed - Thu Mar 16 11:04:25 2006 ;
+; Revision Name                     ; ex8_2                               ;
+; Top-level Entity Name             ; ex8_2                               ;
+; Family                            ; Cyclone                             ;
+; Total Critical Violations         ; 0                                   ;
+; Total High Violations             ; 0                                   ;
+; Total Medium Violations           ; 0                                   ;
+; Total Information only Violations ; 51                                  ;
++-----------------------------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant Settings                                                                                                                                                                                                                                                                ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Option                                                                                                                                                                                                                                                                    ; Setting      ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Design Assistant mode                                                                                                                                                                                                                                                     ; Post-Fitting ;
+; Threshold value for clock net not mapped to clock spines rule                                                                                                                                                                                                             ; 25           ;
+; Minimum number of node fan-out                                                                                                                                                                                                                                            ; 30           ;
+; Maximum number of nodes to report                                                                                                                                                                                                                                         ; 50           ;
+; Gated clock should be implemented according to Altera standard scheme                                                                                                                                                                                                     ; On           ;
+; Logic cell should not be used to generate inverted clock                                                                                                                                                                                                                  ; On           ;
+; Input clock pin should fan out to only one set of clock gating logic                                                                                                                                                                                                      ; On           ;
+; Clock signal source should drive only input clock ports                                                                                                                                                                                                                   ; On           ;
+; Clock signal should be a global signal (Rule applies during post-fitting analysis. This rule applies during both post-fitting analysis and post-synthesis analysis if the design targets a MAX 3000 or MAX 7000 device. For more information, see the Help for the rule.) ; On           ;
+; Clock signal source should not drive registers that are triggered by different clock edges                                                                                                                                                                                ; On           ;
+; Combinational logic used as reset signal should be synchronized                                                                                                                                                                                                           ; On           ;
+; External reset should be synchronized using two cascaded registers                                                                                                                                                                                                        ; On           ;
+; External reset should be correctly synchronized                                                                                                                                                                                                                           ; On           ;
+; Reset signal that is generated in one clock domain and used in other, asynchronous clock domains should be correctly synchronized                                                                                                                                         ; On           ;
+; Reset signal that is generated in one clock domain and used in other, asynchronous clock domains should be synchronized                                                                                                                                                   ; On           ;
+; Nodes with more than specified number of fan-outs                                                                                                                                                                                                                         ; On           ;
+; Top nodes with highest fan-out                                                                                                                                                                                                                                            ; On           ;
+; Design should not contain combinational loops                                                                                                                                                                                                                             ; On           ;
+; Register output should not drive its own control signal directly or through combinational logic                                                                                                                                                                           ; On           ;
+; Design should not contain delay chains                                                                                                                                                                                                                                    ; On           ;
+; Design should not contain ripple clock structures                                                                                                                                                                                                                         ; On           ;
+; Pulses should not be implemented asynchronously                                                                                                                                                                                                                           ; On           ;
+; Multiple pulses should not be generated in design                                                                                                                                                                                                                         ; On           ;
+; Design should not contain SR latches                                                                                                                                                                                                                                      ; On           ;
+; Design should not contain latches                                                                                                                                                                                                                                         ; On           ;
+; Combinational logic should not directly drive write enable signal of asynchronous RAM                                                                                                                                                                                     ; On           ;
+; Design should not contain asynchronous memory                                                                                                                                                                                                                             ; On           ;
+; Output enable and input of same tri-state node should not be driven by same signal source                                                                                                                                                                                 ; On           ;
+; Synchronous port and reset port of same register should not be driven by same signal source                                                                                                                                                                               ; On           ;
+; Data bits are not synchronized when transferred between asynchronous clock domains                                                                                                                                                                                        ; On           ;
+; Multiple data bits that are transferred across asynchronous clock domains are synchronized, but not all bits may be aligned in receiving clock domain                                                                                                                     ; On           ;
+; Data bits are not correctly synchronized when transferred between asynchronous clock domains                                                                                                                                                                              ; On           ;
+; Only one VREF pin should be assigned to HardCopy test pin in an I/O bank (Rule does not apply to all HardCopy and HardCopy Stratix devices. This rule is used to analyze a design only when the rule applies to the design's target HardCopy or HardCopy Stratix device.) ; On           ;
+; PLL drives multiple clock network types (Rule does not apply to all HardCopy and HardCopy Stratix devices. This rule is used to analyze a design only when the rule applies to the design's target HardCopy or HardCopy Stratix device.)                                  ; On           ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                         ;
++---------------------------------------------------+---------------------------------------+---------+
+; Rule name                                         ; Name                                  ; Fan-Out ;
++---------------------------------------------------+---------------------------------------+---------+
+; Nodes with more than specified number of fan-outs ; 50MHz                                 ; 37      ;
+; Top nodes with highest fan-out                    ; 50MHz                                 ; 37      ;
+; Top nodes with highest fan-out                    ; rtl~2                                 ; 10      ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|slow_enable      ; 7       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~468          ; 5       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~488          ; 5       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~518          ; 5       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~543          ; 5       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~458          ; 4       ;
+; Top nodes with highest fan-out                    ; pattern:inst1|temp_out                ; 4       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[0]           ; 3       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[0]       ; 3       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[3]           ; 3       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[5]           ; 3       ;
+; Top nodes with highest fan-out                    ; rtl~287                               ; 3       ;
+; Top nodes with highest fan-out                    ; rtl~285                               ; 3       ;
+; Top nodes with highest fan-out                    ; rtl~288                               ; 3       ;
+; Top nodes with highest fan-out                    ; rtl~286                               ; 3       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[4]           ; 3       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[6]           ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[12]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[13]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[14]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[16]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[18]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[19]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[20]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[21]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[6]       ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[4]       ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[7]       ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[1]       ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[2]       ; 2       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[1]           ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[24]      ; 2       ;
+; Top nodes with highest fan-out                    ; shift_reg:inst2|TEMP_OUT[2]           ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[26]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[25]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[22]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[8]       ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[11]      ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|counter[9]       ; 2       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~523COUT1_596 ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~473          ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~493COUT1_608 ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~493          ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~558COUT1_588 ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~463COUT1_618 ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~463          ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~453COUT1_620 ; 1       ;
+; Top nodes with highest fan-out                    ; pulse_generator:inst|add~453          ; 1       ;
++---------------------------------------------------+---------------------------------------+---------+
+
+
++---------------------------+
+; Design Assistant Messages ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Design Assistant
+    Info: Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+    Info: Processing started: Thu Mar 16 11:04:24 2006
+Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off ex8_2 -c ex8_2
+Info: Design Assistant information: Nodes with more than specified number of fan-outs. Found 1 node(s) with highest fan-out.
+    Info: Node "50MHz" has 37 fan-out(s)
+Info: Design Assistant information: Top nodes with highest fan-out. Found 50 node(s) with highest fan-out.
+    Info: Node "50MHz" has 37 fan-out(s)
+    Info: Node "rtl~2" has 10 fan-out(s)
+    Info: Node "pulse_generator:inst|slow_enable" has 7 fan-out(s)
+    Info: Node "pulse_generator:inst|add~468" has 5 fan-out(s)
+    Info: Node "pulse_generator:inst|add~488" has 5 fan-out(s)
+    Info: Node "pulse_generator:inst|add~518" has 5 fan-out(s)
+    Info: Node "pulse_generator:inst|add~543" has 5 fan-out(s)
+    Info: Node "pulse_generator:inst|add~458" has 4 fan-out(s)
+    Info: Node "pattern:inst1|temp_out" has 4 fan-out(s)
+    Info: Node "shift_reg:inst2|TEMP_OUT[0]" has 3 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[0]" has 3 fan-out(s)
+    Info: Node "shift_reg:inst2|TEMP_OUT[3]" has 3 fan-out(s)
+    Info: Node "shift_reg:inst2|TEMP_OUT[5]" has 3 fan-out(s)
+    Info: Node "rtl~287" has 3 fan-out(s)
+    Info: Node "rtl~285" has 3 fan-out(s)
+    Info: Node "rtl~288" has 3 fan-out(s)
+    Info: Node "rtl~286" has 3 fan-out(s)
+    Info: Node "shift_reg:inst2|TEMP_OUT[4]" has 3 fan-out(s)
+    Info: Node "shift_reg:inst2|TEMP_OUT[6]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[12]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[13]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[14]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[16]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[18]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[19]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[20]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[21]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[6]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[4]" has 2 fan-out(s)
+    Info: Node "pulse_generator:inst|counter[7]" has 2 fan-out(s)
+    Info: Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+Info: Design Assistant information: finished post-fitting analysis of current design -- generated 51 information messages and 0 warning messages
+Info: Quartus II Design Assistant was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu Mar 16 11:04:25 2006
+    Info: Elapsed time: 00:00:01
+
+

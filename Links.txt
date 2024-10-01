@@ -1,1 +1,66 @@
 https://openfpga.readthedocs.io/en/master/
+
+https://youtu.be/ocODUGcYGqo?list=PLs-JA7mhcMRO9demDFIgWmKwAgAI3Yjd4
+
+https://www.youtube.com/watch?v=HH8fh5wBysY&t=1s&pp=ygUIb3BlbmZwZ2E%3D
+
+https://www.youtube.com/watch?v=nwb5Yk5Uz5w&pp=ygUIb3BlbmZwZ2E%3D
+
+https://sites.google.com/view/openfpgaatfpga23
+
+https://docs.verilogtorouting.org/en/latest/vpr/
+
+https://github.com/lnis-uofu/OpenFPGA/blob/master/docs/source/tutorials/arch_modeling/quick_start.rst
+
+https://gitee.com/curliph/OpenFPGA
+
+https://docs.verilogtorouting.org/en/latest/vpr/basic_flow/
+
+https://compedulabs.org/id/organisation/22
+
+https://semiconductorclub.com/course-category/asic-design-verification/
+or
+https://www.youtube.com/playlist?list=PLai-xIlqf4JmAdNYzthdI2lv-5Bu_O5bv
+
+https://semiconductorclub.com/courses/full-chip-drc-lvs/
+or
+https://www.youtube.com/playlist?list=PLZU5hLL_713xp5sDexQMVdOM86l_wP5w8
+
+https://archive.org/details/academictorrents_625ae5f99f1cfdc2b8eb42577ca5271ad78967e0
+
+https://cmosedu.com/
+
+https://www.youtube.com/playlist?list=PLHTXmXoTo6L_Wg0t2v_GB2lEgWf7hTGq6
+
+https://github.com/stineje/sky130_cds
+
+https://downloadly.ir/elearning/video-tutorials/embedded-fun-with-risc-v-part-1-the-risc-v-isa/
+
+https://hardwarebee.com/the-ultimate-guide-to-fpga-architecture/
+https://hardwarebee.com/fpga-architecture/
+https://hardwarebee.com/cpld-vs-fpga-difference/
+https://hardwarebee.com/ultimate-guide-fpga-design-flow/
+https://hardwarebee.com/fpga-design-flow-introduction/
+
+dependencies:
+ctags-already installed in mint 21.3
+
+
+What is VPR in FPGA?
+VPR, or Versatile Place and Route, is an open-source CAD (Computer-Aided Design) tool specifically designed for the packing, placement, and routing of circuits on Field-Programmable Gate Arrays (FPGAs). Developed primarily by the University of Toronto, VPR allows researchers and engineers to explore and evaluate various FPGA architectures and CAD algorithms.
+
+What are PnR Constraints?
+PnR constraints refer to specific guidelines and limitations that are applied during the Place and Route (PnR) process in digital circuit design, particularly for FPGAs and ASICs. These constraints are crucial for ensuring that the final design meets performance, timing, and physical requirements.
+
+What is an FPGA Bitstream?
+An FPGA bitstream is a binary file that contains the configuration data necessary to program an FPGA (Field-Programmable Gate Array). This file encodes all the information required to set up the FPGA's internal logic elements, interconnections, and other functionalities to implement a specific design.
+
+
+what is channel in FPGA?
+In the context of Field-Programmable Gate Arrays (FPGAs), a channel refers to the routing pathways that connect various components within the FPGA, such as logic blocks and input/output (I/O) pads. These channels are essential for facilitating communication between different parts of the FPGA, allowing signals to travel from one location to another.
+
+what is CLB inFPGA?
+A Configurable Logic Block (CLB) is a fundamental building block of Field-Programmable Gate Arrays (FPGAs). It serves as the primary resource for implementing digital logic functions within the FPGA architecture.
+
+what is FPGA-SDC?
+FPGA-SDC refers to Field-Programmable Gate Array - Synopsys Design Constraints. It is a file format used to specify timing and design constraints for FPGA designs, particularly when using tools from Synopsys or other EDA (Electronic Design Automation) tools that support the SDC format.

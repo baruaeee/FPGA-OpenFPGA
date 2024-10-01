@@ -1,0 +1,103 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		ex8_1_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C12F256C7
+set_global_assignment -name TOP_LEVEL_ENTITY ex8_1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "5.1 SP0.15"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:31:54  FEBRUARY 08, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION "5.1 SP0.15"
+set_global_assignment -name EDA_BOARD_DESIGN_TOOL "Symbol Generation (FPGA Xchange)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT BOARD -section_id eda_board_design
+set_global_assignment -name BDF_FILE ex8_1.bdf
+set_location_assignment PIN_T15 -to SWITCH1
+set_instance_assignment -name IO_STANDARD LVTTL -to SWITCH1
+set_location_assignment PIN_T13 -to SWITCH2
+set_instance_assignment -name IO_STANDARD LVTTL -to SWITCH2
+set_location_assignment PIN_M14 -to SWITCH4
+set_instance_assignment -name IO_STANDARD LVTTL -to SWITCH4
+set_location_assignment PIN_P14 -to SWITCH3
+set_instance_assignment -name IO_STANDARD LVTTL -to SWITCH3
+set_location_assignment PIN_N13 -to LED1
+set_instance_assignment -name IO_STANDARD LVTTL -to LED1
+set_location_assignment PIN_M13 -to LED2
+set_instance_assignment -name IO_STANDARD LVTTL -to LED2
+set_location_assignment PIN_N12 -to LED3
+set_instance_assignment -name IO_STANDARD LVTTL -to LED3
+set_location_assignment PIN_P12 -to LED4
+set_instance_assignment -name IO_STANDARD LVTTL -to LED4
+set_location_assignment PIN_M12 -to LED5
+set_instance_assignment -name IO_STANDARD LVTTL -to LED5
+set_location_assignment PIN_R12 -to LED6
+set_instance_assignment -name IO_STANDARD LVTTL -to LED6
+set_location_assignment PIN_T11 -to LED7
+set_instance_assignment -name IO_STANDARD LVTTL -to LED7
+set_location_assignment PIN_P15 -to DIPSWITCH[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[4]
+set_location_assignment PIN_R13 -to DIPSWITCH[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[0]
+set_location_assignment PIN_N14 -to DIPSWITCH[5]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[5]
+set_location_assignment PIN_R15 -to DIPSWITCH[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[1]
+set_location_assignment PIN_P13 -to DIPSWITCH[6]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[6]
+set_location_assignment PIN_R14 -to DIPSWITCH[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[2]
+set_location_assignment PIN_N15 -to DIPSWITCH[7]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[7]
+set_location_assignment PIN_R16 -to DIPSWITCH[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to DIPSWITCH[3]
+set_location_assignment PIN_G16 -to 50MHz
+set_instance_assignment -name IO_STANDARD LVTTL -to 50MHz
+set_location_assignment PIN_E15 -to DIG_2
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_2
+set_location_assignment PIN_F12 -to DIG_1
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_1
+set_location_assignment PIN_D16 -to DIG_3
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_3
+set_location_assignment PIN_D15 -to DIG_4
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_4
+set_location_assignment PIN_C15 -to DIG_A
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_A
+set_location_assignment PIN_B16 -to DIG_B
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_B
+set_location_assignment PIN_C13 -to DIG_C
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_C
+set_location_assignment PIN_B14 -to DIG_D
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_D
+set_location_assignment PIN_C14 -to DIG_E
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_E
+set_location_assignment PIN_A15 -to DIG_F
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_F
+set_location_assignment PIN_D14 -to DIG_G
+set_instance_assignment -name IO_STANDARD LVTTL -to DIG_G
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name VHDL_FILE pulse_generator.vhd
+set_global_assignment -name VHDL_FILE shift_reg.vhd
+set_global_assignment -name FMAX_REQUIREMENT "50 MHz" -section_id external
+set_instance_assignment -name CLOCK_SETTINGS external -to 50MHz
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"

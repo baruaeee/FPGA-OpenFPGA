@@ -1,0 +1,170 @@
+Timing Analyzer report for ex6_VHDL_flipflop
+Mon Jan 30 12:00:04 2006
+Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. tsu
+  6. tco
+  7. th
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                               ;
++------------------------------+-------+---------------+-------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 0.238 ns    ; SWITCH2                     ; Latch_VHDL:inst|Q           ; --         ; SWITCH1  ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.962 ns   ; D_ff_set_reset_VHDL:inst2|Q ; LED3                        ; SWITCH1    ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.867 ns    ; SWITCH2                     ; D_ff_set_reset_VHDL:inst2|Q ; --         ; SWITCH1  ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                             ;                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+-----------------------------+-----------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                  ;
++-------------------------------------------------------+--------------------+------+---------+-------------+
+; Option                                                ; Setting            ; From ; To      ; Entity Name ;
++-------------------------------------------------------+--------------------+------+---------+-------------+
+; Device Name                                           ; EP1C12F256C7       ;      ;         ;             ;
+; Timing Models                                         ; Final              ;      ;         ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;         ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;         ;             ;
+; Number of paths to report                             ; 200                ;      ;         ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;         ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;         ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;         ;             ;
+; Default hold multicycle                               ; Same As Multicycle ;      ;         ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;         ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;         ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;         ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;         ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;         ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;         ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;         ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;         ;             ;
+; Clock Settings                                        ; easy setting       ;      ; SWITCH1 ;             ;
++-------------------------------------------------------+--------------------+------+---------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; SWITCH1         ; easy_setting       ; User Pin ; 1.0 MHz          ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++--------------------------------------------------------------------------------------+
+; tsu                                                                                  ;
++-------+--------------+------------+---------+-----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                          ; To Clock ;
++-------+--------------+------------+---------+-----------------------------+----------+
+; N/A   ; None         ; 0.238 ns   ; SWITCH2 ; Latch_VHDL:inst|Q           ; SWITCH1  ;
+; N/A   ; None         ; -0.820 ns  ; SWITCH2 ; D_ff_VHDL:inst1|Q           ; SWITCH1  ;
+; N/A   ; None         ; -0.821 ns  ; SWITCH2 ; D_ff_set_reset_VHDL:inst2|Q ; SWITCH1  ;
++-------+--------------+------------+---------+-----------------------------+----------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+-----------------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From                        ; To   ; From Clock ;
++-------+--------------+------------+-----------------------------+------+------------+
+; N/A   ; None         ; 10.962 ns  ; D_ff_set_reset_VHDL:inst2|Q ; LED3 ; SWITCH1    ;
+; N/A   ; None         ; 10.659 ns  ; D_ff_VHDL:inst1|Q           ; LED2 ; SWITCH1    ;
+; N/A   ; None         ; 10.033 ns  ; Latch_VHDL:inst|Q           ; LED1 ; SWITCH1    ;
++-------+--------------+------------+-----------------------------+------+------------+
+
+
++--------------------------------------------------------------------------------------------+
+; th                                                                                         ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                          ; To Clock ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+; N/A           ; None        ; 0.867 ns  ; SWITCH2 ; D_ff_set_reset_VHDL:inst2|Q ; SWITCH1  ;
+; N/A           ; None        ; 0.866 ns  ; SWITCH2 ; D_ff_VHDL:inst1|Q           ; SWITCH1  ;
+; N/A           ; None        ; 0.603 ns  ; SWITCH2 ; Latch_VHDL:inst|Q           ; SWITCH1  ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.1 Build 176 10/26/2005 Service Pack 0.15 SJ Web Edition
+    Info: Processing started: Mon Jan 30 12:00:03 2006
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ex6_VHDL_flipflop -c ex6_VHDL_flipflop --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "Latch_VHDL:inst|Q" is a latch
+Info: No valid register-to-register data paths exist for clock "SWITCH1"
+Info: tsu for register "Latch_VHDL:inst|Q" (data pin = "SWITCH2", clock pin = "SWITCH1") is 0.238 ns
+    Info: + Longest pin to register delay is 6.593 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.305 ns) = 1.305 ns; Loc. = PIN_T13; Fanout = 3; PIN Node = 'SWITCH2'
+        Info: 2: + IC(4.766 ns) + CELL(0.522 ns) = 6.593 ns; Loc. = LC_X52_Y1_N5; Fanout = 1; REG Node = 'Latch_VHDL:inst|Q'
+        Info: Total cell delay = 1.827 ns ( 27.71 % )
+        Info: Total interconnect delay = 4.766 ns ( 72.29 % )
+    Info: + Micro setup delay of destination is 0.841 ns
+    Info: - Shortest clock path from clock "SWITCH1" to destination register is 7.196 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.305 ns) = 1.305 ns; Loc. = PIN_T15; Fanout = 3; CLK Node = 'SWITCH1'
+        Info: 2: + IC(5.790 ns) + CELL(0.101 ns) = 7.196 ns; Loc. = LC_X52_Y1_N5; Fanout = 1; REG Node = 'Latch_VHDL:inst|Q'
+        Info: Total cell delay = 1.406 ns ( 19.54 % )
+        Info: Total interconnect delay = 5.790 ns ( 80.46 % )
+Info: tco from clock "SWITCH1" to destination pin "LED3" through register "D_ff_set_reset_VHDL:inst2|Q" is 10.962 ns
+    Info: + Longest clock path from clock "SWITCH1" to source register is 7.185 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.305 ns) = 1.305 ns; Loc. = PIN_T15; Fanout = 3; CLK Node = 'SWITCH1'
+        Info: 2: + IC(5.251 ns) + CELL(0.629 ns) = 7.185 ns; Loc. = LC_X52_Y1_N2; Fanout = 1; REG Node = 'D_ff_set_reset_VHDL:inst2|Q'
+        Info: Total cell delay = 1.934 ns ( 26.92 % )
+        Info: Total interconnect delay = 5.251 ns ( 73.08 % )
+    Info: + Micro clock to output delay of source is 0.198 ns
+    Info: + Longest register to pin delay is 3.579 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X52_Y1_N2; Fanout = 1; REG Node = 'D_ff_set_reset_VHDL:inst2|Q'
+        Info: 2: + IC(1.714 ns) + CELL(1.865 ns) = 3.579 ns; Loc. = PIN_N12; Fanout = 0; PIN Node = 'LED3'
+        Info: Total cell delay = 1.865 ns ( 52.11 % )
+        Info: Total interconnect delay = 1.714 ns ( 47.89 % )
+Info: th for register "D_ff_set_reset_VHDL:inst2|Q" (data pin = "SWITCH2", clock pin = "SWITCH1") is 0.867 ns
+    Info: + Longest clock path from clock "SWITCH1" to destination register is 7.185 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.305 ns) = 1.305 ns; Loc. = PIN_T15; Fanout = 3; CLK Node = 'SWITCH1'
+        Info: 2: + IC(5.251 ns) + CELL(0.629 ns) = 7.185 ns; Loc. = LC_X52_Y1_N2; Fanout = 1; REG Node = 'D_ff_set_reset_VHDL:inst2|Q'
+        Info: Total cell delay = 1.934 ns ( 26.92 % )
+        Info: Total interconnect delay = 5.251 ns ( 73.08 % )
+    Info: + Micro hold delay of destination is 0.013 ns
+    Info: - Shortest pin to register delay is 6.331 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.305 ns) = 1.305 ns; Loc. = PIN_T13; Fanout = 3; PIN Node = 'SWITCH2'
+        Info: 2: + IC(4.753 ns) + CELL(0.273 ns) = 6.331 ns; Loc. = LC_X52_Y1_N2; Fanout = 1; REG Node = 'D_ff_set_reset_VHDL:inst2|Q'
+        Info: Total cell delay = 1.578 ns ( 24.92 % )
+        Info: Total interconnect delay = 4.753 ns ( 75.08 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Processing ended: Mon Jan 30 12:00:03 2006
+    Info: Elapsed time: 00:00:01
+
+

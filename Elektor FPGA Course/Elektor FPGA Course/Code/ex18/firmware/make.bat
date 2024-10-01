@@ -1,0 +1,23 @@
+@echo Compile...
+@echo.
+@echo ex18...
+@sdcc ex18.c -c --model-small
+@echo fpga_lib...
+@sdcc fpga_lib.c -c --model-small
+@echo kb...
+@sdcc kb.c -c --model-small
+@echo i2c..
+@sdcc i2c.c -c --model-small
+@echo lcd...
+@sdcc lcd.c -c --model-small
+@echo Linking...
+@sdcc ex18.rel fpga_lib.rel kb.rel i2c.rel lcd.rel --model-small
+@echo.
+@echo Deleting old HEx....
+@echo.
+@del ex18.hex
+@echo.
+@echo Copying IHX to HEX
+@echo.
+@ren ex18.ihx ex18.hex
+@pause

@@ -1,0 +1,357 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'i2c.c', time: Thu Dec 14 11:33:35 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+	.include <reg52.def>
+ .export _I2C_init ; void I2C_init(void)
+ .hide
+ .segment _I2C_init_formal_near, size 0, fill, notext, sclass dram
+ .segment _I2C_init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_init_formal_near, _I2C_init_local_near, __I2C_init
+ .sgraph _I2C_init_local_near, _I2C_stop_formal_near, __I2C_init, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_init_local_near, _I2C_stop_formal_near, __I2C_init, 0
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __I2C_init
+_I2C_init: ; void I2C_init(void)
+ .line "i2c.c" 17 0
+ mov _P0,#255
+ .line "i2c.c" 20 1
+ lcall _I2C_stop
+ .line "i2c.c" 21 1
+ lcall _I2C_stop
+ ret
+; end of function I2C_init
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _I2C_delay ; void I2C_delay(void)
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .segment _I2C_delay_local_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_delay_formal_near, _I2C_delay_local_near, __I2C_delay
+
+ .segment __I2C_delay
+_I2C_delay: ; (leaf function) void I2C_delay(void)
+ .line "i2c.c" 25 0
+ mov R7,#190
+?3:
+ .line "i2c.c" 27 21
+ djnz R7,?3
+ ret
+; end of function I2C_delay
+; used: R-------7 BR--------
+
+ .export _I2C_start ; void I2C_start(void)
+ .hide
+ .segment _I2C_start_formal_near, size 0, fill, notext, sclass dram
+ .segment _I2C_start_local_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_start_formal_near, _I2C_start_local_near, __I2C_start
+ .sgraph _I2C_start_local_near, _I2C_delay_formal_near, __I2C_start, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_start_local_near, _I2C_delay_formal_near, __I2C_start, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __I2C_start
+_I2C_start: ; void I2C_start(void)
+ .line "i2c.c" 31 0
+ clr _P0_B0
+ .line "i2c.c" 34 10
+ lcall _I2C_delay
+ .line "i2c.c" 34 22
+ clr _P0_B1
+ .line "i2c.c" 35 10
+ lcall _I2C_delay
+ ret
+; end of function I2C_start
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _I2C_stop ; void I2C_stop(void)
+ .hide
+ .segment _I2C_stop_formal_near, size 0, fill, notext, sclass dram
+ .segment _I2C_stop_local_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_stop_formal_near, _I2C_stop_local_near, __I2C_stop
+ .sgraph _I2C_stop_local_near, _I2C_delay_formal_near, __I2C_stop, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_stop_local_near, _I2C_delay_formal_near, __I2C_stop, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_stop_local_near, _I2C_delay_formal_near, __I2C_stop, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __I2C_stop
+_I2C_stop: ; void I2C_stop(void)
+ .line "i2c.c" 39 0
+ clr _P0_B0
+ .line "i2c.c" 41 10
+ lcall _I2C_delay
+ .line "i2c.c" 41 22
+ setb _P0_B1
+?10:
+ .line "i2c.c" 42 24
+ jnb _P0_B1,?10
+ .line "i2c.c" 42 25
+ lcall _I2C_delay
+ .line "i2c.c" 42 37
+ setb _P0_B0
+ .line "i2c.c" 43 10
+ lcall _I2C_delay
+ ret
+; end of function I2C_stop
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _I2C_send ; unsigned char I2C_send(unsigned char)
+ .hide
+ .segment _I2C_send_formal_near, size 0, fill, notext, sclass dram
+ .segment _I2C_send_local_near, size 2, fill, notext, sclass dram
+ .sgraph _I2C_send_formal_near, _I2C_send_local_near, __I2C_send
+?I2C_send_dat = _I2C_send_local_near+0 ; unsigned char
+?I2C_send_i23 = _I2C_send_local_near+1 ; unsigned char
+?I2C_send_x = _I2C_send_local_near+0 ; unsigned char
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 0
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 1
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_send_local_near, _I2C_delay_formal_near, __I2C_send, 1
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __I2C_send
+_I2C_send: ; unsigned char I2C_send(unsigned char)
+ ; parameter 'dat' in 'R7' moved and assigned to local '?I2C_send_dat'
+ mov ?I2C_send_dat,R7
+ .line "i2c.c" 47 0
+ mov ?I2C_send_i23,#8
+?14:
+ .line "i2c.c" 51 2
+ mov R7,?I2C_send_dat
+ anl AR7,#128
+ mov A,R7
+ jz ?18
+ .line "i2c.c" 52 19
+ setb _P0_B0
+ .line "i2c.c" 52 29
+ lcall _I2C_delay
+ .line "i2c.c" 52 41
+ sjmp ?19
+?18:
+ .line "i2c.c" 52 47
+ clr _P0_B0
+ .line "i2c.c" 52 57
+ lcall _I2C_delay
+ .line "i2c.c" 52 69
+?19:
+ .line "i2c.c" 53 0
+ setb _P0_B1
+?20:
+ .line "i2c.c" 53 24
+ jnb _P0_B1,?20
+ .line "i2c.c" 53 25
+ lcall _I2C_delay
+ .line "i2c.c" 53 37
+ clr _P0_B1
+ .line "i2c.c" 54 10
+ lcall _I2C_delay
+ .line "i2c.c" 54 22
+ mov R7,?I2C_send_dat
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov ?I2C_send_dat,R7
+ .line "i2c.c" 56 2
+ djnz ?I2C_send_i23,?14
+ .line "i2c.c" 57 0
+ setb _P0_B0
+ .line "i2c.c" 57 10
+ lcall _I2C_delay
+ .line "i2c.c" 57 22
+ setb _P0_B1
+?24:
+ .line "i2c.c" 58 24
+ jnb _P0_B1,?24
+ .line "i2c.c" 58 25
+ lcall _I2C_delay
+ .line "i2c.c" 58 37
+ jnb _P0_B0,?28
+ mov R4,#0
+ mov R5,#1
+ sjmp ?29
+?28:
+ clr A
+ mov R4,A
+ mov R5,A
+?29:
+ mov R7,AR5
+ ; variable 'x' allocated as 'auto'
+ mov ?I2C_send_x,R7
+ .line "i2c.c" 61 0
+ clr _P0_B1
+ .line "i2c.c" 61 10
+ lcall _I2C_delay
+ .line "i2c.c" 61 22
+ clr _P0_B0
+ .line "i2c.c" 62 10
+ lcall _I2C_delay
+ .line "i2c.c" 62 22
+ mov R7,?I2C_send_x
+ ret
+; end of function I2C_send
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+
+ .export _I2C_get ; unsigned char I2C_get(unsigned char)
+ .hide
+ .segment _I2C_get_formal_near, size 0, fill, notext, sclass dram
+ .segment _I2C_get_local_near, size 3, fill, notext, sclass dram
+ .sgraph _I2C_get_formal_near, _I2C_get_local_near, __I2C_get
+?I2C_get_dat = _I2C_get_local_near+1 ; unsigned char
+?I2C_get_i40 = _I2C_get_local_near+2 ; unsigned char
+?I2C_get_ack = _I2C_get_local_near+0 ; unsigned char
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 3
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 3
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _I2C_get_local_near, _I2C_delay_formal_near, __I2C_get, 2
+ .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __I2C_get
+_I2C_get: ; unsigned char I2C_get(unsigned char)
+ ; parameter 'ack' in 'R7' moved and assigned to local '?I2C_get_ack'
+ mov ?I2C_get_ack,R7
+ ; variable 'dat' allocated as 'auto'
+ .line "i2c.c" 68 0
+ clr A
+ mov ?I2C_get_dat,A
+ .line "i2c.c" 70 0
+ setb _P0_B0
+ .line "i2c.c" 70 10
+ lcall _I2C_delay
+ .line "i2c.c" 70 22
+ mov ?I2C_get_i40,#8
+?31:
+ .line "i2c.c" 72 2
+ setb _P0_B1
+?35:
+ .line "i2c.c" 73 24
+ jnb _P0_B1,?35
+ .line "i2c.c" 73 25
+ lcall _I2C_delay
+ .line "i2c.c" 73 37
+ jnb _P0_B0,?38
+ .line "i2c.c" 75 15
+ mov R7,?I2C_get_dat
+ mov A,R7
+ add A,R7
+ mov R7,A
+ inc R7
+ mov ?I2C_get_dat,R7
+ sjmp ?39
+?38:
+ .line "i2c.c" 75 36
+ mov R7,?I2C_get_dat
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov ?I2C_get_dat,R7
+?39:
+ .line "i2c.c" 76 0
+ clr _P0_B1
+ .line "i2c.c" 76 10
+ lcall _I2C_delay
+ .line "i2c.c" 76 22
+ djnz ?I2C_get_i40,?31
+ .line "i2c.c" 78 6
+ mov A,?I2C_get_ack
+ jz ?41
+ .line "i2c.c" 79 0
+ clr _P0_B0
+ .line "i2c.c" 79 10
+ lcall _I2C_delay
+ .line "i2c.c" 79 22
+ sjmp ?42
+?41:
+ .line "i2c.c" 81 0
+ setb _P0_B0
+ .line "i2c.c" 81 10
+ lcall _I2C_delay
+ .line "i2c.c" 81 22
+?42:
+ .line "i2c.c" 82 0
+ setb _P0_B1
+?43:
+ .line "i2c.c" 82 24
+ jnb _P0_B1,?43
+ .line "i2c.c" 82 25
+ lcall _I2C_delay
+ .line "i2c.c" 82 37
+ clr _P0_B1
+ .line "i2c.c" 83 10
+ lcall _I2C_delay
+ .line "i2c.c" 83 22
+ clr _P0_B0
+ .line "i2c.c" 84 10
+ lcall _I2C_delay
+ .line "i2c.c" 84 22
+ mov R7,?I2C_get_dat
+ ret
+; end of function I2C_get
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+
+ .import _P0_B1 ; bit unsigned char P0_B1
+ .import _P0_B0 ; bit unsigned char P0_B0
+ .import _P0 ; near unsigned char P0
+ .end
+; *END* (147 lines)

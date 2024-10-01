@@ -1,0 +1,154 @@
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		ex17_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C12F256C7
+set_global_assignment -name TOP_LEVEL_ENTITY T8052_Toplevel
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "6.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:25:52  SEPTEMBER 15, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION "6.0 SP1"
+set_global_assignment -name EDA_BOARD_DESIGN_SYMBOL_TOOL "FPGA Xchange (Symbol)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "FPGA XCHANGE" -section_id eda_board_design_symbol
+set_global_assignment -name USER_LIBRARIES "C:\\altera\\quartus51\\libraries\\vhdl\\elektor/"
+set_location_assignment PIN_T15 -to SWITCH1
+set_instance_assignment -name IO_STANDARD LVTTL -to SWITCH1
+set_location_assignment PIN_J15 -to altera_reserved_tms
+set_instance_assignment -name IO_STANDARD LVTTL -to altera_reserved_tms
+set_location_assignment PIN_J14 -to altera_reserved_tck
+set_instance_assignment -name IO_STANDARD LVTTL -to altera_reserved_tck
+set_location_assignment PIN_H14 -to altera_reserved_tdi
+set_instance_assignment -name IO_STANDARD LVTTL -to altera_reserved_tdi
+set_location_assignment PIN_G16 -to clk_50MHz
+set_instance_assignment -name IO_STANDARD LVTTL -to clk_50MHz
+set_location_assignment PIN_G12 -to RxD232
+set_instance_assignment -name IO_STANDARD LVTTL -to RxD232
+set_location_assignment PIN_P14 -to SWITCH3
+set_instance_assignment -name IO_STANDARD LVTTL -to SWITCH3
+set_location_assignment PIN_N13 -to LED[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[1]
+set_location_assignment PIN_M13 -to LED[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[2]
+set_location_assignment PIN_N12 -to LED[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[3]
+set_location_assignment PIN_P12 -to LED[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[4]
+set_location_assignment PIN_M12 -to LED[5]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[5]
+set_location_assignment PIN_R12 -to LED[6]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[6]
+set_location_assignment PIN_T11 -to LED[7]
+set_instance_assignment -name IO_STANDARD LVTTL -to LED[7]
+set_location_assignment PIN_G13 -to Txd232
+set_instance_assignment -name IO_STANDARD LVTTL -to Txd232
+set_location_assignment PIN_D14 -to SevenSeg_D_o[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[0]
+set_location_assignment PIN_A15 -to SevenSeg_D_o[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[1]
+set_location_assignment PIN_C14 -to SevenSeg_D_o[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[2]
+set_location_assignment PIN_B14 -to SevenSeg_D_o[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[3]
+set_location_assignment PIN_C13 -to SevenSeg_D_o[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[4]
+set_location_assignment PIN_B16 -to SevenSeg_D_o[5]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[5]
+set_location_assignment PIN_C15 -to SevenSeg_D_o[6]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[6]
+set_location_assignment PIN_B15 -to SevenSeg_D_o[7]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSeg_D_o[7]
+set_location_assignment PIN_F12 -to SevenSegEn_o[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSegEn_o[0]
+set_location_assignment PIN_E15 -to SevenSegEn_o[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSegEn_o[1]
+set_location_assignment PIN_D16 -to SevenSegEn_o[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSegEn_o[2]
+set_location_assignment PIN_D15 -to SevenSegEn_o[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSegEn_o[3]
+set_location_assignment PIN_E14 -to SevenSegEn_o[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to SevenSegEn_o[4]
+set_location_assignment PIN_D9 -to VgaRd0
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaRd0
+set_location_assignment PIN_D10 -to VgaRd1
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaRd1
+set_location_assignment PIN_C10 -to VgaGr0
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaGr0
+set_location_assignment PIN_B10 -to VgaGr1
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaGr1
+set_location_assignment PIN_E11 -to VgaBl0
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaBl0
+set_location_assignment PIN_D11 -to VgaBl1
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaBl1
+set_location_assignment PIN_C9 -to VgaHsync
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaHsync
+set_location_assignment PIN_C11 -to VgaVsync
+set_instance_assignment -name IO_STANDARD LVTTL -to VgaVsync
+set_location_assignment PIN_H15 -to altera_reserved_tdo
+set_instance_assignment -name IO_STANDARD LVTTL -to altera_reserved_tdo
+set_location_assignment PIN_M15 -to SCL
+set_instance_assignment -name IO_STANDARD LVTTL -to SCL
+set_location_assignment PIN_N16 -to SDA
+set_instance_assignment -name IO_STANDARD LVTTL -to SDA
+set_location_assignment PIN_H13 -to Ps2Clk_io
+set_instance_assignment -name IO_STANDARD LVTTL -to Ps2Clk_io
+set_location_assignment PIN_G15 -to Ps2Dat_io
+set_instance_assignment -name IO_STANDARD LVTTL -to Ps2Dat_io
+set_global_assignment -name SOURCE_FILE firmware/lcd.h
+set_global_assignment -name SOURCE_FILE firmware/delay.h
+set_global_assignment -name SOURCE_FILE firmware/ex17.c
+set_global_assignment -name SOURCE_FILE firmware/fpga_lib.c
+set_global_assignment -name SOURCE_FILE firmware/fpga_lib.h
+set_global_assignment -name SOURCE_FILE firmware/fpga_reg.h
+set_global_assignment -name SOURCE_FILE firmware/i2c.c
+set_global_assignment -name SOURCE_FILE firmware/i2c.h
+set_global_assignment -name SOURCE_FILE firmware/kb.c
+set_global_assignment -name SOURCE_FILE firmware/kb.h
+set_global_assignment -name SOURCE_FILE firmware/lcd.c
+set_global_assignment -name VHDL_FILE T51/fpga/xram_cyclone.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/altpll0.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/InputSync.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/iram_cyclone.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/ram_stratix.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/rom_cyclone.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/sevenseg_if.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/T51_RAM_altera.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/T8052.vhd
+set_global_assignment -name VHDL_FILE T51/fpga/T8052_Toplevel.vhd
+set_global_assignment -name VHDL_FILE "T51/unitPs2Keyboard/src/PS2Keyboard-e.vhd"
+set_global_assignment -name VHDL_FILE "T51/unitPs2Keyboard/src/PS2Keyboard-a.vhd"
+set_global_assignment -name VHDL_FILE T51/unitVGA/src/vidmem.vhd
+set_global_assignment -name VHDL_FILE T51/unitVGA/src/CGRAM.vhd
+set_global_assignment -name VHDL_FILE "T51/unitVGA/src/Grafikkarte-a.vhd"
+set_global_assignment -name VHDL_FILE "T51/unitVGA/src/Grafikkarte-e.vhd"
+set_global_assignment -name VHDL_FILE T51/T51_UART.vhd
+set_global_assignment -name VHDL_FILE T51/SSRAM.vhd
+set_global_assignment -name VHDL_FILE T51/T51.vhd
+set_global_assignment -name VHDL_FILE T51/T51_ALU.vhd
+set_global_assignment -name VHDL_FILE T51/T51_Glue.vhd
+set_global_assignment -name VHDL_FILE T51/T51_MD.vhd
+set_global_assignment -name VHDL_FILE T51/T51_Pack.vhd
+set_global_assignment -name VHDL_FILE T51/T51_Port.vhd
+set_global_assignment -name VHDL_FILE T51/T51_RAM.vhd
+set_global_assignment -name VHDL_FILE T51/T51_TC01.vhd
+set_global_assignment -name VHDL_FILE T51/T51_TC2.vhd

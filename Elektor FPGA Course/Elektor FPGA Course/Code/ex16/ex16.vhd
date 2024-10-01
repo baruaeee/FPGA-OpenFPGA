@@ -1,0 +1,66 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY ex16 IS 
+PORT 
+  (
+    SWITCH1, SWITCH2, SWITCH3, SWITCH4 : IN STD_LOGIC;
+    LED1, LED2, LED3 : OUT STD_LOGIC
+  );
+END ex16;
+
+ARCHITECTURE arch OF ex16 IS
+  COMPONENT AND_2IN 
+  PORT 
+    (
+      A,B : IN STD_LOGIC;
+      OUT_SIGNAL : OUT STD_LOGIC
+    );
+  END COMPONENT;
+
+  COMPONENT OR_2IN 
+  PORT 
+    (
+      A,B : IN STD_LOGIC;
+      OUT_SIGNAL : OUT STD_LOGIC
+    );
+  END COMPONENT;
+
+  SIGNAL IN1,IN2,IN3,IN4 : STD_LOGIC;
+  SIGNAL AND1_OUT,AND2_OUT, OR_OUT : STD_LOGIC;
+
+BEGIN
+  IN1 <= SWITCH1;
+  IN2 <= SWITCH2;
+  IN3 <= SWITCH3;
+  IN4 <= SWITCH4;
+
+  inst1 : AND_2IN 
+  PORT MAP 
+  (
+    A => IN1,
+    B => IN2,
+    OUT_SIGNAL => AND1_OUT
+  );
+
+  inst2 : AND_2IN
+  PORT MAP 
+  (
+    A => IN3,
+    B => IN4,
+    OUT_SIGNAL => AND2_OUT
+  );
+
+  inst3 : OR_2IN
+  PORT MAP
+  (
+    A => AND1_OUT,
+    B => AND2_OUT,
+    OUT_SIGNAL => OR_OUT
+  );
+
+  LED1 <= AND1_OUT;
+  LED2 <= OR_OUT;
+  LED3 <= AND2_OUT;
+
+END;

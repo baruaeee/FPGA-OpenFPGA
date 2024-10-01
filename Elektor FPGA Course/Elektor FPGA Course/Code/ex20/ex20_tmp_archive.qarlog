@@ -1,0 +1,111 @@
+Quartus II Archive log --	C:/altera/FPGA_course/ex20/ex20_tmp_archive.qarlog
+
+Archive:	C:/altera/FPGA_course/ex20/ex20_tmp_archive.qar
+Date:		Thu Oct 05 13:24:44 2006
+Quartus II		6.0 Build 202 06/20/2006 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/altera/FPGA_course/ex20/4gewinnt.eda.rpt
+C:/altera/FPGA_course/ex20/4gewinnt.gui.talkback.xml
+C:/altera/FPGA_course/ex20/4gewinnt.mif_update.rpt
+C:/altera/FPGA_course/ex20/4gewinnt.qws
+C:/altera/FPGA_course/ex20/T51/SSRAM.vhd
+C:/altera/FPGA_course/ex20/T51/SSRAM2.vhd
+C:/altera/FPGA_course/ex20/T51/SSRAMX.vhd
+C:/altera/FPGA_course/ex20/T51/T51.vhd
+C:/altera/FPGA_course/ex20/T51/T51_ALU.vhd
+C:/altera/FPGA_course/ex20/T51/T51_Glue.vhd
+C:/altera/FPGA_course/ex20/T51/T51_MD.vhd
+C:/altera/FPGA_course/ex20/T51/T51_Pack.vhd
+C:/altera/FPGA_course/ex20/T51/T51_Port.vhd
+C:/altera/FPGA_course/ex20/T51/T51_RAM.vhd
+C:/altera/FPGA_course/ex20/T51/T51_TC01.vhd
+C:/altera/FPGA_course/ex20/T51/T51_TC2.vhd
+C:/altera/FPGA_course/ex20/T51/T51_UART.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/InputSync.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T51_RAM_altera.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T8052.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T8052_Toplevel.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T8052_Toplevel_TB.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/altpll0.bsf
+C:/altera/FPGA_course/ex20/T51/fpga/altpll0.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/iram_cyclone.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/ram_stratix.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/rom_cyclone.bsf
+C:/altera/FPGA_course/ex20/T51/fpga/rom_cyclone.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/sevenseg_if.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/xram_cyclone.vhd
+C:/altera/FPGA_course/ex20/T51/unitPs2Keyboard/src/PS2Keyboard-a.vhd
+C:/altera/FPGA_course/ex20/T51/unitPs2Keyboard/src/PS2Keyboard-e.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/CGRAM.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/Grafikkarte-a.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/Grafikkarte-e.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/vidmem.vhd
+C:/altera/FPGA_course/ex20/VGA8x16.hex
+C:/altera/FPGA_course/ex20/assignment_defaults.qdf
+C:/altera/FPGA_course/ex20/db/altsyncram_1ck1.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_1tk1.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_2472.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_49p1.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_erp2.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_hnm1.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_ppk2.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_u0o2.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_ufn2.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_ulh1.tdf
+C:/altera/FPGA_course/ex20/db/altsyncram_vfg2.tdf
+C:/altera/FPGA_course/ex20/db/decode_fga.tdf
+C:/altera/FPGA_course/ex20/db/decode_kga.tdf
+C:/altera/FPGA_course/ex20/db/decode_ogi.tdf
+C:/altera/FPGA_course/ex20/db/ex20.cbx.xml
+C:/altera/FPGA_course/ex20/db/mult_qk01.tdf
+C:/altera/FPGA_course/ex20/db/mux_jcb.tdf
+C:/altera/FPGA_course/ex20/db/mux_vab.tdf
+C:/altera/FPGA_course/ex20/ex20.asm.rpt
+C:/altera/FPGA_course/ex20/ex20.eda.rpt
+C:/altera/FPGA_course/ex20/ex20.fit.rpt
+C:/altera/FPGA_course/ex20/ex20.fit.summary
+C:/altera/FPGA_course/ex20/ex20.flow.rpt
+C:/altera/FPGA_course/ex20/ex20.pof
+C:/altera/FPGA_course/ex20/ex20.qpf
+C:/altera/FPGA_course/ex20/ex20.qsf
+C:/altera/FPGA_course/ex20/ex20.qws
+C:/altera/FPGA_course/ex20/ex20.sof
+C:/altera/FPGA_course/ex20/ex20.tan.rpt
+C:/altera/FPGA_course/ex20/ex20.tan.summary
+C:/altera/FPGA_course/ex20/ex20_assignment_defaults.qdf
+C:/altera/FPGA_course/ex20/ex20_description.txt
+C:/altera/FPGA_course/ex20/firmware/delay.h
+C:/altera/FPGA_course/ex20/firmware/ex20.c
+C:/altera/FPGA_course/ex20/firmware/ex20.hex
+C:/altera/FPGA_course/ex20/firmware/ex20.sym
+C:/altera/FPGA_course/ex20/firmware/fpga_lib.c
+C:/altera/FPGA_course/ex20/firmware/fpga_lib.h
+C:/altera/FPGA_course/ex20/firmware/fpga_lib.sym
+C:/altera/FPGA_course/ex20/firmware/fpga_reg.h
+C:/altera/FPGA_course/ex20/firmware/kb.c
+C:/altera/FPGA_course/ex20/firmware/kb.h
+C:/altera/FPGA_course/ex20/firmware/kb.sym
+C:/altera/FPGA_course/ex20/firmware/scancodes.h
+talkback/T8052test.asm.talkback.xml
+talkback/T8052test.eda.talkback.xml
+talkback/T8052test.fit.talkback.xml
+talkback/T8052test.map.talkback.xml
+talkback/T8052test.sim.talkback.xml
+talkback/T8052test.tan.talkback.xml
+talkback/ex9.asm.talkback.xml
+talkback/ex9.eda.talkback.xml
+talkback/ex9.fit.talkback.xml
+talkback/ex9.map.talkback.xml
+talkback/ex9.tan.talkback.xml
+zlib_out_time_stamp_tmp.tmp
+	======= Total: 94 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Thu Oct 05 13:24:46 2006
+Source archive file:	C:/altera/FPGA_course/ex20/ex20_tmp_archive.qar
+Archive was extracted into	C:/altera/FPGA_course/ex21/
+		 - successfully.

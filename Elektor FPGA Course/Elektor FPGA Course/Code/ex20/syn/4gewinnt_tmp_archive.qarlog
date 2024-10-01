@@ -1,0 +1,76 @@
+Quartus II Archive log --	C:/altera/FPGA_course/ex20/syn/4gewinnt_tmp_archive.qarlog
+
+Archive:	C:/altera/FPGA_course/ex20/syn/4gewinnt_tmp_archive.qar
+Date:		Thu Oct 05 09:53:52 2006
+Quartus II		6.0 Build 202 06/20/2006 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/altera/FPGA_course/ex20/T51/T51.vhd
+C:/altera/FPGA_course/ex20/T51/T51_ALU.vhd
+C:/altera/FPGA_course/ex20/T51/T51_Glue.vhd
+C:/altera/FPGA_course/ex20/T51/T51_MD.vhd
+C:/altera/FPGA_course/ex20/T51/T51_Pack.vhd
+C:/altera/FPGA_course/ex20/T51/T51_Port.vhd
+C:/altera/FPGA_course/ex20/T51/T51_RAM.vhd
+C:/altera/FPGA_course/ex20/T51/T51_TC01.vhd
+C:/altera/FPGA_course/ex20/T51/T51_TC2.vhd
+C:/altera/FPGA_course/ex20/T51/T51_UART.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/InputSync.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T51_RAM_altera.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T8052.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/T8052_Toplevel.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/altpll0.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/iram_cyclone.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/ram_stratix.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/rom_cyclone.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/sevenseg_if.vhd
+C:/altera/FPGA_course/ex20/T51/fpga/xram_cyclone.vhd
+C:/altera/FPGA_course/ex20/T51/unitPs2Keyboard/src/PS2Keyboard-a.vhd
+C:/altera/FPGA_course/ex20/T51/unitPs2Keyboard/src/PS2Keyboard-e.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/CGRAM.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/Grafikkarte-a.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/Grafikkarte-e.vhd
+C:/altera/FPGA_course/ex20/T51/unitVGA/src/vidmem.vhd
+C:/altera/FPGA_course/ex20/syn/4gewinnt.asm.rpt
+C:/altera/FPGA_course/ex20/syn/4gewinnt.eda.rpt
+C:/altera/FPGA_course/ex20/syn/4gewinnt.fit.rpt
+C:/altera/FPGA_course/ex20/syn/4gewinnt.fit.summary
+C:/altera/FPGA_course/ex20/syn/4gewinnt.flow.rpt
+C:/altera/FPGA_course/ex20/syn/4gewinnt.map.rpt
+C:/altera/FPGA_course/ex20/syn/4gewinnt.map.summary
+C:/altera/FPGA_course/ex20/syn/4gewinnt.pof
+C:/altera/FPGA_course/ex20/syn/4gewinnt.qpf
+C:/altera/FPGA_course/ex20/syn/4gewinnt.qsf
+C:/altera/FPGA_course/ex20/syn/4gewinnt.qws
+C:/altera/FPGA_course/ex20/syn/4gewinnt.sof
+C:/altera/FPGA_course/ex20/syn/4gewinnt.tan.rpt
+C:/altera/FPGA_course/ex20/syn/4gewinnt.tan.summary
+C:/altera/FPGA_course/ex20/syn/4gewinnt_assignment_defaults.qdf
+C:/altera/FPGA_course/ex20/syn/VGA8x16.hex
+C:/altera/FPGA_course/ex20/syn/db/4gewinnt.cbx.xml
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_1tk1.tdf
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_2472.tdf
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_49p1.tdf
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_ppk2.tdf
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_u0o2.tdf
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_ulh1.tdf
+C:/altera/FPGA_course/ex20/syn/db/altsyncram_vfg2.tdf
+C:/altera/FPGA_course/ex20/syn/db/decode_fga.tdf
+C:/altera/FPGA_course/ex20/syn/db/decode_kga.tdf
+C:/altera/FPGA_course/ex20/syn/db/decode_ogi.tdf
+C:/altera/FPGA_course/ex20/syn/db/mult_qk01.tdf
+C:/altera/FPGA_course/ex20/syn/db/mux_jcb.tdf
+C:/altera/FPGA_course/ex20/syn/db/mux_vab.tdf
+c:/altera/quartus60/win/assignment_defaults.qdf
+talkback/4gewinnt.gui.talkback.xml
+zlib_out_time_stamp_tmp.tmp
+	======= Total: 59 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Thu Oct 05 09:53:53 2006
+Source archive file:	C:/altera/FPGA_course/ex20/syn/4gewinnt_tmp_archive.qar
+Archive was extracted into	C:/altera/FPGA_course/ex20/
+		 - successfully.

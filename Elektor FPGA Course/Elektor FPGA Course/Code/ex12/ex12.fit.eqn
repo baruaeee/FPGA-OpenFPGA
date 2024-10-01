@@ -1,0 +1,4410 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--D1_SHIFTOUT[31] is PCM3006:inst6|SHIFTOUT[31] at LC_X36_Y13_N5
+--operation mode is normal
+
+D1_SHIFTOUT[31]_lut_out = A1L16 & (A1L17 & (D1_R_IN[15]) # !A1L17 & D1_SHIFTOUT[30]) # !A1L16 & (D1_SHIFTOUT[30]);
+D1_SHIFTOUT[31] = DFFEAS(D1_SHIFTOUT[31]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--D1_LRCOUT_INT is PCM3006:inst6|LRCOUT_INT at LC_X29_Y9_N2
+--operation mode is normal
+
+D1_LRCOUT_INT_lut_out = D1L13;
+D1_LRCOUT_INT = DFFEAS(D1_LRCOUT_INT_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--D1_R_IN[15] is PCM3006:inst6|R_IN[15] at LC_X35_Y11_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[15]_lut_out = GND;
+D1_R_IN[15] = DFFEAS(D1_R_IN[15]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[15], , , VCC);
+
+
+--D1_SHIFTOUT[30] is PCM3006:inst6|SHIFTOUT[30] at LC_X36_Y13_N7
+--operation mode is normal
+
+D1_SHIFTOUT[30]_lut_out = A1L17 & (A1L16 & D1_R_IN[14] # !A1L16 & (D1_SHIFTOUT[29])) # !A1L17 & (D1_SHIFTOUT[29]);
+D1_SHIFTOUT[30] = DFFEAS(D1_SHIFTOUT[30]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--D1L1 is PCM3006:inst6|add~123 at LC_X36_Y11_N0
+--operation mode is arithmetic
+
+D1L1 = !D1_COUNT[0];
+
+--D1L2 is PCM3006:inst6|add~125 at LC_X36_Y11_N0
+--operation mode is arithmetic
+
+D1L2_cout_0 = D1_COUNT[0];
+D1L2 = CARRY(D1L2_cout_0);
+
+--D1L3 is PCM3006:inst6|add~125COUT1_164 at LC_X36_Y11_N0
+--operation mode is arithmetic
+
+D1L3_cout_1 = D1_COUNT[0];
+D1L3 = CARRY(D1L3_cout_1);
+
+
+--D1L4 is PCM3006:inst6|add~128 at LC_X36_Y11_N1
+--operation mode is arithmetic
+
+D1L4 = D1_COUNT[1] $ D1L2;
+
+--D1L5 is PCM3006:inst6|add~130 at LC_X36_Y11_N1
+--operation mode is arithmetic
+
+D1L5_cout_0 = !D1L2 # !D1_COUNT[1];
+D1L5 = CARRY(D1L5_cout_0);
+
+--D1L6 is PCM3006:inst6|add~130COUT1_165 at LC_X36_Y11_N1
+--operation mode is arithmetic
+
+D1L6_cout_1 = !D1L3 # !D1_COUNT[1];
+D1L6 = CARRY(D1L6_cout_1);
+
+
+--D1L7 is PCM3006:inst6|add~133 at LC_X36_Y11_N2
+--operation mode is arithmetic
+
+D1L7 = D1_COUNT[2] $ (!D1L5);
+
+--D1L8 is PCM3006:inst6|add~135 at LC_X36_Y11_N2
+--operation mode is arithmetic
+
+D1L8_cout_0 = D1_COUNT[2] & (!D1L5);
+D1L8 = CARRY(D1L8_cout_0);
+
+--D1L9 is PCM3006:inst6|add~135COUT1_166 at LC_X36_Y11_N2
+--operation mode is arithmetic
+
+D1L9_cout_1 = D1_COUNT[2] & (!D1L6);
+D1L9 = CARRY(D1L9_cout_1);
+
+
+--D1L10 is PCM3006:inst6|add~138 at LC_X36_Y11_N3
+--operation mode is arithmetic
+
+D1L10 = D1_COUNT[3] $ D1L8;
+
+--D1L11 is PCM3006:inst6|add~140 at LC_X36_Y11_N3
+--operation mode is arithmetic
+
+D1L11_cout_0 = !D1L8 # !D1_COUNT[3];
+D1L11 = CARRY(D1L11_cout_0);
+
+--D1L12 is PCM3006:inst6|add~140COUT1 at LC_X36_Y11_N3
+--operation mode is arithmetic
+
+D1L12_cout_1 = !D1L9 # !D1_COUNT[3];
+D1L12 = CARRY(D1L12_cout_1);
+
+
+--A1L16 is rtl~78 at LC_X35_Y11_N1
+--operation mode is normal
+
+A1L16 = !D1L7 & !D1L4 & !D1L1 & !D1L10;
+
+
+--D1L13 is PCM3006:inst6|add~143 at LC_X36_Y11_N7
+--operation mode is normal
+
+D1L13_carry_eqn = (!D1L15 & D1L22) # (D1L15 & D1L23);
+D1L13 = D1_LRCOUT_INT $ (D1L13_carry_eqn);
+
+
+--D1L14 is PCM3006:inst6|add~148 at LC_X36_Y11_N4
+--operation mode is arithmetic
+
+D1L14 = D1_COUNT[4] $ !D1L11;
+
+--D1L15 is PCM3006:inst6|add~150 at LC_X36_Y11_N4
+--operation mode is arithmetic
+
+D1L15 = D1L16;
+
+
+--D1L18 is PCM3006:inst6|add~153 at LC_X36_Y11_N5
+--operation mode is arithmetic
+
+D1L18_carry_eqn = (!D1L15 & GND) # (D1L15 & VCC);
+D1L18 = D1_COUNT[5] $ (D1L18_carry_eqn);
+
+--D1L19 is PCM3006:inst6|add~155 at LC_X36_Y11_N5
+--operation mode is arithmetic
+
+D1L19_cout_0 = !D1L15 # !D1_COUNT[5];
+D1L19 = CARRY(D1L19_cout_0);
+
+--D1L20 is PCM3006:inst6|add~155COUT1_167 at LC_X36_Y11_N5
+--operation mode is arithmetic
+
+D1L20_cout_1 = !D1L15 # !D1_COUNT[5];
+D1L20 = CARRY(D1L20_cout_1);
+
+
+--D1L21 is PCM3006:inst6|add~158 at LC_X36_Y11_N6
+--operation mode is arithmetic
+
+D1L21_carry_eqn = (!D1L15 & D1L19) # (D1L15 & D1L20);
+D1L21 = D1_COUNT[6] $ !D1L21_carry_eqn;
+
+--D1L22 is PCM3006:inst6|add~160 at LC_X36_Y11_N6
+--operation mode is arithmetic
+
+D1L22_cout_0 = D1_COUNT[6] & !D1L19;
+D1L22 = CARRY(D1L22_cout_0);
+
+--D1L23 is PCM3006:inst6|add~160COUT1_168 at LC_X36_Y11_N6
+--operation mode is arithmetic
+
+D1L23_cout_1 = D1_COUNT[6] & !D1L20;
+D1L23 = CARRY(D1L23_cout_1);
+
+
+--A1L17 is rtl~79 at LC_X36_Y12_N5
+--operation mode is normal
+
+A1L17 = !D1L21 & !D1L18 & D1L13 & !D1L14;
+
+
+--D1_NEGEDGE_BCK is PCM3006:inst6|NEGEDGE_BCK at LC_X36_Y11_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_COUNT[2]_qfbk = D1_COUNT[2];
+D1_NEGEDGE_BCK = !D1L7 & (D1_COUNT[2]_qfbk);
+
+--D1_COUNT[2] is PCM3006:inst6|COUNT[2] at LC_X36_Y11_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_COUNT[2] = DFFEAS(D1_NEGEDGE_BCK, GLOBAL(12_288MHz), VCC, , , D1L7, , , VCC);
+
+
+--C1_ready is cordic_core:inst1|ready at LC_X31_Y10_N2
+--operation mode is normal
+
+C1_ready_lut_out = A1L18 & (C1L411 # !C1L542 & C1_ready) # !A1L18 & !C1L542 & C1_ready;
+C1_ready = DFFEAS(C1_ready_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--D1_R_IN[14] is PCM3006:inst6|R_IN[14] at LC_X35_Y11_N8
+--operation mode is normal
+
+D1_R_IN[14]_lut_out = C1_sin[14];
+D1_R_IN[14] = DFFEAS(D1_R_IN[14]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[29] is PCM3006:inst6|SHIFTOUT[29] at LC_X36_Y13_N3
+--operation mode is normal
+
+D1_SHIFTOUT[29]_lut_out = A1L16 & (A1L17 & (D1_R_IN[13]) # !A1L17 & D1_SHIFTOUT[28]) # !A1L16 & (D1_SHIFTOUT[28]);
+D1_SHIFTOUT[29] = DFFEAS(D1_SHIFTOUT[29]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--D1_COUNT[0] is PCM3006:inst6|COUNT[0] at LC_X36_Y11_N8
+--operation mode is normal
+
+D1_COUNT[0]_lut_out = D1L1;
+D1_COUNT[0] = DFFEAS(D1_COUNT[0]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--D1_COUNT[1] is PCM3006:inst6|COUNT[1] at LC_X35_Y10_N2
+--operation mode is normal
+
+D1_COUNT[1]_lut_out = D1L4;
+D1_COUNT[1] = DFFEAS(D1_COUNT[1]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--D1_COUNT[3] is PCM3006:inst6|COUNT[3] at LC_X35_Y9_N2
+--operation mode is normal
+
+D1_COUNT[3]_lut_out = D1L10;
+D1_COUNT[3] = DFFEAS(D1_COUNT[3]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--D1_COUNT[4] is PCM3006:inst6|COUNT[4] at LC_X36_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_COUNT[4]_lut_out = GND;
+D1_COUNT[4] = DFFEAS(D1_COUNT[4]_lut_out, GLOBAL(12_288MHz), VCC, , , D1L14, , , VCC);
+
+
+--D1_COUNT[5] is PCM3006:inst6|COUNT[5] at LC_X37_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_COUNT[5]_lut_out = GND;
+D1_COUNT[5] = DFFEAS(D1_COUNT[5]_lut_out, GLOBAL(12_288MHz), VCC, , , D1L18, , , VCC);
+
+
+--D1_COUNT[6] is PCM3006:inst6|COUNT[6] at LC_X36_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_COUNT[6]_lut_out = GND;
+D1_COUNT[6] = DFFEAS(D1_COUNT[6]_lut_out, GLOBAL(12_288MHz), VCC, , , D1L21, , , VCC);
+
+
+--C1L1 is cordic_core:inst1|add~11356 at LC_X28_Y10_N5
+--operation mode is normal
+
+C1L1_carry_eqn = C1L4;
+C1L1 = C1L2 $ C1L1_carry_eqn $ !C1_cur_sin[19];
+
+--C1_sin[15] is cordic_core:inst1|sin[15] at LC_X28_Y10_N5
+--operation mode is normal
+
+C1_sin[15] = DFFEAS(C1L1, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--C1_state.processing is cordic_core:inst1|state.processing at LC_X27_Y10_N5
+--operation mode is normal
+
+C1_state.processing_lut_out = C1_state.firststage # !A1L18 & (C1_state.processing);
+C1_state.processing = DFFEAS(C1_state.processing_lut_out, GLOBAL(12_288MHz), VCC, , , , , SWITCH1, );
+
+
+--C1_pass_count[3] is cordic_core:inst1|pass_count[3] at LC_X27_Y14_N9
+--operation mode is normal
+
+C1_pass_count[3]_lut_out = C1L409 & (C1_pass_count[3]) # !C1L409 & C1_state.processing & (C1L5 $ C1_pass_count[3]);
+C1_pass_count[3] = DFFEAS(C1_pass_count[3]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--C1_pass_count[2] is cordic_core:inst1|pass_count[2] at LC_X26_Y12_N0
+--operation mode is normal
+
+C1_pass_count[2]_lut_out = C1L409 & (C1_pass_count[2]) # !C1L409 & C1_state.processing & (C1L6 $ C1_pass_count[2]);
+C1_pass_count[2] = DFFEAS(C1_pass_count[2]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--C1_pass_count[1] is cordic_core:inst1|pass_count[1] at LC_X27_Y13_N7
+--operation mode is normal
+
+C1_pass_count[1]_lut_out = C1L409 & (C1_pass_count[1]) # !C1L409 & C1_state.processing & (C1_pass_count[0] $ C1_pass_count[1]);
+C1_pass_count[1] = DFFEAS(C1_pass_count[1]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--C1_pass_count[0] is cordic_core:inst1|pass_count[0] at LC_X28_Y13_N2
+--operation mode is normal
+
+C1_pass_count[0]_lut_out = C1_pass_count[0] & C1L409 # !C1_pass_count[0] & !C1L409 & (C1_state.processing);
+C1_pass_count[0] = DFFEAS(C1_pass_count[0]_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--A1L18 is rtl~80 at LC_X31_Y15_N8
+--operation mode is normal
+
+A1L18 = !C1_pass_count[0] & C1_pass_count[1] & C1_pass_count[3] & C1_pass_count[2];
+
+
+--C1L538 is cordic_core:inst1|sin[15]~16 at LC_X27_Y10_N9
+--operation mode is normal
+
+C1L538 = !SWITCH1 & A1L18 & (C1_state.processing);
+
+
+--C1L411 is cordic_core:inst1|ready~109 at LC_X31_Y10_N1
+--operation mode is normal
+
+C1L411 = !C1_state.firststage & (!SWITCH1 & C1_state.idle);
+
+
+--D1_NEW_SAMPLE is PCM3006:inst6|NEW_SAMPLE at LC_X29_Y9_N4
+--operation mode is normal
+
+D1_NEW_SAMPLE_lut_out = !D1_LRCOUT_INT & D1L13;
+D1_NEW_SAMPLE = DFFEAS(D1_NEW_SAMPLE_lut_out, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--C1L542 is cordic_core:inst1|state~33 at LC_X31_Y12_N1
+--operation mode is normal
+
+C1L542 = !C1_state.idle & !SWITCH1 & (D1_NEW_SAMPLE);
+
+
+--D1_R_IN[13] is PCM3006:inst6|R_IN[13] at LC_X35_Y11_N0
+--operation mode is normal
+
+D1_R_IN[13]_lut_out = C1_sin[13];
+D1_R_IN[13] = DFFEAS(D1_R_IN[13]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[28] is PCM3006:inst6|SHIFTOUT[28] at LC_X36_Y13_N8
+--operation mode is normal
+
+D1_SHIFTOUT[28]_lut_out = A1L16 & (A1L17 & D1_R_IN[12] # !A1L17 & (D1_SHIFTOUT[27])) # !A1L16 & (D1_SHIFTOUT[27]);
+D1_SHIFTOUT[28] = DFFEAS(D1_SHIFTOUT[28]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cur_phase[19] is cordic_core:inst1|cur_phase[19] at LC_X32_Y11_N5
+--operation mode is normal
+
+C1_cur_phase[19]_carry_eqn = C1L317;
+C1_cur_phase[19]_lut_out = C1L387 $ (C1_cur_phase[19]_carry_eqn $ !C1_cur_phase[19]);
+C1_cur_phase[19] = DFFEAS(C1_cur_phase[19]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+
+--C1_cur_phase[15] is cordic_core:inst1|cur_phase[15] at LC_X32_Y11_N1
+--operation mode is arithmetic
+
+C1_cur_phase[15]_carry_eqn = (!C1L303 & C1L305) # (C1L303 & C1L306);
+C1_cur_phase[15]_lut_out = C1_cur_phase[15] $ C1L8 $ !C1_cur_phase[15]_carry_eqn;
+C1_cur_phase[15] = DFFEAS(C1_cur_phase[15]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L308 is cordic_core:inst1|cur_phase[15]~323 at LC_X32_Y11_N1
+--operation mode is arithmetic
+
+C1L308_cout_0 = C1_cur_phase[15] & (C1L8 # !C1L305) # !C1_cur_phase[15] & C1L8 & !C1L305;
+C1L308 = CARRY(C1L308_cout_0);
+
+--C1L309 is cordic_core:inst1|cur_phase[15]~323COUT1_420 at LC_X32_Y11_N1
+--operation mode is arithmetic
+
+C1L309_cout_1 = C1_cur_phase[15] & (C1L8 # !C1L306) # !C1_cur_phase[15] & C1L8 & !C1L306;
+C1L309 = CARRY(C1L309_cout_1);
+
+
+--C1_cur_phase[16] is cordic_core:inst1|cur_phase[16] at LC_X32_Y11_N2
+--operation mode is arithmetic
+
+C1_cur_phase[16]_carry_eqn = (!C1L303 & C1L308) # (C1L303 & C1L309);
+C1_cur_phase[16]_lut_out = C1_cur_phase[16] $ C1L9 $ C1_cur_phase[16]_carry_eqn;
+C1_cur_phase[16] = DFFEAS(C1_cur_phase[16]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L311 is cordic_core:inst1|cur_phase[16]~327 at LC_X32_Y11_N2
+--operation mode is arithmetic
+
+C1L311_cout_0 = C1_cur_phase[16] & !C1L9 & !C1L308 # !C1_cur_phase[16] & (!C1L308 # !C1L9);
+C1L311 = CARRY(C1L311_cout_0);
+
+--C1L312 is cordic_core:inst1|cur_phase[16]~327COUT1_421 at LC_X32_Y11_N2
+--operation mode is arithmetic
+
+C1L312_cout_1 = C1_cur_phase[16] & !C1L9 & !C1L309 # !C1_cur_phase[16] & (!C1L309 # !C1L9);
+C1L312 = CARRY(C1L312_cout_1);
+
+
+--C1L358 is cordic_core:inst1|LessThan~1305 at LC_X31_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[15]_qfbk = C1_des_phase[15];
+C1L358 = C1_cur_phase[16] & (!C1_des_phase[15]_qfbk & C1_cur_phase[15] # !C1_des_phase[16]) # !C1_cur_phase[16] & !C1_des_phase[16] & !C1_des_phase[15]_qfbk & C1_cur_phase[15];
+
+--C1_des_phase[15] is cordic_core:inst1|des_phase[15] at LC_X31_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[15] = DFFEAS(C1L358, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[13], , , VCC);
+
+
+--C1_cur_phase[17] is cordic_core:inst1|cur_phase[17] at LC_X32_Y11_N3
+--operation mode is arithmetic
+
+C1_cur_phase[17]_carry_eqn = (!C1L303 & C1L311) # (C1L303 & C1L312);
+C1_cur_phase[17]_lut_out = C1L387 $ C1_cur_phase[17] $ !C1_cur_phase[17]_carry_eqn;
+C1_cur_phase[17] = DFFEAS(C1_cur_phase[17]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L314 is cordic_core:inst1|cur_phase[17]~331 at LC_X32_Y11_N3
+--operation mode is arithmetic
+
+C1L314_cout_0 = C1L387 & (C1_cur_phase[17] # !C1L311) # !C1L387 & C1_cur_phase[17] & !C1L311;
+C1L314 = CARRY(C1L314_cout_0);
+
+--C1L315 is cordic_core:inst1|cur_phase[17]~331COUT1_422 at LC_X32_Y11_N3
+--operation mode is arithmetic
+
+C1L315_cout_1 = C1L387 & (C1_cur_phase[17] # !C1L312) # !C1L387 & C1_cur_phase[17] & !C1L312;
+C1L315 = CARRY(C1L315_cout_1);
+
+
+--C1_cur_phase[18] is cordic_core:inst1|cur_phase[18] at LC_X32_Y11_N4
+--operation mode is arithmetic
+
+C1_cur_phase[18]_carry_eqn = (!C1L303 & C1L314) # (C1L303 & C1L315);
+C1_cur_phase[18]_lut_out = C1L387 $ C1_cur_phase[18] $ C1_cur_phase[18]_carry_eqn;
+C1_cur_phase[18] = DFFEAS(C1_cur_phase[18]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L317 is cordic_core:inst1|cur_phase[18]~335 at LC_X32_Y11_N4
+--operation mode is arithmetic
+
+C1L317 = CARRY(C1L387 & !C1_cur_phase[18] & !C1L315 # !C1L387 & (!C1L315 # !C1_cur_phase[18]));
+
+
+--C1L359 is cordic_core:inst1|LessThan~1306 at LC_X31_Y10_N4
+--operation mode is normal
+
+C1L359 = C1_cur_phase[17] & (C1_cur_phase[18] # !C1_des_phase[19]) # !C1_cur_phase[17] & (C1_cur_phase[18] & !C1_des_phase[19]);
+
+
+--C1L360 is cordic_core:inst1|LessThan~1307 at LC_X32_Y11_N7
+--operation mode is normal
+
+C1L360 = C1_cur_phase[19] & C1L358 & C1_des_phase[19] & C1L359 # !C1_cur_phase[19] & !C1_des_phase[19] & (C1L358 # C1L359);
+
+
+--C1L361 is cordic_core:inst1|LessThan~1308 at LC_X31_Y10_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[19]_qfbk = C1_des_phase[19];
+C1L361 = C1_cur_phase[17] & C1_cur_phase[19] & C1_des_phase[19]_qfbk & C1_cur_phase[18] # !C1_cur_phase[17] & !C1_cur_phase[19] & !C1_des_phase[19]_qfbk & !C1_cur_phase[18];
+
+--C1_des_phase[19] is cordic_core:inst1|des_phase[19] at LC_X31_Y10_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[19] = DFFEAS(C1L361, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[15], , , VCC);
+
+
+--C1L362 is cordic_core:inst1|LessThan~1309 at LC_X31_Y10_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[16]_qfbk = C1_des_phase[16];
+C1L362 = C1_cur_phase[16] $ (C1_des_phase[16]_qfbk);
+
+--C1_des_phase[16] is cordic_core:inst1|des_phase[16] at LC_X31_Y10_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[16] = DFFEAS(C1L362, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[14], , , VCC);
+
+
+--C1L363 is cordic_core:inst1|LessThan~1310 at LC_X31_Y10_N0
+--operation mode is normal
+
+C1L363 = C1L361 & !C1L362 & (C1_cur_phase[15] $ !C1_des_phase[15]);
+
+
+--C1_cur_phase[7] is cordic_core:inst1|cur_phase[7] at LC_X32_Y12_N3
+--operation mode is arithmetic
+
+C1_cur_phase[7]_carry_eqn = (!C1L275 & C1L283) # (C1L275 & C1L284);
+C1_cur_phase[7]_lut_out = C1L10 $ C1_cur_phase[7] $ !C1_cur_phase[7]_carry_eqn;
+C1_cur_phase[7] = DFFEAS(C1_cur_phase[7]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L286 is cordic_core:inst1|cur_phase[7]~339 at LC_X32_Y12_N3
+--operation mode is arithmetic
+
+C1L286_cout_0 = C1L10 & (C1_cur_phase[7] # !C1L283) # !C1L10 & C1_cur_phase[7] & !C1L283;
+C1L286 = CARRY(C1L286_cout_0);
+
+--C1L287 is cordic_core:inst1|cur_phase[7]~339COUT1_414 at LC_X32_Y12_N3
+--operation mode is arithmetic
+
+C1L287_cout_1 = C1L10 & (C1_cur_phase[7] # !C1L284) # !C1L10 & C1_cur_phase[7] & !C1L284;
+C1L287 = CARRY(C1L287_cout_1);
+
+
+--C1_cur_phase[6] is cordic_core:inst1|cur_phase[6] at LC_X32_Y12_N2
+--operation mode is arithmetic
+
+C1_cur_phase[6]_carry_eqn = (!C1L275 & C1L280) # (C1L275 & C1L281);
+C1_cur_phase[6]_lut_out = C1_cur_phase[6] $ C1L11 $ C1_cur_phase[6]_carry_eqn;
+C1_cur_phase[6] = DFFEAS(C1_cur_phase[6]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L283 is cordic_core:inst1|cur_phase[6]~343 at LC_X32_Y12_N2
+--operation mode is arithmetic
+
+C1L283_cout_0 = C1_cur_phase[6] & !C1L11 & !C1L280 # !C1_cur_phase[6] & (!C1L280 # !C1L11);
+C1L283 = CARRY(C1L283_cout_0);
+
+--C1L284 is cordic_core:inst1|cur_phase[6]~343COUT1_413 at LC_X32_Y12_N2
+--operation mode is arithmetic
+
+C1L284_cout_1 = C1_cur_phase[6] & !C1L11 & !C1L281 # !C1_cur_phase[6] & (!C1L281 # !C1L11);
+C1L284 = CARRY(C1L284_cout_1);
+
+
+--C1_cur_phase[5] is cordic_core:inst1|cur_phase[5] at LC_X32_Y12_N1
+--operation mode is arithmetic
+
+C1_cur_phase[5]_carry_eqn = (!C1L275 & C1L277) # (C1L275 & C1L278);
+C1_cur_phase[5]_lut_out = C1_cur_phase[5] $ C1L12 $ !C1_cur_phase[5]_carry_eqn;
+C1_cur_phase[5] = DFFEAS(C1_cur_phase[5]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L280 is cordic_core:inst1|cur_phase[5]~347 at LC_X32_Y12_N1
+--operation mode is arithmetic
+
+C1L280_cout_0 = C1_cur_phase[5] & (C1L12 # !C1L277) # !C1_cur_phase[5] & C1L12 & !C1L277;
+C1L280 = CARRY(C1L280_cout_0);
+
+--C1L281 is cordic_core:inst1|cur_phase[5]~347COUT1_412 at LC_X32_Y12_N1
+--operation mode is arithmetic
+
+C1L281_cout_1 = C1_cur_phase[5] & (C1L12 # !C1L278) # !C1_cur_phase[5] & C1L12 & !C1L278;
+C1L281 = CARRY(C1L281_cout_1);
+
+
+--C1L364 is cordic_core:inst1|LessThan~1311 at LC_X31_Y12_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[6]_qfbk = C1_des_phase[6];
+C1L364 = C1_cur_phase[6] & (!C1_des_phase[5] & C1_cur_phase[5] # !C1_des_phase[6]_qfbk) # !C1_cur_phase[6] & !C1_des_phase[5] & !C1_des_phase[6]_qfbk & C1_cur_phase[5];
+
+--C1_des_phase[6] is cordic_core:inst1|des_phase[6] at LC_X31_Y12_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[6] = DFFEAS(C1L364, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[4], , , VCC);
+
+
+--C1L365 is cordic_core:inst1|LessThan~1312 at LC_X31_Y12_N6
+--operation mode is normal
+
+C1L365 = C1_cur_phase[7] & (C1L364 # !C1_des_phase[7]) # !C1_cur_phase[7] & (!C1_des_phase[7] & C1L364);
+
+
+--C1_cur_phase[4] is cordic_core:inst1|cur_phase[4] at LC_X32_Y12_N0
+--operation mode is arithmetic
+
+C1_cur_phase[4]_carry_eqn = C1L275;
+C1_cur_phase[4]_lut_out = C1L13 $ C1_cur_phase[4] $ C1_cur_phase[4]_carry_eqn;
+C1_cur_phase[4] = DFFEAS(C1_cur_phase[4]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L277 is cordic_core:inst1|cur_phase[4]~351 at LC_X32_Y12_N0
+--operation mode is arithmetic
+
+C1L277_cout_0 = C1L13 & !C1_cur_phase[4] & !C1L275 # !C1L13 & (!C1L275 # !C1_cur_phase[4]);
+C1L277 = CARRY(C1L277_cout_0);
+
+--C1L278 is cordic_core:inst1|cur_phase[4]~351COUT1_411 at LC_X32_Y12_N0
+--operation mode is arithmetic
+
+C1L278_cout_1 = C1L13 & !C1_cur_phase[4] & !C1L275 # !C1L13 & (!C1L275 # !C1_cur_phase[4]);
+C1L278 = CARRY(C1L278_cout_1);
+
+
+--C1_cur_phase[3] is cordic_core:inst1|cur_phase[3] at LC_X32_Y13_N9
+--operation mode is arithmetic
+
+C1_cur_phase[3]_lut_out = C1_cur_phase[3] $ C1L14 $ !C1L271;
+C1_cur_phase[3] = DFFEAS(C1_cur_phase[3]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L275 is cordic_core:inst1|cur_phase[3]~355 at LC_X32_Y13_N9
+--operation mode is arithmetic
+
+C1L275 = CARRY(C1_cur_phase[3] & (C1L14 # !C1L272) # !C1_cur_phase[3] & C1L14 & !C1L272);
+
+
+--C1_cur_phase[2] is cordic_core:inst1|cur_phase[2] at LC_X32_Y13_N8
+--operation mode is arithmetic
+
+C1_cur_phase[2]_lut_out = C1L15 $ C1_cur_phase[2] $ C1L268;
+C1_cur_phase[2] = DFFEAS(C1_cur_phase[2]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L271 is cordic_core:inst1|cur_phase[2]~359 at LC_X32_Y13_N8
+--operation mode is arithmetic
+
+C1L271_cout_0 = C1L15 & !C1_cur_phase[2] & !C1L268 # !C1L15 & (!C1L268 # !C1_cur_phase[2]);
+C1L271 = CARRY(C1L271_cout_0);
+
+--C1L272 is cordic_core:inst1|cur_phase[2]~359COUT1_410 at LC_X32_Y13_N8
+--operation mode is arithmetic
+
+C1L272_cout_1 = C1L15 & !C1_cur_phase[2] & !C1L269 # !C1L15 & (!C1L269 # !C1_cur_phase[2]);
+C1L272 = CARRY(C1L272_cout_1);
+
+
+--C1_cur_phase[0] is cordic_core:inst1|cur_phase[0] at LC_X32_Y13_N6
+--operation mode is arithmetic
+
+C1_cur_phase[0]_lut_out = C1_cur_phase[0] $ C1L16 $ C1L265;
+C1_cur_phase[0] = DFFEAS(C1_cur_phase[0]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L262 is cordic_core:inst1|cur_phase[0]~363 at LC_X32_Y13_N6
+--operation mode is arithmetic
+
+C1L262_cout_0 = C1_cur_phase[0] & !C1L16 & !C1L265 # !C1_cur_phase[0] & (!C1L265 # !C1L16);
+C1L262 = CARRY(C1L262_cout_0);
+
+--C1L263 is cordic_core:inst1|cur_phase[0]~363COUT1_408 at LC_X32_Y13_N6
+--operation mode is arithmetic
+
+C1L263_cout_1 = C1_cur_phase[0] & !C1L16 & !C1L266 # !C1_cur_phase[0] & (!C1L266 # !C1L16);
+C1L263 = CARRY(C1L263_cout_1);
+
+
+--C1_cur_phase[1] is cordic_core:inst1|cur_phase[1] at LC_X32_Y13_N7
+--operation mode is arithmetic
+
+C1_cur_phase[1]_lut_out = C1_cur_phase[1] $ C1L17 $ !C1L262;
+C1_cur_phase[1] = DFFEAS(C1_cur_phase[1]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L268 is cordic_core:inst1|cur_phase[1]~367 at LC_X32_Y13_N7
+--operation mode is arithmetic
+
+C1L268_cout_0 = C1_cur_phase[1] & (C1L17 # !C1L262) # !C1_cur_phase[1] & C1L17 & !C1L262;
+C1L268 = CARRY(C1L268_cout_0);
+
+--C1L269 is cordic_core:inst1|cur_phase[1]~367COUT1_409 at LC_X32_Y13_N7
+--operation mode is arithmetic
+
+C1L269_cout_1 = C1_cur_phase[1] & (C1L17 # !C1L263) # !C1_cur_phase[1] & C1L17 & !C1L263;
+C1L269 = CARRY(C1L269_cout_1);
+
+
+--C1L366 is cordic_core:inst1|LessThan~1313 at LC_X31_Y12_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[2]_qfbk = C1_des_phase[2];
+C1L366 = C1_cur_phase[2] & (C1_cur_phase[0] # C1_cur_phase[1] # !C1_des_phase[2]_qfbk) # !C1_cur_phase[2] & !C1_des_phase[2]_qfbk & (C1_cur_phase[0] # C1_cur_phase[1]);
+
+--C1_des_phase[2] is cordic_core:inst1|des_phase[2] at LC_X31_Y12_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[2] = DFFEAS(C1L366, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[0], , , VCC);
+
+
+--C1L367 is cordic_core:inst1|LessThan~1314 at LC_X31_Y12_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[3]_qfbk = C1_des_phase[3];
+C1L367 = C1L366 & (C1_cur_phase[3] # !C1_des_phase[3]_qfbk) # !C1L366 & !C1_des_phase[3]_qfbk & C1_cur_phase[3];
+
+--C1_des_phase[3] is cordic_core:inst1|des_phase[3] at LC_X31_Y12_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[3] = DFFEAS(C1L367, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[1], , , VCC);
+
+
+--C1L368 is cordic_core:inst1|LessThan~1315 at LC_X31_Y12_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[7]_qfbk = C1_des_phase[7];
+C1L368 = C1_cur_phase[6] & (C1_des_phase[7]_qfbk $ C1_cur_phase[7] # !C1_des_phase[6]) # !C1_cur_phase[6] & (C1_des_phase[6] # C1_des_phase[7]_qfbk $ C1_cur_phase[7]);
+
+--C1_des_phase[7] is cordic_core:inst1|des_phase[7] at LC_X31_Y12_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[7] = DFFEAS(C1L368, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[5], , , VCC);
+
+
+--C1L369 is cordic_core:inst1|LessThan~1316 at LC_X31_Y12_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[4]_qfbk = C1_des_phase[4];
+C1L369 = !C1L368 & (C1L367 & (C1_cur_phase[4] # !C1_des_phase[4]_qfbk) # !C1L367 & C1_cur_phase[4] & !C1_des_phase[4]_qfbk);
+
+--C1_des_phase[4] is cordic_core:inst1|des_phase[4] at LC_X31_Y12_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[4] = DFFEAS(C1L369, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[2], , , VCC);
+
+
+--C1L370 is cordic_core:inst1|LessThan~1317 at LC_X31_Y12_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[5]_qfbk = C1_des_phase[5];
+C1L370 = C1L365 # C1L369 & (C1_des_phase[5]_qfbk $ !C1_cur_phase[5]);
+
+--C1_des_phase[5] is cordic_core:inst1|des_phase[5] at LC_X31_Y12_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[5] = DFFEAS(C1L370, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[3], , , VCC);
+
+
+--C1_cur_phase[13] is cordic_core:inst1|cur_phase[13] at LC_X32_Y12_N9
+--operation mode is arithmetic
+
+C1_cur_phase[13]_carry_eqn = (!C1L289 & C1L300) # (C1L289 & C1L301);
+C1_cur_phase[13]_lut_out = C1_cur_phase[13] $ C1L18 $ !C1_cur_phase[13]_carry_eqn;
+C1_cur_phase[13] = DFFEAS(C1_cur_phase[13]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L303 is cordic_core:inst1|cur_phase[13]~371 at LC_X32_Y12_N9
+--operation mode is arithmetic
+
+C1L303 = CARRY(C1_cur_phase[13] & (C1L18 # !C1L301) # !C1_cur_phase[13] & C1L18 & !C1L301);
+
+
+--C1_cur_phase[12] is cordic_core:inst1|cur_phase[12] at LC_X32_Y12_N8
+--operation mode is arithmetic
+
+C1_cur_phase[12]_carry_eqn = (!C1L289 & C1L297) # (C1L289 & C1L298);
+C1_cur_phase[12]_lut_out = C1L19 $ C1_cur_phase[12] $ C1_cur_phase[12]_carry_eqn;
+C1_cur_phase[12] = DFFEAS(C1_cur_phase[12]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L300 is cordic_core:inst1|cur_phase[12]~375 at LC_X32_Y12_N8
+--operation mode is arithmetic
+
+C1L300_cout_0 = C1L19 & !C1_cur_phase[12] & !C1L297 # !C1L19 & (!C1L297 # !C1_cur_phase[12]);
+C1L300 = CARRY(C1L300_cout_0);
+
+--C1L301 is cordic_core:inst1|cur_phase[12]~375COUT1_418 at LC_X32_Y12_N8
+--operation mode is arithmetic
+
+C1L301_cout_1 = C1L19 & !C1_cur_phase[12] & !C1L298 # !C1L19 & (!C1L298 # !C1_cur_phase[12]);
+C1L301 = CARRY(C1L301_cout_1);
+
+
+--C1_cur_phase[11] is cordic_core:inst1|cur_phase[11] at LC_X32_Y12_N7
+--operation mode is arithmetic
+
+C1_cur_phase[11]_carry_eqn = (!C1L289 & C1L294) # (C1L289 & C1L295);
+C1_cur_phase[11]_lut_out = C1_cur_phase[11] $ C1L20 $ !C1_cur_phase[11]_carry_eqn;
+C1_cur_phase[11] = DFFEAS(C1_cur_phase[11]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L297 is cordic_core:inst1|cur_phase[11]~379 at LC_X32_Y12_N7
+--operation mode is arithmetic
+
+C1L297_cout_0 = C1_cur_phase[11] & (C1L20 # !C1L294) # !C1_cur_phase[11] & C1L20 & !C1L294;
+C1L297 = CARRY(C1L297_cout_0);
+
+--C1L298 is cordic_core:inst1|cur_phase[11]~379COUT1_417 at LC_X32_Y12_N7
+--operation mode is arithmetic
+
+C1L298_cout_1 = C1_cur_phase[11] & (C1L20 # !C1L295) # !C1_cur_phase[11] & C1L20 & !C1L295;
+C1L298 = CARRY(C1L298_cout_1);
+
+
+--C1L371 is cordic_core:inst1|LessThan~1318 at LC_X31_Y11_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[12]_qfbk = C1_des_phase[12];
+C1L371 = C1_des_phase[11] & (C1_cur_phase[12] $ C1_des_phase[12]_qfbk # !C1_cur_phase[11]) # !C1_des_phase[11] & (C1_cur_phase[11] # C1_cur_phase[12] $ C1_des_phase[12]_qfbk);
+
+--C1_des_phase[12] is cordic_core:inst1|des_phase[12] at LC_X31_Y11_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[12] = DFFEAS(C1L371, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[10], , , VCC);
+
+
+--C1_cur_phase[14] is cordic_core:inst1|cur_phase[14] at LC_X32_Y11_N0
+--operation mode is arithmetic
+
+C1_cur_phase[14]_carry_eqn = C1L303;
+C1_cur_phase[14]_lut_out = C1L21 $ C1_cur_phase[14] $ C1_cur_phase[14]_carry_eqn;
+C1_cur_phase[14] = DFFEAS(C1_cur_phase[14]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L305 is cordic_core:inst1|cur_phase[14]~383 at LC_X32_Y11_N0
+--operation mode is arithmetic
+
+C1L305_cout_0 = C1L21 & !C1_cur_phase[14] & !C1L303 # !C1L21 & (!C1L303 # !C1_cur_phase[14]);
+C1L305 = CARRY(C1L305_cout_0);
+
+--C1L306 is cordic_core:inst1|cur_phase[14]~383COUT1_419 at LC_X32_Y11_N0
+--operation mode is arithmetic
+
+C1L306_cout_1 = C1L21 & !C1_cur_phase[14] & !C1L303 # !C1L21 & (!C1L303 # !C1_cur_phase[14]);
+C1L306 = CARRY(C1L306_cout_1);
+
+
+--C1_cur_phase[10] is cordic_core:inst1|cur_phase[10] at LC_X32_Y12_N6
+--operation mode is arithmetic
+
+C1_cur_phase[10]_carry_eqn = (!C1L289 & C1L291) # (C1L289 & C1L292);
+C1_cur_phase[10]_lut_out = C1_cur_phase[10] $ C1L22 $ C1_cur_phase[10]_carry_eqn;
+C1_cur_phase[10] = DFFEAS(C1_cur_phase[10]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L294 is cordic_core:inst1|cur_phase[10]~387 at LC_X32_Y12_N6
+--operation mode is arithmetic
+
+C1L294_cout_0 = C1_cur_phase[10] & !C1L22 & !C1L291 # !C1_cur_phase[10] & (!C1L291 # !C1L22);
+C1L294 = CARRY(C1L294_cout_0);
+
+--C1L295 is cordic_core:inst1|cur_phase[10]~387COUT1_416 at LC_X32_Y12_N6
+--operation mode is arithmetic
+
+C1L295_cout_1 = C1_cur_phase[10] & !C1L22 & !C1L292 # !C1_cur_phase[10] & (!C1L292 # !C1L22);
+C1L295 = CARRY(C1L295_cout_1);
+
+
+--C1L372 is cordic_core:inst1|LessThan~1319 at LC_X31_Y11_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[14]_qfbk = C1_des_phase[14];
+C1L372 = C1_des_phase[10] & (C1_cur_phase[14] $ C1_des_phase[14]_qfbk # !C1_cur_phase[10]) # !C1_des_phase[10] & (C1_cur_phase[10] # C1_cur_phase[14] $ C1_des_phase[14]_qfbk);
+
+--C1_des_phase[14] is cordic_core:inst1|des_phase[14] at LC_X31_Y11_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[14] = DFFEAS(C1L372, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[12], , , VCC);
+
+
+--C1L373 is cordic_core:inst1|LessThan~1320 at LC_X31_Y11_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[13]_qfbk = C1_des_phase[13];
+C1L373 = !C1L371 & !C1L372 & (C1_cur_phase[13] $ !C1_des_phase[13]_qfbk);
+
+--C1_des_phase[13] is cordic_core:inst1|des_phase[13] at LC_X31_Y11_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[13] = DFFEAS(C1L373, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[11], , , VCC);
+
+
+--C1_cur_phase[9] is cordic_core:inst1|cur_phase[9] at LC_X32_Y12_N5
+--operation mode is arithmetic
+
+C1_cur_phase[9]_carry_eqn = C1L289;
+C1_cur_phase[9]_lut_out = C1L23 $ C1_cur_phase[9] $ !C1_cur_phase[9]_carry_eqn;
+C1_cur_phase[9] = DFFEAS(C1_cur_phase[9]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L291 is cordic_core:inst1|cur_phase[9]~391 at LC_X32_Y12_N5
+--operation mode is arithmetic
+
+C1L291_cout_0 = C1L23 & (C1_cur_phase[9] # !C1L289) # !C1L23 & C1_cur_phase[9] & !C1L289;
+C1L291 = CARRY(C1L291_cout_0);
+
+--C1L292 is cordic_core:inst1|cur_phase[9]~391COUT1_415 at LC_X32_Y12_N5
+--operation mode is arithmetic
+
+C1L292_cout_1 = C1L23 & (C1_cur_phase[9] # !C1L289) # !C1L23 & C1_cur_phase[9] & !C1L289;
+C1L292 = CARRY(C1L292_cout_1);
+
+
+--C1L374 is cordic_core:inst1|LessThan~1321 at LC_X31_Y11_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[9]_qfbk = C1_des_phase[9];
+C1L374 = C1L373 & (C1_des_phase[9]_qfbk $ !C1_cur_phase[9]);
+
+--C1_des_phase[9] is cordic_core:inst1|des_phase[9] at LC_X31_Y11_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[9] = DFFEAS(C1L374, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[7], , , VCC);
+
+
+--C1_cur_phase[8] is cordic_core:inst1|cur_phase[8] at LC_X32_Y12_N4
+--operation mode is arithmetic
+
+C1_cur_phase[8]_carry_eqn = (!C1L275 & C1L286) # (C1L275 & C1L287);
+C1_cur_phase[8]_lut_out = C1_cur_phase[8] $ C1L24 $ C1_cur_phase[8]_carry_eqn;
+C1_cur_phase[8] = DFFEAS(C1_cur_phase[8]_lut_out, GLOBAL(12_288MHz), VCC, , C1L273, , , !C1_state.idle, );
+
+--C1L289 is cordic_core:inst1|cur_phase[8]~395 at LC_X32_Y12_N4
+--operation mode is arithmetic
+
+C1L289 = CARRY(C1_cur_phase[8] & !C1L24 & !C1L287 # !C1_cur_phase[8] & (!C1L287 # !C1L24));
+
+
+--C1L375 is cordic_core:inst1|LessThan~1322 at LC_X30_Y11_N9
+--operation mode is normal
+
+C1L375 = C1L370 & C1L374 & (C1_cur_phase[8] $ !C1_des_phase[8]);
+
+
+--C1L376 is cordic_core:inst1|LessThan~1323 at LC_X31_Y10_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[8]_qfbk = C1_des_phase[8];
+C1L376 = C1_cur_phase[8] & !C1_des_phase[8]_qfbk;
+
+--C1_des_phase[8] is cordic_core:inst1|des_phase[8] at LC_X31_Y10_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[8] = DFFEAS(C1L376, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[6], , , VCC);
+
+
+--C1L377 is cordic_core:inst1|LessThan~1324 at LC_X31_Y11_N7
+--operation mode is normal
+
+C1L377 = C1L373 & (C1_des_phase[9] & C1L376 & C1_cur_phase[9] # !C1_des_phase[9] & (C1L376 # C1_cur_phase[9]));
+
+
+--C1L378 is cordic_core:inst1|LessThan~1325 at LC_X31_Y11_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[10]_qfbk = C1_des_phase[10];
+C1L378 = C1_cur_phase[10] & !C1_des_phase[10]_qfbk & (C1_cur_phase[12] $ !C1_des_phase[12]);
+
+--C1_des_phase[10] is cordic_core:inst1|des_phase[10] at LC_X31_Y11_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[10] = DFFEAS(C1L378, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[8], , , VCC);
+
+
+--C1L379 is cordic_core:inst1|LessThan~1326 at LC_X31_Y11_N2
+--operation mode is normal
+
+C1L379 = C1_des_phase[11] & (C1_cur_phase[14] $ C1_des_phase[14] # !C1_cur_phase[11]) # !C1_des_phase[11] & (C1_cur_phase[11] # C1_cur_phase[14] $ C1_des_phase[14]);
+
+
+--C1L380 is cordic_core:inst1|LessThan~1327 at LC_X31_Y11_N3
+--operation mode is normal
+
+C1L380 = C1L378 & !C1L379 & (C1_cur_phase[13] $ !C1_des_phase[13]);
+
+
+--C1L381 is cordic_core:inst1|LessThan~1328 at LC_X32_Y11_N8
+--operation mode is normal
+
+C1L381 = C1_cur_phase[13] & C1_des_phase[13] & (C1_des_phase[14] $ !C1_cur_phase[14]) # !C1_cur_phase[13] & !C1_des_phase[13] & (C1_des_phase[14] $ !C1_cur_phase[14]);
+
+
+--C1L382 is cordic_core:inst1|LessThan~1329 at LC_X31_Y11_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[11]_qfbk = C1_des_phase[11];
+C1L382 = !C1_des_phase[11]_qfbk & C1_cur_phase[11];
+
+--C1_des_phase[11] is cordic_core:inst1|des_phase[11] at LC_X31_Y11_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_des_phase[11] = DFFEAS(C1L382, GLOBAL(12_288MHz), VCC, , C1L542, B1_PHASE_INT[9], , , VCC);
+
+
+--C1L383 is cordic_core:inst1|LessThan~1330 at LC_X31_Y11_N1
+--operation mode is normal
+
+C1L383 = C1L381 & (C1_cur_phase[12] & (C1L382 # !C1_des_phase[12]) # !C1_cur_phase[12] & C1L382 & !C1_des_phase[12]);
+
+
+--C1L384 is cordic_core:inst1|LessThan~1331 at LC_X32_Y11_N9
+--operation mode is normal
+
+C1L384 = C1_des_phase[14] & C1_cur_phase[13] & !C1_des_phase[13] & C1_cur_phase[14] # !C1_des_phase[14] & (C1_cur_phase[14] # C1_cur_phase[13] & !C1_des_phase[13]);
+
+
+--C1L385 is cordic_core:inst1|LessThan~1332 at LC_X30_Y11_N1
+--operation mode is normal
+
+C1L385 = C1L380 # C1L384 # C1L377 # C1L383;
+
+
+--C1L386 is cordic_core:inst1|LessThan~1333 at LC_X30_Y11_N2
+--operation mode is normal
+
+C1L386 = C1L360 # C1L363 & (C1L375 # C1L385);
+
+
+--C1_cur_cos[19] is cordic_core:inst1|cur_cos[19] at LC_X30_Y13_N9
+--operation mode is normal
+
+C1_cur_cos[19]_lut_out = C1_state.idle & C1_state.processing & (C1L413) # !C1_state.idle & (C1L414 # C1_state.processing & C1L413);
+C1_cur_cos[19] = DFFEAS(C1_cur_cos[19]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L2 is cordic_core:inst1|add~11361 at LC_X27_Y11_N9
+--operation mode is normal
+
+C1L2 = C1_cur_cos[19] $ (C1L386 # !C1_cur_phase[19] & C1_des_phase[19]);
+
+
+--C1_cur_sin[19] is cordic_core:inst1|cur_sin[19] at LC_X28_Y10_N6
+--operation mode is normal
+
+C1_cur_sin[19]_lut_out = C1_state.idle & (C1L1);
+C1_cur_sin[19] = DFFEAS(C1_cur_sin[19]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L3 is cordic_core:inst1|add~11362 at LC_X28_Y10_N4
+--operation mode is arithmetic
+
+C1L3_carry_eqn = (!C1L60 & C1L28) # (C1L60 & C1L29);
+C1L3 = C1_cur_sin[18] $ C1L26 $ C1L3_carry_eqn;
+
+--C1_sin[14] is cordic_core:inst1|sin[14] at LC_X28_Y10_N4
+--operation mode is arithmetic
+
+C1_sin[14] = DFFEAS(C1L3, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L4 is cordic_core:inst1|add~11364 at LC_X28_Y10_N4
+--operation mode is arithmetic
+
+C1L4 = CARRY(C1_cur_sin[18] & !C1L26 & !C1L29 # !C1_cur_sin[18] & (!C1L29 # !C1L26));
+
+
+--C1L412 is cordic_core:inst1|Select~4510 at LC_X31_Y15_N0
+--operation mode is normal
+
+C1L412 = !A1L18 & C1_state.processing;
+
+
+--C1L409 is cordic_core:inst1|pass_count[3]~577 at LC_X31_Y12_N4
+--operation mode is normal
+
+C1L409 = SWITCH1 # !C1L412 & (C1_state.idle # !D1_NEW_SAMPLE);
+
+
+--C1L5 is cordic_core:inst1|add~11367 at LC_X26_Y13_N0
+--operation mode is normal
+
+C1L5 = C1_pass_count[1] & (C1_pass_count[0] & C1_pass_count[2]);
+
+
+--C1L6 is cordic_core:inst1|add~11368 at LC_X26_Y13_N3
+--operation mode is normal
+
+C1L6 = C1_pass_count[1] & (C1_pass_count[0]);
+
+
+--C1L273 is cordic_core:inst1|cur_phase[2]~398 at LC_X31_Y12_N9
+--operation mode is normal
+
+C1L273 = !SWITCH1 & (C1_state.idle # D1_NEW_SAMPLE);
+
+
+--C1L321 is cordic_core:inst1|cur_sin[0]~142 at LC_X31_Y15_N3
+--operation mode is normal
+
+C1L321 = C1L273 & (!C1_state.processing # !A1L18);
+
+--C1_state.idle is cordic_core:inst1|state.idle at LC_X31_Y15_N3
+--operation mode is normal
+
+C1_state.idle = DFFEAS(C1L321, GLOBAL(12_288MHz), VCC, , , , , , );
+
+
+--D1_R_IN[12] is PCM3006:inst6|R_IN[12] at LC_X35_Y11_N7
+--operation mode is normal
+
+D1_R_IN[12]_lut_out = C1_sin[12];
+D1_R_IN[12] = DFFEAS(D1_R_IN[12]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[27] is PCM3006:inst6|SHIFTOUT[27] at LC_X35_Y11_N2
+--operation mode is normal
+
+D1_SHIFTOUT[27]_lut_out = A1L17 & (A1L16 & (D1_R_IN[11]) # !A1L16 & D1_SHIFTOUT[26]) # !A1L17 & D1_SHIFTOUT[26];
+D1_SHIFTOUT[27] = DFFEAS(D1_SHIFTOUT[27]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L387 is cordic_core:inst1|LessThan~1334 at LC_X30_Y11_N4
+--operation mode is normal
+
+C1L387 = C1L386 # !C1_cur_phase[19] & C1_des_phase[19];
+
+
+--B1_PHASE_INT[15] is mag_phase_accu:inst|PHASE_INT[15] at LC_X30_Y9_N7
+--operation mode is normal
+
+B1_PHASE_INT[15]_carry_eqn = (!B1L38 & B1L43) # (B1L38 & B1L44);
+B1_PHASE_INT[15]_lut_out = B1_PHASE_INT[15] $ (B1_PHASE_INT[15]_carry_eqn);
+B1_PHASE_INT[15] = DFFEAS(B1_PHASE_INT[15]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+
+--C1L7 is cordic_core:inst1|add~11369 at LC_X32_Y10_N1
+--operation mode is normal
+
+C1L7 = C1_pass_count[0] $ (C1_pass_count[1]);
+
+
+--C1L389 is cordic_core:inst1|Mux~276 at LC_X32_Y10_N9
+--operation mode is normal
+
+C1L389 = !C1_pass_count[0] & !C1_pass_count[2] & !C1_pass_count[3];
+
+
+--C1L8 is cordic_core:inst1|add~11370 at LC_X32_Y10_N6
+--operation mode is normal
+
+C1L8 = C1L387 $ (C1L389 & !C1_state.firststage & !C1L7);
+
+
+--B1_PHASE_INT[13] is mag_phase_accu:inst|PHASE_INT[13] at LC_X30_Y9_N5
+--operation mode is arithmetic
+
+B1_PHASE_INT[13]_carry_eqn = B1L38;
+B1_PHASE_INT[13]_lut_out = B1_PHASE_INT[13] $ B1_PHASE_INT[13]_carry_eqn;
+B1_PHASE_INT[13] = DFFEAS(B1_PHASE_INT[13]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L40 is mag_phase_accu:inst|PHASE_INT[13]~220 at LC_X30_Y9_N5
+--operation mode is arithmetic
+
+B1L40_cout_0 = !B1L38 # !B1_PHASE_INT[13];
+B1L40 = CARRY(B1L40_cout_0);
+
+--B1L41 is mag_phase_accu:inst|PHASE_INT[13]~220COUT1_291 at LC_X30_Y9_N5
+--operation mode is arithmetic
+
+B1L41_cout_1 = !B1L38 # !B1_PHASE_INT[13];
+B1L41 = CARRY(B1L41_cout_1);
+
+
+--C1L390 is cordic_core:inst1|Mux~277 at LC_X32_Y10_N4
+--operation mode is normal
+
+C1L390 = C1_pass_count[0] & (C1_pass_count[1] & C1_pass_count[2] & C1_pass_count[3] # !C1_pass_count[1] & !C1_pass_count[2] & !C1_pass_count[3]);
+
+
+--C1L9 is cordic_core:inst1|add~11371 at LC_X32_Y10_N5
+--operation mode is normal
+
+C1L9 = C1L387 $ (C1_state.firststage # !C1L7 & C1L390);
+
+
+--B1_PHASE_INT[14] is mag_phase_accu:inst|PHASE_INT[14] at LC_X30_Y9_N6
+--operation mode is arithmetic
+
+B1_PHASE_INT[14]_carry_eqn = (!B1L38 & B1L40) # (B1L38 & B1L41);
+B1_PHASE_INT[14]_lut_out = B1_PHASE_INT[14] $ (!B1_PHASE_INT[14]_carry_eqn);
+B1_PHASE_INT[14] = DFFEAS(B1_PHASE_INT[14]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L43 is mag_phase_accu:inst|PHASE_INT[14]~224 at LC_X30_Y9_N6
+--operation mode is arithmetic
+
+B1L43_cout_0 = B1_PHASE_INT[14] & (!B1L40);
+B1L43 = CARRY(B1L43_cout_0);
+
+--B1L44 is mag_phase_accu:inst|PHASE_INT[14]~224COUT1_292 at LC_X30_Y9_N6
+--operation mode is arithmetic
+
+B1L44_cout_1 = B1_PHASE_INT[14] & (!B1L41);
+B1L44 = CARRY(B1L44_cout_1);
+
+
+--C1L388 is cordic_core:inst1|LessThan~1335 at LC_X31_Y10_N8
+--operation mode is normal
+
+C1L388 = !C1_cur_phase[19] & (C1_des_phase[19]);
+
+
+--C1L391 is cordic_core:inst1|Mux~278 at LC_X32_Y10_N0
+--operation mode is normal
+
+C1L391 = C1_pass_count[1] & !C1_pass_count[0] & (!C1_pass_count[3]) # !C1_pass_count[1] & !C1_pass_count[2] & (C1_pass_count[0] $ C1_pass_count[3]);
+
+
+--C1L10 is cordic_core:inst1|add~11372 at LC_X32_Y10_N8
+--operation mode is normal
+
+C1L10 = C1L388 & (C1_state.firststage # !C1L391) # !C1L388 & (C1L386 $ (C1L391 & !C1_state.firststage));
+
+
+--B1_PHASE_INT[5] is mag_phase_accu:inst|PHASE_INT[5] at LC_X30_Y10_N7
+--operation mode is arithmetic
+
+B1_PHASE_INT[5]_carry_eqn = (!B1L9 & B1L14) # (B1L9 & B1L15);
+B1_PHASE_INT[5]_lut_out = B1_PHASE_INT[5] $ (B1_PHASE_INT[5]_carry_eqn);
+B1_PHASE_INT[5] = DFFEAS(B1_PHASE_INT[5]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L17 is mag_phase_accu:inst|PHASE_INT[5]~228 at LC_X30_Y10_N7
+--operation mode is arithmetic
+
+B1L17_cout_0 = !B1L14 # !B1_PHASE_INT[5];
+B1L17 = CARRY(B1L17_cout_0);
+
+--B1L18 is mag_phase_accu:inst|PHASE_INT[5]~228COUT1_285 at LC_X30_Y10_N7
+--operation mode is arithmetic
+
+B1L18_cout_1 = !B1L15 # !B1_PHASE_INT[5];
+B1L18 = CARRY(B1L18_cout_1);
+
+
+--C1L392 is cordic_core:inst1|Mux~279 at LC_X31_Y15_N5
+--operation mode is normal
+
+C1L392 = C1_pass_count[1] & !C1_pass_count[3] & (C1_pass_count[0] # !C1_pass_count[2]) # !C1_pass_count[1] & C1_pass_count[0] & C1_pass_count[3] & !C1_pass_count[2];
+
+
+--C1L11 is cordic_core:inst1|add~11373 at LC_X31_Y15_N7
+--operation mode is normal
+
+C1L11 = C1L386 & (C1_state.firststage # !C1L392) # !C1L386 & (C1L388 $ (!C1_state.firststage & C1L392));
+
+
+--B1_PHASE_INT[4] is mag_phase_accu:inst|PHASE_INT[4] at LC_X30_Y10_N6
+--operation mode is arithmetic
+
+B1_PHASE_INT[4]_carry_eqn = (!B1L9 & B1L11) # (B1L9 & B1L12);
+B1_PHASE_INT[4]_lut_out = B1_PHASE_INT[4] $ (B1_PHASE_INT[4]_carry_eqn);
+B1_PHASE_INT[4] = DFFEAS(B1_PHASE_INT[4]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L14 is mag_phase_accu:inst|PHASE_INT[4]~232 at LC_X30_Y10_N6
+--operation mode is arithmetic
+
+B1L14_cout_0 = B1_PHASE_INT[4] # !B1L11;
+B1L14 = CARRY(B1L14_cout_0);
+
+--B1L15 is mag_phase_accu:inst|PHASE_INT[4]~232COUT1_284 at LC_X30_Y10_N6
+--operation mode is arithmetic
+
+B1L15_cout_1 = B1_PHASE_INT[4] # !B1L12;
+B1L15 = CARRY(B1L15_cout_1);
+
+
+--C1L393 is cordic_core:inst1|Mux~280 at LC_X31_Y15_N1
+--operation mode is normal
+
+C1L393 = !C1_pass_count[0] & (C1_pass_count[2] $ (C1_pass_count[1] # C1_pass_count[3]));
+
+
+--C1L12 is cordic_core:inst1|add~11374 at LC_X31_Y15_N2
+--operation mode is normal
+
+C1L12 = C1L393 & (C1_state.firststage $ (!C1L386 & !C1L388)) # !C1L393 & (C1L386 # C1L388);
+
+
+--B1_PHASE_INT[3] is mag_phase_accu:inst|PHASE_INT[3] at LC_X30_Y10_N5
+--operation mode is arithmetic
+
+B1_PHASE_INT[3]_carry_eqn = B1L9;
+B1_PHASE_INT[3]_lut_out = B1_PHASE_INT[3] $ B1_PHASE_INT[3]_carry_eqn;
+B1_PHASE_INT[3] = DFFEAS(B1_PHASE_INT[3]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L11 is mag_phase_accu:inst|PHASE_INT[3]~236 at LC_X30_Y10_N5
+--operation mode is arithmetic
+
+B1L11_cout_0 = !B1L9 # !B1_PHASE_INT[3];
+B1L11 = CARRY(B1L11_cout_0);
+
+--B1L12 is mag_phase_accu:inst|PHASE_INT[3]~236COUT1_283 at LC_X30_Y10_N5
+--operation mode is arithmetic
+
+B1L12_cout_1 = !B1L9 # !B1_PHASE_INT[3];
+B1L12 = CARRY(B1L12_cout_1);
+
+
+--C1L394 is cordic_core:inst1|Mux~281 at LC_X31_Y15_N4
+--operation mode is normal
+
+C1L394 = C1_pass_count[0] & (C1_pass_count[3] & (!C1_pass_count[2]) # !C1_pass_count[3] & !C1_pass_count[1]);
+
+
+--C1L13 is cordic_core:inst1|add~11375 at LC_X32_Y14_N4
+--operation mode is normal
+
+C1L13 = C1L388 & (C1_state.firststage # !C1L394) # !C1L388 & (C1L386 $ (!C1_state.firststage & C1L394));
+
+
+--B1_PHASE_INT[2] is mag_phase_accu:inst|PHASE_INT[2] at LC_X30_Y10_N4
+--operation mode is arithmetic
+
+B1_PHASE_INT[2]_lut_out = B1_PHASE_INT[2] $ B1L6;
+B1_PHASE_INT[2] = DFFEAS(B1_PHASE_INT[2]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L9 is mag_phase_accu:inst|PHASE_INT[2]~240 at LC_X30_Y10_N4
+--operation mode is arithmetic
+
+B1L9 = CARRY(B1_PHASE_INT[2] # !B1L7);
+
+
+--C1L395 is cordic_core:inst1|Mux~282 at LC_X26_Y13_N6
+--operation mode is normal
+
+C1L395 = !C1_pass_count[0] & (C1_pass_count[1] & (!C1_pass_count[3] # !C1_pass_count[2]) # !C1_pass_count[1] & C1_pass_count[2]);
+
+
+--C1L14 is cordic_core:inst1|add~11376 at LC_X32_Y13_N3
+--operation mode is normal
+
+C1L14 = C1L388 & (C1_state.firststage # !C1L395) # !C1L388 & (C1L386 $ (C1L395 & !C1_state.firststage));
+
+
+--B1_PHASE_INT[1] is mag_phase_accu:inst|PHASE_INT[1] at LC_X30_Y10_N3
+--operation mode is arithmetic
+
+B1_PHASE_INT[1]_lut_out = B1_PHASE_INT[1] $ B1L3;
+B1_PHASE_INT[1] = DFFEAS(B1_PHASE_INT[1]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L6 is mag_phase_accu:inst|PHASE_INT[1]~244 at LC_X30_Y10_N3
+--operation mode is arithmetic
+
+B1L6_cout_0 = !B1L3 # !B1_PHASE_INT[1];
+B1L6 = CARRY(B1L6_cout_0);
+
+--B1L7 is mag_phase_accu:inst|PHASE_INT[1]~244COUT1_282 at LC_X30_Y10_N3
+--operation mode is arithmetic
+
+B1L7_cout_1 = !B1L4 # !B1_PHASE_INT[1];
+B1L7 = CARRY(B1L7_cout_1);
+
+
+--C1L396 is cordic_core:inst1|Mux~283 at LC_X32_Y13_N4
+--operation mode is normal
+
+C1L396 = C1_pass_count[3] & C1_pass_count[0] & (C1_pass_count[1] $ C1_pass_count[2]) # !C1_pass_count[3] & (C1_pass_count[1] # C1_pass_count[2]);
+
+
+--C1L15 is cordic_core:inst1|add~11377 at LC_X32_Y13_N1
+--operation mode is normal
+
+C1L15 = C1L388 & (C1_state.firststage # !C1L396) # !C1L388 & (C1L386 $ (C1L396 & !C1_state.firststage));
+
+
+--C1L397 is cordic_core:inst1|Mux~284 at LC_X31_Y10_N6
+--operation mode is normal
+
+C1L397 = C1_pass_count[1] & !C1_pass_count[0] & (C1_pass_count[3] # !C1_pass_count[2]) # !C1_pass_count[1] & (C1_pass_count[2] & C1_pass_count[0] # !C1_pass_count[2] & (C1_pass_count[3]));
+
+
+--C1L16 is cordic_core:inst1|add~11378 at LC_X31_Y10_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_state.firststage_qfbk = C1_state.firststage;
+C1L16 = C1L397 & (C1_state.firststage_qfbk $ (!C1L388 & !C1L386)) # !C1L397 & (C1L388 # C1L386);
+
+--C1_state.firststage is cordic_core:inst1|state.firststage at LC_X31_Y10_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_state.firststage = DFFEAS(C1L16, GLOBAL(12_288MHz), VCC, , , C1L542, , , VCC);
+
+
+--C1L265 is cordic_core:inst1|cur_phase[0]~401COUT0_406 at LC_X32_Y13_N5
+--operation mode is arithmetic
+
+C1L265_cout_0 = C1L388 # C1L386;
+C1L265 = CARRY(C1L265_cout_0);
+
+--C1L266 is cordic_core:inst1|cur_phase[0]~401COUT1_407 at LC_X32_Y13_N5
+--operation mode is arithmetic
+
+C1L266_cout_1 = C1L388 # C1L386;
+C1L266 = CARRY(C1L266_cout_1);
+
+
+--C1L398 is cordic_core:inst1|Mux~285 at LC_X32_Y13_N2
+--operation mode is normal
+
+C1L398 = C1_pass_count[0] & (!C1_pass_count[3] & C1_pass_count[2]) # !C1_pass_count[0] & C1_pass_count[3] & (C1_pass_count[2] # !C1_pass_count[1]);
+
+
+--C1L17 is cordic_core:inst1|add~11379 at LC_X32_Y13_N0
+--operation mode is normal
+
+C1L17 = C1L388 & (C1_state.firststage # !C1L398) # !C1L388 & (C1L386 $ (C1L398 & !C1_state.firststage));
+
+
+--B1_PHASE_INT[0] is mag_phase_accu:inst|PHASE_INT[0] at LC_X30_Y10_N2
+--operation mode is arithmetic
+
+B1_PHASE_INT[0]_lut_out = !B1_PHASE_INT[0];
+B1_PHASE_INT[0] = DFFEAS(B1_PHASE_INT[0]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L3 is mag_phase_accu:inst|PHASE_INT[0]~248 at LC_X30_Y10_N2
+--operation mode is arithmetic
+
+B1L3_cout_0 = B1_PHASE_INT[0];
+B1L3 = CARRY(B1L3_cout_0);
+
+--B1L4 is mag_phase_accu:inst|PHASE_INT[0]~248COUT1_281 at LC_X30_Y10_N2
+--operation mode is arithmetic
+
+B1L4_cout_1 = B1_PHASE_INT[0];
+B1L4 = CARRY(B1L4_cout_1);
+
+
+--C1L18 is cordic_core:inst1|add~11380 at LC_X32_Y10_N3
+--operation mode is normal
+
+C1L18 = C1L387 $ (C1L389 & !C1_state.firststage & C1L7);
+
+
+--B1_PHASE_INT[11] is mag_phase_accu:inst|PHASE_INT[11] at LC_X30_Y9_N3
+--operation mode is arithmetic
+
+B1_PHASE_INT[11]_carry_eqn = (!B1L23 & B1L32) # (B1L23 & B1L33);
+B1_PHASE_INT[11]_lut_out = B1_PHASE_INT[11] $ B1_PHASE_INT[11]_carry_eqn;
+B1_PHASE_INT[11] = DFFEAS(B1_PHASE_INT[11]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L35 is mag_phase_accu:inst|PHASE_INT[11]~252 at LC_X30_Y9_N3
+--operation mode is arithmetic
+
+B1L35_cout_0 = !B1L32 # !B1_PHASE_INT[11];
+B1L35 = CARRY(B1L35_cout_0);
+
+--B1L36 is mag_phase_accu:inst|PHASE_INT[11]~252COUT1_290 at LC_X30_Y9_N3
+--operation mode is arithmetic
+
+B1L36_cout_1 = !B1L33 # !B1_PHASE_INT[11];
+B1L36 = CARRY(B1L36_cout_1);
+
+
+--C1L399 is cordic_core:inst1|Mux~286 at LC_X32_Y14_N3
+--operation mode is normal
+
+C1L399 = C1_pass_count[0] & C1_pass_count[1] & !C1_pass_count[2] & !C1_pass_count[3];
+
+
+--C1L19 is cordic_core:inst1|add~11381 at LC_X32_Y14_N9
+--operation mode is normal
+
+C1L19 = C1L388 & (C1_state.firststage # !C1L399) # !C1L388 & (C1L386 $ (!C1_state.firststage & C1L399));
+
+
+--B1_PHASE_INT[10] is mag_phase_accu:inst|PHASE_INT[10] at LC_X30_Y9_N2
+--operation mode is arithmetic
+
+B1_PHASE_INT[10]_carry_eqn = (!B1L23 & B1L28) # (B1L23 & B1L29);
+B1_PHASE_INT[10]_lut_out = B1_PHASE_INT[10] $ (B1_PHASE_INT[10]_carry_eqn);
+B1_PHASE_INT[10] = DFFEAS(B1_PHASE_INT[10]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L32 is mag_phase_accu:inst|PHASE_INT[10]~256 at LC_X30_Y9_N2
+--operation mode is arithmetic
+
+B1L32_cout_0 = B1_PHASE_INT[10] # !B1L28;
+B1L32 = CARRY(B1L32_cout_0);
+
+--B1L33 is mag_phase_accu:inst|PHASE_INT[10]~256COUT1_289 at LC_X30_Y9_N2
+--operation mode is arithmetic
+
+B1L33_cout_1 = B1_PHASE_INT[10] # !B1L29;
+B1L33 = CARRY(B1L33_cout_1);
+
+
+--C1L400 is cordic_core:inst1|Mux~287 at LC_X32_Y14_N5
+--operation mode is normal
+
+C1L400 = !C1_pass_count[1] & !C1_pass_count[3] & (C1_pass_count[0] $ C1_pass_count[2]);
+
+
+--C1L20 is cordic_core:inst1|add~11382 at LC_X32_Y14_N6
+--operation mode is normal
+
+C1L20 = C1L388 & (C1_state.firststage # !C1L400) # !C1L388 & (C1L386 $ (!C1_state.firststage & C1L400));
+
+
+--B1_PHASE_INT[9] is mag_phase_accu:inst|PHASE_INT[9] at LC_X30_Y9_N1
+--operation mode is arithmetic
+
+B1_PHASE_INT[9]_carry_eqn = (!B1L23 & B1L25) # (B1L23 & B1L26);
+B1_PHASE_INT[9]_lut_out = B1_PHASE_INT[9] $ (B1_PHASE_INT[9]_carry_eqn);
+B1_PHASE_INT[9] = DFFEAS(B1_PHASE_INT[9]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L28 is mag_phase_accu:inst|PHASE_INT[9]~260 at LC_X30_Y9_N1
+--operation mode is arithmetic
+
+B1L28_cout_0 = !B1L25 # !B1_PHASE_INT[9];
+B1L28 = CARRY(B1L28_cout_0);
+
+--B1L29 is mag_phase_accu:inst|PHASE_INT[9]~260COUT1_288 at LC_X30_Y9_N1
+--operation mode is arithmetic
+
+B1L29_cout_1 = !B1L26 # !B1_PHASE_INT[9];
+B1L29 = CARRY(B1L29_cout_1);
+
+
+--C1L21 is cordic_core:inst1|add~11383 at LC_X32_Y11_N6
+--operation mode is normal
+
+C1L21 = C1L387 $ (C1L390 & !C1_state.firststage & C1L7);
+
+
+--B1_PHASE_INT[12] is mag_phase_accu:inst|PHASE_INT[12] at LC_X30_Y9_N4
+--operation mode is arithmetic
+
+B1_PHASE_INT[12]_carry_eqn = (!B1L23 & B1L35) # (B1L23 & B1L36);
+B1_PHASE_INT[12]_lut_out = B1_PHASE_INT[12] $ !B1_PHASE_INT[12]_carry_eqn;
+B1_PHASE_INT[12] = DFFEAS(B1_PHASE_INT[12]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L38 is mag_phase_accu:inst|PHASE_INT[12]~264 at LC_X30_Y9_N4
+--operation mode is arithmetic
+
+B1L38 = CARRY(B1_PHASE_INT[12] & !B1L36);
+
+
+--C1L401 is cordic_core:inst1|Mux~288 at LC_X32_Y14_N0
+--operation mode is normal
+
+C1L401 = !C1_pass_count[3] & (C1_pass_count[1] & (!C1_pass_count[2]) # !C1_pass_count[1] & C1_pass_count[0] & C1_pass_count[2]);
+
+
+--C1L22 is cordic_core:inst1|add~11384 at LC_X32_Y14_N7
+--operation mode is normal
+
+C1L22 = C1L388 & (C1_state.firststage # !C1L401) # !C1L388 & (C1L386 $ (!C1_state.firststage & C1L401));
+
+
+--B1_PHASE_INT[8] is mag_phase_accu:inst|PHASE_INT[8] at LC_X30_Y9_N0
+--operation mode is arithmetic
+
+B1_PHASE_INT[8]_carry_eqn = B1L23;
+B1_PHASE_INT[8]_lut_out = B1_PHASE_INT[8] $ B1_PHASE_INT[8]_carry_eqn;
+B1_PHASE_INT[8] = DFFEAS(B1_PHASE_INT[8]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L25 is mag_phase_accu:inst|PHASE_INT[8]~268 at LC_X30_Y9_N0
+--operation mode is arithmetic
+
+B1L25_cout_0 = B1_PHASE_INT[8] # !B1L23;
+B1L25 = CARRY(B1L25_cout_0);
+
+--B1L26 is mag_phase_accu:inst|PHASE_INT[8]~268COUT1_287 at LC_X30_Y9_N0
+--operation mode is arithmetic
+
+B1L26_cout_1 = B1_PHASE_INT[8] # !B1L23;
+B1L26 = CARRY(B1L26_cout_1);
+
+
+--C1L402 is cordic_core:inst1|Mux~289 at LC_X32_Y14_N1
+--operation mode is normal
+
+C1L402 = !C1_pass_count[3] & (C1_pass_count[0] $ (C1_pass_count[1] # C1_pass_count[2]));
+
+
+--C1L23 is cordic_core:inst1|add~11385 at LC_X32_Y14_N2
+--operation mode is normal
+
+C1L23 = C1L388 & (C1_state.firststage # !C1L402) # !C1L388 & (C1L386 $ (!C1_state.firststage & C1L402));
+
+
+--B1_PHASE_INT[7] is mag_phase_accu:inst|PHASE_INT[7] at LC_X30_Y10_N9
+--operation mode is arithmetic
+
+B1_PHASE_INT[7]_carry_eqn = (!B1L9 & B1L20) # (B1L9 & B1L21);
+B1_PHASE_INT[7]_lut_out = B1_PHASE_INT[7] $ (B1_PHASE_INT[7]_carry_eqn);
+B1_PHASE_INT[7] = DFFEAS(B1_PHASE_INT[7]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L23 is mag_phase_accu:inst|PHASE_INT[7]~272 at LC_X30_Y10_N9
+--operation mode is arithmetic
+
+B1L23 = CARRY(!B1L21 # !B1_PHASE_INT[7]);
+
+
+--C1L403 is cordic_core:inst1|Mux~290 at LC_X26_Y13_N1
+--operation mode is normal
+
+C1L403 = !C1_pass_count[3] & (C1_pass_count[0] $ (C1_pass_count[1] & !C1_pass_count[2]));
+
+
+--C1L24 is cordic_core:inst1|add~11386 at LC_X32_Y14_N8
+--operation mode is normal
+
+C1L24 = C1L388 & (C1_state.firststage # !C1L403) # !C1L388 & (C1L386 $ (!C1_state.firststage & C1L403));
+
+
+--B1_PHASE_INT[6] is mag_phase_accu:inst|PHASE_INT[6] at LC_X30_Y10_N8
+--operation mode is arithmetic
+
+B1_PHASE_INT[6]_carry_eqn = (!B1L9 & B1L17) # (B1L9 & B1L18);
+B1_PHASE_INT[6]_lut_out = B1_PHASE_INT[6] $ B1_PHASE_INT[6]_carry_eqn;
+B1_PHASE_INT[6] = DFFEAS(B1_PHASE_INT[6]_lut_out, GLOBAL(12_288MHz), VCC, , B1L30, , , SWITCH1, );
+
+--B1L20 is mag_phase_accu:inst|PHASE_INT[6]~276 at LC_X30_Y10_N8
+--operation mode is arithmetic
+
+B1L20_cout_0 = B1_PHASE_INT[6] # !B1L17;
+B1L20 = CARRY(B1L20_cout_0);
+
+--B1L21 is mag_phase_accu:inst|PHASE_INT[6]~276COUT1_286 at LC_X30_Y10_N8
+--operation mode is arithmetic
+
+B1L21_cout_1 = B1_PHASE_INT[6] # !B1L18;
+B1L21 = CARRY(B1L21_cout_1);
+
+
+--C1L25 is cordic_core:inst1|add~11387 at LC_X30_Y13_N5
+--operation mode is normal
+
+C1L25_carry_eqn = C1L32;
+C1L25 = C1_cur_cos[19] $ C1L30 $ C1L25_carry_eqn;
+
+
+--C1L413 is cordic_core:inst1|Select~4511 at LC_X30_Y13_N6
+--operation mode is normal
+
+C1L413 = A1L18 & C1_cur_cos[19] # !A1L18 & (C1L25);
+
+
+--C1L414 is cordic_core:inst1|Select~4512 at LC_X27_Y11_N4
+--operation mode is normal
+
+C1L414 = D1_NEW_SAMPLE & (DIPSWITCH[7]) # !D1_NEW_SAMPLE & C1_cur_cos[19];
+
+
+--C1_cur_cos[18] is cordic_core:inst1|cur_cos[18] at LC_X30_Y13_N8
+--operation mode is normal
+
+C1_cur_cos[18]_lut_out = C1_state.idle & (C1_state.processing & C1L415) # !C1_state.idle & (C1L416 # C1_state.processing & C1L415);
+C1_cur_cos[18] = DFFEAS(C1_cur_cos[18]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L430 is cordic_core:inst1|shift_right~8167 at LC_X26_Y12_N7
+--operation mode is normal
+
+C1L430 = !C1_pass_count[0] & (!C1_pass_count[1]);
+
+
+--C1L431 is cordic_core:inst1|shift_right~8168 at LC_X26_Y12_N8
+--operation mode is normal
+
+C1L431 = C1_pass_count[2] & (C1_cur_cos[19]) # !C1_pass_count[2] & (C1L430 & C1_cur_cos[18] # !C1L430 & (C1_cur_cos[19]));
+
+
+--C1L26 is cordic_core:inst1|add~11392 at LC_X26_Y12_N3
+--operation mode is normal
+
+C1L26 = C1L387 $ (C1_pass_count[3] & (C1_cur_cos[19]) # !C1_pass_count[3] & C1L431);
+
+
+--C1_cur_sin[18] is cordic_core:inst1|cur_sin[18] at LC_X28_Y10_N7
+--operation mode is normal
+
+C1_cur_sin[18]_lut_out = C1_state.idle & (C1L3);
+C1_cur_sin[18] = DFFEAS(C1_cur_sin[18]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L27 is cordic_core:inst1|add~11393 at LC_X28_Y10_N3
+--operation mode is arithmetic
+
+C1L27_carry_eqn = (!C1L60 & C1L36) # (C1L60 & C1L37);
+C1L27 = C1_cur_sin[17] $ C1L34 $ !C1L27_carry_eqn;
+
+--C1_sin[13] is cordic_core:inst1|sin[13] at LC_X28_Y10_N3
+--operation mode is arithmetic
+
+C1_sin[13] = DFFEAS(C1L27, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L28 is cordic_core:inst1|add~11395 at LC_X28_Y10_N3
+--operation mode is arithmetic
+
+C1L28_cout_0 = C1_cur_sin[17] & (C1L34 # !C1L36) # !C1_cur_sin[17] & C1L34 & !C1L36;
+C1L28 = CARRY(C1L28_cout_0);
+
+--C1L29 is cordic_core:inst1|add~11395COUT1_11689 at LC_X28_Y10_N3
+--operation mode is arithmetic
+
+C1L29_cout_1 = C1_cur_sin[17] & (C1L34 # !C1L37) # !C1_cur_sin[17] & C1L34 & !C1L37;
+C1L29 = CARRY(C1L29_cout_1);
+
+
+--D1_R_IN[11] is PCM3006:inst6|R_IN[11] at LC_X35_Y11_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[11]_lut_out = GND;
+D1_R_IN[11] = DFFEAS(D1_R_IN[11]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[11], , , VCC);
+
+
+--D1_SHIFTOUT[26] is PCM3006:inst6|SHIFTOUT[26] at LC_X35_Y11_N6
+--operation mode is normal
+
+D1_SHIFTOUT[26]_lut_out = A1L17 & (A1L16 & (D1_R_IN[10]) # !A1L16 & D1_SHIFTOUT[25]) # !A1L17 & D1_SHIFTOUT[25];
+D1_SHIFTOUT[26] = DFFEAS(D1_SHIFTOUT[26]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--B1L30 is mag_phase_accu:inst|PHASE_INT[9]~279 at LC_X29_Y9_N7
+--operation mode is normal
+
+B1L30 = D1_NEW_SAMPLE # SWITCH1;
+
+
+--C1L30 is cordic_core:inst1|add~11398 at LC_X27_Y11_N0
+--operation mode is normal
+
+C1L30 = C1_cur_sin[19] $ (C1L386 # !C1_cur_phase[19] & C1_des_phase[19]);
+
+
+--C1L31 is cordic_core:inst1|add~11399 at LC_X30_Y13_N4
+--operation mode is arithmetic
+
+C1L31_carry_eqn = (!C1L71 & C1L40) # (C1L71 & C1L41);
+C1L31 = C1L38 $ C1_cur_cos[18] $ C1L31_carry_eqn;
+
+--C1L32 is cordic_core:inst1|add~11401 at LC_X30_Y13_N4
+--operation mode is arithmetic
+
+C1L32 = CARRY(C1L38 & !C1_cur_cos[18] & !C1L41 # !C1L38 & (!C1L41 # !C1_cur_cos[18]));
+
+
+--C1L415 is cordic_core:inst1|Select~4515 at LC_X30_Y13_N7
+--operation mode is normal
+
+C1L415 = A1L18 & C1_cur_cos[18] # !A1L18 & (C1L31);
+
+
+--C1L416 is cordic_core:inst1|Select~4516 at LC_X29_Y9_N9
+--operation mode is normal
+
+C1L416 = D1_NEW_SAMPLE & DIPSWITCH[6] # !D1_NEW_SAMPLE & (C1_cur_cos[18]);
+
+
+--C1_cur_cos[17] is cordic_core:inst1|cur_cos[17] at LC_X28_Y13_N3
+--operation mode is normal
+
+C1_cur_cos[17]_lut_out = C1L418 & (C1L417 & C1_state.processing # !C1_state.idle) # !C1L418 & C1L417 & (C1_state.processing);
+C1_cur_cos[17] = DFFEAS(C1_cur_cos[17]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L432 is cordic_core:inst1|shift_right~8169 at LC_X28_Y13_N0
+--operation mode is normal
+
+C1L432 = C1_pass_count[0] & (C1_cur_cos[18]) # !C1_pass_count[0] & C1_cur_cos[17];
+
+
+--C1L33 is cordic_core:inst1|add~11404 at LC_X26_Y12_N4
+--operation mode is normal
+
+C1L33 = C1_pass_count[1] # C1_pass_count[2];
+
+
+--C1L34 is cordic_core:inst1|add~11405 at LC_X29_Y13_N8
+--operation mode is normal
+
+C1L34 = C1L387 $ (C1_pass_count[3] & C1_cur_cos[19] # !C1_pass_count[3] & (C1L519));
+
+
+--C1_cur_sin[17] is cordic_core:inst1|cur_sin[17] at LC_X28_Y10_N9
+--operation mode is normal
+
+C1_cur_sin[17]_lut_out = C1_state.idle & (C1L27);
+C1_cur_sin[17] = DFFEAS(C1_cur_sin[17]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L35 is cordic_core:inst1|add~11406 at LC_X28_Y10_N2
+--operation mode is arithmetic
+
+C1L35_carry_eqn = (!C1L60 & C1L44) # (C1L60 & C1L45);
+C1L35 = C1L42 $ C1_cur_sin[16] $ C1L35_carry_eqn;
+
+--C1_sin[12] is cordic_core:inst1|sin[12] at LC_X28_Y10_N2
+--operation mode is arithmetic
+
+C1_sin[12] = DFFEAS(C1L35, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L36 is cordic_core:inst1|add~11408 at LC_X28_Y10_N2
+--operation mode is arithmetic
+
+C1L36_cout_0 = C1L42 & !C1_cur_sin[16] & !C1L44 # !C1L42 & (!C1L44 # !C1_cur_sin[16]);
+C1L36 = CARRY(C1L36_cout_0);
+
+--C1L37 is cordic_core:inst1|add~11408COUT1_11688 at LC_X28_Y10_N2
+--operation mode is arithmetic
+
+C1L37_cout_1 = C1L42 & !C1_cur_sin[16] & !C1L45 # !C1L42 & (!C1L45 # !C1_cur_sin[16]);
+C1L37 = CARRY(C1L37_cout_1);
+
+
+--D1_R_IN[10] is PCM3006:inst6|R_IN[10] at LC_X35_Y11_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[10]_lut_out = GND;
+D1_R_IN[10] = DFFEAS(D1_R_IN[10]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[10], , , VCC);
+
+
+--D1_SHIFTOUT[25] is PCM3006:inst6|SHIFTOUT[25] at LC_X36_Y12_N9
+--operation mode is normal
+
+D1_SHIFTOUT[25]_lut_out = A1L17 & (A1L16 & D1_R_IN[9] # !A1L16 & (D1_SHIFTOUT[24])) # !A1L17 & (D1_SHIFTOUT[24]);
+D1_SHIFTOUT[25] = DFFEAS(D1_SHIFTOUT[25]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L433 is cordic_core:inst1|shift_right~8170 at LC_X26_Y12_N2
+--operation mode is normal
+
+C1L433 = C1_pass_count[2] & (C1_cur_sin[19]) # !C1_pass_count[2] & (C1L430 & C1_cur_sin[18] # !C1L430 & (C1_cur_sin[19]));
+
+
+--C1L38 is cordic_core:inst1|add~11411 at LC_X26_Y12_N6
+--operation mode is normal
+
+C1L38 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L433);
+
+
+--C1L39 is cordic_core:inst1|add~11412 at LC_X30_Y13_N3
+--operation mode is arithmetic
+
+C1L39_carry_eqn = (!C1L71 & C1L48) # (C1L71 & C1L49);
+C1L39 = C1_cur_cos[17] $ C1L46 $ !C1L39_carry_eqn;
+
+--C1L40 is cordic_core:inst1|add~11414 at LC_X30_Y13_N3
+--operation mode is arithmetic
+
+C1L40_cout_0 = C1_cur_cos[17] & (C1L46 # !C1L48) # !C1_cur_cos[17] & C1L46 & !C1L48;
+C1L40 = CARRY(C1L40_cout_0);
+
+--C1L41 is cordic_core:inst1|add~11414COUT1_11705 at LC_X30_Y13_N3
+--operation mode is arithmetic
+
+C1L41_cout_1 = C1_cur_cos[17] & (C1L46 # !C1L49) # !C1_cur_cos[17] & C1L46 & !C1L49;
+C1L41 = CARRY(C1L41_cout_1);
+
+
+--C1L417 is cordic_core:inst1|Select~4519 at LC_X28_Y13_N5
+--operation mode is normal
+
+C1L417 = A1L18 & (C1_cur_cos[17]) # !A1L18 & C1L39;
+
+
+--C1L418 is cordic_core:inst1|Select~4520 at LC_X29_Y9_N8
+--operation mode is normal
+
+C1L418 = D1_NEW_SAMPLE & (DIPSWITCH[5]) # !D1_NEW_SAMPLE & C1_cur_cos[17];
+
+
+--C1L434 is cordic_core:inst1|shift_right~8171 at LC_X27_Y11_N8
+--operation mode is normal
+
+C1L434 = C1_pass_count[0] & (C1_pass_count[1] & C1_cur_cos[19] # !C1_pass_count[1] & (C1_cur_cos[17]));
+
+
+--C1_cur_cos[16] is cordic_core:inst1|cur_cos[16] at LC_X27_Y13_N6
+--operation mode is normal
+
+C1_cur_cos[16]_lut_out = C1L419 & (C1_state.processing # C1L420 & !C1_state.idle) # !C1L419 & C1L420 & !C1_state.idle;
+C1_cur_cos[16] = DFFEAS(C1_cur_cos[16]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L435 is cordic_core:inst1|shift_right~8172 at LC_X26_Y13_N9
+--operation mode is normal
+
+C1L435 = !C1_pass_count[0] & (C1_pass_count[1] & C1_cur_cos[18] # !C1_pass_count[1] & (C1_cur_cos[16]));
+
+
+--C1L436 is cordic_core:inst1|shift_right~8173 at LC_X29_Y13_N6
+--operation mode is normal
+
+C1L436 = C1_pass_count[2] & (C1_cur_cos[19]) # !C1_pass_count[2] & (C1L435 # C1L434);
+
+
+--C1L42 is cordic_core:inst1|add~11417 at LC_X29_Y13_N5
+--operation mode is normal
+
+C1L42 = C1L387 $ (C1_pass_count[3] & C1_cur_cos[19] # !C1_pass_count[3] & (C1L436));
+
+
+--C1_cur_sin[16] is cordic_core:inst1|cur_sin[16] at LC_X28_Y10_N8
+--operation mode is normal
+
+C1_cur_sin[16]_lut_out = C1_state.idle & (C1L35);
+C1_cur_sin[16] = DFFEAS(C1_cur_sin[16]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L43 is cordic_core:inst1|add~11418 at LC_X28_Y10_N1
+--operation mode is arithmetic
+
+C1L43_carry_eqn = (!C1L60 & C1L52) # (C1L60 & C1L53);
+C1L43 = C1_cur_sin[15] $ C1L50 $ !C1L43_carry_eqn;
+
+--C1_sin[11] is cordic_core:inst1|sin[11] at LC_X28_Y10_N1
+--operation mode is arithmetic
+
+C1_sin[11] = DFFEAS(C1L43, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L44 is cordic_core:inst1|add~11420 at LC_X28_Y10_N1
+--operation mode is arithmetic
+
+C1L44_cout_0 = C1_cur_sin[15] & (C1L50 # !C1L52) # !C1_cur_sin[15] & C1L50 & !C1L52;
+C1L44 = CARRY(C1L44_cout_0);
+
+--C1L45 is cordic_core:inst1|add~11420COUT1_11687 at LC_X28_Y10_N1
+--operation mode is arithmetic
+
+C1L45_cout_1 = C1_cur_sin[15] & (C1L50 # !C1L53) # !C1_cur_sin[15] & C1L50 & !C1L53;
+C1L45 = CARRY(C1L45_cout_1);
+
+
+--D1_R_IN[9] is PCM3006:inst6|R_IN[9] at LC_X35_Y12_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[9]_lut_out = GND;
+D1_R_IN[9] = DFFEAS(D1_R_IN[9]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[9], , , VCC);
+
+
+--D1_SHIFTOUT[24] is PCM3006:inst6|SHIFTOUT[24] at LC_X36_Y12_N0
+--operation mode is normal
+
+D1_SHIFTOUT[24]_lut_out = A1L16 & (A1L17 & D1_R_IN[8] # !A1L17 & (D1_SHIFTOUT[23])) # !A1L16 & (D1_SHIFTOUT[23]);
+D1_SHIFTOUT[24] = DFFEAS(D1_SHIFTOUT[24]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L437 is cordic_core:inst1|shift_right~8174 at LC_X29_Y12_N9
+--operation mode is normal
+
+C1L437 = C1_pass_count[0] & (C1_cur_sin[18]) # !C1_pass_count[0] & (C1_cur_sin[17]);
+
+
+--C1L46 is cordic_core:inst1|add~11423 at LC_X29_Y13_N2
+--operation mode is normal
+
+C1L46 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L520);
+
+
+--C1L47 is cordic_core:inst1|add~11424 at LC_X30_Y13_N2
+--operation mode is arithmetic
+
+C1L47_carry_eqn = (!C1L71 & C1L56) # (C1L71 & C1L57);
+C1L47 = C1_cur_cos[16] $ C1L54 $ C1L47_carry_eqn;
+
+--C1L48 is cordic_core:inst1|add~11426 at LC_X30_Y13_N2
+--operation mode is arithmetic
+
+C1L48_cout_0 = C1_cur_cos[16] & !C1L54 & !C1L56 # !C1_cur_cos[16] & (!C1L56 # !C1L54);
+C1L48 = CARRY(C1L48_cout_0);
+
+--C1L49 is cordic_core:inst1|add~11426COUT1_11704 at LC_X30_Y13_N2
+--operation mode is arithmetic
+
+C1L49_cout_1 = C1_cur_cos[16] & !C1L54 & !C1L57 # !C1_cur_cos[16] & (!C1L57 # !C1L54);
+C1L49 = CARRY(C1L49_cout_1);
+
+
+--C1L419 is cordic_core:inst1|Select~4523 at LC_X27_Y13_N1
+--operation mode is normal
+
+C1L419 = A1L18 & (C1_cur_cos[16]) # !A1L18 & C1L47;
+
+
+--C1L420 is cordic_core:inst1|Select~4524 at LC_X26_Y13_N2
+--operation mode is normal
+
+C1L420 = D1_NEW_SAMPLE & (DIPSWITCH[4]) # !D1_NEW_SAMPLE & C1_cur_cos[16];
+
+
+--C1_cur_cos[15] is cordic_core:inst1|cur_cos[15] at LC_X29_Y10_N1
+--operation mode is normal
+
+C1_cur_cos[15]_lut_out = C1_state.processing & (C1L421 # C1L422 & !C1_state.idle) # !C1_state.processing & C1L422 & (!C1_state.idle);
+C1_cur_cos[15] = DFFEAS(C1_cur_cos[15]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L438 is cordic_core:inst1|shift_right~8175 at LC_X26_Y13_N4
+--operation mode is normal
+
+C1L438 = C1_pass_count[0] & (C1_cur_cos[16]) # !C1_pass_count[0] & C1_cur_cos[15];
+
+
+--C1L439 is cordic_core:inst1|shift_right~8176 at LC_X28_Y13_N4
+--operation mode is normal
+
+C1L439 = C1_pass_count[1] & (C1L432) # !C1_pass_count[1] & C1L438;
+
+
+--C1L440 is cordic_core:inst1|shift_right~8177 at LC_X28_Y13_N1
+--operation mode is normal
+
+C1L440 = C1_pass_count[2] & C1_cur_cos[19] # !C1_pass_count[2] & (C1L439);
+
+
+--C1L50 is cordic_core:inst1|add~11429 at LC_X28_Y14_N9
+--operation mode is normal
+
+C1L50 = C1L387 $ (C1_pass_count[3] & C1_cur_cos[19] # !C1_pass_count[3] & (C1L440));
+
+
+--C1_cur_sin[15] is cordic_core:inst1|cur_sin[15] at LC_X29_Y12_N8
+--operation mode is normal
+
+C1_cur_sin[15]_lut_out = C1L43 & C1_state.idle;
+C1_cur_sin[15] = DFFEAS(C1_cur_sin[15]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L51 is cordic_core:inst1|add~11430 at LC_X28_Y10_N0
+--operation mode is arithmetic
+
+C1L51_carry_eqn = C1L60;
+C1L51 = C1_cur_sin[14] $ C1L58 $ C1L51_carry_eqn;
+
+--C1_sin[10] is cordic_core:inst1|sin[10] at LC_X28_Y10_N0
+--operation mode is arithmetic
+
+C1_sin[10] = DFFEAS(C1L51, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L52 is cordic_core:inst1|add~11432 at LC_X28_Y10_N0
+--operation mode is arithmetic
+
+C1L52_cout_0 = C1_cur_sin[14] & !C1L58 & !C1L60 # !C1_cur_sin[14] & (!C1L60 # !C1L58);
+C1L52 = CARRY(C1L52_cout_0);
+
+--C1L53 is cordic_core:inst1|add~11432COUT1_11686 at LC_X28_Y10_N0
+--operation mode is arithmetic
+
+C1L53_cout_1 = C1_cur_sin[14] & !C1L58 & !C1L60 # !C1_cur_sin[14] & (!C1L60 # !C1L58);
+C1L53 = CARRY(C1L53_cout_1);
+
+
+--D1_R_IN[8] is PCM3006:inst6|R_IN[8] at LC_X35_Y12_N2
+--operation mode is normal
+
+D1_R_IN[8]_lut_out = C1_sin[8];
+D1_R_IN[8] = DFFEAS(D1_R_IN[8]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[23] is PCM3006:inst6|SHIFTOUT[23] at LC_X36_Y12_N4
+--operation mode is normal
+
+D1_SHIFTOUT[23]_lut_out = A1L16 & (A1L17 & D1_R_IN[7] # !A1L17 & (D1_SHIFTOUT[22])) # !A1L16 & (D1_SHIFTOUT[22]);
+D1_SHIFTOUT[23] = DFFEAS(D1_SHIFTOUT[23]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L441 is cordic_core:inst1|shift_right~8178 at LC_X27_Y14_N7
+--operation mode is normal
+
+C1L441 = C1_pass_count[0] & (C1_pass_count[1] & (C1_cur_sin[19]) # !C1_pass_count[1] & C1_cur_sin[17]);
+
+
+--C1L442 is cordic_core:inst1|shift_right~8179 at LC_X27_Y14_N2
+--operation mode is normal
+
+C1L442 = !C1_pass_count[0] & (C1_pass_count[1] & (C1_cur_sin[18]) # !C1_pass_count[1] & C1_cur_sin[16]);
+
+
+--C1L443 is cordic_core:inst1|shift_right~8180 at LC_X27_Y14_N1
+--operation mode is normal
+
+C1L443 = C1_pass_count[2] & (C1_cur_sin[19]) # !C1_pass_count[2] & (C1L442 # C1L441);
+
+
+--C1L54 is cordic_core:inst1|add~11435 at LC_X27_Y14_N4
+--operation mode is normal
+
+C1L54 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L443);
+
+
+--C1L55 is cordic_core:inst1|add~11436 at LC_X30_Y13_N1
+--operation mode is arithmetic
+
+C1L55_carry_eqn = (!C1L71 & C1L63) # (C1L71 & C1L64);
+C1L55 = C1_cur_cos[15] $ C1L61 $ !C1L55_carry_eqn;
+
+--C1L56 is cordic_core:inst1|add~11438 at LC_X30_Y13_N1
+--operation mode is arithmetic
+
+C1L56_cout_0 = C1_cur_cos[15] & (C1L61 # !C1L63) # !C1_cur_cos[15] & C1L61 & !C1L63;
+C1L56 = CARRY(C1L56_cout_0);
+
+--C1L57 is cordic_core:inst1|add~11438COUT1_11703 at LC_X30_Y13_N1
+--operation mode is arithmetic
+
+C1L57_cout_1 = C1_cur_cos[15] & (C1L61 # !C1L64) # !C1_cur_cos[15] & C1L61 & !C1L64;
+C1L57 = CARRY(C1L57_cout_1);
+
+
+--C1L421 is cordic_core:inst1|Select~4527 at LC_X29_Y10_N9
+--operation mode is normal
+
+C1L421 = A1L18 & (C1_cur_cos[15]) # !A1L18 & C1L55;
+
+
+--C1L422 is cordic_core:inst1|Select~4528 at LC_X29_Y9_N5
+--operation mode is normal
+
+C1L422 = D1_NEW_SAMPLE & DIPSWITCH[3] # !D1_NEW_SAMPLE & (C1_cur_cos[15]);
+
+
+--C1L444 is cordic_core:inst1|shift_right~8181 at LC_X27_Y11_N5
+--operation mode is normal
+
+C1L444 = C1_pass_count[0] & (C1_cur_cos[19]) # !C1_pass_count[0] & (C1_pass_count[1] & C1_cur_cos[19] # !C1_pass_count[1] & (C1_cur_cos[18]));
+
+
+--C1L445 is cordic_core:inst1|shift_right~8182 at LC_X26_Y13_N7
+--operation mode is normal
+
+C1L445 = C1_pass_count[1] & (C1_cur_cos[17]) # !C1_pass_count[1] & C1_cur_cos[15];
+
+
+--C1_cur_cos[14] is cordic_core:inst1|cur_cos[14] at LC_X27_Y10_N2
+--operation mode is normal
+
+C1_cur_cos[14]_lut_out = C1L424 & (C1L423 & C1_state.processing # !C1_state.idle) # !C1L424 & (C1L423 & C1_state.processing);
+C1_cur_cos[14] = DFFEAS(C1_cur_cos[14]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L446 is cordic_core:inst1|shift_right~8183 at LC_X27_Y13_N0
+--operation mode is normal
+
+C1L446 = C1_pass_count[1] & (C1_cur_cos[16]) # !C1_pass_count[1] & (C1_cur_cos[14]);
+
+
+--C1L447 is cordic_core:inst1|shift_right~8184 at LC_X27_Y13_N9
+--operation mode is normal
+
+C1L447 = C1_pass_count[0] & (C1L445) # !C1_pass_count[0] & C1L446;
+
+
+--C1L448 is cordic_core:inst1|shift_right~8185 at LC_X27_Y15_N2
+--operation mode is normal
+
+C1L448 = C1_pass_count[2] & C1L444 # !C1_pass_count[2] & (C1L447);
+
+
+--C1L58 is cordic_core:inst1|add~11441 at LC_X27_Y11_N2
+--operation mode is normal
+
+C1L58 = C1L387 $ (C1_pass_count[3] & C1_cur_cos[19] # !C1_pass_count[3] & (C1L448));
+
+
+--C1_cur_sin[14] is cordic_core:inst1|cur_sin[14] at LC_X27_Y12_N3
+--operation mode is normal
+
+C1_cur_sin[14]_lut_out = C1_state.idle & C1L51;
+C1_cur_sin[14] = DFFEAS(C1_cur_sin[14]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L59 is cordic_core:inst1|add~11442 at LC_X28_Y11_N9
+--operation mode is arithmetic
+
+C1L59_carry_eqn = (!C1L98 & C1L67) # (C1L98 & C1L68);
+C1L59 = C1L65 $ C1_cur_sin[13] $ !C1L59_carry_eqn;
+
+--C1_sin[9] is cordic_core:inst1|sin[9] at LC_X28_Y11_N9
+--operation mode is arithmetic
+
+C1_sin[9] = DFFEAS(C1L59, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L60 is cordic_core:inst1|add~11444 at LC_X28_Y11_N9
+--operation mode is arithmetic
+
+C1L60 = CARRY(C1L65 & (C1_cur_sin[13] # !C1L68) # !C1L65 & C1_cur_sin[13] & !C1L68);
+
+
+--D1_R_IN[7] is PCM3006:inst6|R_IN[7] at LC_X35_Y12_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[7]_lut_out = GND;
+D1_R_IN[7] = DFFEAS(D1_R_IN[7]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[7], , , VCC);
+
+
+--D1_SHIFTOUT[22] is PCM3006:inst6|SHIFTOUT[22] at LC_X36_Y12_N8
+--operation mode is normal
+
+D1_SHIFTOUT[22]_lut_out = A1L16 & (A1L17 & (D1_R_IN[6]) # !A1L17 & D1_SHIFTOUT[21]) # !A1L16 & D1_SHIFTOUT[21];
+D1_SHIFTOUT[22] = DFFEAS(D1_SHIFTOUT[22]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L449 is cordic_core:inst1|shift_right~8186 at LC_X29_Y12_N3
+--operation mode is normal
+
+C1L449 = C1_pass_count[0] & (C1_cur_sin[16]) # !C1_pass_count[0] & (C1_cur_sin[15]);
+
+
+--C1L450 is cordic_core:inst1|shift_right~8187 at LC_X29_Y12_N2
+--operation mode is normal
+
+C1L450 = C1_pass_count[1] & (C1L437) # !C1_pass_count[1] & (C1L449);
+
+
+--C1L451 is cordic_core:inst1|shift_right~8188 at LC_X29_Y12_N7
+--operation mode is normal
+
+C1L451 = C1_pass_count[2] & (C1_cur_sin[19]) # !C1_pass_count[2] & C1L450;
+
+
+--C1L61 is cordic_core:inst1|add~11447 at LC_X29_Y12_N6
+--operation mode is normal
+
+C1L61 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L451);
+
+
+--C1L62 is cordic_core:inst1|add~11448 at LC_X30_Y13_N0
+--operation mode is arithmetic
+
+C1L62_carry_eqn = C1L71;
+C1L62 = C1L69 $ C1_cur_cos[14] $ C1L62_carry_eqn;
+
+--C1L63 is cordic_core:inst1|add~11450 at LC_X30_Y13_N0
+--operation mode is arithmetic
+
+C1L63_cout_0 = C1L69 & !C1_cur_cos[14] & !C1L71 # !C1L69 & (!C1L71 # !C1_cur_cos[14]);
+C1L63 = CARRY(C1L63_cout_0);
+
+--C1L64 is cordic_core:inst1|add~11450COUT1_11702 at LC_X30_Y13_N0
+--operation mode is arithmetic
+
+C1L64_cout_1 = C1L69 & !C1_cur_cos[14] & !C1L71 # !C1L69 & (!C1L71 # !C1_cur_cos[14]);
+C1L64 = CARRY(C1L64_cout_1);
+
+
+--C1L423 is cordic_core:inst1|Select~4531 at LC_X27_Y10_N3
+--operation mode is normal
+
+C1L423 = A1L18 & (C1_cur_cos[14]) # !A1L18 & C1L62;
+
+
+--C1L424 is cordic_core:inst1|Select~4532 at LC_X27_Y10_N1
+--operation mode is normal
+
+C1L424 = D1_NEW_SAMPLE & DIPSWITCH[2] # !D1_NEW_SAMPLE & (C1_cur_cos[14]);
+
+
+--C1L452 is cordic_core:inst1|shift_right~8189 at LC_X26_Y15_N2
+--operation mode is normal
+
+C1L452 = C1_pass_count[1] & C1_cur_cos[19] # !C1_pass_count[1] & (C1L432);
+
+
+--C1_cur_cos[13] is cordic_core:inst1|cur_cos[13] at LC_X28_Y15_N0
+--operation mode is normal
+
+C1_cur_cos[13]_lut_out = C1L426 & (C1L425 & C1_state.processing # !C1_state.idle) # !C1L426 & (C1L425 & C1_state.processing);
+C1_cur_cos[13] = DFFEAS(C1_cur_cos[13]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L453 is cordic_core:inst1|shift_right~8190 at LC_X29_Y10_N6
+--operation mode is normal
+
+C1L453 = C1_pass_count[1] & (C1_cur_cos[15]) # !C1_pass_count[1] & C1_cur_cos[13];
+
+
+--C1L454 is cordic_core:inst1|shift_right~8191 at LC_X28_Y15_N4
+--operation mode is normal
+
+C1L454 = C1_pass_count[0] & C1L446 # !C1_pass_count[0] & (C1L453);
+
+
+--C1L455 is cordic_core:inst1|shift_right~8192 at LC_X29_Y15_N3
+--operation mode is normal
+
+C1L455 = C1_pass_count[2] & C1L452 # !C1_pass_count[2] & (C1L454);
+
+
+--C1L65 is cordic_core:inst1|add~11453 at LC_X27_Y11_N1
+--operation mode is normal
+
+C1L65 = C1L387 $ (C1_pass_count[3] & (C1_cur_cos[19]) # !C1_pass_count[3] & C1L455);
+
+
+--C1_cur_sin[13] is cordic_core:inst1|cur_sin[13] at LC_X26_Y11_N8
+--operation mode is normal
+
+C1_cur_sin[13]_lut_out = C1_state.idle & C1L59;
+C1_cur_sin[13] = DFFEAS(C1_cur_sin[13]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L66 is cordic_core:inst1|add~11454 at LC_X28_Y11_N8
+--operation mode is arithmetic
+
+C1L66_carry_eqn = (!C1L98 & C1L74) # (C1L98 & C1L75);
+C1L66 = C1L72 $ C1_cur_sin[12] $ C1L66_carry_eqn;
+
+--C1_sin[8] is cordic_core:inst1|sin[8] at LC_X28_Y11_N8
+--operation mode is arithmetic
+
+C1_sin[8] = DFFEAS(C1L66, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L67 is cordic_core:inst1|add~11456 at LC_X28_Y11_N8
+--operation mode is arithmetic
+
+C1L67_cout_0 = C1L72 & !C1_cur_sin[12] & !C1L74 # !C1L72 & (!C1L74 # !C1_cur_sin[12]);
+C1L67 = CARRY(C1L67_cout_0);
+
+--C1L68 is cordic_core:inst1|add~11456COUT1_11685 at LC_X28_Y11_N8
+--operation mode is arithmetic
+
+C1L68_cout_1 = C1L72 & !C1_cur_sin[12] & !C1L75 # !C1L72 & (!C1L75 # !C1_cur_sin[12]);
+C1L68 = CARRY(C1L68_cout_1);
+
+
+--D1_R_IN[6] is PCM3006:inst6|R_IN[6] at LC_X35_Y12_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[6]_lut_out = GND;
+D1_R_IN[6] = DFFEAS(D1_R_IN[6]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[6], , , VCC);
+
+
+--D1_SHIFTOUT[21] is PCM3006:inst6|SHIFTOUT[21] at LC_X36_Y12_N2
+--operation mode is normal
+
+D1_SHIFTOUT[21]_lut_out = A1L17 & (A1L16 & (D1_R_IN[5]) # !A1L16 & D1_SHIFTOUT[20]) # !A1L17 & D1_SHIFTOUT[20];
+D1_SHIFTOUT[21] = DFFEAS(D1_SHIFTOUT[21]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L456 is cordic_core:inst1|shift_right~8193 at LC_X26_Y13_N8
+--operation mode is normal
+
+C1L456 = C1_pass_count[1] & (C1_cur_sin[19]) # !C1_pass_count[1] & (C1_pass_count[0] & (C1_cur_sin[19]) # !C1_pass_count[0] & C1_cur_sin[18]);
+
+
+--C1L457 is cordic_core:inst1|shift_right~8194 at LC_X26_Y13_N5
+--operation mode is normal
+
+C1L457 = C1_pass_count[1] & (C1_cur_sin[17]) # !C1_pass_count[1] & (C1_cur_sin[15]);
+
+
+--C1L458 is cordic_core:inst1|shift_right~8195 at LC_X27_Y12_N6
+--operation mode is normal
+
+C1L458 = C1_pass_count[1] & (C1_cur_sin[16]) # !C1_pass_count[1] & C1_cur_sin[14];
+
+
+--C1L459 is cordic_core:inst1|shift_right~8196 at LC_X31_Y13_N2
+--operation mode is normal
+
+C1L459 = C1_pass_count[0] & (C1L457) # !C1_pass_count[0] & C1L458;
+
+
+--C1L460 is cordic_core:inst1|shift_right~8197 at LC_X31_Y13_N8
+--operation mode is normal
+
+C1L460 = C1_pass_count[2] & (C1L456) # !C1_pass_count[2] & (C1L459);
+
+
+--C1L69 is cordic_core:inst1|add~11459 at LC_X29_Y13_N3
+--operation mode is normal
+
+C1L69 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L460);
+
+
+--C1L70 is cordic_core:inst1|add~11460 at LC_X30_Y14_N9
+--operation mode is arithmetic
+
+C1L70_carry_eqn = (!C1L109 & C1L78) # (C1L109 & C1L79);
+C1L70 = C1_cur_cos[13] $ C1L76 $ !C1L70_carry_eqn;
+
+--C1L71 is cordic_core:inst1|add~11462 at LC_X30_Y14_N9
+--operation mode is arithmetic
+
+C1L71 = CARRY(C1_cur_cos[13] & (C1L76 # !C1L79) # !C1_cur_cos[13] & C1L76 & !C1L79);
+
+
+--C1L425 is cordic_core:inst1|Select~4535 at LC_X28_Y15_N7
+--operation mode is normal
+
+C1L425 = A1L18 & C1_cur_cos[13] # !A1L18 & (C1L70);
+
+
+--C1L426 is cordic_core:inst1|Select~4536 at LC_X29_Y9_N6
+--operation mode is normal
+
+C1L426 = D1_NEW_SAMPLE & DIPSWITCH[1] # !D1_NEW_SAMPLE & (C1_cur_cos[13]);
+
+
+--C1_cur_cos[12] is cordic_core:inst1|cur_cos[12] at LC_X27_Y10_N0
+--operation mode is normal
+
+C1_cur_cos[12]_lut_out = C1L428 & (C1L427 & C1_state.processing # !C1_state.idle) # !C1L428 & (C1L427 & C1_state.processing);
+C1_cur_cos[12] = DFFEAS(C1_cur_cos[12]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L461 is cordic_core:inst1|shift_right~8198 at LC_X27_Y10_N4
+--operation mode is normal
+
+C1L461 = C1_pass_count[1] & C1_cur_cos[14] # !C1_pass_count[1] & (C1_cur_cos[12]);
+
+
+--C1L462 is cordic_core:inst1|shift_right~8199 at LC_X29_Y10_N0
+--operation mode is normal
+
+C1L462 = C1_pass_count[0] & C1L453 # !C1_pass_count[0] & (C1L461);
+
+
+--C1L463 is cordic_core:inst1|shift_right~8200 at LC_X29_Y10_N4
+--operation mode is normal
+
+C1L463 = C1_pass_count[2] & (C1L434 # C1L435) # !C1_pass_count[2] & (C1L462);
+
+
+--C1L72 is cordic_core:inst1|add~11465 at LC_X27_Y11_N3
+--operation mode is normal
+
+C1L72 = C1L387 $ (C1_pass_count[3] & C1_cur_cos[19] # !C1_pass_count[3] & (C1L463));
+
+
+--C1_cur_sin[12] is cordic_core:inst1|cur_sin[12] at LC_X27_Y12_N1
+--operation mode is normal
+
+C1_cur_sin[12]_lut_out = C1_state.idle & C1L66;
+C1_cur_sin[12] = DFFEAS(C1_cur_sin[12]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L73 is cordic_core:inst1|add~11466 at LC_X28_Y11_N7
+--operation mode is arithmetic
+
+C1L73_carry_eqn = (!C1L98 & C1L82) # (C1L98 & C1L83);
+C1L73 = C1L80 $ C1_cur_sin[11] $ !C1L73_carry_eqn;
+
+--C1_sin[7] is cordic_core:inst1|sin[7] at LC_X28_Y11_N7
+--operation mode is arithmetic
+
+C1_sin[7] = DFFEAS(C1L73, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L74 is cordic_core:inst1|add~11468 at LC_X28_Y11_N7
+--operation mode is arithmetic
+
+C1L74_cout_0 = C1L80 & (C1_cur_sin[11] # !C1L82) # !C1L80 & C1_cur_sin[11] & !C1L82;
+C1L74 = CARRY(C1L74_cout_0);
+
+--C1L75 is cordic_core:inst1|add~11468COUT1_11684 at LC_X28_Y11_N7
+--operation mode is arithmetic
+
+C1L75_cout_1 = C1L80 & (C1_cur_sin[11] # !C1L83) # !C1L80 & C1_cur_sin[11] & !C1L83;
+C1L75 = CARRY(C1L75_cout_1);
+
+
+--D1_R_IN[5] is PCM3006:inst6|R_IN[5] at LC_X35_Y12_N7
+--operation mode is normal
+
+D1_R_IN[5]_lut_out = C1_sin[5];
+D1_R_IN[5] = DFFEAS(D1_R_IN[5]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[20] is PCM3006:inst6|SHIFTOUT[20] at LC_X36_Y12_N7
+--operation mode is normal
+
+D1_SHIFTOUT[20]_lut_out = A1L17 & (A1L16 & D1_R_IN[4] # !A1L16 & (D1_SHIFTOUT[19])) # !A1L17 & (D1_SHIFTOUT[19]);
+D1_SHIFTOUT[20] = DFFEAS(D1_SHIFTOUT[20]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L464 is cordic_core:inst1|shift_right~8201 at LC_X29_Y12_N4
+--operation mode is normal
+
+C1L464 = C1_pass_count[1] & C1_cur_sin[19] # !C1_pass_count[1] & (C1L437);
+
+
+--C1L465 is cordic_core:inst1|shift_right~8202 at LC_X29_Y12_N1
+--operation mode is normal
+
+C1L465 = C1_pass_count[1] & (C1_cur_sin[15]) # !C1_pass_count[1] & C1_cur_sin[13];
+
+
+--C1L466 is cordic_core:inst1|shift_right~8203 at LC_X29_Y11_N9
+--operation mode is normal
+
+C1L466 = C1_pass_count[0] & (C1L458) # !C1_pass_count[0] & C1L465;
+
+
+--C1L467 is cordic_core:inst1|shift_right~8204 at LC_X29_Y11_N4
+--operation mode is normal
+
+C1L467 = C1_pass_count[2] & C1L464 # !C1_pass_count[2] & (C1L466);
+
+
+--C1L76 is cordic_core:inst1|add~11471 at LC_X29_Y13_N7
+--operation mode is normal
+
+C1L76 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L467);
+
+
+--C1L77 is cordic_core:inst1|add~11472 at LC_X30_Y14_N8
+--operation mode is arithmetic
+
+C1L77_carry_eqn = (!C1L109 & C1L86) # (C1L109 & C1L87);
+C1L77 = C1_cur_cos[12] $ C1L84 $ C1L77_carry_eqn;
+
+--C1L78 is cordic_core:inst1|add~11474 at LC_X30_Y14_N8
+--operation mode is arithmetic
+
+C1L78_cout_0 = C1_cur_cos[12] & !C1L84 & !C1L86 # !C1_cur_cos[12] & (!C1L86 # !C1L84);
+C1L78 = CARRY(C1L78_cout_0);
+
+--C1L79 is cordic_core:inst1|add~11474COUT1_11701 at LC_X30_Y14_N8
+--operation mode is arithmetic
+
+C1L79_cout_1 = C1_cur_cos[12] & !C1L84 & !C1L87 # !C1_cur_cos[12] & (!C1L87 # !C1L84);
+C1L79 = CARRY(C1L79_cout_1);
+
+
+--C1L427 is cordic_core:inst1|Select~4539 at LC_X27_Y10_N8
+--operation mode is normal
+
+C1L427 = A1L18 & (C1_cur_cos[12]) # !A1L18 & C1L77;
+
+
+--C1L428 is cordic_core:inst1|Select~4540 at LC_X27_Y10_N6
+--operation mode is normal
+
+C1L428 = D1_NEW_SAMPLE & DIPSWITCH[0] # !D1_NEW_SAMPLE & (C1_cur_cos[12]);
+
+
+--C1_cur_cos[11] is cordic_core:inst1|cur_cos[11] at LC_X28_Y15_N3
+--operation mode is normal
+
+C1_cur_cos[11]_lut_out = C1L412 & (C1L85 # C1L429 & C1_cur_cos[11]) # !C1L412 & (C1L429 & C1_cur_cos[11]);
+C1_cur_cos[11] = DFFEAS(C1_cur_cos[11]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L468 is cordic_core:inst1|shift_right~8205 at LC_X28_Y15_N6
+--operation mode is normal
+
+C1L468 = C1_pass_count[1] & (C1_cur_cos[13]) # !C1_pass_count[1] & C1_cur_cos[11];
+
+
+--C1L469 is cordic_core:inst1|shift_right~8206 at LC_X28_Y13_N6
+--operation mode is normal
+
+C1L469 = C1_pass_count[0] & (C1L461) # !C1_pass_count[0] & C1L468;
+
+
+--C1L470 is cordic_core:inst1|shift_right~8207 at LC_X28_Y13_N7
+--operation mode is normal
+
+C1L470 = C1_pass_count[2] & C1L439 # !C1_pass_count[2] & (C1L469);
+
+
+--C1L80 is cordic_core:inst1|add~11477 at LC_X27_Y11_N6
+--operation mode is normal
+
+C1L80 = C1L387 $ (C1_pass_count[3] & C1_cur_cos[19] # !C1_pass_count[3] & (C1L470));
+
+
+--C1_cur_sin[11] is cordic_core:inst1|cur_sin[11] at LC_X26_Y11_N3
+--operation mode is normal
+
+C1_cur_sin[11]_lut_out = C1L73 & C1_state.idle;
+C1_cur_sin[11] = DFFEAS(C1_cur_sin[11]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L81 is cordic_core:inst1|add~11478 at LC_X28_Y11_N6
+--operation mode is arithmetic
+
+C1L81_carry_eqn = (!C1L98 & C1L90) # (C1L98 & C1L91);
+C1L81 = C1_cur_sin[10] $ C1L88 $ C1L81_carry_eqn;
+
+--C1_sin[6] is cordic_core:inst1|sin[6] at LC_X28_Y11_N6
+--operation mode is arithmetic
+
+C1_sin[6] = DFFEAS(C1L81, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L82 is cordic_core:inst1|add~11480 at LC_X28_Y11_N6
+--operation mode is arithmetic
+
+C1L82_cout_0 = C1_cur_sin[10] & !C1L88 & !C1L90 # !C1_cur_sin[10] & (!C1L90 # !C1L88);
+C1L82 = CARRY(C1L82_cout_0);
+
+--C1L83 is cordic_core:inst1|add~11480COUT1_11683 at LC_X28_Y11_N6
+--operation mode is arithmetic
+
+C1L83_cout_1 = C1_cur_sin[10] & !C1L88 & !C1L91 # !C1_cur_sin[10] & (!C1L91 # !C1L88);
+C1L83 = CARRY(C1L83_cout_1);
+
+
+--D1_R_IN[4] is PCM3006:inst6|R_IN[4] at LC_X35_Y12_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[4]_lut_out = GND;
+D1_R_IN[4] = DFFEAS(D1_R_IN[4]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[4], , , VCC);
+
+
+--D1_SHIFTOUT[19] is PCM3006:inst6|SHIFTOUT[19] at LC_X36_Y12_N1
+--operation mode is normal
+
+D1_SHIFTOUT[19]_lut_out = A1L17 & (A1L16 & D1_R_IN[3] # !A1L16 & (D1_SHIFTOUT[18])) # !A1L17 & (D1_SHIFTOUT[18]);
+D1_SHIFTOUT[19] = DFFEAS(D1_SHIFTOUT[19]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L471 is cordic_core:inst1|shift_right~8208 at LC_X27_Y12_N0
+--operation mode is normal
+
+C1L471 = C1_pass_count[1] & C1_cur_sin[14] # !C1_pass_count[1] & (C1_cur_sin[12]);
+
+
+--C1L472 is cordic_core:inst1|shift_right~8209 at LC_X27_Y12_N5
+--operation mode is normal
+
+C1L472 = C1_pass_count[0] & C1L465 # !C1_pass_count[0] & (C1L471);
+
+
+--C1L473 is cordic_core:inst1|shift_right~8210 at LC_X27_Y12_N7
+--operation mode is normal
+
+C1L473 = C1_pass_count[2] & (C1L442 # C1L441) # !C1_pass_count[2] & (C1L472);
+
+
+--C1L84 is cordic_core:inst1|add~11483 at LC_X29_Y13_N4
+--operation mode is normal
+
+C1L84 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L473);
+
+
+--C1L85 is cordic_core:inst1|add~11484 at LC_X30_Y14_N7
+--operation mode is arithmetic
+
+C1L85_carry_eqn = (!C1L109 & C1L94) # (C1L109 & C1L95);
+C1L85 = C1L92 $ C1_cur_cos[11] $ !C1L85_carry_eqn;
+
+--C1L86 is cordic_core:inst1|add~11486 at LC_X30_Y14_N7
+--operation mode is arithmetic
+
+C1L86_cout_0 = C1L92 & (C1_cur_cos[11] # !C1L94) # !C1L92 & C1_cur_cos[11] & !C1L94;
+C1L86 = CARRY(C1L86_cout_0);
+
+--C1L87 is cordic_core:inst1|add~11486COUT1_11700 at LC_X30_Y14_N7
+--operation mode is arithmetic
+
+C1L87_cout_1 = C1L92 & (C1_cur_cos[11] # !C1L95) # !C1L92 & C1_cur_cos[11] & !C1L95;
+C1L87 = CARRY(C1L87_cout_1);
+
+
+--C1L429 is cordic_core:inst1|Select~4543 at LC_X27_Y10_N7
+--operation mode is normal
+
+C1L429 = A1L18 & (C1_state.processing # !D1_NEW_SAMPLE & !C1_state.idle) # !A1L18 & !D1_NEW_SAMPLE & !C1_state.idle;
+
+
+--C1_cur_cos[10] is cordic_core:inst1|cur_cos[10] at LC_X29_Y14_N9
+--operation mode is normal
+
+C1_cur_cos[10]_lut_out = C1L429 & (C1_cur_cos[10] # C1L412 & C1L93) # !C1L429 & C1L412 & (C1L93);
+C1_cur_cos[10] = DFFEAS(C1_cur_cos[10]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L474 is cordic_core:inst1|shift_right~8211 at LC_X27_Y13_N2
+--operation mode is normal
+
+C1L474 = C1_pass_count[1] & (C1_cur_cos[12]) # !C1_pass_count[1] & C1_cur_cos[10];
+
+
+--C1L475 is cordic_core:inst1|shift_right~8212 at LC_X27_Y13_N8
+--operation mode is normal
+
+C1L475 = C1_pass_count[0] & (C1L468) # !C1_pass_count[0] & (C1L474);
+
+
+--C1L476 is cordic_core:inst1|shift_right~8213 at LC_X27_Y13_N5
+--operation mode is normal
+
+C1L476 = C1_pass_count[2] & C1L447 # !C1_pass_count[2] & (C1L475);
+
+
+--C1L88 is cordic_core:inst1|add~11489 at LC_X26_Y12_N1
+--operation mode is normal
+
+C1L88 = C1L387 $ (C1_pass_count[3] & C1L431 # !C1_pass_count[3] & (C1L476));
+
+
+--C1_cur_sin[10] is cordic_core:inst1|cur_sin[10] at LC_X27_Y12_N8
+--operation mode is normal
+
+C1_cur_sin[10]_lut_out = C1_state.idle & C1L81;
+C1_cur_sin[10] = DFFEAS(C1_cur_sin[10]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L89 is cordic_core:inst1|add~11490 at LC_X28_Y11_N5
+--operation mode is arithmetic
+
+C1L89_carry_eqn = C1L98;
+C1L89 = C1L96 $ C1_cur_sin[9] $ !C1L89_carry_eqn;
+
+--C1_sin[5] is cordic_core:inst1|sin[5] at LC_X28_Y11_N5
+--operation mode is arithmetic
+
+C1_sin[5] = DFFEAS(C1L89, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L90 is cordic_core:inst1|add~11492 at LC_X28_Y11_N5
+--operation mode is arithmetic
+
+C1L90_cout_0 = C1L96 & (C1_cur_sin[9] # !C1L98) # !C1L96 & C1_cur_sin[9] & !C1L98;
+C1L90 = CARRY(C1L90_cout_0);
+
+--C1L91 is cordic_core:inst1|add~11492COUT1_11682 at LC_X28_Y11_N5
+--operation mode is arithmetic
+
+C1L91_cout_1 = C1L96 & (C1_cur_sin[9] # !C1L98) # !C1L96 & C1_cur_sin[9] & !C1L98;
+C1L91 = CARRY(C1L91_cout_1);
+
+
+--D1_R_IN[3] is PCM3006:inst6|R_IN[3] at LC_X35_Y12_N3
+--operation mode is normal
+
+D1_R_IN[3]_lut_out = C1_sin[3];
+D1_R_IN[3] = DFFEAS(D1_R_IN[3]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[18] is PCM3006:inst6|SHIFTOUT[18] at LC_X36_Y12_N6
+--operation mode is normal
+
+D1_SHIFTOUT[18]_lut_out = A1L17 & (A1L16 & D1_R_IN[2] # !A1L16 & (D1_SHIFTOUT[17])) # !A1L17 & (D1_SHIFTOUT[17]);
+D1_SHIFTOUT[18] = DFFEAS(D1_SHIFTOUT[18]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L477 is cordic_core:inst1|shift_right~8214 at LC_X26_Y11_N6
+--operation mode is normal
+
+C1L477 = C1_pass_count[1] & (C1_cur_sin[13]) # !C1_pass_count[1] & (C1_cur_sin[11]);
+
+
+--C1L478 is cordic_core:inst1|shift_right~8215 at LC_X30_Y12_N8
+--operation mode is normal
+
+C1L478 = C1_pass_count[0] & C1L471 # !C1_pass_count[0] & (C1L477);
+
+
+--C1L479 is cordic_core:inst1|shift_right~8216 at LC_X30_Y12_N4
+--operation mode is normal
+
+C1L479 = C1_pass_count[2] & (C1L450) # !C1_pass_count[2] & C1L478;
+
+
+--C1L92 is cordic_core:inst1|add~11495 at LC_X29_Y13_N9
+--operation mode is normal
+
+C1L92 = C1L387 $ (C1_pass_count[3] & (!C1_cur_sin[19]) # !C1_pass_count[3] & !C1L479);
+
+
+--C1L93 is cordic_core:inst1|add~11496 at LC_X30_Y14_N6
+--operation mode is arithmetic
+
+C1L93_carry_eqn = (!C1L109 & C1L101) # (C1L109 & C1L102);
+C1L93 = C1L99 $ C1_cur_cos[10] $ C1L93_carry_eqn;
+
+--C1L94 is cordic_core:inst1|add~11498 at LC_X30_Y14_N6
+--operation mode is arithmetic
+
+C1L94_cout_0 = C1L99 & !C1_cur_cos[10] & !C1L101 # !C1L99 & (!C1L101 # !C1_cur_cos[10]);
+C1L94 = CARRY(C1L94_cout_0);
+
+--C1L95 is cordic_core:inst1|add~11498COUT1_11699 at LC_X30_Y14_N6
+--operation mode is arithmetic
+
+C1L95_cout_1 = C1L99 & !C1_cur_cos[10] & !C1L102 # !C1L99 & (!C1L102 # !C1_cur_cos[10]);
+C1L95 = CARRY(C1L95_cout_1);
+
+
+--C1_cur_cos[9] is cordic_core:inst1|cur_cos[9] at LC_X29_Y14_N5
+--operation mode is normal
+
+C1_cur_cos[9]_lut_out = C1L429 & (C1_cur_cos[9] # C1L412 & C1L100) # !C1L429 & C1L412 & C1L100;
+C1_cur_cos[9] = DFFEAS(C1_cur_cos[9]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L480 is cordic_core:inst1|shift_right~8217 at LC_X28_Y15_N9
+--operation mode is normal
+
+C1L480 = C1_pass_count[1] & (C1_cur_cos[11]) # !C1_pass_count[1] & C1_cur_cos[9];
+
+
+--C1L481 is cordic_core:inst1|shift_right~8218 at LC_X28_Y15_N2
+--operation mode is normal
+
+C1L481 = C1_pass_count[0] & (C1L474) # !C1_pass_count[0] & C1L480;
+
+
+--C1L482 is cordic_core:inst1|shift_right~8219 at LC_X28_Y15_N5
+--operation mode is normal
+
+C1L482 = C1_pass_count[2] & (C1L454) # !C1_pass_count[2] & (C1L481);
+
+
+--C1L96 is cordic_core:inst1|add~11501 at LC_X29_Y13_N1
+--operation mode is normal
+
+C1L96 = C1L387 $ (C1_pass_count[3] & (C1L519) # !C1_pass_count[3] & C1L482);
+
+
+--C1_cur_sin[9] is cordic_core:inst1|cur_sin[9] at LC_X26_Y11_N4
+--operation mode is normal
+
+C1_cur_sin[9]_lut_out = C1_state.idle & C1L89;
+C1_cur_sin[9] = DFFEAS(C1_cur_sin[9]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L97 is cordic_core:inst1|add~11502 at LC_X28_Y11_N4
+--operation mode is arithmetic
+
+C1L97_carry_eqn = (!C1L157 & C1L105) # (C1L157 & C1L106);
+C1L97 = C1_cur_sin[8] $ C1L103 $ C1L97_carry_eqn;
+
+--C1_sin[4] is cordic_core:inst1|sin[4] at LC_X28_Y11_N4
+--operation mode is arithmetic
+
+C1_sin[4] = DFFEAS(C1L97, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L98 is cordic_core:inst1|add~11504 at LC_X28_Y11_N4
+--operation mode is arithmetic
+
+C1L98 = CARRY(C1_cur_sin[8] & !C1L103 & !C1L106 # !C1_cur_sin[8] & (!C1L106 # !C1L103));
+
+
+--D1_R_IN[2] is PCM3006:inst6|R_IN[2] at LC_X35_Y12_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[2]_lut_out = GND;
+D1_R_IN[2] = DFFEAS(D1_R_IN[2]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[2], , , VCC);
+
+
+--D1_SHIFTOUT[17] is PCM3006:inst6|SHIFTOUT[17] at LC_X36_Y12_N3
+--operation mode is normal
+
+D1_SHIFTOUT[17]_lut_out = A1L17 & (A1L16 & D1_R_IN[1] # !A1L16 & (D1_SHIFTOUT[16])) # !A1L17 & (D1_SHIFTOUT[16]);
+D1_SHIFTOUT[17] = DFFEAS(D1_SHIFTOUT[17]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L483 is cordic_core:inst1|shift_right~8220 at LC_X27_Y12_N9
+--operation mode is normal
+
+C1L483 = C1_pass_count[1] & C1_cur_sin[12] # !C1_pass_count[1] & (C1_cur_sin[10]);
+
+
+--C1L484 is cordic_core:inst1|shift_right~8221 at LC_X31_Y13_N1
+--operation mode is normal
+
+C1L484 = C1_pass_count[0] & (C1L477) # !C1_pass_count[0] & C1L483;
+
+
+--C1L485 is cordic_core:inst1|shift_right~8222 at LC_X31_Y13_N0
+--operation mode is normal
+
+C1L485 = C1_pass_count[2] & C1L459 # !C1_pass_count[2] & (C1L484);
+
+
+--C1L99 is cordic_core:inst1|add~11507 at LC_X26_Y12_N5
+--operation mode is normal
+
+C1L99 = C1L387 $ (C1_pass_count[3] & !C1L433 # !C1_pass_count[3] & (!C1L485));
+
+
+--C1L100 is cordic_core:inst1|add~11508 at LC_X30_Y14_N5
+--operation mode is arithmetic
+
+C1L100_carry_eqn = C1L109;
+C1L100 = C1L107 $ C1_cur_cos[9] $ !C1L100_carry_eqn;
+
+--C1L101 is cordic_core:inst1|add~11510 at LC_X30_Y14_N5
+--operation mode is arithmetic
+
+C1L101_cout_0 = C1L107 & (C1_cur_cos[9] # !C1L109) # !C1L107 & C1_cur_cos[9] & !C1L109;
+C1L101 = CARRY(C1L101_cout_0);
+
+--C1L102 is cordic_core:inst1|add~11510COUT1_11698 at LC_X30_Y14_N5
+--operation mode is arithmetic
+
+C1L102_cout_1 = C1L107 & (C1_cur_cos[9] # !C1L109) # !C1L107 & C1_cur_cos[9] & !C1L109;
+C1L102 = CARRY(C1L102_cout_1);
+
+
+--C1_cur_cos[8] is cordic_core:inst1|cur_cos[8] at LC_X29_Y14_N0
+--operation mode is normal
+
+C1_cur_cos[8]_lut_out = C1L429 & (C1_cur_cos[8] # C1L412 & C1L108) # !C1L429 & C1L412 & (C1L108);
+C1_cur_cos[8] = DFFEAS(C1_cur_cos[8]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L486 is cordic_core:inst1|shift_right~8223 at LC_X27_Y15_N7
+--operation mode is normal
+
+C1L486 = C1_pass_count[1] & C1_cur_cos[10] # !C1_pass_count[1] & (C1_cur_cos[8]);
+
+
+--C1L487 is cordic_core:inst1|shift_right~8224 at LC_X28_Y15_N8
+--operation mode is normal
+
+C1L487 = C1_pass_count[0] & C1L480 # !C1_pass_count[0] & (C1L486);
+
+
+--C1L488 is cordic_core:inst1|shift_right~8225 at LC_X29_Y10_N8
+--operation mode is normal
+
+C1L488 = C1_pass_count[2] & (C1L462) # !C1_pass_count[2] & C1L487;
+
+
+--C1L103 is cordic_core:inst1|add~11513 at LC_X27_Y11_N7
+--operation mode is normal
+
+C1L103 = C1L387 $ (C1_pass_count[3] & (C1L436) # !C1_pass_count[3] & C1L488);
+
+
+--C1_cur_sin[8] is cordic_core:inst1|cur_sin[8] at LC_X26_Y10_N9
+--operation mode is normal
+
+C1_cur_sin[8]_lut_out = C1L97 & (C1_state.idle);
+C1_cur_sin[8] = DFFEAS(C1_cur_sin[8]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L104 is cordic_core:inst1|add~11514 at LC_X28_Y11_N3
+--operation mode is arithmetic
+
+C1L104_carry_eqn = (!C1L157 & C1L118) # (C1L157 & C1L119);
+C1L104 = C1_cur_sin[7] $ C1L116 $ !C1L104_carry_eqn;
+
+--C1_sin[3] is cordic_core:inst1|sin[3] at LC_X28_Y11_N3
+--operation mode is arithmetic
+
+C1_sin[3] = DFFEAS(C1L104, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L105 is cordic_core:inst1|add~11516 at LC_X28_Y11_N3
+--operation mode is arithmetic
+
+C1L105_cout_0 = C1_cur_sin[7] & (C1L116 # !C1L118) # !C1_cur_sin[7] & C1L116 & !C1L118;
+C1L105 = CARRY(C1L105_cout_0);
+
+--C1L106 is cordic_core:inst1|add~11516COUT1_11681 at LC_X28_Y11_N3
+--operation mode is arithmetic
+
+C1L106_cout_1 = C1_cur_sin[7] & (C1L116 # !C1L119) # !C1_cur_sin[7] & C1L116 & !C1L119;
+C1L106 = CARRY(C1L106_cout_1);
+
+
+--D1_R_IN[1] is PCM3006:inst6|R_IN[1] at LC_X35_Y12_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[1]_lut_out = GND;
+D1_R_IN[1] = DFFEAS(D1_R_IN[1]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[1], , , VCC);
+
+
+--D1_SHIFTOUT[16] is PCM3006:inst6|SHIFTOUT[16] at LC_X36_Y13_N9
+--operation mode is normal
+
+D1_SHIFTOUT[16]_lut_out = A1L16 & (A1L17 & D1_R_IN[0] # !A1L17 & (D1_SHIFTOUT[15])) # !A1L16 & (D1_SHIFTOUT[15]);
+D1_SHIFTOUT[16] = DFFEAS(D1_SHIFTOUT[16]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L489 is cordic_core:inst1|shift_right~8226 at LC_X26_Y11_N1
+--operation mode is normal
+
+C1L489 = C1_pass_count[1] & (C1_cur_sin[11]) # !C1_pass_count[1] & (C1_cur_sin[9]);
+
+
+--C1L490 is cordic_core:inst1|shift_right~8227 at LC_X29_Y11_N1
+--operation mode is normal
+
+C1L490 = C1_pass_count[0] & (C1L483) # !C1_pass_count[0] & (C1L489);
+
+
+--C1L491 is cordic_core:inst1|shift_right~8228 at LC_X29_Y11_N0
+--operation mode is normal
+
+C1L491 = C1_pass_count[2] & (C1L466) # !C1_pass_count[2] & (C1L490);
+
+
+--C1L107 is cordic_core:inst1|add~11519 at LC_X29_Y12_N0
+--operation mode is normal
+
+C1L107 = C1L387 $ (C1_pass_count[3] & !C1L520 # !C1_pass_count[3] & (!C1L491));
+
+
+--C1L108 is cordic_core:inst1|add~11520 at LC_X30_Y14_N4
+--operation mode is arithmetic
+
+C1L108_carry_eqn = (!C1L178 & C1L122) # (C1L178 & C1L123);
+C1L108 = C1L120 $ C1_cur_cos[8] $ C1L108_carry_eqn;
+
+--C1L109 is cordic_core:inst1|add~11522 at LC_X30_Y14_N4
+--operation mode is arithmetic
+
+C1L109 = CARRY(C1L120 & !C1_cur_cos[8] & !C1L123 # !C1L120 & (!C1L123 # !C1_cur_cos[8]));
+
+
+--C1L110 is cordic_core:inst1|add~11525 at LC_X30_Y11_N0
+--operation mode is normal
+
+C1L110 = !C1L386 & !C1_pass_count[3] & (C1_cur_phase[19] # !C1_des_phase[19]);
+
+
+--C1_cur_cos[7] is cordic_core:inst1|cur_cos[7] at LC_X29_Y14_N2
+--operation mode is normal
+
+C1_cur_cos[7]_lut_out = C1L429 & (C1_cur_cos[7] # C1L412 & C1L121) # !C1L429 & C1L412 & (C1L121);
+C1_cur_cos[7] = DFFEAS(C1_cur_cos[7]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L492 is cordic_core:inst1|shift_right~8229 at LC_X27_Y15_N5
+--operation mode is normal
+
+C1L492 = C1_pass_count[1] & C1_cur_cos[9] # !C1_pass_count[1] & (C1_cur_cos[7]);
+
+
+--C1L493 is cordic_core:inst1|shift_right~8230 at LC_X27_Y15_N4
+--operation mode is normal
+
+C1L493 = C1_pass_count[0] & C1L486 # !C1_pass_count[0] & (C1L492);
+
+
+--C1L111 is cordic_core:inst1|add~11526 at LC_X30_Y11_N3
+--operation mode is normal
+
+C1L111 = !C1L386 & !C1L388 & (C1_pass_count[3] # C1_pass_count[2]);
+
+
+--C1L112 is cordic_core:inst1|add~11527 at LC_X28_Y14_N2
+--operation mode is normal
+
+C1L112 = C1L110 & (C1L111 & C1L469 # !C1L111 & (C1L493));
+
+
+--C1L113 is cordic_core:inst1|add~11528 at LC_X28_Y14_N5
+--operation mode is normal
+
+C1L113 = C1_pass_count[3] & (C1L440 $ C1L387);
+
+
+--C1L114 is cordic_core:inst1|add~11529 at LC_X30_Y11_N8
+--operation mode is normal
+
+C1L114 = !C1_pass_count[3] & (C1L386 # C1_des_phase[19] & !C1_cur_phase[19]);
+
+
+--C1L115 is cordic_core:inst1|add~11530 at LC_X28_Y14_N6
+--operation mode is normal
+
+C1L115 = C1_pass_count[2] & (!C1L469) # !C1_pass_count[2] & (!C1L493);
+
+
+--C1L116 is cordic_core:inst1|add~11531 at LC_X28_Y14_N8
+--operation mode is normal
+
+C1L116 = C1L112 # C1L113 # C1L114 & C1L115;
+
+
+--C1_cur_sin[7] is cordic_core:inst1|cur_sin[7] at LC_X26_Y11_N5
+--operation mode is normal
+
+C1_cur_sin[7]_lut_out = C1_state.idle & C1L104;
+C1_cur_sin[7] = DFFEAS(C1_cur_sin[7]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L117 is cordic_core:inst1|add~11532 at LC_X28_Y11_N2
+--operation mode is arithmetic
+
+C1L117_carry_eqn = (!C1L157 & C1L129) # (C1L157 & C1L130);
+C1L117 = C1L127 $ C1_cur_sin[6] $ C1L117_carry_eqn;
+
+--C1_sin[2] is cordic_core:inst1|sin[2] at LC_X28_Y11_N2
+--operation mode is arithmetic
+
+C1_sin[2] = DFFEAS(C1L117, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L118 is cordic_core:inst1|add~11534 at LC_X28_Y11_N2
+--operation mode is arithmetic
+
+C1L118_cout_0 = C1L127 & !C1_cur_sin[6] & !C1L129 # !C1L127 & (!C1L129 # !C1_cur_sin[6]);
+C1L118 = CARRY(C1L118_cout_0);
+
+--C1L119 is cordic_core:inst1|add~11534COUT1_11680 at LC_X28_Y11_N2
+--operation mode is arithmetic
+
+C1L119_cout_1 = C1L127 & !C1_cur_sin[6] & !C1L130 # !C1L127 & (!C1L130 # !C1_cur_sin[6]);
+C1L119 = CARRY(C1L119_cout_1);
+
+
+--D1_R_IN[0] is PCM3006:inst6|R_IN[0] at LC_X35_Y12_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_R_IN[0]_lut_out = GND;
+D1_R_IN[0] = DFFEAS(D1_R_IN[0]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_sin[0], , , VCC);
+
+
+--D1_SHIFTOUT[15] is PCM3006:inst6|SHIFTOUT[15] at LC_X36_Y13_N0
+--operation mode is normal
+
+D1_SHIFTOUT[15]_lut_out = A1L17 & (A1L16 & (D1_L_IN[15]) # !A1L16 & D1_SHIFTOUT[14]) # !A1L17 & D1_SHIFTOUT[14];
+D1_SHIFTOUT[15] = DFFEAS(D1_SHIFTOUT[15]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L494 is cordic_core:inst1|shift_right~8231 at LC_X27_Y12_N4
+--operation mode is normal
+
+C1L494 = C1_pass_count[1] & (C1_cur_sin[10]) # !C1_pass_count[1] & C1_cur_sin[8];
+
+
+--C1L495 is cordic_core:inst1|shift_right~8232 at LC_X27_Y12_N2
+--operation mode is normal
+
+C1L495 = C1_pass_count[0] & (C1L489) # !C1_pass_count[0] & C1L494;
+
+
+--C1L496 is cordic_core:inst1|shift_right~8233 at LC_X30_Y15_N4
+--operation mode is normal
+
+C1L496 = C1_pass_count[2] & (C1L472) # !C1_pass_count[2] & C1L495;
+
+
+--C1L120 is cordic_core:inst1|add~11537 at LC_X27_Y14_N8
+--operation mode is normal
+
+C1L120 = C1L387 $ (C1_pass_count[3] & (!C1L443) # !C1_pass_count[3] & !C1L496);
+
+
+--C1L121 is cordic_core:inst1|add~11538 at LC_X30_Y14_N3
+--operation mode is arithmetic
+
+C1L121_carry_eqn = (!C1L178 & C1L136) # (C1L178 & C1L137);
+C1L121 = C1L134 $ C1_cur_cos[7] $ !C1L121_carry_eqn;
+
+--C1L122 is cordic_core:inst1|add~11540 at LC_X30_Y14_N3
+--operation mode is arithmetic
+
+C1L122_cout_0 = C1L134 & (C1_cur_cos[7] # !C1L136) # !C1L134 & C1_cur_cos[7] & !C1L136;
+C1L122 = CARRY(C1L122_cout_0);
+
+--C1L123 is cordic_core:inst1|add~11540COUT1_11697 at LC_X30_Y14_N3
+--operation mode is arithmetic
+
+C1L123_cout_1 = C1L134 & (C1_cur_cos[7] # !C1L137) # !C1L134 & C1_cur_cos[7] & !C1L137;
+C1L123 = CARRY(C1L123_cout_1);
+
+
+--C1_cur_cos[6] is cordic_core:inst1|cur_cos[6] at LC_X29_Y14_N6
+--operation mode is normal
+
+C1_cur_cos[6]_lut_out = C1L429 & (C1_cur_cos[6] # C1L412 & C1L135) # !C1L429 & C1L412 & C1L135;
+C1_cur_cos[6] = DFFEAS(C1_cur_cos[6]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L497 is cordic_core:inst1|shift_right~8234 at LC_X27_Y15_N1
+--operation mode is normal
+
+C1L497 = C1_pass_count[1] & C1_cur_cos[8] # !C1_pass_count[1] & (C1_cur_cos[6]);
+
+
+--C1L498 is cordic_core:inst1|shift_right~8235 at LC_X27_Y15_N0
+--operation mode is normal
+
+C1L498 = C1_pass_count[0] & (C1L492) # !C1_pass_count[0] & C1L497;
+
+
+--C1L124 is cordic_core:inst1|add~11543 at LC_X27_Y15_N3
+--operation mode is normal
+
+C1L124 = C1L110 & (C1L111 & C1L475 # !C1L111 & (C1L498));
+
+
+--C1L125 is cordic_core:inst1|add~11544 at LC_X27_Y15_N8
+--operation mode is normal
+
+C1L125 = C1_pass_count[3] & (C1L387 $ C1L448);
+
+
+--C1L126 is cordic_core:inst1|add~11545 at LC_X27_Y15_N6
+--operation mode is normal
+
+C1L126 = C1_pass_count[2] & !C1L475 # !C1_pass_count[2] & (!C1L498);
+
+
+--C1L127 is cordic_core:inst1|add~11546 at LC_X27_Y15_N9
+--operation mode is normal
+
+C1L127 = C1L124 # C1L125 # C1L114 & C1L126;
+
+
+--C1_cur_sin[6] is cordic_core:inst1|cur_sin[6] at LC_X26_Y10_N0
+--operation mode is normal
+
+C1_cur_sin[6]_lut_out = C1_state.idle & (C1L117);
+C1_cur_sin[6] = DFFEAS(C1_cur_sin[6]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L128 is cordic_core:inst1|add~11547 at LC_X28_Y11_N1
+--operation mode is arithmetic
+
+C1L128_carry_eqn = (!C1L157 & C1L143) # (C1L157 & C1L144);
+C1L128 = C1_cur_sin[5] $ C1L141 $ !C1L128_carry_eqn;
+
+--C1_sin[1] is cordic_core:inst1|sin[1] at LC_X28_Y11_N1
+--operation mode is arithmetic
+
+C1_sin[1] = DFFEAS(C1L128, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L129 is cordic_core:inst1|add~11549 at LC_X28_Y11_N1
+--operation mode is arithmetic
+
+C1L129_cout_0 = C1_cur_sin[5] & (C1L141 # !C1L143) # !C1_cur_sin[5] & C1L141 & !C1L143;
+C1L129 = CARRY(C1L129_cout_0);
+
+--C1L130 is cordic_core:inst1|add~11549COUT1_11679 at LC_X28_Y11_N1
+--operation mode is arithmetic
+
+C1L130_cout_1 = C1_cur_sin[5] & (C1L141 # !C1L144) # !C1_cur_sin[5] & C1L141 & !C1L144;
+C1L130 = CARRY(C1L130_cout_1);
+
+
+--D1_L_IN[15] is PCM3006:inst6|L_IN[15] at LC_X35_Y13_N9
+--operation mode is normal
+
+D1_L_IN[15]_lut_out = C1_cos[15];
+D1_L_IN[15] = DFFEAS(D1_L_IN[15]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[14] is PCM3006:inst6|SHIFTOUT[14] at LC_X36_Y13_N2
+--operation mode is normal
+
+D1_SHIFTOUT[14]_lut_out = A1L17 & (A1L16 & (D1_L_IN[14]) # !A1L16 & D1_SHIFTOUT[13]) # !A1L17 & D1_SHIFTOUT[13];
+D1_SHIFTOUT[14] = DFFEAS(D1_SHIFTOUT[14]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L499 is cordic_core:inst1|shift_right~8236 at LC_X26_Y11_N0
+--operation mode is normal
+
+C1L499 = C1_pass_count[1] & (C1_cur_sin[9]) # !C1_pass_count[1] & C1_cur_sin[7];
+
+
+--C1L500 is cordic_core:inst1|shift_right~8237 at LC_X30_Y12_N0
+--operation mode is normal
+
+C1L500 = C1_pass_count[0] & (C1L494) # !C1_pass_count[0] & C1L499;
+
+
+--C1L131 is cordic_core:inst1|add~11552 at LC_X30_Y12_N5
+--operation mode is normal
+
+C1L131 = C1L110 & (C1L111 & !C1L478 # !C1L111 & (!C1L500));
+
+
+--C1L132 is cordic_core:inst1|add~11553 at LC_X30_Y12_N9
+--operation mode is normal
+
+C1L132 = C1_pass_count[3] & (C1L387 $ !C1L451);
+
+
+--C1L133 is cordic_core:inst1|add~11554 at LC_X30_Y12_N6
+--operation mode is normal
+
+C1L133 = C1_pass_count[2] & C1L478 # !C1_pass_count[2] & (C1L500);
+
+
+--C1L134 is cordic_core:inst1|add~11555 at LC_X30_Y12_N7
+--operation mode is normal
+
+C1L134 = C1L131 # C1L132 # C1L114 & C1L133;
+
+
+--C1L135 is cordic_core:inst1|add~11556 at LC_X30_Y14_N2
+--operation mode is arithmetic
+
+C1L135_carry_eqn = (!C1L178 & C1L150) # (C1L178 & C1L151);
+C1L135 = C1L148 $ C1_cur_cos[6] $ C1L135_carry_eqn;
+
+--C1L136 is cordic_core:inst1|add~11558 at LC_X30_Y14_N2
+--operation mode is arithmetic
+
+C1L136_cout_0 = C1L148 & !C1_cur_cos[6] & !C1L150 # !C1L148 & (!C1L150 # !C1_cur_cos[6]);
+C1L136 = CARRY(C1L136_cout_0);
+
+--C1L137 is cordic_core:inst1|add~11558COUT1_11696 at LC_X30_Y14_N2
+--operation mode is arithmetic
+
+C1L137_cout_1 = C1L148 & !C1_cur_cos[6] & !C1L151 # !C1L148 & (!C1L151 # !C1_cur_cos[6]);
+C1L137 = CARRY(C1L137_cout_1);
+
+
+--C1L501 is cordic_core:inst1|shift_right~8238 at LC_X29_Y15_N1
+--operation mode is normal
+
+C1L501 = C1_pass_count[0] & C1_cur_cos[8] # !C1_pass_count[0] & (C1_cur_cos[7]);
+
+
+--C1_cur_cos[5] is cordic_core:inst1|cur_cos[5] at LC_X28_Y14_N0
+--operation mode is normal
+
+C1_cur_cos[5]_lut_out = C1L412 & (C1L149 # C1L429 & C1_cur_cos[5]) # !C1L412 & C1L429 & (C1_cur_cos[5]);
+C1_cur_cos[5] = DFFEAS(C1_cur_cos[5]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L502 is cordic_core:inst1|shift_right~8239 at LC_X29_Y15_N0
+--operation mode is normal
+
+C1L502 = C1_pass_count[0] & (C1_cur_cos[6]) # !C1_pass_count[0] & C1_cur_cos[5];
+
+
+--C1L503 is cordic_core:inst1|shift_right~8240 at LC_X29_Y15_N2
+--operation mode is normal
+
+C1L503 = C1_pass_count[1] & (C1L501) # !C1_pass_count[1] & C1L502;
+
+
+--C1L138 is cordic_core:inst1|add~11561 at LC_X29_Y15_N9
+--operation mode is normal
+
+C1L138 = C1L110 & (C1L111 & C1L481 # !C1L111 & (C1L503));
+
+
+--C1L139 is cordic_core:inst1|add~11562 at LC_X29_Y15_N4
+--operation mode is normal
+
+C1L139 = C1_pass_count[3] & (C1L387 $ C1L455);
+
+
+--C1L140 is cordic_core:inst1|add~11563 at LC_X29_Y15_N6
+--operation mode is normal
+
+C1L140 = C1_pass_count[2] & (!C1L481) # !C1_pass_count[2] & !C1L503;
+
+
+--C1L141 is cordic_core:inst1|add~11564 at LC_X29_Y15_N7
+--operation mode is normal
+
+C1L141 = C1L138 # C1L139 # C1L114 & C1L140;
+
+
+--C1_cur_sin[5] is cordic_core:inst1|cur_sin[5] at LC_X26_Y10_N3
+--operation mode is normal
+
+C1_cur_sin[5]_lut_out = C1L128 & C1_state.idle;
+C1_cur_sin[5] = DFFEAS(C1_cur_sin[5]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L142 is cordic_core:inst1|add~11565 at LC_X28_Y11_N0
+--operation mode is arithmetic
+
+C1L142_carry_eqn = C1L157;
+C1L142 = C1_cur_sin[4] $ C1L155 $ C1L142_carry_eqn;
+
+--C1_sin[0] is cordic_core:inst1|sin[0] at LC_X28_Y11_N0
+--operation mode is arithmetic
+
+C1_sin[0] = DFFEAS(C1L142, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+--C1L143 is cordic_core:inst1|add~11567 at LC_X28_Y11_N0
+--operation mode is arithmetic
+
+C1L143_cout_0 = C1_cur_sin[4] & !C1L155 & !C1L157 # !C1_cur_sin[4] & (!C1L157 # !C1L155);
+C1L143 = CARRY(C1L143_cout_0);
+
+--C1L144 is cordic_core:inst1|add~11567COUT1_11678 at LC_X28_Y11_N0
+--operation mode is arithmetic
+
+C1L144_cout_1 = C1_cur_sin[4] & !C1L155 & !C1L157 # !C1_cur_sin[4] & (!C1L157 # !C1L155);
+C1L144 = CARRY(C1L144_cout_1);
+
+
+--C1_cos[15] is cordic_core:inst1|cos[15] at LC_X35_Y13_N1
+--operation mode is normal
+
+C1_cos[15]_lut_out = !C1_state.firststage & C1L25;
+C1_cos[15] = DFFEAS(C1_cos[15]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[14] is PCM3006:inst6|L_IN[14] at LC_X35_Y13_N4
+--operation mode is normal
+
+D1_L_IN[14]_lut_out = C1_cos[14];
+D1_L_IN[14] = DFFEAS(D1_L_IN[14]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[13] is PCM3006:inst6|SHIFTOUT[13] at LC_X36_Y13_N1
+--operation mode is normal
+
+D1_SHIFTOUT[13]_lut_out = A1L17 & (A1L16 & (D1_L_IN[13]) # !A1L16 & D1_SHIFTOUT[12]) # !A1L17 & D1_SHIFTOUT[12];
+D1_SHIFTOUT[13] = DFFEAS(D1_SHIFTOUT[13]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L504 is cordic_core:inst1|shift_right~8241 at LC_X26_Y11_N2
+--operation mode is normal
+
+C1L504 = C1_pass_count[1] & (C1_cur_sin[8]) # !C1_pass_count[1] & C1_cur_sin[6];
+
+
+--C1L505 is cordic_core:inst1|shift_right~8242 at LC_X26_Y11_N7
+--operation mode is normal
+
+C1L505 = C1_pass_count[0] & (C1L499) # !C1_pass_count[0] & (C1L504);
+
+
+--C1L145 is cordic_core:inst1|add~11570 at LC_X31_Y13_N5
+--operation mode is normal
+
+C1L145 = C1L110 & (C1L111 & !C1L484 # !C1L111 & (!C1L505));
+
+
+--C1L146 is cordic_core:inst1|add~11571 at LC_X31_Y13_N9
+--operation mode is normal
+
+C1L146 = C1_pass_count[3] & (C1L387 $ !C1L460);
+
+
+--C1L147 is cordic_core:inst1|add~11572 at LC_X31_Y13_N6
+--operation mode is normal
+
+C1L147 = C1_pass_count[2] & (C1L484) # !C1_pass_count[2] & (C1L505);
+
+
+--C1L148 is cordic_core:inst1|add~11573 at LC_X31_Y13_N7
+--operation mode is normal
+
+C1L148 = C1L145 # C1L146 # C1L114 & C1L147;
+
+
+--C1L149 is cordic_core:inst1|add~11574 at LC_X30_Y14_N1
+--operation mode is arithmetic
+
+C1L149_carry_eqn = (!C1L178 & C1L163) # (C1L178 & C1L164);
+C1L149 = C1L161 $ C1_cur_cos[5] $ !C1L149_carry_eqn;
+
+--C1L150 is cordic_core:inst1|add~11576 at LC_X30_Y14_N1
+--operation mode is arithmetic
+
+C1L150_cout_0 = C1L161 & (C1_cur_cos[5] # !C1L163) # !C1L161 & C1_cur_cos[5] & !C1L163;
+C1L150 = CARRY(C1L150_cout_0);
+
+--C1L151 is cordic_core:inst1|add~11576COUT1_11695 at LC_X30_Y14_N1
+--operation mode is arithmetic
+
+C1L151_cout_1 = C1L161 & (C1_cur_cos[5] # !C1L164) # !C1L161 & C1_cur_cos[5] & !C1L164;
+C1L151 = CARRY(C1L151_cout_1);
+
+
+--C1L506 is cordic_core:inst1|shift_right~8243 at LC_X29_Y14_N1
+--operation mode is normal
+
+C1L506 = C1_pass_count[0] & C1_cur_cos[7] # !C1_pass_count[0] & (C1_cur_cos[6]);
+
+
+--C1_cur_cos[4] is cordic_core:inst1|cur_cos[4] at LC_X28_Y14_N3
+--operation mode is normal
+
+C1_cur_cos[4]_lut_out = C1L412 & (C1L162 # C1L429 & C1_cur_cos[4]) # !C1L412 & C1L429 & (C1_cur_cos[4]);
+C1_cur_cos[4] = DFFEAS(C1_cur_cos[4]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L507 is cordic_core:inst1|shift_right~8244 at LC_X28_Y14_N4
+--operation mode is normal
+
+C1L507 = C1_pass_count[0] & C1_cur_cos[5] # !C1_pass_count[0] & (C1_cur_cos[4]);
+
+
+--C1L508 is cordic_core:inst1|shift_right~8245 at LC_X29_Y14_N8
+--operation mode is normal
+
+C1L508 = C1_pass_count[1] & (C1L506) # !C1_pass_count[1] & (C1L507);
+
+
+--C1L152 is cordic_core:inst1|add~11579 at LC_X29_Y10_N7
+--operation mode is normal
+
+C1L152 = C1L110 & (C1L111 & (C1L487) # !C1L111 & C1L508);
+
+
+--C1L153 is cordic_core:inst1|add~11580 at LC_X29_Y10_N5
+--operation mode is normal
+
+C1L153 = C1_pass_count[3] & (C1L387 $ C1L463);
+
+
+--C1L154 is cordic_core:inst1|add~11581 at LC_X29_Y10_N3
+--operation mode is normal
+
+C1L154 = C1_pass_count[2] & !C1L487 # !C1_pass_count[2] & (!C1L508);
+
+
+--C1L155 is cordic_core:inst1|add~11582 at LC_X29_Y10_N2
+--operation mode is normal
+
+C1L155 = C1L153 # C1L152 # C1L114 & C1L154;
+
+
+--C1_cur_sin[4] is cordic_core:inst1|cur_sin[4] at LC_X26_Y10_N7
+--operation mode is normal
+
+C1_cur_sin[4]_lut_out = C1L142 & (C1_state.idle);
+C1_cur_sin[4] = DFFEAS(C1_cur_sin[4]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L156 is cordic_core:inst1|add~11583 at LC_X28_Y12_N9
+--operation mode is arithmetic
+
+C1L156 = C1_cur_sin[3] $ C1L169 $ !C1L171;
+
+--C1L157 is cordic_core:inst1|add~11585 at LC_X28_Y12_N9
+--operation mode is arithmetic
+
+C1L157 = CARRY(C1_cur_sin[3] & (C1L169 # !C1L172) # !C1_cur_sin[3] & C1L169 & !C1L172);
+
+
+--C1_cos[14] is cordic_core:inst1|cos[14] at LC_X35_Y13_N3
+--operation mode is normal
+
+C1_cos[14]_lut_out = !C1_state.firststage & (C1L31);
+C1_cos[14] = DFFEAS(C1_cos[14]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[13] is PCM3006:inst6|L_IN[13] at LC_X35_Y13_N2
+--operation mode is normal
+
+D1_L_IN[13]_lut_out = C1_cos[13];
+D1_L_IN[13] = DFFEAS(D1_L_IN[13]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[12] is PCM3006:inst6|SHIFTOUT[12] at LC_X36_Y13_N6
+--operation mode is normal
+
+D1_SHIFTOUT[12]_lut_out = A1L16 & (A1L17 & (D1_L_IN[12]) # !A1L17 & D1_SHIFTOUT[11]) # !A1L16 & D1_SHIFTOUT[11];
+D1_SHIFTOUT[12] = DFFEAS(D1_SHIFTOUT[12]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L509 is cordic_core:inst1|shift_right~8246 at LC_X26_Y10_N1
+--operation mode is normal
+
+C1L509 = C1_pass_count[0] & C1_cur_sin[8] # !C1_pass_count[0] & (C1_cur_sin[7]);
+
+
+--C1L510 is cordic_core:inst1|shift_right~8247 at LC_X26_Y10_N8
+--operation mode is normal
+
+C1L510 = C1_pass_count[0] & (C1_cur_sin[6]) # !C1_pass_count[0] & C1_cur_sin[5];
+
+
+--C1L511 is cordic_core:inst1|shift_right~8248 at LC_X26_Y10_N2
+--operation mode is normal
+
+C1L511 = C1_pass_count[1] & (C1L509) # !C1_pass_count[1] & C1L510;
+
+
+--C1L158 is cordic_core:inst1|add~11588 at LC_X29_Y11_N7
+--operation mode is normal
+
+C1L158 = C1L110 & (C1L111 & (!C1L490) # !C1L111 & !C1L511);
+
+
+--C1L159 is cordic_core:inst1|add~11589 at LC_X29_Y11_N5
+--operation mode is normal
+
+C1L159 = C1_pass_count[3] & (C1L387 $ !C1L467);
+
+
+--C1L160 is cordic_core:inst1|add~11590 at LC_X29_Y11_N3
+--operation mode is normal
+
+C1L160 = C1_pass_count[2] & (C1L490) # !C1_pass_count[2] & (C1L511);
+
+
+--C1L161 is cordic_core:inst1|add~11591 at LC_X29_Y11_N8
+--operation mode is normal
+
+C1L161 = C1L159 # C1L158 # C1L114 & C1L160;
+
+
+--C1L162 is cordic_core:inst1|add~11592 at LC_X30_Y14_N0
+--operation mode is arithmetic
+
+C1L162_carry_eqn = C1L178;
+C1L162 = C1_cur_cos[4] $ C1L176 $ C1L162_carry_eqn;
+
+--C1L163 is cordic_core:inst1|add~11594 at LC_X30_Y14_N0
+--operation mode is arithmetic
+
+C1L163_cout_0 = C1_cur_cos[4] & !C1L176 & !C1L178 # !C1_cur_cos[4] & (!C1L178 # !C1L176);
+C1L163 = CARRY(C1L163_cout_0);
+
+--C1L164 is cordic_core:inst1|add~11594COUT1_11694 at LC_X30_Y14_N0
+--operation mode is arithmetic
+
+C1L164_cout_1 = C1_cur_cos[4] & !C1L176 & !C1L178 # !C1_cur_cos[4] & (!C1L178 # !C1L176);
+C1L164 = CARRY(C1L164_cout_1);
+
+
+--C1L165 is cordic_core:inst1|add~11597 at LC_X27_Y14_N3
+--operation mode is normal
+
+C1L165 = C1_pass_count[3] # !C1_pass_count[2] & C1_pass_count[1];
+
+
+--C1L166 is cordic_core:inst1|add~11598 at LC_X27_Y14_N0
+--operation mode is normal
+
+C1L166 = C1_pass_count[3] # C1_pass_count[2];
+
+
+--C1_cur_cos[3] is cordic_core:inst1|cur_cos[3] at LC_X30_Y15_N0
+--operation mode is normal
+
+C1_cur_cos[3]_lut_out = C1L429 & (C1_cur_cos[3] # C1L412 & C1L177) # !C1L429 & C1L412 & C1L177;
+C1_cur_cos[3] = DFFEAS(C1_cur_cos[3]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L512 is cordic_core:inst1|shift_right~8249 at LC_X28_Y14_N1
+--operation mode is normal
+
+C1L512 = C1_pass_count[0] & C1_cur_cos[4] # !C1_pass_count[0] & (C1_cur_cos[3]);
+
+
+--C1L167 is cordic_core:inst1|add~11599 at LC_X28_Y14_N7
+--operation mode is normal
+
+C1L167 = C1L165 & (C1L166) # !C1L165 & (C1L166 & (C1L493) # !C1L166 & C1L512);
+
+
+--C1L168 is cordic_core:inst1|add~11600 at LC_X28_Y13_N8
+--operation mode is normal
+
+C1L168 = C1L167 & (C1L470 # !C1L165) # !C1L167 & (C1L165 & C1L502);
+
+
+--C1L169 is cordic_core:inst1|add~11601 at LC_X28_Y13_N9
+--operation mode is normal
+
+C1L169 = C1L168 $ (C1L386 # C1_des_phase[19] & !C1_cur_phase[19]);
+
+
+--C1_cur_sin[3] is cordic_core:inst1|cur_sin[3] at LC_X28_Y12_N2
+--operation mode is normal
+
+C1_cur_sin[3]_lut_out = C1_state.idle & (C1L156);
+C1_cur_sin[3] = DFFEAS(C1_cur_sin[3]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L170 is cordic_core:inst1|add~11602 at LC_X28_Y12_N8
+--operation mode is arithmetic
+
+C1L170 = C1L181 $ C1_cur_sin[2] $ C1L183;
+
+--C1L171 is cordic_core:inst1|add~11604 at LC_X28_Y12_N8
+--operation mode is arithmetic
+
+C1L171_cout_0 = C1L181 & !C1_cur_sin[2] & !C1L183 # !C1L181 & (!C1L183 # !C1_cur_sin[2]);
+C1L171 = CARRY(C1L171_cout_0);
+
+--C1L172 is cordic_core:inst1|add~11604COUT1_11677 at LC_X28_Y12_N8
+--operation mode is arithmetic
+
+C1L172_cout_1 = C1L181 & !C1_cur_sin[2] & !C1L184 # !C1L181 & (!C1L184 # !C1_cur_sin[2]);
+C1L172 = CARRY(C1L172_cout_1);
+
+
+--C1_cos[13] is cordic_core:inst1|cos[13] at LC_X35_Y13_N6
+--operation mode is normal
+
+C1_cos[13]_lut_out = C1L39 & (!C1_state.firststage);
+C1_cos[13] = DFFEAS(C1_cos[13]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[12] is PCM3006:inst6|L_IN[12] at LC_X35_Y13_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[12]_lut_out = GND;
+D1_L_IN[12] = DFFEAS(D1_L_IN[12]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[12], , , VCC);
+
+
+--D1_SHIFTOUT[11] is PCM3006:inst6|SHIFTOUT[11] at LC_X36_Y13_N4
+--operation mode is normal
+
+D1_SHIFTOUT[11]_lut_out = A1L16 & (A1L17 & (D1_L_IN[11]) # !A1L17 & D1_SHIFTOUT[10]) # !A1L16 & D1_SHIFTOUT[10];
+D1_SHIFTOUT[11] = DFFEAS(D1_SHIFTOUT[11]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L513 is cordic_core:inst1|shift_right~8250 at LC_X26_Y11_N9
+--operation mode is normal
+
+C1L513 = C1_pass_count[0] & (C1_cur_sin[7]) # !C1_pass_count[0] & (C1_cur_sin[6]);
+
+
+--C1L514 is cordic_core:inst1|shift_right~8251 at LC_X26_Y10_N5
+--operation mode is normal
+
+C1L514 = C1_pass_count[0] & (C1_cur_sin[5]) # !C1_pass_count[0] & C1_cur_sin[4];
+
+
+--C1L515 is cordic_core:inst1|shift_right~8252 at LC_X26_Y10_N4
+--operation mode is normal
+
+C1L515 = C1_pass_count[1] & (C1L513) # !C1_pass_count[1] & C1L514;
+
+
+--C1L173 is cordic_core:inst1|add~11607 at LC_X30_Y11_N7
+--operation mode is normal
+
+C1L173 = C1L110 & (C1L111 & (!C1L495) # !C1L111 & !C1L515);
+
+
+--C1L174 is cordic_core:inst1|add~11608 at LC_X30_Y11_N5
+--operation mode is normal
+
+C1L174 = C1_pass_count[3] & (C1L387 $ !C1L473);
+
+
+--C1L175 is cordic_core:inst1|add~11609 at LC_X26_Y10_N6
+--operation mode is normal
+
+C1L175 = C1_pass_count[2] & (C1L495) # !C1_pass_count[2] & (C1L515);
+
+
+--C1L176 is cordic_core:inst1|add~11610 at LC_X30_Y11_N6
+--operation mode is normal
+
+C1L176 = C1L173 # C1L174 # C1L114 & C1L175;
+
+
+--C1L177 is cordic_core:inst1|add~11611 at LC_X30_Y15_N9
+--operation mode is arithmetic
+
+C1L177 = C1L187 $ C1_cur_cos[3] $ !C1L189;
+
+--C1L178 is cordic_core:inst1|add~11613 at LC_X30_Y15_N9
+--operation mode is arithmetic
+
+C1L178 = CARRY(C1L187 & (C1_cur_cos[3] # !C1L190) # !C1L187 & C1_cur_cos[3] & !C1L190);
+
+
+--C1_cur_cos[2] is cordic_core:inst1|cur_cos[2] at LC_X30_Y15_N1
+--operation mode is normal
+
+C1_cur_cos[2]_lut_out = C1_cur_cos[2] & (C1L429 # C1L412 & C1L188) # !C1_cur_cos[2] & C1L412 & C1L188;
+C1_cur_cos[2] = DFFEAS(C1_cur_cos[2]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L516 is cordic_core:inst1|shift_right~8253 at LC_X26_Y14_N4
+--operation mode is normal
+
+C1L516 = C1_pass_count[0] & (C1_cur_cos[3]) # !C1_pass_count[0] & C1_cur_cos[2];
+
+
+--C1L179 is cordic_core:inst1|add~11616 at LC_X27_Y14_N6
+--operation mode is normal
+
+C1L179 = C1L166 & (C1L165) # !C1L166 & (C1L165 & C1L507 # !C1L165 & (C1L516));
+
+
+--C1L180 is cordic_core:inst1|add~11617 at LC_X27_Y13_N3
+--operation mode is normal
+
+C1L180 = C1L166 & (C1L179 & (C1L476) # !C1L179 & C1L498) # !C1L166 & C1L179;
+
+
+--C1L181 is cordic_core:inst1|add~11618 at LC_X27_Y13_N4
+--operation mode is normal
+
+C1L181 = C1L180 $ (C1L386 # C1_des_phase[19] & !C1_cur_phase[19]);
+
+
+--C1_cur_sin[2] is cordic_core:inst1|cur_sin[2] at LC_X28_Y12_N3
+--operation mode is normal
+
+C1_cur_sin[2]_lut_out = C1L170 & C1_state.idle;
+C1_cur_sin[2] = DFFEAS(C1_cur_sin[2]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L182 is cordic_core:inst1|add~11619 at LC_X28_Y12_N7
+--operation mode is arithmetic
+
+C1L182 = C1L194 $ C1_cur_sin[1] $ !C1L196;
+
+--C1L183 is cordic_core:inst1|add~11621 at LC_X28_Y12_N7
+--operation mode is arithmetic
+
+C1L183_cout_0 = C1L194 & (C1_cur_sin[1] # !C1L196) # !C1L194 & C1_cur_sin[1] & !C1L196;
+C1L183 = CARRY(C1L183_cout_0);
+
+--C1L184 is cordic_core:inst1|add~11621COUT1_11676 at LC_X28_Y12_N7
+--operation mode is arithmetic
+
+C1L184_cout_1 = C1L194 & (C1_cur_sin[1] # !C1L197) # !C1L194 & C1_cur_sin[1] & !C1L197;
+C1L184 = CARRY(C1L184_cout_1);
+
+
+--C1_cos[12] is cordic_core:inst1|cos[12] at LC_X35_Y13_N7
+--operation mode is normal
+
+C1_cos[12]_lut_out = C1L47 & !C1_state.firststage;
+C1_cos[12] = DFFEAS(C1_cos[12]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[11] is PCM3006:inst6|L_IN[11] at LC_X35_Y13_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[11]_lut_out = GND;
+D1_L_IN[11] = DFFEAS(D1_L_IN[11]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[11], , , VCC);
+
+
+--D1_SHIFTOUT[10] is PCM3006:inst6|SHIFTOUT[10] at LC_X36_Y14_N9
+--operation mode is normal
+
+D1_SHIFTOUT[10]_lut_out = A1L16 & (A1L17 & (D1_L_IN[10]) # !A1L17 & D1_SHIFTOUT[9]) # !A1L16 & D1_SHIFTOUT[9];
+D1_SHIFTOUT[10] = DFFEAS(D1_SHIFTOUT[10]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L517 is cordic_core:inst1|shift_right~8254 at LC_X26_Y14_N2
+--operation mode is normal
+
+C1L517 = C1_pass_count[0] & C1_cur_sin[4] # !C1_pass_count[0] & (C1_cur_sin[3]);
+
+
+--C1L185 is cordic_core:inst1|add~11624 at LC_X30_Y12_N1
+--operation mode is normal
+
+C1L185 = C1L165 & (C1L166) # !C1L165 & (C1L166 & (!C1L500) # !C1L166 & !C1L517);
+
+
+--C1L186 is cordic_core:inst1|add~11625 at LC_X30_Y12_N3
+--operation mode is normal
+
+C1L186 = C1L165 & (C1L185 & !C1L479 # !C1L185 & (!C1L510)) # !C1L165 & (C1L185);
+
+
+--C1L187 is cordic_core:inst1|add~11626 at LC_X30_Y12_N2
+--operation mode is normal
+
+C1L187 = C1L186 $ (C1L386 # !C1_cur_phase[19] & C1_des_phase[19]);
+
+
+--C1L188 is cordic_core:inst1|add~11627 at LC_X30_Y15_N8
+--operation mode is arithmetic
+
+C1L188 = C1_cur_cos[2] $ C1L200 $ C1L202;
+
+--C1L189 is cordic_core:inst1|add~11629 at LC_X30_Y15_N8
+--operation mode is arithmetic
+
+C1L189_cout_0 = C1_cur_cos[2] & !C1L200 & !C1L202 # !C1_cur_cos[2] & (!C1L202 # !C1L200);
+C1L189 = CARRY(C1L189_cout_0);
+
+--C1L190 is cordic_core:inst1|add~11629COUT1_11693 at LC_X30_Y15_N8
+--operation mode is arithmetic
+
+C1L190_cout_1 = C1_cur_cos[2] & !C1L200 & !C1L203 # !C1_cur_cos[2] & (!C1L203 # !C1L200);
+C1L190 = CARRY(C1L190_cout_1);
+
+
+--C1L191 is cordic_core:inst1|add~11632 at LC_X26_Y12_N9
+--operation mode is normal
+
+C1L191 = C1_pass_count[2] # C1_pass_count[0] & !C1_pass_count[1];
+
+
+--C1_cur_cos[1] is cordic_core:inst1|cur_cos[1] at LC_X31_Y15_N6
+--operation mode is normal
+
+C1_cur_cos[1]_lut_out = C1_cur_cos[1] & (C1L429 # C1L201 & C1L412) # !C1_cur_cos[1] & C1L201 & (C1L412);
+C1_cur_cos[1] = DFFEAS(C1_cur_cos[1]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L192 is cordic_core:inst1|add~11633 at LC_X29_Y15_N5
+--operation mode is normal
+
+C1L192 = C1L191 & C1L33 # !C1L191 & (C1L33 & (C1L512) # !C1L33 & C1_cur_cos[1]);
+
+
+--C1L193 is cordic_core:inst1|add~11634 at LC_X29_Y15_N8
+--operation mode is normal
+
+C1L193 = C1L191 & (C1L192 & C1L503 # !C1L192 & (C1_cur_cos[2])) # !C1L191 & C1L192;
+
+
+--C1L194 is cordic_core:inst1|add~11635 at LC_X28_Y15_N1
+--operation mode is normal
+
+C1L194 = C1L387 $ (C1_pass_count[3] & C1L482 # !C1_pass_count[3] & (C1L193));
+
+
+--C1_cur_sin[1] is cordic_core:inst1|cur_sin[1] at LC_X28_Y12_N1
+--operation mode is normal
+
+C1_cur_sin[1]_lut_out = C1L182 & (C1_state.idle);
+C1_cur_sin[1] = DFFEAS(C1_cur_sin[1]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L195 is cordic_core:inst1|add~11636 at LC_X28_Y12_N6
+--operation mode is arithmetic
+
+C1L195 = C1L206 $ C1_cur_sin[0] $ C1L208;
+
+--C1L196 is cordic_core:inst1|add~11638 at LC_X28_Y12_N6
+--operation mode is arithmetic
+
+C1L196_cout_0 = C1L206 & !C1_cur_sin[0] & !C1L208 # !C1L206 & (!C1L208 # !C1_cur_sin[0]);
+C1L196 = CARRY(C1L196_cout_0);
+
+--C1L197 is cordic_core:inst1|add~11638COUT1_11675 at LC_X28_Y12_N6
+--operation mode is arithmetic
+
+C1L197_cout_1 = C1L206 & !C1_cur_sin[0] & !C1L209 # !C1L206 & (!C1L209 # !C1_cur_sin[0]);
+C1L197 = CARRY(C1L197_cout_1);
+
+
+--C1_cos[11] is cordic_core:inst1|cos[11] at LC_X35_Y13_N8
+--operation mode is normal
+
+C1_cos[11]_lut_out = C1L55 & !C1_state.firststage;
+C1_cos[11] = DFFEAS(C1_cos[11]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[10] is PCM3006:inst6|L_IN[10] at LC_X31_Y14_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[10]_lut_out = GND;
+D1_L_IN[10] = DFFEAS(D1_L_IN[10]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[10], , , VCC);
+
+
+--D1_SHIFTOUT[9] is PCM3006:inst6|SHIFTOUT[9] at LC_X36_Y14_N3
+--operation mode is normal
+
+D1_SHIFTOUT[9]_lut_out = A1L16 & (A1L17 & D1_L_IN[9] # !A1L17 & (D1_SHIFTOUT[8])) # !A1L16 & (D1_SHIFTOUT[8]);
+D1_SHIFTOUT[9] = DFFEAS(D1_SHIFTOUT[9]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L518 is cordic_core:inst1|shift_right~8255 at LC_X28_Y12_N4
+--operation mode is normal
+
+C1L518 = C1_pass_count[0] & C1_cur_sin[3] # !C1_pass_count[0] & (C1_cur_sin[2]);
+
+
+--C1L198 is cordic_core:inst1|add~11641 at LC_X27_Y14_N5
+--operation mode is normal
+
+C1L198 = C1L165 & (C1L166 # !C1L514) # !C1L165 & !C1L518 & (!C1L166);
+
+
+--C1L199 is cordic_core:inst1|add~11642 at LC_X31_Y13_N3
+--operation mode is normal
+
+C1L199 = C1L166 & (C1L198 & (!C1L485) # !C1L198 & !C1L505) # !C1L166 & C1L198;
+
+
+--C1L200 is cordic_core:inst1|add~11643 at LC_X31_Y13_N4
+--operation mode is normal
+
+C1L200 = C1L199 $ (C1L386 # C1_des_phase[19] & !C1_cur_phase[19]);
+
+
+--C1L201 is cordic_core:inst1|add~11644 at LC_X30_Y15_N7
+--operation mode is arithmetic
+
+C1L201 = C1_cur_cos[1] $ C1L212 $ !C1L214;
+
+--C1L202 is cordic_core:inst1|add~11646 at LC_X30_Y15_N7
+--operation mode is arithmetic
+
+C1L202_cout_0 = C1_cur_cos[1] & (C1L212 # !C1L214) # !C1_cur_cos[1] & C1L212 & !C1L214;
+C1L202 = CARRY(C1L202_cout_0);
+
+--C1L203 is cordic_core:inst1|add~11646COUT1_11692 at LC_X30_Y15_N7
+--operation mode is arithmetic
+
+C1L203_cout_1 = C1_cur_cos[1] & (C1L212 # !C1L215) # !C1_cur_cos[1] & C1L212 & !C1L215;
+C1L203 = CARRY(C1L203_cout_1);
+
+
+--C1_cur_cos[0] is cordic_core:inst1|cur_cos[0] at LC_X31_Y15_N9
+--operation mode is normal
+
+C1_cur_cos[0]_lut_out = C1_cur_cos[0] & (C1L429 # C1L412 & C1L213) # !C1_cur_cos[0] & C1L412 & (C1L213);
+C1_cur_cos[0] = DFFEAS(C1_cur_cos[0]_lut_out, GLOBAL(12_288MHz), VCC, , !SWITCH1, , , , );
+
+
+--C1L204 is cordic_core:inst1|add~11649 at LC_X29_Y14_N3
+--operation mode is normal
+
+C1L204 = C1L33 & (C1L516 # C1L191) # !C1L33 & (!C1L191 & C1_cur_cos[0]);
+
+
+--C1L205 is cordic_core:inst1|add~11650 at LC_X29_Y14_N7
+--operation mode is normal
+
+C1L205 = C1L191 & (C1L204 & (C1L508) # !C1L204 & C1_cur_cos[1]) # !C1L191 & (C1L204);
+
+
+--C1L206 is cordic_core:inst1|add~11651 at LC_X29_Y14_N4
+--operation mode is normal
+
+C1L206 = C1L387 $ (C1_pass_count[3] & (C1L488) # !C1_pass_count[3] & C1L205);
+
+
+--C1_cur_sin[0] is cordic_core:inst1|cur_sin[0] at LC_X28_Y12_N0
+--operation mode is normal
+
+C1_cur_sin[0]_lut_out = C1_state.idle & C1L195;
+C1_cur_sin[0] = DFFEAS(C1_cur_sin[0]_lut_out, GLOBAL(12_288MHz), VCC, , C1L321, , , , );
+
+
+--C1L208 is cordic_core:inst1|add~11654 at LC_X28_Y12_N5
+--operation mode is arithmetic
+
+C1L208_cout_0 = C1L386 # C1L388;
+C1L208 = CARRY(C1L208_cout_0);
+
+--C1L209 is cordic_core:inst1|add~11654COUT1_11674 at LC_X28_Y12_N5
+--operation mode is arithmetic
+
+C1L209_cout_1 = C1L386 # C1L388;
+C1L209 = CARRY(C1L209_cout_1);
+
+
+--C1_cos[10] is cordic_core:inst1|cos[10] at LC_X31_Y14_N7
+--operation mode is normal
+
+C1_cos[10]_lut_out = C1L62 & (!C1_state.firststage);
+C1_cos[10] = DFFEAS(C1_cos[10]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[9] is PCM3006:inst6|L_IN[9] at LC_X31_Y14_N0
+--operation mode is normal
+
+D1_L_IN[9]_lut_out = C1_cos[9];
+D1_L_IN[9] = DFFEAS(D1_L_IN[9]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[8] is PCM3006:inst6|SHIFTOUT[8] at LC_X36_Y14_N6
+--operation mode is normal
+
+D1_SHIFTOUT[8]_lut_out = A1L16 & (A1L17 & D1_L_IN[8] # !A1L17 & (D1_SHIFTOUT[7])) # !A1L16 & (D1_SHIFTOUT[7]);
+D1_SHIFTOUT[8] = DFFEAS(D1_SHIFTOUT[8]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L210 is cordic_core:inst1|add~11657 at LC_X26_Y14_N5
+--operation mode is normal
+
+C1L210 = C1L33 & (C1L191 # !C1L517) # !C1L33 & !C1_cur_sin[1] & (!C1L191);
+
+
+--C1L211 is cordic_core:inst1|add~11658 at LC_X29_Y11_N2
+--operation mode is normal
+
+C1L211 = C1L191 & (C1L210 & !C1L511 # !C1L210 & (!C1_cur_sin[2])) # !C1L191 & C1L210;
+
+
+--C1L212 is cordic_core:inst1|add~11659 at LC_X29_Y11_N6
+--operation mode is normal
+
+C1L212 = C1L387 $ (C1_pass_count[3] & (!C1L491) # !C1_pass_count[3] & C1L211);
+
+
+--C1L213 is cordic_core:inst1|add~11660 at LC_X30_Y15_N6
+--operation mode is arithmetic
+
+C1L213 = C1_cur_cos[0] $ C1L218 $ C1L220;
+
+--C1L214 is cordic_core:inst1|add~11662 at LC_X30_Y15_N6
+--operation mode is arithmetic
+
+C1L214_cout_0 = C1_cur_cos[0] & !C1L218 & !C1L220 # !C1_cur_cos[0] & (!C1L220 # !C1L218);
+C1L214 = CARRY(C1L214_cout_0);
+
+--C1L215 is cordic_core:inst1|add~11662COUT1_11691 at LC_X30_Y15_N6
+--operation mode is arithmetic
+
+C1L215_cout_1 = C1_cur_cos[0] & !C1L218 & !C1L221 # !C1_cur_cos[0] & (!C1L221 # !C1L218);
+C1L215 = CARRY(C1L215_cout_1);
+
+
+--C1_cos[9] is cordic_core:inst1|cos[9] at LC_X31_Y14_N5
+--operation mode is normal
+
+C1_cos[9]_lut_out = C1L70 & (!C1_state.firststage);
+C1_cos[9] = DFFEAS(C1_cos[9]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[8] is PCM3006:inst6|L_IN[8] at LC_X31_Y14_N8
+--operation mode is normal
+
+D1_L_IN[8]_lut_out = C1_cos[8];
+D1_L_IN[8] = DFFEAS(D1_L_IN[8]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[7] is PCM3006:inst6|SHIFTOUT[7] at LC_X36_Y14_N7
+--operation mode is normal
+
+D1_SHIFTOUT[7]_lut_out = A1L16 & (A1L17 & D1_L_IN[7] # !A1L17 & (D1_SHIFTOUT[6])) # !A1L16 & (D1_SHIFTOUT[6]);
+D1_SHIFTOUT[7] = DFFEAS(D1_SHIFTOUT[7]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1L216 is cordic_core:inst1|add~11665 at LC_X26_Y14_N6
+--operation mode is normal
+
+C1L216 = C1L33 & (C1L191) # !C1L33 & (C1L191 & !C1_cur_sin[1] # !C1L191 & (!C1_cur_sin[0]));
+
+
+--C1L217 is cordic_core:inst1|add~11666 at LC_X30_Y15_N2
+--operation mode is normal
+
+C1L217 = C1L33 & (C1L216 & (!C1L515) # !C1L216 & !C1L518) # !C1L33 & (C1L216);
+
+
+--C1L218 is cordic_core:inst1|add~11667 at LC_X30_Y15_N3
+--operation mode is normal
+
+C1L218 = C1L387 $ (C1_pass_count[3] & !C1L496 # !C1_pass_count[3] & (C1L217));
+
+
+--C1L220 is cordic_core:inst1|add~11670 at LC_X30_Y15_N5
+--operation mode is arithmetic
+
+C1L220_cout_0 = !C1L388 & !C1L386;
+C1L220 = CARRY(C1L220_cout_0);
+
+--C1L221 is cordic_core:inst1|add~11670COUT1_11690 at LC_X30_Y15_N5
+--operation mode is arithmetic
+
+C1L221_cout_1 = !C1L388 & !C1L386;
+C1L221 = CARRY(C1L221_cout_1);
+
+
+--C1_cos[8] is cordic_core:inst1|cos[8] at LC_X31_Y14_N6
+--operation mode is normal
+
+C1_cos[8]_lut_out = C1L77 & !C1_state.firststage;
+C1_cos[8] = DFFEAS(C1_cos[8]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[7] is PCM3006:inst6|L_IN[7] at LC_X31_Y14_N3
+--operation mode is normal
+
+D1_L_IN[7]_lut_out = C1_cos[7];
+D1_L_IN[7] = DFFEAS(D1_L_IN[7]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[6] is PCM3006:inst6|SHIFTOUT[6] at LC_X36_Y14_N2
+--operation mode is normal
+
+D1_SHIFTOUT[6]_lut_out = A1L16 & (A1L17 & D1_L_IN[6] # !A1L17 & (D1_SHIFTOUT[5])) # !A1L16 & (D1_SHIFTOUT[5]);
+D1_SHIFTOUT[6] = DFFEAS(D1_SHIFTOUT[6]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[7] is cordic_core:inst1|cos[7] at LC_X31_Y14_N1
+--operation mode is normal
+
+C1_cos[7]_lut_out = C1L85 & (!C1_state.firststage);
+C1_cos[7] = DFFEAS(C1_cos[7]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[6] is PCM3006:inst6|L_IN[6] at LC_X31_Y14_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[6]_lut_out = GND;
+D1_L_IN[6] = DFFEAS(D1_L_IN[6]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[6], , , VCC);
+
+
+--D1_SHIFTOUT[5] is PCM3006:inst6|SHIFTOUT[5] at LC_X36_Y14_N8
+--operation mode is normal
+
+D1_SHIFTOUT[5]_lut_out = A1L16 & (A1L17 & (D1_L_IN[5]) # !A1L17 & D1_SHIFTOUT[4]) # !A1L16 & (D1_SHIFTOUT[4]);
+D1_SHIFTOUT[5] = DFFEAS(D1_SHIFTOUT[5]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[6] is cordic_core:inst1|cos[6] at LC_X31_Y14_N9
+--operation mode is normal
+
+C1_cos[6]_lut_out = !C1_state.firststage & (C1L93);
+C1_cos[6] = DFFEAS(C1_cos[6]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[5] is PCM3006:inst6|L_IN[5] at LC_X35_Y14_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[5]_lut_out = GND;
+D1_L_IN[5] = DFFEAS(D1_L_IN[5]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[5], , , VCC);
+
+
+--D1_SHIFTOUT[4] is PCM3006:inst6|SHIFTOUT[4] at LC_X36_Y14_N4
+--operation mode is normal
+
+D1_SHIFTOUT[4]_lut_out = A1L16 & (A1L17 & (D1_L_IN[4]) # !A1L17 & D1_SHIFTOUT[3]) # !A1L16 & D1_SHIFTOUT[3];
+D1_SHIFTOUT[4] = DFFEAS(D1_SHIFTOUT[4]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[5] is cordic_core:inst1|cos[5] at LC_X35_Y14_N2
+--operation mode is normal
+
+C1_cos[5]_lut_out = !C1_state.firststage & (C1L100);
+C1_cos[5] = DFFEAS(C1_cos[5]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[4] is PCM3006:inst6|L_IN[4] at LC_X35_Y14_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[4]_lut_out = GND;
+D1_L_IN[4] = DFFEAS(D1_L_IN[4]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[4], , , VCC);
+
+
+--D1_SHIFTOUT[3] is PCM3006:inst6|SHIFTOUT[3] at LC_X36_Y14_N0
+--operation mode is normal
+
+D1_SHIFTOUT[3]_lut_out = A1L16 & (A1L17 & (D1_L_IN[3]) # !A1L17 & D1_SHIFTOUT[2]) # !A1L16 & D1_SHIFTOUT[2];
+D1_SHIFTOUT[3] = DFFEAS(D1_SHIFTOUT[3]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[4] is cordic_core:inst1|cos[4] at LC_X35_Y14_N4
+--operation mode is normal
+
+C1_cos[4]_lut_out = !C1_state.firststage & (C1L108);
+C1_cos[4] = DFFEAS(C1_cos[4]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[3] is PCM3006:inst6|L_IN[3] at LC_X35_Y14_N5
+--operation mode is normal
+
+D1_L_IN[3]_lut_out = C1_cos[3];
+D1_L_IN[3] = DFFEAS(D1_L_IN[3]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[2] is PCM3006:inst6|SHIFTOUT[2] at LC_X36_Y14_N5
+--operation mode is normal
+
+D1_SHIFTOUT[2]_lut_out = A1L16 & (A1L17 & D1_L_IN[2] # !A1L17 & (D1_SHIFTOUT[1])) # !A1L16 & (D1_SHIFTOUT[1]);
+D1_SHIFTOUT[2] = DFFEAS(D1_SHIFTOUT[2]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[3] is cordic_core:inst1|cos[3] at LC_X35_Y14_N3
+--operation mode is normal
+
+C1_cos[3]_lut_out = !C1_state.firststage & (C1L121);
+C1_cos[3] = DFFEAS(C1_cos[3]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[2] is PCM3006:inst6|L_IN[2] at LC_X35_Y14_N8
+--operation mode is normal
+
+D1_L_IN[2]_lut_out = C1_cos[2];
+D1_L_IN[2] = DFFEAS(D1_L_IN[2]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, , , , );
+
+
+--D1_SHIFTOUT[1] is PCM3006:inst6|SHIFTOUT[1] at LC_X36_Y14_N1
+--operation mode is normal
+
+D1_SHIFTOUT[1]_lut_out = A1L16 & (A1L17 & (D1_L_IN[1]) # !A1L17 & D1_SHIFTOUT[0]) # !A1L16 & D1_SHIFTOUT[0];
+D1_SHIFTOUT[1] = DFFEAS(D1_SHIFTOUT[1]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[2] is cordic_core:inst1|cos[2] at LC_X35_Y14_N6
+--operation mode is normal
+
+C1_cos[2]_lut_out = !C1_state.firststage & (C1L135);
+C1_cos[2] = DFFEAS(C1_cos[2]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[1] is PCM3006:inst6|L_IN[1] at LC_X35_Y14_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[1]_lut_out = GND;
+D1_L_IN[1] = DFFEAS(D1_L_IN[1]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[1], , , VCC);
+
+
+--D1_SHIFTOUT[0] is PCM3006:inst6|SHIFTOUT[0] at LC_X35_Y11_N4
+--operation mode is normal
+
+D1_SHIFTOUT[0]_lut_out = A1L16 & (A1L17 & D1_L_IN[0]);
+D1_SHIFTOUT[0] = DFFEAS(D1_SHIFTOUT[0]_lut_out, GLOBAL(12_288MHz), VCC, , D1_NEGEDGE_BCK, , , , );
+
+
+--C1_cos[1] is cordic_core:inst1|cos[1] at LC_X35_Y14_N7
+--operation mode is normal
+
+C1_cos[1]_lut_out = !C1_state.firststage & (C1L149);
+C1_cos[1] = DFFEAS(C1_cos[1]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--D1_L_IN[0] is PCM3006:inst6|L_IN[0] at LC_X32_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+D1_L_IN[0]_lut_out = GND;
+D1_L_IN[0] = DFFEAS(D1_L_IN[0]_lut_out, GLOBAL(12_288MHz), VCC, , C1_ready, C1_cos[0], , , VCC);
+
+
+--C1_cos[0] is cordic_core:inst1|cos[0] at LC_X32_Y10_N7
+--operation mode is normal
+
+C1_cos[0]_lut_out = !C1_state.firststage & C1L162;
+C1_cos[0] = DFFEAS(C1_cos[0]_lut_out, GLOBAL(12_288MHz), VCC, , C1L538, , , , );
+
+
+--C1L519 is cordic_core:inst1|shift_right~8256 at LC_X29_Y13_N0
+--operation mode is normal
+
+C1L519 = C1_pass_count[2] & (C1_cur_cos[19]) # !C1_pass_count[2] & (C1_pass_count[1] & C1_cur_cos[19] # !C1_pass_count[1] & (C1L432));
+
+
+--C1L520 is cordic_core:inst1|shift_right~8257 at LC_X29_Y12_N5
+--operation mode is normal
+
+C1L520 = C1_pass_count[1] & (C1_cur_sin[19]) # !C1_pass_count[1] & (C1_pass_count[2] & (C1_cur_sin[19]) # !C1_pass_count[2] & C1L437);
+
+
+--DOUT is DOUT at PIN_F13
+--operation mode is input
+
+DOUT = INPUT();
+
+
+--12_288MHz is 12_288MHz at PIN_B12
+--operation mode is input
+
+12_288MHz = INPUT();
+
+
+--SWITCH1 is SWITCH1 at PIN_T15
+--operation mode is input
+
+SWITCH1 = INPUT();
+
+
+--DIPSWITCH[7] is DIPSWITCH[7] at PIN_N15
+--operation mode is input
+
+DIPSWITCH[7] = INPUT();
+
+
+--DIPSWITCH[6] is DIPSWITCH[6] at PIN_P13
+--operation mode is input
+
+DIPSWITCH[6] = INPUT();
+
+
+--DIPSWITCH[5] is DIPSWITCH[5] at PIN_N14
+--operation mode is input
+
+DIPSWITCH[5] = INPUT();
+
+
+--DIPSWITCH[4] is DIPSWITCH[4] at PIN_P15
+--operation mode is input
+
+DIPSWITCH[4] = INPUT();
+
+
+--DIPSWITCH[3] is DIPSWITCH[3] at PIN_R16
+--operation mode is input
+
+DIPSWITCH[3] = INPUT();
+
+
+--DIPSWITCH[2] is DIPSWITCH[2] at PIN_R14
+--operation mode is input
+
+DIPSWITCH[2] = INPUT();
+
+
+--DIPSWITCH[1] is DIPSWITCH[1] at PIN_R15
+--operation mode is input
+
+DIPSWITCH[1] = INPUT();
+
+
+--DIPSWITCH[0] is DIPSWITCH[0] at PIN_R13
+--operation mode is input
+
+DIPSWITCH[0] = INPUT();
+
+
+--DIN is DIN at PIN_E16
+--operation mode is output
+
+DIN = OUTPUT(D1_SHIFTOUT[31]);
+
+
+--BCKIN is BCKIN at PIN_F16
+--operation mode is output
+
+BCKIN = OUTPUT(D1_COUNT[2]);
+
+
+--LRCIN is LRCIN at PIN_F15
+--operation mode is output
+
+LRCIN = OUTPUT(D1_LRCOUT_INT);
+
+
+--RESETn is RESETn at PIN_F14
+--operation mode is output
+
+RESETn = OUTPUT(VCC);
+
+
+
+

@@ -1,0 +1,16 @@
+-myuxi
+-Y
+-b CSEG = 0x0000
+-b ISEG = 0x0080
+-b BSEG = 0x0000
+-k C:\Program Files\SDCC\bin\..\lib\large
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+firmware.rel
+i2c.rel
+lcd.rel
+
+-e

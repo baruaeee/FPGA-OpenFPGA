@@ -1,0 +1,1292 @@
+objectfile:open_ether.obj
+time:Thu Dec 14 11:33:34 2006
+cpuname:i8051
+import:__st_dptr_r03
+import:__st_dptr_r67
+import:__st_dptr_r45
+import:__st_dptr_r47
+import:_rx_bd
+import:__ld_dptr_r67
+import:__ld_dptr_r47
+import:__gen_read32_i4
+import:_my_mac
+import:__mul_i2
+export:_Init_Mac @5:0
+export:_RequestSend_Phy @f:0
+export:_init_rx @8:0
+export:_Read_Frame_long_Phy @18:0
+export:_Read_Frame_word_Phy @15:0
+export:_pTxPtr @c:0
+export:_find_RX_Buffer @b:0
+export:_pRxPtr @25:0
+export:_Write_Frame_long_Phy @21:0
+export:_Write_Frame_word_Phy @1e:0
+export:_CommitSend_Phy @12:0
+export:_Write_Frame_xdata_Phy @24:0
+export:_Read_Frame_xdata_Phy @1b:0
+export:_set_mac_add @2:0
+segment:_set_mac_add_formal_near @0:m s:0 u:0 n f c:dram
+segment:_set_mac_add_local_near @1:m s:0 u:0 n f c:dram
+segment:__set_mac_add @2:m u:58
+a8 06 a9 07 74 01 29 ff e4 38 fe 85 06 83 85 07
+82 e0 ff ab 07 7a 00 85 00 83 85 01 82 e0 ff ad
+07 7c 00 7f 08 ae 04 ed 8f f0 05 f0 80 00 c3 33
+ce 33 ce d5 f0 00 ff 4b ff ee 4a fe e4 fd fc 90
+d0 44 12 00 00 74 02 29 ff e4 38 fe 7c 00 12 00
+00 90 d0 40 12 00 00 22
+segment:_Init_Mac_formal_near @3:m s:0 u:0 n f c:dram
+segment:_Init_Mac_local_near @4:m s:0 u:0 n f c:dram
+segment:__Init_Mac @5:m u:1e7
+c2 ff 90 d0 00 e4 f0 a3 f0 a3 74 08 f0 a3 e4 f0
+90 d0 00 12 00 00 53 06 f7 e4 fd fc 90 d0 00 12
+00 00 90 d0 23 74 01 f0 90 d0 18 e4 f0 a3 74 40
+f0 a3 74 06 f0 a3 e4 f0 90 d0 0f 74 12 f0 90 d0
+13 74 0c f0 90 d0 17 74 12 f0 90 d0 1c e4 f0 a3
+74 0f f0 a3 e4 f0 a3 74 3f f0 90 d0 27 e4 f0 75
+08 d4 e4 f5 09 f9 ad 01 7c 00 7f 03 ae 04 ed 8f
+f0 05 f0 80 00 c3 33 ce 33 ce d5 f0 00 ff e5 09
+2f fb e5 08 3e fa e4 fc fd 7e 58 7f 00 8a 83 8b
+82 12 00 00 ad 01 7c 00 7f 03 ae 04 ed 8f f0 05
+f0 80 00 c3 33 ce 33 ce d5 f0 00 ff e5 09 2f ff
+e5 08 3e fe 74 04 2f fb e4 3e fa ae 04 af 05 7c
+06 7d 00 12 00 00 e4 2f ff 74 18 3e fe e4 fd fc
+8a 83 8b 82 12 00 00 09 b9 01 00 80 00 02 00 00
+ae 08 af 09 8e 83 8f 82 12 00 00 43 06 20 aa 08
+ab 09 8a 83 8b 82 12 00 00 7e d4 7f 00 74 08 2f
+ff e4 3e fe 8e 08 8f 09 e4 f9 ad 01 7c 00 7f 03
+ae 04 ed 8f f0 05 f0 80 00 c3 33 ce 33 ce d5 f0
+00 ff e5 09 2f fb e5 08 3e fa 7d 10 e4 fe ff 8d
+f0 05 f0 80 00 c3 33 ce 33 ce d5 f0 00 ff ff 43
+06 80 43 06 40 e4 fd fc 8a 83 8b 82 12 00 00 ad
+01 7c 00 7f 03 ae 04 ed 8f f0 05 f0 80 00 c3 33
+ce 33 ce d5 f0 00 ff e5 09 2f ff e5 08 3e fe 74
+04 2f fb e4 3e fa ae 04 af 05 7c 06 7d 00 12 00
+00 e4 fd fc 8a 83 8b 82 12 00 00 09 b9 04 00 80
+00 02 00 00 74 18 25 09 f5 09 e4 35 08 f5 08 ae
+08 af 09 8e 83 8f 82 12 00 00 43 06 20 aa 08 ab
+09 8a 83 8b 82 12 00 00 7e 00 7f 00 12 00 00 7c
+ff 7d ff 7e ff 7f ff 90 d0 07 ef f0 90 d0 0b 74
+7f f0 90 d0 00 12 00 00 43 07 43 43 06 a0 90 d0
+00 12 00 00 e4 ff 22
+segment:_init_rx_formal_near @6:m s:0 u:0 n f c:dram
+segment:_init_rx_local_near @7:m s:0 u:0 n f c:dram
+segment:__init_rx @8:m u:1a
+ae 00 af 00 74 06 2f ff e4 3e fe 8e 83 8f 82 12
+00 00 43 06 e0 8e 00 8f 00 22
+segment:_find_RX_Buffer_formal_near @9:m s:0 u:0 n f c:dram
+segment:_find_RX_Buffer_local_near @a:m s:0 u:0 n f c:dram
+segment:__find_RX_Buffer @b:m u:40
+7e d4 7f 00 74 08 2f fd e4 3e fc e4 fb 74 02 2d
+ff e4 3c fe 8e 83 8f 82 12 00 00 7f 00 53 06 80
+ee 4f 60 00 0b 74 08 2d fd e4 3c fc 7f 04 c3 eb
+9f 40 00 bb 04 00 e4 fe ff 80 00 ae 04 af 05 22
+segment:neardata @c:m u:2 c:dram
+00 00
+segment:_RequestSend_Phy_formal_near @d:m s:0 u:0 n f c:dram
+segment:_RequestSend_Phy_local_near @e:m s:0 u:0 n f c:dram
+segment:__RequestSend_Phy @f:m u:3c
+90 d4 00 12 00 00 7c d4 7d 00 74 02 2d fb e4 3c
+fa 7c 78 7d 00 8a 83 8b 82 12 00 00 7c d4 7d 00
+74 04 2d fd e4 3c fc e4 f8 f9 7a 18 7b 00 8c 83
+8d 82 12 00 00 75 00 f8 75 00 00 22
+segment:_CommitSend_Phy_formal_near @10:m s:0 u:0 n f c:dram
+segment:_CommitSend_Phy_local_near @11:m s:0 u:0 n f c:dram
+segment:__CommitSend_Phy @12:m u:28
+7e d4 7f 00 74 02 2f ff e4 3e fe 8e 08 8f 09 8e
+83 8f 82 12 00 00 ef fd ee 44 c8 fc ae 08 af 09
+8e 83 8f 82 12 00 00 22
+segment:_Read_Frame_word_Phy_formal_near @13:m s:0 u:0 n f c:dram
+segment:_Read_Frame_word_Phy_local_near @14:m s:0 u:0 n f c:dram
+segment:__Read_Frame_word_Phy @15:m u:17
+ae 00 af 00 8e 83 8f 82 12 00 00 74 02 25 00 f5
+00 e4 35 00 f5 00 22
+segment:_Read_Frame_long_Phy_formal_near @16:m s:0 u:0 n f c:dram
+segment:_Read_Frame_long_Phy_local_near @17:m s:0 u:0 n f c:dram
+segment:__Read_Frame_long_Phy @18:m u:17
+ae 00 af 00 8e 83 8f 82 12 00 00 74 04 25 00 f5
+00 e4 35 00 f5 00 22
+segment:_Read_Frame_xdata_Phy_formal_near @19:m s:0 u:0 n f c:dram
+segment:_Read_Frame_xdata_Phy_local_near @1a:m s:0 u:0 n f c:dram
+segment:__Read_Frame_xdata_Phy @1b:m u:49
+a8 04 a9 05 ac 06 ad 07 80 00 8c 08 8d 09 aa 08
+ab 09 74 01 2b fd e4 3a fc ae 00 af 00 74 01 2f
+fb e4 3e fa 8a 00 8b 00 85 06 83 85 07 82 e0 fb
+85 08 83 85 09 82 eb f0 ae 00 af 01 74 ff 2f f9
+74 ff 3e f8 ee 4f 70 00 22
+segment:_Write_Frame_word_Phy_formal_near @1c:m s:0 u:0 n f c:dram
+segment:_Write_Frame_word_Phy_local_near @1d:m s:0 u:0 n f c:dram
+segment:__Write_Frame_word_Phy @1e:m u:17
+ac 00 ad 00 8c 83 8d 82 12 00 00 74 02 25 00 f5
+00 e4 35 00 f5 00 22
+segment:_Write_Frame_long_Phy_formal_near @1f:m s:0 u:0 n f c:dram
+segment:_Write_Frame_long_Phy_local_near @20:m s:0 u:0 n f c:dram
+segment:__Write_Frame_long_Phy @21:m u:17
+aa 00 ab 00 8a 83 8b 82 12 00 00 74 04 25 00 f5
+00 e4 35 00 f5 00 22
+segment:_Write_Frame_xdata_Phy_formal_near @22:m s:0 u:0 n f c:dram
+segment:_Write_Frame_xdata_Phy_local_near @23:m s:0 u:0 n f c:dram
+segment:__Write_Frame_xdata_Phy @24:m u:47
+a8 04 a9 05 ac 06 ad 07 80 00 85 00 08 85 00 09
+74 01 25 09 f5 00 e4 35 08 f5 00 ae 04 af 05 74
+01 2f fd e4 3e fc 85 06 83 85 07 82 e0 fb 85 08
+83 85 09 82 eb f0 ae 00 af 01 74 ff 2f f9 74 ff
+3e f8 ee 4f 70 00 22
+segment:nearbss @25:m u:2 n c:dram
+sgraph:_set_mac_add_formal_near _set_mac_add_local_near __set_mac_add
+sgraph:_Init_Mac_formal_near _Init_Mac_local_near __Init_Mac
+sgraph:_Init_Mac_local_near _set_mac_add_formal_near __Init_Mac 0
+sgraph:_init_rx_formal_near _init_rx_local_near __init_rx
+sgraph:_find_RX_Buffer_formal_near _find_RX_Buffer_local_near __find_RX_Buffer
+sgraph:_RequestSend_Phy_formal_near _RequestSend_Phy_local_near __RequestSend_Phy
+sgraph:_CommitSend_Phy_formal_near _CommitSend_Phy_local_near __CommitSend_Phy
+sgraph:_Read_Frame_word_Phy_formal_near _Read_Frame_word_Phy_local_near __Read_Frame_word_Phy
+sgraph:_Read_Frame_long_Phy_formal_near _Read_Frame_long_Phy_local_near __Read_Frame_long_Phy
+sgraph:_Read_Frame_xdata_Phy_formal_near _Read_Frame_xdata_Phy_local_near __Read_Frame_xdata_Phy
+sgraph:_Write_Frame_word_Phy_formal_near _Write_Frame_word_Phy_local_near __Write_Frame_word_Phy
+sgraph:_Write_Frame_long_Phy_formal_near _Write_Frame_long_Phy_local_near __Write_Frame_long_Phy
+sgraph:_Write_Frame_xdata_Phy_formal_near _Write_Frame_xdata_Phy_local_near __Write_Frame_xdata_Phy
+src:tcpip\open_ether.s51 #0
+src:C:\uC51\include\reg51.def #1
+src:C:\uC51\include\reg52.def #2
+src:C:\uC51\include\reg51.def #3
+ref rbyte #0:72 @2:2d @2:33
+ref rbyte #0:7a @2:35 @2:2e
+ref w_hl #0:85 @2:43 __st_dptr_r47
+ref w_hl #0:8e @2:4f __gen_read32_i4
+ref w_hl #0:90 @2:55 __st_dptr_r47
+ref w_hl #0:b0 @5:14 __ld_dptr_r47
+ref w_hl #0:b6 @5:20 __st_dptr_r47
+ref rbyte #0:f6 @5:74 @5:7a
+ref rbyte #0:fe @5:7c @5:75
+ref w_hl #0:10d @5:92 __st_dptr_r47
+ref rbyte #0:116 @5:a2 @5:a8
+ref rbyte #0:11e @5:aa @5:a3
+ref w_hl #0:130 @5:c4 __mul_i2
+ref w_hl #0:13c @5:d5 __st_dptr_r47
+ref rbyte #0:140 @5:da @5:dd
+ref rbyte #0:141 @5:dc @5:e0
+ref w_hl #0:143 @5:de @5:66
+ref w_hl #0:14a @5:e9 __ld_dptr_r47
+ref w_hl #0:150 @5:f7 __st_dptr_r47
+ref rbyte #0:16a @5:118 @5:11e
+ref rbyte #0:172 @5:120 @5:119
+ref rbyte #0:180 @5:134 @5:13a
+ref rbyte #0:188 @5:13c @5:135
+ref w_hl #0:192 @5:14d __st_dptr_r47
+ref rbyte #0:19b @5:15d @5:163
+ref rbyte #0:1a3 @5:165 @5:15e
+ref w_hl #0:1b5 @5:17f __mul_i2
+ref w_hl #0:1bb @5:189 __st_dptr_r47
+ref rbyte #0:1bf @5:18e @5:191
+ref rbyte #0:1c0 @5:190 @5:194
+ref w_hl #0:1c2 @5:192 @5:10a
+ref w_hl #0:1cf @5:1a8 __ld_dptr_r47
+ref w_hl #0:1d5 @5:1b6 __st_dptr_r47
+ref byte #0:1d7 @5:1b9 _my_mac 8 >> 255 &
+ref byte #0:1d8 @5:1bb _my_mac 255 &
+ref w_hl #0:1d9 @5:1bd _set_mac_add
+ref w_hl #0:1e8 @5:1d6 __ld_dptr_r47
+ref w_hl #0:1ec @5:1e2 __st_dptr_r47
+ref byte #0:1fc @8:1 _rx_bd
+ref byte #0:1fd @8:3 _rx_bd 1 +
+ref w_hl #0:206 @8:10 __ld_dptr_r67
+ref byte #0:20a @8:16 _pRxPtr
+ref byte #0:20b @8:18 _pRxPtr 1 +
+ref w_hl #0:22f @b:19 __ld_dptr_r67
+ref rbyte #0:235 @b:23 @b:33
+ref rbyte #0:243 @b:32 @b:d
+ref rbyte #0:246 @b:35 @b:3b
+ref rbyte #0:24b @b:3a @b:3f
+ref w_hl #0:263 @f:4 __st_dptr_r67
+ref w_hl #0:271 @f:1a __st_dptr_r45
+ref w_hl #0:282 @f:33 __st_dptr_r03
+ref byte #0:284 @f:36 _pTxPtr
+ref byte #0:285 @f:39 _pTxPtr 1 +
+ref w_hl #0:29e @12:14 __ld_dptr_r67
+ref w_hl #0:2a8 @12:25 __st_dptr_r45
+ref byte #0:2b5 @15:1 _pRxPtr
+ref byte #0:2b6 @15:3 _pRxPtr 1 +
+ref w_hl #0:2b9 @15:9 __ld_dptr_r67
+ref byte #0:2bd @15:e _pRxPtr 1 +
+ref byte #0:2be @15:10 _pRxPtr 1 +
+ref byte #0:2c0 @15:13 _pRxPtr
+ref byte #0:2c1 @15:15 _pRxPtr
+ref byte #0:2ce @18:1 _pRxPtr
+ref byte #0:2cf @18:3 _pRxPtr 1 +
+ref w_hl #0:2d2 @18:9 __ld_dptr_r47
+ref byte #0:2d6 @18:e _pRxPtr 1 +
+ref byte #0:2d7 @18:10 _pRxPtr 1 +
+ref byte #0:2d9 @18:13 _pRxPtr
+ref byte #0:2da @18:15 _pRxPtr
+ref rbyte #0:2ed @1b:9 @1b:38
+ref byte #0:2fa @1b:1a _pRxPtr
+ref byte #0:2fb @1b:1c _pRxPtr 1 +
+ref byte #0:302 @1b:25 _pRxPtr
+ref byte #0:303 @1b:27 _pRxPtr 1 +
+ref rbyte #0:319 @1b:47 @1b:a
+ref byte #0:327 @1e:1 _pTxPtr
+ref byte #0:328 @1e:3 _pTxPtr 1 +
+ref w_hl #0:32b @1e:9 __st_dptr_r67
+ref byte #0:32e @1e:e _pTxPtr 1 +
+ref byte #0:32f @1e:10 _pTxPtr 1 +
+ref byte #0:331 @1e:13 _pTxPtr
+ref byte #0:332 @1e:15 _pTxPtr
+ref byte #0:340 @21:1 _pTxPtr
+ref byte #0:341 @21:3 _pTxPtr 1 +
+ref w_hl #0:344 @21:9 __st_dptr_r47
+ref byte #0:347 @21:e _pTxPtr 1 +
+ref byte #0:348 @21:10 _pTxPtr 1 +
+ref byte #0:34a @21:13 _pTxPtr
+ref byte #0:34b @21:15 _pTxPtr
+ref rbyte #0:35e @24:9 @24:36
+ref byte #0:361 @24:b _pTxPtr
+ref byte #0:362 @24:e _pTxPtr 1 +
+ref byte #0:365 @24:15 _pTxPtr 1 +
+ref byte #0:368 @24:1a _pTxPtr
+ref rbyte #0:386 @24:45 @24:a
+objectdebug
+dtx ; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+dtx ; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+dtx ; sourcefile: 'tcpip\open_ether.c', time: Thu Dec 14 11:33:34 2006
+dtx 
+dtx  .hide
+dtx  .show
+dtx XDS=0
+dtx COS=1
+dtx NES=2
+dtx INS=2
+dtx .macro __line
+dtx lcall $0006 ; uC/51 debugger
+dtx .endmacro
+dtx         .include <reg51.def>
+dtx ; **** 8051 standard defs ***
+dtx ; common registers to all 8051's
+dtx         .hide
+dtx         .show
+dtx         .include <reg52.def>
+dtx ; **** 80C52 (extended) defs ***
+dtx 
+dtx         .hide
+dtx         .show
+dtx         sevseg_ctrl  = $C0;
+dtx   sevseg_data0 = $C1;
+dtx   sevseg_data1 = $C2;
+dtx   sevseg_data2 = $C3;
+dtx   sevseg_data3 = $C4;
+dtx   sevseg_en    = $C5;
+dtx   _sevseg_ctrl  = sevseg_ctrl;
+dtx   _sevseg_data0 = sevseg_data0;
+dtx   _sevseg_data1 = sevseg_data1;
+dtx   _sevseg_data2 = sevseg_data2;
+dtx   _sevseg_data3 = sevseg_data3;
+dtx   _sevseg_en    = sevseg_en;
+dtx 
+dtx   ps2_ctrl    = $d8;
+dtx   ps2_rxf     = ps2_ctrl.0;
+dtx   ps2_ovf     = ps2_ctrl.1;
+dtx   ps2_rx_busy = ps2_ctrl.2;
+dtx   ps2_tx_busy = ps2_ctrl.3;
+dtx   ps2_ack     = ps2_ctrl.4;
+dtx   ps2_init    = ps2_ctrl.7;
+dtx   ps2_data    = $0xd9;
+dtx   _ps2_ctrl    = ps2_ctrl;
+dtx   _ps2_rxf     = ps2_rxf;
+dtx   _ps2_ovf     = ps2_ovf;
+dtx   _ps2_rx_busy = ps2_rx_busy;
+dtx   _ps2_tx_busy = ps2_tx_busy;
+dtx   _ps2_ack     = ps2_ack;
+dtx   _ps2_init    = ps2_init;
+dtx   _ps2_data    = ps2_data;
+dtx   bank_sel   = $f9;
+dtx   bank_en    = $f8;
+dtx   vgaen      = bank_en.4;
+dtx   sramb0     = bank_en.5;
+dtx   sramen     = bank_en.6;
+dtx   ethdis     = bank_en.7;
+dtx 
+dtx   _bank_sel   = bank_sel;
+dtx   _bank_en    = bank_en;
+dtx   _vgaen      = vgaen;
+dtx   _sramb0     = sramb0;
+dtx   _sramen     = sramen;
+dtx   _ethdis     = ethdis;
+dtx  .export _set_mac_add ; void set_mac_add(xdata unsigned char *)
+dtx  .segment _set_mac_add_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _set_mac_add_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _set_mac_add_formal_near, _set_mac_add_local_near, __set_mac_add
+dtx 
+dtx  .segment __set_mac_add
+dtx _set_mac_add: ; (leaf function) void set_mac_add(xdata unsigned char *)
+dtx  ; parameter 'addr' in 'RW67' assigned to 'RW01'
+dco @2:0 u:2  mov R0,AR6
+dco @2:2 u:2  mov R1,AR7
+dhl /*********************************************************************************
+dhl * open_ether.c
+dhl *
+dhl * This is the network driver for a OpenCores Ethernet MAC
+dhl * -> The Physical Layer ('PHY.C') <-
+dhl *
+dhl * V1.02 (C) 2006 Andreas Voggeneder
+dhl *
+dhl *
+dhl **********************************************************************************/
+dhl 
+dhl #include <stdio.h>
+dhl 
+dhl #include <reg52.h>
+dhl 
+dhl #include "net.h"                // MAC
+dhl 
+dhl #include "phy.h"                      // Physical Layer
+dhl #include "open_ether.h"         // OpenCores Ethernet MAC Register Definitions 
+dhl #include "../fpga_reg.h"
+dhl 
+dhl #ifndef PHY_ETH
+dhl  #error Ethernet-Phy must be defined in net.h
+dhl #endif
+dhl 
+dhl xdata uchar* near pRxPtr;
+dhl 
+dhl void set_mac_add(xdata uchar *addr)
+dhl { 
+dco @2:4 u:2  mov A,#1
+dco @2:6 u:1  add A,R1
+dco @2:7 u:1  mov R7,A
+dco @2:8 u:1  clr A
+dco @2:9 u:1  addc A,R0
+dco @2:a u:1  mov R6,A
+dco @2:b u:3  mov DPH,AR6
+dco @2:e u:3  mov DPL,AR7
+dco @2:11 u:1  movx A,@DPTR
+dco @2:12 u:1  mov R7,A
+dco @2:13 u:2  mov R3,AR7
+dco @2:15 u:2  mov R2,#0
+dco @2:17 u:3  mov DPH,AR0
+dco @2:1a u:3  mov DPL,AR1
+dco @2:1d u:1  movx A,@DPTR
+dco @2:1e u:1  mov R7,A
+dco @2:1f u:2  mov R5,AR7
+dco @2:21 u:2  mov R4,#0
+dco @2:23 u:2  mov R7,#8
+dco @2:25 u:2  mov R6,AR4
+dco @2:27 u:1  mov A,R5
+dco @2:28 u:2  mov B,R7
+dco @2:2a u:2  inc B
+dco @2:2c u:2  sjmp ?_1
+dtx ?_2:
+dco @2:2e u:1  clr C
+dco @2:2f u:1  rlc A
+dco @2:30 u:1  xch A,R6
+dco @2:31 u:1  rlc A
+dco @2:32 u:1  xch A,R6
+dtx ?_1:
+dco @2:33 u:3  djnz B,?_2
+dco @2:36 u:1  mov R7,A
+dco @2:37 u:1  orl A,R3
+dco @2:38 u:1  mov R7,A
+dco @2:39 u:1  mov A,R6
+dco @2:3a u:1  orl A,R2
+dco @2:3b u:1  mov R6,A
+dco @2:3c u:1  clr A
+dco @2:3d u:1  mov R5,A
+dco @2:3e u:1  mov R4,A
+dco @2:3f u:3  mov DPTR,#53316
+dco @2:42 u:3  lcall __st_dptr_r47
+dhl   *MAC_ADDR2 =  addr[0] << 8    |       addr[1];
+dhl   *MAC_ADDR1 = *((unsigned long*)       &addr[2]);
+dco @2:45 u:2  mov A,#2
+dco @2:47 u:1  add A,R1
+dco @2:48 u:1  mov R7,A
+dco @2:49 u:1  clr A
+dco @2:4a u:1  addc A,R0
+dco @2:4b u:1  mov R6,A
+dco @2:4c u:2  mov R4,#XDS
+dco @2:4e u:3  lcall __gen_read32_i4
+dco @2:51 u:3  mov DPTR,#53312
+dco @2:54 u:3  lcall __st_dptr_r47
+dco @2:57 u:1  ret
+dtx ; end of function set_mac_add
+dtx ; used: R01234567 BR-------- DPTR ACC PSW B
+dtx 
+dtx  .export _Init_Mac ; unsigned char Init_Mac(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __Init_Mac
+dtx _Init_Mac: ; unsigned char Init_Mac(void)
+dhl }
+dhl 
+dhl uchar Init_Mac(void) {
+dco @5:0 u:2  clr _ethdis
+dhl   unsigned char i;
+dhl   volatile xdata oeth_bd* rxtx_bd;
+dhl   
+dhl   ethdis=0;
+dhl   *MODER = OETH_MODER_RST;      /* Reset ON */
+dco @5:2 u:3  mov DPTR,#53248
+dco @5:5 u:1  clr A
+dco @5:6 u:1  movx @DPTR,A
+dco @5:7 u:1  inc DPTR
+dco @5:8 u:1  movx @DPTR,A
+dco @5:9 u:1  inc DPTR
+dco @5:a u:2  mov A,#8
+dco @5:c u:1  movx @DPTR,A
+dco @5:d u:1  inc DPTR
+dco @5:e u:1  clr A
+dco @5:f u:1  movx @DPTR,A
+dhl         *MODER &= ~OETH_MODER_RST;      /* Reset OFF */
+dco @5:10 u:3  mov DPTR,#53248
+dco @5:13 u:3  lcall __ld_dptr_r47
+dco @5:16 u:3  anl AR6,#247
+dco @5:19 u:1  clr A
+dco @5:1a u:1  mov R5,A
+dco @5:1b u:1  mov R4,A
+dco @5:1c u:3  mov DPTR,#53248
+dco @5:1f u:3  lcall __st_dptr_r47
+dhl   *TX_BD_NUM=OETH_TXBD_NUM;
+dco @5:22 u:3  mov DPTR,#53283
+dco @5:25 u:2  mov A,#1
+dco @5:27 u:1  movx @DPTR,A
+dhl   *PACKETLEN = 0x00400600;
+dco @5:28 u:3  mov DPTR,#53272
+dco @5:2b u:1  clr A
+dco @5:2c u:1  movx @DPTR,A
+dco @5:2d u:1  inc DPTR
+dco @5:2e u:2  mov A,#64
+dco @5:30 u:1  movx @DPTR,A
+dco @5:31 u:1  inc DPTR
+dco @5:32 u:2  mov A,#6
+dco @5:34 u:1  movx @DPTR,A
+dco @5:35 u:1  inc DPTR
+dco @5:36 u:1  clr A
+dco @5:37 u:1  movx @DPTR,A
+dhl   *IPGT = 0x00000012;
+dco @5:38 u:3  mov DPTR,#53263
+dco @5:3b u:2  mov A,#18
+dco @5:3d u:1  movx @DPTR,A
+dhl   *IPGR1 = 0x0000000c;
+dco @5:3e u:3  mov DPTR,#53267
+dco @5:41 u:2  mov A,#12
+dco @5:43 u:1  movx @DPTR,A
+dhl   *IPGR2 = 0x00000012;
+dco @5:44 u:3  mov DPTR,#53271
+dco @5:47 u:2  mov A,#18
+dco @5:49 u:1  movx @DPTR,A
+dhl   *COLLCONF = 0x000f003f;
+dco @5:4a u:3  mov DPTR,#53276
+dco @5:4d u:1  clr A
+dco @5:4e u:1  movx @DPTR,A
+dco @5:4f u:1  inc DPTR
+dco @5:50 u:2  mov A,#15
+dco @5:52 u:1  movx @DPTR,A
+dco @5:53 u:1  inc DPTR
+dco @5:54 u:1  clr A
+dco @5:55 u:1  movx @DPTR,A
+dco @5:56 u:1  inc DPTR
+dco @5:57 u:2  mov A,#63
+dco @5:59 u:1  movx @DPTR,A
+dhl   *CTRLMODER = 0;
+dco @5:5a u:3  mov DPTR,#53287
+dco @5:5d u:1  clr A
+dco @5:5e u:1  movx @DPTR,A
+dtx  ; variable 'rxtx_bd' assigned to register 'B1_RW89'
+dhl 
+dhl /*
+dhl // Activate Fullduplex Mode
+dhl   i=0;
+dhl   *MIIADDRESS = 4<<8;
+dhl   *MII_TX_DATA = 0x1e1;
+dhl   *MIICOMMAND = OETH_MIICOMMAND_WCTRLDATA; 
+dhl   while(*MII_STATUS & OETH_MIISTATUS_BUSY) {
+dhl     i++;
+dhl   }
+dhl 
+dhl   
+dhl   i=0;
+dhl   *MIIADDRESS = 0<<8;
+dhl   *MII_TX_DATA = 0x3300;
+dhl   *MIICOMMAND = OETH_MIICOMMAND_WCTRLDATA; 
+dhl   while(*MII_STATUS & OETH_MIISTATUS_BUSY) {
+dhl     i++;
+dhl   }   */ 
+dhl 
+dhl   // Set up TX Descriptors
+dhl   // Mapped between A400 and A40f
+dhl   rxtx_bd = OETH_BD_BASE;
+dco @5:5f u:3  mov AR8,#212
+dhl   for(i = 0; i < OETH_TXBD_NUM; i++) {
+dco @5:62 u:1  clr A
+dco @5:63 u:2  mov AR9,A
+dco @5:65 u:1  mov R1,A
+dtx  ; variable 'i' assigned to register 'R1'
+dtx ?9:
+dtx 
+dco @5:66 u:2  mov R5,AR1
+dco @5:68 u:2  mov R4,#0
+dco @5:6a u:2  mov R7,#3
+dco @5:6c u:2  mov R6,AR4
+dco @5:6e u:1  mov A,R5
+dco @5:6f u:2  mov B,R7
+dco @5:71 u:2  inc B
+dco @5:73 u:2  sjmp ?_3
+dtx ?_4:
+dco @5:75 u:1  clr C
+dco @5:76 u:1  rlc A
+dco @5:77 u:1  xch A,R6
+dco @5:78 u:1  rlc A
+dco @5:79 u:1  xch A,R6
+dtx ?_3:
+dco @5:7a u:3  djnz B,?_4
+dco @5:7d u:1  mov R7,A
+dco @5:7e u:2  mov A,AR9
+dco @5:80 u:1  add A,R7
+dco @5:81 u:1  mov R3,A
+dco @5:82 u:2  mov A,AR8
+dco @5:84 u:1  addc A,R6
+dco @5:85 u:1  mov R2,A
+dco @5:86 u:1  clr A
+dco @5:87 u:1  mov R4,A
+dco @5:88 u:1  mov R5,A
+dco @5:89 u:2  mov R6,#88
+dco @5:8b u:2  mov R7,#0
+dco @5:8d u:2  mov DPH,R2
+dco @5:8f u:2  mov DPL,R3
+dco @5:91 u:3  lcall __st_dptr_r47
+dhl     rxtx_bd[i].u.len_status = OETH_TX_BD_PAD | OETH_TX_BD_CRC | OETH_RX_BD_IRQ;
+dhl     rxtx_bd[i].addr = TX_BD_BASE+(MAX_FRAME_SIZE*i);
+dco @5:94 u:2  mov R5,AR1
+dco @5:96 u:2  mov R4,#0
+dco @5:98 u:2  mov R7,#3
+dco @5:9a u:2  mov R6,AR4
+dco @5:9c u:1  mov A,R5
+dco @5:9d u:2  mov B,R7
+dco @5:9f u:2  inc B
+dco @5:a1 u:2  sjmp ?_5
+dtx ?_6:
+dco @5:a3 u:1  clr C
+dco @5:a4 u:1  rlc A
+dco @5:a5 u:1  xch A,R6
+dco @5:a6 u:1  rlc A
+dco @5:a7 u:1  xch A,R6
+dtx ?_5:
+dco @5:a8 u:3  djnz B,?_6
+dco @5:ab u:1  mov R7,A
+dco @5:ac u:2  mov A,AR9
+dco @5:ae u:1  add A,R7
+dco @5:af u:1  mov R7,A
+dco @5:b0 u:2  mov A,AR8
+dco @5:b2 u:1  addc A,R6
+dco @5:b3 u:1  mov R6,A
+dco @5:b4 u:2  mov A,#4
+dco @5:b6 u:1  add A,R7
+dco @5:b7 u:1  mov R3,A
+dco @5:b8 u:1  clr A
+dco @5:b9 u:1  addc A,R6
+dco @5:ba u:1  mov R2,A
+dco @5:bb u:2  mov R6,AR4
+dco @5:bd u:2  mov R7,AR5
+dco @5:bf u:2  mov R4,#6
+dco @5:c1 u:2  mov R5,#0
+dco @5:c3 u:3  lcall __mul_i2
+dco @5:c6 u:1  clr A
+dco @5:c7 u:1  add A,R7
+dco @5:c8 u:1  mov R7,A
+dco @5:c9 u:2  mov A,#24
+dco @5:cb u:1  addc A,R6
+dco @5:cc u:1  mov R6,A
+dco @5:cd u:1  clr A
+dco @5:ce u:1  mov R5,A
+dco @5:cf u:1  mov R4,A
+dco @5:d0 u:2  mov DPH,R2
+dco @5:d2 u:2  mov DPL,R3
+dco @5:d4 u:3  lcall __st_dptr_r47
+dhl   }
+dco @5:d7 u:1  inc R1
+dtx 
+dco @5:d8 u:3  cjne R1,#1,?_7
+dco @5:db u:2  sjmp ?_8
+dtx ?_7:
+dco @5:dd u:3  ljmp ?9
+dtx ?_8:
+dhl   rxtx_bd[OETH_TXBD_NUM - 1].u.len_status |= OETH_TX_BD_WRAP;
+dco @5:e0 u:2  mov R6,AR8
+dco @5:e2 u:2  mov R7,AR9
+dco @5:e4 u:2  mov DPH,R6
+dco @5:e6 u:2  mov DPL,R7
+dco @5:e8 u:3  lcall __ld_dptr_r47
+dco @5:eb u:3  orl AR6,#32
+dco @5:ee u:2  mov R2,AR8
+dco @5:f0 u:2  mov R3,AR9
+dco @5:f2 u:2  mov DPH,R2
+dco @5:f4 u:2  mov DPL,R3
+dco @5:f6 u:3  lcall __st_dptr_r47
+dhl 
+dhl   // Set up RX Descriptors
+dhl   rxtx_bd = (xdata oeth_bd*)((uint)OETH_BD_BASE+OETH_TXBD_NUM*sizeof(oeth_bd));   //RX_BD_BASE|OETH_BD
+dco @5:f9 u:2  mov R6,#212
+dco @5:fb u:2  mov R7,#0
+dco @5:fd u:2  mov A,#8
+dco @5:ff u:1  add A,R7
+dco @5:100 u:1  mov R7,A
+dco @5:101 u:1  clr A
+dco @5:102 u:1  addc A,R6
+dco @5:103 u:1  mov R6,A
+dtx  ; variable 'rxtx_bd' assigned to register 'B1_RW89'
+dco @5:104 u:2  mov AR8,R6
+dco @5:106 u:2  mov AR9,R7
+dhl 
+dhl   
+dhl   for(i = 0; i < OETH_RXBD_NUM; i++) {
+dco @5:108 u:1  clr A
+dco @5:109 u:1  mov R1,A
+dtx  ; variable 'i' assigned to register 'R1'
+dtx ?13:
+dtx 
+dco @5:10a u:2  mov R5,AR1
+dco @5:10c u:2  mov R4,#0
+dco @5:10e u:2  mov R7,#3
+dco @5:110 u:2  mov R6,AR4
+dco @5:112 u:1  mov A,R5
+dco @5:113 u:2  mov B,R7
+dco @5:115 u:2  inc B
+dco @5:117 u:2  sjmp ?_9
+dtx ?_10:
+dco @5:119 u:1  clr C
+dco @5:11a u:1  rlc A
+dco @5:11b u:1  xch A,R6
+dco @5:11c u:1  rlc A
+dco @5:11d u:1  xch A,R6
+dtx ?_9:
+dco @5:11e u:3  djnz B,?_10
+dco @5:121 u:1  mov R7,A
+dco @5:122 u:2  mov A,AR9
+dco @5:124 u:1  add A,R7
+dco @5:125 u:1  mov R3,A
+dco @5:126 u:2  mov A,AR8
+dco @5:128 u:1  addc A,R6
+dco @5:129 u:1  mov R2,A
+dco @5:12a u:2  mov R5,#16
+dco @5:12c u:1  clr A
+dco @5:12d u:1  mov R6,A
+dco @5:12e u:1  mov R7,A
+dco @5:12f u:2  mov B,R5
+dco @5:131 u:2  inc B
+dco @5:133 u:2  sjmp ?_11
+dtx ?_12:
+dco @5:135 u:1  clr C
+dco @5:136 u:1  rlc A
+dco @5:137 u:1  xch A,R6
+dco @5:138 u:1  rlc A
+dco @5:139 u:1  xch A,R6
+dtx ?_11:
+dco @5:13a u:3  djnz B,?_12
+dco @5:13d u:1  mov R7,A
+dco @5:13e u:1  mov R7,A
+dco @5:13f u:3  orl AR6,#128
+dco @5:142 u:3  orl AR6,#64
+dco @5:145 u:1  clr A
+dco @5:146 u:1  mov R5,A
+dco @5:147 u:1  mov R4,A
+dco @5:148 u:2  mov DPH,R2
+dco @5:14a u:2  mov DPL,R3
+dco @5:14c u:3  lcall __st_dptr_r47
+dhl     rxtx_bd[i].u.len_status = (0 << 16) | OETH_RX_BD_EMPTY | OETH_RX_BD_IRQ;
+dhl     rxtx_bd[i].addr = RX_BD_BASE+(MAX_FRAME_SIZE*i);
+dco @5:14f u:2  mov R5,AR1
+dco @5:151 u:2  mov R4,#0
+dco @5:153 u:2  mov R7,#3
+dco @5:155 u:2  mov R6,AR4
+dco @5:157 u:1  mov A,R5
+dco @5:158 u:2  mov B,R7
+dco @5:15a u:2  inc B
+dco @5:15c u:2  sjmp ?_13
+dtx ?_14:
+dco @5:15e u:1  clr C
+dco @5:15f u:1  rlc A
+dco @5:160 u:1  xch A,R6
+dco @5:161 u:1  rlc A
+dco @5:162 u:1  xch A,R6
+dtx ?_13:
+dco @5:163 u:3  djnz B,?_14
+dco @5:166 u:1  mov R7,A
+dco @5:167 u:2  mov A,AR9
+dco @5:169 u:1  add A,R7
+dco @5:16a u:1  mov R7,A
+dco @5:16b u:2  mov A,AR8
+dco @5:16d u:1  addc A,R6
+dco @5:16e u:1  mov R6,A
+dco @5:16f u:2  mov A,#4
+dco @5:171 u:1  add A,R7
+dco @5:172 u:1  mov R3,A
+dco @5:173 u:1  clr A
+dco @5:174 u:1  addc A,R6
+dco @5:175 u:1  mov R2,A
+dco @5:176 u:2  mov R6,AR4
+dco @5:178 u:2  mov R7,AR5
+dco @5:17a u:2  mov R4,#6
+dco @5:17c u:2  mov R5,#0
+dco @5:17e u:3  lcall __mul_i2
+dco @5:181 u:1  clr A
+dco @5:182 u:1  mov R5,A
+dco @5:183 u:1  mov R4,A
+dco @5:184 u:2  mov DPH,R2
+dco @5:186 u:2  mov DPL,R3
+dco @5:188 u:3  lcall __st_dptr_r47
+dhl   }
+dco @5:18b u:1  inc R1
+dtx 
+dco @5:18c u:3  cjne R1,#4,?_15
+dco @5:18f u:2  sjmp ?_16
+dtx ?_15:
+dco @5:191 u:3  ljmp ?13
+dtx ?_16:
+dhl   rxtx_bd[OETH_RXBD_NUM - 1].u.len_status |= OETH_RX_BD_WRAP;
+dco @5:194 u:2  mov A,#24
+dco @5:196 u:2  add A,AR9
+dco @5:198 u:2  mov AR9,A
+dco @5:19a u:1  clr A
+dco @5:19b u:2  addc A,AR8
+dco @5:19d u:2  mov AR8,A
+dco @5:19f u:2  mov R6,AR8
+dco @5:1a1 u:2  mov R7,AR9
+dco @5:1a3 u:2  mov DPH,R6
+dco @5:1a5 u:2  mov DPL,R7
+dco @5:1a7 u:3  lcall __ld_dptr_r47
+dco @5:1aa u:3  orl AR6,#32
+dco @5:1ad u:2  mov R2,AR8
+dco @5:1af u:2  mov R3,AR9
+dco @5:1b1 u:2  mov DPH,R2
+dco @5:1b3 u:2  mov DPL,R3
+dco @5:1b5 u:3  lcall __st_dptr_r47
+dhl 
+dhl   set_mac_add(my_mac);
+dco @5:1b8 u:2  mov R6,#((_my_mac)>>8)&255
+dco @5:1ba u:2  mov R7,#(_my_mac)&255
+dco @5:1bc u:3  lcall _set_mac_add
+dhl 
+dhl   *INT_SOURCE = 0xffffffff;
+dco @5:1bf u:2  mov R4,#255
+dco @5:1c1 u:2  mov R5,#255
+dco @5:1c3 u:2  mov R6,#255
+dco @5:1c5 u:2  mov R7,#255
+dco @5:1c7 u:3  mov DPTR,#53255
+dco @5:1ca u:1  mov A,R7
+dco @5:1cb u:1  movx @DPTR,A
+dhl   *INT_MASK = OETH_INT_MASK_TXB         | 
+dco @5:1cc u:3  mov DPTR,#53259
+dco @5:1cf u:2  mov A,#127
+dco @5:1d1 u:1  movx @DPTR,A
+dhl                                 OETH_INT_MASK_TXE       | 
+dhl                                 OETH_INT_MASK_RXF       | 
+dhl                                 OETH_INT_MASK_RXE       |
+dhl                                 OETH_INT_MASK_BUSY      |
+dhl                                 OETH_INT_MASK_TXC         |
+dhl                                 OETH_INT_MASK_RXC;
+dhl   *MODER |=  OETH_MODER_PAD | OETH_MODER_IFG | OETH_MODER_CRCEN
+dco @5:1d2 u:3  mov DPTR,#53248
+dco @5:1d5 u:3  lcall __ld_dptr_r47
+dco @5:1d8 u:3  orl AR7,#67
+dco @5:1db u:3  orl AR6,#160
+dco @5:1de u:3  mov DPTR,#53248
+dco @5:1e1 u:3  lcall __st_dptr_r47
+dhl          | OETH_MODER_RXEN | OETH_MODER_TXEN ;
+dhl   return 0;
+dco @5:1e4 u:1  clr A
+dco @5:1e5 u:1  mov R7,A
+dco @5:1e6 u:1  ret
+dtx ; end of function Init_Mac
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _init_rx ; void init_rx(void)
+dtx  .segment _init_rx_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _init_rx_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _init_rx_formal_near, _init_rx_local_near, __init_rx
+dtx 
+dtx  .segment __init_rx
+dtx _init_rx: ; (leaf function) void init_rx(void)
+dhl }
+dhl 
+dhl extern xdata oeth_bd* near rx_bd;
+dhl 
+dhl void init_rx(void) {
+dco @8:0 u:2  mov R6,_rx_bd
+dco @8:2 u:2  mov R7,_rx_bd+1
+dco @8:4 u:2  mov A,#6
+dco @8:6 u:1  add A,R7
+dco @8:7 u:1  mov R7,A
+dco @8:8 u:1  clr A
+dco @8:9 u:1  addc A,R6
+dco @8:a u:1  mov R6,A
+dco @8:b u:2  mov DPH,R6
+dco @8:d u:2  mov DPL,R7
+dco @8:f u:3  lcall __ld_dptr_r67
+dtx  ; variable 'ptmp' assigned to register 'RW67'
+dhl //    pRxPtr=(xdata uchar*)((*((xdata uint*)(rx_bd->addr)+1))|((uint)ETH_BUFFER_BASE));
+dhl // stupid compiler :-(
+dhl     xdata uint* ptmp= (xdata uint*)*((xdata uint*)(&rx_bd->addr)+1);
+dhl     pRxPtr=(xdata uchar*)((uint)ptmp|ETH_BUFFER_BASE);
+dco @8:12 u:3  orl AR6,#224
+dco @8:15 u:2  mov _pRxPtr,R6
+dco @8:17 u:2  mov _pRxPtr+1,R7
+dco @8:19 u:1  ret
+dtx ; end of function init_rx
+dtx ; used: R------67 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _find_RX_Buffer ; xdata oeth_bd *find_RX_Buffer(void)
+dtx  .segment _find_RX_Buffer_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _find_RX_Buffer_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _find_RX_Buffer_formal_near, _find_RX_Buffer_local_near, __find_RX_Buffer
+dtx 
+dtx  .segment __find_RX_Buffer
+dtx _find_RX_Buffer: ; (leaf function) xdata oeth_bd *find_RX_Buffer(void)
+dhl }
+dhl 
+dhl xdata oeth_bd* find_RX_Buffer() {
+dco @b:0 u:2  mov R6,#212
+dco @b:2 u:2  mov R7,#0
+dco @b:4 u:2  mov A,#8
+dco @b:6 u:1  add A,R7
+dco @b:7 u:1  mov R5,A
+dco @b:8 u:1  clr A
+dco @b:9 u:1  addc A,R6
+dco @b:a u:1  mov R4,A
+dtx  ; variable 'rx_bd' assigned to register 'RW45'
+dhl   volatile xdata oeth_bd *rx_bd=(xdata oeth_bd*)((uint)OETH_BD_BASE+OETH_TXBD_NUM*sizeof(oeth_bd));
+dhl   uchar i;
+dhl   for(i=0;i < OETH_RXBD_NUM; i++,rx_bd++) {
+dco @b:b u:1  clr A
+dco @b:c u:1  mov R3,A
+dtx  ; variable 'i' assigned to register 'R3'
+dtx ?21:
+dtx 
+dco @b:d u:2  mov A,#2
+dco @b:f u:1  add A,R5
+dco @b:10 u:1  mov R7,A
+dco @b:11 u:1  clr A
+dco @b:12 u:1  addc A,R4
+dco @b:13 u:1  mov R6,A
+dco @b:14 u:2  mov DPH,R6
+dco @b:16 u:2  mov DPL,R7
+dco @b:18 u:3  lcall __ld_dptr_r67
+dco @b:1b u:2  mov R7,#0
+dco @b:1d u:3  anl AR6,#128
+dco @b:20 u:1  mov A,R6
+dco @b:21 u:1  orl A,R7
+dhl     if (!(rx_bd->u.ls.status & OETH_RX_BD_EMPTY)){
+dco @b:22 u:2  jz ?23
+dhl       break;
+dhl     }
+dhl     
+dhl   }
+dco @b:24 u:1  inc R3
+dco @b:25 u:2  mov A,#8
+dco @b:27 u:1  add A,R5
+dco @b:28 u:1  mov R5,A
+dco @b:29 u:1  clr A
+dco @b:2a u:1  addc A,R4
+dco @b:2b u:1  mov R4,A
+dtx 
+dco @b:2c u:2  mov R7,#4
+dco @b:2e u:1  clr C
+dco @b:2f u:1  mov A,R3
+dco @b:30 u:1  subb A,R7
+dco @b:31 u:2  jc ?21
+dtx ?23:
+dhl   if(i== OETH_RXBD_NUM) return 0;
+dco @b:33 u:3  cjne R3,#4,?27
+dtx 
+dco @b:36 u:1  clr A
+dco @b:37 u:1  mov R6,A
+dco @b:38 u:1  mov R7,A
+dco @b:39 u:2  sjmp ?20
+dtx ?27:
+dhl   return rx_bd;
+dco @b:3b u:2  mov R6,AR4
+dco @b:3d u:2  mov R7,AR5
+dtx ?20:
+dco @b:3f u:1  ret
+dtx ; end of function find_RX_Buffer
+dtx ; used: R---34567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .segment neardata, sclass dram
+dtx  .export _pTxPtr ; xdata unsigned char *near pTxPtr
+dtx _pTxPtr: ; xdata unsigned char *near pTxPtr
+dco @c:0 u:2  .dc.w 0
+dtx  .export _RequestSend_Phy ; void RequestSend_Phy(unsigned int)
+dtx  .segment _RequestSend_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _RequestSend_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _RequestSend_Phy_formal_near, _RequestSend_Phy_local_near, __RequestSend_Phy
+dtx 
+dtx  .segment __RequestSend_Phy
+dtx _RequestSend_Phy: ; (leaf function) void RequestSend_Phy(unsigned int)
+dtx  ; parameter 'FrameSize' in 'RW67'
+dhl 
+dhl }
+dhl 
+dhl 
+dhl /*********************************************************************************
+dhl * void RequestSend(uint FrameSize);
+dhl *
+dhl * Note: Frame-Size in BYTES
+dhl * Requests space in on-chip memory for storing an outgoing frame
+dhl * This function must only be called ONCE.
+dhl **********************************************************************************/
+dhl //#define TX_BD         (volatile struct _oeth_bd xdata*)(OETH_BD_BASE)
+dhl 
+dhl xdata uchar* near pTxPtr=0;
+dhl 
+dhl void RequestSend_Phy(uint FrameSize){
+dco @f:0 u:3  mov DPTR,#54272
+dco @f:3 u:3  lcall __st_dptr_r67
+dhl 
+dhl   volatile xdata oeth_bd* tx_bd= OETH_BD_BASE;
+dhl   tx_bd->u.ls.len    = FrameSize;
+dhl   tx_bd->u.ls.status = OETH_TX_BD_PAD | OETH_TX_BD_CRC | OETH_RX_BD_IRQ | OETH_TX_BD_WRAP;
+dco @f:6 u:2  mov R4,#212
+dco @f:8 u:2  mov R5,#0
+dco @f:a u:2  mov A,#2
+dco @f:c u:1  add A,R5
+dco @f:d u:1  mov R3,A
+dco @f:e u:1  clr A
+dco @f:f u:1  addc A,R4
+dco @f:10 u:1  mov R2,A
+dco @f:11 u:2  mov R4,#120
+dco @f:13 u:2  mov R5,#0
+dco @f:15 u:2  mov DPH,R2
+dco @f:17 u:2  mov DPL,R3
+dco @f:19 u:3  lcall __st_dptr_r45
+dhl   tx_bd->addr = TX_BD_BASE;
+dco @f:1c u:2  mov R4,#212
+dco @f:1e u:2  mov R5,#0
+dco @f:20 u:2  mov A,#4
+dco @f:22 u:1  add A,R5
+dco @f:23 u:1  mov R5,A
+dco @f:24 u:1  clr A
+dco @f:25 u:1  addc A,R4
+dco @f:26 u:1  mov R4,A
+dco @f:27 u:1  clr A
+dco @f:28 u:1  mov R0,A
+dco @f:29 u:1  mov R1,A
+dco @f:2a u:2  mov R2,#24
+dco @f:2c u:2  mov R3,#0
+dco @f:2e u:2  mov DPH,R4
+dco @f:30 u:2  mov DPL,R5
+dco @f:32 u:3  lcall __st_dptr_r03
+dhl   pTxPtr=(volatile xdata unsigned long*)(TX_BD_BASE|(ETH_BUFFER_BASE));
+dco @f:35 u:3  mov _pTxPtr,#248
+dco @f:38 u:3  mov _pTxPtr+1,#0
+dco @f:3b u:1  ret
+dtx ; end of function RequestSend_Phy
+dtx ; used: R01234567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _CommitSend_Phy ; void CommitSend_Phy(void)
+dtx  .segment _CommitSend_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _CommitSend_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _CommitSend_Phy_formal_near, _CommitSend_Phy_local_near, __CommitSend_Phy
+dtx 
+dtx  .segment __CommitSend_Phy
+dtx _CommitSend_Phy: ; (leaf function) void CommitSend_Phy(void)
+dhl   
+dhl }
+dhl 
+dhl void CommitSend_Phy() {
+dco @12:0 u:2  mov R6,#212
+dco @12:2 u:2  mov R7,#0
+dco @12:4 u:2  mov A,#2
+dco @12:6 u:1  add A,R7
+dco @12:7 u:1  mov R7,A
+dco @12:8 u:1  clr A
+dco @12:9 u:1  addc A,R6
+dco @12:a u:1  mov R6,A
+dco @12:b u:2  mov AR8,R6
+dco @12:d u:2  mov AR9,R7
+dco @12:f u:2  mov DPH,R6
+dco @12:11 u:2  mov DPL,R7
+dco @12:13 u:3  lcall __ld_dptr_r67
+dco @12:16 u:1  mov A,R7
+dco @12:17 u:1  mov R5,A
+dco @12:18 u:1  mov A,R6
+dco @12:19 u:2  orl A,#200
+dco @12:1b u:1  mov R4,A
+dco @12:1c u:2  mov R6,AR8
+dco @12:1e u:2  mov R7,AR9
+dco @12:20 u:2  mov DPH,R6
+dco @12:22 u:2  mov DPL,R7
+dco @12:24 u:3  lcall __st_dptr_r45
+dco @12:27 u:1  ret
+dtx ; end of function CommitSend_Phy
+dtx ; used: R----4567 BR01------ DPTR ACC PSW
+dtx 
+dtx  .export _Read_Frame_word_Phy ; unsigned int Read_Frame_word_Phy(void)
+dtx  .segment _Read_Frame_word_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Read_Frame_word_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Read_Frame_word_Phy_formal_near, _Read_Frame_word_Phy_local_near, __Read_Frame_word_Phy
+dtx 
+dtx  .segment __Read_Frame_word_Phy
+dtx _Read_Frame_word_Phy: ; (leaf function) unsigned int Read_Frame_word_Phy(void)
+dhl   volatile oeth_bd xdata *tx_bd= OETH_BD_BASE;
+dhl   tx_bd->u.ls.status |= (OETH_TX_BD_READY | OETH_TX_BD_IRQ | OETH_TX_BD_CRC);
+dhl }
+dhl 
+dhl unsigned int Read_Frame_word_Phy(void) {
+dco @15:0 u:2  mov R6,_pRxPtr
+dco @15:2 u:2  mov R7,_pRxPtr+1
+dco @15:4 u:2  mov DPH,R6
+dco @15:6 u:2  mov DPL,R7
+dco @15:8 u:3  lcall __ld_dptr_r67
+dtx  ; variable 'tmp' assigned to register 'RW67'
+dhl   unsigned int tmp= *((xdata unsigned int*)pRxPtr);
+dhl   pRxPtr+=2;
+dco @15:b u:2  mov A,#2
+dco @15:d u:2  add A,_pRxPtr+1
+dco @15:f u:2  mov _pRxPtr+1,A
+dco @15:11 u:1  clr A
+dco @15:12 u:2  addc A,_pRxPtr
+dco @15:14 u:2  mov _pRxPtr,A
+dco @15:16 u:1  ret
+dtx ; end of function Read_Frame_word_Phy
+dtx ; used: R------67 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _Read_Frame_long_Phy ; unsigned long Read_Frame_long_Phy(void)
+dtx  .segment _Read_Frame_long_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Read_Frame_long_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Read_Frame_long_Phy_formal_near, _Read_Frame_long_Phy_local_near, __Read_Frame_long_Phy
+dtx 
+dtx  .segment __Read_Frame_long_Phy
+dtx _Read_Frame_long_Phy: ; (leaf function) unsigned long Read_Frame_long_Phy(void)
+dhl   return tmp;
+dhl }
+dhl     
+dhl unsigned long Read_Frame_long_Phy(void) {
+dco @18:0 u:2  mov R6,_pRxPtr
+dco @18:2 u:2  mov R7,_pRxPtr+1
+dco @18:4 u:2  mov DPH,R6
+dco @18:6 u:2  mov DPL,R7
+dco @18:8 u:3  lcall __ld_dptr_r47
+dtx  ; variable 'tmp' assigned to register 'RL4567'
+dhl   unsigned long tmp= *((xdata unsigned long*)pRxPtr);
+dhl   pRxPtr+=4;
+dco @18:b u:2  mov A,#4
+dco @18:d u:2  add A,_pRxPtr+1
+dco @18:f u:2  mov _pRxPtr+1,A
+dco @18:11 u:1  clr A
+dco @18:12 u:2  addc A,_pRxPtr
+dco @18:14 u:2  mov _pRxPtr,A
+dco @18:16 u:1  ret
+dtx ; end of function Read_Frame_long_Phy
+dtx ; used: R----4567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _Read_Frame_xdata_Phy ; void Read_Frame_xdata_Phy(xdata unsigned char *, unsigned int)
+dtx  .segment _Read_Frame_xdata_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Read_Frame_xdata_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Read_Frame_xdata_Phy_formal_near, _Read_Frame_xdata_Phy_local_near, __Read_Frame_xdata_Phy
+dtx 
+dtx  .segment __Read_Frame_xdata_Phy
+dtx _Read_Frame_xdata_Phy: ; (leaf function) void Read_Frame_xdata_Phy(xdata unsigned char *, unsigned int
+dtx  ; parameter 'ps' in 'RW67' assigned to 'RW45'
+dtx  ; parameter 'len' in 'RW45' assigned to 'RW01'
+dco @1b:0 u:2  mov R0,AR4
+dco @1b:2 u:2  mov R1,AR5
+dco @1b:4 u:2  mov R4,AR6
+dco @1b:6 u:2  mov R5,AR7
+dhl   return tmp;
+dhl }   
+dhl 
+dhl void Read_Frame_xdata_Phy(xdata uchar*ps, uint len) {
+dco @1b:8 u:2  sjmp ?35
+dtx ?34:
+dhl   while(len--) {
+dco @1b:a u:2  mov AR8,R4
+dco @1b:c u:2  mov AR9,R5
+dco @1b:e u:2  mov R2,AR8
+dco @1b:10 u:2  mov R3,AR9
+dco @1b:12 u:2  mov A,#1
+dco @1b:14 u:1  add A,R3
+dco @1b:15 u:1  mov R5,A
+dco @1b:16 u:1  clr A
+dco @1b:17 u:1  addc A,R2
+dco @1b:18 u:1  mov R4,A
+dco @1b:19 u:2  mov R6,_pRxPtr
+dco @1b:1b u:2  mov R7,_pRxPtr+1
+dco @1b:1d u:2  mov A,#1
+dco @1b:1f u:1  add A,R7
+dco @1b:20 u:1  mov R3,A
+dco @1b:21 u:1  clr A
+dco @1b:22 u:1  addc A,R6
+dco @1b:23 u:1  mov R2,A
+dco @1b:24 u:2  mov _pRxPtr,R2
+dco @1b:26 u:2  mov _pRxPtr+1,R3
+dco @1b:28 u:3  mov DPH,AR6
+dco @1b:2b u:3  mov DPL,AR7
+dco @1b:2e u:1  movx A,@DPTR
+dco @1b:2f u:1  mov R3,A
+dco @1b:30 u:3  mov DPH,AR8
+dco @1b:33 u:3  mov DPL,AR9
+dco @1b:36 u:1  mov A,R3
+dco @1b:37 u:1  movx @DPTR,A
+dhl     *ps++=*pRxPtr++;
+dhl   } 
+dtx ?35:
+dtx 
+dco @1b:38 u:2  mov R6,AR0
+dco @1b:3a u:2  mov R7,AR1
+dco @1b:3c u:2  mov A,#255
+dco @1b:3e u:1  add A,R7
+dco @1b:3f u:1  mov R1,A
+dco @1b:40 u:2  mov A,#255
+dco @1b:42 u:1  addc A,R6
+dco @1b:43 u:1  mov R0,A
+dco @1b:44 u:1  mov A,R6
+dco @1b:45 u:1  orl A,R7
+dco @1b:46 u:2  jnz ?34
+dco @1b:48 u:1  ret
+dtx ; end of function Read_Frame_xdata_Phy
+dtx ; used: R01234567 BR01------ DPTR ACC PSW
+dtx 
+dtx  .export _Write_Frame_word_Phy ; void Write_Frame_word_Phy(unsigned int)
+dtx  .segment _Write_Frame_word_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Write_Frame_word_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Write_Frame_word_Phy_formal_near, _Write_Frame_word_Phy_local_near, __Write_Frame_word_Phy
+dtx 
+dtx  .segment __Write_Frame_word_Phy
+dtx _Write_Frame_word_Phy: ; (leaf function) void Write_Frame_word_Phy(unsigned int)
+dtx  ; parameter 'Data' in 'RW67'
+dhl }
+dhl 
+dhl 
+dhl void Write_Frame_word_Phy(uint Data) {
+dco @1e:0 u:2  mov R4,_pTxPtr
+dco @1e:2 u:2  mov R5,_pTxPtr+1
+dco @1e:4 u:2  mov DPH,R4
+dco @1e:6 u:2  mov DPL,R5
+dco @1e:8 u:3  lcall __st_dptr_r67
+dhl   (*((xdata unsigned int*)pTxPtr)=Data); 
+dhl   pTxPtr+=2;
+dco @1e:b u:2  mov A,#2
+dco @1e:d u:2  add A,_pTxPtr+1
+dco @1e:f u:2  mov _pTxPtr+1,A
+dco @1e:11 u:1  clr A
+dco @1e:12 u:2  addc A,_pTxPtr
+dco @1e:14 u:2  mov _pTxPtr,A
+dco @1e:16 u:1  ret
+dtx ; end of function Write_Frame_word_Phy
+dtx ; used: R----4567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _Write_Frame_long_Phy ; void Write_Frame_long_Phy(unsigned long)
+dtx  .segment _Write_Frame_long_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Write_Frame_long_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Write_Frame_long_Phy_formal_near, _Write_Frame_long_Phy_local_near, __Write_Frame_long_Phy
+dtx 
+dtx  .segment __Write_Frame_long_Phy
+dtx _Write_Frame_long_Phy: ; (leaf function) void Write_Frame_long_Phy(unsigned long)
+dtx  ; parameter 'Data' in 'RL4567'
+dhl }
+dhl 
+dhl void Write_Frame_long_Phy(unsigned long Data){
+dco @21:0 u:2  mov R2,_pTxPtr
+dco @21:2 u:2  mov R3,_pTxPtr+1
+dco @21:4 u:2  mov DPH,R2
+dco @21:6 u:2  mov DPL,R3
+dco @21:8 u:3  lcall __st_dptr_r47
+dhl   (*((xdata unsigned long*)pTxPtr)=Data);
+dhl   pTxPtr+=4;
+dco @21:b u:2  mov A,#4
+dco @21:d u:2  add A,_pTxPtr+1
+dco @21:f u:2  mov _pTxPtr+1,A
+dco @21:11 u:1  clr A
+dco @21:12 u:2  addc A,_pTxPtr
+dco @21:14 u:2  mov _pTxPtr,A
+dco @21:16 u:1  ret
+dtx ; end of function Write_Frame_long_Phy
+dtx ; used: R--234567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _Write_Frame_xdata_Phy ; void Write_Frame_xdata_Phy(xdata unsigned char *, unsigned int)
+dtx  .segment _Write_Frame_xdata_Phy_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Write_Frame_xdata_Phy_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Write_Frame_xdata_Phy_formal_near, _Write_Frame_xdata_Phy_local_near, __Write_Frame_xdata_Ph
+dtx 
+dtx  .segment __Write_Frame_xdata_Phy
+dtx _Write_Frame_xdata_Phy: ; (leaf function) void Write_Frame_xdata_Phy(xdata unsigned char *, unsigned i
+dtx  ; parameter 'ps' in 'RW67' assigned to 'RW45'
+dtx  ; parameter 'len' in 'RW45' assigned to 'RW01'
+dco @24:0 u:2  mov R0,AR4
+dco @24:2 u:2  mov R1,AR5
+dco @24:4 u:2  mov R4,AR6
+dco @24:6 u:2  mov R5,AR7
+dhl }
+dhl 
+dhl void Write_Frame_xdata_Phy(xdata uchar* ps, uint len) {
+dco @24:8 u:2  sjmp ?41
+dtx ?40:
+dhl   while(len--) {
+dco @24:a u:3  mov AR8,_pTxPtr
+dco @24:d u:3  mov AR9,_pTxPtr+1
+dco @24:10 u:2  mov A,#1
+dco @24:12 u:2  add A,AR9
+dco @24:14 u:2  mov _pTxPtr+1,A
+dco @24:16 u:1  clr A
+dco @24:17 u:2  addc A,AR8
+dco @24:19 u:2  mov _pTxPtr,A
+dco @24:1b u:2  mov R6,AR4
+dco @24:1d u:2  mov R7,AR5
+dco @24:1f u:2  mov A,#1
+dco @24:21 u:1  add A,R7
+dco @24:22 u:1  mov R5,A
+dco @24:23 u:1  clr A
+dco @24:24 u:1  addc A,R6
+dco @24:25 u:1  mov R4,A
+dco @24:26 u:3  mov DPH,AR6
+dco @24:29 u:3  mov DPL,AR7
+dco @24:2c u:1  movx A,@DPTR
+dco @24:2d u:1  mov R3,A
+dco @24:2e u:3  mov DPH,AR8
+dco @24:31 u:3  mov DPL,AR9
+dco @24:34 u:1  mov A,R3
+dco @24:35 u:1  movx @DPTR,A
+dhl     *pTxPtr++=*ps++;
+dhl   } 
+dtx ?41:
+dtx 
+dco @24:36 u:2  mov R6,AR0
+dco @24:38 u:2  mov R7,AR1
+dco @24:3a u:2  mov A,#255
+dco @24:3c u:1  add A,R7
+dco @24:3d u:1  mov R1,A
+dco @24:3e u:2  mov A,#255
+dco @24:40 u:1  addc A,R6
+dco @24:41 u:1  mov R0,A
+dco @24:42 u:1  mov A,R6
+dco @24:43 u:1  orl A,R7
+dco @24:44 u:2  jnz ?40
+dco @24:46 u:1  ret
+dtx ; end of function Write_Frame_xdata_Phy
+dtx ; used: R01234567 BR01------ DPTR ACC PSW
+dtx 
+dtx  .import _rx_bd ; xdata oeth_bd *near rx_bd
+dtx  .segment nearbss, sclass dram, notext
+dtx  .export _pRxPtr ; xdata unsigned char *near pRxPtr
+dtx _pRxPtr: ; xdata unsigned char *near pRxPtr
+dco @25:0 u:2  .ds.b 2
+dtx  .import _ethdis ; bit unsigned char ethdis
+dtx  .import _my_mac ; xdata unsigned char my_mac[6]
+dtx  .end
+dhl }
+dhl 
+dhl // END
+dhl 
+dhl 
+def:_Init_Mac @5:0
+def:_RequestSend_Phy @f:0
+def:_init_rx @8:0
+def:_Read_Frame_long_Phy @18:0
+def:_Read_Frame_word_Phy @15:0
+def:_pTxPtr @c:0
+def:_find_RX_Buffer @b:0
+def:_pRxPtr @25:0
+def:_Write_Frame_long_Phy @21:0
+def:_Write_Frame_word_Phy @1e:0
+def:_CommitSend_Phy @12:0
+def:_Write_Frame_xdata_Phy @24:0
+def:_Read_Frame_xdata_Phy @1b:0
+def:_set_mac_add @2:0
+objectend

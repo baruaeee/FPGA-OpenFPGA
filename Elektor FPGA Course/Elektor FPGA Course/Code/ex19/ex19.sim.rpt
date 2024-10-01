@@ -1,0 +1,617 @@
+Simulator report for ex19
+Wed Oct 04 21:06:22 2006
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 142 nodes    ;
+; Simulation Coverage         ;      30.15 % ;
+; Total Number of Transitions ; 59709        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C12F256C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Glitch Filtering                                                                           ; Off        ; Off           ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      30.15 % ;
+; Total nodes checked                                 ; 142          ;
+; Total output ports checked                          ; 272          ;
+; Total output ports with complete 1/0-value coverage ; 82           ;
+; Total output ports with no 1/0-value coverage       ; 181          ;
+; Total output ports with no 1-value coverage         ; 183          ;
+; Total output ports with no 0-value coverage         ; 188          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                             ;
++----------------------+-------------------------------+------------------+
+; Node Name            ; Output Port Name              ; Output Port Type ;
++----------------------+-------------------------------+------------------+
+; |ex19|q[5]           ; |ex19|q[5]                    ; regout           ;
+; |ex19|q[4]~289       ; |ex19|q[4]~289                ; combout          ;
+; |ex19|q[4]~289       ; |ex19|q[6]                    ; regout           ;
+; |ex19|q[9]           ; |ex19|q[9]                    ; regout           ;
+; |ex19|q[8]           ; |ex19|q[8]                    ; regout           ;
+; |ex19|VidEn~55       ; |ex19|VidEn~55                ; combout          ;
+; |ex19|VidEn~55       ; |ex19|q[7]                    ; regout           ;
+; |ex19|Zeile[0]       ; |ex19|Zeile[0]                ; regout           ;
+; |ex19|VidEn~56       ; |ex19|VidEn~56                ; combout          ;
+; |ex19|qen            ; |ex19|qen                     ; regout           ;
+; |ex19|Add1~147       ; |ex19|Add1~147                ; combout          ;
+; |ex19|Add1~147       ; |ex19|Add1~148COUT1_173       ; cout1            ;
+; |ex19|Add1~149       ; |ex19|Add1~149                ; combout          ;
+; |ex19|Add1~149       ; |ex19|Add1~150COUT1_172       ; cout1            ;
+; |ex19|Equal0~72      ; |ex19|Equal0~72               ; combout          ;
+; |ex19|Equal0~72      ; |ex19|q[4]                    ; regout           ;
+; |ex19|q[0]           ; |ex19|q[0]                    ; regout           ;
+; |ex19|Equal0~73      ; |ex19|Equal0~73               ; combout          ;
+; |ex19|Equal0~73      ; |ex19|q[1]                    ; regout           ;
+; |ex19|Equal0~74      ; |ex19|Equal0~74               ; combout          ;
+; |ex19|Add1~151       ; |ex19|Add1~151                ; combout          ;
+; |ex19|Add1~151       ; |ex19|Add1~152                ; cout             ;
+; |ex19|Add1~153       ; |ex19|Add1~153                ; combout          ;
+; |ex19|Add1~153       ; |ex19|Add1~154COUT1_174       ; cout1            ;
+; |ex19|Add1~155       ; |ex19|Add1~155                ; combout          ;
+; |ex19|Add1~157       ; |ex19|Add1~157                ; combout          ;
+; |ex19|Add1~157       ; |ex19|Add1~158COUT1_175       ; cout1            ;
+; |ex19|VSYNC~2        ; |ex19|VSYNC~2                 ; combout          ;
+; |ex19|Add2~159       ; |ex19|Add2~159                ; combout          ;
+; |ex19|Add2~161       ; |ex19|Add2~161                ; combout          ;
+; |ex19|Add2~161       ; |ex19|Add2~162                ; cout0            ;
+; |ex19|Add2~161       ; |ex19|Add2~162COUT1_169       ; cout1            ;
+; |ex19|Add2~163       ; |ex19|Add2~163                ; combout          ;
+; |ex19|Add2~163       ; |ex19|Add2~164                ; cout0            ;
+; |ex19|Add2~163       ; |ex19|Add2~164COUT1_168       ; cout1            ;
+; |ex19|HSYNC~70       ; |ex19|HSYNC~70                ; combout          ;
+; |ex19|rowdist[0]     ; |ex19|rowdist[0]~211          ; cout0            ;
+; |ex19|rowdist[0]     ; |ex19|rowdist[0]~211COUT1_215 ; cout1            ;
+; |ex19|coldist[3]     ; |ex19|coldist[3]~217          ; cout             ;
+; |ex19|coldist[8]     ; |ex19|coldist[8]~218          ; cout             ;
+; |ex19|coldist[7]     ; |ex19|coldist[7]~220          ; cout0            ;
+; |ex19|coldist[7]     ; |ex19|coldist[7]~220COUT1_233 ; cout1            ;
+; |ex19|coldist[6]     ; |ex19|coldist[6]~221          ; cout0            ;
+; |ex19|coldist[6]     ; |ex19|coldist[6]~221COUT1_232 ; cout1            ;
+; |ex19|coldist[5]     ; |ex19|coldist[5]~222          ; cout0            ;
+; |ex19|coldist[4]     ; |ex19|coldist[4]~223          ; cout0            ;
+; |ex19|coldist[0]     ; |ex19|coldist[0]~224          ; cout0            ;
+; |ex19|coldist[0]     ; |ex19|coldist[0]~224COUT1_228 ; cout1            ;
+; |ex19|coldist[1]     ; |ex19|coldist[1]~225          ; cout0            ;
+; |ex19|coldist[1]     ; |ex19|coldist[1]~225COUT1_229 ; cout1            ;
+; |ex19|coldist[2]     ; |ex19|coldist[2]~226          ; cout0            ;
+; |ex19|coldist[2]     ; |ex19|coldist[2]~226COUT1_230 ; cout1            ;
+; |ex19|Add1~159       ; |ex19|Add1~159                ; combout          ;
+; |ex19|Add1~159       ; |ex19|Add1~160                ; cout0            ;
+; |ex19|Add1~159       ; |ex19|Add1~160COUT1_171       ; cout1            ;
+; |ex19|Add1~161       ; |ex19|Add1~161                ; combout          ;
+; |ex19|Add1~161       ; |ex19|Add1~162                ; cout0            ;
+; |ex19|Add1~161       ; |ex19|Add1~162COUT1_170       ; cout1            ;
+; |ex19|Add1~163       ; |ex19|Add1~163                ; combout          ;
+; |ex19|Add1~163       ; |ex19|Add1~164                ; cout0            ;
+; |ex19|Add1~163       ; |ex19|Add1~164COUT1_169       ; cout1            ;
+; |ex19|Add1~165       ; |ex19|Add1~165                ; combout          ;
+; |ex19|Add1~165       ; |ex19|Add1~166                ; cout0            ;
+; |ex19|Add1~165       ; |ex19|Add1~166COUT1_168       ; cout1            ;
+; |ex19|LessThan6~288  ; |ex19|LessThan6~288           ; combout          ;
+; |ex19|LessThan6~288  ; |ex19|q[2]                    ; regout           ;
+; |ex19|LessThan6~289  ; |ex19|LessThan6~289           ; combout          ;
+; |ex19|LessThan6~289  ; |ex19|q[3]                    ; regout           ;
+; |ex19|Add0~304       ; |ex19|Add0~304                ; combout          ;
+; |ex19|LessThan6~290  ; |ex19|LessThan6~290           ; combout          ;
+; |ex19|Add0~305       ; |ex19|Add0~305                ; combout          ;
+; |ex19|LessThan6~291  ; |ex19|LessThan6~291           ; combout          ;
+; |ex19|Add7~204       ; |ex19|Add7~204                ; combout          ;
+; |ex19|Add7~205       ; |ex19|Add7~205                ; combout          ;
+; |ex19|Add0~306       ; |ex19|Add0~306                ; combout          ;
+; |ex19|Add7~206       ; |ex19|Add7~206                ; combout          ;
+; |ex19|Add7~207       ; |ex19|Add7~207                ; combout          ;
+; |ex19|Add0~307       ; |ex19|Add0~307                ; combout          ;
+; |ex19|Add0~308       ; |ex19|Add0~308                ; combout          ;
+; |ex19|clk            ; |ex19|clk                     ; combout          ;
+; |ex19|VgaHsync       ; |ex19|VgaHsync                ; padio            ;
+; |ex19|q[4]~$wirecell ; |ex19|q[4]~$wirecell          ; combout          ;
++----------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                         ;
++----------------------------+----------------------------------+------------------+
+; Node Name                  ; Output Port Name                 ; Output Port Type ;
++----------------------------+----------------------------------+------------------+
+; |ex19|sum[3]               ; |ex19|sum[3]                     ; regout           ;
+; |ex19|sum[3]               ; |ex19|sum[3]~68                  ; cout0            ;
+; |ex19|sum[3]               ; |ex19|sum[3]~68COUT1             ; cout1            ;
+; |ex19|Zeile[6]             ; |ex19|Zeile[6]                   ; regout           ;
+; |ex19|LessThan2~139        ; |ex19|LessThan2~139              ; combout          ;
+; |ex19|LessThan2~139        ; |ex19|Zeile[8]                   ; regout           ;
+; |ex19|Equal1~65            ; |ex19|Equal1~65                  ; combout          ;
+; |ex19|Equal1~65            ; |ex19|Zeile[5]                   ; regout           ;
+; |ex19|Zeile[3]             ; |ex19|Zeile[3]                   ; regout           ;
+; |ex19|Zeile[2]             ; |ex19|Zeile[2]                   ; regout           ;
+; |ex19|Zeile[9]             ; |ex19|Zeile[9]                   ; regout           ;
+; |ex19|LessThan2~140        ; |ex19|LessThan2~140              ; combout          ;
+; |ex19|LessThan2~140        ; |ex19|Zeile[4]                   ; regout           ;
+; |ex19|VidEn~57             ; |ex19|VidEn~57                   ; combout          ;
+; |ex19|VgaRd0~0             ; |ex19|VgaRd0~0                   ; combout          ;
+; |ex19|sum[2]               ; |ex19|sum[2]                     ; regout           ;
+; |ex19|sum[2]               ; |ex19|sum[2]~69                  ; cout0            ;
+; |ex19|sum[2]               ; |ex19|sum[2]~69COUT1_85          ; cout1            ;
+; |ex19|VgaRd1~0             ; |ex19|VgaRd1~0                   ; combout          ;
+; |ex19|sum[5]               ; |ex19|sum[5]                     ; regout           ;
+; |ex19|sum[5]               ; |ex19|sum[5]~70                  ; cout0            ;
+; |ex19|sum[5]               ; |ex19|sum[5]~70COUT1_86          ; cout1            ;
+; |ex19|VgaGr0~0             ; |ex19|VgaGr0~0                   ; combout          ;
+; |ex19|sum[4]               ; |ex19|sum[4]                     ; regout           ;
+; |ex19|sum[4]               ; |ex19|sum[4]~71                  ; cout             ;
+; |ex19|VgaGr1~0             ; |ex19|VgaGr1~0                   ; combout          ;
+; |ex19|sum[7]               ; |ex19|sum[7]                     ; regout           ;
+; |ex19|VgaBl0~0             ; |ex19|VgaBl0~0                   ; combout          ;
+; |ex19|sum[6]               ; |ex19|sum[6]                     ; regout           ;
+; |ex19|sum[6]               ; |ex19|sum[6]~73                  ; cout0            ;
+; |ex19|sum[6]               ; |ex19|sum[6]~73COUT1_87          ; cout1            ;
+; |ex19|VgaBl1~0             ; |ex19|VgaBl1~0                   ; combout          ;
+; |ex19|nrowdist[3]          ; |ex19|nrowdist[3]                ; regout           ;
+; |ex19|nrowdist[3]          ; |ex19|nrowdist[3]~136            ; cout0            ;
+; |ex19|nrowdist[3]          ; |ex19|nrowdist[3]~136COUT1       ; cout1            ;
+; |ex19|ncoldist[3]          ; |ex19|ncoldist[3]                ; regout           ;
+; |ex19|ncoldist[3]          ; |ex19|ncoldist[3]~1498           ; cout0            ;
+; |ex19|ncoldist[3]          ; |ex19|ncoldist[3]~1498COUT1      ; cout1            ;
+; |ex19|Add1~147             ; |ex19|Add1~148                   ; cout0            ;
+; |ex19|Add1~149             ; |ex19|Add1~150                   ; cout0            ;
+; |ex19|Add1~153             ; |ex19|Add1~154                   ; cout0            ;
+; |ex19|Add1~157             ; |ex19|Add1~158                   ; cout0            ;
+; |ex19|Add2~147             ; |ex19|Add2~147                   ; combout          ;
+; |ex19|Add2~147             ; |ex19|Add2~148                   ; cout0            ;
+; |ex19|Add2~147             ; |ex19|Add2~148COUT1_175          ; cout1            ;
+; |ex19|Add2~149             ; |ex19|Add2~149                   ; combout          ;
+; |ex19|Add2~149             ; |ex19|Add2~150                   ; cout0            ;
+; |ex19|Add2~149             ; |ex19|Add2~150COUT1_174          ; cout1            ;
+; |ex19|Add2~151             ; |ex19|Add2~151                   ; combout          ;
+; |ex19|Add2~151             ; |ex19|Add2~152                   ; cout0            ;
+; |ex19|Add2~151             ; |ex19|Add2~152COUT1_173          ; cout1            ;
+; |ex19|Add2~153             ; |ex19|Add2~153                   ; combout          ;
+; |ex19|Add2~153             ; |ex19|Add2~154                   ; cout0            ;
+; |ex19|Add2~153             ; |ex19|Add2~154COUT1_172          ; cout1            ;
+; |ex19|Add2~155             ; |ex19|Add2~155                   ; combout          ;
+; |ex19|Add2~155             ; |ex19|Add2~156                   ; cout             ;
+; |ex19|Add2~157             ; |ex19|Add2~157                   ; combout          ;
+; |ex19|Add2~157             ; |ex19|Add2~158                   ; cout0            ;
+; |ex19|Add2~157             ; |ex19|Add2~158COUT1_171          ; cout1            ;
+; |ex19|Equal1~66            ; |ex19|Equal1~66                  ; combout          ;
+; |ex19|Add2~159             ; |ex19|Add2~160                   ; cout0            ;
+; |ex19|Add2~159             ; |ex19|Add2~160COUT1_170          ; cout1            ;
+; |ex19|Add2~165             ; |ex19|Add2~165                   ; combout          ;
+; |ex19|nrowdist[2]          ; |ex19|nrowdist[2]                ; regout           ;
+; |ex19|nrowdist[2]          ; |ex19|nrowdist[2]~137            ; cout0            ;
+; |ex19|nrowdist[2]          ; |ex19|nrowdist[2]~137COUT1_147   ; cout1            ;
+; |ex19|ncoldist[2]          ; |ex19|ncoldist[2]                ; regout           ;
+; |ex19|ncoldist[2]          ; |ex19|ncoldist[2]~1499           ; cout0            ;
+; |ex19|ncoldist[2]          ; |ex19|ncoldist[2]~1499COUT1_1509 ; cout1            ;
+; |ex19|sum[2]~75            ; |ex19|sum[2]~75COUT0_83          ; cout0            ;
+; |ex19|sum[2]~75            ; |ex19|sum[2]~75COUT1_84          ; cout1            ;
+; |ex19|nrowdist[5]          ; |ex19|nrowdist[5]                ; regout           ;
+; |ex19|nrowdist[5]          ; |ex19|nrowdist[5]~138            ; cout0            ;
+; |ex19|nrowdist[5]          ; |ex19|nrowdist[5]~138COUT1_148   ; cout1            ;
+; |ex19|ncoldist[5]          ; |ex19|ncoldist[5]                ; regout           ;
+; |ex19|ncoldist[5]          ; |ex19|ncoldist[5]~1500           ; cout0            ;
+; |ex19|ncoldist[5]          ; |ex19|ncoldist[5]~1500COUT1_1510 ; cout1            ;
+; |ex19|nrowdist[4]          ; |ex19|nrowdist[4]                ; regout           ;
+; |ex19|nrowdist[4]          ; |ex19|nrowdist[4]~139            ; cout             ;
+; |ex19|ncoldist[4]          ; |ex19|ncoldist[4]                ; regout           ;
+; |ex19|ncoldist[4]          ; |ex19|ncoldist[4]~1501           ; cout             ;
+; |ex19|nrowdist[7]          ; |ex19|nrowdist[7]                ; regout           ;
+; |ex19|ncoldist[7]          ; |ex19|ncoldist[7]                ; regout           ;
+; |ex19|nrowdist[6]          ; |ex19|nrowdist[6]                ; regout           ;
+; |ex19|nrowdist[6]          ; |ex19|nrowdist[6]~141            ; cout0            ;
+; |ex19|nrowdist[6]          ; |ex19|nrowdist[6]~141COUT1_149   ; cout1            ;
+; |ex19|ncoldist[6]          ; |ex19|ncoldist[6]                ; regout           ;
+; |ex19|ncoldist[6]          ; |ex19|ncoldist[6]~1503           ; cout0            ;
+; |ex19|ncoldist[6]          ; |ex19|ncoldist[6]~1503COUT1_1511 ; cout1            ;
+; |ex19|rowdist[3]           ; |ex19|rowdist[3]                 ; regout           ;
+; |ex19|Add5~101             ; |ex19|Add5~101                   ; combout          ;
+; |ex19|Add5~101             ; |ex19|Add5~102                   ; cout0            ;
+; |ex19|Add5~101             ; |ex19|Add5~102COUT1_112          ; cout1            ;
+; |ex19|rowdist[7]           ; |ex19|rowdist[7]                 ; regout           ;
+; |ex19|rowdist[7]           ; |ex19|rowdist[7]~205             ; cout0            ;
+; |ex19|rowdist[7]           ; |ex19|rowdist[7]~205COUT1_221    ; cout1            ;
+; |ex19|rowdist[8]           ; |ex19|rowdist[8]                 ; regout           ;
+; |ex19|rowdist[8]           ; |ex19|rowdist[8]~206             ; cout0            ;
+; |ex19|rowdist[8]           ; |ex19|rowdist[8]~206COUT1_222    ; cout1            ;
+; |ex19|rowdist[9]           ; |ex19|rowdist[9]                 ; regout           ;
+; |ex19|rowdist[4]           ; |ex19|rowdist[4]                 ; regout           ;
+; |ex19|rowdist[4]           ; |ex19|rowdist[4]~208             ; cout             ;
+; |ex19|rowdist[5]           ; |ex19|rowdist[5]                 ; regout           ;
+; |ex19|rowdist[5]           ; |ex19|rowdist[5]~209             ; cout0            ;
+; |ex19|rowdist[5]           ; |ex19|rowdist[5]~209COUT1_219    ; cout1            ;
+; |ex19|rowdist[6]           ; |ex19|rowdist[6]                 ; regout           ;
+; |ex19|rowdist[6]           ; |ex19|rowdist[6]~210             ; cout0            ;
+; |ex19|rowdist[6]           ; |ex19|rowdist[6]~210COUT1_220    ; cout1            ;
+; |ex19|rowdist[0]           ; |ex19|rowdist[0]                 ; regout           ;
+; |ex19|rowdist[1]           ; |ex19|rowdist[1]                 ; regout           ;
+; |ex19|rowdist[2]           ; |ex19|rowdist[2]                 ; regout           ;
+; |ex19|rowdist[2]           ; |ex19|rowdist[2]~213             ; cout0            ;
+; |ex19|rowdist[2]           ; |ex19|rowdist[2]~213COUT1_217    ; cout1            ;
+; |ex19|LessThan5~131        ; |ex19|LessThan5~131              ; combout          ;
+; |ex19|LessThan5~132        ; |ex19|LessThan5~132              ; combout          ;
+; |ex19|LessThan5~133        ; |ex19|LessThan5~133              ; combout          ;
+; |ex19|coldist[3]           ; |ex19|coldist[3]                 ; regout           ;
+; |ex19|coldist[8]           ; |ex19|coldist[8]                 ; regout           ;
+; |ex19|coldist[9]           ; |ex19|coldist[9]                 ; regout           ;
+; |ex19|coldist[7]           ; |ex19|coldist[7]                 ; regout           ;
+; |ex19|coldist[6]           ; |ex19|coldist[6]                 ; regout           ;
+; |ex19|coldist[5]           ; |ex19|coldist[5]                 ; regout           ;
+; |ex19|coldist[5]           ; |ex19|coldist[5]~222COUT1_231    ; cout1            ;
+; |ex19|coldist[4]           ; |ex19|coldist[4]                 ; regout           ;
+; |ex19|coldist[4]           ; |ex19|coldist[4]~223COUT1        ; cout1            ;
+; |ex19|coldist[0]           ; |ex19|coldist[0]                 ; regout           ;
+; |ex19|coldist[1]           ; |ex19|coldist[1]                 ; regout           ;
+; |ex19|coldist[2]           ; |ex19|coldist[2]                 ; regout           ;
+; |ex19|LessThan7~210        ; |ex19|LessThan7~210              ; combout          ;
+; |ex19|LessThan7~211        ; |ex19|LessThan7~211              ; combout          ;
+; |ex19|LessThan7~212        ; |ex19|LessThan7~212              ; combout          ;
+; |ex19|nrowdist[1]          ; |ex19|nrowdist[1]                ; regout           ;
+; |ex19|nrowdist[1]          ; |ex19|nrowdist[1]~142            ; cout0            ;
+; |ex19|nrowdist[1]          ; |ex19|nrowdist[1]~142COUT1_146   ; cout1            ;
+; |ex19|ncoldist[1]          ; |ex19|ncoldist[1]                ; regout           ;
+; |ex19|ncoldist[1]          ; |ex19|ncoldist[1]~1504           ; cout0            ;
+; |ex19|ncoldist[1]          ; |ex19|ncoldist[1]~1504COUT1_1508 ; cout1            ;
+; |ex19|sum[2]~77            ; |ex19|sum[2]~77COUT0_80          ; cout0            ;
+; |ex19|sum[2]~77            ; |ex19|sum[2]~77COUT1_81          ; cout1            ;
+; |ex19|Add5~103             ; |ex19|Add5~103                   ; combout          ;
+; |ex19|Add5~103             ; |ex19|Add5~104                   ; cout0            ;
+; |ex19|Add5~103             ; |ex19|Add5~104COUT1_113          ; cout1            ;
+; |ex19|Add5~105             ; |ex19|Add5~105                   ; combout          ;
+; |ex19|Add5~105             ; |ex19|Add5~106                   ; cout0            ;
+; |ex19|Add5~105             ; |ex19|Add5~106COUT1              ; cout1            ;
+; |ex19|Add5~107             ; |ex19|Add5~107                   ; combout          ;
+; |ex19|Add9~69              ; |ex19|Add9~69                    ; combout          ;
+; |ex19|Add5~109             ; |ex19|Add5~109                   ; combout          ;
+; |ex19|Add5~109             ; |ex19|Add5~110                   ; cout0            ;
+; |ex19|Add5~109             ; |ex19|Add5~110COUT1_114          ; cout1            ;
+; |ex19|Add9~70              ; |ex19|Add9~70                    ; combout          ;
+; |ex19|LessThan4~152        ; |ex19|LessThan4~152              ; combout          ;
+; |ex19|LessThan4~152        ; |ex19|Zeile[7]                   ; regout           ;
+; |ex19|LessThan4~153        ; |ex19|LessThan4~153              ; combout          ;
+; |ex19|Add3~99              ; |ex19|Add3~99                    ; combout          ;
+; |ex19|Add3~99              ; |ex19|Add3~100                   ; cout             ;
+; |ex19|Add3~101             ; |ex19|Add3~101                   ; combout          ;
+; |ex19|Add3~101             ; |ex19|Add3~102                   ; cout0            ;
+; |ex19|Add3~101             ; |ex19|Add3~102COUT1_114          ; cout1            ;
+; |ex19|Add3~103             ; |ex19|Add3~103                   ; combout          ;
+; |ex19|Add3~105             ; |ex19|Add3~105                   ; combout          ;
+; |ex19|Add3~105             ; |ex19|Add3~106                   ; cout0            ;
+; |ex19|Add3~105             ; |ex19|Add3~106COUT1_112          ; cout1            ;
+; |ex19|Add3~107             ; |ex19|Add3~107                   ; combout          ;
+; |ex19|Add3~107             ; |ex19|Add3~108                   ; cout0            ;
+; |ex19|Add3~107             ; |ex19|Add3~108COUT1_113          ; cout1            ;
+; |ex19|Add3~109             ; |ex19|Add3~109                   ; combout          ;
+; |ex19|Add3~109             ; |ex19|Add3~110                   ; cout0            ;
+; |ex19|Add3~109             ; |ex19|Add3~110COUT1              ; cout1            ;
+; |ex19|nrowdist[0]          ; |ex19|nrowdist[0]                ; regout           ;
+; |ex19|nrowdist[0]          ; |ex19|nrowdist[0]~143            ; cout0            ;
+; |ex19|nrowdist[0]          ; |ex19|nrowdist[0]~143COUT1_145   ; cout1            ;
+; |ex19|ncoldist[0]          ; |ex19|ncoldist[0]                ; regout           ;
+; |ex19|ncoldist[0]          ; |ex19|ncoldist[0]~1505           ; cout0            ;
+; |ex19|ncoldist[0]          ; |ex19|ncoldist[0]~1505COUT1_1507 ; cout1            ;
+; |ex19|VgaRd0               ; |ex19|VgaRd0                     ; padio            ;
+; |ex19|VgaRd1               ; |ex19|VgaRd1                     ; padio            ;
+; |ex19|VgaGr0               ; |ex19|VgaGr0                     ; padio            ;
+; |ex19|VgaGr1               ; |ex19|VgaGr1                     ; padio            ;
+; |ex19|VgaBl0               ; |ex19|VgaBl0                     ; padio            ;
+; |ex19|VgaBl1               ; |ex19|VgaBl1                     ; padio            ;
+; |ex19|VgaVsync             ; |ex19|VgaVsync                   ; padio            ;
+; |ex19|coldist[5]~$wirecell ; |ex19|coldist[5]~$wirecell       ; combout          ;
++----------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++----------------------------+----------------------------------+------------------+
+; Node Name                  ; Output Port Name                 ; Output Port Type ;
++----------------------------+----------------------------------+------------------+
+; |ex19|sum[3]               ; |ex19|sum[3]                     ; regout           ;
+; |ex19|sum[3]               ; |ex19|sum[3]~68                  ; cout0            ;
+; |ex19|sum[3]               ; |ex19|sum[3]~68COUT1             ; cout1            ;
+; |ex19|Zeile[6]             ; |ex19|Zeile[6]                   ; regout           ;
+; |ex19|LessThan2~139        ; |ex19|LessThan2~139              ; combout          ;
+; |ex19|LessThan2~139        ; |ex19|Zeile[8]                   ; regout           ;
+; |ex19|Equal1~65            ; |ex19|Equal1~65                  ; combout          ;
+; |ex19|Equal1~65            ; |ex19|Zeile[5]                   ; regout           ;
+; |ex19|Zeile[3]             ; |ex19|Zeile[3]                   ; regout           ;
+; |ex19|Zeile[2]             ; |ex19|Zeile[2]                   ; regout           ;
+; |ex19|LessThan3~127        ; |ex19|LessThan3~127              ; combout          ;
+; |ex19|LessThan3~127        ; |ex19|Zeile[1]                   ; regout           ;
+; |ex19|Zeile[9]             ; |ex19|Zeile[9]                   ; regout           ;
+; |ex19|LessThan2~140        ; |ex19|LessThan2~140              ; combout          ;
+; |ex19|LessThan2~140        ; |ex19|Zeile[4]                   ; regout           ;
+; |ex19|VidEn~57             ; |ex19|VidEn~57                   ; combout          ;
+; |ex19|VgaRd0~0             ; |ex19|VgaRd0~0                   ; combout          ;
+; |ex19|sum[2]               ; |ex19|sum[2]                     ; regout           ;
+; |ex19|sum[2]               ; |ex19|sum[2]~69                  ; cout0            ;
+; |ex19|sum[2]               ; |ex19|sum[2]~69COUT1_85          ; cout1            ;
+; |ex19|VgaRd1~0             ; |ex19|VgaRd1~0                   ; combout          ;
+; |ex19|sum[5]               ; |ex19|sum[5]                     ; regout           ;
+; |ex19|sum[5]               ; |ex19|sum[5]~70                  ; cout0            ;
+; |ex19|sum[5]               ; |ex19|sum[5]~70COUT1_86          ; cout1            ;
+; |ex19|VgaGr0~0             ; |ex19|VgaGr0~0                   ; combout          ;
+; |ex19|sum[4]               ; |ex19|sum[4]                     ; regout           ;
+; |ex19|sum[4]               ; |ex19|sum[4]~71                  ; cout             ;
+; |ex19|VgaGr1~0             ; |ex19|VgaGr1~0                   ; combout          ;
+; |ex19|sum[7]               ; |ex19|sum[7]                     ; regout           ;
+; |ex19|VgaBl0~0             ; |ex19|VgaBl0~0                   ; combout          ;
+; |ex19|sum[6]               ; |ex19|sum[6]                     ; regout           ;
+; |ex19|sum[6]               ; |ex19|sum[6]~73                  ; cout0            ;
+; |ex19|sum[6]               ; |ex19|sum[6]~73COUT1_87          ; cout1            ;
+; |ex19|VgaBl1~0             ; |ex19|VgaBl1~0                   ; combout          ;
+; |ex19|nrowdist[3]          ; |ex19|nrowdist[3]                ; regout           ;
+; |ex19|nrowdist[3]          ; |ex19|nrowdist[3]~136            ; cout0            ;
+; |ex19|nrowdist[3]          ; |ex19|nrowdist[3]~136COUT1       ; cout1            ;
+; |ex19|ncoldist[3]          ; |ex19|ncoldist[3]                ; regout           ;
+; |ex19|ncoldist[3]          ; |ex19|ncoldist[3]~1498           ; cout0            ;
+; |ex19|ncoldist[3]          ; |ex19|ncoldist[3]~1498COUT1      ; cout1            ;
+; |ex19|Add1~147             ; |ex19|Add1~148                   ; cout0            ;
+; |ex19|Add1~149             ; |ex19|Add1~150                   ; cout0            ;
+; |ex19|Add1~153             ; |ex19|Add1~154                   ; cout0            ;
+; |ex19|Add1~157             ; |ex19|Add1~158                   ; cout0            ;
+; |ex19|Add2~147             ; |ex19|Add2~147                   ; combout          ;
+; |ex19|Add2~147             ; |ex19|Add2~148                   ; cout0            ;
+; |ex19|Add2~147             ; |ex19|Add2~148COUT1_175          ; cout1            ;
+; |ex19|Add2~149             ; |ex19|Add2~149                   ; combout          ;
+; |ex19|Add2~149             ; |ex19|Add2~150                   ; cout0            ;
+; |ex19|Add2~149             ; |ex19|Add2~150COUT1_174          ; cout1            ;
+; |ex19|Add2~151             ; |ex19|Add2~151                   ; combout          ;
+; |ex19|Add2~151             ; |ex19|Add2~152                   ; cout0            ;
+; |ex19|Add2~151             ; |ex19|Add2~152COUT1_173          ; cout1            ;
+; |ex19|Add2~153             ; |ex19|Add2~153                   ; combout          ;
+; |ex19|Add2~153             ; |ex19|Add2~154                   ; cout0            ;
+; |ex19|Add2~153             ; |ex19|Add2~154COUT1_172          ; cout1            ;
+; |ex19|Add2~155             ; |ex19|Add2~155                   ; combout          ;
+; |ex19|Add2~155             ; |ex19|Add2~156                   ; cout             ;
+; |ex19|Add2~157             ; |ex19|Add2~157                   ; combout          ;
+; |ex19|Add2~157             ; |ex19|Add2~158                   ; cout0            ;
+; |ex19|Add2~157             ; |ex19|Add2~158COUT1_171          ; cout1            ;
+; |ex19|Equal1~66            ; |ex19|Equal1~66                  ; combout          ;
+; |ex19|Add2~159             ; |ex19|Add2~160                   ; cout0            ;
+; |ex19|Add2~159             ; |ex19|Add2~160COUT1_170          ; cout1            ;
+; |ex19|Add2~165             ; |ex19|Add2~165                   ; combout          ;
+; |ex19|nrowdist[2]          ; |ex19|nrowdist[2]                ; regout           ;
+; |ex19|nrowdist[2]          ; |ex19|nrowdist[2]~137            ; cout0            ;
+; |ex19|nrowdist[2]          ; |ex19|nrowdist[2]~137COUT1_147   ; cout1            ;
+; |ex19|ncoldist[2]          ; |ex19|ncoldist[2]                ; regout           ;
+; |ex19|ncoldist[2]          ; |ex19|ncoldist[2]~1499           ; cout0            ;
+; |ex19|ncoldist[2]          ; |ex19|ncoldist[2]~1499COUT1_1509 ; cout1            ;
+; |ex19|sum[2]~75            ; |ex19|sum[2]~75COUT0_83          ; cout0            ;
+; |ex19|sum[2]~75            ; |ex19|sum[2]~75COUT1_84          ; cout1            ;
+; |ex19|nrowdist[5]          ; |ex19|nrowdist[5]                ; regout           ;
+; |ex19|nrowdist[5]          ; |ex19|nrowdist[5]~138            ; cout0            ;
+; |ex19|nrowdist[5]          ; |ex19|nrowdist[5]~138COUT1_148   ; cout1            ;
+; |ex19|ncoldist[5]          ; |ex19|ncoldist[5]                ; regout           ;
+; |ex19|ncoldist[5]          ; |ex19|ncoldist[5]~1500           ; cout0            ;
+; |ex19|ncoldist[5]          ; |ex19|ncoldist[5]~1500COUT1_1510 ; cout1            ;
+; |ex19|nrowdist[4]          ; |ex19|nrowdist[4]                ; regout           ;
+; |ex19|nrowdist[4]          ; |ex19|nrowdist[4]~139            ; cout             ;
+; |ex19|ncoldist[4]          ; |ex19|ncoldist[4]                ; regout           ;
+; |ex19|ncoldist[4]          ; |ex19|ncoldist[4]~1501           ; cout             ;
+; |ex19|nrowdist[7]          ; |ex19|nrowdist[7]                ; regout           ;
+; |ex19|ncoldist[7]          ; |ex19|ncoldist[7]                ; regout           ;
+; |ex19|nrowdist[6]          ; |ex19|nrowdist[6]                ; regout           ;
+; |ex19|nrowdist[6]          ; |ex19|nrowdist[6]~141            ; cout0            ;
+; |ex19|nrowdist[6]          ; |ex19|nrowdist[6]~141COUT1_149   ; cout1            ;
+; |ex19|ncoldist[6]          ; |ex19|ncoldist[6]                ; regout           ;
+; |ex19|ncoldist[6]          ; |ex19|ncoldist[6]~1503           ; cout0            ;
+; |ex19|ncoldist[6]          ; |ex19|ncoldist[6]~1503COUT1_1511 ; cout1            ;
+; |ex19|rowdist[3]           ; |ex19|rowdist[3]                 ; regout           ;
+; |ex19|rowdist[3]           ; |ex19|rowdist[3]~204             ; cout0            ;
+; |ex19|rowdist[3]           ; |ex19|rowdist[3]~204COUT1_218    ; cout1            ;
+; |ex19|Add5~101             ; |ex19|Add5~101                   ; combout          ;
+; |ex19|Add5~101             ; |ex19|Add5~102                   ; cout0            ;
+; |ex19|Add5~101             ; |ex19|Add5~102COUT1_112          ; cout1            ;
+; |ex19|rowdist[7]           ; |ex19|rowdist[7]                 ; regout           ;
+; |ex19|rowdist[7]           ; |ex19|rowdist[7]~205             ; cout0            ;
+; |ex19|rowdist[7]           ; |ex19|rowdist[7]~205COUT1_221    ; cout1            ;
+; |ex19|rowdist[8]           ; |ex19|rowdist[8]                 ; regout           ;
+; |ex19|rowdist[8]           ; |ex19|rowdist[8]~206             ; cout0            ;
+; |ex19|rowdist[8]           ; |ex19|rowdist[8]~206COUT1_222    ; cout1            ;
+; |ex19|rowdist[9]           ; |ex19|rowdist[9]                 ; regout           ;
+; |ex19|rowdist[4]           ; |ex19|rowdist[4]                 ; regout           ;
+; |ex19|rowdist[4]           ; |ex19|rowdist[4]~208             ; cout             ;
+; |ex19|rowdist[5]           ; |ex19|rowdist[5]                 ; regout           ;
+; |ex19|rowdist[5]           ; |ex19|rowdist[5]~209             ; cout0            ;
+; |ex19|rowdist[5]           ; |ex19|rowdist[5]~209COUT1_219    ; cout1            ;
+; |ex19|rowdist[6]           ; |ex19|rowdist[6]                 ; regout           ;
+; |ex19|rowdist[6]           ; |ex19|rowdist[6]~210             ; cout0            ;
+; |ex19|rowdist[6]           ; |ex19|rowdist[6]~210COUT1_220    ; cout1            ;
+; |ex19|rowdist[0]           ; |ex19|rowdist[0]                 ; regout           ;
+; |ex19|rowdist[1]           ; |ex19|rowdist[1]                 ; regout           ;
+; |ex19|rowdist[1]           ; |ex19|rowdist[1]~212             ; cout0            ;
+; |ex19|rowdist[1]           ; |ex19|rowdist[1]~212COUT1_216    ; cout1            ;
+; |ex19|rowdist[2]           ; |ex19|rowdist[2]                 ; regout           ;
+; |ex19|LessThan5~131        ; |ex19|LessThan5~131              ; combout          ;
+; |ex19|LessThan5~132        ; |ex19|LessThan5~132              ; combout          ;
+; |ex19|LessThan5~133        ; |ex19|LessThan5~133              ; combout          ;
+; |ex19|coldist[3]           ; |ex19|coldist[3]                 ; regout           ;
+; |ex19|coldist[8]           ; |ex19|coldist[8]                 ; regout           ;
+; |ex19|coldist[9]           ; |ex19|coldist[9]                 ; regout           ;
+; |ex19|coldist[7]           ; |ex19|coldist[7]                 ; regout           ;
+; |ex19|coldist[6]           ; |ex19|coldist[6]                 ; regout           ;
+; |ex19|coldist[5]           ; |ex19|coldist[5]                 ; regout           ;
+; |ex19|coldist[5]           ; |ex19|coldist[5]~222COUT1_231    ; cout1            ;
+; |ex19|coldist[4]           ; |ex19|coldist[4]                 ; regout           ;
+; |ex19|coldist[4]           ; |ex19|coldist[4]~223COUT1        ; cout1            ;
+; |ex19|coldist[0]           ; |ex19|coldist[0]                 ; regout           ;
+; |ex19|coldist[1]           ; |ex19|coldist[1]                 ; regout           ;
+; |ex19|coldist[2]           ; |ex19|coldist[2]                 ; regout           ;
+; |ex19|LessThan7~210        ; |ex19|LessThan7~210              ; combout          ;
+; |ex19|LessThan7~211        ; |ex19|LessThan7~211              ; combout          ;
+; |ex19|LessThan7~212        ; |ex19|LessThan7~212              ; combout          ;
+; |ex19|nrowdist[1]          ; |ex19|nrowdist[1]                ; regout           ;
+; |ex19|nrowdist[1]          ; |ex19|nrowdist[1]~142            ; cout0            ;
+; |ex19|nrowdist[1]          ; |ex19|nrowdist[1]~142COUT1_146   ; cout1            ;
+; |ex19|ncoldist[1]          ; |ex19|ncoldist[1]                ; regout           ;
+; |ex19|ncoldist[1]          ; |ex19|ncoldist[1]~1504           ; cout0            ;
+; |ex19|ncoldist[1]          ; |ex19|ncoldist[1]~1504COUT1_1508 ; cout1            ;
+; |ex19|sum[2]~77            ; |ex19|sum[2]~77COUT0_80          ; cout0            ;
+; |ex19|sum[2]~77            ; |ex19|sum[2]~77COUT1_81          ; cout1            ;
+; |ex19|Add5~103             ; |ex19|Add5~103                   ; combout          ;
+; |ex19|Add5~103             ; |ex19|Add5~104                   ; cout0            ;
+; |ex19|Add5~103             ; |ex19|Add5~104COUT1_113          ; cout1            ;
+; |ex19|Add5~105             ; |ex19|Add5~105                   ; combout          ;
+; |ex19|Add5~105             ; |ex19|Add5~106                   ; cout0            ;
+; |ex19|Add5~105             ; |ex19|Add5~106COUT1              ; cout1            ;
+; |ex19|Add5~107             ; |ex19|Add5~107                   ; combout          ;
+; |ex19|Add9~69              ; |ex19|Add9~69                    ; combout          ;
+; |ex19|Add5~109             ; |ex19|Add5~109                   ; combout          ;
+; |ex19|Add5~109             ; |ex19|Add5~110                   ; cout0            ;
+; |ex19|Add5~109             ; |ex19|Add5~110COUT1_114          ; cout1            ;
+; |ex19|Add9~70              ; |ex19|Add9~70                    ; combout          ;
+; |ex19|LessThan4~152        ; |ex19|LessThan4~152              ; combout          ;
+; |ex19|LessThan4~152        ; |ex19|Zeile[7]                   ; regout           ;
+; |ex19|LessThan4~153        ; |ex19|LessThan4~153              ; combout          ;
+; |ex19|Add3~99              ; |ex19|Add3~99                    ; combout          ;
+; |ex19|Add3~99              ; |ex19|Add3~100                   ; cout             ;
+; |ex19|Add3~101             ; |ex19|Add3~101                   ; combout          ;
+; |ex19|Add3~101             ; |ex19|Add3~102                   ; cout0            ;
+; |ex19|Add3~101             ; |ex19|Add3~102COUT1_114          ; cout1            ;
+; |ex19|Add3~103             ; |ex19|Add3~103                   ; combout          ;
+; |ex19|Add3~105             ; |ex19|Add3~105                   ; combout          ;
+; |ex19|Add3~105             ; |ex19|Add3~106                   ; cout0            ;
+; |ex19|Add3~105             ; |ex19|Add3~106COUT1_112          ; cout1            ;
+; |ex19|Add3~107             ; |ex19|Add3~107                   ; combout          ;
+; |ex19|Add3~107             ; |ex19|Add3~108                   ; cout0            ;
+; |ex19|Add3~107             ; |ex19|Add3~108COUT1_113          ; cout1            ;
+; |ex19|Add3~109             ; |ex19|Add3~109                   ; combout          ;
+; |ex19|Add3~109             ; |ex19|Add3~110                   ; cout0            ;
+; |ex19|Add3~109             ; |ex19|Add3~110COUT1              ; cout1            ;
+; |ex19|nrowdist[0]          ; |ex19|nrowdist[0]                ; regout           ;
+; |ex19|nrowdist[0]          ; |ex19|nrowdist[0]~143            ; cout0            ;
+; |ex19|nrowdist[0]          ; |ex19|nrowdist[0]~143COUT1_145   ; cout1            ;
+; |ex19|ncoldist[0]          ; |ex19|ncoldist[0]                ; regout           ;
+; |ex19|ncoldist[0]          ; |ex19|ncoldist[0]~1505           ; cout0            ;
+; |ex19|ncoldist[0]          ; |ex19|ncoldist[0]~1505COUT1_1507 ; cout1            ;
+; |ex19|clr_n                ; |ex19|clr_n                      ; combout          ;
+; |ex19|VgaRd0               ; |ex19|VgaRd0                     ; padio            ;
+; |ex19|VgaRd1               ; |ex19|VgaRd1                     ; padio            ;
+; |ex19|VgaGr0               ; |ex19|VgaGr0                     ; padio            ;
+; |ex19|VgaGr1               ; |ex19|VgaGr1                     ; padio            ;
+; |ex19|VgaBl0               ; |ex19|VgaBl0                     ; padio            ;
+; |ex19|VgaBl1               ; |ex19|VgaBl1                     ; padio            ;
+; |ex19|VgaVsync             ; |ex19|VgaVsync                   ; padio            ;
+; |ex19|coldist[5]~$wirecell ; |ex19|coldist[5]~$wirecell       ; combout          ;
++----------------------------+----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 04 21:06:18 2006
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ex19 -c ex19
+Warning: Ignored node in vector source file. Can't find corresponding node name "sum[9]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "sum[8]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "sum[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "sum[0]" in design.
+Info: Inverted registers were found during simulation
+    Info: Register: |ex19|HSYNC
+    Info: Register: |ex19|VSYNC
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      30.15 %
+Info: Number of transitions in simulation is 59709
+Info: Vector file ex19.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 4 warnings
+    Info: Processing ended: Wed Oct 04 21:06:21 2006
+    Info: Elapsed time: 00:00:03
+
+

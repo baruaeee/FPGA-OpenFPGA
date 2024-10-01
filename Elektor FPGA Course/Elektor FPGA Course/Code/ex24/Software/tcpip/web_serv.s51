@@ -1,0 +1,1290 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'tcpip\web_serv.c', time: Wed Dec 13 13:00:41 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+	.include <reg52.def>
+ .segment lit
+ .export _html_notfound ; code unsigned char html_notfound[]
+_html_notfound: ; code unsigned char html_notfound[]
+ .dc.b "HTTP/1.0 200 OK",13,10,"Content-Type: text/html",13,10,"C"
+ .dc.b "onnection: close",13,10,13,10,"<html><head><title>Elekto"
+ .dc.b "r FPGA Webserver</title></head><body text=",34,"#0000FF",34
+ .dc.b " bgcolor=",34,"#FFFF80",34," link=",34,"#FF0000",34,">Elekt"
+ .dc.b "or FPGA Webserver - Page not found</body></html>",13,10,0
+ .segment data, sclass xram
+ .export _csock ; xdata unsigned char csock
+_csock: ; xdata unsigned char csock
+ .dc.b 255
+ .export _gendyn_html ; unsigned int gendyn_html(xdata HTTP_INFO *, xdata unsigned char *)
+ .segment _gendyn_html_formal_near, size 0, fill, notext, sclass dram
+ .segment _gendyn_html_local_near, size 3, fill, notext, sclass dram
+ .sgraph _gendyn_html_formal_near, _gendyn_html_local_near, __gendyn_html
+?gendyn_html_df = _gendyn_html_local_near+2 ; unsigned char
+?gendyn_html_pinfo = _gendyn_html_local_near+0 ; xdata HTTP_INFO *
+
+ .segment __gendyn_html
+_gendyn_html: ; (leaf function) unsigned int gendyn_html(xdata HTTP_INFO *, xdata unsigned char *)
+ ; parameter 'pbuf' in 'RW45' assigned to 'B1_RW89'
+ ; parameter 'pinfo' in 'RW67' moved and assigned to local '?gendyn_html_pinfo'
+ mov ?gendyn_html_pinfo,R6
+ mov ?gendyn_html_pinfo+1,R7
+ mov AR8,R4
+ mov AR9,R5
+ .line "tcpip\web_serv.c" 51 59
+ mov R6,?gendyn_html_pinfo
+ mov R7,?gendyn_html_pinfo+1
+ mov A,#2
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ ; variable 'psrc' assigned to register 'B1_RW1213'
+ mov AR12,R6
+ mov AR13,R7
+ .line "tcpip\web_serv.c" 63 1
+ mov R6,?gendyn_html_pinfo
+ mov R7,?gendyn_html_pinfo+1
+ mov A,#4
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ ; variable 'leftos' assigned to register 'B1_RW1415'
+ mov AR14,R6
+ mov AR15,R7
+ .line "tcpip\web_serv.c" 64 1
+ mov R6,?gendyn_html_pinfo
+ mov R7,?gendyn_html_pinfo+1
+ inc R7
+ mov A,R7
+ jnz ?__1
+ inc R6
+?__1:
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R7,A
+ ; variable 'df' allocated as 'auto'
+ mov ?gendyn_html_df,R7
+ ; variable 'cnt' assigned to register 'B1_RW1011'
+ .line "tcpip\web_serv.c" 65 1
+ clr A
+ mov AR10,A
+ mov AR11,A
+ ljmp ?8
+?7:
+ .line "tcpip\web_serv.c" 66 14
+ mov DPH,AR12
+ mov DPL,AR13
+ clr A
+ movc A,@A+DPTR
+ mov R7,A
+ ; variable 'c' assigned to register 'B '
+ mov B,R7
+ .line "tcpip\web_serv.c" 68 2
+ inc AR13
+ mov A,AR13
+ jnz ?_1
+ inc AR12
+?_1:
+ .line "tcpip\web_serv.c" 69 2
+ mov A,AR15
+ dec AR15
+ jnz ?_2
+ dec AR14
+?_2:
+ .line "tcpip\web_serv.c" 70 5
+ mov A,?gendyn_html_df
+ jnz ?_3
+ ljmp ?10
+?_3:
+ mov A,#255
+ xrl A,B
+ jz ?_4
+ ljmp ?10
+?_4:
+ .line "tcpip\web_serv.c" 70 18
+ mov R6,AR12
+ mov R7,AR13
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ldc_dptr_r45
+ ; variable 'dsrc' assigned to register 'RW45'
+ .line "tcpip\web_serv.c" 73 3
+ clr A
+ mov R0,A
+ mov R1,A
+ ; variable 'rlen' assigned to register 'RW01'
+ sjmp ?13
+?12:
+ .line "tcpip\web_serv.c" 74 18
+ inc R1
+ mov A,R1
+ jnz ?__2
+ inc R0
+?__2:
+?13:
+ .line "tcpip\web_serv.c" 74 9
+ mov DPH,R4
+ mov DPL,R5
+ mov R6,DPH
+ mov R7,DPL
+ mov A,#1
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ movx A,@DPTR
+ mov R7,A
+ jnz ?12
+ .line "tcpip\web_serv.c" 76 6
+ mov R6,#0
+ mov R7,#100
+ setb C
+ mov A,R1
+ subb A,R7
+ mov A,R0
+ subb A,R6
+ jc ?15
+ .line "tcpip\web_serv.c" 76 17
+ mov R0,#0
+ mov R1,#100
+?15:
+ .line "tcpip\web_serv.c" 78 6
+ mov A,AR11
+ add A,R1
+ mov R3,A
+ mov A,AR10
+ addc A,R0
+ mov R2,A
+ mov R6,#0
+ mov R7,#100
+ setb C
+ mov A,R3
+ subb A,R7
+ mov A,R2
+ subb A,R6
+ jc ?17
+ .line "tcpip\web_serv.c" 78 20
+ mov A,#255
+ add A,AR13
+ mov AR13,A
+ mov A,#255
+ addc A,AR12
+ mov AR12,A
+ .line "tcpip\web_serv.c" 80 4
+ inc AR15
+ mov A,AR15
+ jnz ?_8
+ inc AR14
+?_8:
+ .line "tcpip\web_serv.c" 81 4
+ ljmp ?9
+?17:
+ .line "tcpip\web_serv.c" 84 3
+ mov R6,AR12
+ mov R7,AR13
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ldc_dptr_r23
+ ; variable 'dsrc' assigned to register 'RW23'
+ .line "tcpip\web_serv.c" 85 3
+ mov A,#2
+ add A,AR13
+ mov AR13,A
+ clr A
+ addc A,AR12
+ mov AR12,A
+ .line "tcpip\web_serv.c" 86 3
+ mov A,#254
+ add A,AR15
+ mov AR15,A
+ mov A,#255
+ addc A,AR14
+ mov AR14,A
+ sjmp ?20
+?19:
+ .line "tcpip\web_serv.c" 89 16
+ mov DPH,R2
+ mov DPL,R3
+ mov R6,DPH
+ mov R7,DPL
+ mov A,#1
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ movx A,@DPTR
+ mov R7,A
+ ; variable 'c' assigned to register 'R7'
+ .line "tcpip\web_serv.c" 91 4
+ mov DPH,AR8
+ mov DPL,AR9
+ mov A,R7
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 92 4
+ inc AR9
+ mov A,AR9
+ jnz ?_9
+ inc AR8
+?_9:
+ .line "tcpip\web_serv.c" 93 4
+ inc AR11
+ mov A,AR11
+ jnz ?_10
+ inc AR10
+?_10:
+ .line "tcpip\web_serv.c" 94 3
+?20:
+ .line "tcpip\web_serv.c" 89 9
+ mov R4,AR0
+ mov R5,AR1
+ mov A,#255
+ add A,R5
+ mov R1,A
+ mov A,#255
+ addc A,R4
+ mov R0,A
+ mov A,R4
+ orl A,R5
+ jnz ?19
+ .line "tcpip\web_serv.c" 97 2
+ sjmp ?11
+?10:
+ .line "tcpip\web_serv.c" 97 7
+ mov R7,B
+ mov DPH,AR8
+ mov DPL,AR9
+ mov A,R7
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 99 3
+ inc AR9
+ mov A,AR9
+ jnz ?_12
+ inc AR8
+?_12:
+ .line "tcpip\web_serv.c" 100 3
+ inc AR11
+ mov A,AR11
+ jnz ?_13
+ inc AR10
+?_13:
+ .line "tcpip\web_serv.c" 101 2
+?11:
+ .line "tcpip\web_serv.c" 103 5
+ mov R6,AR10
+ mov R7,AR11
+ mov A,R7
+ xrl A,#100
+ orl A,R6
+ .line "tcpip\web_serv.c" 103 16
+ jz ?9
+ .line "tcpip\web_serv.c" 104 1
+?8:
+ .line "tcpip\web_serv.c" 66 7
+ mov A,AR14
+ orl A,AR15
+ jz ?_15
+ ljmp ?7
+?_15:
+?9:
+ .line "tcpip\web_serv.c" 106 1
+ mov R6,?gendyn_html_pinfo
+ mov R7,?gendyn_html_pinfo+1
+ mov A,#2
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R6,AR12
+ mov R7,AR13
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 107 1
+ mov R6,?gendyn_html_pinfo
+ mov R7,?gendyn_html_pinfo+1
+ mov A,#4
+ add A,R7
+ mov R3,A
+ clr A
+ addc A,R6
+ mov R2,A
+ mov R6,AR14
+ mov R7,AR15
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 109 8
+ mov R6,AR10
+ mov R7,AR11
+ ret
+; end of function gendyn_html
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+
+ .export _poll_webserver ; unsigned int poll_webserver(void)
+ .hide
+ .segment _poll_webserver_formal_near, size 0, fill, notext, sclass dram
+ .segment _poll_webserver_local_near, size 8, fill, notext, sclass dram
+ .sgraph _poll_webserver_formal_near, _poll_webserver_local_near, __poll_webserver
+?poll_webserver_uci = _poll_webserver_local_near+2 ; unsigned char
+?poll_webserver_state = _poll_webserver_local_near+5 ; unsigned char
+?poll_webserver_res = _poll_webserver_local_near+0 ; unsigned int
+?poll_webserver_pinfo = _poll_webserver_local_near+3 ; xdata HTTP_INFO *
+?poll_webserver_sock = _poll_webserver_local_near+2 ; unsigned char
+?poll_webserver_pbuf = _poll_webserver_local_near+6 ; xdata unsigned char *
+ .sgraph _poll_webserver_local_near, _poll_net_formal_near, __poll_webserver, 0
+ .segment _poll_net_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _notready_socket_tcp_formal_near, __poll_webserver, 2
+ .segment _notready_socket_tcp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _notready_socket_tcp_formal_near, __poll_webserver, 3
+ .segment _notready_socket_tcp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _notready_socket_tcp_formal_near, __poll_webserver, 6
+ .segment _notready_socket_tcp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _allocate_tx_buf_formal_near, __poll_webserver, 6
+ .segment _allocate_tx_buf_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _gendyn_html_formal_near, __poll_webserver, 8
+ .segment _gendyn_html_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _send_socket_tcp_formal_near, __poll_webserver, 6
+ .segment _send_socket_tcp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _notready_socket_tcp_formal_near, __poll_webserver, 6
+ .segment _notready_socket_tcp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _poll_webserver_local_near, _close_socket_tcp_formal_near, __poll_webserver, 6
+ .segment _close_socket_tcp_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __poll_webserver
+_poll_webserver: ; unsigned int poll_webserver(void)
+ .line "tcpip\web_serv.c" 116 25
+ lcall _poll_net
+ ; variable 'res' allocated as 'auto'
+ mov ?poll_webserver_res,R6
+ mov ?poll_webserver_res+1,R7
+ .line "tcpip\web_serv.c" 129 4
+ mov A,?poll_webserver_res
+ orl A,?poll_webserver_res+1
+ jz ?_16
+ ljmp ?27
+?_16:
+ mov DPTR,#_csock
+ movx A,@DPTR
+ mov R3,A
+ cpl A
+ jnz ?_17
+ ljmp ?27
+?_17:
+ mov R7,AR3
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#6
+ lcall __mul_i2
+ mov R4,#((_http_info)>>8)&255
+ mov R5,#(_http_info)&255
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R7,A
+ cjne R7,#3,?27
+ mov R5,#1
+ mov R7,AR3
+ lcall _notready_socket_tcp
+ mov A,R6
+ orl A,R7
+ jnz ?27
+ .line "tcpip\web_serv.c" 129 92
+ mov DPTR,#_csock
+ movx A,@DPTR
+ mov R7,A
+ clr A
+ mov R6,A
+ add A,R7
+ mov R7,A
+ mov A,#245
+ addc A,R6
+ mov R6,A
+ mov ?poll_webserver_res,R6
+ mov ?poll_webserver_res+1,R7
+ .line "tcpip\web_serv.c" 132 2
+ mov DPTR,#_rcv_len
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 133 2
+ mov DPTR,#_csock
+ mov A,#255
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 134 1
+ ljmp ?28
+?27:
+ .line "tcpip\web_serv.c" 134 10
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+ cjne R7,#0,?_21
+ cjne R6,#212,?_21
+ sjmp ?_22
+?_21:
+ ljmp ?29
+?_22:
+ ; variable 'uci' allocated as 'auto'
+ .line "tcpip\web_serv.c" 134 23
+ clr A
+ mov ?poll_webserver_uci,A
+?31:
+ .line "tcpip\web_serv.c" 135 25
+ mov R7,?poll_webserver_uci
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#6
+ lcall __mul_i2
+ mov R4,#((_http_info)>>8)&255
+ mov R5,#(_http_info)&255
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R5,A
+ mov R7,#3
+ clr C
+ mov A,R5
+ subb A,R7
+ jc ?35
+ mov R5,#1
+ mov R7,?poll_webserver_uci
+ lcall _notready_socket_tcp
+ mov A,R6
+ orl A,R7
+ jnz ?35
+ .line "tcpip\web_serv.c" 136 67
+ mov R7,?poll_webserver_uci
+ clr A
+ mov R6,A
+ add A,R7
+ mov R7,A
+ mov A,#245
+ addc A,R6
+ mov R6,A
+ mov ?poll_webserver_res,R6
+ mov ?poll_webserver_res+1,R7
+ .line "tcpip\web_serv.c" 139 4
+ mov DPTR,#_rcv_len
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 140 3
+?35:
+ .line "tcpip\web_serv.c" 141 2
+ inc ?poll_webserver_uci
+ .line "tcpip\web_serv.c" 135 12
+ mov A,#2
+ xrl A,?poll_webserver_uci
+ jz ?_25
+ ljmp ?31
+?_25:
+ .line "tcpip\web_serv.c" 142 1
+?29:
+?28:
+ .line "tcpip\web_serv.c" 145 4
+ mov R4,#240
+ mov R5,#0
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ subb A,R4
+ jnc ?_26
+ ljmp ?37
+?_26:
+ .line "tcpip\web_serv.c" 145 16
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+ ; variable 'sock' allocated as 'auto'
+ mov ?poll_webserver_sock,R7
+ .line "tcpip\web_serv.c" 149 5
+ mov R7,?poll_webserver_sock
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#50
+ lcall __mul_i2
+ mov R4,#((_uc_socket+14)>>8)&255
+ mov R5,#(_uc_socket+14)&255
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ mov A,R7
+ xrl A,#80
+ jnz ?_27
+ mov A,R6
+ jz ?39
+?_27:
+ .line "tcpip\web_serv.c" 149 44
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+ ljmp ?26
+?39:
+ .line "tcpip\web_serv.c" 151 2
+ mov R7,?poll_webserver_sock
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#6
+ lcall __mul_i2
+ mov R4,#((_http_info)>>8)&255
+ mov R5,#(_http_info)&255
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ ; variable 'pinfo' allocated as 'auto'
+ mov ?poll_webserver_pinfo,R6
+ mov ?poll_webserver_pinfo+1,R7
+ .line "tcpip\web_serv.c" 153 2
+ mov DPH,?poll_webserver_pinfo
+ mov DPL,?poll_webserver_pinfo+1
+ movx A,@DPTR
+ mov R7,A
+ ; variable 'state' allocated as 'auto'
+ mov ?poll_webserver_state,R7
+ .line "tcpip\web_serv.c" 156 5
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+ mov R7,#0
+ cjne R7,#0,?_29
+ cjne R6,#245,?_29
+ sjmp ?_30
+?_29:
+ ljmp ?41
+?_30:
+ .line "tcpip\web_serv.c" 156 27
+ clr A
+ mov R0,A
+ mov R1,A
+ ; variable 'res' assigned to register 'RW01'
+ .line "tcpip\web_serv.c" 168 7
+ clr A
+ mov R2,A
+ mov R3,A
+ ; variable 'i' assigned to register 'RW23'
+ ljmp ?46
+?43:
+ .line "tcpip\web_serv.c" 168 25
+ mov R6,#((_rcv_buf)>>8)&255
+ mov R7,#(_rcv_buf)&255
+ mov A,R7
+ add A,R3
+ mov R7,A
+ mov A,R6
+ addc A,R2
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ mov R7,A
+ ; variable 'c' assigned to register 'B '
+ mov B,R7
+ .line "tcpip\web_serv.c" 171 11
+ mov A,?poll_webserver_state
+ jz ?49
+ mov R7,?poll_webserver_state
+ mov A,R7
+ xrl A,#1
+ jnz ?_32
+ ljmp ?52
+?_32:
+ mov R7,?poll_webserver_state
+ mov A,R7
+ xrl A,#2
+ jnz ?_33
+ ljmp ?55
+?_33:
+ ljmp ?47
+ .line "tcpip\web_serv.c" 171 17
+?49:
+ .line "tcpip\web_serv.c" 173 8
+ mov A,#71
+ xrl A,B
+ jz ?_34
+ ljmp ?48
+?_34:
+ mov A,R2
+ orl A,R3
+ jz ?_35
+ ljmp ?48
+?_35:
+ .line "tcpip\web_serv.c" 173 23
+ mov ?poll_webserver_state,#1
+ .line "tcpip\web_serv.c" 176 6
+ mov R7,?poll_webserver_sock
+ clr A
+ mov R6,A
+ add A,R7
+ mov R1,A
+ mov A,#144
+ addc A,R6
+ mov R0,A
+ .line "tcpip\web_serv.c" 179 6
+ mov R6,?poll_webserver_pinfo
+ mov R7,?poll_webserver_pinfo+1
+ mov A,#2
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ mov R6,#((_html_notfound)>>8)&255
+ mov R7,#(_html_notfound)&255
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 180 6
+ mov R6,?poll_webserver_pinfo
+ mov R7,?poll_webserver_pinfo+1
+ mov A,#4
+ add A,R7
+ mov R5,A
+ clr A
+ addc A,R6
+ mov R4,A
+ mov R6,#0
+ mov R7,#229
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 181 6
+ mov R6,?poll_webserver_pinfo
+ mov R7,?poll_webserver_pinfo+1
+ inc R7
+ mov A,R7
+ jnz ?__3
+ inc R6
+?__3:
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,#1
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 183 5
+ sjmp ?48
+?52:
+ .line "tcpip\web_serv.c" 186 8
+ mov A,#10
+ xrl A,B
+ jnz ?48
+ .line "tcpip\web_serv.c" 186 17
+ mov ?poll_webserver_state,#2
+ .line "tcpip\web_serv.c" 187 5
+ sjmp ?48
+?55:
+ .line "tcpip\web_serv.c" 189 8
+ mov A,#10
+ xrl A,B
+ jnz ?56
+ .line "tcpip\web_serv.c" 189 17
+ mov ?poll_webserver_state,#3
+ .line "tcpip\web_serv.c" 191 5
+ sjmp ?57
+?56:
+ .line "tcpip\web_serv.c" 191 11
+ mov R7,B
+ mov A,R7
+ xrl A,#13
+ jz ?58
+ .line "tcpip\web_serv.c" 192 18
+ mov ?poll_webserver_state,#1
+?58:
+ .line "tcpip\web_serv.c" 193 5
+?57:
+ .line "tcpip\web_serv.c" 194 4
+?47:
+?48:
+ .line "tcpip\web_serv.c" 195 3
+ inc R3
+ mov A,R3
+ jnz ?__4
+ inc R2
+?__4:
+?46:
+ .line "tcpip\web_serv.c" 168 11
+ mov DPTR,#_rcv_len
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R3
+ subb A,R7
+ mov A,R2
+ subb A,R6
+ jnc ?_39
+ ljmp ?43
+?_39:
+ .line "tcpip\web_serv.c" 198 6
+ mov A,R0
+ orl A,R1
+ jz ?60
+ .line "tcpip\web_serv.c" 198 11
+ mov R7,?poll_webserver_state
+ mov DPH,?poll_webserver_pinfo
+ mov DPL,?poll_webserver_pinfo+1
+ mov A,R7
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 200 11
+ mov R6,AR0
+ mov R7,AR1
+ ljmp ?26
+?60:
+ .line "tcpip\web_serv.c" 204 6
+ mov R5,#3
+ mov R7,?poll_webserver_state
+ clr C
+ mov A,R7
+ subb A,R5
+ jnc ?_41
+ ljmp ?62
+?_41:
+ .line "tcpip\web_serv.c" 204 15
+ mov R5,#1
+ mov R7,?poll_webserver_sock
+ lcall _notready_socket_tcp
+ mov A,R6
+ orl A,R7
+ jz ?_42
+ ljmp ?64
+?_42:
+ .line "tcpip\web_serv.c" 205 36
+ mov ?poll_webserver_state,#3
+ .line "tcpip\web_serv.c" 207 8
+ mov R6,?poll_webserver_pinfo
+ mov R7,?poll_webserver_pinfo+1
+ mov A,#4
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ mov A,R6
+ orl A,R7
+ jz ?66
+ .line "tcpip\web_serv.c" 207 22
+ lcall _allocate_tx_buf
+ ; variable 'pbuf' allocated as 'auto'
+ mov ?poll_webserver_pbuf,R6
+ mov ?poll_webserver_pbuf+1,R7
+ .line "tcpip\web_serv.c" 209 6
+ mov R4,?poll_webserver_pbuf
+ mov R5,?poll_webserver_pbuf+1
+ mov R6,?poll_webserver_pinfo
+ mov R7,?poll_webserver_pinfo+1
+ lcall _gendyn_html
+ ; variable 'sendlen' assigned to register 'RW67'
+ .line "tcpip\web_serv.c" 210 6
+ mov R2,AR6
+ mov R3,AR7
+ mov R4,?poll_webserver_pbuf
+ mov R5,?poll_webserver_pbuf+1
+ mov R7,?poll_webserver_sock
+ lcall _send_socket_tcp
+ .line "tcpip\web_serv.c" 211 6
+ mov R7,?poll_webserver_sock
+ mov DPTR,#_csock
+ mov A,R7
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 212 5
+ sjmp ?65
+?66:
+ .line "tcpip\web_serv.c" 212 10
+ mov ?poll_webserver_state,#4
+ .line "tcpip\web_serv.c" 214 9
+ clr A
+ mov R5,A
+ mov R7,?poll_webserver_sock
+ lcall _notready_socket_tcp
+ mov A,R6
+ orl A,R7
+ jnz ?65
+ .line "tcpip\web_serv.c" 214 38
+ clr A
+ mov ?poll_webserver_state,A
+ .line "tcpip\web_serv.c" 216 7
+ mov R7,?poll_webserver_sock
+ lcall _close_socket_tcp
+ .line "tcpip\web_serv.c" 217 6
+ sjmp ?65
+?64:
+ .line "tcpip\web_serv.c" 220 9
+ mov ?poll_webserver_state,#4
+ .line "tcpip\web_serv.c" 222 4
+?65:
+ .line "tcpip\web_serv.c" 224 3
+?62:
+ .line "tcpip\web_serv.c" 225 3
+ mov R7,?poll_webserver_state
+ mov DPH,?poll_webserver_pinfo
+ mov DPL,?poll_webserver_pinfo+1
+ mov A,R7
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 226 10
+ clr A
+ mov R6,A
+ mov R7,A
+ sjmp ?26
+?41:
+ .line "tcpip\web_serv.c" 228 11
+ mov R4,#248
+ mov R5,#0
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ subb A,R4
+ jc ?70
+ .line "tcpip\web_serv.c" 228 23
+ mov DPH,?poll_webserver_pinfo
+ mov DPL,?poll_webserver_pinfo+1
+ clr A
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 230 10
+ clr A
+ mov R6,A
+ mov R7,A
+ sjmp ?26
+?70:
+ .line "tcpip\web_serv.c" 232 1
+?37:
+ .line "tcpip\web_serv.c" 233 8
+ mov R6,?poll_webserver_res
+ mov R7,?poll_webserver_res+1
+?26:
+ ret
+; end of function poll_webserver
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:8 bytes
+
+ .export _webpage_name ; xdata unsigned char *webpage_name(void)
+ .segment _webpage_name_formal_near, size 0, fill, notext, sclass dram
+ .segment _webpage_name_local_near, size 0, fill, notext, sclass dram
+ .sgraph _webpage_name_formal_near, _webpage_name_local_near, __webpage_name
+
+ .segment __webpage_name
+_webpage_name: ; (leaf function) xdata unsigned char *webpage_name(void)
+ .line "tcpip\web_serv.c" 241 32
+ mov R4,#((_rcv_buf+5)>>8)&255
+ mov R5,#(_rcv_buf+5)&255
+ ; variable 'pc' assigned to register 'RW45'
+ .line "tcpip\web_serv.c" 244 1
+ clr A
+ mov R6,A
+ mov R7,A
+ mov DPTR,#_web_args
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 245 1
+ mov DPTR,#_rcv_buf+99
+ clr A
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 246 5
+?74:
+ .line "tcpip\web_serv.c" 246 8
+ mov DPH,AR4
+ mov DPL,AR5
+ movx A,@DPTR
+ mov R3,A
+ ; variable 'c' assigned to register 'R3'
+ .line "tcpip\web_serv.c" 248 5
+ cjne R3,#63,?78
+ .line "tcpip\web_serv.c" 248 13
+ mov A,#1
+ add A,R5
+ mov R7,A
+ clr A
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_web_args
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 250 3
+ sjmp ?76
+?78:
+ .line "tcpip\web_serv.c" 251 12
+ mov R7,#32
+ setb C
+ mov A,R3
+ subb A,R7
+ .line "tcpip\web_serv.c" 251 20
+ jc ?76
+ .line "tcpip\web_serv.c" 252 2
+ inc R5
+ mov A,R5
+ jnz ?__5
+ inc R4
+?__5:
+ .line "tcpip\web_serv.c" 253 1
+ sjmp ?74
+?76:
+ .line "tcpip\web_serv.c" 254 1
+ mov DPH,AR4
+ mov DPL,AR5
+ clr A
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 255 8
+ mov R6,#((_rcv_buf+5)>>8)&255
+ mov R7,#(_rcv_buf+5)&255
+ ret
+; end of function webpage_name
+; used: R---34567 BR-------- DPTR ACC PSW
+
+ .export _url_getarg_no ; unsigned char url_getarg_no(void)
+ .segment _url_getarg_no_formal_near, size 0, fill, notext, sclass dram
+ .segment _url_getarg_no_local_near, size 0, fill, notext, sclass dram
+ .sgraph _url_getarg_no_formal_near, _url_getarg_no_local_near, __url_getarg_no
+
+ .segment __url_getarg_no
+_url_getarg_no: ; (leaf function) unsigned char url_getarg_no(void)
+ .line "tcpip\web_serv.c" 265 25
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r67
+ mov A,R6
+ orl A,R7
+ jnz ?83
+ .line "tcpip\web_serv.c" 268 22
+ clr A
+ mov R7,A
+ ljmp ?82
+?83:
+ .line "tcpip\web_serv.c" 269 1
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r45
+ mov A,#1
+ add A,R5
+ mov R7,A
+ clr A
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_web_args
+ lcall __st_dptr_r67
+ mov DPH,AR4
+ mov DPL,AR5
+ movx A,@DPTR
+ ; variable 'c' assigned to register 'R7'
+ .line "tcpip\web_serv.c" 270 4
+ mov R7,A
+ xrl A,#97
+ jz ?85
+ mov A,R7
+ xrl A,#65
+ jz ?85
+ .line "tcpip\web_serv.c" 270 29
+ clr A
+ mov R7,A
+ ljmp ?82
+?85:
+ .line "tcpip\web_serv.c" 271 1
+ clr A
+ mov R3,A
+ ; variable 'ano' assigned to register 'R3'
+ .line "tcpip\web_serv.c" 272 5
+?87:
+ .line "tcpip\web_serv.c" 272 8
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r45
+ mov A,#1
+ add A,R5
+ mov R7,A
+ clr A
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_web_args
+ lcall __st_dptr_r67
+ mov DPH,AR4
+ mov DPL,AR5
+ movx A,@DPTR
+ mov R7,A
+ mov A,#208
+ add A,R7
+ mov R5,A
+ ; variable 'c' assigned to register 'R5'
+ .line "tcpip\web_serv.c" 274 5
+ mov R7,#9
+ setb C
+ mov A,R5
+ subb A,R7
+ .line "tcpip\web_serv.c" 274 10
+ jnc ?89
+ .line "tcpip\web_serv.c" 275 2
+ mov R7,#10
+ mov A,R3
+ mov B,R7
+ mul AB
+ mov R7,A
+ ; variable 'ano' assigned to register 'R7'
+ .line "tcpip\web_serv.c" 276 2
+ mov A,R5
+ add A,R7
+ mov R3,A
+ .line "tcpip\web_serv.c" 277 1
+ sjmp ?87
+?89:
+ .line "tcpip\web_serv.c" 278 4
+ mov A,R5
+ xrl A,#13
+ jz ?93
+ .line "tcpip\web_serv.c" 278 26
+ clr A
+ mov R7,A
+ sjmp ?82
+?93:
+ .line "tcpip\web_serv.c" 279 8
+ mov R7,AR3
+?82:
+ ret
+; end of function url_getarg_no
+; used: R---34567 BR-------- DPTR ACC PSW B
+
+ .export _url_getarg_str ; xdata unsigned char *url_getarg_str(void)
+ .segment _url_getarg_str_formal_near, size 0, fill, notext, sclass dram
+ .segment _url_getarg_str_local_near, size 0, fill, notext, sclass dram
+ .sgraph _url_getarg_str_formal_near, _url_getarg_str_local_near, __url_getarg_str
+
+ .segment __url_getarg_str
+_url_getarg_str: ; (leaf function) xdata unsigned char *url_getarg_str(void)
+ .line "tcpip\web_serv.c" 287 33
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r23
+ ; variable 'ret' assigned to register 'RW23'
+ .line "tcpip\web_serv.c" 291 5
+?98:
+ .line "tcpip\web_serv.c" 291 8
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r67
+ mov DPH,AR6
+ mov DPL,AR7
+ movx A,@DPTR
+ ; variable 'c' assigned to register 'R5'
+ .line "tcpip\web_serv.c" 293 5
+ mov R5,A
+ xrl A,#38
+ jz ?104
+ mov R7,#32
+ setb C
+ mov A,R5
+ subb A,R7
+ jnc ?102
+?104:
+ .line "tcpip\web_serv.c" 293 23
+ sjmp ?100
+?102:
+ .line "tcpip\web_serv.c" 294 2
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__6
+ inc R6
+?__6:
+ mov DPTR,#_web_args
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 295 1
+ sjmp ?98
+?100:
+ .line "tcpip\web_serv.c" 296 1
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r67
+ mov DPH,AR6
+ mov DPL,AR7
+ clr A
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 297 1
+ mov DPTR,#_web_args
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__7
+ inc R6
+?__7:
+ mov DPTR,#_web_args
+ lcall __st_dptr_r67
+ .line "tcpip\web_serv.c" 298 8
+ mov R6,AR2
+ mov R7,AR3
+ ret
+; end of function url_getarg_str
+; used: R--23-567 BR-------- DPTR ACC PSW
+
+ .export _webpage_bind ; void webpage_bind(unsigned char, code unsigned char *)
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .segment _webpage_bind_local_near, size 0, fill, notext, sclass dram
+ .sgraph _webpage_bind_formal_near, _webpage_bind_local_near, __webpage_bind
+
+ .segment __webpage_bind
+_webpage_bind: ; (leaf function) void webpage_bind(unsigned char, code unsigned char *)
+ ; parameter 'pd' in 'RW45' assigned to 'B1_RW89'
+ ; parameter 'sock' in 'R7'
+ mov AR8,R4
+ mov AR9,R5
+ .line "tcpip\web_serv.c" 308 53
+ mov R5,AR7
+ clr A
+ mov R4,A
+ mov R6,A
+ mov R7,#6
+ lcall __mul_i2
+ mov R2,#((_http_info)>>8)&255
+ mov R3,#(_http_info)&255
+ mov A,R3
+ add A,R7
+ mov R1,A
+ mov A,R2
+ addc A,R6
+ mov R0,A
+ ; variable 'pinfo' assigned to register 'RW01'
+ .line "tcpip\web_serv.c" 312 1
+ mov R6,AR8
+ mov R7,AR9
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ldc_dptr_r23
+ mov A,#4
+ add A,R1
+ mov R7,A
+ clr A
+ addc A,R0
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __st_dptr_r23
+ .line "tcpip\web_serv.c" 313 1
+ mov R6,AR8
+ mov R7,AR9
+ mov A,#2
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ ; variable 'pd' assigned to register 'RW67'
+ .line "tcpip\web_serv.c" 314 1
+ mov R4,AR6
+ mov R5,AR7
+ mov A,#1
+ add A,R5
+ mov R7,A
+ clr A
+ addc A,R4
+ mov R6,A
+ ; variable 'pd' assigned to register 'B1_RW89'
+ mov AR8,R6
+ mov AR9,R7
+ mov DPH,AR4
+ mov DPL,AR5
+ clr A
+ movc A,@A+DPTR
+ mov R3,A
+ mov A,#1
+ add A,R1
+ mov R7,A
+ clr A
+ addc A,R0
+ mov R6,A
+ mov DPH,AR6
+ mov DPL,AR7
+ mov A,R3
+ movx @DPTR,A
+ .line "tcpip\web_serv.c" 315 1
+ mov A,#2
+ add A,R1
+ mov R3,A
+ clr A
+ addc A,R0
+ mov R2,A
+ mov R6,AR8
+ mov R7,AR9
+ mov DPH,R2
+ mov DPL,R3
+ lcall __st_dptr_r67
+ ret
+; end of function webpage_bind
+; used: R01234567 BR01------ DPTR ACC PSW B
+
+ .segment bss, sclass xram, notext
+ .export _web_args ; xdata unsigned char *xdata web_args
+_web_args: ; xdata unsigned char *xdata web_args
+ .ds.b 2
+ .export _http_info ; xdata HTTP_INFO http_info[2]
+_http_info: ; xdata HTTP_INFO http_info[2]
+ .ds.b 12
+ .import _poll_net ; unsigned int poll_net(void)
+ .import _close_socket_tcp ; unsigned int close_socket_tcp(unsigned char)
+ .import _notready_socket_tcp ; unsigned int notready_socket_tcp(unsigned char, unsigned char)
+ .import _send_socket_tcp ; unsigned int send_socket_tcp(unsigned char, xdata unsigned char *, unsigned int)
+ .import _allocate_tx_buf ; xdata unsigned char *allocate_tx_buf(void)
+ .import _rcv_len ; xdata unsigned int rcv_len
+ .import _rcv_buf ; xdata unsigned char rcv_buf[100]
+ .import _uc_socket ; xdata UC_SOCKET uc_socket[2]
+ .end
+; *END* (1134 lines)

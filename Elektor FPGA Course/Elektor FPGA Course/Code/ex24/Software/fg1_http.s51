@@ -1,0 +1,409 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'fg1_http.c', time: Wed Dec 13 13:00:41 2006
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <reg51.def>
+	.include <reg52.def>
+	P0    = $80
+	sevseg_ctrl  = $C0;
+  sevseg_data0 = $C1;
+  sevseg_data1 = $C2;
+  sevseg_data2 = $C3;
+  sevseg_data3 = $C4;
+  sevseg_en    = $C5;
+  _sevseg_ctrl  = sevseg_ctrl;
+  _sevseg_data0 = sevseg_data0;
+  _sevseg_data1 = sevseg_data1;
+  _sevseg_data2 = sevseg_data2;
+  _sevseg_data3 = sevseg_data3;
+  _sevseg_en    = sevseg_en;
+
+ .export _main ; void main(void)
+
+; *** RESET POINT ***
+ .export __reset
+ .segment ___reset, org $0
+ __reset: ljmp __startup
+
+ .hide
+ .segment _main_formal_near, size 0, fill, notext, sclass dram, root
+ .segment _main_local_near, size 3, fill, notext, sclass dram
+ .sgraph _main_formal_near, _main_local_near, __main
+?i44 = _main_local_near+0 ; unsigned char
+?i45 = _main_local_near+1 ; xdata unsigned char *
+?main_pc = _main_local_near+1 ; xdata unsigned char *
+?main_socket = _main_local_near+0 ; unsigned char
+ .sgraph _main_local_near, _printf_formal_near, __main, 0
+ .segment _printf_formal_near, size 8, fill, notext, sclass dram
+ .sgraph _main_local_near, _Init_net_formal_near, __main, 0
+ .segment _Init_net_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _puts_formal_near, __main, 0
+ .segment _puts_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _poll_webserver_formal_near, __main, 0
+ .segment _poll_webserver_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_name_formal_near, __main, 1
+ .segment _webpage_name_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 3
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 1
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _webpage_bind_formal_near, __main, 0
+ .segment _webpage_bind_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _url_getarg_no_formal_near, __main, 0
+ .segment _url_getarg_no_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _url_getarg_str_formal_near, __main, 1
+ .segment _url_getarg_str_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _printf_formal_near, __main, 3
+ .segment _printf_formal_near, size 6, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcpy_formal_near, __main, 3
+ .segment _strcpy_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcpy_formal_near, __main, 3
+ .segment _strcpy_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcpy_formal_near, __main, 0
+ .segment _strcpy_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __main
+_main: ; void main(void)
+ .line "fg1_http.c" 40 15
+ mov _TMOD,#1
+ .line "fg1_http.c" 47 2
+ mov _SCON,#82
+ .line "fg1_http.c" 48 2
+ clr A
+ mov _T2CON,A
+ .line "fg1_http.c" 49 2
+ mov _RCAP2L,#174
+ .line "fg1_http.c" 50 2
+ mov _RCAP2H,#255
+ .line "fg1_http.c" 51 2
+ mov _T2CON,#48
+ .line "fg1_http.c" 52 2
+ setb _TR2
+ .line "fg1_http.c" 53 2
+ setb _TR0
+ .line "fg1_http.c" 55 1
+ clr A
+ mov _P1,A
+ .line "fg1_http.c" 59 0
+ mov DPTR,#_my_ip
+ mov A,#192
+ movx @DPTR,A
+ .line "fg1_http.c" 59 22
+ mov DPTR,#_my_ip+1
+ mov A,#168
+ movx @DPTR,A
+ .line "fg1_http.c" 59 43
+ mov DPTR,#_my_ip+2
+ clr A
+ movx @DPTR,A
+ .line "fg1_http.c" 59 62
+ mov DPTR,#_my_ip+3
+ mov A,#1
+ movx @DPTR,A
+ .line "fg1_http.c" 59 81
+ mov DPTR,#_my_ip+3
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _printf_formal_near+6,R6
+ mov _printf_formal_near+7,R7
+ mov DPTR,#_my_ip+2
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _printf_formal_near+4,R6
+ mov _printf_formal_near+5,R7
+ mov DPTR,#_my_ip+1
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _printf_formal_near+2,R6
+ mov _printf_formal_near+3,R7
+ mov DPTR,#_my_ip
+ movx A,@DPTR
+ mov R7,A
+ mov R6,#0
+ mov _printf_formal_near,R6
+ mov _printf_formal_near+1,R7
+ mov R6,#((?i9)>>8)&255
+ mov R7,#(?i9)&255
+ mov R4,#COS
+ lcall _printf
+ .line "fg1_http.c" 63 4
+ lcall _Init_net
+ mov A,R7
+ jz ?10
+ .line "fg1_http.c" 63 16
+ mov R6,#((?i12)>>8)&255
+ mov R7,#(?i12)&255
+ mov R4,#COS
+ lcall _puts
+ .line "fg1_http.c" 65 2
+ mov _sevseg_data0,#1
+ .line "fg1_http.c" 66 6
+?13:
+ .line "fg1_http.c" 66 9
+ sjmp ?13
+?10:
+ .line "fg1_http.c" 69 5
+ clr A
+ mov R3,A
+ ; variable 'i' assigned to register 'R3'
+?17:
+ .line "fg1_http.c" 69 18
+ mov R7,AR3
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#50
+ lcall __mul_i2
+ mov A,#(_uc_socket)&255
+ add A,R7
+ mov DPL,A
+ mov A,#((_uc_socket)>>8)&255
+ addc A,R6
+ mov DPH,A
+ mov A,#2
+ movx @DPTR,A
+ .line "fg1_http.c" 69 48
+ mov R7,AR3
+ clr A
+ mov R6,A
+ mov R4,A
+ mov R5,#50
+ lcall __mul_i2
+ mov R4,#((_uc_socket+14)>>8)&255
+ mov R5,#(_uc_socket+14)&255
+ mov A,R5
+ add A,R7
+ mov R5,A
+ mov A,R4
+ addc A,R6
+ mov R4,A
+ mov R6,#0
+ mov R7,#80
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "fg1_http.c" 69 76
+ inc R3
+ .line "fg1_http.c" 69 9
+ cjne R3,#2,?17
+ .line "fg1_http.c" 69 77
+?21:
+ .line "fg1_http.c" 71 8
+ lcall _poll_webserver
+ mov R4,AR6
+ mov R5,AR7
+ ; variable 'res' assigned to register 'RW45'
+ .line "fg1_http.c" 77 5
+ mov R7,#0
+ mov A,R4
+ mov R6,A
+ cjne R7,#0,?21
+ cjne R6,#144,?21
+ .line "fg1_http.c" 77 28
+ mov R7,AR5
+ ; variable 'socket' allocated as 'auto'
+ mov ?main_socket,R7
+ .line "fg1_http.c" 80 3
+ lcall _webpage_name
+ ; variable 'pc' allocated as 'auto'
+ mov ?main_pc,R6
+ mov ?main_pc+1,R7
+ .line "fg1_http.c" 84 6
+ mov DPH,?main_pc
+ mov DPL,?main_pc+1
+ movx A,@DPTR
+ mov R7,A
+ cjne R7,#102,?27
+ .line "fg1_http.c" 84 15
+ mov R4,#((_form)>>8)&255
+ mov R5,#(_form)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 86 3
+ sjmp ?28
+?27:
+ .line "fg1_http.c" 86 12
+ mov DPH,?main_pc
+ mov DPL,?main_pc+1
+ movx A,@DPTR
+ mov R7,A
+ cjne R7,#114,?29
+ .line "fg1_http.c" 86 21
+ mov R4,#((_reply)>>8)&255
+ mov R5,#(_reply)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 88 3
+ sjmp ?30
+?29:
+ .line "fg1_http.c" 88 8
+ mov R4,#((_home)>>8)&255
+ mov R5,#(_home)&255
+ mov R7,?main_socket
+ lcall _webpage_bind
+ .line "fg1_http.c" 90 3
+?30:
+?28:
+ .line "fg1_http.c" 92 7
+?31:
+ .line "fg1_http.c" 92 10
+ lcall _url_getarg_no
+ ; variable 'i' allocated as 'auto'
+ mov ?i44,R7
+ .line "fg1_http.c" 94 7
+ mov A,?i44
+ jnz ?35
+ .line "fg1_http.c" 94 11
+ ljmp ?21
+?35:
+ .line "fg1_http.c" 95 4
+ lcall _url_getarg_str
+ ; variable 'pc' allocated as 'auto'
+ .line "fg1_http.c" 97 4
+ mov ?i45,R6
+ mov ?i45+1,R7
+ mov R4,#XDS
+ mov _printf_formal_near+2,R4
+ mov _printf_formal_near+3,R5
+ mov _printf_formal_near+4,R6
+ mov _printf_formal_near+5,R7
+ mov _printf_formal_near+1,?i44
+ mov _printf_formal_near,#0
+ mov R6,#((?i37)>>8)&255
+ mov R7,#(?i37)&255
+ mov R4,#COS
+ lcall _printf
+ .line "fg1_http.c" 99 7
+ mov A,#1
+ xrl A,?i44
+ jnz ?38
+ .line "fg1_http.c" 99 13
+ mov R6,?i45
+ mov R7,?i45+1
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#XDS
+ mov R6,#((_name)>>8)&255
+ mov R7,#(_name)&255
+ mov R4,#XDS
+ lcall _strcpy
+ sjmp ?31
+?38:
+ .line "fg1_http.c" 100 12
+ mov A,#2
+ xrl A,?i44
+ jnz ?40
+ .line "fg1_http.c" 100 18
+ mov R6,?i45
+ mov R7,?i45+1
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#XDS
+ mov R6,#((_cont)>>8)&255
+ mov R7,#(_cont)&255
+ mov R4,#XDS
+ lcall _strcpy
+ ljmp ?31
+?40:
+ .line "fg1_http.c" 101 12
+ mov A,#3
+ xrl A,?i44
+ jz ?_13
+ ljmp ?31
+?_13:
+ .line "fg1_http.c" 101 18
+ mov R6,?i45
+ mov R7,?i45+1
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#XDS
+ mov R6,#((_adr)>>8)&255
+ mov R7,#(_adr)&255
+ mov R4,#XDS
+ lcall _strcpy
+ .line "fg1_http.c" 104 3
+ ljmp ?31
+; end of function main
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+
+ .segment bss, sclass xram, notext
+ .export _cont ; xdata unsigned char cont[12]
+_cont: ; xdata unsigned char cont[12]
+ .ds.b 12
+ .export _adr ; xdata unsigned char adr[5]
+_adr: ; xdata unsigned char adr[5]
+ .ds.b 5
+ .export _name ; xdata unsigned char name[21]
+_name: ; xdata unsigned char name[21]
+ .ds.b 21
+ .import _reply ; code unsigned char reply[]
+ .import _form ; code unsigned char form[]
+ .import _home ; code unsigned char home[]
+ .import _sevseg_data0 ; near unsigned char sevseg_data0
+ .import _webpage_bind ; void webpage_bind(unsigned char, code unsigned char *)
+ .import _url_getarg_str ; xdata unsigned char *url_getarg_str(void)
+ .import _url_getarg_no ; unsigned char url_getarg_no(void)
+ .import _webpage_name ; xdata unsigned char *webpage_name(void)
+ .import _poll_webserver ; unsigned int poll_webserver(void)
+ .import _Init_net ; unsigned char Init_net(void)
+ .import _uc_socket ; xdata UC_SOCKET uc_socket[2]
+ .import _my_ip ; xdata IP_ADR my_ip
+ .import _RCAP2H ; near unsigned char RCAP2H
+ .import _RCAP2L ; near unsigned char RCAP2L
+ .import _TR2 ; bit unsigned char TR2
+ .import _T2CON ; near unsigned char T2CON
+ .import _P1 ; near unsigned char P1
+ .import _TMOD ; near unsigned char TMOD
+ .import _TR0 ; bit unsigned char TR0
+ .import _SCON ; near unsigned char SCON
+ .import _strcpy ; far char *strcpy(far char *, far char *)
+ .import _printf ; int printf(far char *, ...)
+ .import _puts ; int puts(far char *)
+ .segment lit
+?i37: ; code char [15]
+ .dc.b "Arg A%u: '%s'",10,0
+?i12: ; code char [14]
+ .dc.b "<NET FAILURE>",0
+?i9: ; code char [19]
+ .dc.b "IP:  %u.%u.%u.%u",13,10,0
+ .export PRINTF_TYPE_u
+PRINTF_TYPE_u=1
+ .export PRINTF_TYPE_s
+PRINTF_TYPE_s=1
+ .end
+; *END* (266 lines)

@@ -1,0 +1,103 @@
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+35
+1765
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ex12
+# storage
+db|ex12.(0).cnf
+db|ex12.(0).cnf
+# case_insensitive
+# source_file
+ex12.bdf
+b8a4c1da4b662f5abbd928b256ca3e0
+24
+# hierarchies {
+|
+}
+# end
+# entity
+PCM3006
+# storage
+db|ex12.(1).cnf
+db|ex12.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+PCM3006.vhd
+d66fcdbd396f9511f6b8d65da021f4
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+PCM3006:inst6
+}
+# end
+# entity
+cordic_core
+# storage
+db|ex12.(2).cnf
+db|ex12.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+cordic_core.VHD
+336beee86dbcea1428d2503273776d
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+cordic_core:inst1
+}
+# end
+# entity
+mag_phase_accu
+# storage
+db|ex12.(3).cnf
+db|ex12.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mag_phase_accu.vhd
+6c94b7cfe66bedf1226acee4218550
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+mag_phase_accu:inst
+}
+# end
+# complete
+

@@ -1,0 +1,652 @@
+objectfile:fg1_http.obj
+time:Wed Dec 13 13:00:41 2006
+cpuname:i8051
+import:_webpage_bind
+import:__st_dptr_r67
+import:_strcpy
+import:_webpage_name
+import:_printf
+import:_reply
+import:_Init_net
+import:_my_ip
+import:__startup
+import:_puts
+import:_url_getarg_str
+import:_uc_socket
+import:_home
+import:_url_getarg_no
+import:__mul_i2
+import:_poll_webserver
+import:_form
+define:PRINTF_TYPE_s 1
+define:PRINTF_TYPE_u 1
+export:__reset @0:0
+export:_main @c:0
+export:_name @d:11
+export:_adr @d:c
+export:_cont @d:0
+segment:___reset @0:0 u:3
+02 00 00
+segment:_main_formal_near @1:m s:0 u:0 n f c:dram r
+segment:_main_local_near @2:m s:3 u:0 n f c:dram
+segment:_printf_formal_near @3:m s:8 u:0 n f c:dram
+segment:_Init_net_formal_near @4:m s:0 u:0 n f c:dram
+segment:_puts_formal_near @5:m s:0 u:0 n f c:dram
+segment:_poll_webserver_formal_near @6:m s:0 u:0 n f c:dram
+segment:_webpage_name_formal_near @7:m s:0 u:0 n f c:dram
+segment:_webpage_bind_formal_near @8:m s:0 u:0 n f c:dram
+segment:_url_getarg_no_formal_near @9:m s:0 u:0 n f c:dram
+segment:_url_getarg_str_formal_near @a:m s:0 u:0 n f c:dram
+segment:_strcpy_formal_near @b:m s:0 u:0 n f c:dram
+segment:__main @c:m u:188
+75 89 01 75 98 52 e4 f5 c8 75 ca ae 75 cb ff 75
+c8 30 d2 ca d2 8c e4 f5 90 90 00 00 74 c0 f0 90
+00 00 74 a8 f0 90 00 00 e4 f0 90 00 00 74 01 f0
+90 00 00 e0 ff 7e 00 8e 00 8f 00 90 00 00 e0 ff
+7e 00 8e 00 8f 00 90 00 00 e0 ff 7e 00 8e 00 8f
+00 90 00 00 e0 ff 7e 00 8e 00 8f 00 7e 00 7f 00
+7c 01 12 00 00 12 00 00 ef 60 00 7e 00 7f 00 7c
+01 12 00 00 75 c1 01 80 00 e4 fb af 03 e4 fe fc
+7d 32 12 00 00 74 00 2f f5 82 74 00 3e f5 83 74
+02 f0 af 03 e4 fe fc 7d 32 12 00 00 7c 00 7d 00
+ed 2f fd ec 3e fc 7e 00 7f 50 8c 83 8d 82 12 00
+00 0b bb 02 00 12 00 00 ac 06 ad 07 7f 00 ec fe
+bf 00 00 be 90 00 af 05 8f 00 12 00 00 8e 00 8f
+00 85 00 83 85 00 82 e0 ff bf 66 00 7c 00 7d 00
+af 00 12 00 00 80 00 85 00 83 85 00 82 e0 ff bf
+72 00 7c 00 7d 00 af 00 12 00 00 80 00 7c 00 7d
+00 af 00 12 00 00 12 00 00 8f 00 e5 00 70 00 02
+00 00 12 00 00 8e 00 8f 00 7c 00 8c 00 8d 00 8e
+00 8f 00 85 00 00 75 00 00 7e 00 7f 00 7c 01 12
+00 00 74 01 65 00 70 00 ae 00 af 00 ab 07 aa 06
+78 00 7e 00 7f 00 7c 00 12 00 00 80 00 74 02 65
+00 70 00 ae 00 af 00 ab 07 aa 06 78 00 7e 00 7f
+00 7c 00 12 00 00 02 00 00 74 03 65 00 60 00 02
+00 00 ae 00 af 00 ab 07 aa 06 78 00 7e 00 7f 00
+7c 00 12 00 00 02 00 00
+segment:bss @d:m u:26 n c:xram
+segment:lit @e:m u:30
+41 72 67 20 41 25 75 3a 20 27 25 73 27 0a 00 3c
+4e 45 54 20 46 41 49 4c 55 52 45 3e 00 49 50 3a
+20 20 25 75 2e 25 75 2e 25 75 2e 25 75 0d 0a 00
+sgraph:_main_formal_near _main_local_near __main
+sgraph:_main_local_near _strcpy_formal_near __main 0
+sgraph:_main_local_near _strcpy_formal_near __main 3
+sgraph:_main_local_near _strcpy_formal_near __main 3
+sgraph:_main_local_near _printf_formal_near __main 3
+sgraph:_main_local_near _url_getarg_str_formal_near __main 1
+sgraph:_main_local_near _url_getarg_no_formal_near __main 0
+sgraph:_main_local_near _webpage_bind_formal_near __main 0
+sgraph:_main_local_near _webpage_bind_formal_near __main 1
+sgraph:_main_local_near _webpage_bind_formal_near __main 3
+sgraph:_main_local_near _webpage_name_formal_near __main 1
+sgraph:_main_local_near _poll_webserver_formal_near __main 0
+sgraph:_main_local_near _puts_formal_near __main 0
+sgraph:_main_local_near _Init_net_formal_near __main 0
+sgraph:_main_local_near _printf_formal_near __main 0
+src:fg1_http.s51 #0
+src:C:\uC51\include\reg51.def #1
+src:C:\uC51\include\reg52.def #2
+src:C:\uC51\include\reg51.def #3
+ref w_hl #0:39 @0:1 __startup
+ref w_hl #0:78 @c:1a _my_ip
+ref w_hl #0:7c @c:20 _my_ip 1 +
+ref w_hl #0:80 @c:26 _my_ip 2 +
+ref w_hl #0:84 @c:2b _my_ip 3 +
+ref w_hl #0:88 @c:31 _my_ip 3 +
+ref byte #0:8c @c:38 @3:0 6 +
+ref byte #0:8d @c:3a @3:0 7 +
+ref w_hl #0:8e @c:3c _my_ip 2 +
+ref byte #0:92 @c:43 @3:0 4 +
+ref byte #0:93 @c:45 @3:0 5 +
+ref w_hl #0:94 @c:47 _my_ip 1 +
+ref byte #0:98 @c:4e @3:0 2 +
+ref byte #0:99 @c:50 @3:0 3 +
+ref w_hl #0:9a @c:52 _my_ip
+ref byte #0:9e @c:59 @3:0
+ref byte #0:9f @c:5b @3:0 1 +
+ref byte #0:a0 @c:5d @e:1d 8 >> 255 &
+ref byte #0:a1 @c:5f @e:1d 255 &
+ref w_hl #0:a3 @c:63 _printf
+ref w_hl #0:a5 @c:66 _Init_net
+ref rbyte #0:a7 @c:6a @c:79
+ref byte #0:a9 @c:6c @e:f 8 >> 255 &
+ref byte #0:aa @c:6e @e:f 255 &
+ref w_hl #0:ac @c:72 _puts
+ref rbyte #0:b2 @c:78 @c:77
+ref w_hl #0:bf @c:83 __mul_i2
+ref byte #0:c0 @c:86 _uc_socket 255 &
+ref byte #0:c3 @c:8b _uc_socket 8 >> 255 &
+ref w_hl #0:ce @c:9a __mul_i2
+ref byte #0:cf @c:9d _uc_socket 14 + 8 >> 255 &
+ref byte #0:d0 @c:9f _uc_socket 14 + 255 &
+ref w_hl #0:db @c:af __st_dptr_r67
+ref rbyte #0:df @c:b4 @c:7b
+ref w_hl #0:e3 @c:b6 _poll_webserver
+ref rbyte #0:eb @c:c2 @c:b5
+ref rbyte #0:ec @c:c5 @c:b5
+ref byte #0:f0 @c:c9 @2:0 0 +
+ref w_hl #0:f2 @c:cb _webpage_name
+ref byte #0:f4 @c:ce @2:0 1 +
+ref byte #0:f5 @c:d0 @2:0 1 + 1 +
+ref byte #0:f7 @c:d2 @2:0 1 +
+ref byte #0:f8 @c:d5 @2:0 1 + 1 +
+ref rbyte #0:fb @c:db @c:e7
+ref byte #0:fd @c:dd _form 8 >> 255 &
+ref byte #0:fe @c:df _form 255 &
+ref byte #0:ff @c:e1 @2:0 0 +
+ref w_hl #0:100 @c:e3 _webpage_bind
+ref rbyte #0:102 @c:e6 @c:106
+ref byte #0:105 @c:e8 @2:0 1 +
+ref byte #0:106 @c:eb @2:0 1 + 1 +
+ref rbyte #0:109 @c:f1 @c:fd
+ref byte #0:10b @c:f3 _reply 8 >> 255 &
+ref byte #0:10c @c:f5 _reply 255 &
+ref byte #0:10d @c:f7 @2:0 0 +
+ref w_hl #0:10e @c:f9 _webpage_bind
+ref rbyte #0:110 @c:fc @c:106
+ref byte #0:113 @c:fe _home 8 >> 255 &
+ref byte #0:114 @c:100 _home 255 &
+ref byte #0:115 @c:102 @2:0 0 +
+ref w_hl #0:116 @c:104 _webpage_bind
+ref w_hl #0:11d @c:107 _url_getarg_no
+ref byte #0:11f @c:10a @2:0 0 +
+ref byte #0:121 @c:10c @2:0 0 +
+ref rbyte #0:122 @c:10e @c:112
+ref w_hl #0:124 @c:110 @c:b5
+ref w_hl #0:127 @c:113 _url_getarg_str
+ref byte #0:12a @c:116 @2:0 1 +
+ref byte #0:12b @c:118 @2:0 1 + 1 +
+ref byte #0:12d @c:11c @3:0 2 +
+ref byte #0:12e @c:11e @3:0 3 +
+ref byte #0:12f @c:120 @3:0 4 +
+ref byte #0:130 @c:122 @3:0 5 +
+ref byte #0:131 @c:124 @2:0 0 +
+ref byte #0:131 @c:125 @3:0 1 +
+ref byte #0:132 @c:127 @3:0
+ref byte #0:133 @c:12a @e:0 8 >> 255 &
+ref byte #0:134 @c:12c @e:0 255 &
+ref w_hl #0:136 @c:130 _printf
+ref byte #0:139 @c:135 @2:0 0 +
+ref rbyte #0:13a @c:137 @c:14d
+ref byte #0:13c @c:139 @2:0 1 +
+ref byte #0:13d @c:13b @2:0 1 + 1 +
+ref byte #0:141 @c:143 _name 8 >> 255 &
+ref byte #0:142 @c:145 _name 255 &
+ref w_hl #0:144 @c:149 _strcpy
+ref rbyte #0:145 @c:14c @c:106
+ref byte #0:149 @c:150 @2:0 0 +
+ref rbyte #0:14a @c:152 @c:169
+ref byte #0:14c @c:154 @2:0 1 +
+ref byte #0:14d @c:156 @2:0 1 + 1 +
+ref byte #0:151 @c:15e _cont 8 >> 255 &
+ref byte #0:152 @c:160 _cont 255 &
+ref w_hl #0:154 @c:164 _strcpy
+ref w_hl #0:155 @c:167 @c:106
+ref byte #0:159 @c:16c @2:0 0 +
+ref rbyte #0:15a @c:16e @c:172
+ref w_hl #0:15b @c:170 @c:106
+ref byte #0:15e @c:173 @2:0 1 +
+ref byte #0:15f @c:175 @2:0 1 + 1 +
+ref byte #0:163 @c:17d _adr 8 >> 255 &
+ref byte #0:164 @c:17f _adr 255 &
+ref w_hl #0:166 @c:183 _strcpy
+ref w_hl #0:168 @c:186 @c:106
+objectdebug
+dtx ; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+dtx ; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+dtx ; sourcefile: 'fg1_http.c', time: Wed Dec 13 13:00:41 2006
+dtx 
+dtx  .hide
+dtx  .show
+dtx XDS=0
+dtx COS=1
+dtx NES=2
+dtx INS=2
+dtx .macro __line
+dtx lcall $0006 ; uC/51 debugger
+dtx .endmacro
+dtx         .include <reg51.def>
+dtx ; **** 8051 standard defs ***
+dtx ; common registers to all 8051's
+dtx         .hide
+dtx         .show
+dtx         .include <reg52.def>
+dtx ; **** 80C52 (extended) defs ***
+dtx 
+dtx         .hide
+dtx         .show
+dtx         P0    = $80
+dtx         sevseg_ctrl  = $C0;
+dtx   sevseg_data0 = $C1;
+dtx   sevseg_data1 = $C2;
+dtx   sevseg_data2 = $C3;
+dtx   sevseg_data3 = $C4;
+dtx   sevseg_en    = $C5;
+dtx   _sevseg_ctrl  = sevseg_ctrl;
+dtx   _sevseg_data0 = sevseg_data0;
+dtx   _sevseg_data1 = sevseg_data1;
+dtx   _sevseg_data2 = sevseg_data2;
+dtx   _sevseg_data3 = sevseg_data3;
+dtx   _sevseg_en    = sevseg_en;
+dtx 
+dtx  .export _main ; void main(void)
+dtx 
+dtx ; *** RESET POINT ***
+dtx  .export __reset
+dtx  .segment ___reset, org $0
+dco @0:0 u:3  __reset: ljmp __startup
+dtx 
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __main
+dtx _main: ; void main(void)
+dhl /*********************************************************************************
+dhl * FG1_HTTP.C
+dhl * 
+dhl * A simple dynamic Webserver on Elektor FPGA Board
+dhl *
+dhl * (C) 2006 Andreas Voggeneder
+dhl **********************************************************************************/
+dhl 
+dhl #include <stdio.h>
+dhl #include <string.h> 
+dhl #include <ctype.h>
+dhl #include <reg52.h>
+dhl 
+dhl #include "tcpip/net.h"   // Basic network handling (public)
+dhl #include "tcpip/web_serv.h"  // Webserver
+dhl #include "tcpip/open_ether.h"
+dhl 
+dhl 
+dhl //#define LED P1_B7   // LED on (almost) all Wickenhaeuser boards
+dhl 
+dhl // Declaration of the Pages
+dhl extern code unsigned char home[];
+dhl extern code unsigned char form[];
+dhl extern code unsigned char reply[];
+dhl 
+dhl 
+dhl // For form.html:
+dhl xdata uchar name[21];
+dhl xdata uchar adr[5];
+dhl xdata uchar cont[12];
+dhl 
+dhl 
+dhl 
+dhl 
+dhl 
+dhl 
+dhl /**********************************************************************************
+dhl *  M A I N
+dhl **********************************************************************************/
+dhl void main(void){
+dco @c:0 u:3  mov _TMOD,#1
+dhl  uint res;
+dhl  uchar i;
+dhl  uchar socket;
+dhl  xdata uchar *pc;
+dhl  
+dhl   TMOD = 1;
+dhl   SCON = 0x52;    /* SCON */ 
+dco @c:3 u:3  mov _SCON,#82
+dhl   T2CON=0;
+dco @c:6 u:1  clr A
+dco @c:7 u:2  mov _T2CON,A
+dhl   RCAP2L=0xAE;                     // 9600 Baud @ 25 MHz
+dco @c:9 u:3  mov _RCAP2L,#174
+dhl   RCAP2H=0xff;
+dco @c:c u:3  mov _RCAP2H,#255
+dhl   T2CON=0x30;
+dco @c:f u:3  mov _T2CON,#48
+dhl   TR2=1;
+dco @c:12 u:2  setb _TR2
+dhl   TR0=1;
+dco @c:14 u:2  setb _TR0
+dhl 
+dhl  P1=0;
+dco @c:16 u:1  clr A
+dco @c:17 u:2  mov _P1,A
+dhl   
+dhl   // A HTTP-Server with only passive sockets requires only an IP address
+dhl 
+dhl  COMPOSE_IP(my_ip,192,168,0,1); 
+dco @c:19 u:3  mov DPTR,#_my_ip
+dco @c:1c u:2  mov A,#192
+dco @c:1e u:1  movx @DPTR,A
+dtx 
+dco @c:1f u:3  mov DPTR,#_my_ip+1
+dco @c:22 u:2  mov A,#168
+dco @c:24 u:1  movx @DPTR,A
+dtx 
+dco @c:25 u:3  mov DPTR,#_my_ip+2
+dco @c:28 u:1  clr A
+dco @c:29 u:1  movx @DPTR,A
+dtx 
+dco @c:2a u:3  mov DPTR,#_my_ip+3
+dco @c:2d u:2  mov A,#1
+dco @c:2f u:1  movx @DPTR,A
+dtx 
+dco @c:30 u:3  mov DPTR,#_my_ip+3
+dco @c:33 u:1  movx A,@DPTR
+dco @c:34 u:1  mov R7,A
+dco @c:35 u:2  mov R6,#0
+dco @c:37 u:2  mov _printf_formal_near+6,R6
+dco @c:39 u:2  mov _printf_formal_near+7,R7
+dco @c:3b u:3  mov DPTR,#_my_ip+2
+dco @c:3e u:1  movx A,@DPTR
+dco @c:3f u:1  mov R7,A
+dco @c:40 u:2  mov R6,#0
+dco @c:42 u:2  mov _printf_formal_near+4,R6
+dco @c:44 u:2  mov _printf_formal_near+5,R7
+dco @c:46 u:3  mov DPTR,#_my_ip+1
+dco @c:49 u:1  movx A,@DPTR
+dco @c:4a u:1  mov R7,A
+dco @c:4b u:2  mov R6,#0
+dco @c:4d u:2  mov _printf_formal_near+2,R6
+dco @c:4f u:2  mov _printf_formal_near+3,R7
+dco @c:51 u:3  mov DPTR,#_my_ip
+dco @c:54 u:1  movx A,@DPTR
+dco @c:55 u:1  mov R7,A
+dco @c:56 u:2  mov R6,#0
+dco @c:58 u:2  mov _printf_formal_near,R6
+dco @c:5a u:2  mov _printf_formal_near+1,R7
+dco @c:5c u:2  mov R6,#((?i9)>>8)&255
+dco @c:5e u:2  mov R7,#(?i9)&255
+dco @c:60 u:2  mov R4,#COS
+dco @c:62 u:3  lcall _printf
+dhl // COMPOSE_IP(my_ip,10,0,0,101);
+dhl  printf("IP:  %u.%u.%u.%u\r\n",my_ip.bytes[0],my_ip.bytes[1],my_ip.bytes[2],my_ip.bytes[3]);
+dhl 
+dhl  if(Init_net()) {
+dco @c:65 u:3  lcall _Init_net
+dco @c:68 u:1  mov A,R7
+dco @c:69 u:2  jz ?10
+dtx 
+dco @c:6b u:2  mov R6,#((?i12)>>8)&255
+dco @c:6d u:2  mov R7,#(?i12)&255
+dco @c:6f u:2  mov R4,#COS
+dco @c:71 u:3  lcall _puts
+dhl   puts("<NET FAILURE>"); // Init Variables, Counter, ...
+dhl   sevseg_data0=1;
+dco @c:74 u:3  mov _sevseg_data0,#1
+dhl   for(;;);
+dtx ?13:
+dtx 
+dco @c:77 u:2  sjmp ?13
+dtx ?10:
+dhl  }
+dhl  // Enable ALL (or less) Sockets  as General Server HTTP at port 80
+dhl  for(i=0;i<MAX_SOCK;i++) SOCKET_SETUP(i,SOCKET_TCP,80,FLAG_PASSIVE_OPEN);
+dco @c:79 u:1  clr A
+dco @c:7a u:1  mov R3,A
+dtx  ; variable 'i' assigned to register 'R3'
+dtx ?17:
+dtx 
+dco @c:7b u:2  mov R7,AR3
+dco @c:7d u:1  clr A
+dco @c:7e u:1  mov R6,A
+dco @c:7f u:1  mov R4,A
+dco @c:80 u:2  mov R5,#50
+dco @c:82 u:3  lcall __mul_i2
+dco @c:85 u:2  mov A,#(_uc_socket)&255
+dco @c:87 u:1  add A,R7
+dco @c:88 u:2  mov DPL,A
+dco @c:8a u:2  mov A,#((_uc_socket)>>8)&255
+dco @c:8c u:1  addc A,R6
+dco @c:8d u:2  mov DPH,A
+dco @c:8f u:2  mov A,#2
+dco @c:91 u:1  movx @DPTR,A
+dtx 
+dco @c:92 u:2  mov R7,AR3
+dco @c:94 u:1  clr A
+dco @c:95 u:1  mov R6,A
+dco @c:96 u:1  mov R4,A
+dco @c:97 u:2  mov R5,#50
+dco @c:99 u:3  lcall __mul_i2
+dco @c:9c u:2  mov R4,#((_uc_socket+14)>>8)&255
+dco @c:9e u:2  mov R5,#(_uc_socket+14)&255
+dco @c:a0 u:1  mov A,R5
+dco @c:a1 u:1  add A,R7
+dco @c:a2 u:1  mov R5,A
+dco @c:a3 u:1  mov A,R4
+dco @c:a4 u:1  addc A,R6
+dco @c:a5 u:1  mov R4,A
+dco @c:a6 u:2  mov R6,#0
+dco @c:a8 u:2  mov R7,#80
+dco @c:aa u:2  mov DPH,R4
+dco @c:ac u:2  mov DPL,R5
+dco @c:ae u:3  lcall __st_dptr_r67
+dtx 
+dco @c:b1 u:1  inc R3
+dtx 
+dco @c:b2 u:3  cjne R3,#2,?17
+dtx 
+dtx ?21:
+dhl  // * Now Net is ready to start *
+dhl  for(;;){
+dco @c:b5 u:3  lcall _poll_webserver
+dco @c:b8 u:2  mov R4,AR6
+dco @c:ba u:2  mov R5,AR7
+dtx  ; variable 'res' assigned to register 'RW45'
+dhl 
+dhl   // ENOUGH TIME IN THIS LOOP FOR OTHER JOBS...
+dhl 
+dhl   
+dhl   res=poll_webserver();
+dhl   if((res&0xFF00) ==EVENT_HTTP_REQUEST){
+dco @c:bc u:2  mov R7,#0
+dco @c:be u:1  mov A,R4
+dco @c:bf u:1  mov R6,A
+dco @c:c0 u:3  cjne R7,#0,?21
+dco @c:c3 u:3  cjne R6,#144,?21
+dtx 
+dco @c:c6 u:2  mov R7,AR5
+dtx  ; variable 'socket' allocated as 'auto'
+dco @c:c8 u:2  mov ?main_socket,R7
+dhl    socket=(uchar)res;
+dhl 
+dhl    pc=webpage_name(); // get name of requested page
+dco @c:ca u:3  lcall _webpage_name
+dtx  ; variable 'pc' allocated as 'auto'
+dco @c:cd u:2  mov ?main_pc,R6
+dco @c:cf u:2  mov ?main_pc+1,R7
+dhl 
+dhl //   printf("'%s'/%u\n",pc,socket); // Show requested page and socket
+dhl 
+dhl    if(*pc=='f'){
+dco @c:d1 u:3  mov DPH,?main_pc
+dco @c:d4 u:3  mov DPL,?main_pc+1
+dco @c:d7 u:1  movx A,@DPTR
+dco @c:d8 u:1  mov R7,A
+dco @c:d9 u:3  cjne R7,#102,?27
+dtx 
+dco @c:dc u:2  mov R4,#((_form)>>8)&255
+dco @c:de u:2  mov R5,#(_form)&255
+dco @c:e0 u:2  mov R7,?main_socket
+dco @c:e2 u:3  lcall _webpage_bind
+dhl     webpage_bind(socket,form);
+dhl    }else if(*pc=='r'){
+dco @c:e5 u:2  sjmp ?28
+dtx ?27:
+dtx 
+dco @c:e7 u:3  mov DPH,?main_pc
+dco @c:ea u:3  mov DPL,?main_pc+1
+dco @c:ed u:1  movx A,@DPTR
+dco @c:ee u:1  mov R7,A
+dco @c:ef u:3  cjne R7,#114,?29
+dtx 
+dco @c:f2 u:2  mov R4,#((_reply)>>8)&255
+dco @c:f4 u:2  mov R5,#(_reply)&255
+dco @c:f6 u:2  mov R7,?main_socket
+dco @c:f8 u:3  lcall _webpage_bind
+dhl     webpage_bind(socket,reply);    
+dhl    }else{
+dco @c:fb u:2  sjmp ?30
+dtx ?29:
+dtx 
+dco @c:fd u:2  mov R4,#((_home)>>8)&255
+dco @c:ff u:2  mov R5,#(_home)&255
+dco @c:101 u:2  mov R7,?main_socket
+dco @c:103 u:3  lcall _webpage_bind
+dhl     webpage_bind(socket,home); // HOME
+dhl    }
+dtx ?30:
+dtx ?28:
+dhl 
+dhl    for(;;){
+dtx ?31:
+dtx 
+dco @c:106 u:3  lcall _url_getarg_no
+dtx  ; variable 'i' allocated as 'auto'
+dco @c:109 u:2  mov ?i44,R7
+dhl     i=url_getarg_no();
+dhl     if(!i) break;
+dco @c:10b u:2  mov A,?i44
+dco @c:10d u:2  jnz ?35
+dtx 
+dco @c:10f u:3  ljmp ?21
+dtx ?35:
+dhl     pc=url_getarg_str();
+dco @c:112 u:3  lcall _url_getarg_str
+dtx  ; variable 'pc' allocated as 'auto'
+dhl 
+dhl     printf("Arg A%u: '%s'\n",i,pc); // Opt. Show Args...
+dco @c:115 u:2  mov ?i45,R6
+dco @c:117 u:2  mov ?i45+1,R7
+dco @c:119 u:2  mov R4,#XDS
+dco @c:11b u:2  mov _printf_formal_near+2,R4
+dco @c:11d u:2  mov _printf_formal_near+3,R5
+dco @c:11f u:2  mov _printf_formal_near+4,R6
+dco @c:121 u:2  mov _printf_formal_near+5,R7
+dco @c:123 u:3  mov _printf_formal_near+1,?i44
+dco @c:126 u:3  mov _printf_formal_near,#0
+dco @c:129 u:2  mov R6,#((?i37)>>8)&255
+dco @c:12b u:2  mov R7,#(?i37)&255
+dco @c:12d u:2  mov R4,#COS
+dco @c:12f u:3  lcall _printf
+dhl 
+dhl     if(i==1) strcpy(name,pc); // Copy without regarding max. len...
+dco @c:132 u:2  mov A,#1
+dco @c:134 u:2  xrl A,?i44
+dco @c:136 u:2  jnz ?38
+dtx 
+dco @c:138 u:2  mov R6,?i45
+dco @c:13a u:2  mov R7,?i45+1
+dco @c:13c u:2  mov R3,AR7
+dco @c:13e u:2  mov R2,AR6
+dco @c:140 u:2  mov R0,#XDS
+dco @c:142 u:2  mov R6,#((_name)>>8)&255
+dco @c:144 u:2  mov R7,#(_name)&255
+dco @c:146 u:2  mov R4,#XDS
+dco @c:148 u:3  lcall _strcpy
+dco @c:14b u:2  sjmp ?31
+dtx ?38:
+dhl     else if(i==2) strcpy(cont,pc);
+dco @c:14d u:2  mov A,#2
+dco @c:14f u:2  xrl A,?i44
+dco @c:151 u:2  jnz ?40
+dtx 
+dco @c:153 u:2  mov R6,?i45
+dco @c:155 u:2  mov R7,?i45+1
+dco @c:157 u:2  mov R3,AR7
+dco @c:159 u:2  mov R2,AR6
+dco @c:15b u:2  mov R0,#XDS
+dco @c:15d u:2  mov R6,#((_cont)>>8)&255
+dco @c:15f u:2  mov R7,#(_cont)&255
+dco @c:161 u:2  mov R4,#XDS
+dco @c:163 u:3  lcall _strcpy
+dco @c:166 u:3  ljmp ?31
+dtx ?40:
+dhl     else if(i==3) strcpy(adr,pc);
+dco @c:169 u:2  mov A,#3
+dco @c:16b u:2  xrl A,?i44
+dco @c:16d u:2  jz ?_13
+dco @c:16f u:3  ljmp ?31
+dtx ?_13:
+dtx 
+dco @c:172 u:2  mov R6,?i45
+dco @c:174 u:2  mov R7,?i45+1
+dco @c:176 u:2  mov R3,AR7
+dco @c:178 u:2  mov R2,AR6
+dco @c:17a u:2  mov R0,#XDS
+dco @c:17c u:2  mov R6,#((_adr)>>8)&255
+dco @c:17e u:2  mov R7,#(_adr)&255
+dco @c:180 u:2  mov R4,#XDS
+dco @c:182 u:3  lcall _strcpy
+dhl 
+dhl     // ignore other Args...
+dhl    }
+dco @c:185 u:3  ljmp ?31
+dtx ; end of function main
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+dtx 
+dtx  .segment bss, sclass xram, notext
+dtx  .export _cont ; xdata unsigned char cont[12]
+dtx _cont: ; xdata unsigned char cont[12]
+dco @d:0 u:c  .ds.b 12
+dtx  .export _adr ; xdata unsigned char adr[5]
+dtx _adr: ; xdata unsigned char adr[5]
+dco @d:c u:5  .ds.b 5
+dtx  .export _name ; xdata unsigned char name[21]
+dtx _name: ; xdata unsigned char name[21]
+dco @d:11 u:15  .ds.b 21
+dtx  .import _reply ; code unsigned char reply[]
+dtx  .import _form ; code unsigned char form[]
+dtx  .import _home ; code unsigned char home[]
+dtx  .import _sevseg_data0 ; near unsigned char sevseg_data0
+dtx  .import _webpage_bind ; void webpage_bind(unsigned char, code unsigned char *)
+dtx  .import _url_getarg_str ; xdata unsigned char *url_getarg_str(void)
+dtx  .import _url_getarg_no ; unsigned char url_getarg_no(void)
+dtx  .import _webpage_name ; xdata unsigned char *webpage_name(void)
+dtx  .import _poll_webserver ; unsigned int poll_webserver(void)
+dtx  .import _Init_net ; unsigned char Init_net(void)
+dtx  .import _uc_socket ; xdata UC_SOCKET uc_socket[2]
+dtx  .import _my_ip ; xdata IP_ADR my_ip
+dtx  .import _RCAP2H ; near unsigned char RCAP2H
+dtx  .import _RCAP2L ; near unsigned char RCAP2L
+dtx  .import _TR2 ; bit unsigned char TR2
+dtx  .import _T2CON ; near unsigned char T2CON
+dtx  .import _P1 ; near unsigned char P1
+dtx  .import _TMOD ; near unsigned char TMOD
+dtx  .import _TR0 ; bit unsigned char TR0
+dtx  .import _SCON ; near unsigned char SCON
+dtx  .import _strcpy ; far char *strcpy(far char *, far char *)
+dtx  .import _printf ; int printf(far char *, ...)
+dtx  .import _puts ; int puts(far char *)
+dtx  .segment lit
+dtx ?i37: ; code char [15]
+dco @e:0 u:f  .dc.b "Arg A%u: '%s'",10,0
+dtx ?i12: ; code char [14]
+dco @e:f u:e  .dc.b "<NET FAILURE>",0
+dtx ?i9: ; code char [19]
+dco @e:1d u:13  .dc.b "IP:  %u.%u.%u.%u",13,10,0
+dtx  .export PRINTF_TYPE_u
+dtx PRINTF_TYPE_u=1
+dtx  .export PRINTF_TYPE_s
+dtx PRINTF_TYPE_s=1
+dtx  .end
+dhl 
+dhl #ifdef LED
+dhl   }else if(res==EVENT_SOCKET_IDLETIMER){
+dhl               LED^=1; // *** BLINK LED ***
+dhl #endif
+dhl   }
+dhl 
+dhl      // else{ *** add a user-task here *** }
+dhl 
+dhl   } // for(;;)
+dhl 
+dhl }
+dhl 
+dhl 
+dhl // EOF
+def:PRINTF_TYPE_s @m:1
+def:PRINTF_TYPE_u @m:1
+def:__reset @0:0
+def:_main @c:0
+def:_name @d:11
+def:_adr @d:c
+def:_cont @d:0
+objectend

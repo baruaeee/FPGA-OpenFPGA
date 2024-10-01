@@ -1,0 +1,3 @@
+Revision name:      ex24
+Created on:         Tuesday, December 12, 2006
+Based on :     t51_elektor     t51_elektor

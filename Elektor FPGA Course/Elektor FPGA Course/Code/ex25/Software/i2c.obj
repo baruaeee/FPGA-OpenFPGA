@@ -1,0 +1,469 @@
+objectfile:i2c.obj
+time:Thu Dec 14 11:33:35 2006
+cpuname:i8051
+export:_I2C_start @9:0
+export:_I2C_delay @6:0
+export:_I2C_send @e:0
+export:_I2C_stop @b:0
+export:_I2C_init @3:0
+export:_I2C_get @11:0
+segment:_I2C_init_formal_near @0:m s:0 u:0 n f c:dram
+segment:_I2C_init_local_near @1:m s:0 u:0 n f c:dram
+segment:_I2C_stop_formal_near @2:m s:0 u:0 n f c:dram
+segment:__I2C_init @3:m u:a
+75 80 ff 12 00 00 12 00 00 22
+segment:_I2C_delay_formal_near @4:m s:0 u:0 n f c:dram
+segment:_I2C_delay_local_near @5:m s:0 u:0 n f c:dram
+segment:__I2C_delay @6:m u:5
+7f be df 00 22
+segment:_I2C_start_formal_near @7:m s:0 u:0 n f c:dram
+segment:_I2C_start_local_near @8:m s:0 u:0 n f c:dram
+segment:__I2C_start @9:m u:b
+c2 80 12 00 00 c2 81 12 00 00 22
+segment:_I2C_stop_local_near @a:m s:0 u:0 n f c:dram
+segment:__I2C_stop @b:m u:13
+c2 80 12 00 00 d2 81 30 81 00 12 00 00 d2 80 12
+00 00 22
+segment:_I2C_send_formal_near @c:m s:0 u:0 n f c:dram
+segment:_I2C_send_local_near @d:m s:2 u:0 n f c:dram
+segment:__I2C_send @e:m u:5a
+8f 00 75 00 08 af 00 53 07 80 ef 60 00 d2 80 12
+00 00 80 00 c2 80 12 00 00 d2 81 30 81 00 12 00
+00 c2 81 12 00 00 af 00 ef 2f ff 8f 00 d5 00 00
+d2 80 12 00 00 d2 81 30 81 00 12 00 00 30 80 00
+7c 00 7d 01 80 00 e4 fc fd af 05 8f 00 c2 81 12
+00 00 c2 80 12 00 00 af 00 22
+segment:_I2C_get_formal_near @f:m s:0 u:0 n f c:dram
+segment:_I2C_get_local_near @10:m s:3 u:0 n f c:dram
+segment:__I2C_get @11:m u:56
+8f 00 e4 f5 00 d2 80 12 00 00 75 00 08 d2 81 30
+81 00 12 00 00 30 80 00 af 00 ef 2f ff 0f 8f 00
+80 00 af 00 ef 2f ff 8f 00 c2 81 12 00 00 d5 00
+00 e5 00 60 00 c2 80 12 00 00 80 00 d2 80 12 00
+00 d2 81 30 81 00 12 00 00 c2 81 12 00 00 c2 80
+12 00 00 af 00 22
+sgraph:_I2C_init_formal_near _I2C_init_local_near __I2C_init
+sgraph:_I2C_init_local_near _I2C_stop_formal_near __I2C_init 0
+sgraph:_I2C_init_local_near _I2C_stop_formal_near __I2C_init 0
+sgraph:_I2C_stop_formal_near _I2C_stop_local_near __I2C_stop
+sgraph:_I2C_delay_formal_near _I2C_delay_local_near __I2C_delay
+sgraph:_I2C_start_formal_near _I2C_start_local_near __I2C_start
+sgraph:_I2C_start_local_near _I2C_delay_formal_near __I2C_start 0
+sgraph:_I2C_start_local_near _I2C_delay_formal_near __I2C_start 0
+sgraph:_I2C_stop_local_near _I2C_delay_formal_near __I2C_stop 0
+sgraph:_I2C_stop_local_near _I2C_delay_formal_near __I2C_stop 0
+sgraph:_I2C_stop_local_near _I2C_delay_formal_near __I2C_stop 0
+sgraph:_I2C_send_formal_near _I2C_send_local_near __I2C_send
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 1
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 1
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 0
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 0
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 2
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 2
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 2
+sgraph:_I2C_send_local_near _I2C_delay_formal_near __I2C_send 2
+sgraph:_I2C_get_formal_near _I2C_get_local_near __I2C_get
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 2
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 2
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 2
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 2
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 2
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 3
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 3
+sgraph:_I2C_get_local_near _I2C_delay_formal_near __I2C_get 2
+src:i2c.s51 #0
+src:C:\uC51\include\reg51.def #1
+src:C:\uC51\include\reg52.def #2
+src:C:\uC51\include\reg51.def #3
+ref w_hl #0:36 @3:4 _I2C_stop
+ref w_hl #0:38 @3:7 _I2C_stop
+ref rbyte #0:48 @6:3 @6:2
+ref w_hl #0:5d @9:3 _I2C_delay
+ref w_hl #0:61 @9:8 _I2C_delay
+ref w_hl #0:78 @b:3 _I2C_delay
+ref rbyte #0:7d @b:9 @b:7
+ref w_hl #0:7f @b:b _I2C_delay
+ref w_hl #0:83 @b:10 _I2C_delay
+ref byte #0:a5 @e:1 @d:0 0 +
+ref byte #0:a7 @e:3 @d:0 1 +
+ref byte #0:aa @e:6 @d:0 0 +
+ref rbyte #0:ad @e:c @e:14
+ref w_hl #0:b1 @e:10 _I2C_delay
+ref rbyte #0:b3 @e:13 @e:19
+ref w_hl #0:b8 @e:17 _I2C_delay
+ref rbyte #0:bf @e:1d @e:1b
+ref w_hl #0:c1 @e:1f _I2C_delay
+ref w_hl #0:c5 @e:24 _I2C_delay
+ref byte #0:c7 @e:27 @d:0 0 +
+ref byte #0:cb @e:2c @d:0 0 +
+ref byte #0:cd @e:2e @d:0 1 +
+ref rbyte #0:cd @e:2f @e:5
+ref w_hl #0:d1 @e:33 _I2C_delay
+ref rbyte #0:d6 @e:39 @e:37
+ref w_hl #0:d8 @e:3b _I2C_delay
+ref rbyte #0:da @e:3f @e:46
+ref rbyte #0:dd @e:45 @e:49
+ref byte #0:e5 @e:4c @d:0 0 +
+ref w_hl #0:e9 @e:50 _I2C_delay
+ref w_hl #0:ed @e:55 _I2C_delay
+ref byte #0:ef @e:58 @d:0 0 +
+ref byte #0:111 @11:1 @10:0 0 +
+ref byte #0:115 @11:4 @10:0 1 +
+ref w_hl #0:119 @11:8 _I2C_delay
+ref byte #0:11b @11:b @10:0 2 +
+ref rbyte #0:121 @11:11 @11:f
+ref w_hl #0:123 @11:13 _I2C_delay
+ref rbyte #0:125 @11:17 @11:22
+ref byte #0:127 @11:19 @10:0 1 +
+ref byte #0:12c @11:1f @10:0 1 +
+ref rbyte #0:12d @11:21 @11:29
+ref byte #0:130 @11:23 @10:0 1 +
+ref byte #0:134 @11:28 @10:0 1 +
+ref w_hl #0:139 @11:2c _I2C_delay
+ref byte #0:13b @11:2f @10:0 2 +
+ref rbyte #0:13b @11:30 @11:d
+ref byte #0:13d @11:32 @10:0 0 +
+ref rbyte #0:13e @11:34 @11:3c
+ref w_hl #0:142 @11:38 _I2C_delay
+ref rbyte #0:144 @11:3b @11:41
+ref w_hl #0:149 @11:3f _I2C_delay
+ref rbyte #0:150 @11:45 @11:43
+ref w_hl #0:152 @11:47 _I2C_delay
+ref w_hl #0:156 @11:4c _I2C_delay
+ref w_hl #0:15a @11:51 _I2C_delay
+ref byte #0:15c @11:54 @10:0 1 +
+objectdebug
+dtx ; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+dtx ; *** Standard 'i8051', V1.25, Jan 24 2004 (C) WWW.WICKENHAEUSER.COM
+dtx ; sourcefile: 'i2c.c', time: Thu Dec 14 11:33:35 2006
+dtx 
+dtx  .hide
+dtx  .show
+dtx XDS=0
+dtx COS=1
+dtx NES=2
+dtx INS=2
+dtx .macro __line
+dtx lcall $0006 ; uC/51 debugger
+dtx .endmacro
+dtx         .include <reg51.def>
+dtx ; **** 8051 standard defs ***
+dtx ; common registers to all 8051's
+dtx         .hide
+dtx         .show
+dtx         .include <reg52.def>
+dtx ; **** 80C52 (extended) defs ***
+dtx 
+dtx         .hide
+dtx         .show
+dtx  .export _I2C_init ; void I2C_init(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __I2C_init
+dtx _I2C_init: ; void I2C_init(void)
+dhl #include <stdio.h>
+dhl #include <reg52.h>
+dhl 
+dhl 
+dhl #define SDA_HIGH {P0_B0=1; I2C_delay();}
+dhl #define SCL_HIGH {P0_B1=1; while (!P0_B1);I2C_delay();}
+dhl #define SDA_LOW  {P0_B0=0; I2C_delay();}
+dhl #define SCL_LOW  {P0_B1=0; I2C_delay();}
+dhl 
+dhl // function prototypes
+dhl 
+dhl void I2C_start(void);
+dhl void I2C_stop(void);
+dhl 
+dhl // functions
+dhl void I2C_init (void)
+dhl {
+dco @3:0 u:3  mov _P0,#255
+dhl         P0=0xff;          // set the port P0 to a know state
+dhl //      I2C_start();                    // reset the I2C-bus.
+dhl         I2C_stop();
+dco @3:3 u:3  lcall _I2C_stop
+dhl         I2C_stop();
+dco @3:6 u:3  lcall _I2C_stop
+dco @3:9 u:1  ret
+dtx ; end of function I2C_init
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _I2C_delay ; void I2C_delay(void)
+dtx  .segment _I2C_delay_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _I2C_delay_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _I2C_delay_formal_near, _I2C_delay_local_near, __I2C_delay
+dtx 
+dtx  .segment __I2C_delay
+dtx _I2C_delay: ; (leaf function) void I2C_delay(void)
+dhl }
+dhl 
+dhl void I2C_delay(void)
+dhl {
+dco @6:0 u:2  mov R7,#190
+dtx ?3:
+dhl   unsigned char x;
+dhl   for (x=0;x<190;x++){};
+dco @6:2 u:2  djnz R7,?3
+dco @6:4 u:1  ret
+dtx ; end of function I2C_delay
+dtx ; used: R-------7 BR--------
+dtx 
+dtx  .export _I2C_start ; void I2C_start(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __I2C_start
+dtx _I2C_start: ; void I2C_start(void)
+dhl }
+dhl 
+dhl void I2C_start(void)
+dhl {
+dco @9:0 u:2  clr _P0_B0
+dhl //  SDA_HIGH;           
+dhl //  SCL_HIGH
+dhl   SDA_LOW
+dco @9:2 u:3  lcall _I2C_delay
+dtx 
+dco @9:5 u:2  clr _P0_B1
+dhl   SCL_LOW
+dco @9:7 u:3  lcall _I2C_delay
+dco @9:a u:1  ret
+dtx ; end of function I2C_start
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _I2C_stop ; void I2C_stop(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __I2C_stop
+dtx _I2C_stop: ; void I2C_stop(void)
+dhl }
+dhl 
+dhl void I2C_stop (void)                    // Assumes SCL and SDA are low at entry
+dhl { 
+dco @b:0 u:2  clr _P0_B0
+dhl //  SCL_LOW;
+dhl   SDA_LOW
+dco @b:2 u:3  lcall _I2C_delay
+dtx 
+dco @b:5 u:2  setb _P0_B1
+dtx ?10:
+dhl   SCL_HIGH
+dco @b:7 u:3  jnb _P0_B1,?10
+dtx 
+dco @b:a u:3  lcall _I2C_delay
+dtx 
+dco @b:d u:2  setb _P0_B0
+dhl   SDA_HIGH
+dco @b:f u:3  lcall _I2C_delay
+dco @b:12 u:1  ret
+dtx ; end of function I2C_stop
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _I2C_send ; unsigned char I2C_send(unsigned char)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __I2C_send
+dtx _I2C_send: ; unsigned char I2C_send(unsigned char)
+dtx  ; parameter 'dat' in 'R7' moved and assigned to local '?I2C_send_dat'
+dco @e:0 u:2  mov ?I2C_send_dat,R7
+dhl }
+dhl 
+dhl unsigned char I2C_send ( unsigned char dat)
+dhl {
+dco @e:2 u:3  mov ?I2C_send_i23,#8
+dtx ?14:
+dhl   unsigned char x;
+dhl //  bit unsigned char ack;
+dhl   for (x=0;x<8;x++)
+dhl   {
+dco @e:5 u:2  mov R7,?I2C_send_dat
+dco @e:7 u:3  anl AR7,#128
+dco @e:a u:1  mov A,R7
+dco @e:b u:2  jz ?18
+dhl     if (dat & 0x80) SDA_HIGH else SDA_LOW
+dco @e:d u:2  setb _P0_B0
+dtx 
+dco @e:f u:3  lcall _I2C_delay
+dtx 
+dco @e:12 u:2  sjmp ?19
+dtx ?18:
+dtx 
+dco @e:14 u:2  clr _P0_B0
+dtx 
+dco @e:16 u:3  lcall _I2C_delay
+dtx 
+dtx ?19:
+dhl     SCL_HIGH
+dco @e:19 u:2  setb _P0_B1
+dtx ?20:
+dtx 
+dco @e:1b u:3  jnb _P0_B1,?20
+dtx 
+dco @e:1e u:3  lcall _I2C_delay
+dtx 
+dco @e:21 u:2  clr _P0_B1
+dhl     SCL_LOW
+dco @e:23 u:3  lcall _I2C_delay
+dtx 
+dco @e:26 u:2  mov R7,?I2C_send_dat
+dco @e:28 u:1  mov A,R7
+dco @e:29 u:1  add A,R7
+dco @e:2a u:1  mov R7,A
+dco @e:2b u:2  mov ?I2C_send_dat,R7
+dhl     dat = dat <<1;
+dhl   }
+dco @e:2d u:3  djnz ?I2C_send_i23,?14
+dhl   SDA_HIGH
+dco @e:30 u:2  setb _P0_B0
+dtx 
+dco @e:32 u:3  lcall _I2C_delay
+dtx 
+dco @e:35 u:2  setb _P0_B1
+dtx ?24:
+dhl   SCL_HIGH
+dco @e:37 u:3  jnb _P0_B1,?24
+dtx 
+dco @e:3a u:3  lcall _I2C_delay
+dtx 
+dco @e:3d u:3  jnb _P0_B0,?28
+dco @e:40 u:2  mov R4,#0
+dco @e:42 u:2  mov R5,#1
+dco @e:44 u:2  sjmp ?29
+dtx ?28:
+dco @e:46 u:1  clr A
+dco @e:47 u:1  mov R4,A
+dco @e:48 u:1  mov R5,A
+dtx ?29:
+dco @e:49 u:2  mov R7,AR5
+dtx  ; variable 'x' allocated as 'auto'
+dco @e:4b u:2  mov ?I2C_send_x,R7
+dhl   x=(P0_B0)?1:0;
+dhl //  ack = P0_B0;                        // read the input SDA
+dhl   SCL_LOW
+dco @e:4d u:2  clr _P0_B1
+dtx 
+dco @e:4f u:3  lcall _I2C_delay
+dtx 
+dco @e:52 u:2  clr _P0_B0
+dhl   SDA_LOW
+dco @e:54 u:3  lcall _I2C_delay
+dtx 
+dco @e:57 u:2  mov R7,?I2C_send_x
+dco @e:59 u:1  ret
+dtx ; end of function I2C_send
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+dtx 
+dtx  .export _I2C_get ; unsigned char I2C_get(unsigned char)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __I2C_get
+dtx _I2C_get: ; unsigned char I2C_get(unsigned char)
+dtx  ; parameter 'ack' in 'R7' moved and assigned to local '?I2C_get_ack'
+dco @11:0 u:2  mov ?I2C_get_ack,R7
+dtx  ; variable 'dat' allocated as 'auto'
+dhl //  if (ack==0) return 1; else return 0;  
+dhl   return x;
+dhl }
+dhl 
+dhl unsigned char I2C_get (unsigned char ack)
+dhl {
+dco @11:2 u:1  clr A
+dco @11:3 u:2  mov ?I2C_get_dat,A
+dhl   unsigned char dat=0,x;
+dhl   SDA_HIGH                                                      // SDA goes high (undriven)
+dco @11:5 u:2  setb _P0_B0
+dtx 
+dco @11:7 u:3  lcall _I2C_delay
+dtx 
+dco @11:a u:3  mov ?I2C_get_i40,#8
+dtx ?31:
+dhl   for (x=0;x<8;x++)
+dhl   {
+dco @11:d u:2  setb _P0_B1
+dtx ?35:
+dhl           SCL_HIGH
+dco @11:f u:3  jnb _P0_B1,?35
+dtx 
+dco @11:12 u:3  lcall _I2C_delay
+dtx 
+dco @11:15 u:3  jnb _P0_B0,?38
+dhl //    if ((P0 & 0x40)==0x40) dat=(dat<<1)+1; else dat=dat<<1;
+dhl     if (P0_B0) dat=(dat<<1)+1; else dat=dat<<1;
+dco @11:18 u:2  mov R7,?I2C_get_dat
+dco @11:1a u:1  mov A,R7
+dco @11:1b u:1  add A,R7
+dco @11:1c u:1  mov R7,A
+dco @11:1d u:1  inc R7
+dco @11:1e u:2  mov ?I2C_get_dat,R7
+dco @11:20 u:2  sjmp ?39
+dtx ?38:
+dtx 
+dco @11:22 u:2  mov R7,?I2C_get_dat
+dco @11:24 u:1  mov A,R7
+dco @11:25 u:1  add A,R7
+dco @11:26 u:1  mov R7,A
+dco @11:27 u:2  mov ?I2C_get_dat,R7
+dtx ?39:
+dhl     SCL_LOW
+dco @11:29 u:2  clr _P0_B1
+dtx 
+dco @11:2b u:3  lcall _I2C_delay
+dtx 
+dco @11:2e u:3  djnz ?I2C_get_i40,?31
+dhl   }
+dhl   if (ack) 
+dco @11:31 u:2  mov A,?I2C_get_ack
+dco @11:33 u:2  jz ?41
+dhl     SDA_LOW                                                     // if wanted, we will ACK the transmis
+dco @11:35 u:2  clr _P0_B0
+dtx 
+dco @11:37 u:3  lcall _I2C_delay
+dtx 
+dco @11:3a u:2  sjmp ?42
+dtx ?41:
+dhl   else
+dhl     SDA_HIGH                                            // else we just don't!!!
+dco @11:3c u:2  setb _P0_B0
+dtx 
+dco @11:3e u:3  lcall _I2C_delay
+dtx 
+dtx ?42:
+dhl   SCL_HIGH                                                      // create a last clock-pulse
+dco @11:41 u:2  setb _P0_B1
+dtx ?43:
+dtx 
+dco @11:43 u:3  jnb _P0_B1,?43
+dtx 
+dco @11:46 u:3  lcall _I2C_delay
+dtx 
+dco @11:49 u:2  clr _P0_B1
+dhl   SCL_LOW
+dco @11:4b u:3  lcall _I2C_delay
+dtx 
+dco @11:4e u:2  clr _P0_B0
+dhl   SDA_LOW                                                       // exit the function with both signals
+dco @11:50 u:3  lcall _I2C_delay
+dtx 
+dco @11:53 u:2  mov R7,?I2C_get_dat
+dco @11:55 u:1  ret
+dtx ; end of function I2C_get
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:3 bytes
+dtx 
+dtx  .import _P0_B1 ; bit unsigned char P0_B1
+dtx  .import _P0_B0 ; bit unsigned char P0_B0
+dtx  .import _P0 ; near unsigned char P0
+dtx  .end
+dhl   return (dat);    
+dhl }
+def:_I2C_start @9:0
+def:_I2C_delay @6:0
+def:_I2C_send @e:0
+def:_I2C_stop @b:0
+def:_I2C_init @3:0
+def:_I2C_get @11:0
+objectend
