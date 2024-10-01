@@ -1,8 +1,0 @@
-
-State Machine - |T8052_Toplevel|T8052:u0|PS2Keyboard:\PS2:PS2Kbd|state
-Name state.stop state.data state.start state.delay state.idle 
-state.idle 0 0 0 0 0 
-state.delay 0 0 0 1 1 
-state.start 0 0 1 0 1 
-state.data 0 1 0 0 1 
-state.stop 1 0 0 0 1 

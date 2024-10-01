@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="ex13">
-		<CBX_INST_ENTRY INSTANCE_NAME="|ex13|FIR_core:inst|CYCLONE_RAM:Altera_ram|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ppc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|ex13|FIR_core:inst|CYCLONE_ROM:Altera_rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_lg81.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|ex13|FIR_core:inst|lpm_mult:Mult0" CBX_FILE_NAME="mult_jg01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|ex13|sld_hub:sld_hub_inst|lpm_decode:instruction_decoder" CBX_FILE_NAME="decode_ogi.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

@@ -1,3 +1,0 @@
-Revision name:      ex25
-Created on:         Tuesday, December 12, 2006
-Based on :          t51_elektor

@@ -1,6 +1,0 @@
-
-State Machine - |ex12|cordic_core:inst1|state
-Name state.processing state.firststage state.idle 
-state.idle 0 0 0 
-state.firststage 0 1 1 
-state.processing 1 0 1 

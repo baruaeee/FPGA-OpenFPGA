@@ -1,3 +1,0 @@
-Revision name:      ex20
-Created on:         Thursday, October 05, 2006
-Based on :          4gewinnt
