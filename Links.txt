@@ -64,3 +64,11 @@ A Configurable Logic Block (CLB) is a fundamental building block of Field-Progra
 
 what is FPGA-SDC?
 FPGA-SDC refers to Field-Programmable Gate Array - Synopsys Design Constraints. It is a file format used to specify timing and design constraints for FPGA designs, particularly when using tools from Synopsys or other EDA (Electronic Design Automation) tools that support the SDC format.
+
+
+
+Workarround
+
+OpenFPGA root and source initialization
+export OPENFPGA_PATH=<path-to-openfpga-repository-root>
+cd ${OPENFPGA_PATH} && source openfpga.sh
