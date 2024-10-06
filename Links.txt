@@ -70,5 +70,22 @@ FPGA-SDC refers to Field-Programmable Gate Array - Synopsys Design Constraints. 
 Workarround
 
 OpenFPGA root and source initialization
-export OPENFPGA_PATH=<path-to-openfpga-repository-root>
-cd ${OPENFPGA_PATH} && source openfpga.sh
+>>export OPENFPGA_PATH=<path-to-openfpga-repository-root>
+>>cd ${OPENFPGA_PATH} && source openfpga.sh
+
+Prepare Task Configuration File
+## specify the openfpga shell script to be executed. an example script which is golden reference to generate Verilog netlists
+[OpenFPGA_SHELL]
+openfpga_shell_template=${PATH:OPENFPGA_PATH}/openfpga_flow/openfpga_shell_scripts/generate_fabric_example_script.openfpga
+## Specify XML-based Architecture file, e.g.
+[OpenFPGA_SHELL]
+openfpga_arch_file=${PATH:OPENFPGA_PATH}/openfpga_flow/openfpga_arch/k6_frac_N10_40nm_openfpga.xml
+## Describe the architecture of the FPGA fabric, e.g.
+[ARCHITECTURES]
+arch0=${PATH:OPENFPGA_PATH}/openfpga_flow/vpr_arch/k6_frac_N10_tileable_40nm.xml
+
+Run OpenFPGA Task
+## run the task by calling the python script with the given path to task configuration file.
+>>python3 openfpga_flow/scripts/run_fpga_task.py basic_tests/generate_fabric
+## The Verilog netlists are generated in the following directory:
+${OPENFPGA_PATH}/openfpga_flow/tasks/basic_tests/generate_fabric/latest/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SRC
