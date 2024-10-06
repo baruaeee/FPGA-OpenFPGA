@@ -85,7 +85,7 @@ openfpga_arch_file=${PATH:OPENFPGA_PATH}/openfpga_flow/openfpga_arch/k6_frac_N10
 arch0=${PATH:OPENFPGA_PATH}/openfpga_flow/vpr_arch/k6_frac_N10_tileable_40nm.xml
 
 Run OpenFPGA Task
-## run the task by calling the python script with the given path to task configuration file.
->>python3 openfpga_flow/scripts/run_fpga_task.py basic_tests/generate_fabric
-## The Verilog netlists are generated in the following directory:
-${OPENFPGA_PATH}/openfpga_flow/tasks/basic_tests/generate_fabric/latest/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SRC
+## run the task by calling the python script with the given path to task configuration file. (here the content of tasks basic_tests/generate_fabric copied to new tasks directory 'fabric' to keep original files intact)
+>>python3 openfpga_flow/scripts/run_fpga_task.py fabric/generate_fabric
+## The Verilog netlists are generated in the following directory: (and2 refers to the )
+${OPENFPGA_PATH}/openfpga_flow/tasks/fabric/generate_fabric/latest/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SRC
