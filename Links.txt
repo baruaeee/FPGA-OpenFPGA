@@ -42,6 +42,9 @@ https://hardwarebee.com/cpld-vs-fpga-difference/
 https://hardwarebee.com/ultimate-guide-fpga-design-flow/
 https://hardwarebee.com/fpga-design-flow-introduction/
 
+https://verificationguide.com/systemverilog
+https://verificationguide.com/systemverilog/introduction/
+
 dependencies:
 ctags-already installed in mint 21.3
 
@@ -65,6 +68,11 @@ A Configurable Logic Block (CLB) is a fundamental building block of Field-Progra
 what is FPGA-SDC?
 FPGA-SDC refers to Field-Programmable Gate Array - Synopsys Design Constraints. It is a file format used to specify timing and design constraints for FPGA designs, particularly when using tools from Synopsys or other EDA (Electronic Design Automation) tools that support the SDC format.
 
+What is the BLIF VPR Flow?
+The BLIF VPR flow refers to the process of using the Versatile Place and Route (VPR) tool to handle digital designs represented in the BLIF (Berkeley Logic Interchange Format). This flow is commonly used in the context of FPGA (Field-Programmable Gate Array) design and synthesis.
+
+What is BRAM Technology?
+BRAM, or Block Random Access Memory, is a type of memory technology commonly found in Field-Programmable Gate Arrays (FPGAs). It is designed to provide efficient data storage and access within the FPGA architecture.
 
 
 Workarround
@@ -87,7 +95,8 @@ arch0=${PATH:OPENFPGA_PATH}/openfpga_flow/vpr_arch/k6_frac_N10_tileable_40nm.xml
 Run OpenFPGA Task
 ## run the task by calling the python script with the given path to task configuration file. (here the content of tasks basic_tests/generate_fabric copied to new tasks directory 'fabric' to keep original files intact)
 >>python3 openfpga_flow/scripts/run_fpga_task.py Fabric/generate_fabric
-## The Verilog netlists are generated in the following directory: (and2 refers to the )
+## The Verilog netlists are generated in the following directory: (and2 refers to the bechmarks section of task configuration)
+## https://openfpga.readthedocs.io/en/master/manual/fpga_verilog/fabric_netlist/#fabric-netlists-logic-blocks
 ${OPENFPGA_PATH}/openfpga_flow/tasks/Fabric/generate_fabric/latest/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SRC
 
 Run icarus iVerilog Compilation
@@ -96,4 +105,6 @@ Run icarus iVerilog Compilation
 # Compile with iVerilog command:
 >>iverilog SRC/fabric_netlists.v
 # If compilation is successful, you can see a file a.out in the directory.
+
+
 
