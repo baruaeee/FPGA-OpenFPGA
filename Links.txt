@@ -74,6 +74,9 @@ The BLIF VPR flow refers to the process of using the Versatile Place and Route (
 What is BRAM Technology?
 BRAM, or Block Random Access Memory, is a type of memory technology commonly found in Field-Programmable Gate Arrays (FPGAs). It is designed to provide efficient data storage and access within the FPGA architecture.
 
+What is Channel Width in VPR Architecture?
+In the context of VPR (Versatile Place and Route) architecture, channel width refers to the number of routing tracks available in the routing channels of an FPGA. These channels are the pathways that connect different logic blocks and allow signals to be routed between them.
+
 
 Workarround
 
