@@ -77,6 +77,11 @@ BRAM, or Block Random Access Memory, is a type of memory technology commonly fou
 What is Channel Width in VPR Architecture?
 In the context of VPR (Versatile Place and Route) architecture, channel width refers to the number of routing tracks available in the routing channels of an FPGA. These channels are the pathways that connect different logic blocks and allow signals to be routed between them.
 
+What is a Fracturable LUT?
+A fracturable LUT (FLUT) is a type of look-up table used in modern FPGA architectures that allows for flexible configuration of its input size. The key feature of a fracturable LUT is that it can be "fractured" or divided into smaller LUTs, enabling more efficient use of resources when implementing digital logic functions.
+
+Definition of Wire Length: Wire length in FPGA architectures typically indicates the number of logic blocks or cells that a wire can span. A wire length of 4 means that the wire can connect components that are up to four logic blocks apart.
+
 
 Workarround
 
