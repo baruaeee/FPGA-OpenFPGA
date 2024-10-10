@@ -35,7 +35,6 @@ https://cmosedu.com/
 
 https://www.youtube.com/playlist?list=PLHTXmXoTo6L_Wg0t2v_GB2lEgWf7hTGq6
 
-https://github.com/stineje/sky130_cds
 
 SkyWater OpenFPGA
 https://github.com/lnis-uofu/SOFA
@@ -50,6 +49,15 @@ https://hardwarebee.com/fpga-design-flow-introduction/
 
 https://verificationguide.com/systemverilog
 https://verificationguide.com/systemverilog/introduction/
+
+PDK-ASAP7
+https://github.com/The-OpenROAD-Project/asap7
+
+PDK-ASAP5
+https://github.com/The-OpenROAD-Project/asap5
+
+PDK-SkyWater130(only standard cells)
+https://github.com/stineje/sky130_cds
 
 dependencies:
 ctags-already installed in mint 21.3
@@ -95,6 +103,21 @@ Purpose: The physical mode is essential for accurately modeling the physical asp
 What is PB in FPGA?
 In the context of FPGAs (Field-Programmable Gate Arrays), PB typically stands for "Physical Block" or "Logic Block". It refers to the fundamental building blocks within the FPGA architecture that can be configured to implement various digital logic functions.
 
+
+what is K4N4 meaning?
+The term K4N4 in the context of FPGA architecture refers to a specific configuration of the Configurable Logic Block (CLB) structure within the FPGA. The notation can be broken down as follows:
+K: This typically represents the number of Basic Logic Elements (BLEs) within a single Configurable Logic Block. In the case of K4N4, it indicates that each CLB contains 4 BLEs.
+N: This denotes the number of inputs that each BLE can handle. For K4N4, each BLE is capable of processing 4 inputs.
+Thus, the K4N4 architecture is characterized by its 4 BLEs per CLB, with each BLE supporting 4 inputs. This configuration allows for efficient logic implementation and flexibility in designing digital circuits, making it suitable for various applications in programmable logic devices.
+
+what is dangling port?
+In digital design, particularly in the context of hardware description languages like VHDL and Verilog, a dangling port refers to a situation where a port of a module or component is not properly connected to any signal or net. This can occur in both input and output ports.
+
+what is packer in VPR architecture?
+In the context of VPR (Versatile Place and Route) architecture, the packer is a crucial component responsible for the initial stage of the FPGA design flow. Its primary function is to group logic elements into larger blocks, optimizing the mapping of the circuit's netlist onto the FPGA architecture.
+
+what is pass gate
+A pass gate is a type of electronic switch used in digital circuits, particularly in pass-transistor logic (PTL) and transmission gate configurations. It typically consists of a combination of NMOS and PMOS transistors, allowing it to control the flow of signals based on a control input.
 
 Workarround
 
