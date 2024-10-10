@@ -1,0 +1,11 @@
+Netlist_File: and2_latch.net Netlist_ID: SHA256:8632adbecefae49a63787851e88542f002956ef48c63d31c42c9cf016eb46f73
+Array size: 3 x 3 logic blocks
+
+#block name	x	y	subblk	layer	block number
+#----------	--	--	------	-----	------------
+c		1	1	0	0	#0
+out:c		1	0	5	0	#1
+out:d		2	1	2	0	#2
+a		1	0	2	0	#3
+b		2	1	0	0	#4
+clk		1	2	2	0	#5

@@ -1,0 +1,2 @@
+iverilog -o compiled_or2 ./SRC/or2_include_netlists.v -s or2_autocheck_top_tb -I ./SRC
+0

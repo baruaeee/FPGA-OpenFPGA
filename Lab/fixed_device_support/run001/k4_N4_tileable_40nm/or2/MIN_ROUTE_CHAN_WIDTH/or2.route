@@ -1,0 +1,31 @@
+Placement_File: or2.place Placement_ID: SHA256:c7367316fc7599b88d49a1b0a3bc8d490394b5b6cb83952019fb7de63c68e0ec
+Array size: 4 x 4 logic blocks.
+
+Routing:
+
+Net 0 (a)
+
+Node:	250	SOURCE (0,3,2)  Pad: 13  Switch: 0
+Node:	266	  OPIN (0,3,2)  Pad: 13  Switch: 2
+Node:	634	 CHANY (0,2,2)  Track: 16  Switch: 1
+Node:	238	  IPIN (0,2,2)  Pin: 9   clb.I[9] Switch: 0
+Node:	227	  SINK (0,2,2)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 1 (b)
+
+Node:	140	SOURCE (0,3,1)  Pad: 5  Switch: 0
+Node:	156	  OPIN (0,3,1)  Pad: 5  Switch: 2
+Node:	616	 CHANY (0,2,1) to (2,2)  Track: 26  Switch: 1
+Node:	236	  IPIN (0,2,2)  Pin: 1   clb.I[1] Switch: 0
+Node:	227	  SINK (0,2,2)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 2 (c)
+
+Node:	226	SOURCE (0,2,2)  Class: 4  Switch: 0
+Node:	230	  OPIN (0,2,2)  Pin: 13   clb.O[3] Switch: 2
+Node:	630	 CHANY (0,2,2)  Track: 0  Switch: 2
+Node:	445	 CHANX (0,1,2) to (2,2)  Track: 5  Switch: 1
+Node:	333	  IPIN (0,2,3)  Pad: 2  Switch: 0
+Node:	317	  SINK (0,2,3)  Pad: 2  Switch: -1 Net_pin_index: 1

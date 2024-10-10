@@ -1,0 +1,5 @@
+vvp compiled_and2_latch
+VCD info: dumpfile and2_latch_formal.vcd opened for output.
+Simulation start
+Simulation Succeed
+0

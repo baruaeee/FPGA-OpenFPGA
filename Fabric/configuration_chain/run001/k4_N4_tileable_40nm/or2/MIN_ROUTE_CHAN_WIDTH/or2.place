@@ -1,0 +1,9 @@
+Netlist_File: or2.net Netlist_ID: SHA256:b172add6a3747f2f2f599116516ae8a78df6f2b0b8e2a0c98acff56c5a06cad6
+Array size: 3 x 3 logic blocks
+
+#block name	x	y	subblk	layer	block number
+#----------	--	--	------	-----	------------
+c		1	1	0	0	#0
+out:c		1	0	4	0	#1
+a		0	1	7	0	#2
+b		2	1	6	0	#3

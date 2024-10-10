@@ -1,0 +1,45 @@
+https://sites.google.com/view/openfpgaatfpga23
+
+## Lab1
+## https://drive.google.com/file/d/1PYpVGAVZd2vQRoXMBx_kTrwovFJ1TCtB/view
+#there are several readymade template tasks in '/openfpga_flow/tasks/template_tasks/'
+
+# create-task <new_task_dir_name> <template_name>
+create-task lab1 frac-lut-arch-explore
+# To check content of the copied task
+tree lab1
+# run-task <task_dir_name>
+run-task lab1 ## check module name of the benchmark files
+# number of tile, grid size can be fount in 'openfpgashell.log' file
+
+## Lab2
+## https://drive.google.com/file/d/119RcNB40O_a8FbUI45IFhfmLWwLn2BbE/view
+create-task lab2 fabric_netlist_gen
+run-task lab2
+
+## to get fixed sized FPGA edit/check vpr_architectur file like following:
+<layout tileable="true">
+    <fixed_layout name="2x2" width="4" height="4">
+      <!--Perimeter of 'io' blocks with 'EMPTY' blocks at corners-->
+      <perimeter type="io" priority="100"/>
+      <corners type="EMPTY" priority="101"/>
+      <!--Fill with 'clb'-->
+      <fill type="clb" priority="15"/>
+    </fixed_layout>
+    <fixed_layout name="4x4" width="6" height="6">
+      <!--Perimeter of 'io' blocks with 'EMPTY' blocks at corners-->
+      <perimeter type="io" priority="100"/>
+      <corners type="EMPTY" priority="101"/>
+      <!--Fill with 'clb'-->
+      <fill type="clb" priority="20"/>
+    </fixed_layout>
+  </layout>
+
+## mantion the fixed layout name in the task file under [OpenFPGA SHELL]:
+openfpga_vpr_device=2x2 or
+openfpga_vpr_device=4x4
+
+## Lab3
+## https://drive.google.com/file/d/1BQpsiebfpDqzdeDeuSGTkqBo9mJ4SErx/view
+create-task lab3 fabric_verification
+run-task lab3

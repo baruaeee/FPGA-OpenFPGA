@@ -1,0 +1,7 @@
+# Benchmark "or2" written by ABC on Wed Oct  9 19:28:05 2024
+.model or2
+.inputs a b
+.outputs c
+.names b a c
+00 0
+.end

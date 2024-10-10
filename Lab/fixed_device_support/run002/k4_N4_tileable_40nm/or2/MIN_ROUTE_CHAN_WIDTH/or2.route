@@ -1,0 +1,35 @@
+Placement_File: or2.place Placement_ID: SHA256:16b5f28c09010e21f764b8b805444183d778c9e226b92e46f4f765ceb1c53b03
+Array size: 6 x 6 logic blocks.
+
+Routing:
+
+Net 0 (a)
+
+Node:	694	SOURCE (0,5,4)  Pad: 13  Switch: 0
+Node:	710	  OPIN (0,5,4)  Pad: 13  Switch: 2
+Node:	1531	 CHANY (0,4,3) to (4,4)  Track: 15  Switch: 2
+Node:	1125	 CHANX (0,4,3)  Track: 31  Switch: 1
+Node:	530	  IPIN (0,4,3)  Pin: 4   clb.I[4] Switch: 0
+Node:	523	  SINK (0,4,3)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 1 (b)
+
+Node:	246	SOURCE (0,5,1)  Pad: 5  Switch: 0
+Node:	262	  OPIN (0,5,1)  Pad: 5  Switch: 2
+Node:	1504	 CHANY (0,4,1) to (4,3)  Track: 26  Switch: 1
+Node:	533	  IPIN (0,4,3)  Pin: 5   clb.I[5] Switch: 0
+Node:	523	  SINK (0,4,3)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 2 (c)
+
+Node:	522	SOURCE (0,4,3)  Class: 4  Switch: 0
+Node:	526	  OPIN (0,4,3)  Pin: 13   clb.O[3] Switch: 2
+Node:	1528	 CHANY (0,4,3) to (4,4)  Track: 0  Switch: 2
+Node:	1099	 CHANX (0,2,3) to (4,3)  Track: 7  Switch: 2
+Node:	1077	 CHANX (0,1,3) to (2,3)  Track: 19  Switch: 2
+Node:	1328	 CHANY (0,1,4)  Track: 0  Switch: 2
+Node:	1174	 CHANX (0,2,4) to (4,4)  Track: 24  Switch: 1
+Node:	809	  IPIN (0,3,5)  Pad: 2  Switch: 0
+Node:	793	  SINK (0,3,5)  Pad: 2  Switch: -1 Net_pin_index: 1

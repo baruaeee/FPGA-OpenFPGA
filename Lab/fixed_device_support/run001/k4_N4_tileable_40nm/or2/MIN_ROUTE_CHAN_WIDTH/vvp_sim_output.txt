@@ -1,0 +1,5 @@
+vvp compiled_or2
+VCD info: dumpfile or2_formal.vcd opened for output.
+Simulation start
+Simulation Succeed
+0
