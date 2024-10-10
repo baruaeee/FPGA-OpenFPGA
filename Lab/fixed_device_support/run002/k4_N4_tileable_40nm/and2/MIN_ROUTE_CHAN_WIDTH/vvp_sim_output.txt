@@ -1,5 +1,0 @@
-vvp compiled_and2
-VCD info: dumpfile and2_formal.vcd opened for output.
-Simulation start
-Simulation Succeed
-0
