@@ -119,6 +119,17 @@ In the context of VPR (Versatile Place and Route) architecture, the packer is a 
 what is pass gate
 A pass gate is a type of electronic switch used in digital circuits, particularly in pass-transistor logic (PTL) and transmission gate configurations. It typically consists of a combination of NMOS and PMOS transistors, allowing it to control the flow of signals based on a control input.
 
+what is ADDF?
+In the context of FPGAs, ADDF stands for Add with Carry. It is a specialized arithmetic function that performs addition of two binary numbers along with an additional carry input. This operation is particularly useful in digital circuits where multiple additions are performed, such as in arithmetic logic units (ALUs) or digital signal processing applications.
+
+what is Spypads?
+In the context of FPGAs, Spypads are specialized physical output pins on an FPGA chip that allow for the observation of internal signals during silicon-level debugging. They serve as a valuable tool for engineers and developers when testing and verifying the functionality of their designs.
+
+what is vpr activity file
+The VPR activity file is associated with the VPR (Versatile Place and Route) tool, which is part of the FPGA design flow. VPR is used for placing and routing digital circuits on FPGAs, and the activity file plays a crucial role in the simulation and analysis of the design.
+
+The VPR activity file contains information about the activity levels of various signals in a digital circuit during simulation. This data is essential for understanding how the circuit behaves under different conditions and for optimizing performance.
+
 Workarround
 
 OpenFPGA root and source initialization
