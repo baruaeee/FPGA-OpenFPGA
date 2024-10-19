@@ -1,0 +1,399 @@
+fpga_top:
+  grid_io_top:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_DFFR_mem:
+          - DFFR
+      direct_interc:
+  grid_io_right:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_DFFR_mem:
+          - DFFR
+      direct_interc:
+  grid_io_bottom:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_DFFR_mem:
+          - DFFR
+      direct_interc:
+  grid_io_left:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_DFFR_mem:
+          - DFFR
+      direct_interc:
+  grid_clb:
+    logical_tile_clb_mode_clb_:
+      logical_tile_clb_mode_default__fle:
+        logical_tile_clb_mode_default__fle_mode_physical__fabric:
+          logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic:
+            logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6:
+              frac_lut6:
+                sky130_fd_sc_hd__or2_1:
+                sky130_fd_sc_hd__inv_1:
+                sky130_fd_sc_hd__buf_4:
+                frac_lut6_mux:
+                  - sky130_fd_sc_hd__inv_1
+                  - sky130_fd_sc_hd__mux2_1
+                  - sky130_fd_sc_hd__buf_4
+              frac_lut6_DFFR_mem:
+                - DFFR
+            mux_tree_size2:
+              - sky130_fd_sc_hd__inv_1
+              - const1
+              - sky130_fd_sc_hd__mux2_1
+            mux_tree_size2_mem:
+              - DFFR
+            direct_interc:
+          logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff:
+            - sky130_fd_sc_hd__sdfbbp_1
+          mux_tree_size2:
+            - sky130_fd_sc_hd__inv_1
+            - const1
+            - sky130_fd_sc_hd__mux2_1
+          mux_tree_size2_mem:
+            - DFFR
+          direct_interc:
+        direct_interc:
+      direct_interc:
+      mux_tree_size60:
+        - sky130_fd_sc_hd__inv_1
+        - const1
+        - sky130_fd_sc_hd__mux2_1
+      mux_tree_size60_mem:
+        - DFFR
+  sb_0__0_:
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  sb_0__1_:
+    mux_tree_tapbuf_size8:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - DFFR
+    mux_tree_tapbuf_size7:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - DFFR
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  sb_0__8_:
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  sb_1__0_:
+    mux_tree_tapbuf_size5:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size5_mem:
+      - DFFR
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+    mux_tree_tapbuf_size8:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - DFFR
+    mux_tree_tapbuf_size7:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - DFFR
+    mux_tree_tapbuf_size9:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size9_mem:
+      - DFFR
+  sb_1__1_:
+    mux_tree_tapbuf_size12:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size12_mem:
+      - DFFR
+    mux_tree_tapbuf_size9:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size9_mem:
+      - DFFR
+  sb_1__8_:
+    mux_tree_tapbuf_size8:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - DFFR
+    mux_tree_tapbuf_size7:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - DFFR
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  sb_8__0_:
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  sb_8__1_:
+    mux_tree_tapbuf_size9:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size9_mem:
+      - DFFR
+    mux_tree_tapbuf_size7:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - DFFR
+    mux_tree_tapbuf_size8:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - DFFR
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  sb_8__8_:
+    mux_tree_tapbuf_size3:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  cbx_1__0_:
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  cbx_1__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  cbx_1__8_:
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  cby_0__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  cby_1__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
+  cby_8__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - DFFR
+    mux_tree_tapbuf_size2:
+      - sky130_fd_sc_hd__inv_1
+      - const1
+      - sky130_fd_sc_hd__inv_4
+      - sky130_fd_sc_hd__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - DFFR
