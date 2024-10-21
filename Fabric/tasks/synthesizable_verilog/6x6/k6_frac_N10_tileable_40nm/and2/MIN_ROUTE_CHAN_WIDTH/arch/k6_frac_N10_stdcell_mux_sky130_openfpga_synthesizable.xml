@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- Architecture annotation for OpenFPGA framework
-     This annotation supports the k6_N10_40nm.xml
+     This annotation supports the k6_N10_40nm.xml 
      - General purpose logic block
        - K = 6, N = 10, I = 40
        - Single mode
@@ -80,9 +80,9 @@
         10e-12 5e-12
       </delay_matrix>
     </circuit_model>
-    <!-- Define a circuit model for the standard cell MUX2
+    <!-- Define a circuit model for the standard cell MUX2 
          OpenFPGA requires the following truth table for the MUX2
-         When the select signal sel is enabled, the first input, i.e., in0
+         When the select signal sel is enabled, the first input, i.e., in0 
          will be propagated to the output, i.e., out
          If your standard cell provider does not offer the exact truth table,
          you can simply swap the inputs as shown in the example below

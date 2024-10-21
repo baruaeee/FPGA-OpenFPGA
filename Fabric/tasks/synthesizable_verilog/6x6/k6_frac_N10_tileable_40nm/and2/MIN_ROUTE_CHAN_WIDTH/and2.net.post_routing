@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<block name="and2.net.post_routing" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:0ea20f211d800ae7b6c1cf683115af22ecbd7ed544f400d2066eee2d00744501" atom_netlist_id="SHA256:2e9b9fe963ef6fc23a8f4ba4a40f1b273b533ef6a062cd9c2ea9cd7e80da4b04">
+<block name="and2.net.post_routing" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:e771095caf3322cc01b556b3696c5294f7bdf31b0e9cde6dcfda1e09b97f8a17" atom_netlist_id="SHA256:2e9b9fe963ef6fc23a8f4ba4a40f1b273b533ef6a062cd9c2ea9cd7e80da4b04">
 	<inputs>a b</inputs>
 	<outputs>out:c</outputs>
 	<clocks></clocks>

@@ -11,10 +11,10 @@ vtr-users@googlegroups.com
 This is free open source code under MIT license.
 
 VPR was run with the following command-line:
-vpr /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device 6x6 --route_chan_width 20
+vpr /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device 6x6 --route_chan_width 20
 
 
-Architecture file: /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml
+Architecture file: /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml
 Circuit name: and2
 
 # Loading Architecture Description
@@ -210,11 +210,11 @@ Logic Element (fle) detailed count:
   LEs used for logic only             : 1
   LEs used for registers only         : 0
 
-Incr Slack updates 1 in 2.28e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.44e-06 sec
+Incr Slack updates 1 in 3.04e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.64e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.68e-06 sec
+Full Criticality updates 1 in 1.48e-06 sec
 FPGA sized to 8 x 8 (6x6)
 Device Utilization: 0.02 (target 1.00)
 	Block Utilization: 0.02 Type: io
@@ -238,7 +238,7 @@ Netlist conversion complete.
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'and2.net'.
 Detected 0 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.018496 seconds).
+Finished loading packed FPGA netlist file (took 0.020003 seconds).
 Warning 6: Treated 0 constant nets as global which will not be routed (to see net names increase packer verbosity).
 # Load packing took 0.02 seconds (max_rss 60.0 MiB, delta_rss +38.0 MiB)
 Warning 7: Netlist contains 0 global net to non-global architecture pin connections
@@ -398,8 +398,8 @@ clb                Uniform                11.11            0.00            100.0
                    Crit. Uniform          11.11            0.00            100.00         0.00         
 
 
-Placement Quench timing analysis took 5.16e-06 seconds (2.76e-06 STA, 2.4e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
-Placement Total  timing analysis took 4.584e-05 seconds (3.22e-05 STA, 1.364e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
+Placement Quench timing analysis took 5.2e-06 seconds (2.88e-06 STA, 2.32e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 5.0561e-05 seconds (3.584e-05 STA, 1.4721e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
 update_td_costs: connections 0 nets 0 sum_nets 0 total 0
 # Placement took 0.00 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 
@@ -423,11 +423,11 @@ Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wireleng
       (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
    1    0.0     0.0    0     100       3       3       0 ( 0.000%)      24 ( 1.4%)    1.315     -1.315     -1.315      0.000      0.000      N/A
-Incr Slack updates 4 in 3.64e-06 sec
-Full Max Req/Worst Slack updates 3 in 2.96e-06 sec
-Incr Max Req/Worst Slack updates 1 in 4e-07 sec
+Incr Slack updates 4 in 4e-06 sec
+Full Max Req/Worst Slack updates 3 in 2.681e-06 sec
+Incr Max Req/Worst Slack updates 1 in 4.4e-07 sec
 Incr Criticality updates 1 in 5.6e-07 sec
-Full Criticality updates 3 in 3.16e-06 sec
+Full Criticality updates 3 in 3.2e-06 sec
 Restoring best routing
 Critical path: 1.31529 ns
 Successfully routed after 1 routing iterations.
@@ -578,20 +578,20 @@ Final setup slack histogram:
 Final geomean non-virtual intra-domain period: nan ns (nan MHz)
 Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
 
-Incr Slack updates 1 in 2.28e-06 sec
-Full Max Req/Worst Slack updates 1 in 1e-06 sec
+Incr Slack updates 1 in 3.16e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.2e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
 Full Criticality updates 1 in 1e-06 sec
-Flow timing analysis took 0.00013556 seconds (0.000101 STA, 3.456e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
+Flow timing analysis took 0.000141561 seconds (0.00010376 STA, 3.7801e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
 VPR succeeded
-The entire flow of VPR took 0.12 seconds (max_rss 60.2 MiB)
+The entire flow of VPR took 0.13 seconds (max_rss 60.2 MiB)
 
-Command line to execute: read_openfpga_arch -f /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
+Command line to execute: read_openfpga_arch -f /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
 
 Confirm selected options when call command 'read_openfpga_arch':
---file, -f: /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
-Reading XML architecture '/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml'...
+--file, -f: /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
+Reading XML architecture '/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml'...
 Read OpenFPGA architecture
 Warning 14: Automatically set circuit model 'frac_lut6' to be default in its type.
 Warning 15: Automatically set circuit model 'sky130_fd_sc_hd__sdfbbp_1' to be default in its type.
@@ -682,11 +682,11 @@ Building annotation for post-routing and clustering synchornization results...Do
 Building annotation for mapped blocks on grid locations...Done
 User specified the operating clock frequency to use VPR results
 Use VPR critical path delay 1.57835e-18 [ns] with a 20 [%] slack in OpenFPGA.
-Incr Slack updates 1 in 1.68e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.04e-06 sec
+Incr Slack updates 1 in 2.92e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.52e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.44e-06 sec
+Full Criticality updates 1 in 1.4e-06 sec
 Will apply operating clock frequency 633.574 [MHz] to simulations
 User specified the number of operating clock cycles to be inferred from signal activities
 Average net density: 0.42
@@ -13653,7 +13653,7 @@ Done
 Decoded 45113 configuration bits into 8163 blocks
 
 Build fabric-independent bitstream for implementation 'and2'
- took 0.12 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
+ took 0.11 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 
 Overwrite Bitstream
 
@@ -13662,7 +13662,7 @@ Overwrite Bitstream
  took 0.00 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 Warning 20: Directory path is empty and nothing will be created.
 Write 45113 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml'
-Write 45113 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.10 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
+Write 45113 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.11 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 
 Build non-fabric bitstream for implementation 'and2'
 
@@ -21761,9 +21761,9 @@ Write Verilog full testbenches for FPGA fabric
 Warning 22: Directory './SRC' already exists. Will overwrite contents
 # Write autocheck testbench for FPGA top-level Verilog netlist for 'and2'
 Will use 45114 configuration clock cycles to top testbench
-# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.77 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
+# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.76 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 Write Verilog full testbenches for FPGA fabric
- took 0.77 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
+ took 0.76 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_pnr_sdc --file ./SDC
 
@@ -21829,11 +21829,11 @@ Confirm selected options when call command 'exit':
 
 Finish execution with 0 errors
 
-The entire OpenFPGA flow took 1.40363 seconds
+The entire OpenFPGA flow took 1.41191 seconds
 
 Thank you for using OpenFPGA!
-Incr Slack updates 2 in 2.52e-06 sec
-Full Max Req/Worst Slack updates 1 in 8.8e-07 sec
-Incr Max Req/Worst Slack updates 1 in 6.4e-07 sec
+Incr Slack updates 2 in 2.2e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.24e-06 sec
+Incr Max Req/Worst Slack updates 1 in 6e-07 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 2 in 2.08e-06 sec
+Full Criticality updates 2 in 2.88e-06 sec

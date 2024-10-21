@@ -1,9 +1,9 @@
 # Run VPR for the 'and' design
 #--write_rr_graph example_rr_graph.xml
-vpr /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device 6x6 --route_chan_width 20
+vpr /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device 6x6 --route_chan_width 20
 
 # Read OpenFPGA architecture definition
-read_openfpga_arch -f /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run002/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
+read_openfpga_arch -f /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
 
 # Read OpenFPGA simulation settings
 read_openfpga_simulation_setting -f /home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml
