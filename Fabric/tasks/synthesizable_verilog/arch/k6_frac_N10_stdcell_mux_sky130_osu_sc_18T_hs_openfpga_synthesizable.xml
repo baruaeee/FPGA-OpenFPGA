@@ -29,7 +29,7 @@
     </variation_library>
   </technology_library>
   <circuit_library>
-    <circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_1" prefix="sky130_fd_sc_hd__inv_1" is_default="true" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_1.v">
+    <circuit_model type="inv_buf" name="sky130_osu_sc_18T_hs__inv_1" prefix="sky130_osu_sc_18T_hs__inv_1" is_default="true" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v">
       <design_technology type="cmos" topology="inverter" size="1"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -41,11 +41,11 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="inv_buf" name="sky130_fd_sc_hd__buf_4" prefix="sky130_fd_sc_hd__buf_4" is_default="false" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/buf/sky130_fd_sc_hd__buf_4.v">
+    <circuit_model type="inv_buf" name="sky130_osu_sc_18T_hs__buf_4" prefix="sky130_osu_sc_18T_hs__buf_4" is_default="false" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="2" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
-      <port type="output" prefix="out" lib_name="X" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
       <delay_matrix type="rise" in_port="in" out_port="out">
         10e-12
       </delay_matrix>
@@ -53,7 +53,7 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_4" prefix="sky130_fd_sc_hd__inv_4" is_default="false" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_4.v">
+    <circuit_model type="inv_buf" name="sky130_osu_sc_18T_hs__inv_4" prefix="sky130_osu_sc_18T_hs__inv_4" is_default="false" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="3" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -65,14 +65,14 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="gate" name="sky130_fd_sc_hd__or2_1" prefix="sky130_fd_sc_hd__or2_1" is_default="true" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/or2/sky130_fd_sc_hd__or2_1.v">
+    <circuit_model type="gate" name="sky130_osu_sc_18T_hs__or2_1" prefix="sky130_osu_sc_18T_hs__or2_1" is_default="true" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v">
       <design_technology type="cmos" topology="OR"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
       <output_buffer exist="false"/>
       <port type="input" prefix="a" lib_name="A" size="1"/>
       <port type="input" prefix="b" lib_name="B" size="1"/>
-      <port type="output" prefix="out" lib_name="X" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
       <delay_matrix type="rise" in_port="a b" out_port="out">
         10e-12 5e-12
       </delay_matrix>
@@ -87,15 +87,15 @@
          If your standard cell provider does not offer the exact truth table,
          you can simply swap the inputs as shown in the example below
       -->
-    <circuit_model type="gate" name="sky130_fd_sc_hd__mux2_1" prefix="sky130_fd_sc_hd__mux2_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/mux2/sky130_fd_sc_hd__mux2_1.v">
+    <circuit_model type="gate" name="sky130_osu_sc_18T_hs__mux2_1" prefix="sky130_osu_sc_18T_hs__mux2_1" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v">
       <design_technology type="cmos" topology="MUX2"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
       <output_buffer exist="false"/>
       <port type="input" prefix="in0" lib_name="A1" size="1"/>
       <port type="input" prefix="in1" lib_name="A0" size="1"/>
-      <port type="input" prefix="sel" lib_name="S" size="1"/>
-      <port type="output" prefix="out" lib_name="X" size="1"/>
+      <port type="input" prefix="sel" lib_name="S0" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
     </circuit_model>
     <circuit_model type="chan_wire" name="chan_segment" prefix="track_seg" is_default="true">
       <design_technology type="cmos"/>
@@ -117,42 +117,42 @@
     </circuit_model>
     <circuit_model type="mux" name="mux_tree" prefix="mux_tree" is_default="true" dump_structural_verilog="true">
       <design_technology type="cmos" structure="tree" add_const_input="true" const_input_val="1"/>
-      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <pass_gate_logic circuit_model_name="sky130_fd_sc_hd__mux2_1"/>
+      <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <pass_gate_logic circuit_model_name="sky130_osu_sc_18T_hs__mux2_1"/>
       <port type="input" prefix="in" size="1"/>
       <port type="output" prefix="out" size="1"/>
       <port type="sram" prefix="sram" size="1"/>
     </circuit_model>
     <circuit_model type="mux" name="mux_tree_tapbuf" prefix="mux_tree_tapbuf" dump_structural_verilog="true">
       <design_technology type="cmos" structure="tree" add_const_input="true" const_input_val="1"/>
-      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_4"/>
-      <pass_gate_logic circuit_model_name="sky130_fd_sc_hd__mux2_1"/>
+      <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_4"/>
+      <pass_gate_logic circuit_model_name="sky130_osu_sc_18T_hs__mux2_1"/>
       <port type="input" prefix="in" size="1"/>
       <port type="output" prefix="out" size="1"/>
       <port type="sram" prefix="sram" size="1"/>
     </circuit_model>
     <!--DFF subckt ports should be defined as <D> <Q> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ff" name="sky130_fd_sc_hd__sdfbbp_1" prefix="sky130_fd_sc_hd__sdfbbp_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v">
+    <circuit_model type="ff" name="sky130_osu_sc_18T_hs__dffsr_1" prefix="sky130_osu_sc_18T_hs__dffsr_1" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v">
       <design_technology type="cmos"/>
-      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
       <port type="input" prefix="D" size="1"/>
-      <port type="input" prefix="set" lib_name="SET_B" size="1" is_global="true" default_val="1" is_set="true"/>
-      <port type="input" prefix="reset" lib_name="RESET_B" size="1" is_global="true" default_val="1" is_reset="true"/>
+      <port type="input" prefix="set" lib_name="SN" size="1" is_global="true" default_val="1" is_set="true"/>
+      <port type="input" prefix="reset" lib_name="RN" size="1" is_global="true" default_val="1" is_reset="true"/>
       <port type="output" prefix="Q" size="1"/>
-      <port type="clock" prefix="clk" lib_name="CLK" size="1" is_global="true" default_val="0"/>
+      <port type="clock" prefix="clk" lib_name="CK" size="1" is_global="true" default_val="0"/>
     </circuit_model>
     <circuit_model type="lut" name="frac_lut6" prefix="frac_lut6" dump_structural_verilog="true">
       <design_technology type="cmos" fracturable_lut="true"/>
-      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <lut_input_inverter exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <lut_input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__buf_4"/>
-      <lut_intermediate_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__buf_4" location_map="-1-1-"/>
-      <pass_gate_logic circuit_model_name="sky130_fd_sc_hd__mux2_1"/>
-      <port type="input" prefix="in" size="6" tri_state_map="-----1" circuit_model_name="sky130_fd_sc_hd__or2_1"/>
+      <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <lut_input_inverter exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <lut_input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__buf_4"/>
+      <lut_intermediate_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__buf_4" location_map="-1-1-"/>
+      <pass_gate_logic circuit_model_name="sky130_osu_sc_18T_hs__mux2_1"/>
+      <port type="input" prefix="in" size="6" tri_state_map="-----1" circuit_model_name="sky130_osu_sc_18T_hs__or2_1"/>
       <port type="output" prefix="lut5_out" size="2" lut_frac_level="5" lut_output_mask="0,1"/>
       <port type="output" prefix="lut6_out" size="1" lut_output_mask="0"/>
       <port type="sram" prefix="sram" size="64"/>
@@ -161,8 +161,8 @@
     <!--Scan-chain DFF subckt ports should be defined as <D> <Q> <Qb> <CLK> <RESET> <SET>  -->
     <circuit_model type="ccff" name="DFFR" prefix="DFFR" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v">
       <design_technology type="cmos"/>
-      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
       <port type="input" prefix="pReset" lib_name="RST" size="1" is_global="true" default_val="0" is_reset="true" is_prog="true"/>
       <port type="input" prefix="D" size="1"/>
       <port type="output" prefix="Q" size="1"/>
@@ -171,8 +171,8 @@
     </circuit_model>
     <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v">
       <design_technology type="cmos"/>
-      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
-      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
       <port type="inout" prefix="PAD" size="1" is_global="true" is_io="true" is_data_io="true"/>
       <port type="sram" prefix="DIR" size="1" mode_select="true" circuit_model_name="DFFR" default_val="1"/>
       <port type="input" prefix="outpad" lib_name="A" size="1"/>
@@ -206,7 +206,7 @@
     </pb_type>
     <pb_type name="clb.fle" physical_mode_name="physical"/>
     <pb_type name="clb.fle[physical].fabric.frac_logic.frac_lut6" circuit_model_name="frac_lut6" mode_bits="0"/>
-    <pb_type name="clb.fle[physical].fabric.ff" circuit_model_name="sky130_fd_sc_hd__sdfbbp_1"/>
+    <pb_type name="clb.fle[physical].fabric.ff" circuit_model_name="sky130_osu_sc_18T_hs__dffsr_1"/>
     <!-- Binding operating pb_type to physical pb_type -->
     <pb_type name="clb.fle[n2_lut5].lut5inter.ble5.lut5" physical_pb_type_name="clb.fle[physical].fabric.frac_logic.frac_lut6" mode_bits="1" physical_pb_type_index_factor="0.5">
       <!-- Binding the lut5 to the first 5 inputs of fracturable lut6 -->
