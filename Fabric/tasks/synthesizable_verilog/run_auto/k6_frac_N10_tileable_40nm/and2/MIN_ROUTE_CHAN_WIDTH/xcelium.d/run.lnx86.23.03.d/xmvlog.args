@@ -1,0 +1,28 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.23.03.d
+-RUNMODE
+./SRC/and2_include_netlists.v
+-INCDIR
+./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv
+-INCDIR
+./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/buf
+-INCDIR
+./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/or2
+-INCDIR
+./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/mux2
+-INCDIR
+./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/sdfbbp
+-CDSLIB
+./xcelium.d/run.lnx86.23.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.23.03.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.23.03.d/xllibs
+-ALLOWUNBOUND

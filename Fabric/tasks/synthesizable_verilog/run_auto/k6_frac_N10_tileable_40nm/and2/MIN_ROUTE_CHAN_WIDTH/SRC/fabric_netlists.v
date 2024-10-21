@@ -9,14 +9,14 @@
 `include "./SRC/fpga_defines.v"
 
 // ------ Include user-defined netlists -----
-`include "/home/ubuntu/Desktop/OpenFPGA/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_1.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/buf/sky130_fd_sc_hd__buf_4.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_4.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/or2/sky130_fd_sc_hd__or2_1.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/mux2/sky130_fd_sc_hd__mux2_1.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
+`include "./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_1.v"
+`include "./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/buf/sky130_fd_sc_hd__buf_4.v"
+`include "./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_4.v"
+`include "./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/or2/sky130_fd_sc_hd__or2_1.v"
+`include "./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/mux2/sky130_fd_sc_hd__mux2_1.v"
+`include "./SRC/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
 // ------ Include primitive module netlists -----
 `include "./SRC/sub_module/inv_buf_passgate.v"
 `include "./SRC/sub_module/arch_encoder.v"
