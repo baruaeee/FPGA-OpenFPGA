@@ -59,6 +59,12 @@ https://github.com/The-OpenROAD-Project/asap5
 PDK-SkyWater130(only standard cells)
 https://github.com/stineje/sky130_cds
 
+Cadence design flow tutorial
+https://github.com/abdelazeem201/Cadence-RTL-to-GDSII-Flow
+
+Genus Synthesis
+https://digitalsystemdesign.in/genus-synthesis-without-constraints/
+
 dependencies:
 ctags-already installed in mint 21.3
 
@@ -130,6 +136,12 @@ The VPR activity file is associated with the VPR (Versatile Place and Route) too
 
 The VPR activity file contains information about the activity levels of various signals in a digital circuit during simulation. This data is essential for understanding how the circuit behaves under different conditions and for optimizing performance.
 
+what is dffr?
+In the context of FPGAs, DFFR refers to a D Flip-Flop with Reset. This is a specific type of D Flip-Flop (DFF) that includes an asynchronous reset feature, allowing the output to be set to a predefined state (usually low or zero) regardless of the clock signal.
+
+tap_buf4
+tap_buf4 can be interpreted as an inverter with a fanout of 4
+
 Workarround
 
 OpenFPGA root and source initialization
@@ -167,5 +179,221 @@ Run icarus iVerilog Compilation
 >>iverilog SRC/fabric_netlists.v
 # If compilation is successful, you can see a file a.out in the directory.
 
+----------------
+/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/
+/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
+
+--INVTX1--
+--line 32--
+<circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_1" prefix="sky130_fd_sc_hd__inv_1" is_default="true" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_1.v">
+      <design_technology type="cmos" topology="inverter" size="1"/>
+      <device_technology device_model_name="logic"/>
+      <port type="input" prefix="in" lib_name="A" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
+      <delay_matrix type="rise" in_port="in" out_port="out">
+        10e-12
+      </delay_matrix>
+      <delay_matrix type="fall" in_port="in" out_port="out">
+        10e-12
+      </delay_matrix>
+    </circuit_model>
+replace-INVTX1==>sky130_fd_sc_hd__inv_1
+
+--buf4--
+--line 44--
+<circuit_model type="inv_buf" name="sky130_fd_sc_hd__buf_4" prefix="sky130_fd_sc_hd__buf_4" is_default="false" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/buf/sky130_fd_sc_hd__buf_4.v">
+      <design_technology type="cmos" topology="buffer" size="1" num_level="2" f_per_stage="4"/>
+      <device_technology device_model_name="logic"/>
+      <port type="input" prefix="in" lib_name="A" size="1"/>
+      <port type="output" prefix="out" lib_name="X" size="1"/>
+      <delay_matrix type="rise" in_port="in" out_port="out">
+        10e-12
+      </delay_matrix>
+      <delay_matrix type="fall" in_port="in" out_port="out">
+        10e-12
+      </delay_matrix>
+    </circuit_model>
+replace-"buf4"==>"sky130_fd_sc_hd__buf_4"
+
+--tap_buf4--
+--line 56--
+<circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_4" prefix="sky130_fd_sc_hd__inv_4" is_default="false" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_4.v">
+      <design_technology type="cmos" topology="buffer" size="1" num_level="3" f_per_stage="4"/>
+      <device_technology device_model_name="logic"/>
+      <port type="input" prefix="in" lib_name="A" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
+      <delay_matrix type="rise" in_port="in" out_port="out">
+        10e-12
+      </delay_matrix>
+      <delay_matrix type="fall" in_port="in" out_port="out">
+        10e-12
+      </delay_matrix>
+    </circuit_model>
+replace-tap_buf4==>sky130_fd_sc_hd__inv_4
+
+--OR2--
+--line 68--
+<circuit_model type="gate" name="sky130_fd_sc_hd__or2_1" prefix="sky130_fd_sc_hd__or2_1" is_default="true" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/or2/sky130_fd_sc_hd__or2_1.v">
+      <design_technology type="cmos" topology="OR"/>
+      <device_technology device_model_name="logic"/>
+      <input_buffer exist="false"/>
+      <output_buffer exist="false"/>
+      <port type="input" prefix="a" lib_name="A" size="1"/>
+      <port type="input" prefix="b" lib_name="B" size="1"/>
+      <port type="output" prefix="out" lib_name="X" size="1"/>
+      <delay_matrix type="rise" in_port="a b" out_port="out">
+        10e-12 5e-12
+      </delay_matrix>
+      <delay_matrix type="fall" in_port="a b" out_port="out">
+        10e-12 5e-12
+      </delay_matrix>
+    </circuit_model>
+replace-"OR2"==>"sky130_fd_sc_hd__or2_1"
+
+--MUX2--
+--line 90--
+<circuit_model type="gate" name="sky130_fd_sc_hd__mux2_1" prefix="sky130_fd_sc_hd__mux2_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/mux2/sky130_fd_sc_hd__mux2_1.v">
+      <design_technology type="cmos" topology="MUX2"/>
+      <device_technology device_model_name="logic"/>
+      <input_buffer exist="false"/>
+      <output_buffer exist="false"/>
+      <port type="input" prefix="in0" lib_name="A1" size="1"/>
+      <port type="input" prefix="in1" lib_name="A0" size="1"/>
+      <port type="input" prefix="sel" lib_name="S" size="1"/>
+      <port type="output" prefix="out" lib_name="X" size="1"/>
+    </circuit_model>
+replace-"MUX2"==>"sky130_fd_sc_hd__mux2_1"
+
+--DFFSRQ--
+--line 137--
+<circuit_model type="ff" name="sky130_fd_sc_hd__sdfbbp_1" prefix="sky130_fd_sc_hd__sdfbbp_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v">
+      <design_technology type="cmos"/>
+      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <port type="input" prefix="D" size="1"/>
+      <port type="input" prefix="set" lib_name="SET_B" size="1" is_global="true" default_val="1" is_set="true"/>
+      <port type="input" prefix="reset" lib_name="RESET_B" size="1" is_global="true" default_val="1" is_reset="true"/>
+      <port type="output" prefix="Q" size="1"/>
+      <port type="clock" prefix="clk" lib_name="CLK" size="1" is_global="true" default_val="0"/>
+    </circuit_model>
+replace-DFFSRQ==>sky130_fd_sc_hd__sdfbbp_1
+
+--DFFR--
+--line 162--not working
+<circuit_model type="ccff" name="sky130_fd_sc_hd__dfrbp_1" prefix="sky130_fd_sc_hd__dfrbp_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/dfrbp/sky130_fd_sc_hd__dfrbp_1.v">
+      <design_technology type="cmos"/>
+      <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
+      <port type="input" prefix="pReset" lib_name="RESET_B" size="1" is_global="true" default_val="1" is_reset="true" is_prog="true"/>
+      <port type="input" prefix="D" size="1"/>
+      <port type="output" prefix="Q" size="1"/>
+      <port type="output" prefix="QN" lib_name="Q_N" size="1"/>
+      <port type="clock" prefix="prog_clk" lib_name="CLK" size="1" is_global="true" default_val="0" is_prog="true"/>
+    </circuit_model>
+replace-DFFR==>sky130_fd_sc_hd__dfrbp_1
+----------------
+iverilog -o compiled_and2 ./SRC/and2_include_netlists.v -s and2_autocheck_top_tb \
+     -I ./SRC \
+     -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/inv \
+     -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/buf \
+	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/or2 \
+	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/mux2 \
+	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/sdfbbp \
+	## -I ${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/dfrbp
+----------------
+xrun ./SRC/and2_include_netlists.v -access +rwc \
+	-incdir ./SRC/sky130/cells/inv \
+	-incdir ./SRC/sky130/cells/buf \
+	-incdir ./SRC/sky130/cells/or2 \
+	-incdir ./SRC/sky130/cells/mux2 \
+	-incdir ./SRC/sky130/cells/sdfbbp \
+	-64bit
+	-gui &
+
+----------------
+
+#!/bin/bash
+
+#Matlab
+VERSION="R2023b"
+export MATLAB_HOME=/opt/matlab/${VERSION}/bin
+export MATLABROOT=/opt/matlab/${VERSION}/
+export PATH="${PATH}:${MATLAB_HOME}"
+export LM_LICENSE_FILE=27003@hs-lic1.oth-regensburg.de:$LM_LICENSE_FILE
+export MLM_LICENSE_FILE=27003@hs-lic1.oth-regensburg.de
+#matlab
+#matlab -c 27003@hs-lic1.hs-regensburg.de
 
 
+#XILINX tools
+VERSION="2024.1"
+source /opt/Xilinx/xilinx_set_locale.sh
+source /opt/Xilinx/Vivado/$VERSION/settings64.sh
+source /opt/Xilinx/Vitis/$VERSION/settings64.sh
+source /opt/Xilinx/Vitis_HLS/$VERSION/settings64.sh
+source /opt/Xilinx/xilinx_set_locale.sh
+export XILINXD_LICENSE_FILE=2100@hs-lic1.oth-regensburg.de ;
+export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LIBRARY_PATH
+#vivado
+#vitis_hls
+
+
+#Siemens tools
+source /eda/Siemens/2023-24/scripts/QUESTA-CORE-PRIME_2023.4_RHELx86.sh
+source /eda/Siemens/2023-24/scripts/CATAPULT_2023.2_RHELx86.sh
+source /eda/Siemens/2023-24/scripts/PRECISION_2023.2_RHELx86.sh
+source /eda/Siemens/2023-24/scripts/X-ENTP-VX_2.14_RHELx86.sh
+source /eda/Siemens/2023-24/scripts/HDL-DESIGNER_2023.4_RHELx86.sh
+source /eda/Siemens/2023-24/scripts/LEONARDO_2020a_RHELx86.sh
+source /eda/Siemens/2023-24/scripts/OASYS-RTL_2022.2.R1_RHELx86.sh
+export MGLS_LICENSE_FILE=1717@hs-lic3.oth-regensburg.de
+#precision
+#catapult
+#vsim
+#hdl_designer
+#leonardo
+#ExpeditionPCB
+#ExpeditionPCB << EOF yes EOF
+
+# Adapted script Calibre DRC/LVS/ERC/PERC/RCX/
+export CALIBRE_HOME=/eda/Siemens/2023-24/RHELx86/CALIBRE_2023.4_17/aok_cal_2023.4_17.10
+export PATH="${PATH}:${CALIBRE_HOME}/bin"
+alias help_mg_cal='${CALIBRE_HOME}/bin/mgcdocs'
+#${CALIBRE_HOME}/docs/pdfdocs/Calbr_Doc_Set.pdx
+# calibredrv, calibre -gui, calibrewb
+
+
+
+#Suggested setup	for Mixed Signal Design and Implementation flow:
+source /eda/cadence/2023-24/scripts/SPECTRE_23.10.242_RHELx86.sh
+source /eda/cadence/2023-24/scripts/VMANAGER_23.03.004_RHELx86.sh
+source /eda/cadence/2023-24/scripts/VERISIUMDEBUG_23.03.001_RHELx86.sh
+source /eda/cadence/2023-24/scripts/CONFRML_23.10.300_RHELx86.sh 
+source /eda/cadence/2023-24/scripts/LITMUS_23.10.300_RHELx86.sh 
+source /eda/cadence/2023-24/scripts/DDIEXPORT_22.33.000_RHELx86.sh  
+source /eda/cadence/2023-24/scripts/SSV_22.13.000_RHELx86.sh
+source /eda/cadence/2023-24/scripts/MODUS_22.12.000_RHELx86.sh
+source /eda/cadence/2023-24/scripts/LIBERATE_23.11.221_RHELx86.sh 
+source /eda/cadence/2023-24/scripts/PEGASUS_23.11.000_RHELx86.sh
+source /eda/cadence/2023-24/scripts/QUANTUS_23.10.000_RHELx86.sh 
+source /eda/cadence/2023-24/scripts/PEGASUSDFM_23.11.000_RHELx86.sh 
+source /eda/cadence/2023-24/scripts/IC_23.10.020_RHELx86.sh
+source /eda/cadence/2023-24/scripts/ASSURA_04.16.115_231_RHELx86.sh
+source /eda/cadence/2023-24/scripts/XCELIUM_23.03.007_RHELx86.sh
+#source /eda/cadence/2023-24/scripts/XCELIUM_24.03.001_RHELx86.sh
+source /eda/cadence/2023-24/scripts/STRATUS_23.01.004_RHELx86.sh
+source /eda/cadence/2023-24/scripts/SPB_23.10.000_RHELx86.sh
+export LM_LICENSE_FILE=5280@hs-lic3.oth-regensburg.de:$LM_LICENSE_FILE
+export CDS_LIC_FILE=5280@hs-lic3.oth-regensburg.de
+#spectre
+#virtuoso
+#stratus_ide
+#genus -gui
+#xrun
+#simvision
+#allegro
+#allegro_pcb
+#syscap
+#fpgasysplanner
+#rc
+#innovus
