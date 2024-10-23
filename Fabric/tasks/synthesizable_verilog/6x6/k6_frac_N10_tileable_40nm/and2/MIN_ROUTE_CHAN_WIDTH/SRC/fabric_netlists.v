@@ -3,20 +3,14 @@
 //	Description: Fabric Netlist Summary
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Oct 21 21:53:05 2024
+//	Date: Wed Oct 23 22:37:03 2024
 //-------------------------------------------
 // ------ Include defines: preproc flags -----
 `include "./SRC/fpga_defines.v"
 
 // ------ Include user-defined netlists -----
-`include "./SRC/sky130/cells/inv/sky130_fd_sc_hd__inv_1.v"
-`include "./SRC/sky130/cells/buf/sky130_fd_sc_hd__buf_4.v"
-`include "./SRC/sky130/cells/inv/sky130_fd_sc_hd__inv_4.v"
-`include "./SRC/sky130/cells/or2/sky130_fd_sc_hd__or2_1.v"
-`include "./SRC/sky130/cells/mux2/sky130_fd_sc_hd__mux2_1.v"
-`include "./SRC/sky130/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v"
-`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v"
-`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
+`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_fd_sc_hd.v"
+`include "/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
 // ------ Include primitive module netlists -----
 `include "./SRC/sub_module/inv_buf_passgate.v"
 `include "./SRC/sub_module/arch_encoder.v"
