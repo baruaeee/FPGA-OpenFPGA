@@ -1,0 +1,28 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.23.03.d
+-RUNMODE
+./SRC/and2_include_netlists.v
+-INCDIR
+./SRC/sky130/cells/inv
+-INCDIR
+./SRC/sky130/cells/buf
+-INCDIR
+./SRC/sky130/cells/or2
+-INCDIR
+./SRC/sky130/cells/mux2
+-INCDIR
+./SRC/sky130/cells/sdfbbp
+-CDSLIB
+./xcelium.d/run.lnx8664.23.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.23.03.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.23.03.d/xllibs
+-ALLOWUNBOUND

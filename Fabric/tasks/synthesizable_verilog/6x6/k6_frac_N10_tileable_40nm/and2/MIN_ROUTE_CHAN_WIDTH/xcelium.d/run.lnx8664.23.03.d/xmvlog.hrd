@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INCDIR
+./SRC/sky130/cells/inv
+-INCDIR
+./SRC/sky130/cells/buf
+-INCDIR
+./SRC/sky130/cells/or2
+-INCDIR
+./SRC/sky130/cells/mux2
+-INCDIR
+./SRC/sky130/cells/sdfbbp

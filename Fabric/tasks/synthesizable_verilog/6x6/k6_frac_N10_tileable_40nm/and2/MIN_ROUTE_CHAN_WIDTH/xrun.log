@@ -1,0 +1,32 @@
+xrun(64): 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s007: Started on Oct 22, 2024 at 00:42:32 CEST
+xrun
+	./SRC/and2_include_netlists.v
+	-access +rwc
+	-incdir ./SRC/sky130/cells/inv
+	-incdir ./SRC/sky130/cells/buf
+	-incdir ./SRC/sky130/cells/or2
+	-incdir ./SRC/sky130/cells/mux2
+	-incdir ./SRC/sky130/cells/sdfbbp
+	-64bit
+	-gui
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm and2_autocheck_top_tb.c_fpga[0] and2_autocheck_top_tb.c_benchmark[0]
+Created probe 1
+xcelium> run
+xmsim: *W,PRUASZ: Unpacked array at "and2_autocheck_top_tb.bit_mem" of 45113 elements exceeds limit of 16384 - not probed
+ Use 'probe -create -unpacked 45113 and2_autocheck_top_tb.bit_mem' or 'setenv SHM_UNPACKED_LIMIT 45113' to adjust limit.
+Simulation start
+Simulation Succeed
+Simulation complete via $finish(1) at time 451167 NS + 0
+./SRC/and2_autocheck_top_tb.v:985758 	$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.03-s007: Exiting on Oct 22, 2024 at 00:44:22 CEST  (total: 00:01:50)

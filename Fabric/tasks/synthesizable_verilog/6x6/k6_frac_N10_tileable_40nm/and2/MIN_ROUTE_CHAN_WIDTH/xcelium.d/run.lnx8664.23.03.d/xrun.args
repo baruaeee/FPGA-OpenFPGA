@@ -1,0 +1,18 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+./SRC/and2_include_netlists.v
+-access
++rwc
+-incdir
+./SRC/sky130/cells/inv
+-incdir
+./SRC/sky130/cells/buf
+-incdir
+./SRC/sky130/cells/or2
+-incdir
+./SRC/sky130/cells/mux2
+-incdir
+./SRC/sky130/cells/sdfbbp
+-64bit
