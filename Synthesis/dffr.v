@@ -3,7 +3,7 @@
 // Generated on: Oct 23 2024 03:21:52 CEST (Oct 23 2024 01:21:52 UTC)
 
 // Verification Directory fv/DFFR 
-
+`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_fd_sc_hd.v"
 module DFFR(RST, CK, D, Q, QN);
   input RST, CK, D;
   output Q, QN;
