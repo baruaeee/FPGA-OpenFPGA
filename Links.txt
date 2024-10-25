@@ -61,9 +61,16 @@ https://github.com/stineje/sky130_cds
 
 Cadence design flow tutorial
 https://github.com/abdelazeem201/Cadence-RTL-to-GDSII-Flow
+https://www.youtube.com/@vlsiclasses/videos
+https://www.youtube.com/watch?v=_qyBenY6vCQ&list=PLuXu2WnxwfB1c9f4Zpr-rP_Gfyq7LKS4N&index=5
+https://github.com/arm-university/VLSI-Fundamentals-Education-Kit
 
 Genus Synthesis
 https://digitalsystemdesign.in/genus-synthesis-without-constraints/
+
+PnR
+https://www.youtube.com/watch?v=1kLUdi0qNBo&list=PLC7JCwKQnjL5QPkGGEtO2TFAW9oW8c_W3&index=8
+https://digitalsystemdesign.in/mmmc-file-setup-for-pnr-using-innovus/
 
 dependencies:
 ctags-already installed in mint 21.3
@@ -279,7 +286,7 @@ replace-"MUX2"==>"sky130_fd_sc_hd__mux2_1"
 replace-DFFSRQ==>sky130_fd_sc_hd__sdfbbp_1
 
 --DFFR--
---line 162--not working
+--line 162--canned be verfied with iverilog
 <circuit_model type="ccff" name="sky130_fd_sc_hd__dfrbp_1" prefix="sky130_fd_sc_hd__dfrbp_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/dfrbp/sky130_fd_sc_hd__dfrbp_1.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
@@ -309,9 +316,19 @@ xrun ./SRC/and2_include_netlists.v -access +rwc \
 	-incdir ./SRC/sky130/cells/sdfbbp \
 	-64bit
 	-gui &
-
 ----------------
-
+genus -gui
+read_libs <lib name>
+read_hdl <hdl--verilog file>
+elaborate <top_module name>
+set_db syn_generic_effort medium
+set_db syn_map_effort medium
+set_db syn_opt_effort medium
+syn_generic
+syn_map
+syn_opt
+write_hdl > hdl.v
+----------------
 #!/bin/bash
 
 #Matlab
