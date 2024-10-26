@@ -56,3 +56,23 @@ define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill
 }
 win
 set enc_check_rename_command_name 1
+set init_gnd_net VGND
+set init_lef_file {lef/sky130_ef_sc_hd.lef lef/sky130_fd_sc_hd.lef}
+set init_verilog SRC/fabric_netlists.v
+set init_mmmc_file Fabric.view
+set init_pwr_net VPWR
+init_design
+save_global fabric.globals
+set init_gnd_net VGND
+set init_lef_file {lef/sky130_ef_sc_hd.lef lef/sky130_fd_sc_hd.lef}
+set init_verilog SRC/fabric_netlists.v
+set init_mmmc_file Fabric.view
+set init_pwr_net VPWR
+init_design
+set init_gnd_net VGND
+set init_lef_file {lef/sky130_ef_sc_hd.lef lef/sky130_fd_sc_hd.lef}
+set init_design_settop 0
+set init_verilog SRC/fabric_netlists.v
+set init_mmmc_file Fabric.view
+set init_pwr_net VPWR
+init_design
