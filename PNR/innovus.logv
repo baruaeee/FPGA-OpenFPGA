@@ -1,0 +1,77 @@
+[10/26 14:06:58      0s] 
+[10/26 14:06:58      0s] Cadence Innovus(TM) Implementation System.
+[10/26 14:06:58      0s] Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[10/26 14:06:58      0s] 
+[10/26 14:06:58      0s] Version:	v22.33-s094_1, built Fri Aug 25 16:48:21 PDT 2023
+[10/26 14:06:58      0s] Options:	
+[10/26 14:06:58      0s] Date:		Sat Oct 26 14:06:58 2024
+[10/26 14:06:58      0s] Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
+[10/26 14:06:58      0s] OS:		Oracle Linux Server 8.10
+[10/26 14:06:58      0s] 
+[10/26 14:06:58      0s] License:
+[10/26 14:06:58      0s] 		[14:06:58.434116] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+
+[10/26 14:06:58      0s] 		invs	Innovus Implementation System	22.1	checkout succeeded
+[10/26 14:06:58      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[10/26 14:07:26     13s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v22.33-s094_1 (64bit) 08/25/2023 16:48 (Linux 3.10.0-693.el7.x86_64)
+[10/26 14:07:28     15s] @(#)CDS: NanoRoute 22.33-s094_1 NR230808-0153/22_13-UB (database version 18.20.615_1) {superthreading v2.20}
+[10/26 14:07:28     15s] @(#)CDS: AAE 22.13-s029 (64bit) 08/25/2023 (Linux 3.10.0-693.el7.x86_64)
+[10/26 14:07:28     15s] @(#)CDS: CTE 22.13-s030_1 () Aug 22 2023 02:51:11 ( )
+[10/26 14:07:28     15s] @(#)CDS: SYNTECH 22.13-s015_1 () Aug 20 2023 22:21:55 ( )
+[10/26 14:07:28     15s] @(#)CDS: CPE v22.13-s082
+[10/26 14:07:28     15s] @(#)CDS: IQuantus/TQuantus 21.2.2-s211 (64bit) Tue Jun 20 22:12:10 PDT 2023 (Linux 3.10.0-693.el7.x86_64)
+[10/26 14:07:28     15s] @(#)CDS: OA 22.60-p088 Tue Mar 21 03:05:14 2023
+[10/26 14:07:28     15s] @(#)CDS: SGN 22.20-d001 (02-Jan-2023) (64 bit executable, TkQt5.9.1)
+[10/26 14:07:28     15s] @(#)CDS: RCDB 11.15.0
+[10/26 14:07:28     15s] @(#)CDS: STYLUS 22.11-s006_1 (04/03/2023 03:37 PDT)
+[10/26 14:07:28     15s] @(#)CDS: IntegrityPlanner-22.13-12028 (22.13) (2023-07-13 13:54:54+0800)
+[10/26 14:07:29     15s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_901325_cae-europractice1.othr.de_cae1_Y4ykkE.
+
+[10/26 14:07:29     15s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[10/26 14:07:30     16s] 
+[10/26 14:07:30     16s] **INFO:  MMMC transition support version v31-84 
+[10/26 14:07:30     16s] 
+[10/26 14:07:30     16s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[10/26 14:07:30     16s] <CMD> suppressMessage ENCEXT-2799
+[10/26 14:07:30     16s] <CMD> getVersion
+[10/26 14:07:30     16s] <CMD> getVersion
+[10/26 14:07:31     16s] <CMD> getVersion
+[10/26 14:07:31     16s] <CMD> define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+        {-window "window coordinates" "" list optional}
+        {-window_size "window size in microns" "" string optional}
+    
+    }
+[10/26 14:07:31     16s] [INFO] Loading Pegasus 23.11 fill procedures
+[10/26 14:07:32     16s] <CMD> define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+[10/26 14:07:32     16s] <CMD> define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+[10/26 14:07:32     16s] <CMD> define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+[10/26 14:07:32     16s] <CMD> define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+[10/26 14:07:32     16s] <CMD> define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+[10/26 14:07:32     16s] <CMD> define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+[10/26 14:07:32     17s] <CMD> win
+[10/26 14:07:32     17s] <CMD> set enc_check_rename_command_name 1

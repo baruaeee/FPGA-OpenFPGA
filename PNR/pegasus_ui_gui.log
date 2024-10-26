@@ -1,0 +1,1 @@
+/eda/cadence/2023-24/RHELx86/PEGASUS_23.11.000/tools.lnx86/Pegasus/bin/64bit/pegasusgui: symbol lookup error: /eda/cadence/2023-24/RHELx86/PEGASUS_23.11.000/tools.lnx86/Qt/v5/64bit/lib/libcdsQt5Core.so.5: undefined symbol: u_strToLower_50
