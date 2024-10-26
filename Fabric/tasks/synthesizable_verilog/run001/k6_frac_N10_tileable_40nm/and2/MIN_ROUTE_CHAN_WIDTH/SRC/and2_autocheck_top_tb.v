@@ -3,7 +3,7 @@
 //	Description: FPGA Verilog full testbench for top-level netlist of design: and2
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Wed Oct 23 14:02:44 2024
+//	Date: Sat Oct 26 03:42:38 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -130,7 +130,7 @@ initial
 	assign clk[0] = __op_clock__[0];
 	assign prog_clk[0] = __prog_clock__[0];
 	assign reset[0] = ~__greset__[0];
-	assign pReset[0] = __prog_reset__[0];
+	assign pReset[0] = ~__prog_reset__[0];
 	assign set[0] = ~__gset__[0];
 // ----- End connecting global ports of FPGA fabric to stimuli -----
 // ----- FPGA top-level module to be capsulated -----

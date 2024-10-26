@@ -3,7 +3,7 @@
 //	Description: Verilog modules for primitive pb_type: frac_lut6
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Wed Oct 23 14:02:44 2024
+//	Date: Sat Oct 26 03:42:38 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -61,7 +61,7 @@ wire [0:63] frac_lut6_0_sram_inv;
 		.lut5_out(frac_lut6_lut5_out[0:1]),
 		.lut6_out(frac_lut6_lut6_out));
 
-	frac_lut6_DFFR_mem frac_lut6_DFFR_mem (
+	frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem (
 		.pReset(pReset),
 		.prog_clk(prog_clk),
 		.ccff_head(ccff_head),

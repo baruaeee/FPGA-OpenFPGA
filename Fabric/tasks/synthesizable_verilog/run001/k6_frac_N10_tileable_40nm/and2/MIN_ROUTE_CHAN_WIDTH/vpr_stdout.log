@@ -210,11 +210,11 @@ Logic Element (fle) detailed count:
   LEs used for logic only             : 1
   LEs used for registers only         : 0
 
-Incr Slack updates 1 in 2.48e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.52e-06 sec
+Incr Slack updates 1 in 2.36e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.44e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.48e-06 sec
+Full Criticality updates 1 in 1.68e-06 sec
 FPGA sized to 3 x 3 (auto)
 Device Utilization: 0.15 (target 1.00)
 	Block Utilization: 0.09 Type: io
@@ -238,7 +238,7 @@ Netlist conversion complete.
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'and2.net'.
 Detected 0 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.021704 seconds).
+Finished loading packed FPGA netlist file (took 0.018479 seconds).
 Warning 6: Treated 0 constant nets as global which will not be routed (to see net names increase packer verbosity).
 # Load packing took 0.02 seconds (max_rss 60.0 MiB, delta_rss +38.0 MiB)
 Warning 7: Netlist contains 0 global net to non-global architecture pin connections
@@ -398,8 +398,8 @@ io                 Uniform                22.22            100.00          0.00 
                    Median                 11.11            0.00            0.00           100.00       
 
 
-Placement Quench timing analysis took 4.52e-06 seconds (2.8e-06 STA, 1.72e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
-Placement Total  timing analysis took 4.804e-05 seconds (3.532e-05 STA, 1.272e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
+Placement Quench timing analysis took 4.28e-06 seconds (2.56e-06 STA, 1.72e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 4.756e-05 seconds (3.444e-05 STA, 1.312e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
 update_td_costs: connections 0 nets 0 sum_nets 0 total 0
 # Placement took 0.00 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 
@@ -423,11 +423,11 @@ Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wireleng
       (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
    1    0.0     0.0    0      26       3       3       0 ( 0.000%)       4 ( 5.0%)    0.788    -0.7884     -0.788      0.000      0.000      N/A
-Incr Slack updates 4 in 3.2e-06 sec
-Full Max Req/Worst Slack updates 2 in 2.16e-06 sec
+Incr Slack updates 4 in 3.44e-06 sec
+Full Max Req/Worst Slack updates 2 in 2.4e-06 sec
 Incr Max Req/Worst Slack updates 2 in 8e-07 sec
-Incr Criticality updates 2 in 1.16e-06 sec
-Full Criticality updates 2 in 2.28e-06 sec
+Incr Criticality updates 2 in 1.08e-06 sec
+Full Criticality updates 2 in 2.16e-06 sec
 Restoring best routing
 Critical path: 0.788361 ns
 Successfully routed after 1 routing iterations.
@@ -568,14 +568,14 @@ Final setup slack histogram:
 Final geomean non-virtual intra-domain period: nan ns (nan MHz)
 Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
 
-Incr Slack updates 1 in 2.08e-06 sec
-Full Max Req/Worst Slack updates 1 in 9.2e-07 sec
+Incr Slack updates 1 in 2.12e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.08e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.16e-06 sec
-Flow timing analysis took 0.000135522 seconds (0.000102361 STA, 3.3161e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
+Full Criticality updates 1 in 1.04e-06 sec
+Flow timing analysis took 0.00013356 seconds (9.992e-05 STA, 3.364e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
 VPR succeeded
-The entire flow of VPR took 0.09 seconds (max_rss 60.2 MiB)
+The entire flow of VPR took 0.08 seconds (max_rss 60.2 MiB)
 
 Command line to execute: read_openfpga_arch -f /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_openfpga_synthesizable.xml
 
@@ -585,11 +585,11 @@ Reading XML architecture '/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthe
 Read OpenFPGA architecture
 Warning 14: Automatically set circuit model 'frac_lut6' to be default in its type.
 Warning 15: Automatically set circuit model 'sky130_fd_sc_hd__sdfbbp_1' to be default in its type.
-Warning 16: Automatically set circuit model 'DFFR' to be default in its type.
+Warning 16: Automatically set circuit model 'sky130_fd_sc_hd__dfrbp_1' to be default in its type.
 Warning 17: Automatically set circuit model 'GPIO' to be default in its type.
-Use the default configurable memory model 'DFFR' for circuit model 'mux_tree' port 'sram')
-Use the default configurable memory model 'DFFR' for circuit model 'mux_tree_tapbuf' port 'sram')
-Use the default configurable memory model 'DFFR' for circuit model 'frac_lut6' port 'sram')
+Use the default configurable memory model 'sky130_fd_sc_hd__dfrbp_1' for circuit model 'mux_tree' port 'sram')
+Use the default configurable memory model 'sky130_fd_sc_hd__dfrbp_1' for circuit model 'mux_tree_tapbuf' port 'sram')
+Use the default configurable memory model 'sky130_fd_sc_hd__dfrbp_1' for circuit model 'frac_lut6' port 'sram')
 Read OpenFPGA architecture took 0.00 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 Check circuit library
 Checking circuit library passed.
@@ -667,11 +667,11 @@ Building annotation for post-routing and clustering synchornization results...Do
 Building annotation for mapped blocks on grid locations...Done
 User specified the operating clock frequency to use VPR results
 Use VPR critical path delay 9.46033e-19 [ns] with a 20 [%] slack in OpenFPGA.
-Incr Slack updates 1 in 2.16e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.296e-05 sec
+Incr Slack updates 1 in 1.64e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.08e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.36e-06 sec
+Full Criticality updates 1 in 1.16e-06 sec
 Will apply operating clock frequency 1057.05 [MHz] to simulations
 User specified the number of operating clock cycles to be inferred from signal activities
 Average net density: 0.42
@@ -809,43 +809,43 @@ Build fabric-independent bitstream for implementation 'and2'
 Reserved 403 configurable blocks
 Reserved 1458 configuration bits
 Building grid bitstream...
-Generating bitstream for core grids...Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Generating bitstream for core grids...Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
-Added 65 bits to 'frac_lut6_DFFR_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Added 65 bits to 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Added 2 bits to 'mem_frac_logic_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Added 2 bits to 'mem_fabric_out_0' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Added 2 bits to 'mem_fabric_out_1' under 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -910,38 +910,38 @@ Added 6 bits to 'mem_fle_9_in_3' under 'logical_tile_clb_mode_clb__0'
 Added 6 bits to 'mem_fle_9_in_4' under 'logical_tile_clb_mode_clb__0'
 Added 6 bits to 'mem_fle_9_in_5' under 'logical_tile_clb_mode_clb__0'
 Done
-Generating bitstream for I/O grids...Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFR_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Generating bitstream for I/O grids...Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' under 'logical_tile_io_mode_physical__iopad_0'
 Done
 Done
 Building routing bitstream...
@@ -1599,76 +1599,76 @@ Try to find a configurable block corresponding to module 'mem_top_ipin_6' in FPG
 Try to find a configurable block corresponding to module 'mem_top_ipin_7' in FPGA fabric under its parent block 'cbx_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'mem_right_track_0' in FPGA fabric under its parent block 'sb_0__1_'
 Try to find a configurable block corresponding to module 'mem_right_track_2' in FPGA fabric under its parent block 'sb_0__1_'
 Try to find a configurable block corresponding to module 'mem_right_track_4' in FPGA fabric under its parent block 'sb_0__1_'
@@ -1709,28 +1709,28 @@ Try to find a configurable block corresponding to module 'mem_right_ipin_6' in F
 Try to find a configurable block corresponding to module 'mem_right_ipin_7' in FPGA fabric under its parent block 'cby_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'GPIO_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'mem_bottom_track_1' in FPGA fabric under its parent block 'sb_1__1_'
 Try to find a configurable block corresponding to module 'mem_bottom_track_3' in FPGA fabric under its parent block 'sb_1__1_'
 Try to find a configurable block corresponding to module 'mem_bottom_track_5' in FPGA fabric under its parent block 'sb_1__1_'
@@ -1792,7 +1792,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1800,7 +1800,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_1'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1808,7 +1808,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_2'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1816,7 +1816,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_3'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1824,7 +1824,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_4'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1832,7 +1832,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_5'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1840,7 +1840,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_6'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1848,7 +1848,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_7'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1856,7 +1856,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_8'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -1864,7 +1864,7 @@ Try to find a configurable block corresponding to module 'logical_tile_clb_mode_
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_9'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
-Try to find a configurable block corresponding to module 'frac_lut6_DFFR_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
+Try to find a configurable block corresponding to module 'frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0'
 Try to find a configurable block corresponding to module 'mem_frac_logic_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_0' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
 Try to find a configurable block corresponding to module 'mem_fabric_out_1' in FPGA fabric under its parent block 'logical_tile_clb_mode_default__fle_mode_physical__fabric_0'
@@ -2079,7 +2079,7 @@ Write SDC for constrain Switch Block timing for P&R flow took 0.00 seconds (max_
 Write SDC for constrain Connection Block timing for P&R flow
 Write SDC for constrain Connection Block timing for P&R flow took 0.00 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 Write SDC for constraining grid timing for P&R flow
-Write SDC for constraining grid timing for P&R flow took 0.02 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
+Write SDC for constraining grid timing for P&R flow took 0.01 seconds (max_rss 60.2 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_sdc_disable_timing_configure_ports --file ./SDC/disable_configure_ports.sdc
 
@@ -2110,11 +2110,11 @@ Confirm selected options when call command 'exit':
 
 Finish execution with 0 errors
 
-The entire OpenFPGA flow took 0.214714 seconds
+The entire OpenFPGA flow took 0.202393 seconds
 
 Thank you for using OpenFPGA!
-Incr Slack updates 2 in 2.08e-06 sec
+Incr Slack updates 2 in 2.12e-06 sec
 Full Max Req/Worst Slack updates 1 in 9.6e-07 sec
-Incr Max Req/Worst Slack updates 1 in 1.36e-06 sec
+Incr Max Req/Worst Slack updates 1 in 6.8e-07 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 2 in 1.76e-06 sec
+Full Criticality updates 2 in 1.88e-06 sec

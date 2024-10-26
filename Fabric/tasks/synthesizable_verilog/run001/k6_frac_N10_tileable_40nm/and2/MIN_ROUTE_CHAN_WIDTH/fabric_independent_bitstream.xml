@@ -2,7 +2,7 @@
 	- Architecture independent bitstream
 	- Author: Xifan TANG
 	- Organization: University of Utah
-	- Date: Wed Oct 23 14:02:44 2024
+	- Date: Sat Oct 26 03:42:38 2024
 -->
 
 <bitstream_block name="fpga_top" hierarchy_level="0">
@@ -12,7 +12,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -21,7 +21,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -151,7 +151,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -160,7 +160,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -290,7 +290,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -299,7 +299,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -429,7 +429,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -438,7 +438,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -568,7 +568,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -577,7 +577,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -707,7 +707,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -716,7 +716,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -846,7 +846,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -855,7 +855,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -985,7 +985,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -994,7 +994,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -1124,7 +1124,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -1133,7 +1133,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -1263,7 +1263,7 @@
 				<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0" hierarchy_level="4">
 					<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0" hierarchy_level="5">
 						<bitstream_block name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0" hierarchy_level="6">
-							<bitstream_block name="frac_lut6_DFFR_mem" hierarchy_level="7">
+							<bitstream_block name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="7">
 								<hierarchy>
 									<instance level="0" name="fpga_top"/>
 									<instance level="1" name="grid_clb_1__1_"/>
@@ -1272,7 +1272,7 @@
 									<instance level="4" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_0"/>
 									<instance level="5" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0"/>
 									<instance level="6" name="logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0"/>
-									<instance level="7" name="frac_lut6_DFFR_mem"/>
+									<instance level="7" name="frac_lut6_sky130_fd_sc_hd__dfrbp_1_mem"/>
 								</hierarchy>
 								<bitstream>
 									<bit memory_port="mem_out[0]" value="0"/>
@@ -2671,13 +2671,13 @@
 	<bitstream_block name="grid_io_top_1__2_" hierarchy_level="1">
 		<bitstream_block name="logical_tile_io_mode_io__0" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__0"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2687,13 +2687,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__1" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__1"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="0"/>
@@ -2703,13 +2703,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__2" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__2"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2719,13 +2719,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__3" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__3"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2735,13 +2735,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__4" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__4"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2751,13 +2751,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__5" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__5"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2767,13 +2767,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__6" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__6"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2783,13 +2783,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__7" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_top_1__2_"/>
 						<instance level="2" name="logical_tile_io_mode_io__7"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2801,13 +2801,13 @@
 	<bitstream_block name="grid_io_right_2__1_" hierarchy_level="1">
 		<bitstream_block name="logical_tile_io_mode_io__0" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__0"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2817,13 +2817,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__1" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__1"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2833,13 +2833,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__2" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__2"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2849,13 +2849,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__3" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__3"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2865,13 +2865,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__4" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__4"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2881,13 +2881,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__5" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__5"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2897,13 +2897,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__6" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__6"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2913,13 +2913,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__7" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_right_2__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__7"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2931,13 +2931,13 @@
 	<bitstream_block name="grid_io_bottom_1__0_" hierarchy_level="1">
 		<bitstream_block name="logical_tile_io_mode_io__0" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__0"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2947,13 +2947,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__1" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__1"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2963,13 +2963,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__2" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__2"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2979,13 +2979,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__3" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__3"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -2995,13 +2995,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__4" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__4"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3011,13 +3011,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__5" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__5"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3027,13 +3027,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__6" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__6"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3043,13 +3043,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__7" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_bottom_1__0_"/>
 						<instance level="2" name="logical_tile_io_mode_io__7"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3061,13 +3061,13 @@
 	<bitstream_block name="grid_io_left_0__1_" hierarchy_level="1">
 		<bitstream_block name="logical_tile_io_mode_io__0" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__0"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3077,13 +3077,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__1" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__1"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3093,13 +3093,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__2" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__2"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3109,13 +3109,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__3" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__3"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3125,13 +3125,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__4" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__4"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3141,13 +3141,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__5" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__5"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3157,13 +3157,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__6" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__6"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>
@@ -3173,13 +3173,13 @@
 		</bitstream_block>
 		<bitstream_block name="logical_tile_io_mode_io__7" hierarchy_level="2">
 			<bitstream_block name="logical_tile_io_mode_physical__iopad_0" hierarchy_level="3">
-				<bitstream_block name="GPIO_DFFR_mem" hierarchy_level="4">
+				<bitstream_block name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem" hierarchy_level="4">
 					<hierarchy>
 						<instance level="0" name="fpga_top"/>
 						<instance level="1" name="grid_io_left_0__1_"/>
 						<instance level="2" name="logical_tile_io_mode_io__7"/>
 						<instance level="3" name="logical_tile_io_mode_physical__iopad_0"/>
-						<instance level="4" name="GPIO_DFFR_mem"/>
+						<instance level="4" name="GPIO_sky130_fd_sc_hd__dfrbp_1_mem"/>
 					</hierarchy>
 					<bitstream>
 						<bit memory_port="mem_out[0]" value="1"/>

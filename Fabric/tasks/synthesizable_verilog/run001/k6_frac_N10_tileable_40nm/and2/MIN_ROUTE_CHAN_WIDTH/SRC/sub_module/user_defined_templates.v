@@ -3,7 +3,7 @@
 //	Description: Template for user-defined Verilog modules
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Wed Oct 23 14:02:44 2024
+//	Date: Sat Oct 26 03:42:38 2024
 //-------------------------------------------
 // ----- Template Verilog module for sky130_fd_sc_hd__inv_1 -----
 //----- Default net type -----
@@ -203,26 +203,26 @@ endmodule
 `default_nettype wire
 
 
-// ----- Template Verilog module for DFFR -----
+// ----- Template Verilog module for sky130_fd_sc_hd__dfrbp_1 -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for DFFR -----
-module DFFR(RST,
-            CK,
-            D,
-            Q,
-            QN);
+// ----- Verilog module for sky130_fd_sc_hd__dfrbp_1 -----
+module sky130_fd_sc_hd__dfrbp_1(RESET_B,
+                                CLK,
+                                D,
+                                Q,
+                                Q_N);
 //----- GLOBAL PORTS -----
-input [0:0] RST;
+input [0:0] RESET_B;
 //----- GLOBAL PORTS -----
-input [0:0] CK;
+input [0:0] CLK;
 //----- INPUT PORTS -----
 input [0:0] D;
 //----- OUTPUT PORTS -----
 output [0:0] Q;
 //----- OUTPUT PORTS -----
-output [0:0] QN;
+output [0:0] Q_N;
 
 //----- BEGIN wire-connection ports -----
 //----- END wire-connection ports -----
@@ -236,7 +236,7 @@ output [0:0] QN;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for DFFR -----
+// ----- END Verilog module for sky130_fd_sc_hd__dfrbp_1 -----
 
 //----- Default net type -----
 `default_nettype wire
