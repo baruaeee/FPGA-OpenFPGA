@@ -67,6 +67,7 @@ https://github.com/arm-university/VLSI-Fundamentals-Education-Kit
 
 Genus Synthesis
 https://digitalsystemdesign.in/genus-synthesis-without-constraints/
+https://digitalsystemdesign.in/genus-synthesis-using-scripts/
 
 PnR
 https://www.youtube.com/watch?v=1kLUdi0qNBo&list=PLC7JCwKQnjL5QPkGGEtO2TFAW9oW8c_W3&index=8
