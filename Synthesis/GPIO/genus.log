@@ -1159,3 +1159,11 @@ Finished SDC export (command execution time mm:ss (real) = 00:00).
 @file(synthesis.tcl) 30: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > delays.sdf
 #@ End verbose source ./synthesis.tcl
 WARNING: This version of the tool is 416 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[04:30:06.347378] Cdslmd servers: hs-lic3
+[04:30:06.347393] Feature usage summary:
+[04:30:06.347394] Genus_Synthesis
+
+Normal exit.
