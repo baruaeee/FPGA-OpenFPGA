@@ -159,11 +159,11 @@
       <port type="sram" prefix="mode" size="1" mode_select="true" circuit_model_name="DFFR" default_val="1"/>
     </circuit_model>
     <!--Scan-chain DFF subckt ports should be defined as <D> <Q> <Qb> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ccff" name="DFFR" prefix="DFFR" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v">
+    <circuit_model type="ccff" name="DFFR" prefix="DFFR" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Synthesis/dffr.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
       <output_buffer exist="true" circuit_model_name="sky130_osu_sc_18T_hs__inv_1"/>
-      <port type="input" prefix="pReset" lib_name="RST" size="1" is_global="true" default_val="0" is_reset="true" is_prog="true"/>
+      <port type="input" prefix="pReset" lib_name="RST" size="1" is_global="true" default_val="0" is_reset="false" is_prog="true"/>
       <port type="input" prefix="D" size="1"/>
       <port type="output" prefix="Q" size="1"/>
       <port type="output" prefix="QN" size="1"/>
