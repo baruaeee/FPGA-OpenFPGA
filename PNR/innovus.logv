@@ -75,3 +75,152 @@
 }
 [10/26 14:07:32     17s] <CMD> win
 [10/26 14:07:32     17s] <CMD> set enc_check_rename_command_name 1
+[10/26 21:32:52   8918s] <CMD> set init_gnd_net VGND
+[10/26 21:32:52   8918s] <CMD> set init_lef_file {lef/sky130_ef_sc_hd.lef lef/sky130_fd_sc_hd.lef}
+[10/26 21:32:52   8918s] <CMD> set init_verilog SRC/fabric_netlists.v
+[10/26 21:32:52   8918s] <CMD> set init_mmmc_file Fabric.view
+[10/26 21:32:52   8918s] <CMD> set init_pwr_net VPWR
+[10/26 21:32:52   8918s] <CMD> init_design
+[10/26 21:32:52   8918s] #% Begin Load MMMC data ... (date=10/26 21:32:52, mem=1573.0M)
+[10/26 21:32:52   8918s] #% End Load MMMC data ... (date=10/26 21:32:52, total cpu=0:00:00.0, real=0:00:00.0, peak res=1573.2M, current mem=1573.2M)
+[10/26 21:32:52   8918s] 
+[10/26 21:32:52   8918s] Loading LEF file lef/sky130_ef_sc_hd.lef ...
+[10/26 21:32:52   8918s] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+[10/26 21:32:52   8918s] The NOWIREEXTENSIONATPIN statement will be ignored. See file lef/sky130_ef_sc_hd.lef at line 2.
+[10/26 21:32:52   8918s] **ERROR: (IMPLF-53):	The layer 'met1' referenced in pin 'VPWR' in macro 'sky130_ef_sc_hd__decap_12' is not found in the database. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-53' for more detail.
+[10/26 21:32:52   8918s] **ERROR: (IMPLF-3):	Error found when processing LEF file 'lef/sky130_ef_sc_hd.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus'.
+Type 'man IMPLF-3' for more detail.
+[10/26 21:32:52   8918s] **ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+[10/26 21:34:19   8956s] <CMD> save_global fabric.globals
+[10/26 21:34:20   8956s] <CMD> set init_gnd_net VGND
+[10/26 21:34:20   8956s] <CMD> set init_lef_file {lef/sky130_ef_sc_hd.lef lef/sky130_fd_sc_hd.lef}
+[10/26 21:34:20   8956s] <CMD> set init_verilog SRC/fabric_netlists.v
+[10/26 21:34:20   8956s] <CMD> set init_mmmc_file Fabric.view
+[10/26 21:34:20   8956s] <CMD> set init_pwr_net VPWR
+[10/26 21:34:20   8956s] <CMD> init_design
+[10/26 21:34:20   8956s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[10/26 21:34:20   8956s] #% Begin Load MMMC data ... (date=10/26 21:34:20, mem=1580.9M)
+[10/26 21:34:20   8956s] Extraction setup Started 
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] Extraction setup Started 
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] Extraction setup Started 
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] Extraction setup Started 
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] eee: Trim Metal Layers: { }
+[10/26 21:34:20   8956s] The existing analysis_view 'BEST_CASE' has been replaced with new attributes.
+[10/26 21:34:20   8956s] The existing analysis_view 'WORST_CASE' has been replaced with new attributes.
+[10/26 21:34:20   8956s] INFO: New setup and hold views overwrite old settings during design initialization
+[10/26 21:34:20   8956s] #% End Load MMMC data ... (date=10/26 21:34:20, total cpu=0:00:00.1, real=0:00:00.0, peak res=1582.1M, current mem=1582.1M)
+[10/26 21:34:20   8956s] 
+[10/26 21:34:20   8956s] Loading LEF file lef/sky130_ef_sc_hd.lef ...
+[10/26 21:34:20   8956s] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+[10/26 21:34:20   8956s] The NOWIREEXTENSIONATPIN statement will be ignored. See file lef/sky130_ef_sc_hd.lef at line 2.
+[10/26 21:34:20   8956s] **WARN: (IMPLF-58):	MACRO 'sky130_ef_sc_hd__decap_12' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[10/26 21:34:20   8956s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[10/26 21:34:20   8956s] Type 'man IMPLF-58' for more detail.
+[10/26 21:34:20   8956s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__decap_12' has been found in db, no extra pin 'VGND' can be added for existing macro.
+[10/26 21:34:20   8956s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__decap_12' has been found in db, no extra pin 'VPB' can be added for existing macro.
+[10/26 21:34:20   8956s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__decap_12' has been found in db, no extra pin 'VNB' can be added for existing macro.
+[10/26 21:34:20   8956s] **ERROR: (IMPLF-53):	The layer 'met1' referenced in pin 'VPWR' in macro 'sky130_ef_sc_hd__fill_4' is not found in the database. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-53' for more detail.
+[10/26 21:34:20   8956s] **ERROR: (IMPLF-3):	Error found when processing LEF file 'lef/sky130_ef_sc_hd.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus'.
+Type 'man IMPLF-3' for more detail.
+[10/26 21:34:20   8956s] **ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**WARN: (IMPLF-61):	1 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+[10/26 21:34:20   8956s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[10/26 21:34:20   8956s] Type 'man IMPLF-61' for more detail.
+[10/26 21:34:20   8956s] **ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+[10/26 21:35:01   8960s] <CMD> set init_gnd_net VGND
+[10/26 21:35:01   8960s] <CMD> set init_lef_file {lef/sky130_ef_sc_hd.lef lef/sky130_fd_sc_hd.lef}
+[10/26 21:35:01   8960s] <CMD> set init_design_settop 0
+[10/26 21:35:01   8960s] <CMD> set init_verilog SRC/fabric_netlists.v
+[10/26 21:35:01   8960s] <CMD> set init_mmmc_file Fabric.view
+[10/26 21:35:01   8960s] <CMD> set init_pwr_net VPWR
+[10/26 21:35:01   8960s] <CMD> init_design
+[10/26 21:35:01   8960s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[10/26 21:35:02   8960s] #% Begin Load MMMC data ... (date=10/26 21:35:01, mem=1582.1M)
+[10/26 21:35:02   8960s] Extraction setup Started 
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] Extraction setup Started 
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] Extraction setup Started 
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] Extraction setup Started 
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] eee: Trim Metal Layers: { }
+[10/26 21:35:02   8960s] The existing analysis_view 'BEST_CASE' has been replaced with new attributes.
+[10/26 21:35:02   8960s] The existing analysis_view 'WORST_CASE' has been replaced with new attributes.
+[10/26 21:35:02   8960s] INFO: New setup and hold views overwrite old settings during design initialization
+[10/26 21:35:02   8960s] #% End Load MMMC data ... (date=10/26 21:35:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=1582.1M, current mem=1582.1M)
+[10/26 21:35:02   8960s] 
+[10/26 21:35:02   8960s] Loading LEF file lef/sky130_ef_sc_hd.lef ...
+[10/26 21:35:02   8960s] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+[10/26 21:35:02   8960s] The NOWIREEXTENSIONATPIN statement will be ignored. See file lef/sky130_ef_sc_hd.lef at line 2.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-58):	MACRO 'sky130_ef_sc_hd__decap_12' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[10/26 21:35:02   8960s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[10/26 21:35:02   8960s] Type 'man IMPLF-58' for more detail.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__decap_12' has been found in db, no extra pin 'VGND' can be added for existing macro.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__decap_12' has been found in db, no extra pin 'VPB' can be added for existing macro.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__decap_12' has been found in db, no extra pin 'VNB' can be added for existing macro.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-58):	MACRO 'sky130_ef_sc_hd__fill_4' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[10/26 21:35:02   8960s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[10/26 21:35:02   8960s] Type 'man IMPLF-58' for more detail.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__fill_4' has been found in db, no extra pin 'VGND' can be added for existing macro.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__fill_4' has been found in db, no extra pin 'VPB' can be added for existing macro.
+[10/26 21:35:02   8960s] **WARN: (IMPLF-209):	Cell 'sky130_ef_sc_hd__fill_4' has been found in db, no extra pin 'VNB' can be added for existing macro.
+[10/26 21:35:02   8960s] **ERROR: (IMPLF-53):	The layer 'met1' referenced in pin 'VPWR' in macro 'sky130_ef_sc_hd__fill_8' is not found in the database. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-53' for more detail.
+[10/26 21:35:02   8960s] **ERROR: (IMPLF-3):	Error found when processing LEF file 'lef/sky130_ef_sc_hd.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus'.
+Type 'man IMPLF-3' for more detail.
+[10/26 21:35:02   8960s] **ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**WARN: (IMPLF-61):	2 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+[10/26 21:35:02   8960s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[10/26 21:35:02   8960s] Type 'man IMPLF-61' for more detail.
+[10/26 21:35:02   8960s] **ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+[10/26 21:35:08   8963s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Sat Oct 26 21:35:08 2024
+  Total CPU time:     2:29:26
+  Total real time:    7:28:16
+  Peak memory (main): 1586.23MB
+
+[10/26 21:35:08   8963s] 
+[10/26 21:35:08   8963s] *** Memory Usage v#1 (Current mem = 1565.215M, initial mem = 635.109M) ***
+[10/26 21:35:08   8963s] 
+[10/26 21:35:08   8963s] *** Summary of all messages that are not suppressed in this session:
+[10/26 21:35:08   8963s] Severity  ID               Count  Summary                                  
+[10/26 21:35:08   8963s] ERROR     IMPLF-3              3  Error found when processing LEF file '%s...
+[10/26 21:35:08   8963s] ERROR     IMPLF-26             6  No technology information is defined in ...
+[10/26 21:35:08   8963s] ERROR     IMPLF-53             3  The layer '%s' referenced %s is not foun...
+[10/26 21:35:08   8963s] WARNING   IMPLF-58             3  MACRO '%s' has been found in the databas...
+[10/26 21:35:08   8963s] WARNING   IMPLF-61             2  %d duplicated MACRO definitions have bee...
+[10/26 21:35:08   8963s] WARNING   IMPLF-209            9  Cell '%s' has been found in db, no extra...
+[10/26 21:35:08   8963s] ERROR     IMPSYT-16013         3  Loading LEF file(s) failed, and has abor...
+[10/26 21:35:08   8963s] *** Message Summary: 14 warning(s), 15 error(s)
+[10/26 21:35:08   8963s] 
+[10/26 21:35:08   8963s] --- Ending "Innovus" (totcpu=2:29:23, real=7:28:10, mem=1565.2M) ---
