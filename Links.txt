@@ -1,3 +1,5 @@
+https://2m0l1s-my.sharepoint.com/personal/baruaeee_2m0l1s_onmicrosoft_com/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fbaruaeee%5F2m0l1s%5Fonmicrosoft%5Fcom%2FDocuments%2FGitRepo%2FFPGA%2DOpenFPGA
+
 https://openfpga.readthedocs.io/en/master/
 
 OpenFPGA Intro--
@@ -193,7 +195,7 @@ Run icarus iVerilog Compilation
 
 --INVTX1--
 --line 32--
-<circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_1" prefix="sky130_fd_sc_hd__inv_1" is_default="true" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_1.v">
+<circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_1" prefix="sky130_fd_sc_hd__inv_1" is_default="true" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/inv/sky130_fd_sc_hd__inv_1.v">
       <design_technology type="cmos" topology="inverter" size="1"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -209,7 +211,7 @@ replace-INVTX1==>sky130_fd_sc_hd__inv_1
 
 --buf4--
 --line 44--
-<circuit_model type="inv_buf" name="sky130_fd_sc_hd__buf_4" prefix="sky130_fd_sc_hd__buf_4" is_default="false" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/buf/sky130_fd_sc_hd__buf_4.v">
+<circuit_model type="inv_buf" name="sky130_fd_sc_hd__buf_4" prefix="sky130_fd_sc_hd__buf_4" is_default="false" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/buf/sky130_fd_sc_hd__buf_4.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="2" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -225,7 +227,7 @@ replace-"buf4"==>"sky130_fd_sc_hd__buf_4"
 
 --tap_buf4--
 --line 56--
-<circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_4" prefix="sky130_fd_sc_hd__inv_4" is_default="false" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/inv/sky130_fd_sc_hd__inv_4.v">
+<circuit_model type="inv_buf" name="sky130_fd_sc_hd__inv_4" prefix="sky130_fd_sc_hd__inv_4" is_default="false" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/inv/sky130_fd_sc_hd__inv_4.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="3" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -241,7 +243,7 @@ replace-tap_buf4==>sky130_fd_sc_hd__inv_4
 
 --OR2--
 --line 68--
-<circuit_model type="gate" name="sky130_fd_sc_hd__or2_1" prefix="sky130_fd_sc_hd__or2_1" is_default="true" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/or2/sky130_fd_sc_hd__or2_1.v">
+<circuit_model type="gate" name="sky130_fd_sc_hd__or2_1" prefix="sky130_fd_sc_hd__or2_1" is_default="true" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/or2/sky130_fd_sc_hd__or2_1.v">
       <design_technology type="cmos" topology="OR"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
@@ -260,7 +262,7 @@ replace-"OR2"==>"sky130_fd_sc_hd__or2_1"
 
 --MUX2--
 --line 90--
-<circuit_model type="gate" name="sky130_fd_sc_hd__mux2_1" prefix="sky130_fd_sc_hd__mux2_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/mux2/sky130_fd_sc_hd__mux2_1.v">
+<circuit_model type="gate" name="sky130_fd_sc_hd__mux2_1" prefix="sky130_fd_sc_hd__mux2_1" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/mux2/sky130_fd_sc_hd__mux2_1.v">
       <design_technology type="cmos" topology="MUX2"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
@@ -274,7 +276,7 @@ replace-"MUX2"==>"sky130_fd_sc_hd__mux2_1"
 
 --DFFSRQ--
 --line 137--
-<circuit_model type="ff" name="sky130_fd_sc_hd__sdfbbp_1" prefix="sky130_fd_sc_hd__sdfbbp_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v">
+<circuit_model type="ff" name="sky130_fd_sc_hd__sdfbbp_1" prefix="sky130_fd_sc_hd__sdfbbp_1" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/sdfbbp/sky130_fd_sc_hd__sdfbbp_1.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
       <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
@@ -288,7 +290,7 @@ replace-DFFSRQ==>sky130_fd_sc_hd__sdfbbp_1
 
 --DFFR--
 --line 162--canned be verfied with iverilog
-<circuit_model type="ccff" name="sky130_fd_sc_hd__dfrbp_1" prefix="sky130_fd_sc_hd__dfrbp_1" verilog_netlist="${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/dfrbp/sky130_fd_sc_hd__dfrbp_1.v">
+<circuit_model type="ccff" name="sky130_fd_sc_hd__dfrbp_1" prefix="sky130_fd_sc_hd__dfrbp_1" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/dfrbp/sky130_fd_sc_hd__dfrbp_1.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
       <output_buffer exist="true" circuit_model_name="sky130_fd_sc_hd__inv_1"/>
@@ -307,7 +309,7 @@ iverilog -o compiled_and2 ./SRC/and2_include_netlists.v -s and2_autocheck_top_tb
 	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/or2 \
 	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/mux2 \
 	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/sdfbbp \
-	## -I ${OPENFPGA_PATH}/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/dfrbp
+	 -I /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/cells/dfrbp
 ----------------
 xrun ./SRC/and2_include_netlists.v -access +rwc \
 	-incdir ./SRC/sky130/cells/inv \
