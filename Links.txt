@@ -1,5 +1,10 @@
 https://2m0l1s-my.sharepoint.com/personal/baruaeee_2m0l1s_onmicrosoft_com/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fbaruaeee%5F2m0l1s%5Fonmicrosoft%5Fcom%2FDocuments%2FGitRepo%2FFPGA%2DOpenFPGA
 
+Digital design
+https://www.eng.biu.ac.il/temanad/teaching/
+
+
+
 https://openfpga.readthedocs.io/en/master/
 
 OpenFPGA Intro--
@@ -331,6 +336,19 @@ syn_generic
 syn_map
 syn_opt
 write_hdl > hdl.v
+----------------
+----Innovus commands----
+before importing hierarchical netlists run--
+set init_design_uniquify 1
+read_netlist <netlist_file.v>
+get_cells
+saveNetlist -flat <flatten_netlist_file.v>
+
+--get core area--
+dbGet top.fPlan.coreBox_size
+dbGet top.fPlan.coreBox_sizex
+dbGet top.fPlan.coreBox_sizey
+
 ----------------
 #!/bin/bash
 
