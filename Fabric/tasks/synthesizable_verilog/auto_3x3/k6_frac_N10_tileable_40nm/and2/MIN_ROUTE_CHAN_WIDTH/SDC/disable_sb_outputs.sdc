@@ -1,0 +1,33 @@
+#############################################
+#	Synopsys Design Constraints (SDC)
+#	For FPGA fabric 
+#	Description: Disable Switch Block outputs for PnR
+#	Author: Xifan TANG 
+#	Organization: University of Utah 
+#	Date: Fri Nov  1 18:05:25 2024
+#############################################
+
+set_disable_timing fpga_top/sb_*__*_/chany_top_out
+
+set_disable_timing fpga_top/sb_*__*_/chanx_right_out
+
+set_disable_timing fpga_top/sb_*__*_/ccff_tail
+
+set_disable_timing fpga_top/sb_*__*_/chanx_right_out
+
+set_disable_timing fpga_top/sb_*__*_/chany_bottom_out
+
+set_disable_timing fpga_top/sb_*__*_/ccff_tail
+
+set_disable_timing fpga_top/sb_*__*_/chany_top_out
+
+set_disable_timing fpga_top/sb_*__*_/chanx_left_out
+
+set_disable_timing fpga_top/sb_*__*_/ccff_tail
+
+set_disable_timing fpga_top/sb_*__*_/chany_bottom_out
+
+set_disable_timing fpga_top/sb_*__*_/chanx_left_out
+
+set_disable_timing fpga_top/sb_*__*_/ccff_tail
+
