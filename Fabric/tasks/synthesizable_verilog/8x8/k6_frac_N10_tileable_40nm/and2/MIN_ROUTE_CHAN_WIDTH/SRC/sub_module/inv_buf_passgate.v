@@ -3,7 +3,7 @@
 //	Description: Essential gates
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Sun Nov  3 15:21:52 2024
+//	Date: Sun Nov  3 15:48:23 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none

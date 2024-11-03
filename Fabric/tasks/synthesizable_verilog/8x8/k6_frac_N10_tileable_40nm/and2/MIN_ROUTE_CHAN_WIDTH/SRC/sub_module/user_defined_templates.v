@@ -3,7 +3,7 @@
 //	Description: Template for user-defined Verilog modules
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Sun Nov  3 15:21:52 2024
+//	Date: Sun Nov  3 15:48:23 2024
 //-------------------------------------------
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
 //----- Default net type -----
