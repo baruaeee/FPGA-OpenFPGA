@@ -41,7 +41,7 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="inv_buf" name="BUFX4" prefix="BUFX4" is_default="false" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/buf4.v">
+    <circuit_model type="inv_buf" name="BUFX4" prefix="BUFX4" is_default="false" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="2" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -53,11 +53,11 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="inv_buf" name="tap_buf4" prefix="tap_buf4" is_default="false" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/tap_buf4.v">
+    <circuit_model type="inv_buf" name="INVX4" prefix="INVX4" is_default="false" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="3" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
-      <port type="input" prefix="in" size="1"/>
-      <port type="output" prefix="out" size="1"/>
+      <port type="input" prefix="in" lib_name="A" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
       <delay_matrix type="rise" in_port="in" out_port="out">
         10e-12
       </delay_matrix>
@@ -65,14 +65,14 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="gate" name="OR2" prefix="OR2" is_default="true" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/or2.v">
+    <circuit_model type="gate" name="OR2X1" prefix="OR2X1" is_default="true" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos" topology="OR"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
       <output_buffer exist="false"/>
-      <port type="input" prefix="a" size="1"/>
-      <port type="input" prefix="b" size="1"/>
-      <port type="output" prefix="out" size="1"/>
+      <port type="input" prefix="a" lib_name="A" size="1"/>
+      <port type="input" prefix="b" lib_name="B" size="1"/>
+      <port type="output" prefix="out" lib_name="Y" size="1"/>
       <delay_matrix type="rise" in_port="a b" out_port="out">
         10e-12 5e-12
       </delay_matrix>
@@ -87,7 +87,7 @@
          If your standard cell provider does not offer the exact truth table,
          you can simply swap the inputs as shown in the example below
       -->
-    <circuit_model type="gate" name="MUX2" prefix="MUX2" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/mux2.sp" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/mux2.v">
+    <circuit_model type="gate" name="MX2X1" prefix="MX2X1" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/mux2.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos" topology="MUX2"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
@@ -119,7 +119,7 @@
       <design_technology type="cmos" structure="tree" add_const_input="true" const_input_val="1"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>
-      <pass_gate_logic circuit_model_name="MUX2"/>
+      <pass_gate_logic circuit_model_name="MX2X1"/>
       <port type="input" prefix="in" size="1"/>
       <port type="output" prefix="out" size="1"/>
       <port type="sram" prefix="sram" size="1"/>
@@ -127,20 +127,20 @@
     <circuit_model type="mux" name="mux_tree_tapbuf" prefix="mux_tree_tapbuf" dump_structural_verilog="true">
       <design_technology type="cmos" structure="tree" add_const_input="true" const_input_val="1"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
-      <output_buffer exist="true" circuit_model_name="tap_buf4"/>
-      <pass_gate_logic circuit_model_name="MUX2"/>
+      <output_buffer exist="true" circuit_model_name="INVX4"/>
+      <pass_gate_logic circuit_model_name="MX2X1"/>
       <port type="input" prefix="in" size="1"/>
       <port type="output" prefix="out" size="1"/>
       <port type="sram" prefix="sram" size="1"/>
     </circuit_model>
     <!--DFF subckt ports should be defined as <D> <Q> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ff" name="DFFSRQ" prefix="DFFSRQ" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v">
+    <circuit_model type="ff" name="DFFSRX1" prefix="DFFSRX1" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>
       <port type="input" prefix="D" size="1"/>
-      <port type="input" prefix="set" lib_name="SET" size="1" is_global="true" default_val="0" is_set="true"/>
-      <port type="input" prefix="reset" lib_name="RST" size="1" is_global="true" default_val="0" is_reset="true"/>
+      <port type="input" prefix="set" lib_name="SN" size="1" is_global="true" default_val="1" is_set="true"/>
+      <port type="input" prefix="reset" lib_name="RN" size="1" is_global="true" default_val="1" is_reset="true"/>
       <port type="output" prefix="Q" size="1"/>
       <port type="clock" prefix="clk" lib_name="CK" size="1" is_global="true" default_val="0"/>
     </circuit_model>
@@ -151,36 +151,36 @@
       <lut_input_inverter exist="true" circuit_model_name="INVX1"/>
       <lut_input_buffer exist="true" circuit_model_name="BUFX4"/>
       <lut_intermediate_buffer exist="true" circuit_model_name="BUFX4" location_map="-1-1-"/>
-      <pass_gate_logic circuit_model_name="MUX2"/>
-      <port type="input" prefix="in" size="6" tri_state_map="-----1" circuit_model_name="OR2"/>
+      <pass_gate_logic circuit_model_name="MX2X1"/>
+      <port type="input" prefix="in" size="6" tri_state_map="-----1" circuit_model_name="OR2X1"/>
       <port type="output" prefix="lut5_out" size="2" lut_frac_level="5" lut_output_mask="0,1"/>
       <port type="output" prefix="lut6_out" size="1" lut_output_mask="0"/>
       <port type="sram" prefix="sram" size="64"/>
-      <port type="sram" prefix="mode" size="1" mode_select="true" circuit_model_name="DFFR" default_val="1"/>
+      <port type="sram" prefix="mode" size="1" mode_select="true" circuit_model_name="DFFRX1" default_val="1"/>
     </circuit_model>
     <!--Scan-chain DFF subckt ports should be defined as <D> <Q> <Qb> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ccff" name="DFFR" prefix="DFFR" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v">
+    <circuit_model type="ccff" name="DFFRX1" prefix="DFFRX1" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>
-      <port type="input" prefix="pReset" lib_name="RST" size="1" is_global="true" default_val="0" is_reset="true" is_prog="true"/>
+      <port type="input" prefix="pReset" lib_name="RN" size="1" is_global="true" default_val="1" is_reset="true" is_prog="true"/>
       <port type="input" prefix="D" size="1"/>
       <port type="output" prefix="Q" size="1"/>
       <port type="output" prefix="QN" size="1"/>
       <port type="clock" prefix="prog_clk" lib_name="CK" size="1" is_global="true" default_val="0" is_prog="true"/>
     </circuit_model>
-    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v">
+    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO_netlist_sky_scl.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>
       <port type="inout" prefix="PAD" size="1" is_global="true" is_io="true" is_data_io="true"/>
-      <port type="sram" prefix="DIR" size="1" mode_select="true" circuit_model_name="DFFR" default_val="1"/>
+      <port type="sram" prefix="DIR" size="1" mode_select="true" circuit_model_name="DFFRX1" default_val="1"/>
       <port type="input" prefix="outpad" lib_name="A" size="1"/>
       <port type="output" prefix="inpad" lib_name="Y" size="1"/>
     </circuit_model>
   </circuit_library>
   <configuration_protocol>
-    <organization type="scan_chain" circuit_model_name="DFFR"/>
+    <organization type="scan_chain" circuit_model_name="DFFRX1"/>
   </configuration_protocol>
   <connection_block>
     <switch name="ipin_cblock" circuit_model_name="mux_tree_tapbuf"/>
@@ -206,7 +206,7 @@
     </pb_type>
     <pb_type name="clb.fle" physical_mode_name="physical"/>
     <pb_type name="clb.fle[physical].fabric.frac_logic.frac_lut6" circuit_model_name="frac_lut6" mode_bits="0"/>
-    <pb_type name="clb.fle[physical].fabric.ff" circuit_model_name="DFFSRQ"/>
+    <pb_type name="clb.fle[physical].fabric.ff" circuit_model_name="DFFSRX1"/>
     <!-- Binding operating pb_type to physical pb_type -->
     <pb_type name="clb.fle[n2_lut5].lut5inter.ble5.lut5" physical_pb_type_name="clb.fle[physical].fabric.frac_logic.frac_lut6" mode_bits="1" physical_pb_type_index_factor="0.5">
       <!-- Binding the lut5 to the first 5 inputs of fracturable lut6 -->
