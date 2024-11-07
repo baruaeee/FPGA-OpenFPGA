@@ -38,7 +38,7 @@ module GPIO (
     );
 
     // Drive the data input Y
-    BUFx2_ASAP7_75t_SL (
+    BUFx2_ASAP7_75t_SL u_buf (
         .A(pad_receiver),
         .Y(Y)
     );
