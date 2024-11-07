@@ -3,14 +3,17 @@
 //	Description: Fabric Netlist Summary
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Sun Nov  3 16:14:40 2024
+//	Date: Thu Nov  7 16:30:06 2024
 //-------------------------------------------
 // ------ Include defines: preproc flags -----
 `include "./SRC/fpga_defines.v"
 
 // ------ Include user-defined netlists -----
-`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v"
-`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/gpio_netlist_sky_osu.v"
+`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v"
+`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/mux21.v"
+`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFSRQ.v"
+`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFR.v"
+`include "/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
 // ------ Include primitive module netlists -----
 `include "./SRC/sub_module/inv_buf_passgate.v"
 `include "./SRC/sub_module/arch_encoder.v"
@@ -40,19 +43,12 @@
 // ------ Include routing module netlists -----
 `include "./SRC/routing/sb_0__0_.v"
 `include "./SRC/routing/sb_0__1_.v"
-`include "./SRC/routing/sb_0__6_.v"
 `include "./SRC/routing/sb_1__0_.v"
 `include "./SRC/routing/sb_1__1_.v"
-`include "./SRC/routing/sb_1__6_.v"
-`include "./SRC/routing/sb_6__0_.v"
-`include "./SRC/routing/sb_6__1_.v"
-`include "./SRC/routing/sb_6__6_.v"
 `include "./SRC/routing/cbx_1__0_.v"
 `include "./SRC/routing/cbx_1__1_.v"
-`include "./SRC/routing/cbx_1__6_.v"
 `include "./SRC/routing/cby_0__1_.v"
 `include "./SRC/routing/cby_1__1_.v"
-`include "./SRC/routing/cby_6__1_.v"
 
 // ------ Include tile module netlists -----
 

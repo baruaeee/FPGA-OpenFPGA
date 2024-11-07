@@ -3,7 +3,7 @@
 # Output precision: 3
 
 #Path 1
-Startpoint: b.inpad[0] (.input clocked by virtual_io_clock)
+Startpoint: a.inpad[0] (.input clocked by virtual_io_clock)
 Endpoint  : out:c.outpad[0] (.output clocked by virtual_io_clock)
 Path Type : hold
 
@@ -12,11 +12,11 @@ Point                                                             Incr      Path
 clock virtual_io_clock (rise edge)                               0.000     0.000
 clock source latency                                             0.000     0.000
 input external delay                                             0.000     0.000
-b.inpad[0] (.input)                                              0.000     0.000
-c.in[1] (.names)                                                 0.332     0.332
-c.out[0] (.names)                                                0.235     0.567
-out:c.outpad[0] (.output)                                        0.466     1.033
-data arrival time                                                          1.033
+a.inpad[0] (.input)                                              0.000     0.000
+c.in[0] (.names)                                                 0.150     0.150
+c.out[0] (.names)                                                0.235     0.385
+out:c.outpad[0] (.output)                                        0.227     0.612
+data arrival time                                                          0.612
 
 clock virtual_io_clock (rise edge)                               0.000     0.000
 clock source latency                                             0.000     0.000
@@ -25,9 +25,9 @@ output external delay                                            0.000     0.000
 data required time                                                         0.000
 --------------------------------------------------------------------------------
 data required time                                                        -0.000
-data arrival time                                                          1.033
+data arrival time                                                          0.612
 --------------------------------------------------------------------------------
-slack (MET)                                                                1.033
+slack (MET)                                                                0.612
 
 
 #End of timing report

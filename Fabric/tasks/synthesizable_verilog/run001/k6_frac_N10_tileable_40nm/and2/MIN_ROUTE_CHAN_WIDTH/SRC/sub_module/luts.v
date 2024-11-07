@@ -3,7 +3,7 @@
 //	Description: Look-Up Tables
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Sun Nov  3 16:14:39 2024
+//	Date: Thu Nov  7 16:30:06 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -42,82 +42,82 @@ wire [0:0] lut6_out;
 //----- END Registered ports -----
 
 
-wire [0:0] sky130_osu_sc_18T_hs__buf_4_0_Y;
-wire [0:0] sky130_osu_sc_18T_hs__buf_4_1_Y;
-wire [0:0] sky130_osu_sc_18T_hs__buf_4_2_Y;
-wire [0:0] sky130_osu_sc_18T_hs__buf_4_3_Y;
-wire [0:0] sky130_osu_sc_18T_hs__buf_4_4_Y;
-wire [0:0] sky130_osu_sc_18T_hs__buf_4_5_Y;
-wire [0:0] sky130_osu_sc_18T_hs__inv_1_0_Y;
-wire [0:0] sky130_osu_sc_18T_hs__inv_1_1_Y;
-wire [0:0] sky130_osu_sc_18T_hs__inv_1_2_Y;
-wire [0:0] sky130_osu_sc_18T_hs__inv_1_3_Y;
-wire [0:0] sky130_osu_sc_18T_hs__inv_1_4_Y;
-wire [0:0] sky130_osu_sc_18T_hs__inv_1_5_Y;
-wire [0:0] sky130_osu_sc_18T_hs__or2_1_0_Y;
+wire [0:0] BUFx4_ASAP7_75t_SL_0_Y;
+wire [0:0] BUFx4_ASAP7_75t_SL_1_Y;
+wire [0:0] BUFx4_ASAP7_75t_SL_2_Y;
+wire [0:0] BUFx4_ASAP7_75t_SL_3_Y;
+wire [0:0] BUFx4_ASAP7_75t_SL_4_Y;
+wire [0:0] BUFx4_ASAP7_75t_SL_5_Y;
+wire [0:0] INVx1_ASAP7_75t_SL_0_Y;
+wire [0:0] INVx1_ASAP7_75t_SL_1_Y;
+wire [0:0] INVx1_ASAP7_75t_SL_2_Y;
+wire [0:0] INVx1_ASAP7_75t_SL_3_Y;
+wire [0:0] INVx1_ASAP7_75t_SL_4_Y;
+wire [0:0] INVx1_ASAP7_75t_SL_5_Y;
+wire [0:0] OR2x2_ASAP7_75t_SL_0_Y;
 
 // ----- BEGIN Local short connections -----
 // ----- END Local short connections -----
 // ----- BEGIN Local output short connections -----
 // ----- END Local output short connections -----
 
-	sky130_osu_sc_18T_hs__or2_1 sky130_osu_sc_18T_hs__or2_1_0_ (
+	OR2x2_ASAP7_75t_SL OR2x2_ASAP7_75t_SL_0_ (
 		.A(mode),
 		.B(in[5]),
-		.Y(sky130_osu_sc_18T_hs__or2_1_0_Y));
+		.Y(OR2x2_ASAP7_75t_SL_0_Y));
 
-	sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_1_0_ (
+	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_0_ (
 		.A(in[0]),
-		.Y(sky130_osu_sc_18T_hs__inv_1_0_Y));
+		.Y(INVx1_ASAP7_75t_SL_0_Y));
 
-	sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_1_1_ (
+	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_1_ (
 		.A(in[1]),
-		.Y(sky130_osu_sc_18T_hs__inv_1_1_Y));
+		.Y(INVx1_ASAP7_75t_SL_1_Y));
 
-	sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_1_2_ (
+	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_2_ (
 		.A(in[2]),
-		.Y(sky130_osu_sc_18T_hs__inv_1_2_Y));
+		.Y(INVx1_ASAP7_75t_SL_2_Y));
 
-	sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_1_3_ (
+	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_3_ (
 		.A(in[3]),
-		.Y(sky130_osu_sc_18T_hs__inv_1_3_Y));
+		.Y(INVx1_ASAP7_75t_SL_3_Y));
 
-	sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_1_4_ (
+	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_4_ (
 		.A(in[4]),
-		.Y(sky130_osu_sc_18T_hs__inv_1_4_Y));
+		.Y(INVx1_ASAP7_75t_SL_4_Y));
 
-	sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_1_5_ (
-		.A(sky130_osu_sc_18T_hs__or2_1_0_Y),
-		.Y(sky130_osu_sc_18T_hs__inv_1_5_Y));
+	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_5_ (
+		.A(OR2x2_ASAP7_75t_SL_0_Y),
+		.Y(INVx1_ASAP7_75t_SL_5_Y));
 
-	sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_4_0_ (
+	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_0_ (
 		.A(in[0]),
-		.Y(sky130_osu_sc_18T_hs__buf_4_0_Y));
+		.Y(BUFx4_ASAP7_75t_SL_0_Y));
 
-	sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_4_1_ (
+	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_1_ (
 		.A(in[1]),
-		.Y(sky130_osu_sc_18T_hs__buf_4_1_Y));
+		.Y(BUFx4_ASAP7_75t_SL_1_Y));
 
-	sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_4_2_ (
+	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_2_ (
 		.A(in[2]),
-		.Y(sky130_osu_sc_18T_hs__buf_4_2_Y));
+		.Y(BUFx4_ASAP7_75t_SL_2_Y));
 
-	sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_4_3_ (
+	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_3_ (
 		.A(in[3]),
-		.Y(sky130_osu_sc_18T_hs__buf_4_3_Y));
+		.Y(BUFx4_ASAP7_75t_SL_3_Y));
 
-	sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_4_4_ (
+	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_4_ (
 		.A(in[4]),
-		.Y(sky130_osu_sc_18T_hs__buf_4_4_Y));
+		.Y(BUFx4_ASAP7_75t_SL_4_Y));
 
-	sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_4_5_ (
-		.A(sky130_osu_sc_18T_hs__or2_1_0_Y),
-		.Y(sky130_osu_sc_18T_hs__buf_4_5_Y));
+	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_5_ (
+		.A(OR2x2_ASAP7_75t_SL_0_Y),
+		.Y(BUFx4_ASAP7_75t_SL_5_Y));
 
 	frac_lut6_mux frac_lut6_mux_0_ (
 		.in(sram[0:63]),
-		.sram({sky130_osu_sc_18T_hs__buf_4_0_Y, sky130_osu_sc_18T_hs__buf_4_1_Y, sky130_osu_sc_18T_hs__buf_4_2_Y, sky130_osu_sc_18T_hs__buf_4_3_Y, sky130_osu_sc_18T_hs__buf_4_4_Y, sky130_osu_sc_18T_hs__buf_4_5_Y}),
-		.sram_inv({sky130_osu_sc_18T_hs__inv_1_0_Y, sky130_osu_sc_18T_hs__inv_1_1_Y, sky130_osu_sc_18T_hs__inv_1_2_Y, sky130_osu_sc_18T_hs__inv_1_3_Y, sky130_osu_sc_18T_hs__inv_1_4_Y, sky130_osu_sc_18T_hs__inv_1_5_Y}),
+		.sram({BUFx4_ASAP7_75t_SL_0_Y, BUFx4_ASAP7_75t_SL_1_Y, BUFx4_ASAP7_75t_SL_2_Y, BUFx4_ASAP7_75t_SL_3_Y, BUFx4_ASAP7_75t_SL_4_Y, BUFx4_ASAP7_75t_SL_5_Y}),
+		.sram_inv({INVx1_ASAP7_75t_SL_0_Y, INVx1_ASAP7_75t_SL_1_Y, INVx1_ASAP7_75t_SL_2_Y, INVx1_ASAP7_75t_SL_3_Y, INVx1_ASAP7_75t_SL_4_Y, INVx1_ASAP7_75t_SL_5_Y}),
 		.lut5_out(lut5_out[0:1]),
 		.lut6_out(lut6_out));
 

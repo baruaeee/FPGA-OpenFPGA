@@ -3,15 +3,15 @@
 //	Description: Template for user-defined Verilog modules
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Sun Nov  3 16:14:39 2024
+//	Date: Thu Nov  7 16:30:06 2024
 //-------------------------------------------
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
+// ----- Template Verilog module for INVx1_ASAP7_75t_SL -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
-module sky130_osu_sc_18T_hs__inv_1(A,
-                                   Y);
+// ----- Verilog module for INVx1_ASAP7_75t_SL -----
+module INVx1_ASAP7_75t_SL(A,
+                          Y);
 //----- INPUT PORTS -----
 input [0:0] A;
 //----- OUTPUT PORTS -----
@@ -29,19 +29,19 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
+// ----- END Verilog module for INVx1_ASAP7_75t_SL -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__buf_4 -----
+// ----- Template Verilog module for BUFx4_ASAP7_75t_SL -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__buf_4 -----
-module sky130_osu_sc_18T_hs__buf_4(A,
-                                   Y);
+// ----- Verilog module for BUFx4_ASAP7_75t_SL -----
+module BUFx4_ASAP7_75t_SL(A,
+                          Y);
 //----- INPUT PORTS -----
 input [0:0] A;
 //----- OUTPUT PORTS -----
@@ -59,19 +59,19 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__buf_4 -----
+// ----- END Verilog module for BUFx4_ASAP7_75t_SL -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__inv_4 -----
+// ----- Template Verilog module for INVx4_ASAP7_75t_SL -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__inv_4 -----
-module sky130_osu_sc_18T_hs__inv_4(A,
-                                   Y);
+// ----- Verilog module for INVx4_ASAP7_75t_SL -----
+module INVx4_ASAP7_75t_SL(A,
+                          Y);
 //----- INPUT PORTS -----
 input [0:0] A;
 //----- OUTPUT PORTS -----
@@ -89,20 +89,20 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__inv_4 -----
+// ----- END Verilog module for INVx4_ASAP7_75t_SL -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__or2_1 -----
+// ----- Template Verilog module for OR2x2_ASAP7_75t_SL -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__or2_1 -----
-module sky130_osu_sc_18T_hs__or2_1(A,
-                                   B,
-                                   Y);
+// ----- Verilog module for OR2x2_ASAP7_75t_SL -----
+module OR2x2_ASAP7_75t_SL(A,
+                          B,
+                          Y);
 //----- INPUT PORTS -----
 input [0:0] A;
 //----- INPUT PORTS -----
@@ -122,25 +122,25 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__or2_1 -----
+// ----- END Verilog module for OR2x2_ASAP7_75t_SL -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__mux2_1 -----
+// ----- Template Verilog module for MUX2 -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__mux2_1 -----
-module sky130_osu_sc_18T_hs__mux2_1(A1,
-                                    A0,
-                                    S0,
-                                    Y);
+// ----- Verilog module for MUX2 -----
+module MUX2(B,
+            A,
+            S0,
+            Y);
 //----- INPUT PORTS -----
-input [0:0] A1;
+input [0:0] B;
 //----- INPUT PORTS -----
-input [0:0] A0;
+input [0:0] A;
 //----- INPUT PORTS -----
 input [0:0] S0;
 //----- OUTPUT PORTS -----
@@ -158,26 +158,26 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__mux2_1 -----
+// ----- END Verilog module for MUX2 -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__dffsr_1 -----
+// ----- Template Verilog module for DFFSRQ -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__dffsr_1 -----
-module sky130_osu_sc_18T_hs__dffsr_1(SN,
-                                     RN,
-                                     CK,
-                                     D,
-                                     Q);
+// ----- Verilog module for DFFSRQ -----
+module DFFSRQ(SET,
+              RST,
+              CK,
+              D,
+              Q);
 //----- GLOBAL PORTS -----
-input [0:0] SN;
+input [0:0] SET;
 //----- GLOBAL PORTS -----
-input [0:0] RN;
+input [0:0] RST;
 //----- GLOBAL PORTS -----
 input [0:0] CK;
 //----- INPUT PORTS -----
@@ -197,24 +197,24 @@ output [0:0] Q;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__dffsr_1 -----
+// ----- END Verilog module for DFFSRQ -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for sky130_osu_sc_18T_hs__dffr_1 -----
+// ----- Template Verilog module for DFFR -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for sky130_osu_sc_18T_hs__dffr_1 -----
-module sky130_osu_sc_18T_hs__dffr_1(RN,
-                                    CK,
-                                    D,
-                                    Q,
-                                    QN);
+// ----- Verilog module for DFFR -----
+module DFFR(RST,
+            CK,
+            D,
+            Q,
+            QN);
 //----- GLOBAL PORTS -----
-input [0:0] RN;
+input [0:0] RST;
 //----- GLOBAL PORTS -----
 input [0:0] CK;
 //----- INPUT PORTS -----
@@ -236,7 +236,7 @@ output [0:0] QN;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for sky130_osu_sc_18T_hs__dffr_1 -----
+// ----- END Verilog module for DFFR -----
 
 //----- Default net type -----
 `default_nettype wire

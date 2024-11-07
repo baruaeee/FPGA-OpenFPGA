@@ -3,7 +3,7 @@
 //	Description: Verilog modules for primitive pb_type: iopad
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Sun Nov  3 16:14:39 2024
+//	Date: Thu Nov  7 16:30:06 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -42,7 +42,7 @@ wire [0:0] iopad_inpad;
 
 
 wire [0:0] GPIO_0_DIR;
-wire [0:0] GPIO_sky130_osu_sc_18T_hs__dffr_1_mem_undriven_mem_outb;
+wire [0:0] GPIO_DFFR_mem_undriven_mem_outb;
 
 // ----- BEGIN Local short connections -----
 // ----- END Local short connections -----
@@ -55,13 +55,13 @@ wire [0:0] GPIO_sky130_osu_sc_18T_hs__dffr_1_mem_undriven_mem_outb;
 		.DIR(GPIO_0_DIR),
 		.Y(iopad_inpad));
 
-	GPIO_sky130_osu_sc_18T_hs__dffr_1_mem GPIO_sky130_osu_sc_18T_hs__dffr_1_mem (
+	GPIO_DFFR_mem GPIO_DFFR_mem (
 		.pReset(pReset),
 		.prog_clk(prog_clk),
 		.ccff_head(ccff_head),
 		.ccff_tail(ccff_tail),
 		.mem_out(GPIO_0_DIR),
-		.mem_outb(GPIO_sky130_osu_sc_18T_hs__dffr_1_mem_undriven_mem_outb));
+		.mem_outb(GPIO_DFFR_mem_undriven_mem_outb));
 
 endmodule
 // ----- END Verilog module for logical_tile_io_mode_physical__iopad -----

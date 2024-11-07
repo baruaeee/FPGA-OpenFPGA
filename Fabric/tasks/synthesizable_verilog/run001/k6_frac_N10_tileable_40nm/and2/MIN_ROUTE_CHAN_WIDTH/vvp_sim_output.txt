@@ -1,6 +1,6 @@
 vvp compiled_and2
 VCD info: dumpfile and2_formal.vcd opened for output.
 Simulation start
-Mismatch on c_fpga at time =          451147.89ns
+Mismatch on c_fpga at time =           14594.73ns
 Simulation Failed with           1 error(s)
 0
