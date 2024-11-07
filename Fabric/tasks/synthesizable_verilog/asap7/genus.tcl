@@ -1,10 +1,10 @@
 read_hdl dff.v
 read_libs asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib
-elaborate DFFSRQ
+elaborate DFFR
 set_db syn_generic_effort medium
 set_db syn_map_effort medium
 set_db syn_opt_effort medium
 syn_generic
 syn_map
 syn_opt
-write_hdl > DFFSRQ.v
+write_hdl > DFFR.v
