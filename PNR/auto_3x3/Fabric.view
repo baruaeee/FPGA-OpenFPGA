@@ -1,0 +1,39 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+
+create_rc_corner -name RC_CORNER \
+	-T {25} \
+	-preRoute_res {1.0} \
+	-preRoute_cap {1.0} \
+	-preRoute_clkres {0.0} \
+	-preRoute_clkcap {0.0} \
+	-postRoute_res {1.0} \
+	-postRoute_cap {1.0} \
+	-postRoute_xcap {1.0} \
+	-postRoute_clkres {0.0} \
+	-postRoute_clkcap {0.0}
+#-cap_table {./techlef/qrcTechFile.cap} \
+
+create_library_set -name MIN_LIB -timing {./lib/ff/sky130_fd_sc_hd__ff_n40C_1v76.lib}
+create_library_set -name MAX_LIB -timing {./lib/ss/sky130_fd_sc_hd__ss_n40C_1v76.lib}
+#create_library_set -name MID_LIB -timing {./lib/tt/sky130_fd_sc_hd__tt_025C_1v80.lib}
+
+create_constraint_mode -name CONSTRAINTS -sdc_files {./SDC/sdc_fabric.sdc}
+
+create_delay_corner -name MAX_DELAY \
+	-library_set {MAX_LIB} \
+	-rc_corner {RC_CORNER}
+create_delay_corner -name MIN_DELAY \
+	-library_set {MIN_LIB} \
+	-rc_corner {RC_CORNER}
+
+create_analysis_view -name VIEW_SETUP \
+	-constraint_mode {CONSTRAINTS} \
+	-delay_corner {MAX_DELAY}
+create_analysis_view -name VIEW_HOLD \
+	-constraint_mode {CONSTRAINTS} \
+	-delay_corner {MIN_DELAY}
+
+set_analysis_view \
+	-setup {VIEW_SETUP} \
+	-hold {VIEW_HOLD}
