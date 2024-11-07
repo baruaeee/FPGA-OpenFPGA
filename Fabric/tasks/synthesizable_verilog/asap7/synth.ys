@@ -1,0 +1,35 @@
+# read_hdl dff.v equivalent
+read_verilog dff.v
+
+# read_libs equivalent
+read_liberty -lib asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib
+read_liberty -lib asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib
+read_liberty -lib asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib
+
+# elaborate DFFSRQ equivalent
+hierarchy -top DFFR
+
+# syn_generic equivalent (medium effort)
+proc
+flatten
+opt -full
+fsm
+opt -full
+memory
+opt -full
+
+# syn_map equivalent (medium effort)
+techmap
+opt -full
+dfflibmap -liberty asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib
+abc -liberty asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib -script +strash;scorr;ifraig;retime,{D};strash;dch,-f;map,-M,1,{D}
+
+# syn_opt equivalent (medium effort)
+opt -full
+clean
+
+# write_hdl > DFFR.v equivalent
+write_verilog -noattr DFFSRQ.v
+
+# Optional but useful - show statistics
+stat -liberty asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib
