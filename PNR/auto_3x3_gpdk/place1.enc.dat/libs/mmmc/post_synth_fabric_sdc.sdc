@@ -1,0 +1,1 @@
+/home/exotic/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_gpdk/SDC/post_synth_fabric_sdc.sdc
