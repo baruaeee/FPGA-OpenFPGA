@@ -184,7 +184,7 @@ Run OpenFPGA Task
 ## run the task by calling the python script with the given path to task configuration file. (here the content of tasks basic_tests/generate_fabric copied to new tasks directory 'fabric' to keep original files intact)
 >>python3 openfpga_flow/scripts/run_fpga_task.py Fabric/generate_fabric
 
-run-task /home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog --debug --show_thread_logs
+run-task /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog --debug --show_thread_logs
 
 ## The Verilog netlists are generated in the following directory: (and2 refers to the bechmarks section of task configuration)
 ## https://openfpga.readthedocs.io/en/master/manual/fpga_verilog/fabric_netlist/#fabric-netlists-logic-blocks
@@ -327,6 +327,8 @@ xrun ./SRC/and2_include_netlists.v -access +rwc \
 	-incdir ./SRC/sky130/cells/sdfbbp \
 	-64bit
 	-gui &
+
+xrun ./SRC/and2_include_netlists.v -access +rwc -gui &
 ----------------
 genus -gui
 read_libs <lib name>
