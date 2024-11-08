@@ -3,15 +3,15 @@
 //	Description: Template for user-defined Verilog modules
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov  7 16:30:06 2024
+//	Date: Fri Nov  8 15:44:44 2024
 //-------------------------------------------
-// ----- Template Verilog module for INVx1_ASAP7_75t_SL -----
+// ----- Template Verilog module for INVX1HVT -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for INVx1_ASAP7_75t_SL -----
-module INVx1_ASAP7_75t_SL(A,
-                          Y);
+// ----- Verilog module for INVX1HVT -----
+module INVX1HVT(A,
+                Y);
 //----- INPUT PORTS -----
 input [0:0] A;
 //----- OUTPUT PORTS -----
@@ -29,23 +29,23 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for INVx1_ASAP7_75t_SL -----
+// ----- END Verilog module for INVX1HVT -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for BUFx4_ASAP7_75t_SL -----
+// ----- Template Verilog module for buf4 -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for BUFx4_ASAP7_75t_SL -----
-module BUFx4_ASAP7_75t_SL(A,
-                          Y);
+// ----- Verilog module for buf4 -----
+module buf4(in,
+            out);
 //----- INPUT PORTS -----
-input [0:0] A;
+input [0:0] in;
 //----- OUTPUT PORTS -----
-output [0:0] Y;
+output [0:0] out;
 
 //----- BEGIN wire-connection ports -----
 //----- END wire-connection ports -----
@@ -59,23 +59,23 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for BUFx4_ASAP7_75t_SL -----
+// ----- END Verilog module for buf4 -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for INVx4_ASAP7_75t_SL -----
+// ----- Template Verilog module for tap_buf4 -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for INVx4_ASAP7_75t_SL -----
-module INVx4_ASAP7_75t_SL(A,
-                          Y);
+// ----- Verilog module for tap_buf4 -----
+module tap_buf4(in,
+                out);
 //----- INPUT PORTS -----
-input [0:0] A;
+input [0:0] in;
 //----- OUTPUT PORTS -----
-output [0:0] Y;
+output [0:0] out;
 
 //----- BEGIN wire-connection ports -----
 //----- END wire-connection ports -----
@@ -89,26 +89,26 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for INVx4_ASAP7_75t_SL -----
+// ----- END Verilog module for tap_buf4 -----
 
 //----- Default net type -----
 `default_nettype wire
 
 
-// ----- Template Verilog module for OR2x2_ASAP7_75t_SL -----
+// ----- Template Verilog module for OR2 -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for OR2x2_ASAP7_75t_SL -----
-module OR2x2_ASAP7_75t_SL(A,
-                          B,
-                          Y);
+// ----- Verilog module for OR2 -----
+module OR2(a,
+           b,
+           out);
 //----- INPUT PORTS -----
-input [0:0] A;
+input [0:0] a;
 //----- INPUT PORTS -----
-input [0:0] B;
+input [0:0] b;
 //----- OUTPUT PORTS -----
-output [0:0] Y;
+output [0:0] out;
 
 //----- BEGIN wire-connection ports -----
 //----- END wire-connection ports -----
@@ -122,7 +122,7 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for OR2x2_ASAP7_75t_SL -----
+// ----- END Verilog module for OR2 -----
 
 //----- Default net type -----
 `default_nettype wire

@@ -3,17 +3,19 @@
 //	Description: Fabric Netlist Summary
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov  7 16:30:06 2024
+//	Date: Fri Nov  8 15:44:45 2024
 //-------------------------------------------
 // ------ Include defines: preproc flags -----
 `include "./SRC/fpga_defines.v"
 
 // ------ Include user-defined netlists -----
-`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v"
-`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/mux21.v"
-`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFSRQ.v"
-`include "/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFR.v"
-`include "/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
+`include "/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/gpdk_std_lvt/fast_vdd1v0_basicCells_hvt.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/buf4.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/tap_buf4.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/or2.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/mux2.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/dff.v"
+`include "/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v"
 // ------ Include primitive module netlists -----
 `include "./SRC/sub_module/inv_buf_passgate.v"
 `include "./SRC/sub_module/arch_encoder.v"

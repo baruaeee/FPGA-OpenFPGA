@@ -34,17 +34,17 @@ fpga_top:
           logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic:
             logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6:
               frac_lut6:
-                OR2x2_ASAP7_75t_SL:
-                INVx1_ASAP7_75t_SL:
-                BUFx4_ASAP7_75t_SL:
+                OR2:
+                INVX1HVT:
+                buf4:
                 frac_lut6_mux:
-                  - INVx1_ASAP7_75t_SL
+                  - INVX1HVT
                   - MUX2
-                  - BUFx4_ASAP7_75t_SL
+                  - buf4
               frac_lut6_DFFR_mem:
                 - DFFR
             mux_tree_size2:
-              - INVx1_ASAP7_75t_SL
+              - INVX1HVT
               - const1
               - MUX2
             mux_tree_size2_mem:
@@ -53,7 +53,7 @@ fpga_top:
           logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff:
             - DFFSRQ
           mux_tree_size2:
-            - INVx1_ASAP7_75t_SL
+            - INVX1HVT
             - const1
             - MUX2
           mux_tree_size2_mem:
@@ -62,128 +62,128 @@ fpga_top:
         direct_interc:
       direct_interc:
       mux_tree_size60:
-        - INVx1_ASAP7_75t_SL
+        - INVX1HVT
         - const1
         - MUX2
       mux_tree_size60_mem:
         - DFFR
   sb_0__0_:
     mux_tree_tapbuf_size3:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size3_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   sb_0__1_:
     mux_tree_tapbuf_size3:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size3_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   sb_1__0_:
     mux_tree_tapbuf_size3:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size3_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   sb_1__1_:
     mux_tree_tapbuf_size3:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size3_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   cbx_1__0_:
     mux_tree_tapbuf_size4:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size4_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   cbx_1__1_:
     mux_tree_tapbuf_size4:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size4_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   cby_0__1_:
     mux_tree_tapbuf_size4:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size4_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR
   cby_1__1_:
     mux_tree_tapbuf_size4:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size4_mem:
       - DFFR
     mux_tree_tapbuf_size2:
-      - INVx1_ASAP7_75t_SL
+      - INVX1HVT
       - const1
-      - INVx4_ASAP7_75t_SL
+      - tap_buf4
       - MUX2
     mux_tree_tapbuf_size2_mem:
       - DFFR

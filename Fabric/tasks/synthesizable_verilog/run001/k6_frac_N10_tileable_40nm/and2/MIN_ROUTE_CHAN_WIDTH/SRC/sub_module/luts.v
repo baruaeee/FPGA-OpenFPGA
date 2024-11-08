@@ -3,7 +3,7 @@
 //	Description: Look-Up Tables
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov  7 16:30:06 2024
+//	Date: Fri Nov  8 15:44:44 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -42,82 +42,82 @@ wire [0:0] lut6_out;
 //----- END Registered ports -----
 
 
-wire [0:0] BUFx4_ASAP7_75t_SL_0_Y;
-wire [0:0] BUFx4_ASAP7_75t_SL_1_Y;
-wire [0:0] BUFx4_ASAP7_75t_SL_2_Y;
-wire [0:0] BUFx4_ASAP7_75t_SL_3_Y;
-wire [0:0] BUFx4_ASAP7_75t_SL_4_Y;
-wire [0:0] BUFx4_ASAP7_75t_SL_5_Y;
-wire [0:0] INVx1_ASAP7_75t_SL_0_Y;
-wire [0:0] INVx1_ASAP7_75t_SL_1_Y;
-wire [0:0] INVx1_ASAP7_75t_SL_2_Y;
-wire [0:0] INVx1_ASAP7_75t_SL_3_Y;
-wire [0:0] INVx1_ASAP7_75t_SL_4_Y;
-wire [0:0] INVx1_ASAP7_75t_SL_5_Y;
-wire [0:0] OR2x2_ASAP7_75t_SL_0_Y;
+wire [0:0] INVX1HVT_0_Y;
+wire [0:0] INVX1HVT_1_Y;
+wire [0:0] INVX1HVT_2_Y;
+wire [0:0] INVX1HVT_3_Y;
+wire [0:0] INVX1HVT_4_Y;
+wire [0:0] INVX1HVT_5_Y;
+wire [0:0] OR2_0_out;
+wire [0:0] buf4_0_out;
+wire [0:0] buf4_1_out;
+wire [0:0] buf4_2_out;
+wire [0:0] buf4_3_out;
+wire [0:0] buf4_4_out;
+wire [0:0] buf4_5_out;
 
 // ----- BEGIN Local short connections -----
 // ----- END Local short connections -----
 // ----- BEGIN Local output short connections -----
 // ----- END Local output short connections -----
 
-	OR2x2_ASAP7_75t_SL OR2x2_ASAP7_75t_SL_0_ (
-		.A(mode),
-		.B(in[5]),
-		.Y(OR2x2_ASAP7_75t_SL_0_Y));
+	OR2 OR2_0_ (
+		.a(mode),
+		.b(in[5]),
+		.out(OR2_0_out));
 
-	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_0_ (
+	INVX1HVT INVX1HVT_0_ (
 		.A(in[0]),
-		.Y(INVx1_ASAP7_75t_SL_0_Y));
+		.Y(INVX1HVT_0_Y));
 
-	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_1_ (
+	INVX1HVT INVX1HVT_1_ (
 		.A(in[1]),
-		.Y(INVx1_ASAP7_75t_SL_1_Y));
+		.Y(INVX1HVT_1_Y));
 
-	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_2_ (
+	INVX1HVT INVX1HVT_2_ (
 		.A(in[2]),
-		.Y(INVx1_ASAP7_75t_SL_2_Y));
+		.Y(INVX1HVT_2_Y));
 
-	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_3_ (
+	INVX1HVT INVX1HVT_3_ (
 		.A(in[3]),
-		.Y(INVx1_ASAP7_75t_SL_3_Y));
+		.Y(INVX1HVT_3_Y));
 
-	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_4_ (
+	INVX1HVT INVX1HVT_4_ (
 		.A(in[4]),
-		.Y(INVx1_ASAP7_75t_SL_4_Y));
+		.Y(INVX1HVT_4_Y));
 
-	INVx1_ASAP7_75t_SL INVx1_ASAP7_75t_SL_5_ (
-		.A(OR2x2_ASAP7_75t_SL_0_Y),
-		.Y(INVx1_ASAP7_75t_SL_5_Y));
+	INVX1HVT INVX1HVT_5_ (
+		.A(OR2_0_out),
+		.Y(INVX1HVT_5_Y));
 
-	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_0_ (
-		.A(in[0]),
-		.Y(BUFx4_ASAP7_75t_SL_0_Y));
+	buf4 buf4_0_ (
+		.in(in[0]),
+		.out(buf4_0_out));
 
-	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_1_ (
-		.A(in[1]),
-		.Y(BUFx4_ASAP7_75t_SL_1_Y));
+	buf4 buf4_1_ (
+		.in(in[1]),
+		.out(buf4_1_out));
 
-	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_2_ (
-		.A(in[2]),
-		.Y(BUFx4_ASAP7_75t_SL_2_Y));
+	buf4 buf4_2_ (
+		.in(in[2]),
+		.out(buf4_2_out));
 
-	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_3_ (
-		.A(in[3]),
-		.Y(BUFx4_ASAP7_75t_SL_3_Y));
+	buf4 buf4_3_ (
+		.in(in[3]),
+		.out(buf4_3_out));
 
-	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_4_ (
-		.A(in[4]),
-		.Y(BUFx4_ASAP7_75t_SL_4_Y));
+	buf4 buf4_4_ (
+		.in(in[4]),
+		.out(buf4_4_out));
 
-	BUFx4_ASAP7_75t_SL BUFx4_ASAP7_75t_SL_5_ (
-		.A(OR2x2_ASAP7_75t_SL_0_Y),
-		.Y(BUFx4_ASAP7_75t_SL_5_Y));
+	buf4 buf4_5_ (
+		.in(OR2_0_out),
+		.out(buf4_5_out));
 
 	frac_lut6_mux frac_lut6_mux_0_ (
 		.in(sram[0:63]),
-		.sram({BUFx4_ASAP7_75t_SL_0_Y, BUFx4_ASAP7_75t_SL_1_Y, BUFx4_ASAP7_75t_SL_2_Y, BUFx4_ASAP7_75t_SL_3_Y, BUFx4_ASAP7_75t_SL_4_Y, BUFx4_ASAP7_75t_SL_5_Y}),
-		.sram_inv({INVx1_ASAP7_75t_SL_0_Y, INVx1_ASAP7_75t_SL_1_Y, INVx1_ASAP7_75t_SL_2_Y, INVx1_ASAP7_75t_SL_3_Y, INVx1_ASAP7_75t_SL_4_Y, INVx1_ASAP7_75t_SL_5_Y}),
+		.sram({buf4_0_out, buf4_1_out, buf4_2_out, buf4_3_out, buf4_4_out, buf4_5_out}),
+		.sram_inv({INVX1HVT_0_Y, INVX1HVT_1_Y, INVX1HVT_2_Y, INVX1HVT_3_Y, INVX1HVT_4_Y, INVX1HVT_5_Y}),
 		.lut5_out(lut5_out[0:1]),
 		.lut6_out(lut6_out));
 

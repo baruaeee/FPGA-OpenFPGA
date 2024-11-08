@@ -4,7 +4,7 @@
 #	Description: Disable Switch Block outputs for PnR
 #	Author: Xifan TANG 
 #	Organization: University of Utah 
-#	Date: Thu Nov  7 16:30:06 2024
+#	Date: Fri Nov  8 15:44:45 2024
 #############################################
 
 set_disable_timing fpga_top/sb_*__*_/chany_top_out
