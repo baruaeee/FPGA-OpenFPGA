@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(01Nov2024:18:58:04):( xrun ./SRC/and2_include_netlists.v -access +rwc -64bit -gui )

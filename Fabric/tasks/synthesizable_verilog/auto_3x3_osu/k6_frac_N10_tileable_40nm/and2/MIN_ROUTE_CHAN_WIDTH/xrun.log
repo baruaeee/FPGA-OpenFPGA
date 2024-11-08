@@ -1,0 +1,1748 @@
+xrun(64): 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s007: Started on Nov 03, 2024 at 03:42:40 CET
+xrun
+	./SRC/and2_include_netlists.v
+	-access +rwc
+	-64bit
+	-gui
+file: ./SRC/and2_include_netlists.v
+	module worklib.GPIO:v
+		errors: 0, warnings: 0
+output [0:0] const0;
+                  |
+xmvlog: *W,NODNTW (./SRC/sub_module/inv_buf_passgate.v,14|18): Implicit net port (const0) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] const1;
+                  |
+xmvlog: *W,NODNTW (./SRC/sub_module/inv_buf_passgate.v,36|18): Implicit net port (const1) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:3] in;
+             |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,17|13): Implicit net port (in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:2] sram;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,19|15): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:2] sram_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,21|19): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] out;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,23|15): Implicit net port (out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] in;
+             |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,113|13): Implicit net port (in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] sram;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,115|15): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] sram_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,117|19): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] out;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,119|15): Implicit net port (out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:2] in;
+             |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,185|13): Implicit net port (in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] sram;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,187|15): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] sram_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,189|19): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] out;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,191|15): Implicit net port (out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:59] in;
+              |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,269|14): Implicit net port (in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:5] sram;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,271|15): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:5] sram_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,273|19): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] out;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,275|15): Implicit net port (out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] in;
+             |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1037|13): Implicit net port (in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] sram;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1039|15): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:1] sram_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1041|19): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] out;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1043|15): Implicit net port (out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:63] in;
+              |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1110|14): Implicit net port (in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:5] sram;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1112|15): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:5] sram_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1114|19): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] lut5_out;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1116|20): Implicit net port (lut5_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] lut6_out;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/muxes.v,1118|20): Implicit net port (lut6_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:63] sram;
+                |
+xmvlog: *W,NODNTW (./SRC/sub_module/luts.v,22|16): Implicit net port (sram) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:63] sram_inv;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/luts.v,24|20): Implicit net port (sram_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] mode;
+               |
+xmvlog: *W,NODNTW (./SRC/sub_module/luts.v,26|15): Implicit net port (mode) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] mode_inv;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/luts.v,28|19): Implicit net port (mode_inv) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,19|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,21|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,23|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,25|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:2] mem_out;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,27|19): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:2] mem_outb;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,29|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,87|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,89|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,91|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,93|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] mem_out;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,95|19): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] mem_outb;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,97|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,148|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,150|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,152|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,154|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] mem_out;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,156|19): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] mem_outb;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,158|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,209|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,211|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,213|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,215|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:5] mem_out;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,217|19): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:5] mem_outb;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,219|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,298|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,300|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,302|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,304|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] mem_out;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,306|19): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:1] mem_outb;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,308|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,359|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,361|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,363|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,365|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:64] mem_out;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,367|20): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:64] mem_outb;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,369|21): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,861|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,863|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,865|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,867|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] mem_out;
+                   |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,869|19): Implicit net port (mem_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] mem_outb;
+                    |
+xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,871|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,20|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,22|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:0] gfpga_pad_GPIO_PAD;
+                             |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,24|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,28|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,32|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,21|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,23|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:0] gfpga_pad_GPIO_PAD;
+                             |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,25|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,29|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,33|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6.v,20|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6.v,22|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6.v,26|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6.v,32|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.v,20|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.v,22|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.v,26|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.v,30|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] set;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.v,19|14): Implicit net port (set) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] reset;
+                |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.v,21|16): Implicit net port (reset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] clk;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.v,23|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,24|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,26|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] set;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,28|14): Implicit net port (set) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] reset;
+                |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,30|16): Implicit net port (reset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] clk;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,32|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,38|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric.v,42|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,24|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,26|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] set;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,28|14): Implicit net port (set) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] reset;
+                |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,30|16): Implicit net port (reset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] clk;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,32|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,38|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_default__fle.v,42|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,24|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,26|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] set;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,28|14): Implicit net port (set) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] reset;
+                |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,30|16): Implicit net port (reset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] clk;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,32|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,38|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_clb_mode_clb_.v,42|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,35|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_GPIO_PAD;
+                             |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,41|59): Implicit net port (bottom_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,43|59): Implicit net port (bottom_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,45|59): Implicit net port (bottom_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,47|59): Implicit net port (bottom_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,49|59): Implicit net port (bottom_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,51|59): Implicit net port (bottom_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,53|59): Implicit net port (bottom_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,55|59): Implicit net port (bottom_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,57|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,59|59): Implicit net port (bottom_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,61|59): Implicit net port (bottom_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,63|59): Implicit net port (bottom_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,65|59): Implicit net port (bottom_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,67|59): Implicit net port (bottom_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,69|59): Implicit net port (bottom_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,71|59): Implicit net port (bottom_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                           |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,73|59): Implicit net port (bottom_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,75|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,35|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_GPIO_PAD;
+                             |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,41|57): Implicit net port (left_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,43|57): Implicit net port (left_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,45|57): Implicit net port (left_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,47|57): Implicit net port (left_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,49|57): Implicit net port (left_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,51|57): Implicit net port (left_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,53|57): Implicit net port (left_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,55|57): Implicit net port (left_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,57|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,59|57): Implicit net port (left_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,61|57): Implicit net port (left_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,63|57): Implicit net port (left_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,65|57): Implicit net port (left_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,67|57): Implicit net port (left_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,69|57): Implicit net port (left_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,71|57): Implicit net port (left_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                         |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,73|57): Implicit net port (left_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,75|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,35|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_GPIO_PAD;
+                             |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,41|56): Implicit net port (top_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,43|56): Implicit net port (top_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,45|56): Implicit net port (top_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,47|56): Implicit net port (top_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,49|56): Implicit net port (top_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,51|56): Implicit net port (top_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,53|56): Implicit net port (top_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,55|56): Implicit net port (top_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,57|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,59|56): Implicit net port (top_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,61|56): Implicit net port (top_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,63|56): Implicit net port (top_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,65|56): Implicit net port (top_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,67|56): Implicit net port (top_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,69|56): Implicit net port (top_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,71|56): Implicit net port (top_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,73|56): Implicit net port (top_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,75|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,35|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_GPIO_PAD;
+                             |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,41|58): Implicit net port (right_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,43|58): Implicit net port (right_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,45|58): Implicit net port (right_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,47|58): Implicit net port (right_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,49|58): Implicit net port (right_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,51|58): Implicit net port (right_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,53|58): Implicit net port (right_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,55|58): Implicit net port (right_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,57|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,59|58): Implicit net port (right_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,61|58): Implicit net port (right_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,63|58): Implicit net port (right_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,65|58): Implicit net port (right_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,67|58): Implicit net port (right_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,69|58): Implicit net port (right_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,71|58): Implicit net port (right_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                          |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,73|58): Implicit net port (right_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,75|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,82|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,84|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] set;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,86|14): Implicit net port (set) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] reset;
+                |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,88|16): Implicit net port (reset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] clk;
+              |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,90|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_0_;
+                                                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,92|51): Implicit net port (top_width_0_height_0_subtile_0__pin_I_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_4_;
+                                                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,94|51): Implicit net port (top_width_0_height_0_subtile_0__pin_I_4_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_8_;
+                                                   |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,96|51): Implicit net port (top_width_0_height_0_subtile_0__pin_I_8_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_12_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,98|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_12_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_16_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,100|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_16_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_20_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,102|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_20_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_24_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,104|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_24_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_28_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,106|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_28_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_32_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,108|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_32_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_I_36_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,110|52): Implicit net port (top_width_0_height_0_subtile_0__pin_I_36_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_width_0_height_0_subtile_0__pin_clk_0_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,112|53): Implicit net port (top_width_0_height_0_subtile_0__pin_clk_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_1_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,114|53): Implicit net port (right_width_0_height_0_subtile_0__pin_I_1_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_5_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,116|53): Implicit net port (right_width_0_height_0_subtile_0__pin_I_5_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_9_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,118|53): Implicit net port (right_width_0_height_0_subtile_0__pin_I_9_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_13_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,120|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_13_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_17_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,122|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_17_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_21_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,124|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_21_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_25_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,126|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_25_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_29_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,128|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_29_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_33_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,130|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_33_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_width_0_height_0_subtile_0__pin_I_37_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,132|54): Implicit net port (right_width_0_height_0_subtile_0__pin_I_37_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_2_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,134|54): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_2_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_6_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,136|54): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_6_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_10_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,138|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_10_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_14_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,140|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_14_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_18_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,142|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_18_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_22_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,144|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_22_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_26_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,146|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_26_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_30_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,148|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_30_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_34_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,150|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_34_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_width_0_height_0_subtile_0__pin_I_38_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,152|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_I_38_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_3_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,154|52): Implicit net port (left_width_0_height_0_subtile_0__pin_I_3_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_7_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,156|52): Implicit net port (left_width_0_height_0_subtile_0__pin_I_7_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_11_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,158|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_11_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_15_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,160|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_15_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_19_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,162|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_19_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_23_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,164|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_23_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_27_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,166|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_27_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_31_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,168|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_31_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_35_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,170|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_35_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_width_0_height_0_subtile_0__pin_I_39_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,172|53): Implicit net port (left_width_0_height_0_subtile_0__pin_I_39_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,174|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_0__pin_O_0_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,176|52): Implicit net port (top_width_0_height_0_subtile_0__pin_O_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_0__pin_O_4_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,178|52): Implicit net port (top_width_0_height_0_subtile_0__pin_O_4_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_0__pin_O_8_;
+                                                    |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,180|52): Implicit net port (top_width_0_height_0_subtile_0__pin_O_8_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_0__pin_O_12_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,182|53): Implicit net port (top_width_0_height_0_subtile_0__pin_O_12_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_width_0_height_0_subtile_0__pin_O_16_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,184|53): Implicit net port (top_width_0_height_0_subtile_0__pin_O_16_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_0__pin_O_1_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,186|54): Implicit net port (right_width_0_height_0_subtile_0__pin_O_1_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_0__pin_O_5_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,188|54): Implicit net port (right_width_0_height_0_subtile_0__pin_O_5_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_0__pin_O_9_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,190|54): Implicit net port (right_width_0_height_0_subtile_0__pin_O_9_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_0__pin_O_13_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,192|55): Implicit net port (right_width_0_height_0_subtile_0__pin_O_13_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_width_0_height_0_subtile_0__pin_O_17_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,194|55): Implicit net port (right_width_0_height_0_subtile_0__pin_O_17_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_0__pin_O_2_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,196|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_O_2_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_0__pin_O_6_;
+                                                       |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,198|55): Implicit net port (bottom_width_0_height_0_subtile_0__pin_O_6_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_0__pin_O_10_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,200|56): Implicit net port (bottom_width_0_height_0_subtile_0__pin_O_10_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_0__pin_O_14_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,202|56): Implicit net port (bottom_width_0_height_0_subtile_0__pin_O_14_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_width_0_height_0_subtile_0__pin_O_18_;
+                                                        |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,204|56): Implicit net port (bottom_width_0_height_0_subtile_0__pin_O_18_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_0__pin_O_3_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,206|53): Implicit net port (left_width_0_height_0_subtile_0__pin_O_3_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_0__pin_O_7_;
+                                                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,208|53): Implicit net port (left_width_0_height_0_subtile_0__pin_O_7_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_0__pin_O_11_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,210|54): Implicit net port (left_width_0_height_0_subtile_0__pin_O_11_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_0__pin_O_15_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,212|54): Implicit net port (left_width_0_height_0_subtile_0__pin_O_15_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_width_0_height_0_subtile_0__pin_O_19_;
+                                                      |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,214|54): Implicit net port (left_width_0_height_0_subtile_0__pin_O_19_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/lb/grid_clb.v,216|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,47|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,49|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_top_in;
+                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,51|23): Implicit net port (chany_top_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,53|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,55|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,57|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,59|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,61|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,63|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,65|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,67|71): Implicit net port (top_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_0__pin_O_3_;
+                                                                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,69|67): Implicit net port (top_right_grid_left_width_0_height_0_subtile_0__pin_O_3_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_0__pin_O_7_;
+                                                                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,71|67): Implicit net port (top_right_grid_left_width_0_height_0_subtile_0__pin_O_7_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_0__pin_O_11_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,73|68): Implicit net port (top_right_grid_left_width_0_height_0_subtile_0__pin_O_11_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_0__pin_O_15_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,75|68): Implicit net port (top_right_grid_left_width_0_height_0_subtile_0__pin_O_15_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_0__pin_O_19_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,77|68): Implicit net port (top_right_grid_left_width_0_height_0_subtile_0__pin_O_19_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_right_in;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,79|25): Implicit net port (chanx_right_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,81|69): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,83|69): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,85|70): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,87|70): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,89|70): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,91|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,93|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,95|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,97|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,99|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,101|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,103|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,105|73): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,107|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_top_out;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,109|25): Implicit net port (chany_top_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_right_out;
+                           |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,111|27): Implicit net port (chanx_right_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__0_.v,113|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,47|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,49|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_right_in;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,51|25): Implicit net port (chanx_right_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,53|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,55|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,57|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,59|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,61|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,63|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,65|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,67|73): Implicit net port (right_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,69|69): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,71|69): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,73|69): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,75|70): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,77|70): Implicit net port (right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_bottom_in;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,79|26): Implicit net port (chany_bottom_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_3_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,81|70): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_3_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_7_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,83|70): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_7_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_11_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,85|71): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_11_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_15_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,87|71): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_15_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_19_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,89|71): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_19_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,91|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,93|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,95|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,97|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,99|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,101|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,103|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,105|74): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,107|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_right_out;
+                           |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,109|27): Implicit net port (chanx_right_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_bottom_out;
+                            |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,111|28): Implicit net port (chany_bottom_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_0__1_.v,113|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,47|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,49|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_top_in;
+                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,51|23): Implicit net port (chany_top_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_;
+                                                                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,53|67): Implicit net port (top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_;
+                                                                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,55|67): Implicit net port (top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_;
+                                                                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,57|67): Implicit net port (top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_0__pin_O_13_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,59|68): Implicit net port (top_left_grid_right_width_0_height_0_subtile_0__pin_O_13_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_left_grid_right_width_0_height_0_subtile_0__pin_O_17_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,61|68): Implicit net port (top_left_grid_right_width_0_height_0_subtile_0__pin_O_17_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,63|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,65|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,67|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,69|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,71|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,73|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,75|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] top_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,77|71): Implicit net port (top_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_left_in;
+                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,79|24): Implicit net port (chanx_left_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,81|68): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,83|68): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,85|69): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,87|69): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,89|69): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,91|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,93|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,95|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,97|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,99|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,101|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,103|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,105|72): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,107|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_top_out;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,109|25): Implicit net port (chany_top_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_left_out;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,111|26): Implicit net port (chanx_left_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__0_.v,113|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,47|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,49|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_bottom_in;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,51|26): Implicit net port (chany_bottom_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,53|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,55|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,57|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,59|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,61|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,63|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,65|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,67|74): Implicit net port (bottom_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,69|70): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,71|70): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_;
+                                                                      |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,73|70): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_13_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,75|71): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_13_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_17_;
+                                                                       |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,77|71): Implicit net port (bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_17_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_left_in;
+                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,79|24): Implicit net port (chanx_left_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,81|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,83|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,85|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,87|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,89|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,91|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,93|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_;
+                                                                        |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,95|72): Implicit net port (left_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,97|68): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,99|68): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_;
+                                                                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,101|68): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,103|69): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,105|69): Implicit net port (left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,107|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_bottom_out;
+                            |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,109|28): Implicit net port (chany_bottom_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_left_out;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,111|26): Implicit net port (chanx_left_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/sb_1__1_.v,113|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,39|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,41|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_left_in;
+                        |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,43|24): Implicit net port (chanx_left_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_right_in;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,45|25): Implicit net port (chanx_right_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,47|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_left_out;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,49|26): Implicit net port (chanx_left_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_right_out;
+                           |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,51|27): Implicit net port (chanx_right_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_2_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,53|64): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_2_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_6_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,55|64): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_6_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_10_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,57|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_10_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_14_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,59|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_14_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_18_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,61|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_18_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_22_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,63|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_22_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_26_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,65|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_26_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_30_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,67|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_30_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_34_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,69|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_34_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_I_38_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,71|65): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_I_38_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,73|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,75|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,77|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,79|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,81|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,83|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,85|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,87|69): Implicit net port (bottom_grid_top_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__0_.v,89|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,39|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,41|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_left_in;
+                        |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,43|24): Implicit net port (chanx_left_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chanx_right_in;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,45|25): Implicit net port (chanx_right_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,47|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_left_out;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,49|26): Implicit net port (chanx_left_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chanx_right_out;
+                           |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,51|27): Implicit net port (chanx_right_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,53|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,55|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,57|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,59|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,61|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,63|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,65|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] top_grid_bottom_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,67|69): Implicit net port (top_grid_bottom_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_0_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,69|64): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_4_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,71|64): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_4_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_8_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,73|64): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_8_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_12_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,75|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_12_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_16_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,77|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_16_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_20_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,79|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_20_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_24_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,81|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_24_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_28_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,83|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_28_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_32_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,85|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_32_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] bottom_grid_top_width_0_height_0_subtile_0__pin_I_36_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,87|65): Implicit net port (bottom_grid_top_width_0_height_0_subtile_0__pin_I_36_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/cbx_1__1_.v,89|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,39|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,41|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_bottom_in;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,43|26): Implicit net port (chany_bottom_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_top_in;
+                       |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,45|23): Implicit net port (chany_top_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,47|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_bottom_out;
+                            |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,49|28): Implicit net port (chany_bottom_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_top_out;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,51|25): Implicit net port (chany_top_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_3_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,53|64): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_3_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_7_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,55|64): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_7_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_11_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,57|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_11_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_15_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,59|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_15_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_19_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,61|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_19_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_23_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,63|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_23_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_27_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,65|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_27_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_31_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,67|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_31_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_35_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,69|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_35_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_I_39_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,71|65): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_I_39_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,73|69): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,75|69): Implicit net port (left_grid_right_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,77|69): Implicit net port (left_grid_right_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,79|69): Implicit net port (left_grid_right_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,81|69): Implicit net port (left_grid_right_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,83|69): Implicit net port (left_grid_right_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,85|69): Implicit net port (left_grid_right_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,87|69): Implicit net port (left_grid_right_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_0__1_.v,89|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,39|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,41|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_bottom_in;
+                          |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,43|26): Implicit net port (chany_bottom_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:9] chany_top_in;
+                       |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,45|23): Implicit net port (chany_top_in) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,47|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_bottom_out;
+                            |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,49|28): Implicit net port (chany_bottom_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:9] chany_top_out;
+                         |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,51|25): Implicit net port (chany_top_out) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_0__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,53|69): Implicit net port (right_grid_left_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_1__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,55|69): Implicit net port (right_grid_left_width_0_height_0_subtile_1__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_2__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,57|69): Implicit net port (right_grid_left_width_0_height_0_subtile_2__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_3__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,59|69): Implicit net port (right_grid_left_width_0_height_0_subtile_3__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_4__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,61|69): Implicit net port (right_grid_left_width_0_height_0_subtile_4__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_5__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,63|69): Implicit net port (right_grid_left_width_0_height_0_subtile_5__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_6__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,65|69): Implicit net port (right_grid_left_width_0_height_0_subtile_6__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] right_grid_left_width_0_height_0_subtile_7__pin_outpad_0_;
+                                                                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,67|69): Implicit net port (right_grid_left_width_0_height_0_subtile_7__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_1_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,69|64): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_1_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_5_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,71|64): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_5_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_9_;
+                                                                |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,73|64): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_9_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_13_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,75|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_13_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_17_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,77|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_17_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_21_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,79|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_21_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_25_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,81|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_25_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_29_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,83|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_29_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_33_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,85|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_33_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] left_grid_right_width_0_height_0_subtile_0__pin_I_37_;
+                                                                 |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,87|65): Implicit net port (left_grid_right_width_0_height_0_subtile_0__pin_I_37_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/routing/cby_1__1_.v,89|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] pReset;
+                 |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,21|17): Implicit net port (pReset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] prog_clk;
+                   |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,23|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] set;
+              |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,25|14): Implicit net port (set) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] reset;
+                |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,27|16): Implicit net port (reset) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] clk;
+              |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,29|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:31] gfpga_pad_GPIO_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,31|30): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [0:0] ccff_head;
+                    |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,33|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output [0:0] ccff_tail;
+                     |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,35|21): Implicit net port (ccff_tail) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	sky130_osu_sc_18T_hs__dffsr_1 sky130_osu_sc_18T_hs__dffsr_1_0_ (
+	                                                             |
+xmelab: *W,CUVWSP (./SRC/lb/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.v,48|62): 1 output port was not connected:
+xmelab: (/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v,887): QN
+
+	Top level design units:
+		sky130_osu_sc_18T_hs__addf_1
+		sky130_osu_sc_18T_hs__addf_l
+		sky130_osu_sc_18T_hs__addh_1
+		sky130_osu_sc_18T_hs__addh_l
+		sky130_osu_sc_18T_hs__and2_1
+		sky130_osu_sc_18T_hs__and2_2
+		sky130_osu_sc_18T_hs__and2_4
+		sky130_osu_sc_18T_hs__and2_6
+		sky130_osu_sc_18T_hs__and2_8
+		sky130_osu_sc_18T_hs__and2_l
+		sky130_osu_sc_18T_hs__ant
+		sky130_osu_sc_18T_hs__aoi21_l
+		sky130_osu_sc_18T_hs__aoi22_l
+		sky130_osu_sc_18T_hs__buf_1
+		sky130_osu_sc_18T_hs__buf_2
+		sky130_osu_sc_18T_hs__buf_6
+		sky130_osu_sc_18T_hs__buf_8
+		sky130_osu_sc_18T_hs__buf_l
+		sky130_osu_sc_18T_hs__dff_1
+		sky130_osu_sc_18T_hs__dff_l
+		sky130_osu_sc_18T_hs__dffr_l
+		sky130_osu_sc_18T_hs__dffs_1
+		sky130_osu_sc_18T_hs__dffs_l
+		sky130_osu_sc_18T_hs__dffsr_l
+		sky130_osu_sc_18T_hs__dlat_1
+		sky130_osu_sc_18T_hs__dlat_l
+		sky130_osu_sc_18T_hs__inv_10
+		sky130_osu_sc_18T_hs__inv_2
+		sky130_osu_sc_18T_hs__inv_3
+		sky130_osu_sc_18T_hs__inv_6
+		sky130_osu_sc_18T_hs__inv_8
+		sky130_osu_sc_18T_hs__nand2_1
+		sky130_osu_sc_18T_hs__nand2_l
+		sky130_osu_sc_18T_hs__nor2_1
+		sky130_osu_sc_18T_hs__nor2_l
+		sky130_osu_sc_18T_hs__oai21_l
+		sky130_osu_sc_18T_hs__oai22_l
+		sky130_osu_sc_18T_hs__or2_2
+		sky130_osu_sc_18T_hs__or2_4
+		sky130_osu_sc_18T_hs__or2_8
+		sky130_osu_sc_18T_hs__or2_l
+		sky130_osu_sc_18T_hs__tbufi_1
+		sky130_osu_sc_18T_hs__tiehi
+		sky130_osu_sc_18T_hs__tielo
+		sky130_osu_sc_18T_hs__tnbufi_1
+		sky130_osu_sc_18T_hs__xnor2_l
+		sky130_osu_sc_18T_hs__xor2_l
+		const0
+		and2_autocheck_top_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.and2:v <0x26eba44e>
+			streams:   0, words:     0
+		worklib.cby_1__1_:v <0x3427ff54>
+			streams:   0, words:     0
+		worklib.cby_0__1_:v <0x505ddfc9>
+			streams:   0, words:     0
+		worklib.cbx_1__1_:v <0x725615d1>
+			streams:   0, words:     0
+		worklib.mux_tree_tapbuf_size4_mem:v <0x75a969db>
+			streams:   0, words:     0
+		worklib.cbx_1__0_:v <0x7d5d0691>
+			streams:   0, words:     0
+		worklib.sb_1__1_:v <0x5b81bae0>
+			streams:   0, words:     0
+		worklib.sb_1__0_:v <0x3f0cd64c>
+			streams:   0, words:     0
+		worklib.sb_0__1_:v <0x0299406c>
+			streams:   0, words:     0
+		worklib.mux_tree_tapbuf_size2_mem:v <0x2ca76805>
+			streams:   0, words:     0
+		worklib.mux_tree_tapbuf_size3_mem:v <0x5e77d08a>
+			streams:   0, words:     0
+		worklib.sb_0__0_:v <0x66142cc0>
+			streams:   0, words:     0
+		worklib.mux_tree_size60_mem:v <0x109ab19d>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffsr_1:v <0x6f5032d8>
+			streams:   0, words:     0
+		worklib.direct_interc:v <0x64595c96>
+			streams:   0, words:     0
+		worklib.mux_tree_size2_mem:v <0x52f0a37a>
+			streams:   0, words:     0
+		worklib.const1:v <0x05f483fa>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffr_1:v <0x23b30a37>
+			streams:   0, words:     0
+		worklib.frac_lut6_sky130_osu_sc_18T_hs__dffr_1_mem:v <0x41a34b4c>
+			streams:   0, words:     0
+		worklib.frac_lut6:v <0x17a65bd4>
+			streams:   0, words:     0
+		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6:v <0x50b2d1be>
+			streams:   0, words:     0
+		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic:v <0x04e59980>
+			streams:   0, words:     0
+		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric:v <0x59fc4900>
+			streams:   0, words:     0
+		worklib.logical_tile_clb_mode_default__fle:v <0x53ac8f02>
+			streams:   0, words:     0
+		worklib.logical_tile_clb_mode_clb_:v <0x743dda4f>
+			streams:   0, words:     0
+		worklib.grid_clb:v <0x4dac1040>
+			streams:   0, words:     0
+		worklib.direct_interc:v <0x7e57eff2>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffr_1:v <0x6c4995f7>
+			streams:   0, words:     0
+		worklib.GPIO_sky130_osu_sc_18T_hs__dffr_1_mem:v <0x1dfef36d>
+			streams:   0, words:     0
+		worklib.and2_autocheck_top_tb:v <0x73aaa447>
+			streams:  42, words: 4190953
+		worklib.const0:v <0x67c552d3>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__xor2_l:v <0x152452c5>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__xnor2_l:v <0x69f3ddfd>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__oai22_l:v <0x564a9bc6>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__oai21_l:v <0x1b857b5a>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dlat_l:v <0x6e7c5f11>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dlat_1:v <0x13f1ed7b>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffsr_l:v <0x5137b830>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffs_l:v <0x00bf93cf>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffs_1:v <0x3815dcd8>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffr_l:v <0x12b870a7>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dff_l:v <0x20fe65ae>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dff_1:v <0x58cb6fc9>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__aoi22_l:v <0x5d02e304>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__aoi21_l:v <0x64ea1bf9>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__addf_l:v <0x1535a049>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__addf_1:v <0x19069d79>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__mux2_1:v <0x35cd4f3c>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__mux2_1:v <0x06cef336>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                 13025      99
+		UDPs:                     2968      14
+		Primitives:              35036       6
+		Timing outputs:          13195      57
+		Registers:                1503      41
+		Scalar wires:            17322       -
+		Always blocks:               7       7
+		Initial blocks:           4734    4734
+		Cont. assignments:           7     131
+		Pseudo assignments:          3       -
+		Timing checks:           26944       -
+		Delayed tcheck signals:   3010    1496
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.sky130_osu_sc_18T_hs__addf_1:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm and2_autocheck_top_tb.c_fpga[0] and2_autocheck_top_tb.c_benchmark[0]
+Created probe 1
+xcelium> run
+Simulation start
+Simulation Succeed
+Simulation complete via $finish(1) at time 14614 NS + 0
+./SRC/and2_autocheck_top_tb.v:28628 	$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.03-s007: Exiting on Nov 03, 2024 at 03:43:34 CET  (total: 00:00:54)

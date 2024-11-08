@@ -1,0 +1,399 @@
+fpga_top:
+  grid_io_top:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_sky130_osu_sc_18T_hs__dffr_1_mem:
+          - sky130_osu_sc_18T_hs__dffr_1
+      direct_interc:
+  grid_io_right:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_sky130_osu_sc_18T_hs__dffr_1_mem:
+          - sky130_osu_sc_18T_hs__dffr_1
+      direct_interc:
+  grid_io_bottom:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_sky130_osu_sc_18T_hs__dffr_1_mem:
+          - sky130_osu_sc_18T_hs__dffr_1
+      direct_interc:
+  grid_io_left:
+    logical_tile_io_mode_io_:
+      logical_tile_io_mode_physical__iopad:
+        GPIO:
+        GPIO_sky130_osu_sc_18T_hs__dffr_1_mem:
+          - sky130_osu_sc_18T_hs__dffr_1
+      direct_interc:
+  grid_clb:
+    logical_tile_clb_mode_clb_:
+      logical_tile_clb_mode_default__fle:
+        logical_tile_clb_mode_default__fle_mode_physical__fabric:
+          logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic:
+            logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6:
+              frac_lut6:
+                sky130_osu_sc_18T_hs__or2_1:
+                sky130_osu_sc_18T_hs__inv_1:
+                sky130_osu_sc_18T_hs__buf_4:
+                frac_lut6_mux:
+                  - sky130_osu_sc_18T_hs__inv_1
+                  - sky130_osu_sc_18T_hs__mux2_1
+                  - sky130_osu_sc_18T_hs__buf_4
+              frac_lut6_sky130_osu_sc_18T_hs__dffr_1_mem:
+                - sky130_osu_sc_18T_hs__dffr_1
+            mux_tree_size2:
+              - sky130_osu_sc_18T_hs__inv_1
+              - const1
+              - sky130_osu_sc_18T_hs__mux2_1
+            mux_tree_size2_mem:
+              - sky130_osu_sc_18T_hs__dffr_1
+            direct_interc:
+          logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff:
+            - sky130_osu_sc_18T_hs__dffsr_1
+          mux_tree_size2:
+            - sky130_osu_sc_18T_hs__inv_1
+            - const1
+            - sky130_osu_sc_18T_hs__mux2_1
+          mux_tree_size2_mem:
+            - sky130_osu_sc_18T_hs__dffr_1
+          direct_interc:
+        direct_interc:
+      direct_interc:
+      mux_tree_size60:
+        - sky130_osu_sc_18T_hs__inv_1
+        - const1
+        - sky130_osu_sc_18T_hs__mux2_1
+      mux_tree_size60_mem:
+        - sky130_osu_sc_18T_hs__dffr_1
+  sb_0__0_:
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_0__1_:
+    mux_tree_tapbuf_size8:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size7:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_0__6_:
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_1__0_:
+    mux_tree_tapbuf_size5:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size5_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size8:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size7:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size9:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size9_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_1__1_:
+    mux_tree_tapbuf_size12:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size12_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size9:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size9_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_1__6_:
+    mux_tree_tapbuf_size8:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size7:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_6__0_:
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_6__1_:
+    mux_tree_tapbuf_size9:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size9_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size7:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size7_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size8:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size8_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  sb_6__6_:
+    mux_tree_tapbuf_size3:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size3_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  cbx_1__0_:
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  cbx_1__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  cbx_1__6_:
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  cby_0__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  cby_1__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+  cby_6__1_:
+    mux_tree_tapbuf_size4:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size4_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
+    mux_tree_tapbuf_size2:
+      - sky130_osu_sc_18T_hs__inv_1
+      - const1
+      - sky130_osu_sc_18T_hs__inv_4
+      - sky130_osu_sc_18T_hs__mux2_1
+    mux_tree_tapbuf_size2_mem:
+      - sky130_osu_sc_18T_hs__dffr_1
