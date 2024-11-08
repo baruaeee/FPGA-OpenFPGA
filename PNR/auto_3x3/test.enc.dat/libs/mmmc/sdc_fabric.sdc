@@ -1,0 +1,1 @@
+/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3/SDC/sdc_fabric.sdc

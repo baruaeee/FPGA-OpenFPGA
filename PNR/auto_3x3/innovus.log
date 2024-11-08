@@ -4,12 +4,12 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v22.33-s094_1, built Fri Aug 25 16:48:21 PDT 2023
 Options:	
-Date:		Sat Nov  2 21:09:27 2024
+Date:		Mon Nov  4 01:02:29 2024
 Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
 OS:		Oracle Linux Server 8.10
 
 License:
-		[21:09:27.434092] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+		[01:02:29.434036] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
 		invs	Innovus Implementation System	22.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
@@ -101,8 +101,8 @@ Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_si
 <CMD> set lefdefInputCheckColoredShape 0
 <CMD> set load_netlist_ignore_undefined_cell 1
 <CMD> init_design
-#% Begin Load MMMC data ... (date=11/02 21:10:45, mem=1425.9M)
-#% End Load MMMC data ... (date=11/02 21:10:45, total cpu=0:00:00.0, real=0:00:00.0, peak res=1427.1M, current mem=1427.1M)
+#% Begin Load MMMC data ... (date=11/04 01:03:13, mem=1404.7M)
+#% End Load MMMC data ... (date=11/04 01:03:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1405.5M, current mem=1405.5M)
 RC_CORNER
 
 Loading LEF file lef/sky130_fd_sc_hd.tlef ...
@@ -153,17 +153,17 @@ Reading MIN_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3/li
 **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3/lib/ff/sky130_fd_sc_hd__ff_n40C_1v76.lib)
 Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
 Read 428 cells in library 'sky130_fd_sc_hd__ff_n40C_1v76' 
-*** End library_loading (cpu=0.01min, real=0.02min, mem=44.5M, fe_cpu=0.39min, fe_real=1.32min, fe_mem=1490.4M) ***
-#% Begin Load netlist data ... (date=11/02 21:10:46, mem=1447.4M)
-*** Begin netlist parsing (mem=1490.4M) ***
+*** End library_loading (cpu=0.01min, real=0.00min, mem=44.5M, fe_cpu=0.32min, fe_real=0.75min, fe_mem=1490.8M) ***
+#% Begin Load netlist data ... (date=11/04 01:03:14, mem=1426.1M)
+*** Begin netlist parsing (mem=1490.8M) ***
 Created 428 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist 'SRC/post_synth_fabric_netlist.v'
 
-*** Memory Usage v#1 (Current mem = 1499.438M, initial mem = 635.109M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1499.4M) ***
-#% End Load netlist data ... (date=11/02 21:10:46, total cpu=0:00:00.1, real=0:00:00.0, peak res=1472.6M, current mem=1472.6M)
+*** Memory Usage v#1 (Current mem = 1498.766M, initial mem = 635.109M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1498.8M) ***
+#% End Load netlist data ... (date=11/04 01:03:14, total cpu=0:00:00.1, real=0:00:01.0, peak res=1450.8M, current mem=1450.8M)
 Set top cell to fpga_top.
 Hooked 856 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -174,7 +174,7 @@ Building hierarchical netlist for Cell fpga_top ...
 ** info: there are 1582 modules.
 ** info: there are 11648 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1564.352M, initial mem = 635.109M) ***
+*** Memory Usage v#1 (Current mem = 1565.680M, initial mem = 635.109M) ***
 Adjust met3 preferred direction offset from 0.34 to 0.17.
 Adjust met4 preferred direction offset from 0.46 to 0.23.
 Adjust met5 preferred direction offset from 1.7 to 0.17.
@@ -184,24 +184,13 @@ Generated pitch 0.69 in met4 is different from 0.92 defined in technology file i
 Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
 Extraction setup Started 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
-**WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
-Type 'man IMPEXT-2773' for more detail.
-**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
-Type 'man IMPEXT-2773' for more detail.
-**WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
-Type 'man IMPEXT-2773' for more detail.
-**WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
-Type 'man IMPEXT-2773' for more detail.
-**WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
-Type 'man IMPEXT-2773' for more detail.
-**WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
-Type 'man IMPEXT-2773' for more detail.
-**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 12.2 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
-**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
-**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
-**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
-**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
-**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.0285 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+techlef/qrcTechFile
+Generating auto layer map file.
+Completed (cpu: 0:00:01.7 real: 0:00:02.0)
+Set Shrink Factor to 1.00000
 Summary of Active RC-Corners : 
  
  Analysis View: VIEW_SETUP
@@ -214,11 +203,12 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
-    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
-    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: 'techlef/qrcTechFile'
  
  Analysis View: VIEW_HOLD
     RC-Corner Name        : RC_CORNER
@@ -230,24 +220,26 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
-    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
-    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: 'techlef/qrcTechFile'
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
 *Info: initialize multi-corner CTS.
 Reading timing constraints file './SDC/sdc_fabric.sdc' ...
-Current (total cpu=0:00:24.5, real=0:01:20, peak res=1896.8M, current mem=1896.8M)
+Current (total cpu=0:00:22.0, real=0:00:48.0, peak res=1908.2M, current mem=1908.2M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ./SDC/sdc_fabric.sdc, Line 9).
 
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ./SDC/sdc_fabric.sdc, Line 10).
 
 fpga_top
 INFO (CTE): Reading of timing constraints file ./SDC/sdc_fabric.sdc completed, with 2 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.3, real=0:00:00.0, peak res=1945.1M, current mem=1945.1M)
-Current (total cpu=0:00:24.8, real=0:01:20, peak res=1945.1M, current mem=1945.1M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.3, real=0:00:01.0, peak res=1956.2M, current mem=1956.2M)
+Current (total cpu=0:00:22.3, real=0:00:49.0, peak res=1956.2M, current mem=1956.2M)
 Total number of combinational cells: 319
 Total number of sequential cells: 68
 Total number of tristate cells: 13
@@ -276,15 +268,11 @@ Total number of identified unusable delay cells: 0
 Severity  ID               Count  Summary                                  
 WARNING   IMPLF-201            5  Pin '%s' in macro '%s' has no ANTENNADIF...
 WARNING   IMPLF-108            1  There is no overlap layer defined in any...
-WARNING   IMPEXT-2766          6  The sheet resistance for layer %s is not...
-WARNING   IMPEXT-2773          6  The via resistance between layers %s and...
 WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
 WARNING   TECHLIB-302         24  No function defined for cell '%s'. The c...
-*** Message Summary: 44 warning(s), 0 error(s)
+*** Message Summary: 32 warning(s), 0 error(s)
 
-<CMD> getIoFlowFlag
-<CMD> setIoFlowFlag 0
-<CMD> floorPlan -site unithd -r 0.987149575973 0.699994 8 8 8 8
+<CMD> floorPlan -coreMarginsBy io -r 0.987149575973 0.7 8 8 8 8
 Adjust met3 preferred direction offset from 0.34 to 0.17.
 Adjust met4 preferred direction offset from 0.46 to 0.23.
 Adjust met5 preferred direction offset from 1.7 to 0.17.
@@ -293,38 +281,13 @@ Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in
 Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
-<CMD> uiSetTool select
-<CMD> getIoFlowFlag
-<CMD> fit
-<CMD> set sprCreateIeRingOffset 1.0
-<CMD> set sprCreateIeRingThreshold 1.0
-<CMD> set sprCreateIeRingJogDistance 1.0
-<CMD> set sprCreateIeRingLayers {}
-<CMD> set sprCreateIeRingOffset 1.0
-<CMD> set sprCreateIeRingThreshold 1.0
-<CMD> set sprCreateIeRingJogDistance 1.0
-<CMD> set sprCreateIeRingLayers {}
-<CMD> set sprCreateIeStripeWidth 10.0
-<CMD> set sprCreateIeStripeThreshold 1.0
-<CMD> set sprCreateIeStripeWidth 10.0
-<CMD> set sprCreateIeStripeThreshold 1.0
-<CMD> set sprCreateIeRingOffset 1.0
-<CMD> set sprCreateIeRingThreshold 1.0
-<CMD> set sprCreateIeRingJogDistance 1.0
-<CMD> set sprCreateIeRingLayers {}
-<CMD> set sprCreateIeStripeWidth 10.0
-<CMD> set sprCreateIeStripeThreshold 1.0
-<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer met5 -stacked_via_bottom_layer li1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
-The ring targets are set to core/block ring wires.
-addRing command will consider rows while creating rings.
-addRing command will disallow rings to go over rows.
-addRing command will ignore shorts while creating rings.
-<CMD> addRing -nets {VGND VPWR} -type core_rings -follow core -layer {top met4 bottom met4 left met5 right met5} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+<CMD> addRing -nets {VPWR VGND} -type core_rings -follow core -layer {top met4 bottom met4 left met5 right met5} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+#% Begin addRing (date=11/04 01:03:55, mem=2016.5M)
 
 
-viaInitial starts at Sat Nov  2 21:11:59 2024
-viaInitial ends at Sat Nov  2 21:11:59 2024
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2173.2M)
+viaInitial starts at Mon Nov  4 01:03:55 2024
+viaInitial ends at Mon Nov  4 01:03:55 2024
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2186.9M)
 Ring generation is complete.
 vias are now being generated.
 addRing created 8 wires.
@@ -336,41 +299,14 @@ ViaGen created 8 vias, deleted 0 via to avoid violation.
 |  via4  |        8       |        0       |
 |  met5  |        4       |       NA       |
 +--------+----------------+----------------+
-<CMD> set sprCreateIeRingOffset 1.0
-<CMD> set sprCreateIeRingThreshold 1.0
-<CMD> set sprCreateIeRingJogDistance 1.0
-<CMD> set sprCreateIeRingLayers {}
-<CMD> set sprCreateIeRingOffset 1.0
-<CMD> set sprCreateIeRingThreshold 1.0
-<CMD> set sprCreateIeRingJogDistance 1.0
-<CMD> set sprCreateIeRingLayers {}
-<CMD> set sprCreateIeStripeWidth 10.0
-<CMD> set sprCreateIeStripeThreshold 1.0
-<CMD> set sprCreateIeStripeWidth 10.0
-<CMD> set sprCreateIeStripeThreshold 1.0
-<CMD> set sprCreateIeRingOffset 1.0
-<CMD> set sprCreateIeRingThreshold 1.0
-<CMD> set sprCreateIeRingJogDistance 1.0
-<CMD> set sprCreateIeRingLayers {}
-<CMD> set sprCreateIeStripeWidth 10.0
-<CMD> set sprCreateIeStripeThreshold 1.0
-<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer met5 -stacked_via_bottom_layer li1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
-addStripe will allow jog to connect padcore ring and block ring.
+#% End addRing (date=11/04 01:03:56, total cpu=0:00:00.1, real=0:00:01.0, peak res=2019.7M, current mem=2019.7M)
+<CMD> addStripe -nets {VPWR VGND} -layer met4 -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 70 -start_from left -start_offset 60 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit li1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit li1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=11/04 01:03:56, mem=2019.7M)
 
-Stripes will stop at the boundary of the specified area.
-When breaking rings, the power planner will consider the existence of blocks.
-Stripes will not extend to closest target.
-The power planner will set stripe antenna targets to none (no trimming allowed).
-Stripes will not be created over regions without power planning wires.
-The entire stripe set will break at the domain if one of the nets is not in the domain.
-addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
-Offset for stripe breaking is set to 0.
-<CMD> addStripe -nets {VGND VPWR} -layer met5 -direction horizontal -width 1.8 -spacing 1.8 -set_to_set_distance 70 -start_from left -start_offset 60 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit li1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit li1 -use_wire_group 0 -snap_wire_center_to_grid None
-
-Initialize fgc environment(mem: 2175.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
+Initialize fgc environment(mem: 2186.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2186.9M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2186.9M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2186.9M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2186.9M)
 Starting stripe generation ...
 Non-Default Mode Option Settings :
   NONE
@@ -385,40 +321,10 @@ ViaGen created 20 vias, deleted 0 via to avoid violation.
 |  via4  |       20       |        0       |
 |  met5  |       10       |       NA       |
 +--------+----------------+----------------+
-<CMD> undo
-<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer met5 -stacked_via_bottom_layer li1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
-addStripe will allow jog to connect padcore ring and block ring.
-
-Stripes will stop at the boundary of the specified area.
-When breaking rings, the power planner will consider the existence of blocks.
-Stripes will not extend to closest target.
-The power planner will set stripe antenna targets to none (no trimming allowed).
-Stripes will not be created over regions without power planning wires.
-The entire stripe set will break at the domain if one of the nets is not in the domain.
-addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
-Offset for stripe breaking is set to 0.
-<CMD> addStripe -nets {VGND VPWR} -layer met5 -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 70 -start_from left -start_offset 60 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit li1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit li1 -use_wire_group 0 -snap_wire_center_to_grid None
-
-Initialize fgc environment(mem: 2175.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2175.9M)
-Starting stripe generation ...
-Non-Default Mode Option Settings :
-  NONE
-Stripe generation is complete.
-vias are now being generated.
-addStripe created 10 wires.
-ViaGen created 20 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  via4  |       20       |        0       |
-|  met5  |       10       |       NA       |
-+--------+----------------+----------------+
-<CMD> setSrouteMode -viaConnectToShape { noshape }
+#% End addStripe (date=11/04 01:03:56, total cpu=0:00:00.1, real=0:00:00.0, peak res=2021.1M, current mem=2021.1M)
 <CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { li1(1) met5(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { li1(1) met5(6) } -nets { VGND VPWR } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { li1(1) met5(6) }
-*** Begin SPECIAL ROUTE on Sat Nov  2 21:12:59 2024 ***
+#% Begin sroute (date=11/04 01:03:56, mem=2021.1M)
+*** Begin SPECIAL ROUTE on Mon Nov  4 01:03:56 2024 ***
 SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3
 SPECIAL ROUTE ran on machine: cae-europractice1.othr.de (Linux 5.15.0-210.163.7.el8uek.x86_64 x86_64 3.59Ghz)
 
@@ -435,19 +341,19 @@ srouteCrossoverViaTopLayer set to 6
 srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
 srouteFollowCorePinEnd set to 3
 srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
 sroutePadPinAllPorts set to true
 sroutePreserveExistingRoutes set to true
 srouteRoutePowerBarPortOnBothDir set to true
 srouteStopBlockPin set to "nearestTarget"
 srouteTopLayerLimit set to 6
 srouteTopTargetLayerLimit set to 6
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3687.00 megs.
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3696.00 megs.
 
 Reading DB technology information...
 Finished reading DB technology information.
 Reading floorplan and netlist information...
 Finished reading floorplan and netlist information.
+**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
 Read in 12 layers, 6 routing layers, 0 overlap layer
 Read in 437 macros, 14 used
 Read in 13 components
@@ -495,7 +401,7 @@ CPU time for VGND FollowPin 0 seconds
   Number of Pad ports routed: 0
   Number of Power Bump ports routed: 0
   Number of Followpin connections: 147
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3699.00 megs.
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3706.00 megs.
 
 
 
@@ -504,56 +410,38 @@ End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3699.00 megs.
 Pin and blockage extraction finished
 
 sroute created 441 wires.
-ViaGen created 1176 vias, deleted 0 via to avoid violation.
+ViaGen created 3381 vias, deleted 0 via to avoid violation.
 +--------+----------------+----------------+
 |  Layer |     Created    |     Deleted    |
 +--------+----------------+----------------+
 |  met1  |       441      |       NA       |
-|   via  |       294      |        0       |
-|  via2  |       294      |        0       |
-|  via3  |       294      |        0       |
+|   via  |      1029      |        0       |
+|  via2  |      1029      |        0       |
+|  via3  |      1029      |        0       |
 |  via4  |       294      |        0       |
 +--------+----------------+----------------+
-<CMD> zoomBox -15.43100 421.62500 33.85900 377.59300
-<CMD> zoomBox -1.72200 414.78400 12.30700 389.40600
-<CMD> zoomBox -10.05300 387.98900 23.29800 417.84500
-<CMD> zoomBox -11.43100 386.32100 27.80500 421.44600
-<CMD> zoomBox -13.05300 384.35900 33.10800 425.68300
-<CMD> zoomBox -19.84500 376.14000 55.32200 443.43100
-<CMD> fit
-<CMD> zoomBox 65.40500 418.33900 83.80700 329.61700
-<CMD> fit
-<CMD> zoomBox 430.15200 -16.07200 334.85800 10.21700
-<CMD> fit
-**WARN: (IMPTCM-77):	Option "-allowSwapping" for command getScanReorderMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
-<CMD> setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
-<CMD> setEndCapMode -reset
-<CMD> setEndCapMode -boundary_tap false
-<CMD> setNanoRouteMode -quiet -drouteAutoStop 0
-<CMD> setNanoRouteMode -quiet -drouteFixAntenna 0
-<CMD> setNanoRouteMode -quiet -droutePostRouteSwapVia {}
-<CMD> setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
-<CMD> setNanoRouteMode -quiet -drouteUseMultiCutViaEffort {}
-<CMD> setNanoRouteMode -quiet -drouteOnGridOnly 0
-#WARNING (NRIF-67) In option 'OnGridOnly 0', 0 is an unknown type. It will be ignored.
-#WARNING (NRIF-68) Option 'OnGridOnly 0' did not specify a correct type. It will be ignored.
-<CMD> setNanoRouteMode -quiet -routeIgnoreAntennaTopCellPin 0
-<CMD> setNanoRouteMode -quiet -timingEngine {}
-<CMD> setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
-<CMD> setPlaceMode -reset
-<CMD> setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+#% End sroute (date=11/04 01:03:56, total cpu=0:00:00.3, real=0:00:00.0, peak res=2047.2M, current mem=2038.0M)
+<CMD> setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
 **WARN: (IMPSP-105):	'setPlaceMode -maxRouteLayer' will become obsolete from next release. Use 'setRouteMode -earlyGlobalMaxRouteLayer N' to set maximum routing layer.Type 'man IMPSP-105' for more detail.
-**WARN: (IMPTCM-77):	Option "-allowSwapping" for command getScanReorderMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+<CMD> setDesignMode -process 130 -flowEffort standard
+##  Process: 130           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 130nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.4.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
 <CMD> setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 Setting releaseMultiCpuLicenseMode to false.
-<CMD> setDistributeHost -local
-The timeout for a remote job to respond is 3600 seconds.
-Submit command for task runs will be: local
 <CMD> setPlaceMode -fp false
 <CMD> place_design
 **WARN: (IMPSP-9525):	setPlaceMode -maxRouteLayer will overwrite setTrialRouteMode -maxRouteLayer inside placeDesign.
 **WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
-*** placeDesign #1 [begin] : totSession cpu/real = 0:00:50.6/0:04:49.7 (0.2), mem = 2185.3M
+*** placeDesign #1 [begin] : totSession cpu/real = 0:00:34.6/0:02:55.8 (0.2), mem = 2201.3M
 Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 *** Starting placeDesign default flow ***
@@ -573,22 +461,22 @@ Set Default Net Delay as 0 ps.
 Set Default Net Load as 0 pF. 
 Set Default Input Pin Transition as 1 ps.
 **INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.821090 path_group
+Effort level <high> specified for reg2reg_tmp.1505810 path_group
 AAE_INFO: opIsDesignInPostRouteState() is 0
-AAE DB initialization (MEM=2355.31 CPU=0:00:00.0 REAL=0:00:00.0) 
+AAE DB initialization (MEM=2338.28 CPU=0:00:00.0 REAL=0:00:00.0) 
 #################################################################################
 # Design Stage: PreRoute
 # Design Name: fpga_top
-# Design Mode: 90nm
+# Design Mode: 130nm
 # Analysis Mode: MMMC Non-OCV 
 # Parasitics Mode: No SPEF/RCDB 
 # Signoff Settings: SI Off 
 #################################################################################
 Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (8 T). (MEM=2369.59)
+Start delay calculation (fullDC) (8 T). (MEM=2352.55)
 Total number of fetched objects 10216
-End delay calculation. (MEM=3012.13 CPU=0:00:01.2 REAL=0:00:01.0)
-End delay calculation (fullDC). (MEM=3012.13 CPU=0:00:01.5 REAL=0:00:01.0)
+End delay calculation. (MEM=3013.64 CPU=0:00:01.1 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3013.64 CPU=0:00:01.4 REAL=0:00:01.0)
 **INFO: Disable pre-place timing setting for timing analysis
 Set Using Default Delay Limit as 1000.
 Set Default Net Delay as 1000 ps.
@@ -598,12 +486,12 @@ Set Default Net Load as 0.5 pF.
 Deleted 0 physical inst  (cell - / prefix -).
 INFO: #ExclusiveGroups=0
 INFO: There are no Exclusive Groups.
-*** Starting "NanoPlace(TM) placement v#7 (mem=2954.6M)" ...
+*** Starting "NanoPlace(TM) placement v#7 (mem=2948.1M)" ...
 Estimated loop count for BSM: 19860
 *** Build Buffered Sizing Timing Model
-(cpu=0:00:00.7 mem=3018.6M) ***
+(cpu=0:00:00.7 mem=3012.1M) ***
 *** Build Virtual Sizing Timing Model
-(cpu=0:00:00.8 mem=3018.6M) ***
+(cpu=0:00:00.8 mem=3012.1M) ***
 No user-set net weight.
 Net fanout histogram:
 2		: 6650 (79.1%) nets
@@ -643,7 +531,7 @@ Innovus terminated by internal (SEGV) error/signal.
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus[0xb81d63c]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN15goSignalHandler13executeActionEiP9siginfo_tPv+0x46)[0xfd724b6]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN15goSignalHandler16executeSigActionEiP9siginfo_tPv+0x9b)[0xfd725bb]
-/lib64/libpthread.so.0(+0x12d7f)[0x7f798540fd7f]
+/lib64/libpthread.so.0(+0x12d7f)[0x7fe4f3a55d7f]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN7TATimer30getFromPhaseTransformAndAdjustERK14TATimingPinPtrP7TAPhase14taanalysistype16tatransitiontypeRS4_R10TAPropTimeR12TALinkedList13TADelayArcPtr9tabooleanS8_SD_S4_SD_P10TATimeList26ta_use_zero_delays_optionsPSD_8pathtype+0x480)[0x1efcf930]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN10TATimeList11propagateATE13TADelayArcPtrRS_9taboolean14TATimingPinPtrS3_26ta_use_zero_delays_optionsS2_S2_PA2_A2_fPA2_A2_A2_10TAPropTimeSC_S2_S3_8pathtypeS0_P12TADerateInfo13taarcproptypeP19TATimingDerateCache+0x2cb0)[0x1f0bbf40]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN7TATimer16calculateArrivalERK13TADelayArcPtrR10TATimeList9tabooleanS5_RS5_PS3_26ta_use_zero_delays_optionsS5_S5_PA2_A2_fPA2_A2_A2_10TAPropTimeSG_8pathtypeS5_S5_S0_14TATimingPinPtrSI_PS5_P17TAClockDefinitionS5_P12TADerateInfoS5_S5_P19TATimingDerateCacheS5_S5_S5_S5_P7TAPhaseP16TALatchInfoCache+0x1a8d)[0x1f18708d]
@@ -655,126 +543,153 @@ Innovus terminated by internal (SEGV) error/signal.
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN14TAThreadWorker4loopEv+0x8b)[0x20b4cd9b]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN8TAThread3runEP14TAThreadWorker+0x10)[0x20b4cea0]
 /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus[0xbc01ec4]
-/lib64/libpthread.so.0(+0x81d9)[0x7f79854051d9]
-/lib64/libc.so.6(clone+0x42)[0x7f79848488d2]
+/lib64/libpthread.so.0(+0x81d9)[0x7fe4f3a4b1d9]
+/lib64/libc.so.6(clone+0x42)[0x7fe4f2e8e8d2]
 ========================================
                pstack
 ========================================
-Thread 50 (Thread 0x7f78dad44700 (LWP 821724)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 50 (Thread 0x7fe44ae7e700 (LWP 1507161)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 49 (Thread 0x7f78dbd45700 (LWP 821723)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 49 (Thread 0x7fe44be7f700 (LWP 1507160)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 48 (Thread 0x7f78dcd46700 (LWP 821722)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 48 (Thread 0x7fe44ce80700 (LWP 1507159)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 47 (Thread 0x7f78ddd47700 (LWP 821721)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 47 (Thread 0x7fe44de81700 (LWP 1507158)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 46 (Thread 0x7f78ded48700 (LWP 821720)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 46 (Thread 0x7fe44ee82700 (LWP 1507157)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 45 (Thread 0x7f78dfd49700 (LWP 821719)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 45 (Thread 0x7fe44fe83700 (LWP 1507156)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 44 (Thread 0x7f78e0d4a700 (LWP 821718)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 44 (Thread 0x7fe450e84700 (LWP 1507155)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 43 (Thread 0x7f78e1d4b700 (LWP 821717)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 43 (Thread 0x7fe451e85700 (LWP 1507154)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 42 (Thread 0x7f78e4550700 (LWP 821700)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 42 (Thread 0x7fe45468a700 (LWP 1507136)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 41 (Thread 0x7f78e4d51700 (LWP 821699)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 41 (Thread 0x7fe454e8b700 (LWP 1507135)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 40 (Thread 0x7f78e5552700 (LWP 821698)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 40 (Thread 0x7fe45568c700 (LWP 1507134)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 39 (Thread 0x7f78e5d53700 (LWP 821697)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 39 (Thread 0x7fe455e8d700 (LWP 1507133)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 38 (Thread 0x7f78e6554700 (LWP 821696)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 38 (Thread 0x7fe45668e700 (LWP 1507132)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 37 (Thread 0x7f78e6d55700 (LWP 821695)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 37 (Thread 0x7fe456e8f700 (LWP 1507131)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 36 (Thread 0x7f78f721f700 (LWP 821694)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 36 (Thread 0x7fe467359700 (LWP 1507130)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 35 (Thread 0x7f78f8267700 (LWP 821693)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 35 (Thread 0x7fe4683a1700 (LWP 1507129)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 34 (Thread 0x7f78fd05b700 (LWP 821667)):
-#0  0x00007f7984916ec2 in waitpid () from /lib64/libc.so.6
-#1  0x00007f798486a807 in do_system () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 34 (Thread 0x7fe46b58d700 (LWP 1507101)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
+#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
+#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
+#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
+#5  0x000000000bc01ec5 in create_head(void*) ()
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 33 (Thread 0x7fe46bd8e700 (LWP 1507100)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
+#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
+#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
+#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
+#5  0x000000000bc01ec5 in create_head(void*) ()
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 32 (Thread 0x7fe46c58f700 (LWP 1507099)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
+#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
+#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
+#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
+#5  0x000000000bc01ec5 in create_head(void*) ()
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 31 (Thread 0x7fe46ee95700 (LWP 1507098)):
+#0  0x00007fe4f2f5cec2 in waitpid () from /lib64/libc.so.6
+#1  0x00007fe4f2eb0807 in do_system () from /lib64/libc.so.6
 #2  0x000000001e51fbd2 in syStackTraceDump(_IO_FILE*, bool) ()
 #3  0x000000001e51ffd9 in syStackTrace ()
 #4  0x000000000b81d63d in rdaiErrorHandler1(int) ()
@@ -792,251 +707,224 @@ Thread 34 (Thread 0x7f78fd05b700 (LWP 821667)):
 #16 0x0000000020b4cd9c in TAThreadWorker::loop() ()
 #17 0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #18 0x000000000bc01ec5 in create_head(void*) ()
-#19 0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#20 0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 33 (Thread 0x7f78fd85c700 (LWP 821666)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#19 0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#20 0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 30 (Thread 0x7fe46d692700 (LWP 1507097)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 32 (Thread 0x7f78fe05d700 (LWP 821665)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 29 (Thread 0x7fe46de93700 (LWP 1507096)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 31 (Thread 0x7f78ff75b700 (LWP 821664)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 28 (Thread 0x7fe46e694700 (LWP 1507095)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 30 (Thread 0x7f7900261700 (LWP 821663)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 27 (Thread 0x7fe46ce91700 (LWP 1507094)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 29 (Thread 0x7f7903b3f700 (LWP 821662)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 28 (Thread 0x7f7901263700 (LWP 821661)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 27 (Thread 0x7f78fea5e700 (LWP 821660)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 26 (Thread 0x7f79055b8700 (LWP 821561)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 26 (Thread 0x7fe47210a700 (LWP 1506464)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 25 (Thread 0x7f7905db9700 (LWP 821560)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 25 (Thread 0x7fe47290b700 (LWP 1506463)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 24 (Thread 0x7f79065ba700 (LWP 821559)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 24 (Thread 0x7fe47310c700 (LWP 1506462)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 23 (Thread 0x7f7906dbb700 (LWP 821558)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 23 (Thread 0x7fe47390d700 (LWP 1506461)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 22 (Thread 0x7f79075bc700 (LWP 821557)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 22 (Thread 0x7fe47410e700 (LWP 1506460)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 21 (Thread 0x7f7907dbd700 (LWP 821556)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 21 (Thread 0x7fe47490f700 (LWP 1506459)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 20 (Thread 0x7f79085be700 (LWP 821555)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 20 (Thread 0x7fe475110700 (LWP 1506458)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 19 (Thread 0x7f7908dbf700 (LWP 821554)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 19 (Thread 0x7fe475911700 (LWP 1506457)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 18 (Thread 0x7f79095c0700 (LWP 821553)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 18 (Thread 0x7fe476112700 (LWP 1506456)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 17 (Thread 0x7f7909dc1700 (LWP 821552)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 17 (Thread 0x7fe476913700 (LWP 1506455)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 16 (Thread 0x7f790a5c2700 (LWP 821551)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 16 (Thread 0x7fe477114700 (LWP 1506454)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 15 (Thread 0x7f790adc3700 (LWP 821550)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 15 (Thread 0x7fe477915700 (LWP 1506453)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 14 (Thread 0x7f7927a40700 (LWP 821549)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7fe496448700 (LWP 1506452)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 13 (Thread 0x7f792723f700 (LWP 821548)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7fe495c47700 (LWP 1506451)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 12 (Thread 0x7f7926a3e700 (LWP 821547)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7fe495446700 (LWP 1506450)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 11 (Thread 0x7f792623d700 (LWP 821546)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7fe494c45700 (LWP 1506449)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 10 (Thread 0x7f7937ce7700 (LWP 821373)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f79891f0dfb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f7988e3c4f5 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#3  0x00007f79891f065b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7fe4a6421700 (LWP 1506197)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4f7836dfb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fe4f74824f5 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007fe4f783665b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 9 (Thread 0x7f7960395700 (LWP 821353)):
-#0  0x00007f7984941c36 in ppoll () from /lib64/libc.so.6
-#1  0x00007f7989411a99 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f7989412f94 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#3  0x00007f79893c3abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#4  0x00007f79891ec551 in QThread::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#5  0x00007f7972754e26 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
-#6  0x00007f79891f065b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7fe4ce9db700 (LWP 1506072)):
+#0  0x00007fe4f2f87c36 in ppoll () from /lib64/libc.so.6
+#1  0x00007fe4f7a57a99 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fe4f7a58f94 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#3  0x00007fe4f7a09abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x00007fe4f7832551 in QThread::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x00007fe4e0d9ae26 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
+#6  0x00007fe4f783665b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
 #7  0x000000000bc01ec5 in create_head(void*) ()
-#8  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#9  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 8 (Thread 0x7f7961229700 (LWP 821352)):
-#0  0x00007f798485e3cc in sigtimedwait () from /lib64/libc.so.6
-#1  0x00007f798540f90c in sigwait () from /lib64/libpthread.so.0
+#8  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#9  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7fe4cf86f700 (LWP 1506071)):
+#0  0x00007fe4f2ea43cc in sigtimedwait () from /lib64/libc.so.6
+#1  0x00007fe4f3a5590c in sigwait () from /lib64/libpthread.so.0
 #2  0x000000000b81aea0 in ctrlCHandle(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 7 (Thread 0x7f79622cb700 (LWP 821285)):
-#0  0x00007f798494427f in select () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7fe4d0911700 (LWP 1506003)):
+#0  0x00007fe4f2f8a27f in select () from /lib64/libc.so.6
 #1  0x00000000306a7028 in NotifierThreadProc ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 6 (Thread 0x7f7971a2f700 (LWP 821284)):
-#0  0x00007f7984941b41 in poll () from /lib64/libc.so.6
-#1  0x00007f79862fd6cf in _xcb_conn_wait () from /lib64/libxcb.so.1
-#2  0x00007f79862ff35a in xcb_wait_for_event () from /lib64/libxcb.so.1
-#3  0x00007f7972849709 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
-#4  0x00007f79891f065b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7fe4e0075700 (LWP 1506002)):
+#0  0x00007fe4f2f87b41 in poll () from /lib64/libc.so.6
+#1  0x00007fe4f49436cf in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007fe4f494535a in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007fe4e0e8f709 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007fe4f783665b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 5 (Thread 0x7f7973584700 (LWP 821215)):
-#0  0x00007f7984917118 in nanosleep () from /lib64/libc.so.6
-#1  0x00007f798491701e in sleep () from /lib64/libc.so.6
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7fe4e1bca700 (LWP 1505935)):
+#0  0x00007fe4f2f5d118 in nanosleep () from /lib64/libc.so.6
+#1  0x00007fe4f2f5d01e in sleep () from /lib64/libc.so.6
 #2  0x000000001e53b932 in syiPeakMem(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 4 (Thread 0x7f7974586700 (LWP 821213)):
-#0  0x00007f798540f210 in nanosleep () from /lib64/libpthread.so.0
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7fe4e2bcc700 (LWP 1505933)):
+#0  0x00007fe4f3a55210 in nanosleep () from /lib64/libpthread.so.0
 #1  0x000000000d7476cd in rdaiLicRecheck(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 3 (Thread 0x7f79759f2700 (LWP 821209)):
-#0  0x00007f798494427f in select () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7fe4e4038700 (LWP 1505929)):
+#0  0x00007fe4f2f8a27f in select () from /lib64/libc.so.6
 #1  0x000000002edc5cdb in ProcessInfo::sampleUsage(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 2 (Thread 0x7f79761f3700 (LWP 821208)):
-#0  0x00007f798540ec67 in accept () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7fe4e4839700 (LWP 1505928)):
+#0  0x00007fe4f3a54c67 in accept () from /lib64/libpthread.so.0
 #1  0x000000002edce077 in ProcessInfo::handleConnection(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-Thread 1 (Thread 0x7f797da00080 (LWP 821090)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7fe4ec046080 (LWP 1505810)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4c976 in TAThreadJobPool::add(void*, unsigned int, taboolean) ()
 #3  0x0000000020b5379f in TACompactListJob::run(TACompactListJob::TACurrentProcessingType, TALinkedList&, bool) ()
@@ -1059,95 +947,78 @@ Thread 1 (Thread 0x7f797da00080 (LWP 821090)):
 #20 0x000000000ba98522 in rdaiPlaceCmd ()
 #21 0x000000003059e65b in TclInvokeStringCommand ()
 #22 0x00000000305a3152 in TclNRRunCallbacks ()
-#23 0x00000000305a5364 in TclEvalEx ()
-#24 0x000000003066e251 in TclSubstTokens ()
-#25 0x00000000305a51ed in TclEvalEx ()
-#26 0x00000000305a5db3 in Tcl_EvalEx ()
-#27 0x00000000305a5dd6 in Tcl_Eval ()
-#28 0x000000001c8297e3 in qtfTclEval(char*, bool, bool) ()
-#29 0x000000001c7caf6a in qtfsItem::fUpdateVar() ()
-#30 0x00007f79893edc55 in QMetaObject::activate(QObject*, int, int, void**) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#31 0x00007f7988ddce42 in QAbstractButton::clicked(bool) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#32 0x00007f7988ddd02a in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#33 0x00007f7988dde30f in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#34 0x00007f7988dde4ab in QAbstractButton::mouseReleaseEvent(QMouseEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#35 0x00007f7988c63bc6 in QWidget::event(QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#36 0x00007f7988c235f2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#37 0x00007f7988c2d8d0 in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#38 0x00007f79893c502a in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#39 0x00007f7988c2be97 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#40 0x00007f7988c7efcb in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#41 0x00007f7988c8189c in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#42 0x00007f7988c235f2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#43 0x00007f7988c2ca1a in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#44 0x00007f79893c502a in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#45 0x00007f7989834908 in QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
-#46 0x00007f798983684b in QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
-#47 0x00007f798980f6bc in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
-#48 0x0000000030202856 in QUnixEventDispatcherQPA::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
-#49 0x00007f798a1f02ea in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#50 0x00007f798a1ed0ee in tcl_dispatch_qt () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#51 0x0000000030667dd1 in Tcl_DoOneEvent ()
-#52 0x00007f798a1f023a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#53 0x00007f79893c3abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#54 0x00007f79893cb27e in QCoreApplication::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#55 0x00007f798a1ef897 in TqApplication::exec() () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#56 0x000000000b8f2adc in edi_app_init(Tcl_Interp*) ()
-#57 0x000000003066257c in Tcl_MainEx ()
-#58 0x0000000006b69781 in main ()
+#23 0x0000000030640e14 in Tcl_RecordAndEvalObj ()
+#24 0x0000000030640f89 in Tcl_RecordAndEval ()
+#25 0x000000000b918ee7 in rdaEditCmdLineEnd(char*) ()
+#26 0x000000001a3ade21 in seConsole::sesMode::DoExecute(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void*) ()
+#27 0x000000001bbd3fe0 in Redline::EmacsMode::AcceptLine() ()
+#28 0x000000001bbdc3a1 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
+#29 0x000000001bbeb46b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
+#30 0x000000001bbeac8c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
+#31 0x000000001bbd1077 in Redline::Editor::Internals::Run(bool) ()
+#32 0x00000000306a732e in FileHandlerEventProc ()
+#33 0x0000000030667b29 in Tcl_ServiceEvent ()
+#34 0x0000000030667e39 in Tcl_DoOneEvent ()
+#35 0x00007fe4f883623a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
+#36 0x00007fe4f7a09abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#37 0x00007fe4f7a1127e in QCoreApplication::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#38 0x00007fe4f8835897 in TqApplication::exec() () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
+#39 0x000000000b8f2adc in edi_app_init(Tcl_Interp*) ()
+#40 0x000000003066257c in Tcl_MainEx ()
+#41 0x0000000006b69781 in main ()
 ========================================
                 gdb
 ========================================
 Using: gdb
-[New LWP 821208]
-[New LWP 821209]
-[New LWP 821213]
-[New LWP 821215]
-[New LWP 821284]
-[New LWP 821285]
-[New LWP 821352]
-[New LWP 821353]
-[New LWP 821373]
-[New LWP 821546]
-[New LWP 821547]
-[New LWP 821548]
-[New LWP 821549]
-[New LWP 821550]
-[New LWP 821551]
-[New LWP 821552]
-[New LWP 821553]
-[New LWP 821554]
-[New LWP 821555]
-[New LWP 821556]
-[New LWP 821557]
-[New LWP 821558]
-[New LWP 821559]
-[New LWP 821560]
-[New LWP 821561]
-[New LWP 821660]
-[New LWP 821661]
-[New LWP 821662]
-[New LWP 821663]
-[New LWP 821664]
-[New LWP 821665]
-[New LWP 821666]
-[New LWP 821667]
-[New LWP 821693]
-[New LWP 821694]
-[New LWP 821695]
-[New LWP 821696]
-[New LWP 821697]
-[New LWP 821698]
-[New LWP 821699]
-[New LWP 821700]
-[New LWP 821717]
-[New LWP 821718]
-[New LWP 821719]
-[New LWP 821720]
-[New LWP 821721]
-[New LWP 821722]
-[New LWP 821723]
-[New LWP 821724]
+[New LWP 1505928]
+[New LWP 1505929]
+[New LWP 1505933]
+[New LWP 1505935]
+[New LWP 1506002]
+[New LWP 1506003]
+[New LWP 1506071]
+[New LWP 1506072]
+[New LWP 1506197]
+[New LWP 1506449]
+[New LWP 1506450]
+[New LWP 1506451]
+[New LWP 1506452]
+[New LWP 1506453]
+[New LWP 1506454]
+[New LWP 1506455]
+[New LWP 1506456]
+[New LWP 1506457]
+[New LWP 1506458]
+[New LWP 1506459]
+[New LWP 1506460]
+[New LWP 1506461]
+[New LWP 1506462]
+[New LWP 1506463]
+[New LWP 1506464]
+[New LWP 1507094]
+[New LWP 1507095]
+[New LWP 1507096]
+[New LWP 1507097]
+[New LWP 1507098]
+[New LWP 1507099]
+[New LWP 1507100]
+[New LWP 1507101]
+[New LWP 1507129]
+[New LWP 1507130]
+[New LWP 1507131]
+[New LWP 1507132]
+[New LWP 1507133]
+[New LWP 1507134]
+[New LWP 1507135]
+[New LWP 1507136]
+[New LWP 1507154]
+[New LWP 1507155]
+[New LWP 1507156]
+[New LWP 1507157]
+[New LWP 1507158]
+[New LWP 1507159]
+[New LWP 1507160]
+[New LWP 1507161]
 
 warning: Unable to open "librpm.so.8" (/lib64/librpm.so.8: undefined symbol: sqlite3_errstr), missing debuginfos notifications will not be displayed
 Missing separate debuginfo for /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/OrbitIO/jre/lib/server/libjvm.so
@@ -1367,139 +1238,169 @@ Missing separate debuginfo for /lib64/libjbig.so.2.1
 Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/e8/be3469449f7b626b09e466a9bf7ea33d4aadfb.debug
 Missing separate debuginfo for /lib64/libnsl.so.1
 Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/bc/b1508b68d5331e288f0c3c0c63fa87c5f6d443.debug
-0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 
-Thread 50 (Thread 0x7f78dad44700 (LWP 821724)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 50 (Thread 0x7fe44ae7e700 (LWP 1507161)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 49 (Thread 0x7f78dbd45700 (LWP 821723)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 49 (Thread 0x7fe44be7f700 (LWP 1507160)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 48 (Thread 0x7f78dcd46700 (LWP 821722)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 48 (Thread 0x7fe44ce80700 (LWP 1507159)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 47 (Thread 0x7f78ddd47700 (LWP 821721)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 47 (Thread 0x7fe44de81700 (LWP 1507158)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 46 (Thread 0x7f78ded48700 (LWP 821720)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 46 (Thread 0x7fe44ee82700 (LWP 1507157)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 45 (Thread 0x7f78dfd49700 (LWP 821719)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 45 (Thread 0x7fe44fe83700 (LWP 1507156)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 44 (Thread 0x7f78e0d4a700 (LWP 821718)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 44 (Thread 0x7fe450e84700 (LWP 1507155)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 43 (Thread 0x7f78e1d4b700 (LWP 821717)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 43 (Thread 0x7fe451e85700 (LWP 1507154)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 42 (Thread 0x7f78e4550700 (LWP 821700)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 42 (Thread 0x7fe45468a700 (LWP 1507136)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 41 (Thread 0x7f78e4d51700 (LWP 821699)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 41 (Thread 0x7fe454e8b700 (LWP 1507135)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 40 (Thread 0x7f78e5552700 (LWP 821698)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 40 (Thread 0x7fe45568c700 (LWP 1507134)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 39 (Thread 0x7f78e5d53700 (LWP 821697)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 39 (Thread 0x7fe455e8d700 (LWP 1507133)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 38 (Thread 0x7f78e6554700 (LWP 821696)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 38 (Thread 0x7fe45668e700 (LWP 1507132)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 37 (Thread 0x7f78e6d55700 (LWP 821695)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 37 (Thread 0x7fe456e8f700 (LWP 1507131)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 36 (Thread 0x7f78f721f700 (LWP 821694)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 36 (Thread 0x7fe467359700 (LWP 1507130)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 35 (Thread 0x7f78f8267700 (LWP 821693)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f798e12185c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+Thread 35 (Thread 0x7fe4683a1700 (LWP 1507129)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4fc76785c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f798e126af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
+#3  0x00007fe4fc76caf0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 34 (Thread 0x7f78fd05b700 (LWP 821667)):
-#0  0x00007f7984916ec2 in waitpid () from /lib64/libc.so.6
-#1  0x00007f798486a807 in do_system () from /lib64/libc.so.6
+Thread 34 (Thread 0x7fe46b58d700 (LWP 1507101)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
+#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
+#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
+#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
+#5  0x000000000bc01ec5 in create_head(void*) ()
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+
+Thread 33 (Thread 0x7fe46bd8e700 (LWP 1507100)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
+#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
+#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
+#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
+#5  0x000000000bc01ec5 in create_head(void*) ()
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+
+Thread 32 (Thread 0x7fe46c58f700 (LWP 1507099)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
+#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
+#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
+#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
+#5  0x000000000bc01ec5 in create_head(void*) ()
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
+
+Thread 31 (Thread 0x7fe46ee95700 (LWP 1507098)):
+#0  0x00007fe4f2f5cec2 in waitpid () from /lib64/libc.so.6
+#1  0x00007fe4f2eb0807 in do_system () from /lib64/libc.so.6
 #2  0x000000001e51fbd2 in syStackTraceDump(_IO_FILE*, bool) ()
 #3  0x000000001e51ffd9 in syStackTrace ()
 #4  0x000000000b81d63d in rdaiErrorHandler1(int) ()
@@ -1517,290 +1418,254 @@ Thread 34 (Thread 0x7f78fd05b700 (LWP 821667)):
 #16 0x0000000020b4cd9c in TAThreadWorker::loop() ()
 #17 0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #18 0x000000000bc01ec5 in create_head(void*) ()
-#19 0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#20 0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#19 0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#20 0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 33 (Thread 0x7f78fd85c700 (LWP 821666)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 30 (Thread 0x7fe46d692700 (LWP 1507097)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 32 (Thread 0x7f78fe05d700 (LWP 821665)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 29 (Thread 0x7fe46de93700 (LWP 1507096)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 31 (Thread 0x7f78ff75b700 (LWP 821664)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 28 (Thread 0x7fe46e694700 (LWP 1507095)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 30 (Thread 0x7f7900261700 (LWP 821663)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 27 (Thread 0x7fe46ce91700 (LWP 1507094)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
 #3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
 #4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 29 (Thread 0x7f7903b3f700 (LWP 821662)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-
-Thread 28 (Thread 0x7f7901263700 (LWP 821661)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-
-Thread 27 (Thread 0x7f78fea5e700 (LWP 821660)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
-
-Thread 26 (Thread 0x7f79055b8700 (LWP 821561)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 26 (Thread 0x7fe47210a700 (LWP 1506464)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 25 (Thread 0x7f7905db9700 (LWP 821560)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 25 (Thread 0x7fe47290b700 (LWP 1506463)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 24 (Thread 0x7f79065ba700 (LWP 821559)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 24 (Thread 0x7fe47310c700 (LWP 1506462)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 23 (Thread 0x7f7906dbb700 (LWP 821558)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 23 (Thread 0x7fe47390d700 (LWP 1506461)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 22 (Thread 0x7f79075bc700 (LWP 821557)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 22 (Thread 0x7fe47410e700 (LWP 1506460)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 21 (Thread 0x7f7907dbd700 (LWP 821556)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 21 (Thread 0x7fe47490f700 (LWP 1506459)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 20 (Thread 0x7f79085be700 (LWP 821555)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 20 (Thread 0x7fe475110700 (LWP 1506458)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 19 (Thread 0x7f7908dbf700 (LWP 821554)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 19 (Thread 0x7fe475911700 (LWP 1506457)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 18 (Thread 0x7f79095c0700 (LWP 821553)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 18 (Thread 0x7fe476112700 (LWP 1506456)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 17 (Thread 0x7f7909dc1700 (LWP 821552)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 17 (Thread 0x7fe476913700 (LWP 1506455)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 16 (Thread 0x7f790a5c2700 (LWP 821551)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 16 (Thread 0x7fe477114700 (LWP 1506454)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 15 (Thread 0x7f790adc3700 (LWP 821550)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 15 (Thread 0x7fe477915700 (LWP 1506453)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 14 (Thread 0x7f7927a40700 (LWP 821549)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 14 (Thread 0x7fe496448700 (LWP 1506452)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 13 (Thread 0x7f792723f700 (LWP 821548)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 13 (Thread 0x7fe495c47700 (LWP 1506451)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 12 (Thread 0x7f7926a3e700 (LWP 821547)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 12 (Thread 0x7fe495446700 (LWP 1506450)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 11 (Thread 0x7f792623d700 (LWP 821546)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 11 (Thread 0x7fe494c45700 (LWP 1506449)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000002ff93f2e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
 #2  0x000000002ff940df in CRL::Threading::ThreadPoolBase::thread(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 10 (Thread 0x7f7937ce7700 (LWP 821373)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f79891f0dfb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f7988e3c4f5 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#3  0x00007f79891f065b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+Thread 10 (Thread 0x7fe4a6421700 (LWP 1506197)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe4f7836dfb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fe4f74824f5 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007fe4f783665b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
 #4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#5  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 9 (Thread 0x7f7960395700 (LWP 821353)):
-#0  0x00007f7984941c36 in ppoll () from /lib64/libc.so.6
-#1  0x00007f7989411a99 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f7989412f94 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#3  0x00007f79893c3abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#4  0x00007f79891ec551 in QThread::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#5  0x00007f7972754e26 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
-#6  0x00007f79891f065b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+Thread 9 (Thread 0x7fe4ce9db700 (LWP 1506072)):
+#0  0x00007fe4f2f87c36 in ppoll () from /lib64/libc.so.6
+#1  0x00007fe4f7a57a99 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fe4f7a58f94 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#3  0x00007fe4f7a09abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x00007fe4f7832551 in QThread::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x00007fe4e0d9ae26 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
+#6  0x00007fe4f783665b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
 #7  0x000000000bc01ec5 in create_head(void*) ()
-#8  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#9  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#8  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#9  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 8 (Thread 0x7f7961229700 (LWP 821352)):
-#0  0x00007f798485e3cc in sigtimedwait () from /lib64/libc.so.6
-#1  0x00007f798540f90c in sigwait () from /lib64/libpthread.so.0
+Thread 8 (Thread 0x7fe4cf86f700 (LWP 1506071)):
+#0  0x00007fe4f2ea43cc in sigtimedwait () from /lib64/libc.so.6
+#1  0x00007fe4f3a5590c in sigwait () from /lib64/libpthread.so.0
 #2  0x000000000b81aea0 in ctrlCHandle(void*) ()
 #3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 7 (Thread 0x7f79622cb700 (LWP 821285)):
-#0  0x00007f798494427f in select () from /lib64/libc.so.6
+Thread 7 (Thread 0x7fe4d0911700 (LWP 1506003)):
+#0  0x00007fe4f2f8a27f in select () from /lib64/libc.so.6
 #1  0x00000000306a7028 in NotifierThreadProc ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 6 (Thread 0x7f7971a2f700 (LWP 821284)):
-#0  0x00007f7984941b41 in poll () from /lib64/libc.so.6
-#1  0x00007f79862fd6cf in _xcb_conn_wait () from /lib64/libxcb.so.1
-#2  0x00007f79862ff35a in xcb_wait_for_event () from /lib64/libxcb.so.1
-#3  0x00007f7972849709 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
-#4  0x00007f79891f065b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+Thread 6 (Thread 0x7fe4e0075700 (LWP 1506002)):
+#0  0x00007fe4f2f87b41 in poll () from /lib64/libc.so.6
+#1  0x00007fe4f49436cf in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007fe4f494535a in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007fe4e0e8f709 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007fe4f783665b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
 #5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#6  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 5 (Thread 0x7f7973584700 (LWP 821215)):
-#0  0x00007f798493d5b4 in read () from /lib64/libc.so.6
-#1  0x00007f79848a1728 in __GI__IO_file_underflow () from /lib64/libc.so.6
-#2  0x00007f79848a2886 in _IO_default_uflow () from /lib64/libc.so.6
-#3  0x00007f798489612a in _IO_getline_info () from /lib64/libc.so.6
-#4  0x00007f798489512f in fgets () from /lib64/libc.so.6
-#5  0x000000001e5386cf in syGetPrivateDirtySize() ()
-#6  0x000000001e538aa7 in syVmRssMemUsage ()
-#7  0x000000001e53ae61 in syiUpdateMemory() ()
-#8  0x000000001e53ba5b in syiPeakMem(void*) ()
-#9  0x000000000bc01ec5 in create_head(void*) ()
-#10 0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#11 0x00007f79848488d3 in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7fe4e1bca700 (LWP 1505935)):
+#0  0x00007fe4f2f5d118 in nanosleep () from /lib64/libc.so.6
+#1  0x00007fe4f2f5d01e in sleep () from /lib64/libc.so.6
+#2  0x000000001e53b932 in syiPeakMem(void*) ()
+#3  0x000000000bc01ec5 in create_head(void*) ()
+#4  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 4 (Thread 0x7f7974586700 (LWP 821213)):
-#0  0x00007f798540f210 in nanosleep () from /lib64/libpthread.so.0
+Thread 4 (Thread 0x7fe4e2bcc700 (LWP 1505933)):
+#0  0x00007fe4f3a55210 in nanosleep () from /lib64/libpthread.so.0
 #1  0x000000000d7476cd in rdaiLicRecheck(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 3 (Thread 0x7f79759f2700 (LWP 821209)):
-#0  0x00007f798494427f in select () from /lib64/libc.so.6
+Thread 3 (Thread 0x7fe4e4038700 (LWP 1505929)):
+#0  0x00007fe4f2f8a27f in select () from /lib64/libc.so.6
 #1  0x000000002edc5cdb in ProcessInfo::sampleUsage(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 2 (Thread 0x7f79761f3700 (LWP 821208)):
-#0  0x00007f798540ec67 in accept () from /lib64/libpthread.so.0
+Thread 2 (Thread 0x7fe4e4839700 (LWP 1505928)):
+#0  0x00007fe4f3a54c67 in accept () from /lib64/libpthread.so.0
 #1  0x000000002edce077 in ProcessInfo::handleConnection(void*) ()
 #2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f79854051da in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f79848488d3 in clone () from /lib64/libc.so.6
+#3  0x00007fe4f3a4b1da in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe4f2e8e8d3 in clone () from /lib64/libc.so.6
 
-Thread 1 (Thread 0x7f797da00080 (LWP 821090)):
-#0  0x00007f798540b4ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+Thread 1 (Thread 0x7fe4ec046080 (LWP 1505810)):
+#0  0x00007fe4f3a514ec in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
 #1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
 #2  0x0000000020b4c976 in TAThreadJobPool::add(void*, unsigned int, taboolean) ()
 #3  0x0000000020b5379f in TACompactListJob::run(TACompactListJob::TACurrentProcessingType, TALinkedList&, bool) ()
@@ -1823,51 +1688,34 @@ Thread 1 (Thread 0x7f797da00080 (LWP 821090)):
 #20 0x000000000ba98522 in rdaiPlaceCmd ()
 #21 0x000000003059e65b in TclInvokeStringCommand ()
 #22 0x00000000305a3152 in TclNRRunCallbacks ()
-#23 0x00000000305a5364 in TclEvalEx ()
-#24 0x000000003066e251 in TclSubstTokens ()
-#25 0x00000000305a51ed in TclEvalEx ()
-#26 0x00000000305a5db3 in Tcl_EvalEx ()
-#27 0x00000000305a5dd6 in Tcl_Eval ()
-#28 0x000000001c8297e3 in qtfTclEval(char*, bool, bool) ()
-#29 0x000000001c7caf6a in qtfsItem::fUpdateVar() ()
-#30 0x00007f79893edc55 in QMetaObject::activate(QObject*, int, int, void**) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#31 0x00007f7988ddce42 in QAbstractButton::clicked(bool) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#32 0x00007f7988ddd02a in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#33 0x00007f7988dde30f in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#34 0x00007f7988dde4ab in QAbstractButton::mouseReleaseEvent(QMouseEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#35 0x00007f7988c63bc6 in QWidget::event(QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#36 0x00007f7988c235f2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#37 0x00007f7988c2d8d0 in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#38 0x00007f79893c502a in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#39 0x00007f7988c2be97 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#40 0x00007f7988c7efcb in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#41 0x00007f7988c8189c in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#42 0x00007f7988c235f2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#43 0x00007f7988c2ca1a in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#44 0x00007f79893c502a in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#45 0x00007f7989834908 in QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
-#46 0x00007f798983684b in QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
-#47 0x00007f798980f6bc in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
-#48 0x0000000030202856 in QUnixEventDispatcherQPA::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
-#49 0x00007f798a1f02ea in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#50 0x00007f798a1ed0ee in tcl_dispatch_qt () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#51 0x0000000030667dd1 in Tcl_DoOneEvent ()
-#52 0x00007f798a1f023a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#53 0x00007f79893c3abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#54 0x00007f79893cb27e in QCoreApplication::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#55 0x00007f798a1ef897 in TqApplication::exec() () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#56 0x000000000b8f2adc in edi_app_init(Tcl_Interp*) ()
-#57 0x000000003066257c in Tcl_MainEx ()
-#58 0x0000000006b69781 in main ()
+#23 0x0000000030640e14 in Tcl_RecordAndEvalObj ()
+#24 0x0000000030640f89 in Tcl_RecordAndEval ()
+#25 0x000000000b918ee7 in rdaEditCmdLineEnd(char*) ()
+#26 0x000000001a3ade21 in seConsole::sesMode::DoExecute(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void*) ()
+#27 0x000000001bbd3fe0 in Redline::EmacsMode::AcceptLine() ()
+#28 0x000000001bbdc3a1 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
+#29 0x000000001bbeb46b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
+#30 0x000000001bbeac8c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
+#31 0x000000001bbd1077 in Redline::Editor::Internals::Run(bool) ()
+#32 0x00000000306a732e in FileHandlerEventProc ()
+#33 0x0000000030667b29 in Tcl_ServiceEvent ()
+#34 0x0000000030667e39 in Tcl_DoOneEvent ()
+#35 0x00007fe4f883623a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
+#36 0x00007fe4f7a09abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#37 0x00007fe4f7a1127e in QCoreApplication::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#38 0x00007fe4f8835897 in TqApplication::exec() () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
+#39 0x000000000b8f2adc in edi_app_init(Tcl_Interp*) ()
+#40 0x000000003066257c in Tcl_MainEx ()
+#41 0x0000000006b69781 in main ()
 A debugging session is active.
 
-	Inferior 1 [process 821090] will be detached.
+	Inferior 1 [process 1505810] will be detached.
 
 Quit anyway? (y or n) [answered Y; input not from terminal]
-[Inferior 1 (process 821090) detached]
+[Inferior 1 (process 1505810) detached]
 Crashed in AAE on net Unknown net.
 
-*** Memory Usage v#1 (Current mem = 2967.078M, initial mem = 635.109M) ***
-*** Message Summary: 68 warning(s), 0 error(s)
+*** Memory Usage v#1 (Current mem = 2985.617M, initial mem = 635.109M) ***
+*** Message Summary: 53 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:00:58.2, real=0:05:53, mem=2967.1M) ---
+--- Ending "Innovus" (totcpu=0:00:41.8, real=0:03:58, mem=2985.6M) ---
