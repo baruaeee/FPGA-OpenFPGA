@@ -11,13 +11,13 @@
   <technology_library>
     <device_library>
       <device_model name="logic" type="transistor">
-        <lib type="industry" corner="TOP_TT" ref="M" path="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/tech/PTM_45nm/45nm.pm"/>
+        <lib type="industry" corner="TOP_TT" ref="M" path="/home/cae1/Desktop/OpenFPGA/openfpga_flow/tech/PTM_45nm/45nm.pm"/>
         <design vdd="0.9" pn_ratio="2"/>
         <pmos name="pch" chan_length="40e-9" min_width="140e-9" variation="logic_transistor_var"/>
         <nmos name="nch" chan_length="40e-9" min_width="140e-9" variation="logic_transistor_var"/>
       </device_model>
       <device_model name="io" type="transistor">
-        <lib type="academia" ref="M" path="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/tech/PTM_45nm/45nm.pm"/>
+        <lib type="academia" ref="M" path="/home/cae1/Desktop/OpenFPGA/openfpga_flow/tech/PTM_45nm/45nm.pm"/>
         <design vdd="2.5" pn_ratio="3"/>
         <pmos name="pch_25" chan_length="270e-9" min_width="320e-9" variation="io_transistor_var"/>
         <nmos name="nch_25" chan_length="270e-9" min_width="320e-9" variation="io_transistor_var"/>
@@ -29,7 +29,7 @@
     </variation_library>
   </technology_library>
   <circuit_library>
-    <circuit_model type="inv_buf" name="INVx1_ASAP7_75t_SL" prefix="INVx1_ASAP7_75t_SL" is_default="true" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
+    <circuit_model type="inv_buf" name="INVx1_ASAP7_75t_SL" prefix="INVx1_ASAP7_75t_SL" is_default="true" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
       <design_technology type="cmos" topology="inverter" size="1"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -41,7 +41,7 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="inv_buf" name="BUFx4_ASAP7_75t_SL" prefix="BUFx4_ASAP7_75t_SL" is_default="false" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
+    <circuit_model type="inv_buf" name="BUFx4_ASAP7_75t_SL" prefix="BUFx4_ASAP7_75t_SL" is_default="false" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="2" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -53,7 +53,7 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="inv_buf" name="INVx4_ASAP7_75t_SL" prefix="INVx4_ASAP7_75t_SL" is_default="false" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
+    <circuit_model type="inv_buf" name="INVx4_ASAP7_75t_SL" prefix="INVx4_ASAP7_75t_SL" is_default="false" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
       <design_technology type="cmos" topology="buffer" size="1" num_level="3" f_per_stage="4"/>
       <device_technology device_model_name="logic"/>
       <port type="input" prefix="in" lib_name="A" size="1"/>
@@ -65,7 +65,7 @@
         10e-12
       </delay_matrix>
     </circuit_model>
-    <circuit_model type="gate" name="OR2x2_ASAP7_75t_SL" prefix="OR2x2_ASAP7_75t_SL" is_default="true" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
+    <circuit_model type="gate" name="OR2x2_ASAP7_75t_SL" prefix="OR2x2_ASAP7_75t_SL" is_default="true" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/K6_frac_N10.v">
       <design_technology type="cmos" topology="OR"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
@@ -87,7 +87,7 @@
          If your standard cell provider does not offer the exact truth table,
          you can simply swap the inputs as shown in the example below
       -->
-    <circuit_model type="gate" name="MUX2" prefix="MUX2" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/mux2.sp" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/mux21.v">
+    <circuit_model type="gate" name="MUX2" prefix="MUX2" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/mux2.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/mux21.v">
       <design_technology type="cmos" topology="MUX2"/>
       <device_technology device_model_name="logic"/>
       <input_buffer exist="false"/>
@@ -134,7 +134,7 @@
       <port type="sram" prefix="sram" size="1"/>
     </circuit_model>
     <!--DFF subckt ports should be defined as <D> <Q> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ff" name="DFFSRQ" prefix="DFFSRQ" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFSRQ.v">
+    <circuit_model type="ff" name="DFFSRQ" prefix="DFFSRQ" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFSRQ.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVx1_ASAP7_75t_SL"/>
       <output_buffer exist="true" circuit_model_name="INVx1_ASAP7_75t_SL"/>
@@ -159,7 +159,7 @@
       <port type="sram" prefix="mode" size="1" mode_select="true" circuit_model_name="DFFR" default_val="1"/>
     </circuit_model>
     <!--Scan-chain DFF subckt ports should be defined as <D> <Q> <Qb> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ccff" name="DFFR" prefix="DFFR" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/ubuntu/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFR.v">
+    <circuit_model type="ccff" name="DFFR" prefix="DFFR" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/DFFR.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVx1_ASAP7_75t_SL"/>
       <output_buffer exist="true" circuit_model_name="INVx1_ASAP7_75t_SL"/>
@@ -169,7 +169,14 @@
       <port type="output" prefix="QN" size="1"/>
       <port type="clock" prefix="prog_clk" lib_name="CK" size="1" is_global="true" default_val="0" is_prog="true"/>
     </circuit_model>
-    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/ubuntu/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v">
+<!--
+/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/GPIO.v
+
+/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/verilog/gpio.v
+
+-->
+    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/asap7/GPIO.v">
+
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVx1_ASAP7_75t_SL"/>
       <output_buffer exist="true" circuit_model_name="INVx1_ASAP7_75t_SL"/>
