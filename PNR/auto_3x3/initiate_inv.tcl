@@ -2,7 +2,6 @@
 set design_netlisttype verilog
 set init_verilog ./SRC/post_synth_fabric_netlist.v
 set init_design_set_top 1
-#set_global _enable_mmmc_by_default_flow
 #set init_top_cell "fpga_top"
 
 ## tech file settings
@@ -32,7 +31,7 @@ create_library_set -name MID_LIB -timing {./lib/tt/sky130_fd_sc_hd__tt_025C_1v80
 
 # RC corner
 create_rc_corner -name RC_CORNER \
-	-qx_tech_file {techlef/qrcTechFile} \
+	-cap_table {./techlef/qrcTechFile.cap} \
 	-temperature {25} \
 	-pre_route_res {1.0} \
 	-pre_route_cap {1.0} \
