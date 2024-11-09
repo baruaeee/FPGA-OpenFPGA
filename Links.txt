@@ -4,8 +4,12 @@ https://2m0l1s-my.sharepoint.com/:w:/r/personal/baruaeee_2m0l1s_onmicrosoft_com/
 
 Digital design
 https://www.eng.biu.ac.il/temanad/teaching/
+https://github.com/mirkat1206/2021_Spring_NCTU_ICLAB/tree/main/Lab06
+https://hackmd.io/@derek8955/r149dnNaj
+https://schaumont.dyn.wpi.edu/ece574f24/10fclayout.html
 
-
+IO pad placement
+https://www.reddit.com/r/chipdesign/comments/148bmgx/io_placement_of_a_netlist_using_innovus/
 
 https://openfpga.readthedocs.io/en/master/
 
@@ -357,4 +361,38 @@ dbGet top.fPlan.coreBox_sizex
 dbGet top.fPlan.coreBox_sizey
 
 ----------------
+GPIO-Sky130-IO-PAD
+
+module GPIO ();
+	always @(*) begin
+		case ({DIR, IB_MODE_SEL[1], IB_MODE_SEL[0], HYS_TRIM, VTRIP_SEL})
+			5'b001xx: PAD => IN;
+			5'b01x0x: PAD => IN;
+			5'b01x1x: PAD => IN;
+			5'b000x0: PAD => IN;
+			5'b000x1: PAD => IN;
+			default:  PAD => 1'bZ;
+		endcase
+    end
+
+	always @(*) begin
+		case ({DIR, OE_N, DM[2], DM[1], DM[0], SLOW, SLEW_CTL[1], SLEW_CTL[0]})
+			8'b101100xx: OUT => PAD;; 
+			8'b101101xx: OUT => PAD; 
+			8'b101000xx: OUT => PAD; 
+			8'b101111xx: OUT => PAD; 
+			8'b101010xx: OUT => PAD; 
+			8'b10100111: OUT => PAD; 
+			8'b100100xx: OUT => PAD; 
+			8'b10100100: OUT => PAD; 
+			8'b100101xx: OUT => PAD; 
+			8'b10100101: OUT => PAD; 
+			8'b100110xx: OUT => PAD; 
+			8'b100111xx: OUT => PAD;
+			default:	 OUT => 1'bz;
+		endcase
+	end
+end module
+
+	
 
