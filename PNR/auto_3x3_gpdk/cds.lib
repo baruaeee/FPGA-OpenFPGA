@@ -1,0 +1,5 @@
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130/sky130_release_004a/libs/sky130_fd_pr_main
+DEFINE sky130_scl_9T $CDSHOME/../../../pdks/sky130/sky130_scl_9T_0_0_5/oa/sky130_scl_9T
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045/gpdk045_v_6_0/gpdk045
+SOFTINCLUDE $CDSHOME/../../../pdks/gpdk045/gsclib045_all_v4_4/cds.lib
+SOFTINCLUDE $CDSHOME/../../../pdks/gpdk045/giolib045_v3_3/cds.lib

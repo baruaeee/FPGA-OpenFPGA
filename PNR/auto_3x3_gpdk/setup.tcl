@@ -97,19 +97,5 @@ setPlaceMode -fp false
 #timeDesign -postCTS
 
 ## Routing
-setNanoRouteMode -quiet -drouteFixAntenna 1
-setNanoRouteMode -quiet -routeInsertAntennaDiode 0
-setNanoRouteMode -quiet -routeWithTimingDriven 1
-setNanoRouteMode -quiet -routeWithEco 0
-setNanoRouteMode -quiet -routeWithLithoDriven 0
-setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
-setNanoRouteMode -quiet -routeWithSiDriven 0
-setNanoRouteMode -quiet -drouteAutoStop 1
-setNanoRouteMode -quiet -routeSelectedNetOnly 0
-setNanoRouteMode -quiet -routeTopRoutingLayer 5
-setNanoRouteMode -quiet -routeBottomRoutingLayer 1
-setNanoRouteMode -quiet -drouteEndIteration 1
-setNanoRouteMode -quiet -routeWithTimingDriven true
-setNanoRouteMode -quiet -routeWithSiDriven false
-routeDesign -globalDetail
+
 

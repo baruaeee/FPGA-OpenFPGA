@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Fri Nov  8 22:40:43 2024                
+#  Created on Tue Nov 12 22:58:44 2024                
 #                                                     
 #######################################################
 
@@ -96,7 +96,6 @@ set init_verilog_tolerate_port_mismatch 0
 set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
 init_design
-init_design
 floorPlan -coreMarginsBy io -r 0.99 0.71 5 5 5 5
 setDesignMode -process 45
 globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
@@ -107,20 +106,5 @@ addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing
 setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
 setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 setPlaceMode -fp false
-setNanoRouteMode -quiet -drouteFixAntenna 1
-setNanoRouteMode -quiet -routeInsertAntennaDiode 0
-setNanoRouteMode -quiet -routeWithTimingDriven 1
-setNanoRouteMode -quiet -routeWithEco 0
-setNanoRouteMode -quiet -routeWithLithoDriven 0
-setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
-setNanoRouteMode -quiet -routeWithSiDriven 0
-setNanoRouteMode -quiet -drouteAutoStop 1
-setNanoRouteMode -quiet -routeSelectedNetOnly 0
-setNanoRouteMode -quiet -routeTopRoutingLayer 5
-setNanoRouteMode -quiet -routeBottomRoutingLayer 1
-setNanoRouteMode -quiet -drouteEndIteration 1
-setNanoRouteMode -quiet -routeWithTimingDriven true
-setNanoRouteMode -quiet -routeWithSiDriven false
-routeDesign -globalDetail
 setPlaceMode -fp false
 place_design
