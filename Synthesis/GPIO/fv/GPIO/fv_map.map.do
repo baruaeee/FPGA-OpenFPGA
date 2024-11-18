@@ -17,6 +17,7 @@ add mapped point PAD PAD
 
 
 //Black Boxes
+add mapped point gpio gpio -type BBOX BBOX
 
 
 

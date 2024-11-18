@@ -1,0 +1,6 @@
+[Logging Service: 2]
+[2024-11-08 03:31:27.630 +0100] [INFO] [cadence.virtuoso.ade.loggingservice] - HistoryRecorderManager init {"dbBasePath": "/home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/tbuf_asap_7/TB/maestro/results/maestro"}
+[2024-11-08 03:31:27.631 +0100] [INFO] [cadence.virtuoso.ade.loggingservice] - useGRPC grpc service... {"brokerAddress": "cae-europractice1.othr.de:44491", "serviceName": "DaVinciService_3926514_1731031336", "axlSession": "fnxSession1"}
+[2024-11-08 03:31:27.631 +0100] [PROCESS] [cadence.virtuoso.ade.loggingservice] - Logging Service has successfully started. Waiting for incoming messages ... {"hostname": "cae-europractice1.othr.de", "processid": 3944462, "logfile": "/home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/logs_cae1/logs0/LoggingService2.log"}
+[2024-11-08 03:31:27.647 +0100] [INFO] [cadence.virtuoso.ade.loggingservice] - logging service gRPC started {"broker address": "cae-europractice1.othr.de:45095"}
+[2024-11-08 03:32:36.911 +0100] [PROCESS] [cadence.virtuoso.ade.loggingservice] - Logging Service stop!!!! {"hostname": "cae-europractice1.othr.de", "processid": 3944462, "logfile": "/home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/logs_cae1/logs0/LoggingService2.log"}

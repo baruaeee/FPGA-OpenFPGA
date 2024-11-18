@@ -1,0 +1,12 @@
+
+*** Checking layout cellview 'tbuf_asap_7/tbuf/layout' against source cellview 'tbuf_asap_7/tbuf/schematic'. - Fri Nov  8 04:23:42 2024 ***
+
+INFO (LX-1001): Schematic instance 'M0' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'M1' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'M2' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'M3' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'M6' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'M7' has no corresponding layout instance.
+
+*** Check Against Source complete. ***
+

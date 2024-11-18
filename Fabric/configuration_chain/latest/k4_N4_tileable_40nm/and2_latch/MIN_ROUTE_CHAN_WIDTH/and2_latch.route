@@ -1,0 +1,64 @@
+Placement_File: and2_latch.place Placement_ID: SHA256:1a6553adbef754a9b591e9b718b49de56ed25e1ef1e61f25f2f482370f377274
+Array size: 3 x 3 logic blocks.
+
+Routing:
+
+Net 0 (a)
+
+Node:	2	SOURCE (0,1,0)  Pad: 5  Switch: 0
+Node:	18	  OPIN (0,1,0)  Pad: 5  Switch: 2
+Node:	155	 CHANX (0,1,0)  Track: 6  Switch: 2
+Node:	247	 CHANY (0,1,1)  Track: 20  Switch: 1
+Node:	79	  IPIN (0,1,1)  Pin: 9   clb.I[9] Switch: 0
+Node:	68	  SINK (0,1,1)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 1 (b)
+
+Node:	85	SOURCE (0,2,1)  Pad: 1  Switch: 0
+Node:	101	  OPIN (0,2,1)  Pad: 1  Switch: 2
+Node:	241	 CHANY (0,1,1)  Track: 14  Switch: 1
+Node:	77	  IPIN (0,1,1)  Pin: 1   clb.I[1] Switch: 0
+Node:	68	  SINK (0,1,1)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 2 (d)
+
+Node:	66	SOURCE (0,1,1)  Class: 3  Switch: 0
+Node:	70	  OPIN (0,1,1)  Pin: 12   clb.O[2] Switch: 2
+Node:	191	 CHANX (0,1,1)  Track: 16  Switch: 2
+Node:	242	 CHANY (0,1,1)  Track: 15  Switch: 2
+Node:	162	 CHANX (0,1,0)  Track: 13  Switch: 2
+Node:	211	 CHANY (0,0,1)  Track: 10  Switch: 2
+Node:	187	 CHANX (0,1,1)  Track: 12  Switch: 2
+Node:	238	 CHANY (0,1,1)  Track: 11  Switch: 2
+Node:	166	 CHANX (0,1,0)  Track: 17  Switch: 2
+Node:	215	 CHANY (0,0,1)  Track: 14  Switch: 2
+Node:	183	 CHANX (0,1,1)  Track: 8  Switch: 2
+Node:	234	 CHANY (0,1,1)  Track: 7  Switch: 2
+Node:	170	 CHANX (0,1,0)  Track: 21  Switch: 2
+Node:	219	 CHANY (0,0,1)  Track: 18  Switch: 2
+Node:	179	 CHANX (0,1,1)  Track: 4  Switch: 2
+Node:	230	 CHANY (0,1,1)  Track: 3  Switch: 1
+Node:	111	  IPIN (0,2,1)  Pad: 4  Switch: 0
+Node:	95	  SINK (0,2,1)  Pad: 4  Switch: -1 Net_pin_index: 1
+
+
+Net 3 (c)
+
+Node:	67	SOURCE (0,1,1)  Class: 4  Switch: 0
+Node:	71	  OPIN (0,1,1)  Pin: 13   clb.O[3] Switch: 2
+Node:	244	 CHANY (0,1,1)  Track: 17  Switch: 2
+Node:	160	 CHANX (0,1,0)  Track: 11  Switch: 2
+Node:	209	 CHANY (0,0,1)  Track: 8  Switch: 2
+Node:	189	 CHANX (0,1,1)  Track: 14  Switch: 2
+Node:	240	 CHANY (0,1,1)  Track: 13  Switch: 2
+Node:	164	 CHANX (0,1,0)  Track: 15  Switch: 1
+Node:	29	  IPIN (0,1,0)  Pad: 10  Switch: 0
+Node:	13	  SINK (0,1,0)  Pad: 10  Switch: -1 Net_pin_index: 1
+
+
+Net 4 (clk): global net connecting:
+
+Block clk (#5) at (1,2), Pin class 5.
+Block c (#0) at (1,1), Pin class 5.

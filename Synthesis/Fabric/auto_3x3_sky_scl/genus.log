@@ -1,0 +1,179 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[23:10:06.434020] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+
+Version: 22.13-s093_1, built Tue Sep 05 08:56:02 PDT 2023
+Options: -files initiate.tcl 
+Date:    Wed Nov 06 23:10:06 2024
+Host:    cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*16physical cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB) (32569880KB)
+PID:     3105406
+OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+Checking out license: Genus_Synthesis
+[23:10:06.497003] Periodic Lic check successful
+[23:10:06.497017] Feature usage summary:
+[23:10:06.497018] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (1 second elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (8 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source initiate.tcl
+#@ Begin verbose source ./initiate.tcl
+@file(initiate.tcl) 3: file delete genus.log*
+@file(initiate.tcl) 4: file delete genus.cmd*
+@file(initiate.tcl) 6: read_libs ./LIB/sky130_tt_1.8_25_nldm.lib
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 25.000000) in library 'sky130_tt_1.8_25_nldm.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'ICGX1'
+        : To make the cell usable, change the value of 'dont_use' attribute to false.
+@file(initiate.tcl) 7: read_hdl flat.v
+@file(initiate.tcl) 8: elaborate
+  Library has 88 usable logic and 18 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'fpga_top' from file 'flat.v'.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'top_width_0_height_0_subtile_0__pin_clk_0_' of instance 'grid_clb_1__1_' of module 'grid_clb' in file 'flat.v' on line 6807, column 26, hid = 0.
+        : Run check_design to check 'Undriven Port(s)/Pin(s)' section for all undriven module input ports. It is better to double confirm with designer if these undriven ports are expected. During syn_gen the undriven ports are controlled by attribute 'hdl_unconnected_value', the default value is 0.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'fpga_top'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+| ume_merge         |       0 |       0 |         0.00 | 
+| ume_ssm           |       0 |       0 |         0.00 | 
+| ume_cse           |       0 |       0 |         3.00 | 
+| ume_shrink        |       0 |       0 |         1.00 | 
+| ume_sweep         |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: fpga_top, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: fpga_top, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: fpga_top, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: fpga_top, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+---------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (ms) | 
+---------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |         0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |         0.00 | 
+| hlo_clip                       |       0 |       0 |         0.00 | 
+| hlo_cleanup                    |       0 |       0 |         0.00 | 
+---------------------------------------------------------------------
+Info    : To insure proper verification, preserved netlist point(s) because they are involved in combinational loop(s). To disable this, set the 'cb_preserve_ports_nets' root attribute to 'false'. [ELABUTL-133]
+        : Preserved 1444 user net(s)  Set the 'print_ports_nets_preserved_for_cb' root attribute to 'true' to print out the affected nets and hierarchical instances.
+
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(initiate.tcl) 10: set sdc_dir "./SDC"
+@file(initiate.tcl) 12: set sdc_files {
+	"cbx_1__0_.sdc"
+	"cbx_1__1_.sdc"
+	"cby_0__1_.sdc"
+	"cby_1__1_.sdc"
+	"disable_configurable_memory_outputs.sdc"
+	"disable_configure_ports.sdc"
+	"disable_routing_multiplexer_outputs.sdc"
+	"disable_sb_outputs.sdc"
+	"logical_tile_clb_mode_clb_.sdc"
+	"logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc"
+	"logical_tile_io_mode_io_.sdc"
+	"sb_0__0_.sdc"
+	"sb_0__1_.sdc"
+	"sb_1__0_.sdc"
+	"sb_1__1_.sdc"
+}
+@file(initiate.tcl) 30: foreach sdc_file $sdc_files {
+	read_sdc [file join $sdc_dir $sdc_file]
+}
+Statistics for commands executed by read_sdc:
+ "create_clock"             - successful      2 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      2 , failed      0 (runtime  0.00)
+ "set_max_delay"            - successful     82 , failed      0 (runtime  0.08)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:01 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     82 , failed      0 (runtime  0.09)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     82 , failed      0 (runtime  0.09)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     82 , failed      0 (runtime  0.09)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_disable_timing"       - successful     72 , failed      0 (runtime  0.13)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_disable_timing"       - successful     70 , failed      0 (runtime  0.19)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_disable_timing"       - successful     31 , failed      0 (runtime  0.04)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_disable_timing"       - successful     12 , failed      0 (runtime  0.01)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful   3600 , failed      0 (runtime  6.85)
+read_sdc completed in 00:00:08 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful      4 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful      2 , failed      0 (runtime  0.00)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+Statistics for commands executed by read_sdc:
+ "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:00 (hh:mm:ss)
+@file(initiate.tcl) 34: exit
+
+Lic Summary:
+[23:10:29.478176] Cdslmd servers: hs-lic3
+[23:10:29.478184] Feature usage summary:
+[23:10:29.478184] Genus_Synthesis
+
+Normal exit.

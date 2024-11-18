@@ -1,6 +1,10 @@
 
-read_libs sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib
-read_hdl gpio.v
+read_libs LIB/sky130_scl_9T_0_0_5/sky130_ff_1.98_0_nldm.lib \
+	LIB/sky130_scl_9T_0_0_5/sky130_ss_1.62_125_nldm.lib \
+	LIB/sky130_scl_9T_0_0_5/sky130_tt_1.8_25_nldm.lib
+
+read_hdl gpio_sky130.v
+
 elaborate GPIO
 
 set_db syn_generic_effort medium
@@ -23,4 +27,4 @@ report_qor    > reports/report_qor.rpt
 write_hdl > outputs/gpio_netlist.v
 #write_sdc > outputs/post_synth_fabric_sdc.sdc
 #write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
-
+exit

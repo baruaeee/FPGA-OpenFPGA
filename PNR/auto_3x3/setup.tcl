@@ -61,9 +61,9 @@ setPlaceMode -congEffort auto \
 	-checkRoute 0 -swapEEQ 0
 
 ## config cpu
-#setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
-#setDistributeHost -local
+setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
+setDistributeHost -local
 
 ## Place STD cells
-#setPlaceMode -fp false
+setPlaceMode -fp false
 #place_design

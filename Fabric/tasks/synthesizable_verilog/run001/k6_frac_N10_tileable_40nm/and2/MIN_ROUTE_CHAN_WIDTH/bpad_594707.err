@@ -1,0 +1,56 @@
+Operating system: Linux
+                  0.0.0 Linux 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64
+CPU: x86
+     AuthenticAMD family 15 model 107 stepping 1
+     24 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  DUMP_REQUESTED
+Crash address: 0xf7aba37d
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  libcbreakpad.so + 0x2e37d
+    eip = 0xf7aba37d   esp = 0xf7273530   ebp = 0xf7273668   ebx = 0xf7aed000
+    esi = 0xf7273718   edi = 0xf7273698   eax = 0x00000001   ecx = 0x00000001
+    edx = 0xf7faf108   efl = 0xf7273534
+    Found by: given as instruction pointer in context
+ 1  libcbreakpad.so + 0x2c665
+    eip = 0xf7ab8665   esp = 0xf7273670   ebp = 0xf72737c8
+    Found by: previous frame's frame pointer
+ 2  xmsim + 0x162ece0
+    eip = 0x09676ce0   esp = 0xf72737d0   ebp = 0x00000000
+    Found by: previous frame's frame pointer
+
+Loaded modules:
+0x08048000 - 0x0a039fff  xmsim  ???  (main)  (WARNING: No symbols, xmsim, CD7D0D837D7C10260685C8508E01BE440)
+0xf5cb1000 - 0xf5d0efff  libdwapi.so  ???
+0xf72a7000 - 0xf72b6fff  waves.dsn  ???
+0xf72b7000 - 0xf72cafff  libml_uvm.so  ???
+0xf72d8000 - 0xf73dbfff  libStrapNC.so  ???
+0xf74c9000 - 0xf7547fff  libdcapi.so  ???
+0xf7568000 - 0xf757bfff  libresolv-2.28.so  ???
+0xf7581000 - 0xf7585fff  libnss_dns-2.28.so  ???
+0xf7588000 - 0xf7593fff  libnss_files-2.28.so  ???
+0xf7a57000 - 0xf7a85fff  libxmjudy.so.1.0.3  ???
+0xf7a8c000 - 0xf7ad8fff  libcbreakpad.so  ???  (WARNING: No symbols, libcbreakpad.so, F667FEA8DEDBDDE0C0C5C7BB74A580E10)
+0xf7afb000 - 0xf7c9cfff  libc-2.28.so  ???
+0xf7ca4000 - 0xf7cb9fff  libgcc_s.so.1  ???
+0xf7cc1000 - 0xf7e2ffff  libstdc++.so.6.0.28  ???
+0xf7e98000 - 0xf7f67fff  libm-2.28.so  ???
+0xf7f6a000 - 0xf7f6cfff  libdl-2.28.so  ???
+0xf7f6f000 - 0xf7f8afff  libpthread-2.28.so  ???
+0xf7f94000 - 0xf7f97fff  libxdt.so  ???
+0xf7fa4000 - 0xf7fa5fff  linux-gate.so  ???
+0xf7fa6000 - 0xf7fd4fff  ld-2.28.so  ???
+
+******BACKTRACE*****
+<unknown> (libcbreakpad.so) [0xf7ab82b0]
+<unknown> (libcbreakpad.so) [0xf7ab862b]
+vserror (xmsim) [0x9676ce0]
+serror (xmsim) [0x967851a]
+sv_seghandler_aux (xmsim) [0x87f07e1]
+sv_seghandler (xmsim) [0x87f1003]
+<unknown> (linux-gate.so.1) [0xf7fa5150]
+******BACKTRACE END*****

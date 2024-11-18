@@ -1,0 +1,414 @@
+xrun(64): 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s007: Started on Nov 11, 2024 at 21:02:29 CET
+xrun
+	/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_out_tb.v
+	-access +rwc
+	-64bit
+	-gui
+file: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_out_tb.v
+	module worklib.sky130_osu_sc_18T_hs__addf_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__addf_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__addh_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__addh_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__and2_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__and2_2:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__and2_4:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__and2_6:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__and2_8:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__and2_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__ant:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__aoi21_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__aoi22_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__buf_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__buf_2:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__buf_4:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__buf_6:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__buf_8:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__buf_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dff_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dff_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dffr_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dffr_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dffs_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dffs_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dffsr_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dffsr_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dlat_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__dlat_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_10:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_2:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_3:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_4:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_6:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_8:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__inv_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__mux2_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__nand2_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__nand2_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__nor2_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__nor2_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__oai21_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__oai22_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__or2_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__or2_2:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__or2_4:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__or2_8:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__or2_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__tbufi_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__tbufi_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__tiehi:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__tielo:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__tnbufi_1:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__tnbufi_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__xnor2_l:v
+		errors: 0, warnings: 0
+	module worklib.sky130_osu_sc_18T_hs__xor2_l:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_r_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_r:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_s_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_s:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_1:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_r:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_s:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_sr_1:v
+		errors: 0, warnings: 0
+input OUT;
+        |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,23|8): Implicit net port (OUT) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input OE_N;
+         |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,24|9): Implicit net port (OE_N) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input HLD_H_N;
+            |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,25|12): Implicit net port (HLD_H_N) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ENABLE_H;
+             |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,26|13): Implicit net port (ENABLE_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ENABLE_INP_H;
+                 |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,27|17): Implicit net port (ENABLE_INP_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ENABLE_VDDA_H;
+                  |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,28|18): Implicit net port (ENABLE_VDDA_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ENABLE_VDDIO;
+                 |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,29|17): Implicit net port (ENABLE_VDDIO) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ENABLE_VSWITCH_H;
+                     |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,30|21): Implicit net port (ENABLE_VSWITCH_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input INP_DIS;
+            |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,31|12): Implicit net port (INP_DIS) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input VTRIP_SEL;
+              |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,32|14): Implicit net port (VTRIP_SEL) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input HYS_TRIM;
+             |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,33|13): Implicit net port (HYS_TRIM) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input SLOW;
+         |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,34|9): Implicit net port (SLOW) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [1:0] SLEW_CTL;
+                   |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,35|19): Implicit net port (SLEW_CTL) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input HLD_OVR;
+            |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,36|12): Implicit net port (HLD_OVR) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ANALOG_EN;
+              |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,37|14): Implicit net port (ANALOG_EN) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ANALOG_SEL;
+               |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,38|15): Implicit net port (ANALOG_SEL) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input ANALOG_POL;
+               |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,39|15): Implicit net port (ANALOG_POL) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [2:0] DM;
+             |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,40|13): Implicit net port (DM) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input [1:0] IB_MODE_SEL;
+                      |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,41|22): Implicit net port (IB_MODE_SEL) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+input VINREF;
+           |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,42|11): Implicit net port (VINREF) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout PAD;
+        |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,55|8): Implicit net port (PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout PAD_A_NOESD_H,PAD_A_ESD_0_H,PAD_A_ESD_1_H;
+                  |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,56|18): Implicit net port (PAD_A_NOESD_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout PAD_A_NOESD_H,PAD_A_ESD_0_H,PAD_A_ESD_1_H;
+                                |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,56|32): Implicit net port (PAD_A_ESD_0_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout PAD_A_NOESD_H,PAD_A_ESD_0_H,PAD_A_ESD_1_H;
+                                              |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,56|46): Implicit net port (PAD_A_ESD_1_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout AMUXBUS_A;
+              |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,57|14): Implicit net port (AMUXBUS_A) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout AMUXBUS_B;
+              |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,58|14): Implicit net port (AMUXBUS_B) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output IN;
+        |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,59|8): Implicit net port (IN) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output IN_H;
+          |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,60|10): Implicit net port (IN_H) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output TIE_HI_ESD, TIE_LO_ESD;
+                |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,61|16): Implicit net port (TIE_HI_ESD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+output TIE_HI_ESD, TIE_LO_ESD;
+                            |
+xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,61|28): Implicit net port (TIE_LO_ESD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+	module worklib.sky130_fd_io__top_gpio_ovtv2:v
+		errors: 0, warnings: 30
+	module worklib.GPIO_OUT:v
+		errors: 0, warnings: 0
+	module worklib.IO_OUT_tb:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+  sky130_fd_io__top_gpio_ovtv2 gpio(.INP_DIS (tie_hi_esd),
+                                  |
+xmelab: *W,CUVWSP (./outputs/outpad_netlist.v,13|34): 2 output ports were not connected:
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,19): IN
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,19): IN_H
+
+  sky130_fd_io__top_gpio_ovtv2 gpio(.INP_DIS (tie_hi_esd),
+                                  |
+xmelab: *W,CUVWSI (./outputs/outpad_netlist.v,13|34): 2 input ports were not connected:
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,22): SLEW_CTL
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,22): VINREF
+
+  sky130_fd_io__top_gpio_ovtv2 gpio(.INP_DIS (tie_hi_esd),
+                                  |
+xmelab: *W,CUVWSB (./outputs/outpad_netlist.v,13|34): 5 inout ports were not connected:
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,19): AMUXBUS_A
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,20): AMUXBUS_B
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,20): PAD_A_ESD_0_H
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,20): PAD_A_ESD_1_H
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,20): PAD_A_NOESD_H
+
+	Top level design units:
+		sky130_osu_sc_18T_hs__addf_1
+		sky130_osu_sc_18T_hs__addf_l
+		sky130_osu_sc_18T_hs__addh_1
+		sky130_osu_sc_18T_hs__addh_l
+		sky130_osu_sc_18T_hs__and2_1
+		sky130_osu_sc_18T_hs__and2_2
+		sky130_osu_sc_18T_hs__and2_4
+		sky130_osu_sc_18T_hs__and2_6
+		sky130_osu_sc_18T_hs__and2_8
+		sky130_osu_sc_18T_hs__and2_l
+		sky130_osu_sc_18T_hs__ant
+		sky130_osu_sc_18T_hs__aoi21_l
+		sky130_osu_sc_18T_hs__aoi22_l
+		sky130_osu_sc_18T_hs__buf_1
+		sky130_osu_sc_18T_hs__buf_2
+		sky130_osu_sc_18T_hs__buf_4
+		sky130_osu_sc_18T_hs__buf_6
+		sky130_osu_sc_18T_hs__buf_8
+		sky130_osu_sc_18T_hs__buf_l
+		sky130_osu_sc_18T_hs__dff_1
+		sky130_osu_sc_18T_hs__dff_l
+		sky130_osu_sc_18T_hs__dffr_1
+		sky130_osu_sc_18T_hs__dffr_l
+		sky130_osu_sc_18T_hs__dffs_1
+		sky130_osu_sc_18T_hs__dffs_l
+		sky130_osu_sc_18T_hs__dffsr_1
+		sky130_osu_sc_18T_hs__dffsr_l
+		sky130_osu_sc_18T_hs__dlat_1
+		sky130_osu_sc_18T_hs__dlat_l
+		sky130_osu_sc_18T_hs__inv_1
+		sky130_osu_sc_18T_hs__inv_10
+		sky130_osu_sc_18T_hs__inv_2
+		sky130_osu_sc_18T_hs__inv_3
+		sky130_osu_sc_18T_hs__inv_4
+		sky130_osu_sc_18T_hs__inv_6
+		sky130_osu_sc_18T_hs__inv_8
+		sky130_osu_sc_18T_hs__inv_l
+		sky130_osu_sc_18T_hs__mux2_1
+		sky130_osu_sc_18T_hs__nand2_1
+		sky130_osu_sc_18T_hs__nand2_l
+		sky130_osu_sc_18T_hs__nor2_1
+		sky130_osu_sc_18T_hs__nor2_l
+		sky130_osu_sc_18T_hs__oai21_l
+		sky130_osu_sc_18T_hs__oai22_l
+		sky130_osu_sc_18T_hs__or2_1
+		sky130_osu_sc_18T_hs__or2_2
+		sky130_osu_sc_18T_hs__or2_4
+		sky130_osu_sc_18T_hs__or2_8
+		sky130_osu_sc_18T_hs__or2_l
+		sky130_osu_sc_18T_hs__tbufi_1
+		sky130_osu_sc_18T_hs__tbufi_l
+		sky130_osu_sc_18T_hs__tiehi
+		sky130_osu_sc_18T_hs__tielo
+		sky130_osu_sc_18T_hs__tnbufi_1
+		sky130_osu_sc_18T_hs__tnbufi_l
+		sky130_osu_sc_18T_hs__xnor2_l
+		sky130_osu_sc_18T_hs__xor2_l
+		IO_OUT_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.sky130_fd_io__top_gpio_ovtv2:v <0x0d8ace93>
+			streams: 125, words: 93335
+		worklib.GPIO_OUT:v <0x692755f6>
+			streams:   1, words:   555
+		worklib.IO_OUT_tb:v <0x1470ddab>
+			streams:   1, words:  3972
+		worklib.sky130_osu_sc_18T_hs__xor2_l:v <0x152452c5>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__xnor2_l:v <0x69f3ddfd>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__oai22_l:v <0x564a9bc6>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__oai21_l:v <0x1b857b5a>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__mux2_1:v <0x49cd22ff>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dlat_l:v <0x6e7c5f11>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dlat_1:v <0x13f1ed7b>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffsr_l:v <0x5137b830>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffsr_1:v <0x5a8d798c>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffs_l:v <0x00bf93cf>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffs_1:v <0x3815dcd8>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffr_l:v <0x12b870a7>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dffr_1:v <0x2a123fb0>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dff_l:v <0x20fe65ae>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__dff_1:v <0x58cb6fc9>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__aoi22_l:v <0x5d02e304>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__aoi21_l:v <0x64ea1bf9>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__addf_l:v <0x1535a049>
+			streams:   0, words:     0
+		worklib.sky130_osu_sc_18T_hs__addf_1:v <0x19069d79>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  60      60
+		UDPs:                     16      14
+		Primitives:              207       9
+		Timing outputs:           70      57
+		Registers:                59      73
+		Scalar wires:            305       -
+		Expanded wires:            5       2
+		Vectored wires:            4       -
+		Named events:             13      13
+		Always blocks:            35      35
+		Initial blocks:            8       8
+		Cont. assignments:        30      61
+		Pseudo assignments:        8       -
+		Timing checks:           298      10
+		Delayed tcheck signals:   37      30
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.sky130_osu_sc_18T_hs__addf_1:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm IO_OUT_tb.A IO_OUT_tb.PAD
+Created probe 1
+xcelium> run
+Test Case 1: Y=0, PAD=0, a=0
+Test Case 2: Y=1, PAD=1, a=1
+Test Case 3: Y=0, PAD=0, a=0
+Simulation complete via $finish(1) at time 30 NS + 0
+./io_out_tb.v:37         $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.03-s007: Exiting on Nov 11, 2024 at 21:02:53 CET  (total: 00:00:24)

@@ -1,0 +1,38 @@
+csi-xmsim - CSI: Command line:
+xmsim
+    -f /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/xcelium.d/run.lnx86.23.03.d/ei-vm-011_594707/xmsim.args
+        -gui
+        -MESSAGES
+        +EMGRLOG xrun.log
+        -XLSTIME 1731971971
+        -XLKEEP
+        -XLMODE ./xcelium.d/run.lnx86.23.03.d
+        -RUNMODE
+        -CDSLIB ./xcelium.d/run.lnx86.23.03.d/cds.lib
+        -HDLVAR ./xcelium.d/run.lnx86.23.03.d/hdl.var
+        -XLNAME xrun
+        -XLVERSION TOOL:	xrun	23.03-s007
+        -XLNAME ./xcelium.d/run.lnx86.23.03.d/ei-vm-011_594707
+    -CHECK_VERSION TOOL:	xrun	23.03-s007
+    -LOG_FD 5
+    -LOG_FD_NAME xrun.log
+    -cmdnopsim
+    -runlock /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/xcelium.d/run.lnx86.23.03.d/.xmlib.lock
+    -runscratch /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/xcelium.d/run.lnx86.23.03.d/ei-vm-011_594707
+
+csi-xmsim - CSI: *F,INTERR: INTERNAL EXCEPTION
+Observed simulation time : 0 FS + 0
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	xmsim	23.03-s007
+  HOSTNAME: ei-vm-011
+  OPERATING SYSTEM: Linux 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64
+  MESSAGE: T(0): sv_seghandler - trapno -1 addr(0xc80f980)
+	Initial stmt (file: /home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v, line: 253 in worklib.sky130_fd_io__top_gpio_ovtv2 [module])
+-----------------------------------------------------------------
+
+csi-xmsim - CSI: Cadence Support Investigation, recording details
+csi-xmsim - CSI: investigation complete took 0.000 secs, send this file to Cadence Support

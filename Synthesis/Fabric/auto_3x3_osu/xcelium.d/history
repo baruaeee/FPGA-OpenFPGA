@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(11Nov2024:19:26:20):( xrun /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_in_tb.v -access +rwc -64bit -gui )

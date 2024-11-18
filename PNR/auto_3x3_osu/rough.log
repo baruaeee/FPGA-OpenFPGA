@@ -1,0 +1,27 @@
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_4(.G_PAD(gfpga_pad_GPIO_PAD[4]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_5(.G_PAD(gfpga_pad_GPIO_PAD[5]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_6(.G_PAD(gfpga_pad_GPIO_PAD[6]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_7(.G_PAD(gfpga_pad_GPIO_PAD[7]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_8(.G_PAD(gfpga_pad_GPIO_PAD[8]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_9(.G_PAD(gfpga_pad_GPIO_PAD[9]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_10(.G_PAD(gfpga_pad_GPIO_PAD[10]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_11(.G_PAD(gfpga_pad_GPIO_PAD[11]))
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_12(.G_PAD(gfpga_pad_GPIO_PAD[12]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_13(.G_PAD(gfpga_pad_GPIO_PAD[13]));
+  sky130_fd_io__top_ground_hvc_wpad pad_GPIO_14(.G_PAD(gfpga_pad_GPIO_PAD[14]));
+
+
+
+	(top
+		(inst name="pad_GPIO_4"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_5"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_6"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_7"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_8"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_9"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_10"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_11"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_12"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_13"	cell=sky130_fd_io__top_ground_hvc_wpad)
+		(inst name="pad_GPIO_14"	cell=sky130_fd_io__top_ground_hvc_wpad)
+	)

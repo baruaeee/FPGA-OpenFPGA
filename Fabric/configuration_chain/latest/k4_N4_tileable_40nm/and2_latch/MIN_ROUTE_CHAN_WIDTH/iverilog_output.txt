@@ -1,0 +1,2 @@
+iverilog -o compiled_and2_latch ./SRC/and2_latch_include_netlists.v -s and2_latch_autocheck_top_tb -I ./SRC
+0

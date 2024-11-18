@@ -4,6 +4,6 @@ Array size: 3 x 3 logic blocks
 #block name	x	y	subblk	layer	block number
 #----------	--	--	------	-----	------------
 c		1	1	0	0	#0
-out:c		2	1	4	0	#1
+out:c		1	2	1	0	#1
 a		2	1	3	0	#2
 b		2	1	6	0	#3

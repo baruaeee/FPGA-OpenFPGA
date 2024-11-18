@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sat Nov  2 21:09:55 2024                
+#  Created on Fri Nov 15 20:01:12 2024                
 #                                                     
 #######################################################
 
@@ -69,7 +69,7 @@ set enc_check_rename_command_name 1
 set enc_enable_print_mode_command_reset_options 1
 set init_design_uniquify 1
 set init_gnd_net VGND
-set init_lef_file {lef/sky130_fd_sc_hd.tlef lef/sky130_fd_sc_hd.lef}
+set init_lef_file {lef/sky130_fd_sc_hd.tlef lef/lef_sep/sky130_fd_sc_hd__and2b_1.lef lef/lef_sep/sky130_fd_sc_hd__clkbuf_1.lef lef/lef_sep/sky130_fd_sc_hd__dfrbp_1.lef lef/lef_sep/sky130_fd_sc_hd__einvn_0.lef lef/lef_sep/sky130_fd_sc_hd__einvp_1.lef lef/lef_sep/sky130_fd_sc_hd__inv_1.lef lef/lef_sep/sky130_fd_sc_hd__mux2_1.lef lef/lef_sep/sky130_fd_sc_hd__mux2i_1.lef lef/lef_sep/sky130_fd_sc_hd__or2_1.lef lef/lef_sep/sky130_fd_sc_hd__sdfbbp_1.lef lef/lef_sep/sky130_fd_sc_hd__nor2b_1.lef lef/lef_sep/sky130_fd_sc_hd__nand2_1.lef lef/lef_sep/sky130_fd_sc_hd__inv_2.lef}
 set init_mmmc_file Fabric.view
 set init_original_verilog_files SRC/comb_fabric.v
 set init_pwr_net VPWR
@@ -96,83 +96,27 @@ set init_verilog_tolerate_port_mismatch 0
 set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
 init_design
-getIoFlowFlag
-setIoFlowFlag 0
-floorPlan -site unithd -r 0.987149575973 0.699994 8 8 8 8
-uiSetTool select
-getIoFlowFlag
-fit
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer met5 -stacked_via_bottom_layer li1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
-addRing -nets {VGND VPWR} -type core_rings -follow core -layer {top met4 bottom met4 left met5 right met5} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer met5 -stacked_via_bottom_layer li1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
-addStripe -nets {VGND VPWR} -layer met5 -direction horizontal -width 1.8 -spacing 1.8 -set_to_set_distance 70 -start_from left -start_offset 60 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit li1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit li1 -use_wire_group 0 -snap_wire_center_to_grid None
-undo
-setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer met5 -stacked_via_bottom_layer li1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
-addStripe -nets {VGND VPWR} -layer met5 -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 70 -start_from left -start_offset 60 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit li1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit li1 -use_wire_group 0 -snap_wire_center_to_grid None
-setSrouteMode -viaConnectToShape { noshape }
+floorPlan -coreMarginsBy io -r 0.987149575973 0.7 8 8 8 8
+addRing -nets {VPWR VGND} -type core_rings -follow core -layer {top met4 bottom met4 left met5 right met5} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+addStripe -nets {VPWR VGND} -layer met4 -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 70 -start_from left -start_offset 60 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit li1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit li1 -use_wire_group 0 -snap_wire_center_to_grid None
 sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { li1(1) met5(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { li1(1) met5(6) } -nets { VGND VPWR } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { li1(1) met5(6) }
-zoomBox -15.43100 421.62500 33.85900 377.59300
-zoomBox -1.72200 414.78400 12.30700 389.40600
-zoomBox -10.05300 387.98900 23.29800 417.84500
-zoomBox -11.43100 386.32100 27.80500 421.44600
-zoomBox -13.05300 384.35900 33.10800 425.68300
-zoomBox -19.84500 376.14000 55.32200 443.43100
-fit
-zoomBox 65.40500 418.33900 83.80700 329.61700
-fit
-zoomBox 430.15200 -16.07200 334.85800 10.21700
-fit
-setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
-setEndCapMode -reset
-setEndCapMode -boundary_tap false
-setNanoRouteMode -quiet -drouteAutoStop 0
-setNanoRouteMode -quiet -drouteFixAntenna 0
-setNanoRouteMode -quiet -droutePostRouteSwapVia {}
-setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
-setNanoRouteMode -quiet -drouteUseMultiCutViaEffort {}
-setNanoRouteMode -quiet -drouteOnGridOnly 0
-setNanoRouteMode -quiet -routeIgnoreAntennaTopCellPin 0
-setNanoRouteMode -quiet -timingEngine {}
-setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
-setPlaceMode -reset
-setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
 setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 setDistributeHost -local
+setPlaceMode -fp false
+zoomBox -3.72500 414.74700 28.05400 384.87500
+zoomBox 2.25700 409.30800 7.43700 400.76100
+zoomBox 4.11200 406.73900 6.75500 403.67600
+zoomBox 3.26800 403.06500 8.00400 407.30500
+zoomBox 1.76900 401.05000 10.84300 409.17300
+zoomBox -1.10300 397.19000 16.28200 412.75300
+zoomBox -11.02300 383.85400 35.07600 425.12200
+zoomBox -30.98900 357.01200 72.90800 450.02200
+zoomBox -63.85000 312.82600 135.18500 491.00500
+zoomBox -23.83800 334.33300 119.96600 463.06800
+zoomBox 25.95900 361.09800 101.02600 428.29900
+zoomBox 45.37000 374.17600 91.47100 415.44600
+zoomBox 53.94300 379.95200 87.25100 409.77000
+fit
 setPlaceMode -fp false
 place_design

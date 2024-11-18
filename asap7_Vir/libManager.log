@@ -1,0 +1,172 @@
+\o Program:		@(#)$CDS: libManager version 23.1 - CAT38 08/24/2023 05:06 (sjfdcl1184) $
+\o Sub version:		sub-version  p306 
+\o Arguments:		-unmapped -mpssession virtuoso3960750 -mpshost cae-europractice1.othr.de -masterPID 3960750 -ADVM 
+\o Working Directory:	cae-europractice1.othr.de:/home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir
+\o 64-bit offsets
+\o Qt version: 		5.15.9
+\o MPS virtuoso types registered: 68
+\o changeWorkingDir("/home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o Session hidden cells enabled.
+\o Log file is "/home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/libManager.log".
+\o Opening libManager window.
+\a nrSetWindowVisibility(cdsLibManager "show")
+\o MPS service: map window
+\a nrSetCurrentWindow(cdsLibManager)
+\w Warning: LIB analogLib from File /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib Line 35 redefines
+\w LIB analogLib from File /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w Insert UNDEFINE analogLib
+\w before DEFINE analogLib
+\w     in /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib
+\w Or remove or comment out DEFINE analogLib
+\w     in /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w to suppress this warning message.
+\o Library Manager customization server connected.
+\a nrResizeWindow(cdsLibManager list(691 272 833 533))
+\a nrResizeWindow(cdsLibManager list(29 290 833 533))
+\a nrResizeWindow(cdsLibManager list(0 291 833 533))
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "tbuf_asap_7"
+\a cdsLibManager->libLineEdit->value = "tbuf_asap_7"
+\a cdsLibManager->cellListBox->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = "tbuf"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\w Warning: LIB analogLib from File /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib Line 35 redefines
+\w LIB analogLib from File /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w Insert UNDEFINE analogLib
+\w before DEFINE analogLib
+\w     in /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib
+\w Or remove or comment out DEFINE analogLib
+\w     in /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "tbuf_asap_7"
+\a cdsLibManager->libLineEdit->value = "tbuf_asap_7"
+\a cdsLibManager->cellListBox->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = "tbuf"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\w Warning: LIB analogLib from File /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib Line 35 redefines
+\w LIB analogLib from File /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w Insert UNDEFINE analogLib
+\w before DEFINE analogLib
+\w     in /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib
+\w Or remove or comment out DEFINE analogLib
+\w     in /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "tbuf_asap_7"
+\a cdsLibManager->libLineEdit->value = "tbuf_asap_7"
+\a cdsLibManager->cellListBox->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = "tbuf"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\w Warning: LIB analogLib from File /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib Line 35 redefines
+\w LIB analogLib from File /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w Insert UNDEFINE analogLib
+\w before DEFINE analogLib
+\w     in /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib
+\w Or remove or comment out DEFINE analogLib
+\w     in /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "tbuf_asap_7"
+\a cdsLibManager->libLineEdit->value = "tbuf_asap_7"
+\a cdsLibManager->cellListBox->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = "tbuf"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\w Warning: LIB analogLib from File /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib Line 35 redefines
+\w LIB analogLib from File /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w Insert UNDEFINE analogLib
+\w before DEFINE analogLib
+\w     in /home/cae1/Desktop/FPGA-OpenFPGA/asap7_Vir/cds.lib
+\w Or remove or comment out DEFINE analogLib
+\w     in /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/IC_23.10.020/tools.lnx86/dfII/etc/cdsDotLibs/artist/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "tbuf_asap_7"
+\a cdsLibManager->libLineEdit->value = "tbuf_asap_7"
+\a cdsLibManager->cellListBox->value = "tbuf"
+\a cdsLibManager->cellLineEdit->value = "tbuf"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "asap7_TechLib"
+\a cdsLibManager->libLineEdit->value = "asap7_TechLib"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellListBox->value = "pmos_sram"
+\a cdsLibManager->cellLineEdit->value = "pmos_sram"
+\a cdsLibManager->viewListBox->value = "auCdl"
+\a cdsLibManager->viewLineEdit->value = "auCdl"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = "auCdl"
+\a cdsLibManager->viewLineEdit->value = "auCdl"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->viewListBox->value = "ivpcell"
+\a cdsLibManager->viewLineEdit->value = "ivpcell"
+\a cdsLibManager->viewListBox->value = "hspice"
+\a cdsLibManager->viewLineEdit->value = "hspice"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = "auLvs"
+\a cdsLibManager->viewLineEdit->value = "auLvs"
+\a cdsLibManager->viewListBox->value = "auCdl"
+\a cdsLibManager->viewLineEdit->value = "auCdl"
+\a cdsLibManager->viewListBox->value = "ivpcell"
+\a cdsLibManager->viewLineEdit->value = "ivpcell"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a _lmgrCloseIconify("cdsLibManager" 1)
+\o MPS service: shutdown
+\o libManager is exiting.
+\a exit(0)
