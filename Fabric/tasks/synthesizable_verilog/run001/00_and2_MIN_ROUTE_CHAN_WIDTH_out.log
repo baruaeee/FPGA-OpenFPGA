@@ -1,0 +1,36 @@
+* * * * * * * * * * * * * * * * * * * * 
+RunDirectory : /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001
+python3 /home/cae1/Desktop/OpenFPGA/openfpga_flow/scripts/run_fpga_flow.py /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/arch/k6_frac_N10_tileable_40nm.xml /home/cae1/Desktop/OpenFPGA/openfpga_flow/benchmarks/micro_benchmark/and2/and2.blif --top_module and2 --run_dir /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH --fpga_flow vpr_blif --openfpga_shell_template /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/write_full_testbench_example_script.openfpga --openfpga_arch_file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/auto_3x3_osu/arch/k6_frac_N10_stdcell_mux_sky130_osu_sc_18T_hs_openfpga_synthesizable.xml --openfpga_sim_setting_file /home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml --openfpga_vpr_device_layout --device auto --route_chan_width 20 --openfpga_fast_configuration  --activity_file /home/cae1/Desktop/OpenFPGA/openfpga_flow/benchmarks/micro_benchmark/and2/and2.act --base_verilog /home/cae1/Desktop/OpenFPGA/openfpga_flow/benchmarks/micro_benchmark/and2/and2.v --power --power_tech /home/cae1/Desktop/OpenFPGA/openfpga_flow/tech/PTM_45nm/45nm.xml --vpr_fpga_verilog --vpr_fpga_verilog_dir /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH --vpr_fpga_x2p_rename_illegal_port --end_flow_with_test --debug --flow_config /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/config/task.conf --default_tool_path /home/cae1/Desktop/OpenFPGA/openfpga_flow/scripts/../misc/fpgaflow_default_tool_path.conf --TOP and2 --ACT /home/cae1/Desktop/OpenFPGA/openfpga_flow/benchmarks/micro_benchmark/and2/and2.act --VERILOG /home/cae1/Desktop/OpenFPGA/openfpga_flow/benchmarks/micro_benchmark/and2/and2.v --CHAN_WIDTH 300
+* * * * * * * * * * * * * * * * * * * * 
+INFO - Validating command line arguments
+INFO - Setting loggger in debug mode
+INFO - Run directory : /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH
+INFO - Running OpenFPGA Shell Engine 
+INFO - Launching OpenFPGA Shell Run 
+INFO - OpenFPGAShell Revision: v8.0.0-12019-g04959b7b8 Compiled: 2024-11-06T23:06:29
+ERROR - OpenFPGA Shell Run run failed with returncode -6
+ERROR - command /home/cae1/Desktop/OpenFPGA/build/openfpga/openfpga -batch -f and2_run.openfpga
+ERROR - -->>Error 1: Find a pb_type 'inpad' which has not been mapped to any physical pb_type!
+ERROR - -->>Error 2: Please specify in the OpenFPGA architecture
+ERROR - -->>Error 3: Find a pb_type 'outpad' which has not been mapped to any physical pb_type!
+ERROR - -->>Error 4: Please specify in the OpenFPGA architecture
+ERROR - -->>Error 5: Check physical pb_type annotation for pb_types failed with 2 errors!
+ERROR - -->>Error 6: An operating pb_type 'inpad' is not allowed to be linked to any circuit model!
+ERROR - -->>Error 7: Unable to bind physical pb_type 'inpad' to circuit model 'IO_IN'!
+ERROR - -->>Error 8: Found a physical pb_type 'clb[default].fle[physical].fabric[default].frac_logic[default].frac_lut6' missing circuit model binding!
+ERROR - -->>Error 9: Found a physical pb_type 'clb[default].fle[physical].fabric[default].ff' missing circuit model binding!
+ERROR - -->>Error 10: Check physical pb_type annotation for circuit model failed with 2 errors!
+ERROR - -->>Error 11: Find a pb_type 'inpad' which has not been mapped to any physical pb_type!
+ERROR - -->>Error 12: Please specify in the OpenFPGA architecture
+ERROR - -->>Error 13: Find a pb_type 'outpad' which has not been mapped to any physical pb_type!
+ERROR - -->>Error 14: Please specify in the OpenFPGA architecture
+ERROR - -->>Error 15: Found a physical pb_type 'frac_lut6' missing circuit model binding!
+ERROR - -->>Error 16: Found a physical pb_type 'ff' missing circuit model binding!
+ERROR - -->>Error 17: Found a physical pb_type 'frac_lut6' missing circuit model binding!
+ERROR - -->>Error 18: Found a physical pb_type 'ff' missing circuit model binding!
+ERROR - -->>Error 19: Found a physical pb_type 'frac_lut6' missing circuit model binding!
+ERROR - -->>Error 20: Found a physical pb_type 'ff' missing circuit model binding!
+ERROR - -->>Error 21: Check physical pb_type annotation for mode selection bits failed with 8 errors!
+ERROR - Current working directory : /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH
+ERROR - Failed to run OpenFPGA Shell Run task
+ERROR - Exiting . . . . . .

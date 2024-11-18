@@ -1,0 +1,709 @@
+/home/cae1/Desktop/OpenFPGA/build/openfpga/openfpga -batch -f and2_run.openfpga
+Reading script file and2_run.openfpga...
+
+            ___                   _____ ____   ____    _     
+           / _ \ _ __   ___ _ __ |  ___|  _ \ / ___|  / \    
+          | | | | '_ \ / _ \ '_ \| |_  | |_) | |  _  / _ \   
+          | |_| | |_) |  __/ | | |  _| |  __/| |_| |/ ___ \  
+           \___/| .__/ \___|_| |_|_|   |_|    \____/_/   \_\ 
+                |_|                                          
+
+               OpenFPGA: An Open-source FPGA IP Generator
+                     Versatile Place and Route (VPR)
+                           FPGA-Verilog
+                           FPGA-SPICE
+                           FPGA-SDC
+                           FPGA-Bitstream
+
+             This is a free software under the MIT License
+
+             Copyright (c) 2018 LNIS - The University of Utah
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+
+Command line to execute: vpr /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device auto --route_chan_width 20
+VPR FPGA Placement and Routing.
+Version: 8.1.0-dev+v8.0.0-12019-g04959b7b8
+Revision: v8.0.0-12019-g04959b7b8
+Compiled: 2024-11-06T23:06:29
+Compiler: GNU 8.5.0 on Linux-5.15.0-210.163.7.el8uek.x86_64 x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+vpr /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device auto --route_chan_width 20
+
+
+Architecture file: /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml
+Circuit name: and2
+
+# Loading Architecture Description
+Warning 1: Model 'io' input port 'outpad' has no timing specification (no clock specified to create a sequential input port, not combinationally connected to any outputs, not a clock input)
+Warning 2: Model 'io' output port 'inpad' has no timing specification (no clock specified to create a sequential output port, not combinationally connected to any inputs, not a clock output)
+Warning 3: Model 'frac_lut6' input port 'in' has no timing specification (no clock specified to create a sequential input port, not combinationally connected to any outputs, not a clock input)
+Warning 4: Model 'frac_lut6' output port 'lut6_out' has no timing specification (no clock specified to create a sequential output port, not combinationally connected to any inputs, not a clock output)
+Warning 5: Model 'frac_lut6' output port 'lut5_out' has no timing specification (no clock specified to create a sequential output port, not combinationally connected to any inputs, not a clock output)
+mode 'io[physical]' is defined by user to be disabled in packing
+mode 'fle[physical]' is defined by user to be disabled in packing
+mode 'fabric[default]' is defined by user to be disabled in packing
+mode 'frac_logic[default]' is defined by user to be disabled in packing
+# Loading Architecture Description took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+
+Timing analysis: ON
+Circuit netlist file: and2.net
+Circuit placement file: and2.place
+Circuit routing file: and2.route
+Circuit SDC file: and2.sdc
+Vpr floorplanning constraints file: not specified
+
+Packer: ENABLED
+Placer: ENABLED
+Analytical Placer: DISABLED
+Router: ENABLED
+Analysis: ENABLED
+
+VPR was run with the following options:
+
+NetlistOpts.absorb_buffer_luts            : true
+NetlistOpts.sweep_dangling_primary_ios    : true
+NetlistOpts.sweep_dangling_nets           : true
+NetlistOpts.sweep_dangling_blocks         : true
+NetlistOpts.sweep_constant_primary_outputs: false
+NetlistOpts.netlist_verbosity             : 1
+NetlistOpts.const_gen_inference           : COMB_SEQ
+
+PackerOpts.allow_unrelated_clustering: auto
+PackerOpts.alpha_clustering: 0.750000
+PackerOpts.beta_clustering: 0.900000
+PackerOpts.cluster_seed_type: BLEND2
+PackerOpts.connection_driven: true
+PackerOpts.global_clocks: true
+PackerOpts.hill_climbing_flag: false
+PackerOpts.inter_cluster_net_delay: 1.000000
+PackerOpts.timing_driven: true
+PackerOpts.target_external_pin_util: auto
+
+PlacerOpts.place_freq: PLACE_ONCE
+PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
+PlacerOpts.pad_loc_type: FREE
+PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_cost_exp: 1.000000
+PlacerOpts.place_chan_width: 20
+PlacerOpts.inner_loop_recompute_divider: 0
+PlacerOpts.recompute_crit_iter: 1
+PlacerOpts.timing_tradeoff: 0.500000
+PlacerOpts.td_place_exp_first: 1.000000
+PlacerOpts.td_place_exp_last: 8.000000
+PlacerOpts.delay_offset: 0.000000
+PlacerOpts.delay_ramp_delta_threshold: -1
+PlacerOpts.delay_ramp_slope: 0.000000
+PlacerOpts.tsu_rel_margin: 1.000000
+PlacerOpts.tsu_abs_margin: 0.000000
+PlacerOpts.post_place_timing_report_file: 
+PlacerOpts.allowed_tiles_for_delay_model: 
+PlacerOpts.delay_model_reducer: MIN
+PlacerOpts.delay_model_type: SIMPLE
+PlacerOpts.rlim_escape_fraction: 0.000000
+PlacerOpts.move_stats_file: 
+PlacerOpts.placement_saves_per_temperature: 0
+PlacerOpts.effort_scaling: CIRCUIT
+PlacerOpts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+PlaceOpts.seed: 1
+AnnealSched.type: AUTO_SCHED
+AnnealSched.inner_num: 0.500000
+
+RouterOpts.route_type: DETAILED
+RouterOpts.flat_routing: false
+RouterOpts.choke_points: on
+RouterOpts.router_algorithm: TIMING_DRIVEN
+RouterOpts.base_cost_type: DELAY_NORMALIZED_LENGTH
+RouterOpts.fixed_channel_width: 20
+RouterOpts.check_route: FULL
+RouterOpts.acc_fac: 1.000000
+RouterOpts.bb_factor: 3
+RouterOpts.bend_cost: 0.000000
+RouterOpts.first_iter_pres_fac: 0.000000
+RouterOpts.initial_pres_fac: 0.500000
+RouterOpts.pres_fac_mult: 1.300000
+RouterOpts.max_pres_fac: 1000.000000
+RouterOpts.max_router_iterations: 50
+RouterOpts.min_incremental_reroute_fanout: 16
+RouterOpts.do_check_rr_graph: true
+RouterOpts.verify_binary_search: false
+RouterOpts.min_channel_width_hint: 0
+RouterOpts.read_rr_edge_metadata: false
+RouterOpts.exit_after_first_routing_iteration: false
+RouterOpts.astar_fac: 1.200000
+RouterOpts.astar_offset: 0.000000
+RouterOpts.router_profiler_astar_fac: 1.200000
+RouterOpts.criticality_exp: 1.000000
+RouterOpts.max_criticality: 0.990000
+RouterOpts.init_wirelength_abort_threshold: 0.850000
+RouterOpts.incr_reroute_delay_ripup: AUTO
+RouterOpts.save_routing_per_iteration: false
+RouterOpts.congested_routing_iteration_threshold_frac: 1.000000
+RouterOpts.high_fanout_threshold: 64
+RouterOpts.router_debug_net: -2
+RouterOpts.router_debug_sink_rr: -2
+RouterOpts.router_debug_iteration: -2
+RouterOpts.max_convergence_count: 1
+RouterOpts.reconvergence_cpd_threshold: 0.990000
+RouterOpts.update_lower_bound_delays: true
+RouterOpts.first_iteration_timing_report_file: 
+RouterOpts.route_bb_update: DYNAMIC
+RouterOpts.lookahead_type: MAP
+RouterOpts.initial_timing: LOOKAHEAD
+RouterOpts.router_heap: FOUR_ARY_HEAP
+RouterOpts.routing_failure_predictor = SAFE
+RouterOpts.routing_budgets_algorithm = DISABLE
+
+AnalysisOpts.gen_post_synthesis_netlist: false
+AnalysisOpts.timing_report_npaths: 100
+AnalysisOpts.timing_report_skew: false
+AnalysisOpts.echo_dot_timing_graph_node: -1
+AnalysisOpts.timing_report_detail: NETLIST
+AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
+AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
+
+# Building complex block graph
+# Building complex block graph took 0.03 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+Circuit file: and2.blif
+# Load circuit
+# Load circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+# Clean circuit
+Absorbed 0 LUT buffers
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 0
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 0
+Swept block(s)      : 0
+Constant Pins Marked: 0
+# Clean circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+# Compress circuit
+# Compress circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+# Verify circuit
+# Verify circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 4
+    .input :       2
+    .names :       1
+        2-LUT:       1
+    .output:       1
+  Nets  : 3
+    Avg Fanout:     1.0
+    Max Fanout:     1.0
+    Min Fanout:     1.0
+  Netlist Clocks: 0
+# Build Timing Graph
+  Timing Graph Nodes: 6
+  Timing Graph Edges: 5
+  Timing Graph Levels: 4
+# Build Timing Graph took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+Netlist contains 0 clocks
+# Load Timing Constraints
+
+SDC file 'and2.sdc' not found
+Setting default timing constraints:
+   * constrain all primay inputs and primary outputs on a virtual external clock 'virtual_io_clock'
+   * optimize virtual clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'virtual_io_clock' (Virtual Clock)
+
+# Load Timing Constraints took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+# Packing
+Begin packing 'and2.blif'.
+
+After removing unused inputs...
+	total blocks: 4, total nets: 3, total inputs: 2, total outputs: 1
+Begin prepacking.
+0 attraction groups were created during prepacking.
+Finish prepacking.
+Using inter-cluster delay: 1.33777e-09
+Packing with pin utilization targets: io:1,1 clb:0.8,1
+Packing with high fanout thresholds: io:128 clb:32
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 1
+  LEs used for logic and registers    : 0
+  LEs used for logic only             : 1
+  LEs used for registers only         : 0
+
+Incr Slack updates 1 in 3.036e-06 sec
+Full Max Req/Worst Slack updates 1 in 6.753e-06 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 2.444e-06 sec
+FPGA sized to 3 x 3 (auto)
+Device Utilization: 0.15 (target 1.00)
+	Block Utilization: 0.09 Type: io
+	Block Utilization: 1.00 Type: clb
+
+Start the iterative improvement process
+the iterative improvement process is done
+Final Clustering Statistics: 
+----------   --------   ------------------------------------   --------------------------
+Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
+----------   --------   ------------------------------------   --------------------------
+     EMPTY          0                                      0                            0   
+        io          3                               0.333333                     0.666667   
+       clb          1                                      2                            1   
+Absorbed logical nets 0 out of 3 nets, 3 nets not absorbed.
+
+Netlist conversion complete.
+
+# Packing took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
+# Load packing
+Begin loading packed FPGA netlist file.
+Netlist generated from file 'and2.net'.
+Detected 0 constant generators (to see names run with higher pack verbosity)
+Finished loading packed FPGA netlist file (took 0.027254 seconds).
+Warning 6: Treated 0 constant nets as global which will not be routed (to see net names increase packer verbosity).
+# Load packing took 0.03 seconds (max_rss 51.3 MiB, delta_rss +33.4 MiB)
+Warning 7: Netlist contains 0 global net to non-global architecture pin connections
+Cluster level netlist and block usage statistics
+Netlist num_nets: 3
+Netlist num_blocks: 4
+Netlist EMPTY blocks: 0.
+Netlist io blocks: 3.
+Netlist clb blocks: 1.
+Netlist inputs pins: 2
+Netlist output pins: 1
+
+Pb types usage...
+  io             : 3
+   inpad         : 2
+   outpad        : 1
+  clb            : 1
+   fle           : 1
+    lut5inter    : 1
+     ble5        : 1
+      lut5       : 1
+       lut       : 1
+
+# Create Device
+## Build Device Grid
+FPGA sized to 3 x 3: 9 grid tiles (auto)
+
+Resource usage...
+	Netlist
+		3	blocks of type: io
+	Architecture
+		32	blocks of type: io
+	Netlist
+		1	blocks of type: clb
+	Architecture
+		1	blocks of type: clb
+
+Device Utilization: 0.15 (target 1.00)
+	Physical Tile io:
+	Block Utilization: 0.09 Logical Block: io
+	Physical Tile clb:
+	Block Utilization: 1.00 Logical Block: clb
+
+## Build Device Grid took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Warning 8: Tileable routing resource graph does not support clock modeling yet! Related options are ignored...
+## Build tileable routing resource graph
+X-direction routing channel width is 20
+Y-direction routing channel width is 20
+## Build tileable routing resource graph took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+  RR Graph Nodes: 291
+  RR Graph Edges: 557
+# Create Device took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+
+# Computing router lookahead map
+## Computing wire lookahead
+## Computing wire lookahead took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead
+Warning 9: Found no more sample locations for SOURCE in io
+Warning 10: Found no more sample locations for OPIN in io
+Warning 11: Found no more sample locations for SOURCE in clb
+Warning 12: Found no more sample locations for OPIN in clb
+## Computing src/opin lookahead took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Computing placement delta delay look-up
+RR graph channel widths unchanged, skipping RR graph rebuild
+Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
+# Computing placement delta delay look-up took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+
+Bounding box mode is Cube
+
+Warning 13: CHANX place cost fac is 0 at -1 -1
+Warning 14: CHANY place cost fac is 0 at -1 -1
+# Placement
+## Initial Placement
+Initial placement iteration 0 has finished successfully
+## Initial Placement took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Using simple RL 'Softmax agent' for choosing move and block types
+
+There are 3 point to point connections in this circuit.
+
+
+BB estimate of min-dist (placement) wire length: 9
+
+Completed placement consistency check successfully.
+Initial placement cost: 1 bb_cost: 0.5 td_cost: 4.5505e-10
+Initial placement estimated Critical Path Delay (CPD): 0.749366 ns
+Initial placement estimated setup Total Negative Slack (sTNS): -0.749366 ns
+Initial placement estimated setup Worst Negative Slack (sWNS): -0.749366 ns
+
+Initial placement estimated setup slack histogram:
+[ -7.5e-10: -7.5e-10) 1 (100.0%) |**************************************************
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+[ -7.5e-10: -7.5e-10) 0 (  0.0%) |
+Placement contains 0 placement macros involving 0 blocks (average macro size -nan)
+
+Moves per temperature: 3
+Warning 15: Starting t: 2 of 3 configurations accepted.
+
+---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
+Tnum   Time       T Av Cost Av BB Cost Av TD Cost     CPD       sTNS     sWNS Ac Rate Std Dev  R lim Crit Exp Tot Moves  Alpha
+      (sec)                                          (ns)       (ns)     (ns)                                                 
+---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
+   1    0.0 2.8e-04   0.974       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         3  0.200
+   2    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         6  0.950
+## Placement Quench took 0.00 seconds (max_rss 51.8 MiB)
+post-quench CPD = 0.67231 (ns) 
+
+BB estimate of min-dist (placement) wire length: 9
+
+Completed placement consistency check successfully.
+
+Swaps called: 9
+
+Aborted Move Reasons:
+  No moves aborted
+
+Placement estimated critical path delay (least slack): 0.67231 ns, Fmax: 1487.41 MHz
+Placement estimated setup Worst Negative Slack (sWNS): -0.67231 ns
+Placement estimated setup Total Negative Slack (sTNS): -0.67231 ns
+
+Placement estimated setup slack histogram:
+[ -6.7e-10: -6.7e-10) 1 (100.0%) |**************************************************
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+[ -6.7e-10: -6.7e-10) 0 (  0.0%) |
+
+Placement estimated geomean non-virtual intra-domain period: nan ns (nan MHz)
+Placement estimated fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
+
+Placement cost: 1, bb_cost: 0.45, td_cost: 3.9141e-10, 
+
+Placement resource usage:
+  io  implemented as io : 3
+  clb implemented as clb: 1
+
+Placement number of temperatures: 2
+Placement total # of swap attempts: 9
+	Swaps accepted: 4 (44.4 %)
+	Swaps rejected: 3 (33.3 %)
+	Swaps aborted: 2 (22.2 %)
+
+
+Placement perturbation distribution by block and move type: 
+------------------ ----------------- ---------------- ---------------- --------------- ------------ 
+    Block Type         Move Type       (%) of Total      Accepted(%)     Rejected(%)    Aborted(%)
+------------------ ----------------- ---------------- ---------------- --------------- ------------ 
+io                 Uniform                66.67            66.67           33.33          0.00         
+                   Median                 11.11            0.00            100.00         0.00         
+
+                   Crit. Uniform          11.11            0.00            0.00           100.00       
+                   Feasible Region        11.11            0.00            0.00           100.00       
+
+
+Placement Quench timing analysis took 4.85e-06 seconds (2.104e-06 STA, 2.746e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 4.5348e-05 seconds (2.7874e-05 STA, 1.7474e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
+update_td_costs: connections 0 nets 0 sum_nets 0 total 0
+# Placement took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Incr Slack updates 4 in 4.91e-06 sec
+Full Max Req/Worst Slack updates 2 in 2.825e-06 sec
+Incr Max Req/Worst Slack updates 2 in 1.562e-06 sec
+Incr Criticality updates 2 in 1.715e-06 sec
+Full Criticality updates 2 in 2.324e-06 sec
+
+# Routing
+RR graph channel widths unchanged, skipping RR graph rebuild
+## Initializing router criticalities
+Initial Net Connection Criticality Histogram:
+[        0:      0.1) 0 (  0.0%) |
+[      0.1:      0.2) 0 (  0.0%) |
+[      0.2:      0.3) 0 (  0.0%) |
+[      0.3:      0.4) 0 (  0.0%) |
+[      0.4:      0.5) 0 (  0.0%) |
+[      0.5:      0.6) 0 (  0.0%) |
+[      0.6:      0.7) 0 (  0.0%) |
+[      0.7:      0.8) 0 (  0.0%) |
+[      0.8:      0.9) 0 (  0.0%) |
+[      0.9:        1) 3 (100.0%) |*************************************************
+## Initializing router criticalities took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
+      (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+   1    0.0     0.0    0      50       3       3       0 ( 0.000%)      13 (16.2%)    1.481     -1.481     -1.481      0.000      0.000      N/A
+Restoring best routing
+Critical path: 1.48098 ns
+Successfully routed after 1 routing iterations.
+Final Net Connection Criticality Histogram:
+[        0:      0.1) 0 (  0.0%) |
+[      0.1:      0.2) 0 (  0.0%) |
+[      0.2:      0.3) 0 (  0.0%) |
+[      0.3:      0.4) 0 (  0.0%) |
+[      0.4:      0.5) 0 (  0.0%) |
+[      0.5:      0.6) 0 (  0.0%) |
+[      0.6:      0.7) 0 (  0.0%) |
+[      0.7:      0.8) 0 (  0.0%) |
+[      0.8:      0.9) 0 (  0.0%) |
+[      0.9:        1) 3 (100.0%) |*************************************************
+Router Stats: total_nets_routed: 3 total_connections_routed: 3 total_heap_pushes: 50 total_heap_pops: 44 
+Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
+# Routing took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+
+Checking to ensure routing is legal...
+# Checking to ensure non-configurable edges are legal
+# Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Completed routing consistency check successfully.
+
+Serial number (magic cookie) for the routing is: -26992
+Circuit successfully routed with a channel width factor of 20.
+Incr Slack updates 2 in 2.495e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.152e-06 sec
+Incr Max Req/Worst Slack updates 1 in 1.002e-06 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 2 in 2.225e-06 sec
+# Synchronize the packed netlist to routing optimization
+## Annotating rr_node with routed nets
+## Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Found 2 mismatches between routing and packing results.
+Fixed 1 routing traces due to mismatch between routing and packing results.
+# Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Final Clustering Statistics: 
+----------   --------   ------------------------------------   --------------------------
+Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
+----------   --------   ------------------------------------   --------------------------
+     EMPTY          0                                      0                            0   
+        io          3                               0.333333                     0.666667   
+       clb          1                                      2                            1   
+Absorbed logical nets 0 out of 3 nets, 3 nets not absorbed.
+
+
+Average number of bends per net: 3.33333  Maximum # of bends: 10
+
+Number of global nets: 0
+Number of routed nets (nonglobal): 3
+Wire length results (in units of 1 clb segments)...
+	Total wirelength: 13, average net length: 4.33333
+	Maximum net length: 11
+
+Wire length results in terms of physical segments...
+	Total wiring segments used: 13, average wire segments per net: 4.33333
+	Maximum segments used by a net: 11
+	Total local nets with reserved CLB opins: 0
+Total number of nets absorbed: 0
+
+Routing channel utilization histogram:
+[        1:      inf) 0 (  0.0%) |
+[      0.9:        1) 0 (  0.0%) |
+[      0.8:      0.9) 0 (  0.0%) |
+[      0.7:      0.8) 0 (  0.0%) |
+[      0.5:      0.6) 0 (  0.0%) |
+[      0.4:      0.5) 0 (  0.0%) |
+[      0.3:      0.4) 0 (  0.0%) |
+[      0.2:      0.3) 0 (  0.0%) |
+[      0.1:      0.2) 2 ( 25.0%) |****************
+[        0:      0.1) 6 ( 75.0%) |*************************************************
+Maximum routing channel utilization:      0.15 at (1,0)
+
+X - Directed channels:   j max occ ave occ capacity
+                      ---- ------- ------- --------
+                         0       3   1.000       20
+                         1       2   0.667       20
+Y - Directed channels:   i max occ ave occ capacity
+                      ---- ------- ------- --------
+                         0       3   1.000       20
+                         1       5   1.667       20
+
+Total tracks in x-direction: 40, in y-direction: 40
+
+Logic area (in minimum width transistor areas, excludes I/Os and empty grid tiles)...
+	Total logic block area (Warning, need to add pitch of routing to blocks with height > 3): 53894
+	Total used logic block area: 53894
+
+Routing area (in minimum width transistor areas)...
+	Total routing area: 4880.82, per logic tile: 542.314
+
+Total Number of Wiring Segments by Direction: direction length number
+                                              --------- ------ -------
+                                                      X      4     40
+                                                      Y      4     40
+
+X - Directed Wiring Segment usage by length: length utilization
+                                             ------ -----------
+                                             4       0.125
+
+Y - Directed Wiring Segment usage by length: length utilization
+                                             ------ -----------
+                                             4         0.2
+
+Segment occupancy by length: Length utilization
+                             ------ -----------
+                             L4           0.162
+
+Segment occupancy by type: name type utilization
+                           ---- ---- -----------
+                             L4    0       0.162
+
+Final hold Worst Negative Slack (hWNS): 0 ns
+Final hold Total Negative Slack (hTNS): 0 ns
+
+Final hold slack histogram:
+[  1.3e-09:  1.3e-09) 1 (100.0%) |**************************************************
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+
+Final critical path delay (least slack): 1.48098 ns, Fmax: 675.23 MHz
+Final setup Worst Negative Slack (sWNS): -1.48098 ns
+Final setup Total Negative Slack (sTNS): -1.48098 ns
+
+Final setup slack histogram:
+[ -1.5e-09: -1.5e-09) 1 (100.0%) |**************************************************
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+
+Final geomean non-virtual intra-domain period: nan ns (nan MHz)
+Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
+
+Incr Slack updates 1 in 2.044e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.122e-06 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 1.172e-06 sec
+Flow timing analysis took 0.000123918 seconds (7.7018e-05 STA, 4.69e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
+VPR succeeded
+The entire flow of VPR took 0.11 seconds (max_rss 51.8 MiB)
+
+Command line to execute: read_openfpga_arch -f /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_osu_sc_18T_hs_openfpga_synthesizable.xml
+
+Confirm selected options when call command 'read_openfpga_arch':
+--file, -f: /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_osu_sc_18T_hs_openfpga_synthesizable.xml
+Reading XML architecture '/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_stdcell_mux_sky130_osu_sc_18T_hs_openfpga_synthesizable.xml'...
+Read OpenFPGA architecture
+Warning 16: Automatically set circuit model 'frac_lut6' to be default in its type.
+Warning 17: Automatically set circuit model 'sky130_osu_sc_18T_hs__dffsr_1' to be default in its type.
+Warning 18: Automatically set circuit model 'sky130_osu_sc_18T_hs__dffr_1' to be default in its type.
+Use the default configurable memory model 'sky130_osu_sc_18T_hs__dffr_1' for circuit model 'mux_tree' port 'sram')
+Use the default configurable memory model 'sky130_osu_sc_18T_hs__dffr_1' for circuit model 'mux_tree_tapbuf' port 'sram')
+Use the default configurable memory model 'sky130_osu_sc_18T_hs__dffr_1' for circuit model 'frac_lut6' port 'sram')
+Read OpenFPGA architecture took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Check circuit library
+Checking circuit library passed.
+Check circuit library took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Found 0 errors when checking configurable memory circuit models!
+Found 0 errors when checking configuration protocol!
+Found 0 errors when checking tile annotation!
+
+Command line to execute: read_openfpga_simulation_setting -f /home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml
+
+Confirm selected options when call command 'read_openfpga_simulation_setting':
+--file, -f: /home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml
+Reading XML simulation setting '/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml'...
+Read OpenFPGA simulation settings
+Read OpenFPGA simulation settings took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+
+Command line to execute: link_openfpga_arch --activity_file and2_ace_out.act --sort_gsb_chan_node_in_edges
+
+Confirm selected options when call command 'link_openfpga_arch':
+--activity_file: and2_ace_out.act
+--sort_gsb_chan_node_in_edges: on
+--verbose: off
+Link OpenFPGA architecture to VPR architecture
+# Build fast look-up for physical tile pins
+# Build fast look-up for physical tile pins took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+
+Building annotation for physical modes in pb_type...Done
+Check physical mode annotation for pb_types passed.
+
+Building annotation about physical types for pb_type interconnection...Done
+
+Building annotation between operating and physical pb_types...Done
+
+Building annotation between physical pb_types and circuit models...Done
+
+Building annotation between physical pb_types and mode selection bits...Done
+Assigning unique indices for primitive pb_graph nodes...Done
+Binding operating pb_graph nodes/pins to physical pb_graph nodes/pins...Error 1: Find a pb_type 'inpad' which has not been mapped to any physical pb_type!
+Error 2: Please specify in the OpenFPGA architecture
+Error 3: Find a pb_type 'outpad' which has not been mapped to any physical pb_type!
+Error 4: Please specify in the OpenFPGA architecture
+Error 5: Check physical pb_type annotation for pb_types failed with 2 errors!
+Error 6: An operating pb_type 'inpad' is not allowed to be linked to any circuit model!
+Error 7: Unable to bind physical pb_type 'inpad' to circuit model 'IO_IN'!
+Error 8: Found a physical pb_type 'clb[default].fle[physical].fabric[default].frac_logic[default].frac_lut6' missing circuit model binding!
+Error 9: Found a physical pb_type 'clb[default].fle[physical].fabric[default].ff' missing circuit model binding!
+Error 10: Check physical pb_type annotation for circuit model failed with 2 errors!
+Error 11: Find a pb_type 'inpad' which has not been mapped to any physical pb_type!
+Error 12: Please specify in the OpenFPGA architecture
+Error 13: Find a pb_type 'outpad' which has not been mapped to any physical pb_type!
+Error 14: Please specify in the OpenFPGA architecture
+Error 15: Found a physical pb_type 'frac_lut6' missing circuit model binding!
+Error 16: Found a physical pb_type 'ff' missing circuit model binding!
+Error 17: Found a physical pb_type 'frac_lut6' missing circuit model binding!
+Error 18: Found a physical pb_type 'ff' missing circuit model binding!
+Error 19: Found a physical pb_type 'frac_lut6' missing circuit model binding!
+Error 20: Found a physical pb_type 'ff' missing circuit model binding!
+Error 21: Check physical pb_type annotation for mode selection bits failed with 8 errors!
+/home/cae1/Desktop/OpenFPGA/openfpga/src/annotation/annotate_pb_graph.cpp:629 rec_build_vpr_physical_pb_graph_node_annotation: Assertion 'nullptr != physical_pb_type' failed.
+-6
