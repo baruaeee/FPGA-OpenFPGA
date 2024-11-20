@@ -4,8 +4,13 @@
 #	Description: Timing constraints for Grid logical_tile_clb_mode_clb_ in PnR
 #	Author: Xifan TANG 
 #	Organization: University of Utah 
-#	Date: Wed Nov  6 21:49:00 2024
+#	Date: Tue Nov 19 16:11:14 2024
 #############################################
+
+#############################################
+#	Define time unit 
+#############################################
+set_units -time s
 
 set_max_delay -from fpga_top/grid_clb_*__*_/logical_tile_clb_mode_clb__0/clb_I[0] -to fpga_top/grid_clb_*__*_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/fle_in[0] 9.500000092e-11
 set_max_delay -from fpga_top/grid_clb_*__*_/logical_tile_clb_mode_clb__0/clb_I[1] -to fpga_top/grid_clb_*__*_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/fle_in[0] 9.500000092e-11

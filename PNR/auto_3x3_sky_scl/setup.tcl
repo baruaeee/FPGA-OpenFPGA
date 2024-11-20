@@ -1,5 +1,5 @@
 ## Specify floorplan
-floorPlan -coreMarginsBy io -r 0.99 0.71 22 22 22 22
+floorPlan -coreMarginsBy io -r 1.00 0.71 8 8 8 8
 #floorPlan -site 18T -b 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
@@ -22,31 +22,13 @@ addRing -nets {VDD VSS} \
 	-type core_rings \
 	-follow core \
 	-layer {top met5 bottom met5 left met4 right met4} \
-	-width {top 5 bottom 5 left 5 right 5} \
-	-spacing {top 5 bottom 5 left 5 right 5} \
-	-offset {top 5 bottom 5 left 5 right 5} \
+	-width {top 1.8 bottom 1.8 left 1.8 right 1.8} \
+	-spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} \
+	-offset {top 1.8 bottom 1.8 left 1.8 right 1.8} \
 	-center 0 \
 	-threshold 0 \
 	-jog_distance 0 \
 	-snap_wire_center_to_grid None
-
-## Add Power Stripes
-addStripe -nets {VDD VSS} \
-	-layer met4 \
-	-direction vertical \
-	-width 5 -spacing 5 \
-	-set_to_set_distance 100 \
-	-start_from left \
-	-start_offset 100 \
-	-switch_layer_over_obs false \
-	-max_same_layer_jog_length 2 \
-	-padcore_ring_top_layer_limit met5 \
-	-padcore_ring_bottom_layer_limit met1 \
-	-block_ring_top_layer_limit met5 \
-	-block_ring_bottom_layer_limit met1 \
-	-use_wire_group 0 \
-	-snap_wire_center_to_grid None
-
 
 ## Add Special Route
 sroute -connect { blockPin padPin padRing corePin floatingStripe } \
@@ -60,6 +42,24 @@ sroute -connect { blockPin padPin padRing corePin floatingStripe } \
 	-allowLayerChange 1 \
 	-blockPin useLef \
 	-targetViaLayerRange { met1(1) met5(5) }
+
+## Add Power Stripes
+addStripe -nets {VDD VSS} \
+	-layer met4 \
+	-direction vertical \
+	-width 2 -spacing 2 \
+	-set_to_set_distance 16 \
+	-start_from left \
+	-start_offset 10 \
+	-switch_layer_over_obs false \
+	-max_same_layer_jog_length 2 \
+	-padcore_ring_top_layer_limit met5 \
+	-padcore_ring_bottom_layer_limit met1 \
+	-block_ring_top_layer_limit met5 \
+	-block_ring_bottom_layer_limit met1 \
+	-use_wire_group 0 \
+	-snap_wire_center_to_grid None
+
 
 ## config place mode
 setPlaceMode -congEffort auto \

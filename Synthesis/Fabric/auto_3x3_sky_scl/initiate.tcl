@@ -1,11 +1,14 @@
 # This script is to use recursively for checking the OpenFPGA
 # generated SDC files
-file delete genus.log*
-file delete genus.cmd*
 
-read_libs ./LIB/sky130_tt_1.8_25_nldm.lib
-read_hdl flat.v
-elaborate
+read_libs LIB/sky130_ff_1.98_0_nldm.lib \
+	LIB/sky130_ss_1.62_125_nldm.lib \
+	LIB/sky130_tt_1.8_25_nldm.lib
+
+
+#read_hdl flat.v
+read_hdl SRC/fabric_netlists.v
+elaborate fpga_top
 
 set sdc_dir "./SDC"
 
@@ -31,4 +34,4 @@ foreach sdc_file $sdc_files {
 	read_sdc [file join $sdc_dir $sdc_file]
 }
 #read_sdc SDC/cbx_1__0_.sdc
-exit
+#exit

@@ -5,7 +5,26 @@ create_rc_corner -name RC_CORNER -T {25} -preRoute_res {1.0} -preRoute_cap {1.0}
 create_library_set -name MIN_LIB -timing {./lib/sky130_ff_1.98_0_nldm.lib}
 create_library_set -name MAX_LIB -timing {./lib/sky130_ss_1.62_125_nldm.lib}
 
-create_constraint_mode -name CONSTRAINTS -sdc_files {./SDC/post_synth_fabric_sdc.sdc}
+#create_constraint_mode -name CONSTRAINTS \
+#	-sdc_files {SDC/genus.default_emulate_constraint_mode.sdc \
+#	SDC/genus.dont_touch.sdc}
+
+create_constraint_mode -name CONSTRAINTS \
+	-sdc_files {SDC/global_ports.sdc \
+	SDC/cbx_1__0_.sdc \
+	SDC/cbx_1__1_.sdc \
+	SDC/cby_0__1_.sdc \
+	SDC/cby_1__1_.sdc \
+	SDC/logical_tile_clb_mode_clb_.sdc \
+	SDC/logical_tile_clb_mode_default__fle.sdc \
+	SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc \
+	SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc \
+	SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc \
+	SDC/logical_tile_io_mode_io_.sdc \
+	SDC/sb_0__0_.sdc \
+	SDC/sb_0__1_.sdc \
+	SDC/sb_1__0_.sdc \
+	SDC/sb_1__1_.sdc}
 
 create_delay_corner -name MAX_DELAY -library_set {MAX_LIB} -rc_corner {RC_CORNER}
 create_delay_corner -name MIN_DELAY -library_set {MIN_LIB} -rc_corner {RC_CORNER}

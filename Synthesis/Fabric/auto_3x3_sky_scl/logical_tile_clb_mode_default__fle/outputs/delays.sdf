@@ -1,0 +1,1785 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "logical_tile_clb_mode_default__fle")
+  (DATE        "Wed Nov 20 03:33:29 CET 2024")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "22.13-s093_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::1.98)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::0.0)
+  (TIMESCALE   1ns)
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g2)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g4)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g6)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g8)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g10)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g12)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g14)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g16)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g18)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g20)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g22)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g24)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g26)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g28)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g30)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g32)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g34)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g36)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g38)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g40)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g42)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g44)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g46)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g48)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g50)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g52)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g54)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g56)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g58)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g60)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g62)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g64)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.057) (::0.085))
+          (IOPATH B Y (::0.056) (::0.086))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g66)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g67)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g69)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g71)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g73)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g75)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g77)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g79)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g81)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g83)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g85)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g87)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g89)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g91)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g93)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g95)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g97)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g98)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g100)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g102)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g104)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g106)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g108)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g110)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g112)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g113)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g115)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g117)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.062) (::0.093))
+          (IOPATH B Y (::0.061) (::0.093))
+          (COND (A&~B) (IOPATH S0 Y (::0.074) (::0.091)))
+          (COND (~A&B) (IOPATH S0 Y (::0.047) (::0.069)))
+          (IOPATH S0 Y (::0.074) (::0.069))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g119)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.069) (::0.100))
+          (IOPATH B Y (::0.068) (::0.100))
+          (COND (A&~B) (IOPATH S0 Y (::0.080) (::0.098)))
+          (COND (~A&B) (IOPATH S0 Y (::0.054) (::0.076)))
+          (IOPATH S0 Y (::0.080) (::0.076))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g120)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.075) (::0.106))
+          (IOPATH B Y (::0.074) (::0.106))
+          (COND (A&~B) (IOPATH S0 Y (::0.087) (::0.105)))
+          (COND (~A&B) (IOPATH S0 Y (::0.060) (::0.082)))
+          (IOPATH S0 Y (::0.087) (::0.082))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.frac_lut6_mux_0_.g121)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.066) (::0.096))
+          (IOPATH B Y (::0.063) (::0.095))
+          (COND (A&~B) (IOPATH S0 Y (::0.084) (::0.097)))
+          (COND (~A&B) (IOPATH S0 Y (::0.055) (::0.076)))
+          (IOPATH S0 Y (::0.084) (::0.076))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_0_.OR2X1_0_)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.048) (::0.085))
+          (IOPATH B Y (::0.044) (::0.079))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_0_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+        (SETUP (negedge D) (COND adacond_RN (posedge CK)) (::0.047))
+        (SETUP (posedge D) (COND adacond_RN (posedge CK)) (::0.048))
+        (HOLD (negedge D) (COND adacond_RN (posedge CK)) (::0.003))
+        (HOLD (posedge D) (COND adacond_RN (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_1_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_2_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_3_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_4_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_5_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_6_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_7_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_8_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_9_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_10_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_11_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_12_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_13_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_14_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_15_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_16_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_17_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_18_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_19_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_20_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_21_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_22_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_23_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_24_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_25_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_26_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_27_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_28_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_29_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_30_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_31_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_32_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_33_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_34_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_35_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_36_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_37_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_38_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_39_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_40_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_41_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_42_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_43_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_44_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_45_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_46_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_47_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_48_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_49_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_50_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_51_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_52_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_53_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_54_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_55_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_56_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_57_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_58_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_59_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_60_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_61_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_62_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_63_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0.frac_lut6_DFFRX1_mem.DFFRX1_64_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.g3)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.067) (::0.097))
+          (IOPATH B Y (::0.064) (::0.096))
+          (COND (A&~B) (IOPATH S0 Y (::0.077) (::0.094)))
+          (COND (~A&B) (IOPATH S0 Y (::0.050) (::0.072)))
+          (IOPATH S0 Y (::0.077) (::0.072))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CLKAND2X2")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.g1)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.050) (::0.078))
+          (IOPATH B Y (::0.040) (::0.060))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_logic_out_0.DFFRX1_0_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_logic_out_0.DFFRX1_1_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFSRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.DFFSRX1_0_)
+     (DELAY
+        (ABSOLUTE
+          (PORT RN (::0.000))
+          (PORT SN (::0.000))
+          (PORT CK (::0.000))
+          (PORT D (::0.000))
+          (IOPATH RN Q () (::0.190))
+          (IOPATH SN Q (::0.152) (::0.156))
+          (COND (~CK&~D&~RN) (IOPATH SN Q (::0.172) (::0.146)))
+          (COND (~CK&~D&SN) (IOPATH RN Q () (::0.177)))
+          (IOPATH CK Q (::0.152) (::0.165))
+          (COND (~CK&D&SN) (IOPATH RN Q () (::0.177)))
+          (COND (CK&RN) (IOPATH SN Q (::0.148) ()))
+          (COND (~CK&D&RN) (IOPATH SN Q (::0.166) ()))
+          (COND (CK&~RN) (IOPATH SN Q (::0.152) (::0.156)))
+          (COND (~CK&D&~RN) (IOPATH SN Q (::0.172) (::0.146)))
+          (COND (~CK&~D&RN) (IOPATH SN Q (::0.166) ()))
+          (COND (CK&SN) (IOPATH RN Q () (::0.190)))
+          (IOPATH RN QN (::0.215) ())
+          (IOPATH SN QN (::0.181) (::0.176))
+          (COND (~CK&~D&~RN) (IOPATH SN QN (::0.171) (::0.195)))
+          (COND (~CK&~D&SN) (IOPATH RN QN (::0.202) ()))
+          (IOPATH CK QN (::0.190) (::0.176))
+          (COND (~CK&D&SN) (IOPATH RN QN (::0.202) ()))
+          (COND (CK&RN) (IOPATH SN QN () (::0.171)))
+          (COND (~CK&D&RN) (IOPATH SN QN () (::0.188)))
+          (COND (CK&~RN) (IOPATH SN QN (::0.181) (::0.176)))
+          (COND (~CK&D&~RN) (IOPATH SN QN (::0.171) (::0.196)))
+          (COND (~CK&~D&RN) (IOPATH SN QN () (::0.189)))
+          (COND (CK&SN) (IOPATH RN QN (::0.215) ()))
+        )
+     )
+     (TIMINGCHECK
+        (RECOVERY (posedge RN) (COND adacond_D_AND_SN (posedge CK)) (::0.109))
+        (REMOVAL (posedge RN) (COND adacond_D_AND_SN (posedge CK)) (::0.000))
+        (HOLD (posedge SN) (COND adacond_NOT_CK (posedge RN)) (::0.000))
+        (HOLD (posedge SN) (COND adacond_CK (posedge RN)) (::0.000))
+        (REMOVAL (posedge SN) (COND adacond_NOT_D_AND_RN (posedge CK)) (::0.034))
+        (RECOVERY (posedge SN) (COND adacond_NOT_D_AND_RN (posedge CK)) (::0.000))
+        (HOLD (negedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.000))
+        (HOLD (posedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.000))
+        (SETUP (negedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.071))
+        (SETUP (posedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.116))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFSRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.DFFSRX1_0_)
+     (DELAY
+        (ABSOLUTE
+          (PORT RN (::0.000))
+          (PORT SN (::0.000))
+          (PORT CK (::0.000))
+          (PORT D (::0.000))
+          (IOPATH RN Q () (::0.190))
+          (IOPATH SN Q (::0.152) (::0.156))
+          (COND (~CK&~D&~RN) (IOPATH SN Q (::0.172) (::0.146)))
+          (COND (~CK&~D&SN) (IOPATH RN Q () (::0.177)))
+          (IOPATH CK Q (::0.152) (::0.165))
+          (COND (~CK&D&SN) (IOPATH RN Q () (::0.177)))
+          (COND (CK&RN) (IOPATH SN Q (::0.148) ()))
+          (COND (~CK&D&RN) (IOPATH SN Q (::0.166) ()))
+          (COND (CK&~RN) (IOPATH SN Q (::0.152) (::0.156)))
+          (COND (~CK&D&~RN) (IOPATH SN Q (::0.172) (::0.146)))
+          (COND (~CK&~D&RN) (IOPATH SN Q (::0.166) ()))
+          (COND (CK&SN) (IOPATH RN Q () (::0.190)))
+          (IOPATH RN QN (::0.215) ())
+          (IOPATH SN QN (::0.181) (::0.176))
+          (COND (~CK&~D&~RN) (IOPATH SN QN (::0.171) (::0.195)))
+          (COND (~CK&~D&SN) (IOPATH RN QN (::0.202) ()))
+          (IOPATH CK QN (::0.190) (::0.176))
+          (COND (~CK&D&SN) (IOPATH RN QN (::0.202) ()))
+          (COND (CK&RN) (IOPATH SN QN () (::0.171)))
+          (COND (~CK&D&RN) (IOPATH SN QN () (::0.188)))
+          (COND (CK&~RN) (IOPATH SN QN (::0.181) (::0.176)))
+          (COND (~CK&D&~RN) (IOPATH SN QN (::0.171) (::0.196)))
+          (COND (~CK&~D&RN) (IOPATH SN QN () (::0.189)))
+          (COND (CK&SN) (IOPATH RN QN (::0.215) ()))
+        )
+     )
+     (TIMINGCHECK
+        (RECOVERY (posedge RN) (COND adacond_D_AND_SN (posedge CK)) (::0.109))
+        (REMOVAL (posedge RN) (COND adacond_D_AND_SN (posedge CK)) (::0.000))
+        (HOLD (posedge SN) (COND adacond_NOT_CK (posedge RN)) (::0.000))
+        (HOLD (posedge SN) (COND adacond_CK (posedge RN)) (::0.000))
+        (REMOVAL (posedge SN) (COND adacond_NOT_D_AND_RN (posedge CK)) (::0.034))
+        (RECOVERY (posedge SN) (COND adacond_NOT_D_AND_RN (posedge CK)) (::0.000))
+        (HOLD (negedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.000))
+        (HOLD (posedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.000))
+        (SETUP (negedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.080))
+        (SETUP (posedge D) (COND adacond_RN_AND_SN (posedge CK)) (::0.124))
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.g3)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.060) (::0.088))
+          (IOPATH B Y (::0.065) (::0.096))
+          (COND (A&~B) (IOPATH S0 Y (::0.077) (::0.094)))
+          (COND (~A&B) (IOPATH S0 Y (::0.050) (::0.072)))
+          (IOPATH S0 Y (::0.077) (::0.072))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CLKAND2X2")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.g1)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.042) (::0.069))
+          (IOPATH B Y (::0.032) (::0.052))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MX2X1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.g3)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (PORT S0 (::0.000))
+          (IOPATH A Y (::0.069) (::0.099))
+          (IOPATH B Y (::0.065) (::0.096))
+          (COND (A&~B) (IOPATH S0 Y (::0.077) (::0.094)))
+          (COND (~A&B) (IOPATH S0 Y (::0.050) (::0.072)))
+          (IOPATH S0 Y (::0.077) (::0.072))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CLKAND2X2")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.g1)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.042) (::0.069))
+          (IOPATH B Y (::0.032) (::0.052))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_0.DFFRX1_0_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_0.DFFRX1_1_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_1.DFFRX1_0_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFFRX1")
+     (INSTANCE logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_1.DFFRX1_1_)
+     (TIMINGCHECK
+        (REMOVAL (posedge RN) (COND adacond_D (posedge CK)) (::0.089))
+        (RECOVERY (posedge RN) (COND adacond_D (posedge CK)) (::0.000))
+     )
+  )
+)

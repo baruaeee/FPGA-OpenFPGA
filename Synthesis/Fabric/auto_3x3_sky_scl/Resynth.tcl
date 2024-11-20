@@ -1,7 +1,14 @@
 
-read_libs ./LIB/sky130_tt_1.8_25_nldm.lib
-read_hdl flat.v
-elaborate
+read_libs LIB/sky130_ff_1.98_0_nldm.lib \
+	LIB/sky130_ss_1.62_125_nldm.lib \
+	LIB/sky130_tt_1.8_25_nldm.lib
+
+
+#read_hdl flat.v
+read_hdl SRC/fabric_netlists.v
+
+#elaborate
+elaborate fpga_top
 
 # set and read SDC files
 set sdc_dir "./SDC"
@@ -48,4 +55,5 @@ report_qor    > reports/report_qor.rpt
 write_hdl > outputs/post_synth_fabric_netlist.v
 write_sdc > outputs/post_synth_fabric_sdc.sdc
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
-
+write_design
+exit

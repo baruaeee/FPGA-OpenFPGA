@@ -169,7 +169,7 @@
       <port type="output" prefix="QN" size="1"/>
       <port type="clock" prefix="prog_clk" lib_name="CK" size="1" is_global="true" default_val="0" is_prog="true"/>
     </circuit_model>
-    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO_netlist_sky_scl.v">
+    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO/gpio_netlist_sky130_scl.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>

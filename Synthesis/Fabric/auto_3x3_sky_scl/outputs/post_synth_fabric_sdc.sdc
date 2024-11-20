@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Wed Nov 06 23:13:24 CET 2024
+#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Tue Nov 19 22:03:26 CET 2024
 
 # ####################################################################
 
@@ -12,8 +12,6 @@ set_units -time 1000ps
 # Set the current design
 current_design fpga_top
 
-create_clock -name "clk[0]" -period 0.94603 -waveform {0.0 0.4730165} [get_ports {clk[0]}]
-create_clock -name "prog_clk[0]" -period 10.0 -waveform {0.0 5.0} [get_ports {prog_clk[0]}]
 set_max_delay 0.0023 -from [get_pins {cbx_1__0_/chanx_left_in[0]}] -to [get_pins {cbx_1__0_/chanx_left_out[0]}]
 set_max_delay 0.0023 -from [get_pins {cbx_1__0_/chanx_right_in[0]}] -to [get_pins {cbx_1__0_/chanx_right_out[0]}]
 set_max_delay 0.0023 -from [get_pins {cbx_1__0_/chanx_left_in[1]}] -to [get_pins {cbx_1__0_/chanx_left_out[1]}]
