@@ -361,38 +361,15 @@ dbGet top.fPlan.coreBox_sizex
 dbGet top.fPlan.coreBox_sizey
 
 ----------------
-GPIO-Sky130-IO-PAD
 
-module GPIO ();
-	always @(*) begin
-		case ({DIR, IB_MODE_SEL[1], IB_MODE_SEL[0], HYS_TRIM, VTRIP_SEL})
-			5'b001xx: IN <= PAD;
-			5'b01x0x: IN <= PAD;
-			5'b01x1x: IN <= PAD;
-			5'b000x0: IN <= PAD;
-			5'b000x1: IN <= PAD;
-			default:  1'bZ < = PAD;
-		endcase
-    end
-
-	always @(*) begin
-		case ({DIR, OE_N, DM[2], DM[1], DM[0], SLOW, SLEW_CTL[1], SLEW_CTL[0]})
-			8'b101100xx: PAD <= OUT;; 
-			8'b101101xx: PAD <= OUT; 
-			8'b101000xx: PAD <= OUT; 
-			8'b101111xx: PAD <= OUT; 
-			8'b101010xx: PAD <= OUT; 
-			8'b10100111: PAD <= OUT; 
-			8'b100100xx: PAD <= OUT; 
-			8'b10100100: PAD <= OUT; 
-			8'b100101xx: PAD <= OUT; 
-			8'b10100101: PAD <= OUT; 
-			8'b100110xx: PAD <= OUT; 
-			8'b100111xx: PAD <= OUT;
-			default:     1'bZ <= OUT;
-		endcase
-	end
-end module
+write me a python code to read the current cbbi value from https://colintalkscrypto.com/cbbi/ and calculate a the ratio of my crypto portfolio in way that it will keep btc/usd ratio to-
+uptrand => cbbi 0-60 => 0.9
+uptrand => cbbi 61-90 => 0.85
+uptrand => cbbi 91-96 => 0.80
+uptrand => cbbi > 96 => 0.1
+after cbbi>96 => bull market topped, take profit => wait for the market bottom => down trande keep ratio to 0.1
+downtrand => cbbi 10-100 => 0.1
+after cbbi <10 bear market bottomed, change ratio to 0.9 again and uptrand starts. repeat uptrand ratio again.
 
 	
 
