@@ -3,7 +3,7 @@
 //	Description: Verilog modules for primitive pb_type: ff
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Tue Nov 19 01:48:12 2024
+//	Date: Thu Nov 21 02:53:53 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none

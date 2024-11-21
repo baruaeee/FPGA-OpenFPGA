@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION  "OVI 3.0")
   (DESIGN      "fpga_top")
-  (DATE        "Tue Nov 19 22:03:27 CET 2024")
+  (DATE        "Thu Nov 21 03:28:25 CET 2024")
   (VENDOR      "Cadence, Inc.")
   (PROGRAM     "Genus(TM) Synthesis Solution")
   (VERSION     "22.13-s093_1")

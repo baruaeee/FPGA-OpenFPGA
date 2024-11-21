@@ -1,0 +1,10 @@
+/mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools.lnx86/inca/bin/64bit/xmsim
+Obtained 8 stack frames.
+/mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools.lnx86/inca/bin/64bit/../../../lib/64bit/libcbreakpad.so(_Z13use_backtracev+0x9d) [0x7f99847e01a3]
+/mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools.lnx86/inca/bin/64bit/../../../lib/64bit/libcbreakpad.so(cbpad_generate_dump_on_demand+0x66) [0x7f99847e0630]
+xmsim() [0x1adc4a7]
+xmsim(serror+0x95) [0x1ade0d5]
+xmsim() [0xc67b2e]
+xmsim() [0xc683ed]
+/lib64/libpthread.so.0(+0x12d10) [0x7f99851a5d10]
+[0x4d31a4c]

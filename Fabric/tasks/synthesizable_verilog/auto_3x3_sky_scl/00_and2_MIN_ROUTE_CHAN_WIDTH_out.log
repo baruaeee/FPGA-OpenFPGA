@@ -7,7 +7,7 @@ INFO - Setting loggger in debug mode
 INFO - Run directory : /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH
 INFO - Running OpenFPGA Shell Engine 
 INFO - Launching OpenFPGA Shell Run 
-INFO - OpenFPGAShell Revision: v8.0.0-12019-g04959b7b8 Compiled: 2024-11-06T23:06:29
+INFO - OpenFPGAShell Revision: v8.0.0-12163-g8178b7129 Compiled: 2024-11-18T22:48:45
 INFO - OpenFPGA Shell Run is written in file openfpgashell.log
 INFO - vpr result extracted in file vpr_stat.result
 INFO - Launching iverilog_verification 

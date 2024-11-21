@@ -2,7 +2,7 @@
 // File created by:  xrun
 // Do not modify this file
 //
-/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_out_tb.v
+io_in_tb.v
 -access
 +rwc
 -64bit

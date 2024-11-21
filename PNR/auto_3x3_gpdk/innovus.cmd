@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Tue Nov 12 22:58:44 2024                
+#  Created on Thu Nov 21 03:34:57 2024                
 #                                                     
 #######################################################
 
@@ -106,5 +106,3 @@ addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing
 setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
 setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 setPlaceMode -fp false
-setPlaceMode -fp false
-place_design

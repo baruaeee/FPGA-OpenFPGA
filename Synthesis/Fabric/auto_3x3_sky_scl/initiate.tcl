@@ -9,6 +9,7 @@ read_libs LIB/sky130_ff_1.98_0_nldm.lib \
 #read_hdl flat.v
 read_hdl SRC/fabric_netlists.v
 elaborate fpga_top
+flat
 
 set sdc_dir "./SDC"
 
@@ -33,5 +34,6 @@ set sdc_files {
 foreach sdc_file $sdc_files {
 	read_sdc [file join $sdc_dir $sdc_file]
 }
+write_hdl > flat.v
 #read_sdc SDC/cbx_1__0_.sdc
 #exit

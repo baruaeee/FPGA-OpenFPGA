@@ -1,11 +1,41 @@
 xrun(64): 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s007: Started on Nov 11, 2024 at 21:02:29 CET
+TOOL:	xrun(64)	23.03-s007: Started on Nov 21, 2024 at 04:05:02 CET
 xrun
-	/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_out_tb.v
+	io_in_tb.v
 	-access +rwc
 	-64bit
 	-gui
-file: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_out_tb.v
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xmvlog: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xmvlog: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+file: io_in_tb.v
 	module worklib.sky130_osu_sc_18T_hs__addf_1:v
 		errors: 0, warnings: 0
 	module worklib.sky130_osu_sc_18T_hs__addf_l:v
@@ -240,27 +270,45 @@ output TIE_HI_ESD, TIE_LO_ESD;
 xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,61|28): Implicit net port (TIE_LO_ESD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 	module worklib.sky130_fd_io__top_gpio_ovtv2:v
 		errors: 0, warnings: 30
-	module worklib.GPIO_OUT:v
+	module worklib.GPIO_IN:v
 		errors: 0, warnings: 0
-	module worklib.IO_OUT_tb:v
-		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xmelab: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xmelab: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
-  sky130_fd_io__top_gpio_ovtv2 gpio(.INP_DIS (tie_hi_esd),
+  sky130_fd_io__top_gpio_ovtv2 gpio(.IN (Y), .INP_DIS (tie_lo_esd),
                                   |
-xmelab: *W,CUVWSP (./outputs/outpad_netlist.v,13|34): 2 output ports were not connected:
-xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,19): IN
+xmelab: *W,CUVWSP (./outputs/inpad_netlist.v,13|34): 1 output port was not connected:
 xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,19): IN_H
 
-  sky130_fd_io__top_gpio_ovtv2 gpio(.INP_DIS (tie_hi_esd),
+  sky130_fd_io__top_gpio_ovtv2 gpio(.IN (Y), .INP_DIS (tie_lo_esd),
                                   |
-xmelab: *W,CUVWSI (./outputs/outpad_netlist.v,13|34): 2 input ports were not connected:
+xmelab: *W,CUVWSI (./outputs/inpad_netlist.v,13|34): 3 input ports were not connected:
+xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,22): OUT
 xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,22): SLEW_CTL
 xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,22): VINREF
 
-  sky130_fd_io__top_gpio_ovtv2 gpio(.INP_DIS (tie_hi_esd),
+  sky130_fd_io__top_gpio_ovtv2 gpio(.IN (Y), .INP_DIS (tie_lo_esd),
                                   |
-xmelab: *W,CUVWSB (./outputs/outpad_netlist.v,13|34): 5 inout ports were not connected:
+xmelab: *W,CUVWSB (./outputs/inpad_netlist.v,13|34): 5 inout ports were not connected:
 xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,19): AMUXBUS_A
 xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,20): AMUXBUS_B
 xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v,20): PAD_A_ESD_0_H
@@ -325,15 +373,19 @@ xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells
 		sky130_osu_sc_18T_hs__tnbufi_l
 		sky130_osu_sc_18T_hs__xnor2_l
 		sky130_osu_sc_18T_hs__xor2_l
-		IO_OUT_tb
+		IO_IN_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xmvlog_cg: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xmvlog_cg: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
 		worklib.sky130_fd_io__top_gpio_ovtv2:v <0x0d8ace93>
 			streams: 125, words: 93335
-		worklib.GPIO_OUT:v <0x692755f6>
+		worklib.GPIO_IN:v <0x1c825fea>
 			streams:   1, words:   555
-		worklib.IO_OUT_tb:v <0x1470ddab>
-			streams:   1, words:  3972
 		worklib.sky130_osu_sc_18T_hs__xor2_l:v <0x152452c5>
 			streams:   0, words:     0
 		worklib.sky130_osu_sc_18T_hs__xnor2_l:v <0x69f3ddfd>
@@ -381,7 +433,7 @@ xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells
 		Primitives:              207       9
 		Timing outputs:           70      57
 		Registers:                59      73
-		Scalar wires:            305       -
+		Scalar wires:            308       -
 		Expanded wires:            5       2
 		Vectored wires:            4       -
 		Named events:             13      13
@@ -393,22 +445,31 @@ xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells
 		Delayed tcheck signals:   37      30
 		Simulation timescale:    1ps
 	Writing initial simulation snapshot: worklib.sky130_osu_sc_18T_hs__addf_1:v
+DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
+|
+xmsim: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
+DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
+|
+xmsim: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 
 -------------------------------------
 Relinquished control to SimVision...
 xcelium> 
 xcelium> source /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools/xcelium/files/xmsimrc
-xcelium> database -open waves -into waves.shm -default
-Created default SHM database waves
-xcelium> probe -create -shm IO_OUT_tb.A IO_OUT_tb.PAD
-Created probe 1
 xcelium> run
-Test Case 1: Y=0, PAD=0, a=0
-Test Case 2: Y=1, PAD=1, a=1
-Test Case 3: Y=0, PAD=0, a=0
-Simulation complete via $finish(1) at time 30 NS + 0
-./io_out_tb.v:37         $finish;
-xcelium> ^C
-xcelium> exit
-TOOL:	xrun(64)	23.03-s007: Exiting on Nov 11, 2024 at 21:02:53 CET  (total: 00:00:24)
+xmsim: *F,INTERR: INTERNAL EXCEPTION
+Observed simulation time : 0 FS + 0
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	xmsim(64)	23.03-s007
+  HOSTNAME: ei-vm-011
+  OPERATING SYSTEM: Linux 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64
+  MESSAGE: T(0): sv_seghandler - trapno -1 addr(0x4d31a4c)
+	Stream rts_xfer
+-----------------------------------------------------------------
+csi-xmsim - CSI: Cadence Support Investigation, sending details to /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/xmsim_28279.err
+csi-xmsim - CSI: investigation complete, send /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/xmsim_28279.err to Cadence Support

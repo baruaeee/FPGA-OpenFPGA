@@ -1,0 +1,84 @@
+*** Message Type: info ***
+When: Thu Nov 21 04:05:19 AM CET 2024
+SimVision started.
+Version: TOOL:  simvision(64)   23.03-s007
+User: cae1
+Host: ei-vm-011.hs-regensburg.de
+Platform: Linux/x86_64/4.18.0-553.22.1.el8_10.x86_64
+Started: Thu Nov 21 04:05:19 AM CET 2024
+Command: /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:ei-vm-011.hs-regensburg.de:56285 -64BIT -nocopyright
+Work Directory: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO
+ 
+*** Message Type: info ***
+When: Thu Nov 21 04:05:20 AM CET 2024
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Thu Nov 21 04:05:21 AM CET 2024
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Thu Nov 21 04:05:36 AM CET 2024
+Connect to Simulator
+      Design: worklib.sky130_osu_sc_18T_hs__addf_1:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:     xmsim(64)       23.03-s007
+        User: cae1
+        Host: ei-vm-011.hs-regensburg.de
+Time Started: Thu Nov 21 04:05:16 AM CET 2024
+  Process ID: 28279
+   Directory: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO
+     Command: xrun io_in_tb.v -access +rwc -64bit -gui
+
+ 
+*** Message Type: info ***
+When: Thu Nov 21 04:05:36 AM CET 2024
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Thu Nov 21 04:05:55 AM CET 2024
+Exit XM-Sim: user
+      Design: worklib.sky130_osu_sc_18T_hs__addf_1:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:     xmsim(64)       23.03-s007
+        User: cae1
+        Host: ei-vm-011.hs-regensburg.de
+Time Started: Thu Nov 21 04:05:16 AM CET 2024
+  Process ID: 28279
+   Directory: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO
+     Command: xrun io_in_tb.v -access +rwc -64bit -gui
+
+ 
+*** Message Type: error ***
+When: Thu Nov 21 04:05:55 AM CET 2024
+XM-Sim Crashed:
+      Design: worklib.sky130_osu_sc_18T_hs__addf_1:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:     xmsim(64)       23.03-s007
+        User: cae1
+        Host: ei-vm-011.hs-regensburg.de
+Time Started: Thu Nov 21 04:05:16 AM CET 2024
+  Process ID: 28279
+   Directory: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO
+     Command: xrun io_in_tb.v -access +rwc -64bit -gui
+      Design: worklib.sky130_osu_sc_18T_hs__addf_1:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:       xmsim(64)       23.03-s007
+        User: cae1
+        Host: ei-vm-011.hs-regensburg.de
+Time Started: Thu Nov 21 04:05:16 AM CET 2024
+  Process ID: 28279
+   Directory: /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO
+     Command: xrun io_in_tb.v -access +rwc -64bit -gui
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Thu Nov 21 04:06:00 AM CET 2024
+SimVision Exit.
+ 

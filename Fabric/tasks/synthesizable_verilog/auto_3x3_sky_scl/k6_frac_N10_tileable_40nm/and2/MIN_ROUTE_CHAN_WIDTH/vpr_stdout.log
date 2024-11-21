@@ -1,8 +1,8 @@
 VPR FPGA Placement and Routing.
-Version: 8.1.0-dev+v8.0.0-12019-g04959b7b8
-Revision: v8.0.0-12019-g04959b7b8
-Compiled: 2024-11-06T23:06:29
-Compiler: GNU 8.5.0 on Linux-5.15.0-210.163.7.el8uek.x86_64 x86_64
+Version: 8.1.0-dev+v8.0.0-12163-g8178b7129
+Revision: v8.0.0-12163-g8178b7129
+Compiled: 2024-11-18T22:48:45
+Compiler: GNU 8.5.0 on Linux-4.18.0-553.22.1.el8_10.x86_64 x86_64
 Build Info: release IPO VTR_ASSERT_LEVEL=2
 
 University of Toronto
@@ -67,7 +67,6 @@ PlacerOpts.place_freq: PLACE_ONCE
 PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
 PlacerOpts.pad_loc_type: FREE
 PlacerOpts.constraints_file: No constraints file given
-PlacerOpts.place_cost_exp: 1.000000
 PlacerOpts.place_chan_width: 20
 PlacerOpts.inner_loop_recompute_divider: 0
 PlacerOpts.recompute_crit_iter: 1
@@ -146,7 +145,7 @@ AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
 AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
 
 # Building complex block graph
-# Building complex block graph took 0.02 seconds (max_rss 18.1 MiB, delta_rss +0.0 MiB)
+# Building complex block graph took 0.01 seconds (max_rss 18.1 MiB, delta_rss +0.0 MiB)
 Circuit file: and2.blif
 # Load circuit
 # Load circuit took 0.00 seconds (max_rss 18.1 MiB, delta_rss +0.0 MiB)
@@ -213,11 +212,11 @@ Logic Element (fle) detailed count:
   LEs used for logic only             : 1
   LEs used for registers only         : 0
 
-Incr Slack updates 1 in 1.984e-06 sec
-Full Max Req/Worst Slack updates 1 in 5.081e-06 sec
+Incr Slack updates 1 in 9.52e-07 sec
+Full Max Req/Worst Slack updates 1 in 7.21e-07 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.583e-06 sec
+Full Criticality updates 1 in 7.82e-07 sec
 FPGA sized to 3 x 3 (auto)
 Device Utilization: 0.15 (target 1.00)
 	Block Utilization: 0.09 Type: io
@@ -241,10 +240,10 @@ Netlist conversion complete.
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'and2.net'.
 Detected 0 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.008567 seconds).
+Finished loading packed FPGA netlist file (took 0.006999 seconds).
 Warning 6: Treated 0 constant nets as global which will not be routed (to see net names increase packer verbosity).
-# Load packing took 0.01 seconds (max_rss 51.4 MiB, delta_rss +33.3 MiB)
 Warning 7: Netlist contains 0 global net to non-global architecture pin connections
+Completed clustering consistency check successfully.
 
 Pb types usage...
   io             : 3
@@ -257,6 +256,7 @@ Pb types usage...
       lut5       : 1
        lut       : 1
 
+# Load packing took 0.02 seconds (max_rss 51.6 MiB, delta_rss +33.5 MiB)
 # Create Device
 ## Build Device Grid
 FPGA sized to 3 x 3: 9 grid tiles (auto)
@@ -304,8 +304,6 @@ Serial Connection Router is being destroyed. Time spent on path search: 0.000 se
 
 Bounding box mode is Cube
 
-Warning 13: CHANX place cost fac is 0 at -1 -1
-Warning 14: CHANY place cost fac is 0 at -1 -1
 # Placement
 ## Initial Placement
 Initial placement iteration 0 has finished successfully
@@ -318,7 +316,7 @@ There are 3 point to point connections in this circuit.
 BB estimate of min-dist (placement) wire length: 9
 
 Completed placement consistency check successfully.
-Initial placement cost: 1 bb_cost: 0.5 td_cost: 4.5505e-10
+Initial placement cost: 1 bb_cost: 0.45 td_cost: 4.5505e-10
 Initial placement estimated Critical Path Delay (CPD): 0.749366 ns
 Initial placement estimated setup Total Negative Slack (sTNS): -0.749366 ns
 Initial placement estimated setup Worst Negative Slack (sWNS): -0.749366 ns
@@ -337,14 +335,14 @@ Initial placement estimated setup slack histogram:
 Placement contains 0 placement macros involving 0 blocks (average macro size -nan)
 
 Moves per temperature: 3
-Warning 15: Starting t: 2 of 3 configurations accepted.
+Warning 13: Starting t: 2 of 3 configurations accepted.
 
 ---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
 Tnum   Time       T Av Cost Av BB Cost Av TD Cost     CPD       sTNS     sWNS Ac Rate Std Dev  R lim Crit Exp Tot Moves  Alpha
       (sec)                                          (ns)       (ns)     (ns)                                                 
 ---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
-   1    0.0 2.8e-04   0.974       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         3  0.200
-   2    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         6  0.950
+   1    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         3  0.200
+   2    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.000  0.0000    2.0     1.00         6  0.950
 ## Placement Quench took 0.00 seconds (max_rss 51.6 MiB)
 post-quench CPD = 0.67231 (ns) 
 
@@ -384,31 +382,31 @@ Placement resource usage:
 
 Placement number of temperatures: 2
 Placement total # of swap attempts: 9
-	Swaps accepted: 4 (44.4 %)
+	Swaps accepted: 3 (33.3 %)
 	Swaps rejected: 3 (33.3 %)
-	Swaps aborted: 2 (22.2 %)
+	Swaps aborted: 3 (33.3 %)
 
 
 Placement perturbation distribution by block and move type: 
 ------------------ ----------------- ---------------- ---------------- --------------- ------------ 
     Block Type         Move Type       (%) of Total      Accepted(%)     Rejected(%)    Aborted(%)
 ------------------ ----------------- ---------------- ---------------- --------------- ------------ 
-io                 Uniform                66.67            66.67           33.33          0.00         
-                   Median                 11.11            0.00            100.00         0.00         
+io                 Uniform                66.67            50.00           50.00          0.00         
 
+clb                Uniform                11.11            0.00            0.00           100.00       
                    Crit. Uniform          11.11            0.00            0.00           100.00       
                    Feasible Region        11.11            0.00            0.00           100.00       
 
 
-Placement Quench timing analysis took 5.27e-06 seconds (2.345e-06 STA, 2.925e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
-Placement Total  timing analysis took 4.5799e-05 seconds (2.7805e-05 STA, 1.7994e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
+Placement Quench timing analysis took 2.675e-06 seconds (1.643e-06 STA, 1.032e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 3.235e-05 seconds (2.4035e-05 STA, 8.315e-06 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
 update_td_costs: connections 0 nets 0 sum_nets 0 total 0
 # Placement took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-Incr Slack updates 4 in 4.891e-06 sec
-Full Max Req/Worst Slack updates 2 in 2.805e-06 sec
-Incr Max Req/Worst Slack updates 2 in 1.622e-06 sec
-Incr Criticality updates 2 in 1.824e-06 sec
-Full Criticality updates 2 in 2.315e-06 sec
+Incr Slack updates 4 in 2.114e-06 sec
+Full Max Req/Worst Slack updates 2 in 1.784e-06 sec
+Incr Max Req/Worst Slack updates 2 in 4.7e-07 sec
+Incr Criticality updates 2 in 6.52e-07 sec
+Full Criticality updates 2 in 1.282e-06 sec
 
 # Routing
 RR graph channel widths unchanged, skipping RR graph rebuild
@@ -429,9 +427,9 @@ Initial Net Connection Criticality Histogram:
 Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
       (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
-   1    0.0     0.0    0      50       3       3       0 ( 0.000%)      13 (16.2%)    1.481     -1.481     -1.481      0.000      0.000      N/A
+   1    0.0     0.0    0      26       3       3       0 ( 0.000%)       4 ( 5.0%)    0.788    -0.7884     -0.788      0.000      0.000      N/A
 Restoring best routing
-Critical path: 1.48098 ns
+Critical path: 0.788361 ns
 Successfully routed after 1 routing iterations.
 Final Net Connection Criticality Histogram:
 [        0:      0.1) 0 (  0.0%) |
@@ -444,7 +442,7 @@ Final Net Connection Criticality Histogram:
 [      0.7:      0.8) 0 (  0.0%) |
 [      0.8:      0.9) 0 (  0.0%) |
 [      0.9:        1) 3 (100.0%) |*************************************************
-Router Stats: total_nets_routed: 3 total_connections_routed: 3 total_heap_pushes: 50 total_heap_pops: 44 
+Router Stats: total_nets_routed: 3 total_connections_routed: 3 total_heap_pushes: 26 total_heap_pops: 19 
 Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
 # Routing took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
@@ -453,13 +451,13 @@ Checking to ensure routing is legal...
 # Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 Completed routing consistency check successfully.
 
-Serial number (magic cookie) for the routing is: -26992
+Serial number (magic cookie) for the routing is: -11731
 Circuit successfully routed with a channel width factor of 20.
-Incr Slack updates 2 in 2.775e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.173e-06 sec
-Incr Max Req/Worst Slack updates 1 in 1.062e-06 sec
+Incr Slack updates 2 in 1.293e-06 sec
+Full Max Req/Worst Slack updates 1 in 6.92e-07 sec
+Incr Max Req/Worst Slack updates 1 in 4.11e-07 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 2 in 2.385e-06 sec
+Full Criticality updates 2 in 1.082e-06 sec
 # Synchronize the packed netlist to routing optimization
 ## Annotating rr_node with routed nets
 ## Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
@@ -476,17 +474,17 @@ Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output 
 Absorbed logical nets 0 out of 3 nets, 3 nets not absorbed.
 
 
-Average number of bends per net: 3.33333  Maximum # of bends: 10
+Average number of bends per net: 0.333333  Maximum # of bends: 1
 
 Number of global nets: 0
 Number of routed nets (nonglobal): 3
 Wire length results (in units of 1 clb segments)...
-	Total wirelength: 13, average net length: 4.33333
-	Maximum net length: 11
+	Total wirelength: 4, average net length: 1.33333
+	Maximum net length: 2
 
 Wire length results in terms of physical segments...
-	Total wiring segments used: 13, average wire segments per net: 4.33333
-	Maximum segments used by a net: 11
+	Total wiring segments used: 4, average wire segments per net: 1.33333
+	Maximum segments used by a net: 2
 	Total local nets with reserved CLB opins: 0
 Total number of nets absorbed: 0
 
@@ -499,18 +497,18 @@ Routing channel utilization histogram:
 [      0.4:      0.5) 0 (  0.0%) |
 [      0.3:      0.4) 0 (  0.0%) |
 [      0.2:      0.3) 0 (  0.0%) |
-[      0.1:      0.2) 2 ( 25.0%) |****************
-[        0:      0.1) 6 ( 75.0%) |*************************************************
-Maximum routing channel utilization:      0.15 at (1,0)
+[      0.1:      0.2) 0 (  0.0%) |
+[        0:      0.1) 8 (100.0%) |*************************************************
+Maximum routing channel utilization:      0.05 at (1,1)
 
 X - Directed channels:   j max occ ave occ capacity
                       ---- ------- ------- --------
-                         0       3   1.000       20
-                         1       2   0.667       20
+                         0       0   0.000       20
+                         1       1   0.333       20
 Y - Directed channels:   i max occ ave occ capacity
                       ---- ------- ------- --------
-                         0       3   1.000       20
-                         1       5   1.667       20
+                         0       1   0.333       20
+                         1       2   0.667       20
 
 Total tracks in x-direction: 40, in y-direction: 40
 
@@ -528,62 +526,62 @@ Total Number of Wiring Segments by Direction: direction length number
 
 X - Directed Wiring Segment usage by length: length utilization
                                              ------ -----------
-                                             4       0.125
+                                             4       0.025
 
 Y - Directed Wiring Segment usage by length: length utilization
                                              ------ -----------
-                                             4         0.2
+                                             4       0.075
 
 Segment occupancy by length: Length utilization
                              ------ -----------
-                             L4           0.162
+                             L4            0.05
 
 Segment occupancy by type: name type utilization
                            ---- ---- -----------
-                             L4    0       0.162
+                             L4    0        0.05
 
 Final hold Worst Negative Slack (hWNS): 0 ns
 Final hold Total Negative Slack (hTNS): 0 ns
 
 Final hold slack histogram:
-[  1.3e-09:  1.3e-09) 1 (100.0%) |**************************************************
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
-[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 1 (100.0%) |**************************************************
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  6.1e-10:  6.1e-10) 0 (  0.0%) |
 
-Final critical path delay (least slack): 1.48098 ns, Fmax: 675.23 MHz
-Final setup Worst Negative Slack (sWNS): -1.48098 ns
-Final setup Total Negative Slack (sTNS): -1.48098 ns
+Final critical path delay (least slack): 0.788361 ns, Fmax: 1268.45 MHz
+Final setup Worst Negative Slack (sWNS): -0.788361 ns
+Final setup Total Negative Slack (sTNS): -0.788361 ns
 
 Final setup slack histogram:
-[ -1.5e-09: -1.5e-09) 1 (100.0%) |**************************************************
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
-[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 1 (100.0%) |**************************************************
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
 
 Final geomean non-virtual intra-domain period: nan ns (nan MHz)
 Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
 
-Incr Slack updates 1 in 2.014e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.102e-06 sec
+Incr Slack updates 1 in 1.393e-06 sec
+Full Max Req/Worst Slack updates 1 in 6.11e-07 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.203e-06 sec
-Flow timing analysis took 0.000115043 seconds (7.1126e-05 STA, 4.3917e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
+Full Criticality updates 1 in 6.32e-07 sec
+Flow timing analysis took 8.1945e-05 seconds (6.2208e-05 STA, 1.9737e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
 VPR succeeded
-The entire flow of VPR took 0.05 seconds (max_rss 51.6 MiB)
+The entire flow of VPR took 0.03 seconds (max_rss 51.6 MiB)
 
 Command line to execute: read_openfpga_arch -f /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_fr_N10_std_mux_sky130scl_openfpga_synthesizable.xml
 
@@ -591,10 +589,10 @@ Confirm selected options when call command 'read_openfpga_arch':
 --file, -f: /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_fr_N10_std_mux_sky130scl_openfpga_synthesizable.xml
 Reading XML architecture '/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_fr_N10_std_mux_sky130scl_openfpga_synthesizable.xml'...
 Read OpenFPGA architecture
-Warning 16: Automatically set circuit model 'frac_lut6' to be default in its type.
-Warning 17: Automatically set circuit model 'DFFSRX1' to be default in its type.
-Warning 18: Automatically set circuit model 'DFFRX1' to be default in its type.
-Warning 19: Automatically set circuit model 'GPIO' to be default in its type.
+Warning 14: Automatically set circuit model 'frac_lut6' to be default in its type.
+Warning 15: Automatically set circuit model 'DFFSRX1' to be default in its type.
+Warning 16: Automatically set circuit model 'DFFRX1' to be default in its type.
+Warning 17: Automatically set circuit model 'GPIO' to be default in its type.
 Use the default configurable memory model 'DFFRX1' for circuit model 'mux_tree' port 'sram')
 Use the default configurable memory model 'DFFRX1' for circuit model 'mux_tree_tapbuf' port 'sram')
 Use the default configurable memory model 'DFFRX1' for circuit model 'frac_lut6' port 'sram')
@@ -646,7 +644,7 @@ Binded 0 direct connections to circuit models
 # Annotating rr_node with routed nets
 # Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 Loaded node-to-net mapping
-Annotating previous nodes for rr_node...Warning 20: Override the previous node 'IPIN:120 side: (RIGHT,) (1,1,0)' by previous node 'IPIN:117 side: (RIGHT,) (1,1,0)' for node 'SINK:84  (1,1,0)' with in routing context annotation!
+Annotating previous nodes for rr_node...Warning 18: Override the previous node 'IPIN:120 side: (RIGHT,) (1,1,0)' by previous node 'IPIN:117 side: (RIGHT,) (1,1,0)' for node 'SINK:84  (1,1,0)' with in routing context annotation!
 Done with 0 nodes mapping
 Built 557 incoming edges for routing resource graph
 # Build General Switch Block(GSB) annotation on top of routing resource graph
@@ -674,13 +672,13 @@ Built 0 tile-to-tile direct connections
 Building annotation for post-routing and clustering synchornization results...Done
 Building annotation for mapped blocks on grid locations...Done
 User specified the operating clock frequency to use VPR results
-Use VPR critical path delay 1.77717e-18 [ns] with a 20 [%] slack in OpenFPGA.
-Incr Slack updates 1 in 1.823e-06 sec
-Full Max Req/Worst Slack updates 1 in 1.152e-06 sec
+Use VPR critical path delay 9.46033e-19 [ns] with a 20 [%] slack in OpenFPGA.
+Incr Slack updates 1 in 9.22e-07 sec
+Full Max Req/Worst Slack updates 1 in 6.22e-07 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.273e-06 sec
-Will apply operating clock frequency 562.692 [MHz] to simulations
+Full Criticality updates 1 in 7.21e-07 sec
+Will apply operating clock frequency 1057.05 [MHz] to simulations
 User specified the number of operating clock cycles to be inferred from signal activities
 Average net density: 0.42
 Median net density: 0.00
@@ -743,7 +741,7 @@ Build fabric module graph
 # Build grid modules
 Building logical tiles...Done
 Building physical tiles...Done
-# Build grid modules took 0.01 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build grid modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 # Build unique routing modules...
 # Build unique routing modules... took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 # Build FPGA fabric module
@@ -779,7 +777,7 @@ Confirm selected options when call command 'write_fabric_hierarchy':
 --depth: off
 --exclude_empty_modules: off
 --verbose: off
-Warning 21: Directory '.' already exists. Will overwrite contents
+Warning 19: Directory '.' already exists. Will overwrite contents
 Write fabric hierarchy to plain-text file './fabric_hierarchy.txt'
 Outputted 1 modules as root
 Write fabric hierarchy to plain-text file './fabric_hierarchy.txt' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
@@ -962,7 +960,9 @@ Added 'mem_top_track_2' under 'sb_0__0_'
 Prev node '4294967295' for src_node '253'
 Added 2 bits to 'mem_top_track_2' under 'sb_0__0_'
 Added 'mem_top_track_4' under 'sb_0__0_'
-Prev node '4294967295' for src_node '255'
+Prev node '105' for src_node '255'
+Path: 0 -> Driver node '50' for src_node '255'
+Path: 1 -> Driver node '105' for src_node '255'
 Added 2 bits to 'mem_top_track_4' under 'sb_0__0_'
 Added 'mem_top_track_6' under 'sb_0__0_'
 Prev node '4294967295' for src_node '257'
@@ -989,22 +989,19 @@ Added 'mem_right_track_0' under 'sb_0__0_'
 Prev node '4294967295' for src_node '211'
 Added 2 bits to 'mem_right_track_0' under 'sb_0__0_'
 Added 'mem_right_track_2' under 'sb_0__0_'
-Prev node '252' for src_node '213'
-Path: 0 -> Driver node '252' for src_node '213'
+Prev node '4294967295' for src_node '213'
 Added 2 bits to 'mem_right_track_2' under 'sb_0__0_'
 Added 'mem_right_track_4' under 'sb_0__0_'
 Prev node '4294967295' for src_node '215'
 Added 2 bits to 'mem_right_track_4' under 'sb_0__0_'
 Added 'mem_right_track_6' under 'sb_0__0_'
-Prev node '256' for src_node '217'
-Path: 0 -> Driver node '256' for src_node '217'
+Prev node '4294967295' for src_node '217'
 Added 2 bits to 'mem_right_track_6' under 'sb_0__0_'
 Added 'mem_right_track_8' under 'sb_0__0_'
 Prev node '4294967295' for src_node '219'
 Added 2 bits to 'mem_right_track_8' under 'sb_0__0_'
 Added 'mem_right_track_10' under 'sb_0__0_'
-Prev node '260' for src_node '221'
-Path: 0 -> Driver node '260' for src_node '221'
+Prev node '4294967295' for src_node '221'
 Added 2 bits to 'mem_right_track_10' under 'sb_0__0_'
 Added 'mem_right_track_12' under 'sb_0__0_'
 Prev node '4294967295' for src_node '223'
@@ -1040,7 +1037,9 @@ Added 'mem_right_track_10' under 'sb_0__1_'
 Prev node '4294967295' for src_node '241'
 Added 2 bits to 'mem_right_track_10' under 'sb_0__1_'
 Added 'mem_right_track_12' under 'sb_0__1_'
-Prev node '4294967295' for src_node '243'
+Prev node '255' for src_node '243'
+Path: 0 -> Driver node '201' for src_node '243'
+Path: 1 -> Driver node '255' for src_node '243'
 Added 2 bits to 'mem_right_track_12' under 'sb_0__1_'
 Added 'mem_right_track_14' under 'sb_0__1_'
 Prev node '4294967295' for src_node '245'
@@ -1052,23 +1051,19 @@ Added 'mem_right_track_18' under 'sb_0__1_'
 Prev node '4294967295' for src_node '249'
 Added 2 bits to 'mem_right_track_18' under 'sb_0__1_'
 Added 'mem_bottom_track_1' under 'sb_0__1_'
-Prev node '248' for src_node '252'
-Path: 0 -> Driver node '248' for src_node '252'
+Prev node '4294967295' for src_node '252'
 Added 2 bits to 'mem_bottom_track_1' under 'sb_0__1_'
 Added 'mem_bottom_track_3' under 'sb_0__1_'
 Prev node '4294967295' for src_node '254'
 Added 2 bits to 'mem_bottom_track_3' under 'sb_0__1_'
 Added 'mem_bottom_track_5' under 'sb_0__1_'
-Prev node '244' for src_node '256'
-Path: 0 -> Driver node '244' for src_node '256'
+Prev node '4294967295' for src_node '256'
 Added 2 bits to 'mem_bottom_track_5' under 'sb_0__1_'
 Added 'mem_bottom_track_7' under 'sb_0__1_'
 Prev node '4294967295' for src_node '258'
 Added 2 bits to 'mem_bottom_track_7' under 'sb_0__1_'
 Added 'mem_bottom_track_9' under 'sb_0__1_'
-Prev node '105' for src_node '260'
-Path: 0 -> Driver node '240' for src_node '260'
-Path: 1 -> Driver node '105' for src_node '260'
+Prev node '4294967295' for src_node '260'
 Added 2 bits to 'mem_bottom_track_9' under 'sb_0__1_'
 Added 'mem_bottom_track_11' under 'sb_0__1_'
 Prev node '4294967295' for src_node '262'
@@ -1106,26 +1101,20 @@ Added 'mem_top_track_8' under 'sb_1__0_'
 Prev node '4294967295' for src_node '279'
 Added 2 bits to 'mem_top_track_8' under 'sb_1__0_'
 Added 'mem_top_track_10' under 'sb_1__0_'
-Prev node '221' for src_node '281'
-Path: 0 -> Driver node '163' for src_node '281'
-Path: 1 -> Driver node '221' for src_node '281'
+Prev node '4294967295' for src_node '281'
 Added 2 bits to 'mem_top_track_10' under 'sb_1__0_'
 Added 'mem_top_track_12' under 'sb_1__0_'
 Prev node '4294967295' for src_node '283'
 Added 2 bits to 'mem_top_track_12' under 'sb_1__0_'
 Added 'mem_top_track_14' under 'sb_1__0_'
-Prev node '217' for src_node '285'
-Path: 0 -> Driver node '165' for src_node '285'
-Path: 1 -> Driver node '217' for src_node '285'
+Prev node '4294967295' for src_node '285'
 Added 2 bits to 'mem_top_track_14' under 'sb_1__0_'
 Added 'mem_top_track_16' under 'sb_1__0_'
 Prev node '166' for src_node '287'
 Path: 0 -> Driver node '166' for src_node '287'
 Added 2 bits to 'mem_top_track_16' under 'sb_1__0_'
 Added 'mem_top_track_18' under 'sb_1__0_'
-Prev node '213' for src_node '289'
-Path: 0 -> Driver node '167' for src_node '289'
-Path: 1 -> Driver node '213' for src_node '289'
+Prev node '4294967295' for src_node '289'
 Added 2 bits to 'mem_top_track_18' under 'sb_1__0_'
 Added 'mem_left_track_1' under 'sb_1__0_'
 Prev node '4294967295' for src_node '212'
@@ -1209,15 +1198,13 @@ Added 'mem_left_track_11' under 'sb_1__1_'
 Prev node '4294967295' for src_node '242'
 Added 2 bits to 'mem_left_track_11' under 'sb_1__1_'
 Added 'mem_left_track_13' under 'sb_1__1_'
-Prev node '281' for src_node '244'
-Path: 0 -> Driver node '281' for src_node '244'
+Prev node '4294967295' for src_node '244'
 Added 2 bits to 'mem_left_track_13' under 'sb_1__1_'
 Added 'mem_left_track_15' under 'sb_1__1_'
 Prev node '4294967295' for src_node '246'
 Added 2 bits to 'mem_left_track_15' under 'sb_1__1_'
 Added 'mem_left_track_17' under 'sb_1__1_'
-Prev node '285' for src_node '248'
-Path: 0 -> Driver node '285' for src_node '248'
+Prev node '4294967295' for src_node '248'
 Added 2 bits to 'mem_left_track_17' under 'sb_1__1_'
 Added 'mem_left_track_19' under 'sb_1__1_'
 Prev node '4294967295' for src_node '250'
@@ -1537,9 +1524,9 @@ Overwrite Bitstream
 
 Overwrite Bitstream
  took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-Warning 22: Directory path is empty and nothing will be created.
+Warning 20: Directory path is empty and nothing will be created.
 Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml'
-Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.01 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
 Build non-fabric bitstream for implementation 'and2'
 
@@ -1963,7 +1950,7 @@ Confirm selected options when call command 'write_fabric_bitstream':
 --wl_decremental_order: off
 --no_time_stamp: off
 --verbose: off
-Warning 23: Directory path is empty and nothing will be created.
+Warning 21: Directory path is empty and nothing will be created.
 Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit'
 Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
@@ -2032,7 +2019,7 @@ Building physical tiles...Done
 Writing Verilog netlist for top-level module of FPGA fabric './SRC/fpga_top.v'...Done
 Written 47 Verilog modules in total
 Write Verilog netlists for FPGA fabric
- took 0.03 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.02 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_full_testbench --file ./SRC --reference_benchmark_file_path and2_output_verilog.v --include_signal_init --explicit_port_mapping --bitstream fabric_bitstream.bit
 
@@ -2055,12 +2042,12 @@ Confirm selected options when call command 'write_full_testbench':
 --verbose: off
 Write Verilog full testbenches for FPGA fabric
 
-Warning 24: Directory './SRC' already exists. Will overwrite contents
+Warning 22: Directory './SRC' already exists. Will overwrite contents
 # Write autocheck testbench for FPGA top-level Verilog netlist for 'and2'
 Will use 1459 configuration clock cycles to top testbench
-# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.04 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.02 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 Write Verilog full testbenches for FPGA fabric
- took 0.04 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.02 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_pnr_sdc --file ./SDC
 
@@ -2104,7 +2091,7 @@ Confirm selected options when call command 'write_sdc_disable_timing_configure_p
 --flatten_names: off
 --no_time_stamp: off
 --verbose: off
-Warning 25: Directory './SDC' already exists. Will overwrite contents
+Warning 23: Directory './SDC' already exists. Will overwrite contents
 Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc'
 Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
@@ -2118,7 +2105,7 @@ Confirm selected options when call command 'write_analysis_sdc':
 --no_time_stamp: off
 Succeed to create directory './SDC_analysis'
 Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc'
-Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc' took 0.01 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: exit
 
@@ -2126,6 +2113,6 @@ Confirm selected options when call command 'exit':
 
 Finish execution with 0 errors
 
-The entire OpenFPGA flow took 0.177754 seconds
+The entire OpenFPGA flow took 0.106629 seconds
 
 Thank you for using OpenFPGA!
