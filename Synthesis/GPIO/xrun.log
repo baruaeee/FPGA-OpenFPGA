@@ -1,40 +1,9 @@
-xrun(64): 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s007: Started on Nov 21, 2024 at 04:05:02 CET
+xrun: 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	23.03-s007: Started on Nov 21, 2024 at 12:27:05 CET
 xrun
 	io_in_tb.v
 	-access +rwc
-	-64bit
 	-gui
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xmvlog: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xmvlog: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
 file: io_in_tb.v
 	module worklib.sky130_osu_sc_18T_hs__addf_1:v
 		errors: 0, warnings: 0
@@ -272,26 +241,8 @@ xmvlog: *W,NODNTW (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/la
 		errors: 0, warnings: 30
 	module worklib.GPIO_IN:v
 		errors: 0, warnings: 0
-	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 2
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xrun: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xmelab: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xmelab: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
+	module worklib.IO_IN_tb:v
+		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
   sky130_fd_io__top_gpio_ovtv2 gpio(.IN (Y), .INP_DIS (tie_lo_esd),
@@ -376,53 +327,49 @@ xmelab: (/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells
 		IO_IN_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xmvlog_cg: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xmvlog_cg: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
-		worklib.sky130_fd_io__top_gpio_ovtv2:v <0x0d8ace93>
-			streams: 125, words: 93335
-		worklib.GPIO_IN:v <0x1c825fea>
-			streams:   1, words:   555
-		worklib.sky130_osu_sc_18T_hs__xor2_l:v <0x152452c5>
+		worklib.sky130_fd_io__top_gpio_ovtv2:v <0x5a9e07aa>
+			streams: 125, words: 78622
+		worklib.GPIO_IN:v <0x27f66490>
+			streams:   1, words:   485
+		worklib.IO_IN_tb:v <0x0bd57ee0>
+			streams:   1, words:  3195
+		worklib.sky130_osu_sc_18T_hs__xor2_l:v <0x2be25dcb>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__xnor2_l:v <0x69f3ddfd>
+		worklib.sky130_osu_sc_18T_hs__xnor2_l:v <0x448befcf>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__oai22_l:v <0x564a9bc6>
+		worklib.sky130_osu_sc_18T_hs__oai22_l:v <0x48cd9c73>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__oai21_l:v <0x1b857b5a>
+		worklib.sky130_osu_sc_18T_hs__oai21_l:v <0x3d8d086d>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__mux2_1:v <0x49cd22ff>
+		worklib.sky130_osu_sc_18T_hs__mux2_1:v <0x19c3f292>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dlat_l:v <0x6e7c5f11>
+		worklib.sky130_osu_sc_18T_hs__dlat_l:v <0x4917681a>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dlat_1:v <0x13f1ed7b>
+		worklib.sky130_osu_sc_18T_hs__dlat_1:v <0x6f92d7e2>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dffsr_l:v <0x5137b830>
+		worklib.sky130_osu_sc_18T_hs__dffsr_l:v <0x4621b562>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dffsr_1:v <0x5a8d798c>
+		worklib.sky130_osu_sc_18T_hs__dffsr_1:v <0x50d12eb9>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dffs_l:v <0x00bf93cf>
+		worklib.sky130_osu_sc_18T_hs__dffs_l:v <0x53f746d7>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dffs_1:v <0x3815dcd8>
+		worklib.sky130_osu_sc_18T_hs__dffs_1:v <0x3f2a6682>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dffr_l:v <0x12b870a7>
+		worklib.sky130_osu_sc_18T_hs__dffr_l:v <0x15a6c8be>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dffr_1:v <0x2a123fb0>
+		worklib.sky130_osu_sc_18T_hs__dffr_1:v <0x797be8eb>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dff_l:v <0x20fe65ae>
+		worklib.sky130_osu_sc_18T_hs__dff_l:v <0x2373d231>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__dff_1:v <0x58cb6fc9>
+		worklib.sky130_osu_sc_18T_hs__dff_1:v <0x0e20967c>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__aoi22_l:v <0x5d02e304>
+		worklib.sky130_osu_sc_18T_hs__aoi22_l:v <0x06fbbedd>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__aoi21_l:v <0x64ea1bf9>
+		worklib.sky130_osu_sc_18T_hs__aoi21_l:v <0x6868940c>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__addf_l:v <0x1535a049>
+		worklib.sky130_osu_sc_18T_hs__addf_l:v <0x28e1fa9e>
 			streams:   0, words:     0
-		worklib.sky130_osu_sc_18T_hs__addf_1:v <0x19069d79>
+		worklib.sky130_osu_sc_18T_hs__addf_1:v <0x1de28291>
 			streams:   0, words:     0
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
@@ -445,31 +392,22 @@ xmvlog_cg: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/
 		Delayed tcheck signals:   37      30
 		Simulation timescale:    1ps
 	Writing initial simulation snapshot: worklib.sky130_osu_sc_18T_hs__addf_1:v
-DEFINE gpdk045_v_6_0 $CDSHOME/../../../pdks/gpdk045_v_6_0/gpdk045
-|
-xmsim: *W,DLCPTH (/home/cae1/cds.lib,6): cds.lib Invalid path '/eda/cadence/pdks/gpdk045_v_6_0/gpdk045' (cds.lib command ignored).
-DEFINE sky130_fd_pr_main $CDSHOME/../../../pdks/sky130_release_004a/libs/sky130_fd_pr_main
-|
-xmsim: *W,DLCPTH (/home/cae1/cds.lib,7): cds.lib Invalid path '/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main' (cds.lib command ignored).
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 
 -------------------------------------
 Relinquished control to SimVision...
 xcelium> 
 xcelium> source /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm IO_IN_tb.pad IO_IN_tb.Y IO_IN_tb.PAD
+Created probe 1
 xcelium> run
-xmsim: *F,INTERR: INTERNAL EXCEPTION
-Observed simulation time : 0 FS + 0
------------------------------------------------------------------
-The tool has encountered an unexpected condition and must exit.
-Contact Cadence Design Systems customer support about this
-problem and provide enough information to help us reproduce it,
-including the logfile that contains this error message.
-  TOOL:	xmsim(64)	23.03-s007
-  HOSTNAME: ei-vm-011
-  OPERATING SYSTEM: Linux 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64
-  MESSAGE: T(0): sv_seghandler - trapno -1 addr(0x4d31a4c)
-	Stream rts_xfer
------------------------------------------------------------------
-csi-xmsim - CSI: Cadence Support Investigation, sending details to /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/xmsim_28279.err
-csi-xmsim - CSI: investigation complete, send /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/xmsim_28279.err to Cadence Support
+Test Case 1: Y=0, PAD=0, pad=0
+Test Case 2: Y=1, PAD=1, pad=1
+Test Case 3: Y=0, PAD=0, pad=0
+Simulation complete via $finish(1) at time 30 NS + 0
+./io_in_tb.v:37         $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	23.03-s007: Exiting on Nov 21, 2024 at 12:28:19 CET  (total: 00:01:14)

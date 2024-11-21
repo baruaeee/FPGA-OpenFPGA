@@ -41,10 +41,10 @@ THE SOFTWARE.
 
 Command line to execute: vpr /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_N10_tileable_40nm.xml and2.blif --clock_modeling ideal --device auto --route_chan_width 20
 VPR FPGA Placement and Routing.
-Version: 8.1.0-dev+v8.0.0-12163-g8178b7129
-Revision: v8.0.0-12163-g8178b7129
-Compiled: 2024-11-18T22:48:45
-Compiler: GNU 8.5.0 on Linux-4.18.0-553.22.1.el8_10.x86_64 x86_64
+Version: 8.1.0-dev+v8.0.0-12019-g04959b7b8
+Revision: v8.0.0-12019-g04959b7b8
+Compiled: 2024-11-06T23:06:29
+Compiler: GNU 8.5.0 on Linux-5.15.0-210.163.7.el8uek.x86_64 x86_64
 Build Info: release IPO VTR_ASSERT_LEVEL=2
 
 University of Toronto
@@ -109,6 +109,7 @@ PlacerOpts.place_freq: PLACE_ONCE
 PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
 PlacerOpts.pad_loc_type: FREE
 PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_cost_exp: 1.000000
 PlacerOpts.place_chan_width: 20
 PlacerOpts.inner_loop_recompute_divider: 0
 PlacerOpts.recompute_crit_iter: 1
@@ -187,7 +188,7 @@ AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
 AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
 
 # Building complex block graph
-# Building complex block graph took 0.01 seconds (max_rss 18.1 MiB, delta_rss +0.0 MiB)
+# Building complex block graph took 0.03 seconds (max_rss 18.1 MiB, delta_rss +0.0 MiB)
 Circuit file: and2.blif
 # Load circuit
 # Load circuit took 0.00 seconds (max_rss 18.1 MiB, delta_rss +0.0 MiB)
@@ -254,11 +255,11 @@ Logic Element (fle) detailed count:
   LEs used for logic only             : 1
   LEs used for registers only         : 0
 
-Incr Slack updates 1 in 9.52e-07 sec
-Full Max Req/Worst Slack updates 1 in 7.21e-07 sec
+Incr Slack updates 1 in 2.886e-06 sec
+Full Max Req/Worst Slack updates 1 in 7.404e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 7.82e-07 sec
+Full Criticality updates 1 in 2.365e-06 sec
 FPGA sized to 3 x 3 (auto)
 Device Utilization: 0.15 (target 1.00)
 	Block Utilization: 0.09 Type: io
@@ -282,10 +283,10 @@ Netlist conversion complete.
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'and2.net'.
 Detected 0 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.006999 seconds).
+Finished loading packed FPGA netlist file (took 0.027116 seconds).
 Warning 6: Treated 0 constant nets as global which will not be routed (to see net names increase packer verbosity).
+# Load packing took 0.03 seconds (max_rss 51.4 MiB, delta_rss +33.3 MiB)
 Warning 7: Netlist contains 0 global net to non-global architecture pin connections
-Completed clustering consistency check successfully.
 Cluster level netlist and block usage statistics
 Netlist num_nets: 3
 Netlist num_blocks: 4
@@ -306,7 +307,6 @@ Pb types usage...
       lut5       : 1
        lut       : 1
 
-# Load packing took 0.02 seconds (max_rss 51.6 MiB, delta_rss +33.5 MiB)
 # Create Device
 ## Build Device Grid
 FPGA sized to 3 x 3: 9 grid tiles (auto)
@@ -327,37 +327,39 @@ Device Utilization: 0.15 (target 1.00)
 	Physical Tile clb:
 	Block Utilization: 1.00 Logical Block: clb
 
-## Build Device Grid took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Build Device Grid took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Warning 8: Tileable routing resource graph does not support clock modeling yet! Related options are ignored...
 ## Build tileable routing resource graph
 X-direction routing channel width is 20
 Y-direction routing channel width is 20
-## Build tileable routing resource graph took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Build tileable routing resource graph took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
   RR Graph Nodes: 291
   RR Graph Edges: 557
-# Create Device took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Create Device took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 # Computing router lookahead map
 ## Computing wire lookahead
-## Computing wire lookahead took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Computing wire lookahead took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Computing src/opin lookahead
 Warning 9: Found no more sample locations for SOURCE in io
 Warning 10: Found no more sample locations for OPIN in io
 Warning 11: Found no more sample locations for SOURCE in clb
 Warning 12: Found no more sample locations for OPIN in clb
-## Computing src/opin lookahead took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-# Computing router lookahead map took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Computing placement delta delay look-up
 RR graph channel widths unchanged, skipping RR graph rebuild
 Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
-# Computing placement delta delay look-up took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Computing placement delta delay look-up took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Bounding box mode is Cube
 
+Warning 13: CHANX place cost fac is 0 at -1 -1
+Warning 14: CHANY place cost fac is 0 at -1 -1
 # Placement
 ## Initial Placement
 Initial placement iteration 0 has finished successfully
-## Initial Placement took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Initial Placement took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Using simple RL 'Softmax agent' for choosing move and block types
 
 There are 3 point to point connections in this circuit.
@@ -366,7 +368,7 @@ There are 3 point to point connections in this circuit.
 BB estimate of min-dist (placement) wire length: 9
 
 Completed placement consistency check successfully.
-Initial placement cost: 1 bb_cost: 0.45 td_cost: 4.5505e-10
+Initial placement cost: 1 bb_cost: 0.5 td_cost: 4.5505e-10
 Initial placement estimated Critical Path Delay (CPD): 0.749366 ns
 Initial placement estimated setup Total Negative Slack (sTNS): -0.749366 ns
 Initial placement estimated setup Worst Negative Slack (sWNS): -0.749366 ns
@@ -385,15 +387,15 @@ Initial placement estimated setup slack histogram:
 Placement contains 0 placement macros involving 0 blocks (average macro size -nan)
 
 Moves per temperature: 3
-Warning 13: Starting t: 2 of 3 configurations accepted.
+Warning 15: Starting t: 2 of 3 configurations accepted.
 
 ---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
 Tnum   Time       T Av Cost Av BB Cost Av TD Cost     CPD       sTNS     sWNS Ac Rate Std Dev  R lim Crit Exp Tot Moves  Alpha
       (sec)                                          (ns)       (ns)     (ns)                                                 
 ---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
-   1    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         3  0.200
-   2    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.000  0.0000    2.0     1.00         6  0.950
-## Placement Quench took 0.00 seconds (max_rss 51.6 MiB)
+   1    0.0 2.8e-04   0.974       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         3  0.200
+   2    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         6  0.950
+## Placement Quench took 0.00 seconds (max_rss 51.9 MiB)
 post-quench CPD = 0.67231 (ns) 
 
 BB estimate of min-dist (placement) wire length: 9
@@ -432,31 +434,31 @@ Placement resource usage:
 
 Placement number of temperatures: 2
 Placement total # of swap attempts: 9
-	Swaps accepted: 3 (33.3 %)
+	Swaps accepted: 4 (44.4 %)
 	Swaps rejected: 3 (33.3 %)
-	Swaps aborted: 3 (33.3 %)
+	Swaps aborted: 2 (22.2 %)
 
 
 Placement perturbation distribution by block and move type: 
 ------------------ ----------------- ---------------- ---------------- --------------- ------------ 
     Block Type         Move Type       (%) of Total      Accepted(%)     Rejected(%)    Aborted(%)
 ------------------ ----------------- ---------------- ---------------- --------------- ------------ 
-io                 Uniform                66.67            50.00           50.00          0.00         
+io                 Uniform                66.67            66.67           33.33          0.00         
+                   Median                 11.11            0.00            100.00         0.00         
 
-clb                Uniform                11.11            0.00            0.00           100.00       
                    Crit. Uniform          11.11            0.00            0.00           100.00       
                    Feasible Region        11.11            0.00            0.00           100.00       
 
 
-Placement Quench timing analysis took 2.675e-06 seconds (1.643e-06 STA, 1.032e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
-Placement Total  timing analysis took 3.235e-05 seconds (2.4035e-05 STA, 8.315e-06 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
+Placement Quench timing analysis took 5.089e-06 seconds (2.254e-06 STA, 2.835e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 4.6449e-05 seconds (2.8174e-05 STA, 1.8275e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
 update_td_costs: connections 0 nets 0 sum_nets 0 total 0
-# Placement took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-Incr Slack updates 4 in 2.114e-06 sec
-Full Max Req/Worst Slack updates 2 in 1.784e-06 sec
-Incr Max Req/Worst Slack updates 2 in 4.7e-07 sec
-Incr Criticality updates 2 in 6.52e-07 sec
-Full Criticality updates 2 in 1.282e-06 sec
+# Placement took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+Incr Slack updates 4 in 5.1e-06 sec
+Full Max Req/Worst Slack updates 2 in 2.976e-06 sec
+Incr Max Req/Worst Slack updates 2 in 1.583e-06 sec
+Incr Criticality updates 2 in 1.783e-06 sec
+Full Criticality updates 2 in 2.444e-06 sec
 
 # Routing
 RR graph channel widths unchanged, skipping RR graph rebuild
@@ -472,14 +474,14 @@ Initial Net Connection Criticality Histogram:
 [      0.7:      0.8) 0 (  0.0%) |
 [      0.8:      0.9) 0 (  0.0%) |
 [      0.9:        1) 3 (100.0%) |*************************************************
-## Initializing router criticalities took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Initializing router criticalities took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
 Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
       (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
-   1    0.0     0.0    0      26       3       3       0 ( 0.000%)       4 ( 5.0%)    0.788    -0.7884     -0.788      0.000      0.000      N/A
+   1    0.0     0.0    0      50       3       3       0 ( 0.000%)      13 (16.2%)    1.481     -1.481     -1.481      0.000      0.000      N/A
 Restoring best routing
-Critical path: 0.788361 ns
+Critical path: 1.48098 ns
 Successfully routed after 1 routing iterations.
 Final Net Connection Criticality Histogram:
 [        0:      0.1) 0 (  0.0%) |
@@ -492,28 +494,28 @@ Final Net Connection Criticality Histogram:
 [      0.7:      0.8) 0 (  0.0%) |
 [      0.8:      0.9) 0 (  0.0%) |
 [      0.9:        1) 3 (100.0%) |*************************************************
-Router Stats: total_nets_routed: 3 total_connections_routed: 3 total_heap_pushes: 26 total_heap_pops: 19 
+Router Stats: total_nets_routed: 3 total_connections_routed: 3 total_heap_pushes: 50 total_heap_pops: 44 
 Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
-# Routing took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Routing took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Checking to ensure routing is legal...
 # Checking to ensure non-configurable edges are legal
-# Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Completed routing consistency check successfully.
 
-Serial number (magic cookie) for the routing is: -11731
+Serial number (magic cookie) for the routing is: -26992
 Circuit successfully routed with a channel width factor of 20.
-Incr Slack updates 2 in 1.293e-06 sec
-Full Max Req/Worst Slack updates 1 in 6.92e-07 sec
-Incr Max Req/Worst Slack updates 1 in 4.11e-07 sec
+Incr Slack updates 2 in 2.725e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.122e-06 sec
+Incr Max Req/Worst Slack updates 1 in 1.022e-06 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 2 in 1.082e-06 sec
+Full Criticality updates 2 in 2.324e-06 sec
 # Synchronize the packed netlist to routing optimization
 ## Annotating rr_node with routed nets
-## Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Found 2 mismatches between routing and packing results.
 Fixed 1 routing traces due to mismatch between routing and packing results.
-# Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Final Clustering Statistics: 
 ----------   --------   ------------------------------------   --------------------------
 Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
@@ -524,17 +526,17 @@ Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output 
 Absorbed logical nets 0 out of 3 nets, 3 nets not absorbed.
 
 
-Average number of bends per net: 0.333333  Maximum # of bends: 1
+Average number of bends per net: 3.33333  Maximum # of bends: 10
 
 Number of global nets: 0
 Number of routed nets (nonglobal): 3
 Wire length results (in units of 1 clb segments)...
-	Total wirelength: 4, average net length: 1.33333
-	Maximum net length: 2
+	Total wirelength: 13, average net length: 4.33333
+	Maximum net length: 11
 
 Wire length results in terms of physical segments...
-	Total wiring segments used: 4, average wire segments per net: 1.33333
-	Maximum segments used by a net: 2
+	Total wiring segments used: 13, average wire segments per net: 4.33333
+	Maximum segments used by a net: 11
 	Total local nets with reserved CLB opins: 0
 Total number of nets absorbed: 0
 
@@ -547,18 +549,18 @@ Routing channel utilization histogram:
 [      0.4:      0.5) 0 (  0.0%) |
 [      0.3:      0.4) 0 (  0.0%) |
 [      0.2:      0.3) 0 (  0.0%) |
-[      0.1:      0.2) 0 (  0.0%) |
-[        0:      0.1) 8 (100.0%) |*************************************************
-Maximum routing channel utilization:      0.05 at (1,1)
+[      0.1:      0.2) 2 ( 25.0%) |****************
+[        0:      0.1) 6 ( 75.0%) |*************************************************
+Maximum routing channel utilization:      0.15 at (1,0)
 
 X - Directed channels:   j max occ ave occ capacity
                       ---- ------- ------- --------
-                         0       0   0.000       20
-                         1       1   0.333       20
+                         0       3   1.000       20
+                         1       2   0.667       20
 Y - Directed channels:   i max occ ave occ capacity
                       ---- ------- ------- --------
-                         0       1   0.333       20
-                         1       2   0.667       20
+                         0       3   1.000       20
+                         1       5   1.667       20
 
 Total tracks in x-direction: 40, in y-direction: 40
 
@@ -576,80 +578,80 @@ Total Number of Wiring Segments by Direction: direction length number
 
 X - Directed Wiring Segment usage by length: length utilization
                                              ------ -----------
-                                             4       0.025
+                                             4       0.125
 
 Y - Directed Wiring Segment usage by length: length utilization
                                              ------ -----------
-                                             4       0.075
+                                             4         0.2
 
 Segment occupancy by length: Length utilization
                              ------ -----------
-                             L4            0.05
+                             L4           0.162
 
 Segment occupancy by type: name type utilization
                            ---- ---- -----------
-                             L4    0        0.05
+                             L4    0       0.162
 
 Final hold Worst Negative Slack (hWNS): 0 ns
 Final hold Total Negative Slack (hTNS): 0 ns
 
 Final hold slack histogram:
-[  6.1e-10:  6.1e-10) 1 (100.0%) |**************************************************
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
-[  6.1e-10:  6.1e-10) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 1 (100.0%) |**************************************************
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
+[  1.3e-09:  1.3e-09) 0 (  0.0%) |
 
-Final critical path delay (least slack): 0.788361 ns, Fmax: 1268.45 MHz
-Final setup Worst Negative Slack (sWNS): -0.788361 ns
-Final setup Total Negative Slack (sTNS): -0.788361 ns
+Final critical path delay (least slack): 1.48098 ns, Fmax: 675.23 MHz
+Final setup Worst Negative Slack (sWNS): -1.48098 ns
+Final setup Total Negative Slack (sTNS): -1.48098 ns
 
 Final setup slack histogram:
-[ -7.9e-10: -7.9e-10) 1 (100.0%) |**************************************************
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
-[ -7.9e-10: -7.9e-10) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 1 (100.0%) |**************************************************
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
+[ -1.5e-09: -1.5e-09) 0 (  0.0%) |
 
 Final geomean non-virtual intra-domain period: nan ns (nan MHz)
 Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
 
-Incr Slack updates 1 in 1.393e-06 sec
-Full Max Req/Worst Slack updates 1 in 6.11e-07 sec
+Incr Slack updates 1 in 2.284e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.142e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 6.32e-07 sec
-Flow timing analysis took 8.1945e-05 seconds (6.2208e-05 STA, 1.9737e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
+Full Criticality updates 1 in 1.212e-06 sec
+Flow timing analysis took 0.00012576 seconds (7.6746e-05 STA, 4.9014e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
 VPR succeeded
-The entire flow of VPR took 0.03 seconds (max_rss 51.6 MiB)
+The entire flow of VPR took 0.11 seconds (max_rss 51.9 MiB)
 
-Command line to execute: read_openfpga_arch -f /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_fr_N10_std_mux_sky130scl_openfpga_synthesizable.xml
+Command line to execute: read_openfpga_arch -f /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_opefpga_sky130_scl_9T.xml
 
 Confirm selected options when call command 'read_openfpga_arch':
---file, -f: /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_fr_N10_std_mux_sky130scl_openfpga_synthesizable.xml
-Reading XML architecture '/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_fr_N10_std_mux_sky130scl_openfpga_synthesizable.xml'...
+--file, -f: /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_opefpga_sky130_scl_9T.xml
+Reading XML architecture '/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6_frac_opefpga_sky130_scl_9T.xml'...
 Read OpenFPGA architecture
-Warning 14: Automatically set circuit model 'frac_lut6' to be default in its type.
-Warning 15: Automatically set circuit model 'DFFSRX1' to be default in its type.
-Warning 16: Automatically set circuit model 'DFFRX1' to be default in its type.
-Warning 17: Automatically set circuit model 'GPIO' to be default in its type.
+Warning 16: Automatically set circuit model 'frac_lut6' to be default in its type.
+Warning 17: Automatically set circuit model 'DFFSRX1' to be default in its type.
+Warning 18: Automatically set circuit model 'DFFRX1' to be default in its type.
+Warning 19: Automatically set circuit model 'GPIO' to be default in its type.
 Use the default configurable memory model 'DFFRX1' for circuit model 'mux_tree' port 'sram')
 Use the default configurable memory model 'DFFRX1' for circuit model 'mux_tree_tapbuf' port 'sram')
 Use the default configurable memory model 'DFFRX1' for circuit model 'frac_lut6' port 'sram')
-Read OpenFPGA architecture took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Read OpenFPGA architecture took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Check circuit library
 Checking circuit library passed.
-Check circuit library took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Check circuit library took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Found 0 errors when checking configurable memory circuit models!
 Found 0 errors when checking configuration protocol!
 Found 0 errors when checking tile annotation!
@@ -660,7 +662,7 @@ Confirm selected options when call command 'read_openfpga_simulation_setting':
 --file, -f: /home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml
 Reading XML simulation setting '/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml'...
 Read OpenFPGA simulation settings
-Read OpenFPGA simulation settings took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Read OpenFPGA simulation settings took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: link_openfpga_arch --activity_file and2_ace_out.act --sort_gsb_chan_node_in_edges
 
@@ -670,7 +672,7 @@ Confirm selected options when call command 'link_openfpga_arch':
 --verbose: off
 Link OpenFPGA architecture to VPR architecture
 # Build fast look-up for physical tile pins
-# Build fast look-up for physical tile pins took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build fast look-up for physical tile pins took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Building annotation for physical modes in pb_type...Done
 Check physical mode annotation for pb_types passed.
@@ -692,20 +694,32 @@ Binded 2 routing resource graph switches to circuit models
 Binded 1 routing segments to circuit models
 Binded 0 direct connections to circuit models
 # Annotating rr_node with routed nets
-# Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Loaded node-to-net mapping
-Annotating previous nodes for rr_node...Warning 18: Override the previous node 'IPIN:120 side: (RIGHT,) (1,1,0)' by previous node 'IPIN:117 side: (RIGHT,) (1,1,0)' for node 'SINK:84  (1,1,0)' with in routing context annotation!
+Annotating previous nodes for rr_node...Warning 20: Override the previous node 'IPIN:120 side: (RIGHT,) (1,1,0)' by previous node 'IPIN:117 side: (RIGHT,) (1,1,0)' for node 'SINK:84  (1,1,0)' with in routing context annotation!
 Done with 0 nodes mapping
 Built 557 incoming edges for routing resource graph
 # Build General Switch Block(GSB) annotation on top of routing resource graph
-[25%] Backannotated GSB[0][0][50%] Backannotated GSB[0][1][75%] Backannotated GSB[1][0][100%] Backannotated GSB[1][1]Backannotated 4 General Switch Blocks (GSBs).
-# Build General Switch Block(GSB) annotation on top of routing resource graph took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+[25%] Backannotated GSB[0][0]
+[50%] Backannotated GSB[0][1]
+[75%] Backannotated GSB[1][0]
+[100%] Backannotated GSB[1][1]
+Backannotated 4 General Switch Blocks (GSBs).
+# Build General Switch Block(GSB) annotation on top of routing resource graph took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Sort incoming edges for each routing track output node of General Switch Block(GSB)
-[25%] Sorted incoming edges for each routing track output node of GSB[0][0][50%] Sorted incoming edges for each routing track output node of GSB[0][1][75%] Sorted incoming edges for each routing track output node of GSB[1][0][100%] Sorted incoming edges for each routing track output node of GSB[1][1]Sorted incoming edges for each routing track output node of 4 General Switch Blocks (GSBs).
-# Sort incoming edges for each routing track output node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+[25%] Sorted incoming edges for each routing track output node of GSB[0][0]
+[50%] Sorted incoming edges for each routing track output node of GSB[0][1]
+[75%] Sorted incoming edges for each routing track output node of GSB[1][0]
+[100%] Sorted incoming edges for each routing track output node of GSB[1][1]
+Sorted incoming edges for each routing track output node of 4 General Switch Blocks (GSBs).
+# Sort incoming edges for each routing track output node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Sort incoming edges for each input pin node of General Switch Block(GSB)
-[25%] Sorted incoming edges for each input pin node of GSB[0][0][50%] Sorted incoming edges for each input pin node of GSB[0][1][75%] Sorted incoming edges for each input pin node of GSB[1][0][100%] Sorted incoming edges for each input pin node of GSB[1][1]Sorted incoming edges for each input pin node of 4 General Switch Blocks (GSBs).
-# Sort incoming edges for each input pin node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+[25%] Sorted incoming edges for each input pin node of GSB[0][0]
+[50%] Sorted incoming edges for each input pin node of GSB[0][1]
+[75%] Sorted incoming edges for each input pin node of GSB[1][0]
+[100%] Sorted incoming edges for each input pin node of GSB[1][1]
+Sorted incoming edges for each input pin node of 4 General Switch Blocks (GSBs).
+# Sort incoming edges for each input pin node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build a library of physical multiplexers
 Built a multiplexer library of 6 physical multiplexers.
 Maximum multiplexer size is 64.
@@ -715,26 +729,26 @@ Maximum multiplexer size is 64.
 	model 'mux_tree', input_size='61'
 	model 'mux_tree', input_size='3'
 	model 'frac_lut6', input_size='64'
-# Build a library of physical multiplexers took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build a library of physical multiplexers took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build the annotation about direct connection between tiles
 Built 0 tile-to-tile direct connections
-# Build the annotation about direct connection between tiles took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build the annotation about direct connection between tiles took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Building annotation for post-routing and clustering synchornization results...Done
 Building annotation for mapped blocks on grid locations...Done
 User specified the operating clock frequency to use VPR results
-Use VPR critical path delay 9.46033e-19 [ns] with a 20 [%] slack in OpenFPGA.
-Incr Slack updates 1 in 9.22e-07 sec
-Full Max Req/Worst Slack updates 1 in 6.22e-07 sec
+Use VPR critical path delay 1.77717e-18 [ns] with a 20 [%] slack in OpenFPGA.
+Incr Slack updates 1 in 2.044e-06 sec
+Full Max Req/Worst Slack updates 1 in 2.925e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 7.21e-07 sec
-Will apply operating clock frequency 1057.05 [MHz] to simulations
+Full Criticality updates 1 in 1.363e-06 sec
+Will apply operating clock frequency 562.692 [MHz] to simulations
 User specified the number of operating clock cycles to be inferred from signal activities
 Average net density: 0.42
 Median net density: 0.00
 Average net density after weighting: 0.42
 Will apply 2 operating clock cycles to simulations
-Link OpenFPGA architecture to VPR architecture took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Link OpenFPGA architecture to VPR architecture took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: check_netlist_naming_conflict --fix --report ./netlist_renaming.xml
 
@@ -744,14 +758,14 @@ Confirm selected options when call command 'check_netlist_naming_conflict':
 Check naming violations of netlist blocks and nets
 Fixed 1 naming conflicts in the netlist.
 Naming fix-up report is generated to file './netlist_renaming.xml'
-Check naming violations of netlist blocks and nets took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Check naming violations of netlist blocks and nets took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: lut_truth_table_fixup
 
 Confirm selected options when call command 'lut_truth_table_fixup':
 --verbose: off
 Fix up LUT truth tables after packing optimization
-Fix up LUT truth tables after packing optimization took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Fix up LUT truth tables after packing optimization took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: build_fabric --compress_routing
 
@@ -768,55 +782,55 @@ Confirm selected options when call command 'build_fabric':
 --verbose: off
 Identify unique General Switch Blocks (GSBs)
 Detected 4 unique general switch blocks from a total of 4 (compression rate=0.00%)
-Identify unique General Switch Blocks (GSBs) took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Identify unique General Switch Blocks (GSBs) took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 
 Build fabric module graph
 # Build constant generator modules
-# Build constant generator modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build constant generator modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build user-defined modules
-# Build user-defined modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build user-defined modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build essential (inverter/buffer/logic gate) modules
-# Build essential (inverter/buffer/logic gate) modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build essential (inverter/buffer/logic gate) modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build local encoder (for multiplexers) modules
-# Build local encoder (for multiplexers) modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build local encoder (for multiplexers) modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Building multiplexer modules
-# Building multiplexer modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Building multiplexer modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build Look-Up Table (LUT) modules
-# Build Look-Up Table (LUT) modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build Look-Up Table (LUT) modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build wire modules
-# Build wire modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build wire modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build memory modules
-# Build memory modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build memory modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build grid modules
 Building logical tiles...Done
 Building physical tiles...Done
-# Build grid modules took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build grid modules took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build unique routing modules...
-# Build unique routing modules... took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Build unique routing modules... took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build FPGA fabric module
 ## Add grid instances to top module
-## Add grid instances to top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add grid instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add switch block instances to top module
-## Add switch block instances to top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add switch block instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add connection block instances to top module
-## Add connection block instances to top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add connection block instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add connection block instances to top module
-## Add connection block instances to top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add connection block instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add module nets between grids and GSBs
-## Add module nets between grids and GSBs took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add module nets between grids and GSBs took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add module nets for inter-tile connections
-## Add module nets for inter-tile connections took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add module nets for inter-tile connections took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Build configurable regions for the top module
-## Build configurable regions for the top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Build configurable regions for the top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add module nets for configuration buses
-## Add module nets for configuration buses took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-# Build FPGA fabric module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-Build fabric module graph took 0.01 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+## Add module nets for configuration buses took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+# Build FPGA fabric module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+Build fabric module graph took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Create I/O location mapping for top module
-Create I/O location mapping for top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Create I/O location mapping for top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Create global port info for top module
-Create global port info for top module took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Create global port info for top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_fabric_hierarchy --file ./fabric_hierarchy.txt
 
@@ -827,10 +841,10 @@ Confirm selected options when call command 'write_fabric_hierarchy':
 --depth: off
 --exclude_empty_modules: off
 --verbose: off
-Warning 19: Directory '.' already exists. Will overwrite contents
+Warning 21: Directory '.' already exists. Will overwrite contents
 Write fabric hierarchy to plain-text file './fabric_hierarchy.txt'
 Outputted 1 modules as root
-Write fabric hierarchy to plain-text file './fabric_hierarchy.txt' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write fabric hierarchy to plain-text file './fabric_hierarchy.txt' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: repack
 
@@ -839,18 +853,18 @@ Confirm selected options when call command 'repack':
 --ignore_global_nets_on_pins: off
 --verbose: off
 Build routing resource graph for the physical implementation of logical tile
-Build routing resource graph for the physical implementation of logical tile took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Build routing resource graph for the physical implementation of logical tile took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Repack clustered blocks to physical implementation of logical tile
 Repack clustered block 'c'...Done
 Repack clustered block 'out:c'...Done
 Repack clustered block 'a'...Done
 Repack clustered block 'b'...Done
-Repack clustered blocks to physical implementation of logical tile took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Repack clustered blocks to physical implementation of logical tile took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Identify wire LUTs created by repacking
 Identified 0 wire LUTs created by repacker
-Identify wire LUTs created by repacking took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Identify wire LUTs created by repacking took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Build truth tables for physical LUTs
-Build truth tables for physical LUTs took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Build truth tables for physical LUTs took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: build_architecture_bitstream --verbose --write_file fabric_independent_bitstream.xml
 
@@ -1010,9 +1024,7 @@ Added 'mem_top_track_2' under 'sb_0__0_'
 Prev node '4294967295' for src_node '253'
 Added 2 bits to 'mem_top_track_2' under 'sb_0__0_'
 Added 'mem_top_track_4' under 'sb_0__0_'
-Prev node '105' for src_node '255'
-Path: 0 -> Driver node '50' for src_node '255'
-Path: 1 -> Driver node '105' for src_node '255'
+Prev node '4294967295' for src_node '255'
 Added 2 bits to 'mem_top_track_4' under 'sb_0__0_'
 Added 'mem_top_track_6' under 'sb_0__0_'
 Prev node '4294967295' for src_node '257'
@@ -1039,19 +1051,22 @@ Added 'mem_right_track_0' under 'sb_0__0_'
 Prev node '4294967295' for src_node '211'
 Added 2 bits to 'mem_right_track_0' under 'sb_0__0_'
 Added 'mem_right_track_2' under 'sb_0__0_'
-Prev node '4294967295' for src_node '213'
+Prev node '252' for src_node '213'
+Path: 0 -> Driver node '252' for src_node '213'
 Added 2 bits to 'mem_right_track_2' under 'sb_0__0_'
 Added 'mem_right_track_4' under 'sb_0__0_'
 Prev node '4294967295' for src_node '215'
 Added 2 bits to 'mem_right_track_4' under 'sb_0__0_'
 Added 'mem_right_track_6' under 'sb_0__0_'
-Prev node '4294967295' for src_node '217'
+Prev node '256' for src_node '217'
+Path: 0 -> Driver node '256' for src_node '217'
 Added 2 bits to 'mem_right_track_6' under 'sb_0__0_'
 Added 'mem_right_track_8' under 'sb_0__0_'
 Prev node '4294967295' for src_node '219'
 Added 2 bits to 'mem_right_track_8' under 'sb_0__0_'
 Added 'mem_right_track_10' under 'sb_0__0_'
-Prev node '4294967295' for src_node '221'
+Prev node '260' for src_node '221'
+Path: 0 -> Driver node '260' for src_node '221'
 Added 2 bits to 'mem_right_track_10' under 'sb_0__0_'
 Added 'mem_right_track_12' under 'sb_0__0_'
 Prev node '4294967295' for src_node '223'
@@ -1087,9 +1102,7 @@ Added 'mem_right_track_10' under 'sb_0__1_'
 Prev node '4294967295' for src_node '241'
 Added 2 bits to 'mem_right_track_10' under 'sb_0__1_'
 Added 'mem_right_track_12' under 'sb_0__1_'
-Prev node '255' for src_node '243'
-Path: 0 -> Driver node '201' for src_node '243'
-Path: 1 -> Driver node '255' for src_node '243'
+Prev node '4294967295' for src_node '243'
 Added 2 bits to 'mem_right_track_12' under 'sb_0__1_'
 Added 'mem_right_track_14' under 'sb_0__1_'
 Prev node '4294967295' for src_node '245'
@@ -1101,19 +1114,23 @@ Added 'mem_right_track_18' under 'sb_0__1_'
 Prev node '4294967295' for src_node '249'
 Added 2 bits to 'mem_right_track_18' under 'sb_0__1_'
 Added 'mem_bottom_track_1' under 'sb_0__1_'
-Prev node '4294967295' for src_node '252'
+Prev node '248' for src_node '252'
+Path: 0 -> Driver node '248' for src_node '252'
 Added 2 bits to 'mem_bottom_track_1' under 'sb_0__1_'
 Added 'mem_bottom_track_3' under 'sb_0__1_'
 Prev node '4294967295' for src_node '254'
 Added 2 bits to 'mem_bottom_track_3' under 'sb_0__1_'
 Added 'mem_bottom_track_5' under 'sb_0__1_'
-Prev node '4294967295' for src_node '256'
+Prev node '244' for src_node '256'
+Path: 0 -> Driver node '244' for src_node '256'
 Added 2 bits to 'mem_bottom_track_5' under 'sb_0__1_'
 Added 'mem_bottom_track_7' under 'sb_0__1_'
 Prev node '4294967295' for src_node '258'
 Added 2 bits to 'mem_bottom_track_7' under 'sb_0__1_'
 Added 'mem_bottom_track_9' under 'sb_0__1_'
-Prev node '4294967295' for src_node '260'
+Prev node '105' for src_node '260'
+Path: 0 -> Driver node '240' for src_node '260'
+Path: 1 -> Driver node '105' for src_node '260'
 Added 2 bits to 'mem_bottom_track_9' under 'sb_0__1_'
 Added 'mem_bottom_track_11' under 'sb_0__1_'
 Prev node '4294967295' for src_node '262'
@@ -1151,20 +1168,26 @@ Added 'mem_top_track_8' under 'sb_1__0_'
 Prev node '4294967295' for src_node '279'
 Added 2 bits to 'mem_top_track_8' under 'sb_1__0_'
 Added 'mem_top_track_10' under 'sb_1__0_'
-Prev node '4294967295' for src_node '281'
+Prev node '221' for src_node '281'
+Path: 0 -> Driver node '163' for src_node '281'
+Path: 1 -> Driver node '221' for src_node '281'
 Added 2 bits to 'mem_top_track_10' under 'sb_1__0_'
 Added 'mem_top_track_12' under 'sb_1__0_'
 Prev node '4294967295' for src_node '283'
 Added 2 bits to 'mem_top_track_12' under 'sb_1__0_'
 Added 'mem_top_track_14' under 'sb_1__0_'
-Prev node '4294967295' for src_node '285'
+Prev node '217' for src_node '285'
+Path: 0 -> Driver node '165' for src_node '285'
+Path: 1 -> Driver node '217' for src_node '285'
 Added 2 bits to 'mem_top_track_14' under 'sb_1__0_'
 Added 'mem_top_track_16' under 'sb_1__0_'
 Prev node '166' for src_node '287'
 Path: 0 -> Driver node '166' for src_node '287'
 Added 2 bits to 'mem_top_track_16' under 'sb_1__0_'
 Added 'mem_top_track_18' under 'sb_1__0_'
-Prev node '4294967295' for src_node '289'
+Prev node '213' for src_node '289'
+Path: 0 -> Driver node '167' for src_node '289'
+Path: 1 -> Driver node '213' for src_node '289'
 Added 2 bits to 'mem_top_track_18' under 'sb_1__0_'
 Added 'mem_left_track_1' under 'sb_1__0_'
 Prev node '4294967295' for src_node '212'
@@ -1248,13 +1271,15 @@ Added 'mem_left_track_11' under 'sb_1__1_'
 Prev node '4294967295' for src_node '242'
 Added 2 bits to 'mem_left_track_11' under 'sb_1__1_'
 Added 'mem_left_track_13' under 'sb_1__1_'
-Prev node '4294967295' for src_node '244'
+Prev node '281' for src_node '244'
+Path: 0 -> Driver node '281' for src_node '244'
 Added 2 bits to 'mem_left_track_13' under 'sb_1__1_'
 Added 'mem_left_track_15' under 'sb_1__1_'
 Prev node '4294967295' for src_node '246'
 Added 2 bits to 'mem_left_track_15' under 'sb_1__1_'
 Added 'mem_left_track_17' under 'sb_1__1_'
-Prev node '4294967295' for src_node '248'
+Prev node '285' for src_node '248'
+Path: 0 -> Driver node '285' for src_node '248'
 Added 2 bits to 'mem_left_track_17' under 'sb_1__1_'
 Added 'mem_left_track_19' under 'sb_1__1_'
 Prev node '4294967295' for src_node '250'
@@ -1567,23 +1592,23 @@ Done
 Decoded 1458 configuration bits into 403 blocks
 
 Build fabric-independent bitstream for implementation 'and2'
- took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Overwrite Bitstream
 
 
 Overwrite Bitstream
- took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
-Warning 20: Directory path is empty and nothing will be created.
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+Warning 22: Directory path is empty and nothing will be created.
 Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml'
-Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Build non-fabric bitstream for implementation 'and2'
 
 Done
 
 Build non-fabric bitstream for implementation 'and2'
- took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: build_fabric_bitstream --verbose
 
@@ -1984,7 +2009,7 @@ Try to find a configurable block corresponding to module 'mem_fle_9_in_5' in FPG
 Built 1458 configuration bits for fabric
 
 Build fabric dependent bitstream
- took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_fabric_bitstream --file fabric_bitstream.bit --format plain_text
 
@@ -2000,9 +2025,9 @@ Confirm selected options when call command 'write_fabric_bitstream':
 --wl_decremental_order: off
 --no_time_stamp: off
 --verbose: off
-Warning 21: Directory path is empty and nothing will be created.
+Warning 23: Directory path is empty and nothing will be created.
 Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit'
-Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_fabric_verilog --file ./SRC --explicit_port_mapping --include_timing --print_user_defined_template --verbose
 
@@ -2069,7 +2094,7 @@ Building physical tiles...Done
 Writing Verilog netlist for top-level module of FPGA fabric './SRC/fpga_top.v'...Done
 Written 47 Verilog modules in total
 Write Verilog netlists for FPGA fabric
- took 0.02 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.03 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_full_testbench --file ./SRC --reference_benchmark_file_path and2_output_verilog.v --include_signal_init --explicit_port_mapping --bitstream fabric_bitstream.bit
 
@@ -2092,12 +2117,12 @@ Confirm selected options when call command 'write_full_testbench':
 --verbose: off
 Write Verilog full testbenches for FPGA fabric
 
-Warning 22: Directory './SRC' already exists. Will overwrite contents
+Warning 24: Directory './SRC' already exists. Will overwrite contents
 # Write autocheck testbench for FPGA top-level Verilog netlist for 'and2'
 Will use 1459 configuration clock cycles to top testbench
-# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.02 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.04 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write Verilog full testbenches for FPGA fabric
- took 0.02 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+ took 0.04 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_pnr_sdc --file ./SDC
 
@@ -2120,19 +2145,19 @@ Confirm selected options when call command 'write_pnr_sdc':
 --verbose: off
 Succeed to create directory './SDC'
 Write SDC for constraining clocks for P&R flow './SDC/global_ports.sdc'
-Write SDC for constraining clocks for P&R flow './SDC/global_ports.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC for constraining clocks for P&R flow './SDC/global_ports.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC to disable configurable memory outputs for P&R flow './SDC/disable_configurable_memory_outputs.sdc'
-Write SDC to disable configurable memory outputs for P&R flow './SDC/disable_configurable_memory_outputs.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC to disable configurable memory outputs for P&R flow './SDC/disable_configurable_memory_outputs.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC to disable routing multiplexer outputs for P&R flow './SDC/disable_routing_multiplexer_outputs.sdc'
-Write SDC to disable routing multiplexer outputs for P&R flow './SDC/disable_routing_multiplexer_outputs.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC to disable routing multiplexer outputs for P&R flow './SDC/disable_routing_multiplexer_outputs.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC to disable switch block outputs for P&R flow './SDC/disable_sb_outputs.sdc'
-Write SDC to disable switch block outputs for P&R flow './SDC/disable_sb_outputs.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC to disable switch block outputs for P&R flow './SDC/disable_sb_outputs.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC for constrain Switch Block timing for P&R flow
-Write SDC for constrain Switch Block timing for P&R flow took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC for constrain Switch Block timing for P&R flow took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC for constrain Connection Block timing for P&R flow
-Write SDC for constrain Connection Block timing for P&R flow took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC for constrain Connection Block timing for P&R flow took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC for constraining grid timing for P&R flow
-Write SDC for constraining grid timing for P&R flow took 0.01 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC for constraining grid timing for P&R flow took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_sdc_disable_timing_configure_ports --file ./SDC/disable_configure_ports.sdc
 
@@ -2141,9 +2166,9 @@ Confirm selected options when call command 'write_sdc_disable_timing_configure_p
 --flatten_names: off
 --no_time_stamp: off
 --verbose: off
-Warning 23: Directory './SDC' already exists. Will overwrite contents
+Warning 25: Directory './SDC' already exists. Will overwrite contents
 Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc'
-Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_analysis_sdc --file ./SDC_analysis
 
@@ -2155,7 +2180,7 @@ Confirm selected options when call command 'write_analysis_sdc':
 --no_time_stamp: off
 Succeed to create directory './SDC_analysis'
 Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc'
-Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc' took 0.00 seconds (max_rss 51.6 MiB, delta_rss +0.0 MiB)
+Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc' took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: exit
 
@@ -2163,7 +2188,7 @@ Confirm selected options when call command 'exit':
 
 Finish execution with 0 errors
 
-The entire OpenFPGA flow took 0.106629 seconds
+The entire OpenFPGA flow took 0.230268 seconds
 
 Thank you for using OpenFPGA!
 0

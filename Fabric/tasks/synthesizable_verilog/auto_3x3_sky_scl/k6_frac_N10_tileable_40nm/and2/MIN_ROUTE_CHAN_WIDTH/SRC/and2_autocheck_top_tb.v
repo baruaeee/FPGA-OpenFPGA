@@ -3,7 +3,7 @@
 //	Description: FPGA Verilog full testbench for top-level netlist of design: and2
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov 21 02:53:53 2024
+//	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -82,7 +82,7 @@ initial
 	end
 always wait(~__greset__)
 	begin
-		#0.4730164707	__op_clock___reg__[0] = ~__op_clock___reg__[0];
+		#0.8885858059	__op_clock___reg__[0] = ~__op_clock___reg__[0];
 	end
 
 // ----- End raw operating clock signal generation -----
@@ -113,8 +113,8 @@ initial
 	begin
 		__greset__[0] = 1'b1;
 	wait(__config_all_done__)
-	#0.9460329413	__greset__[0] = 1'b1;
-	#1.892065883	__greset__[0] = 1'b0;
+	#1.777171612	__greset__[0] = 1'b1;
+	#3.554343224	__greset__[0] = 1'b0;
 	end
 
 // ----- End operating reset signal generation -----
@@ -129,9 +129,9 @@ initial
 // ----- Begin connecting global ports of FPGA fabric to stimuli -----
 	assign clk[0] = __op_clock__[0];
 	assign prog_clk[0] = __prog_clock__[0];
-	assign reset[0] = ~__greset__[0];
+	assign reset[0] = __greset__[0];
 	assign pReset[0] = ~__prog_reset__[0];
-	assign set[0] = ~__gset__[0];
+	assign set[0] = __gset__[0];
 // ----- End connecting global ports of FPGA fabric to stimuli -----
 // ----- FPGA top-level module to be capsulated -----
 	fpga_top FPGA_DUT (
@@ -151,11 +151,12 @@ initial
 // ----- Blif Benchmark input b is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[14] -----
 	assign gfpga_pad_GPIO_PAD[14] = b_shared_input[0];
 
-// ----- Blif Benchmark output c is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[1] -----
-	assign c_fpga[0] = gfpga_pad_GPIO_PAD[1];
+// ----- Blif Benchmark output c is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[12] -----
+	assign c_fpga[0] = gfpga_pad_GPIO_PAD[12];
 
 // ----- Wire unused FPGA I/Os to constants -----
 	assign gfpga_pad_GPIO_PAD[0] = 1'b0;
+	assign gfpga_pad_GPIO_PAD[1] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[2] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[3] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[4] = 1'b0;
@@ -165,7 +166,6 @@ initial
 	assign gfpga_pad_GPIO_PAD[8] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[9] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[10] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[12] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[13] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[15] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[16] = 1'b0;
@@ -28619,7 +28619,7 @@ initial begin
 	$timeformat(-9, 2, "ns", 20);
 	$display("Simulation start");
 // ----- Can be changed by the user for his/her need -------
-	#14614
+	#14618
 	if(nb_error == 0) begin
 		$display("Simulation Succeed");
 	end else begin

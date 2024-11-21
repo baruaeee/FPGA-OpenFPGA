@@ -6,3 +6,4 @@ s1::(11Nov2024:21:01:55):( xrun /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/
 s2::(11Nov2024:21:02:30):( xrun /home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/io_out_tb.v -access +rwc -64bit -gui )
 s3::(21Nov2024:04:04:14):( xrun gpio_tb.v -access +rwc -64bit -gui )
 s4::(21Nov2024:04:05:03):( xrun io_in_tb.v -access +rwc -64bit -gui )
+s5::(21Nov2024:12:27:05):( xrun io_in_tb.v -access +rwc -gui )

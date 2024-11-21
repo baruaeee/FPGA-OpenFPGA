@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+io_in_tb.v
+-access
++rwc
+-gui

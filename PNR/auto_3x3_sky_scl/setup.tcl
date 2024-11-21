@@ -13,8 +13,8 @@ loadIoFile IO_PAD.io
 setDesignMode -process 130
 
 ## P/G connect
-globalNetConnect VDD -type pgpin -pin vdd -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin gnd -override -verbose -netlistOverride
+globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
+globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
 
 globalNetConnect VDD -type pgpin -pin VDDIO -override -verbose -netlistOverride
 globalNetConnect VSS -type pgpin -pin VSSIO -override -verbose -netlistOverride
@@ -29,8 +29,8 @@ globalNetConnect VSS -type pgpin -pin VSSA -override -verbose -netlistOverride
 globalNetConnect VDD -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
 globalNetConnect VSS -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
 
-globalNetConnect VDD -type pgpin -pin P_CORE -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin G_CORE -override -verbose -netlistOverride
+#globalNetConnect VDD -type pgpin -pin P_CORE -override -verbose -netlistOverride
+#globalNetConnect VSS -type pgpin -pin G_CORE -override -verbose -netlistOverride
 
 ## Add Power Ring
 addRing -nets {VDD VSS} \
@@ -86,13 +86,13 @@ setPlaceMode -congEffort auto \
 	-ignoreSpare 0 \
 	-placeIOPins 0 \
 	-moduleAwareSpare 0 \
-	-maxRouteLayer 6 \
+	-maxRouteLayer 5 \
 	-preserveRouting 1 \
 	-rmAffectedRouting 0 \
 	-checkRoute 0 -swapEEQ 0
 
 ## config cpu
-setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
+setMultiCpuUsage -localCpu 16 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 
 ## Place STD cells
 setPlaceMode -fp false
@@ -112,19 +112,19 @@ setPlaceMode -fp false
 #timeDesign -postCTS
 
 ## Routing
-setNanoRouteMode -quiet -drouteFixAntenna 1
-setNanoRouteMode -quiet -routeInsertAntennaDiode 0
-setNanoRouteMode -quiet -routeWithTimingDriven 1
-setNanoRouteMode -quiet -routeWithEco 0
-setNanoRouteMode -quiet -routeWithLithoDriven 0
-setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
-setNanoRouteMode -quiet -routeWithSiDriven 0
-setNanoRouteMode -quiet -drouteAutoStop 1
-setNanoRouteMode -quiet -routeSelectedNetOnly 0
-setNanoRouteMode -quiet -routeTopRoutingLayer 5
-setNanoRouteMode -quiet -routeBottomRoutingLayer 1
-setNanoRouteMode -quiet -drouteEndIteration 1
-setNanoRouteMode -quiet -routeWithTimingDriven true
-setNanoRouteMode -quiet -routeWithSiDriven false
-routeDesign -globalDetail
+#setNanoRouteMode -quiet -drouteFixAntenna 1
+#setNanoRouteMode -quiet -routeInsertAntennaDiode 0
+#setNanoRouteMode -quiet -routeWithTimingDriven 1
+#setNanoRouteMode -quiet -routeWithEco 0
+#setNanoRouteMode -quiet -routeWithLithoDriven 0
+#setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
+#setNanoRouteMode -quiet -routeWithSiDriven 0
+#setNanoRouteMode -quiet -drouteAutoStop 1
+#setNanoRouteMode -quiet -routeSelectedNetOnly 0
+#setNanoRouteMode -quiet -routeTopRoutingLayer 5
+#setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+#setNanoRouteMode -quiet -drouteEndIteration 1
+#setNanoRouteMode -quiet -routeWithTimingDriven true
+#setNanoRouteMode -quiet -routeWithSiDriven false
+#routeDesign -globalDetail
 
