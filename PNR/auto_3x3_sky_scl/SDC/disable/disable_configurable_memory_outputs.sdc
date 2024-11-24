@@ -6,10 +6,6 @@
 #	Organization: University of Utah 
 #	Date: Thu Nov 21 16:42:28 2024
 
-set_disable_timing grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/Q
-set_disable_timing grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/QN
-set_disable_timing grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/Q
-set_disable_timing grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/QN
 set_disable_timing grid_io_top_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/Q
 set_disable_timing grid_io_top_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/QN
 set_disable_timing sb_*__*_/mem_bottom_track_*/DFFRX*_*_/Q

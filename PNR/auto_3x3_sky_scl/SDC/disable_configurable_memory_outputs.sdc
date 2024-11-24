@@ -16,3 +16,8 @@ set_disable_timing cbx_*__*_/mem_bottom_ipin_*/DFFRX*_*_/Q
 set_disable_timing cbx_*__*_/mem_bottom_ipin_*/DFFRX*_*_/QN
 set_disable_timing cbx_*__*_/mem_top_ipin_*/DFFRX*_*_/Q
 set_disable_timing cbx_*__*_/mem_top_ipin_*/DFFRX*_*_/QN
+set_disable_timing grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/Q
+set_disable_timing grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/QN
+set_disable_timing grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/Q
+set_disable_timing grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*_mem/DFFRX*_*_/QN
+
