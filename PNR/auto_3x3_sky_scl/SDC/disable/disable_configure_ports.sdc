@@ -4,8 +4,7 @@
 #	Description: Disable configuration outputs of all the programmable cells for PnR
 #	Author: Xifan TANG 
 #	Organization: University of Utah 
-#	Date: Tue Nov 19 16:11:14 2024
-#############################################
+#	Date: Thu Nov 21 16:42:28 2024
 
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/logical_tile_clb_mode_default__fle_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut*_*/frac_lut*_*_/sram*
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/logical_tile_clb_mode_default__fle_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut*_*/frac_lut*_*_/sram_inv*
@@ -13,58 +12,18 @@ set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/logical_tile_clb_
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/logical_tile_clb_mode_default__fle_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut*_*/frac_lut*_*_/mode_inv*
 set_disable_timing cbx_*__*_/mux_bottom_ipin_*/sram*
 set_disable_timing cbx_*__*_/mux_top_ipin_*/sram*
-set_disable_timing cbx_*__*_/mux_bottom_ipin_*/sram*
-set_disable_timing cbx_*__*_/mux_top_ipin_*/sram*
 set_disable_timing cby_*__*_/mux_left_ipin_*/sram*
 set_disable_timing cby_*__*_/mux_right_ipin_*/sram*
-set_disable_timing cby_*__*_/mux_left_ipin_*/sram*
-set_disable_timing cby_*__*_/mux_right_ipin_*/sram*
-set_disable_timing cbx_*__*_/mux_bottom_ipin_*/sram_inv*
-set_disable_timing cbx_*__*_/mux_top_ipin_*/sram_inv*
-set_disable_timing cbx_*__*_/mux_bottom_ipin_*/sram_inv*
-set_disable_timing cbx_*__*_/mux_top_ipin_*/sram_inv*
-set_disable_timing cby_*__*_/mux_left_ipin_*/sram_inv*
-set_disable_timing cby_*__*_/mux_right_ipin_*/sram_inv*
-set_disable_timing cby_*__*_/mux_left_ipin_*/sram_inv*
-set_disable_timing cby_*__*_/mux_right_ipin_*/sram_inv*
-set_disable_timing sb_*__*_/mux_top_track_*/sram*
-set_disable_timing sb_*__*_/mux_right_track_*/sram*
-set_disable_timing sb_*__*_/mux_right_track_*/sram*
-set_disable_timing sb_*__*_/mux_bottom_track_*/sram*
-set_disable_timing sb_*__*_/mux_top_track_*/sram*
-set_disable_timing sb_*__*_/mux_left_track_*/sram*
-set_disable_timing sb_*__*_/mux_bottom_track_*/sram*
-set_disable_timing sb_*__*_/mux_left_track_*/sram*
-set_disable_timing cbx_*__*_/mux_bottom_ipin_*/sram*
-set_disable_timing cbx_*__*_/mux_top_ipin_*/sram*
-set_disable_timing cby_*__*_/mux_left_ipin_*/sram*
-set_disable_timing cby_*__*_/mux_right_ipin_*/sram*
-set_disable_timing sb_*__*_/mux_top_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_right_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_right_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_bottom_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_top_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_left_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_bottom_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_left_track_*/sram_inv*
 set_disable_timing cbx_*__*_/mux_bottom_ipin_*/sram_inv*
 set_disable_timing cbx_*__*_/mux_top_ipin_*/sram_inv*
 set_disable_timing cby_*__*_/mux_left_ipin_*/sram_inv*
 set_disable_timing cby_*__*_/mux_right_ipin_*/sram_inv*
 set_disable_timing sb_*__*_/mux_top_track_*/sram*
 set_disable_timing sb_*__*_/mux_right_track_*/sram*
-set_disable_timing sb_*__*_/mux_right_track_*/sram*
-set_disable_timing sb_*__*_/mux_bottom_track_*/sram*
-set_disable_timing sb_*__*_/mux_top_track_*/sram*
-set_disable_timing sb_*__*_/mux_left_track_*/sram*
 set_disable_timing sb_*__*_/mux_bottom_track_*/sram*
 set_disable_timing sb_*__*_/mux_left_track_*/sram*
 set_disable_timing sb_*__*_/mux_top_track_*/sram_inv*
 set_disable_timing sb_*__*_/mux_right_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_right_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_bottom_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_top_track_*/sram_inv*
-set_disable_timing sb_*__*_/mux_left_track_*/sram_inv*
 set_disable_timing sb_*__*_/mux_bottom_track_*/sram_inv*
 set_disable_timing sb_*__*_/mux_left_track_*/sram_inv*
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/mux_fle_*_in_*/sram*

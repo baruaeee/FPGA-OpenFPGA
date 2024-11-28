@@ -4,35 +4,14 @@
 #	Description: Disable routing multiplexer outputs for PnR
 #	Author: Xifan TANG 
 #	Organization: University of Utah 
-#	Date: Tue Nov 19 16:11:14 2024
-#############################################
+#	Date: Thu Nov 21 16:42:28 2024
 
 set_disable_timing cbx_*__*_/mux_bottom_ipin_*/out*
 set_disable_timing cbx_*__*_/mux_top_ipin_*/out*
-set_disable_timing cbx_*__*_/mux_bottom_ipin_*/out*
-set_disable_timing cbx_*__*_/mux_top_ipin_*/out*
-set_disable_timing cby_*__*_/mux_left_ipin_*/out*
-set_disable_timing cby_*__*_/mux_right_ipin_*/out*
 set_disable_timing cby_*__*_/mux_left_ipin_*/out*
 set_disable_timing cby_*__*_/mux_right_ipin_*/out*
 set_disable_timing sb_*__*_/mux_top_track_*/out*
 set_disable_timing sb_*__*_/mux_right_track_*/out*
-set_disable_timing sb_*__*_/mux_right_track_*/out*
-set_disable_timing sb_*__*_/mux_bottom_track_*/out*
-set_disable_timing sb_*__*_/mux_top_track_*/out*
-set_disable_timing sb_*__*_/mux_left_track_*/out*
-set_disable_timing sb_*__*_/mux_bottom_track_*/out*
-set_disable_timing sb_*__*_/mux_left_track_*/out*
-set_disable_timing cbx_*__*_/mux_bottom_ipin_*/out*
-set_disable_timing cbx_*__*_/mux_top_ipin_*/out*
-set_disable_timing cby_*__*_/mux_left_ipin_*/out*
-set_disable_timing cby_*__*_/mux_right_ipin_*/out*
-set_disable_timing sb_*__*_/mux_top_track_*/out*
-set_disable_timing sb_*__*_/mux_right_track_*/out*
-set_disable_timing sb_*__*_/mux_right_track_*/out*
-set_disable_timing sb_*__*_/mux_bottom_track_*/out*
-set_disable_timing sb_*__*_/mux_top_track_*/out*
-set_disable_timing sb_*__*_/mux_left_track_*/out*
 set_disable_timing sb_*__*_/mux_bottom_track_*/out*
 set_disable_timing sb_*__*_/mux_left_track_*/out*
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/mux_fle_*_in_*/out*

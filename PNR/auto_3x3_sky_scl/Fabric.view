@@ -25,10 +25,11 @@ create_constraint_mode -name CONSTRAINTS \
 	SDC/sb_0__1_.sdc \
 	SDC/sb_1__0_.sdc \
 	SDC/sb_1__1_.sdc \
-	SDC/disable_configurable_memory_outputs.sdc \
-	SDC/disable_configure_ports.sdc \
-	SDC/disable_routing_multiplexer_outputs.sdc \
-	SDC/disable_sb_outputs.sdc}
+	SDC/disable_configurable_memory_outputs.sdc}
+
+#	SDC/disable_configure_ports.sdc \
+#	SDC/disable_routing_multiplexer_outputs.sdc \
+#	SDC/disable_sb_outputs.sdc}
 
 
 
