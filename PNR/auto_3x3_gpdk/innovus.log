@@ -4,16 +4,16 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v22.33-s094_1, built Fri Aug 25 16:48:21 PDT 2023
 Options:	
-Date:		Thu Nov 21 03:34:41 2024
-Host:		ei-vm-011 (x86_64 w/Linux 4.18.0-553.22.1.el8_10.x86_64) (24cores*24cpus*QEMU Virtual CPU version 2.5+ 512KB)
-OS:		Red Hat Enterprise Linux 8.10 (Green Obsidian)
+Date:		Thu Nov 28 19:34:22 2024
+Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
+OS:		Oracle Linux Server 8.10
 
 License:
-		[03:34:41.434044] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+		[19:34:22.434092] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
 		invs	Innovus Implementation System	22.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
-Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_size_limit to change the value.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
 
 **INFO:  MMMC transition support version v31-84 
 
@@ -73,11 +73,11 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set enc_check_rename_command_name 1
 <CMD> set enc_enable_print_mode_command_reset_options 1
 <CMD> set init_design_uniquify 1
-<CMD> set init_gnd_net VSS
-<CMD> set init_lef_file {techlef/gsclib045_tech.lef lef/gsclib045_lvt_macro.lef}
+<CMD> set init_gnd_net {VSS VSSIOR}
+<CMD> set init_lef_file {techlef/gsclib045_tech.lef lef/gsclib045_lvt_macro.lef lef/giolib045.lef}
 <CMD> set init_mmmc_file Fabric.view
 <CMD> set init_original_verilog_files SRC/comb_fabric.v
-<CMD> set init_pwr_net VDD
+<CMD> set init_pwr_net {VDD VDDIOR}
 <CMD> set init_top_cell fpga_top
 <CMD> set init_verilog SRC/post_synth_fabric_netlist.v
 <CMD> get_message -id GLOBAL-100 -suppress
@@ -101,16 +101,70 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set lefdefInputCheckColoredShape 0
 <CMD> set load_netlist_ignore_undefined_cell 1
 <CMD> init_design
-#% Begin Load MMMC data ... (date=11/21 03:35:09, mem=1453.4M)
-#% End Load MMMC data ... (date=11/21 03:35:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=1454.2M, current mem=1454.2M)
+#% Begin Load MMMC data ... (date=11/28 19:35:58, mem=1406.6M)
+#% End Load MMMC data ... (date=11/28 19:35:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=1407.2M, current mem=1407.2M)
 RC_CORNER
 
 Loading LEF file techlef/gsclib045_tech.lef ...
 Set DBUPerIGU to M2 pitch 400.
 
 Loading LEF file lef/gsclib045_lvt_macro.lef ...
-**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNALVT' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+
+Loading LEF file lef/giolib045.lef ...
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED10' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED10' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSS25' in macro 'PADVSS25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDD25' in macro 'PADVDD25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDOZ' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDO' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDO' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PADDI' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'AY' in macro 'PADANALOG' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
 
 ##  Check design process and node:  
 ##  Both design process and tech node are not set.
@@ -122,17 +176,17 @@ Read 480 cells in library 'slow_vdd1v0'
 Reading MIN_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_gpdk/lib/fast_vdd1v0_basicCells_lvt.lib' ...
 **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_gpdk/lib/fast_vdd1v0_basicCells_lvt.lib)
 Read 480 cells in library 'fast_vdd1v0' 
-*** End library_loading (cpu=0.01min, real=0.02min, mem=44.5M, fe_cpu=0.30min, fe_real=0.48min, fe_mem=1489.6M) ***
-#% Begin Load netlist data ... (date=11/21 03:35:10, mem=1476.2M)
-*** Begin netlist parsing (mem=1489.6M) ***
+*** End library_loading (cpu=0.01min, real=0.02min, mem=45.5M, fe_cpu=0.40min, fe_real=1.62min, fe_mem=1490.5M) ***
+#% Begin Load netlist data ... (date=11/28 19:35:59, mem=1429.2M)
+*** Begin netlist parsing (mem=1490.5M) ***
 Created 480 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist 'SRC/post_synth_fabric_netlist.v'
 
-*** Memory Usage v#1 (Current mem = 1499.555M, initial mem = 635.109M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1499.6M) ***
-#% End Load netlist data ... (date=11/21 03:35:10, total cpu=0:00:00.1, real=0:00:00.0, peak res=1500.1M, current mem=1500.1M)
+*** Memory Usage v#1 (Current mem = 1498.520M, initial mem = 635.109M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1498.5M) ***
+#% End Load netlist data ... (date=11/28 19:35:59, total cpu=0:00:00.1, real=0:00:00.0, peak res=1453.0M, current mem=1453.0M)
 Set top cell to fpga_top.
 Hooked 960 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -140,10 +194,17 @@ No recursion found.
 Building hierarchical netlist for Cell fpga_top ...
 ***** UseNewTieNetMode *****.
 *** Netlist is unique.
-** info: there are 1684 modules.
-** info: there are 11573 stdCell insts.
+** info: there are 1669 modules.
+** info: there are 10990 stdCell insts.
+** info: there are 40 Pad insts.
 
-*** Memory Usage v#1 (Current mem = 1565.469M, initial mem = 635.109M) ***
+*** Memory Usage v#1 (Current mem = 1566.434M, initial mem = 635.109M) ***
+Initializing I/O assignment ...
+Adjusting Core to Bottom to: 0.1600.
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'CoreSiteDouble' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
@@ -151,6 +212,7 @@ Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 Start create_tracks
+Pre-connect netlist-defined P/G connections...
 Extraction setup Started 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
 Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
@@ -158,7 +220,7 @@ Generating auto layer map file.
 Importing multi-corner technology file(s) for preRoute extraction...
 techlef/gpdk045.tch
 Generating auto layer map file.
-Completed (cpu: 0:00:02.4 real: 0:00:03.0)
+Completed (cpu: 0:00:03.1 real: 0:00:03.0)
 Set Shrink Factor to 1.00000
 Summary of Active RC-Corners : 
  
@@ -199,21 +261,21 @@ Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
 Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
 *Info: initialize multi-corner CTS.
-Reading timing constraints file 'SDC/post_synth_fabric_sdc.sdc' ...
-Current (total cpu=0:00:20.8, real=0:00:32.0, peak res=1957.8M, current mem=1957.8M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/post_synth_fabric_sdc.sdc, Line 9).
+Reading timing constraints file 'SDC/genus.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:00:28.5, real=0:01:42, peak res=1911.7M, current mem=1911.7M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/genus.default_emulate_constraint_mode.sdc, Line 9).
 
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/post_synth_fabric_sdc.sdc, Line 10).
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/genus.default_emulate_constraint_mode.sdc, Line 10).
 
 fpga_top
-INFO (CTE): Reading of timing constraints file SDC/post_synth_fabric_sdc.sdc completed, with 2 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=2004.7M, current mem=2004.7M)
-Current (total cpu=0:00:21.0, real=0:00:32.0, peak res=2004.7M, current mem=2004.7M)
+INFO (CTE): Reading of timing constraints file SDC/genus.default_emulate_constraint_mode.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.3, real=0:00:00.0, peak res=1959.7M, current mem=1959.7M)
+Current (total cpu=0:00:28.8, real=0:01:42, peak res=1959.7M, current mem=1959.7M)
 Reading timing constraints file 'SDC/genus.dont_touch.sdc' ...
-Current (total cpu=0:00:21.1, real=0:00:32.0, peak res=2004.7M, current mem=2004.7M)
+Current (total cpu=0:00:28.9, real=0:01:42, peak res=1959.7M, current mem=1959.7M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2004.8M, current mem=2004.8M)
-Current (total cpu=0:00:21.1, real=0:00:32.0, peak res=2004.8M, current mem=2004.8M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1959.8M, current mem=1959.8M)
+Current (total cpu=0:00:29.0, real=0:01:42, peak res=1959.8M, current mem=1959.8M)
 Total number of combinational cells: 318
 Total number of sequential cells: 152
 Total number of tristate cells: 10
@@ -237,16 +299,41 @@ List of identified usable delay cells: DLY1X1LVT DLY1X4LVT DLY2X1LVT DLY2X4LVT D
 Total number of identified usable delay cells: 8
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell padIORINGFEED10; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDO; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDI; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDB; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
-WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
-WARNING   IMPFP-3961           3  The techSite '%s' has no related standar...
+WARNING   IMPLF-200           21  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201            6  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPFP-3961           5  The techSite '%s' has no related standar...
+WARNING   IMPSYC-2             4  Timing information is not defined for ce...
 WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
 WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
-*** Message Summary: 8 warning(s), 0 error(s)
+*** Message Summary: 40 warning(s), 0 error(s)
 
-<CMD> floorPlan -coreMarginsBy io -r 0.99 0.71 5 5 5 5
+<CMD> zoomBox -15.88800 15.78600 1112.11150 1025.58650
+<CMD> zoomBox -123.52950 -54.00050 1203.52900 1134.00000
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/PADDB_0_
+<CMD> loadIoFile IO_PAD.io
+Reading IO assignment file "IO_PAD.io" ...
+INFO: I/O "#ENDSPACE#" is not in netlist.
+INFO: There are 1 ignored I/Os on side S.
+INFO: I/O "#ENDSPACE#" is not in netlist.
+INFO: There are 1 ignored I/Os on side E.
+Start create_tracks
+<CMD> floorPlan -coreMarginsBy io -r 0.99 0.71 40 40 40 40
+Adjusting Core to Bottom to: 40.2500.
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'CoreSiteDouble' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
@@ -268,20 +355,21 @@ Applying the recommended capacitance filtering threshold values for 45nm process
 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'medium'.
 <CMD> globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-11573 new pwr-pin connections were made to global net 'VDD'.
+11037 new pwr-pin connections were made to global net 'VDD'.
 <CMD> globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-11573 new gnd-pin connections were made to global net 'VSS'.
-<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 1 bottom 1 left 1 right 1} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-#% Begin addRing (date=11/21 03:35:22, mem=2125.5M)
+11038 new gnd-pin connections were made to global net 'VSS'.
+<CMD> globalNetConnect VSSIOR -type pgpin -pin VSSIOR -override -verbose -netlistOverride
+47 new gnd-pin connections were made to global net 'VSSIOR'.
+<CMD> globalNetConnect VDDIOR -type pgpin -pin VDDIOR -override -verbose -netlistOverride
+47 new pwr-pin connections were made to global net 'VDDIOR'.
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -singleInstance pwr3
+<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 3 bottom 3 left 3 right 3} -spacing {top 3 bottom 3 left 3 right 3} -offset {top 3 bottom 3 left 3 right 3} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+#% Begin addRing (date=11/28 19:36:35, mem=2024.5M)
 
 
-viaInitial starts at Thu Nov 21 03:35:22 2024
-viaInitial ends at Thu Nov 21 03:35:22 2024
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2281.2M)
-**WARN: (IMPPP-136):	The currently specified top spacing 1.000000  is less than the required spacing 1.250000 for widths specified as 1.000000 and 1.000000.
-**WARN: (IMPPP-136):	The currently specified bottom spacing 1.000000  is less than the required spacing 1.250000 for widths specified as 1.000000 and 1.000000.
-**WARN: (IMPPP-136):	The currently specified left spacing 1.000000  is less than the required spacing 1.250000 for widths specified as 1.000000 and 1.000000.
-**WARN: (IMPPP-136):	The currently specified right spacing 1.000000  is less than the required spacing 1.250000 for widths specified as 1.000000 and 1.000000.
+viaInitial starts at Thu Nov 28 19:36:35 2024
+viaInitial ends at Thu Nov 28 19:36:35 2024
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2195.7M)
 Ring generation is complete.
 vias are now being generated.
 addRing created 8 wires.
@@ -293,12 +381,12 @@ ViaGen created 8 vias, deleted 0 via to avoid violation.
 |  Via10 |        8       |        0       |
 | Metal11|        4       |       NA       |
 +--------+----------------+----------------+
-#% End addRing (date=11/21 03:35:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=2128.8M, current mem=2128.8M)
-<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VSS VDD } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
-#% Begin sroute (date=11/21 03:35:22, mem=2128.8M)
-*** Begin SPECIAL ROUTE on Thu Nov 21 03:35:22 2024 ***
+#% End addRing (date=11/28 19:36:35, total cpu=0:00:00.1, real=0:00:00.0, peak res=2028.1M, current mem=2028.1M)
+<CMD> sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VSS VDD } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+#% Begin sroute (date=11/28 19:36:35, mem=2028.1M)
+*** Begin SPECIAL ROUTE on Thu Nov 28 19:36:35 2024 ***
 SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_gpdk
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
+SPECIAL ROUTE ran on machine: cae-europractice1.othr.de (Linux 5.15.0-210.163.7.el8uek.x86_64 x86_64 3.59Ghz)
 
 Begin option processing ...
 srouteConnectPowerBump set to false
@@ -312,6 +400,7 @@ srouteCrossoverViaBottomLayer set to 1
 srouteCrossoverViaTopLayer set to 11
 srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
 srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
 srouteJogControl set to "preferWithChanges differentLayer"
 sroutePadPinAllPorts set to true
 sroutePreserveExistingRoutes set to true
@@ -319,7 +408,7 @@ srouteRoutePowerBarPortOnBothDir set to true
 srouteStopBlockPin set to "nearestTarget"
 srouteTopLayerLimit set to 11
 srouteTopTargetLayerLimit set to 11
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3784.00 megs.
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3705.00 megs.
 
 Reading DB technology information...
 Finished reading DB technology information.
@@ -328,34 +417,32 @@ Finished reading floorplan and netlist information.
 **WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
 Read in 24 layers, 11 routing layers, 1 overlap layer
 Read in 2 nondefault rules, 0 used
-Read in 487 macros, 15 used
-Read in 15 components
-  15 core components: 15 unplaced, 0 placed, 0 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 2 special nets, 2 routed
-Read in 30 terminals
+Read in 494 macros, 19 used
+Read in 60 components
+  12 core components: 12 unplaced, 0 placed, 0 fixed
+  44 pad components: 0 unplaced, 0 placed, 44 fixed
+  4 other components: 0 unplaced, 0 placed, 4 fixed
+Read in 40 logical pins
+Read in 40 nets
+Read in 4 special nets, 2 routed
+Read in 214 terminals
 2 nets selected.
 
 Begin power routing ...
 **WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
 **WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSS net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
 **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
 Type 'man IMPSR-1256' for more detail.
 Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
 CPU time for VDD FollowPin 0 seconds
 CPU time for VSS FollowPin 0 seconds
-  Number of IO ports routed: 0
+  Number of IO ports routed: 0  open: 1
   Number of Block ports routed: 0
   Number of Stripe ports routed: 0
-  Number of Core ports routed: 234
-  Number of Pad ports routed: 0
+  Number of Core ports routed: 820
   Number of Power Bump ports routed: 0
-  Number of Followpin connections: 117
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3796.00 megs.
+  Number of Followpin connections: 410
+End power routing: cpu: 0:00:01, real: 0:00:01, peak: 3933.00 megs.
 
 
 
@@ -363,60 +450,66 @@ End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3796.00 megs.
  Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 
-sroute created 351 wires.
-ViaGen created 2106 vias, deleted 0 via to avoid violation.
+sroute created 1230 wires.
+ViaGen created 7380 vias, deleted 0 via to avoid violation.
 +--------+----------------+----------------+
 |  Layer |     Created    |     Deleted    |
 +--------+----------------+----------------+
-| Metal1 |       351      |       NA       |
-|  Via1  |       234      |        0       |
-|  Via2  |       234      |        0       |
-|  Via3  |       234      |        0       |
-|  Via4  |       234      |        0       |
-|  Via5  |       234      |        0       |
-|  Via6  |       234      |        0       |
-|  Via7  |       234      |        0       |
-|  Via8  |       234      |        0       |
-|  Via9  |       234      |        0       |
+| Metal1 |      1230      |       NA       |
+|  Via1  |       820      |        0       |
+|  Via2  |       820      |        0       |
+|  Via3  |       820      |        0       |
+|  Via4  |       820      |        0       |
+|  Via5  |       820      |        0       |
+|  Via6  |       820      |        0       |
+|  Via7  |       820      |        0       |
+|  Via8  |       820      |        0       |
+|  Via9  |       820      |        0       |
 +--------+----------------+----------------+
-#% End sroute (date=11/21 03:35:22, total cpu=0:00:00.2, real=0:00:00.0, peak res=2160.2M, current mem=2147.3M)
-<CMD> addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 29 -start_from left -start_offset 27 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
-#% Begin addStripe (date=11/21 03:35:23, mem=2147.3M)
-
-Initialize fgc environment(mem: 2291.4M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2291.4M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2291.4M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2291.4M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2291.4M)
-Starting stripe generation ...
-Non-Default Mode Option Settings :
-  NONE
-Stripe generation is complete.
-vias are now being generated.
-addStripe created 13 wires.
-ViaGen created 6875 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  Via1  |       761      |        0       |
-|  Via2  |       761      |        0       |
-|  Via3  |       761      |        0       |
-|  Via4  |       761      |        0       |
-|  Via5  |       761      |        0       |
-|  Via6  |       761      |        0       |
-|  Via7  |       761      |        0       |
-|  Via8  |       761      |        0       |
-|  Via9  |       761      |        0       |
-| Metal10|       13       |       NA       |
-|  Via10 |       26       |        0       |
-+--------+----------------+----------------+
-#% End addStripe (date=11/21 03:35:23, total cpu=0:00:00.1, real=0:00:00.0, peak res=2150.9M, current mem=2150.9M)
-<CMD> setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
-**WARN: (IMPSP-105):	'setPlaceMode -maxRouteLayer' will become obsolete from next release. Use 'setRouteMode -earlyGlobalMaxRouteLayer N' to set maximum routing layer.Type 'man IMPSP-105' for more detail.
-<CMD> setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
-Setting releaseMultiCpuLicenseMode to false.
-<CMD> setPlaceMode -fp false
-
-*** Memory Usage v#1 (Current mem = 2291.539M, initial mem = 635.109M) ***
-*** Message Summary: 22 warning(s), 0 error(s)
-
---- Ending "Innovus" (totcpu=0:00:25.0, real=0:01:40, mem=2291.5M) ---
+#% End sroute (date=11/28 19:36:36, total cpu=0:00:00.8, real=0:00:01.0, peak res=2285.7M, current mem=2040.8M)
+<CMD> deselectAll
+<CMD> zoomBox 20.42100 -24.64450 1148.42100 985.15650
+<CMD> zoomBox 328.43000 36.16850 1021.16300 656.31250
+<CMD> zoomBox 515.51050 72.82350 940.93600 453.67000
+<CMD> zoomBox 591.41400 91.45550 898.78400 366.61750
+<CMD> zoomBox 621.05700 98.73200 882.32200 332.62000
+<CMD> zoomBox 646.25400 104.91700 868.32950 303.72200
+<CMD> selectInst pwr3
+<CMD> zoomBox 702.23750 122.54300 838.62000 244.63450
+<CMD> zoomBox 726.96250 130.32750 825.49900 218.53850
+<CMD> zoomBox 736.61850 133.36750 820.37450 208.34700
+<CMD> zoomBox 751.80200 138.14800 812.31600 192.32100
+<CMD> zoomBox 788.43900 153.88300 791.41400 150.43850
+<CMD> deselectAll
+<CMD> selectMarker 790.4750 151.0300 790.5250 151.0800 4 3 7
+<CMD> fit
+<CMD> zoomBox -4.71600 -36.26150 1311.28300 1141.83850
+<CMD> zoomBox 214.49200 5.78500 1165.30150 856.96250
+<CMD> zoomBox 387.54750 33.09150 1074.50700 648.06700
+<CMD> zoomBox 554.20850 70.47000 976.08800 448.14200
+<CMD> zoomBox 642.87000 99.95350 901.95750 331.89200
+<CMD> zoomBox 664.03600 106.99200 884.26050 304.14000
+<CMD> deselectAll
+<CMD> zoomBox 608.99550 87.40500 913.80500 360.27450
+<CMD> zoomBox 484.36950 43.05500 980.70100 487.37750
+<CMD> zoomBox 427.37500 22.77250 1011.29450 545.50500
+<CMD> zoomBox 360.32250 -1.08950 1047.28700 613.89050
+<CMD> zoomBox 281.43700 -29.16200 1089.63100 694.34400
+<CMD> zoomBox 357.65600 -15.51800 1044.62100 599.46250
+<CMD> zoomBox 422.44200 -3.92050 1006.36250 518.81300
+<CMD> zoomBox 477.51000 5.93750 973.84250 450.26100
+<CMD> zoomBox 352.47600 -52.51100 1039.44250 562.47050
+<CMD> zoomBox 272.96350 -89.67950 1081.15900 633.82800
+<CMD> zoomBox 352.00550 -55.80450 1038.97200 559.17700
+<CMD> zoomBox 419.19150 -27.01100 1003.11300 495.72350
+<CMD> zoomBox 476.29950 -2.53650 972.63300 441.78800
+<CMD> zoomBox 272.96250 -89.68100 1081.15950 633.82800
+<CMD> fit
+<CMD> zoomBox 116.55400 -23.53850 1235.15350 977.84700
+<CMD> zoomBox 218.35650 -8.12750 1169.16650 843.05050
+<CMD> zoomBox 305.44250 8.84700 1113.63100 732.34800
+<CMD> zoomBox 379.46550 23.27500 1066.42550 638.25100
+<CMD> zoomBox 539.95450 66.48400 961.83400 444.15600
+<CMD> zoomBox 662.04350 99.35350 882.26750 296.50100
+<CMD> zoomBox 610.83300 85.56600 915.64150 358.43450
+<CMD> fit

@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Nov 21 03:34:57 2024                
+#  Created on Thu Nov 28 19:34:50 2024                
 #                                                     
 #######################################################
 
@@ -68,11 +68,11 @@ set enable_ilm_dual_view_gui_and_attribute 1
 set enc_check_rename_command_name 1
 set enc_enable_print_mode_command_reset_options 1
 set init_design_uniquify 1
-set init_gnd_net VSS
-set init_lef_file {techlef/gsclib045_tech.lef lef/gsclib045_lvt_macro.lef}
+set init_gnd_net {VSS VSSIOR}
+set init_lef_file {techlef/gsclib045_tech.lef lef/gsclib045_lvt_macro.lef lef/giolib045.lef}
 set init_mmmc_file Fabric.view
 set init_original_verilog_files SRC/comb_fabric.v
-set init_pwr_net VDD
+set init_pwr_net {VDD VDDIOR}
 set init_top_cell fpga_top
 set init_verilog SRC/post_synth_fabric_netlist.v
 get_message -id GLOBAL-100 -suppress
@@ -96,13 +96,62 @@ set init_verilog_tolerate_port_mismatch 0
 set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
 init_design
-floorPlan -coreMarginsBy io -r 0.99 0.71 5 5 5 5
+zoomBox -15.88800 15.78600 1112.11150 1025.58650
+zoomBox -123.52950 -54.00050 1203.52900 1134.00000
+selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/PADDB_0_
+loadIoFile IO_PAD.io
+floorPlan -coreMarginsBy io -r 0.99 0.71 40 40 40 40
 setDesignMode -process 45
 globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
 globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 1 bottom 1 left 1 right 1} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VSS VDD } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
-addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 29 -start_from left -start_offset 27 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
-setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
-setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
-setPlaceMode -fp false
+globalNetConnect VSSIOR -type pgpin -pin VSSIOR -override -verbose -netlistOverride
+globalNetConnect VDDIOR -type pgpin -pin VDDIOR -override -verbose -netlistOverride
+globalNetConnect VDD -type pgpin -pin VDD -singleInstance pwr3
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 3 bottom 3 left 3 right 3} -spacing {top 3 bottom 3 left 3 right 3} -offset {top 3 bottom 3 left 3 right 3} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VSS VDD } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+deselectAll
+zoomBox 20.42100 -24.64450 1148.42100 985.15650
+zoomBox 328.43000 36.16850 1021.16300 656.31250
+zoomBox 515.51050 72.82350 940.93600 453.67000
+zoomBox 591.41400 91.45550 898.78400 366.61750
+zoomBox 621.05700 98.73200 882.32200 332.62000
+zoomBox 646.25400 104.91700 868.32950 303.72200
+selectInst pwr3
+zoomBox 702.23750 122.54300 838.62000 244.63450
+zoomBox 726.96250 130.32750 825.49900 218.53850
+zoomBox 736.61850 133.36750 820.37450 208.34700
+zoomBox 751.80200 138.14800 812.31600 192.32100
+zoomBox 788.43900 153.88300 791.41400 150.43850
+deselectAll
+selectMarker 790.4750 151.0300 790.5250 151.0800 4 3 7
+fit
+zoomBox -4.71600 -36.26150 1311.28300 1141.83850
+zoomBox 214.49200 5.78500 1165.30150 856.96250
+zoomBox 387.54750 33.09150 1074.50700 648.06700
+zoomBox 554.20850 70.47000 976.08800 448.14200
+zoomBox 642.87000 99.95350 901.95750 331.89200
+zoomBox 664.03600 106.99200 884.26050 304.14000
+deselectAll
+zoomBox 608.99550 87.40500 913.80500 360.27450
+zoomBox 484.36950 43.05500 980.70100 487.37750
+zoomBox 427.37500 22.77250 1011.29450 545.50500
+zoomBox 360.32250 -1.08950 1047.28700 613.89050
+zoomBox 281.43700 -29.16200 1089.63100 694.34400
+zoomBox 357.65600 -15.51800 1044.62100 599.46250
+zoomBox 422.44200 -3.92050 1006.36250 518.81300
+zoomBox 477.51000 5.93750 973.84250 450.26100
+zoomBox 352.47600 -52.51100 1039.44250 562.47050
+zoomBox 272.96350 -89.67950 1081.15900 633.82800
+zoomBox 352.00550 -55.80450 1038.97200 559.17700
+zoomBox 419.19150 -27.01100 1003.11300 495.72350
+zoomBox 476.29950 -2.53650 972.63300 441.78800
+zoomBox 272.96250 -89.68100 1081.15950 633.82800
+fit
+zoomBox 116.55400 -23.53850 1235.15350 977.84700
+zoomBox 218.35650 -8.12750 1169.16650 843.05050
+zoomBox 305.44250 8.84700 1113.63100 732.34800
+zoomBox 379.46550 23.27500 1066.42550 638.25100
+zoomBox 539.95450 66.48400 961.83400 444.15600
+zoomBox 662.04350 99.35350 882.26750 296.50100
+zoomBox 610.83300 85.56600 915.64150 358.43450
+fit
