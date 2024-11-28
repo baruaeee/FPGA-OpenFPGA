@@ -3,7 +3,7 @@
 //	Description: Template for user-defined Verilog modules
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Fri Nov  8 19:01:05 2024
+//	Date: Wed Nov 27 19:26:12 2024
 //-------------------------------------------
 // ----- Template Verilog module for INVX1LVT -----
 //----- Default net type -----
@@ -242,21 +242,21 @@ endmodule
 `default_nettype wire
 
 
-// ----- Template Verilog module for GPIO -----
+// ----- Template Verilog module for PADDB -----
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for GPIO -----
-module GPIO(PAD,
-            A,
-            DIR,
-            Y);
+// ----- Verilog module for PADDB -----
+module PADDB(PAD,
+             A,
+             OEN,
+             Y);
 //----- GPIO PORTS -----
 inout [0:0] PAD;
 //----- INPUT PORTS -----
 input [0:0] A;
 //----- INPUT PORTS -----
-input [0:0] DIR;
+input [0:0] OEN;
 //----- OUTPUT PORTS -----
 output [0:0] Y;
 
@@ -272,7 +272,7 @@ output [0:0] Y;
 
 // ----- Internal logic should end here -----
 endmodule
-// ----- END Verilog module for GPIO -----
+// ----- END Verilog module for PADDB -----
 
 //----- Default net type -----
 `default_nettype wire

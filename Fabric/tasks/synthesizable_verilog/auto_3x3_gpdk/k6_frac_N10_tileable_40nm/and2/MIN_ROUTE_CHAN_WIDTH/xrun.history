@@ -1,1 +1,1 @@
-s1(08Nov2024:19:01:10):  xrun ./SRC/and2_include_netlists.v -access +rwc -64bit -gui 
+s1(27Nov2024:19:26:20):  xrun ./SRC/and2_include_netlists.v -access +rwc -gui 

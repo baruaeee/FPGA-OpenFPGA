@@ -169,12 +169,12 @@
       <port type="output" prefix="QN" size="1"/>
       <port type="clock" prefix="prog_clk" lib_name="CK" size="1" is_global="true" default_val="0" is_prog="true"/>
     </circuit_model>
-    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/gpdk_std_lvt/GPIO.v">
+    <circuit_model type="iopad" name="PADDB" prefix="PADDB" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/gpdk_std_lvt/fast_vdd1v0_basicCells_lvt.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1LVT"/>
       <output_buffer exist="true" circuit_model_name="INVX1LVT"/>
       <port type="inout" prefix="PAD" size="1" is_global="true" is_io="true" is_data_io="true"/>
-      <port type="sram" prefix="DIR" size="1" mode_select="true" circuit_model_name="DFFRX1LVT" default_val="1"/>
+      <port type="sram" prefix="DIR" lib_name="OEN" size="1" mode_select="true" circuit_model_name="DFFRX1LVT" default_val="1"/>
       <port type="input" prefix="outpad" lib_name="A" size="1"/>
       <port type="output" prefix="inpad" lib_name="Y" size="1"/>
     </circuit_model>
@@ -194,7 +194,7 @@
   <pb_type_annotations>
     <!-- physical pb_type binding in complex block IO -->
     <pb_type name="io" physical_mode_name="physical" idle_mode_name="inpad"/>
-    <pb_type name="io[physical].iopad" circuit_model_name="GPIO" mode_bits="1"/>
+    <pb_type name="io[physical].iopad" circuit_model_name="PADDB" mode_bits="1"/>
     <pb_type name="io[inpad].inpad" physical_pb_type_name="io[physical].iopad" mode_bits="1"/>
     <pb_type name="io[outpad].outpad" physical_pb_type_name="io[physical].iopad" mode_bits="0"/>
     <!-- End physical pb_type binding in complex block IO -->

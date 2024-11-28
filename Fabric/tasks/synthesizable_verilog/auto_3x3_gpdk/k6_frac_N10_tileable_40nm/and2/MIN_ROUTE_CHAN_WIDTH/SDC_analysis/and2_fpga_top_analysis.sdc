@@ -4,7 +4,7 @@
 #	Description: Constrain for Timing/Power analysis on the mapped FPGA
 #	Author: Xifan TANG 
 #	Organization: University of Utah 
-#	Date: Fri Nov  8 19:01:05 2024
+#	Date: Wed Nov 27 19:26:12 2024
 #############################################
 
 ##################################################
@@ -15,42 +15,42 @@ create_clock clk[0] -period 1.777171521e-09 -waveform {0 8.885857605e-10}
 ##################################################
 # Create input and output delays for used I/Os    
 ##################################################
-set_input_delay -clock clk[0] -max 1.777171521e-09 gfpga_pad_GPIO_PAD[11]
-set_input_delay -clock clk[0] -max 1.777171521e-09 gfpga_pad_GPIO_PAD[14]
-set_output_delay -clock clk[0] -max 1.777171521e-09 gfpga_pad_GPIO_PAD[12]
+set_input_delay -clock clk[0] -max 1.777171521e-09 gfpga_pad_PADDB_PAD[11]
+set_input_delay -clock clk[0] -max 1.777171521e-09 gfpga_pad_PADDB_PAD[14]
+set_output_delay -clock clk[0] -max 1.777171521e-09 gfpga_pad_PADDB_PAD[12]
 
 ##################################################
 # Disable timing for unused I/Os    
 ##################################################
-set_disable_timing gfpga_pad_GPIO_PAD[0]
-set_disable_timing gfpga_pad_GPIO_PAD[1]
-set_disable_timing gfpga_pad_GPIO_PAD[2]
-set_disable_timing gfpga_pad_GPIO_PAD[3]
-set_disable_timing gfpga_pad_GPIO_PAD[4]
-set_disable_timing gfpga_pad_GPIO_PAD[5]
-set_disable_timing gfpga_pad_GPIO_PAD[6]
-set_disable_timing gfpga_pad_GPIO_PAD[7]
-set_disable_timing gfpga_pad_GPIO_PAD[8]
-set_disable_timing gfpga_pad_GPIO_PAD[9]
-set_disable_timing gfpga_pad_GPIO_PAD[10]
-set_disable_timing gfpga_pad_GPIO_PAD[13]
-set_disable_timing gfpga_pad_GPIO_PAD[15]
-set_disable_timing gfpga_pad_GPIO_PAD[16]
-set_disable_timing gfpga_pad_GPIO_PAD[17]
-set_disable_timing gfpga_pad_GPIO_PAD[18]
-set_disable_timing gfpga_pad_GPIO_PAD[19]
-set_disable_timing gfpga_pad_GPIO_PAD[20]
-set_disable_timing gfpga_pad_GPIO_PAD[21]
-set_disable_timing gfpga_pad_GPIO_PAD[22]
-set_disable_timing gfpga_pad_GPIO_PAD[23]
-set_disable_timing gfpga_pad_GPIO_PAD[24]
-set_disable_timing gfpga_pad_GPIO_PAD[25]
-set_disable_timing gfpga_pad_GPIO_PAD[26]
-set_disable_timing gfpga_pad_GPIO_PAD[27]
-set_disable_timing gfpga_pad_GPIO_PAD[28]
-set_disable_timing gfpga_pad_GPIO_PAD[29]
-set_disable_timing gfpga_pad_GPIO_PAD[30]
-set_disable_timing gfpga_pad_GPIO_PAD[31]
+set_disable_timing gfpga_pad_PADDB_PAD[0]
+set_disable_timing gfpga_pad_PADDB_PAD[1]
+set_disable_timing gfpga_pad_PADDB_PAD[2]
+set_disable_timing gfpga_pad_PADDB_PAD[3]
+set_disable_timing gfpga_pad_PADDB_PAD[4]
+set_disable_timing gfpga_pad_PADDB_PAD[5]
+set_disable_timing gfpga_pad_PADDB_PAD[6]
+set_disable_timing gfpga_pad_PADDB_PAD[7]
+set_disable_timing gfpga_pad_PADDB_PAD[8]
+set_disable_timing gfpga_pad_PADDB_PAD[9]
+set_disable_timing gfpga_pad_PADDB_PAD[10]
+set_disable_timing gfpga_pad_PADDB_PAD[13]
+set_disable_timing gfpga_pad_PADDB_PAD[15]
+set_disable_timing gfpga_pad_PADDB_PAD[16]
+set_disable_timing gfpga_pad_PADDB_PAD[17]
+set_disable_timing gfpga_pad_PADDB_PAD[18]
+set_disable_timing gfpga_pad_PADDB_PAD[19]
+set_disable_timing gfpga_pad_PADDB_PAD[20]
+set_disable_timing gfpga_pad_PADDB_PAD[21]
+set_disable_timing gfpga_pad_PADDB_PAD[22]
+set_disable_timing gfpga_pad_PADDB_PAD[23]
+set_disable_timing gfpga_pad_PADDB_PAD[24]
+set_disable_timing gfpga_pad_PADDB_PAD[25]
+set_disable_timing gfpga_pad_PADDB_PAD[26]
+set_disable_timing gfpga_pad_PADDB_PAD[27]
+set_disable_timing gfpga_pad_PADDB_PAD[28]
+set_disable_timing gfpga_pad_PADDB_PAD[29]
+set_disable_timing gfpga_pad_PADDB_PAD[30]
+set_disable_timing gfpga_pad_PADDB_PAD[31]
 
 ##################################################
 # Disable timing for global ports                 
@@ -81,12 +81,12 @@ set_disable_timing fpga_top/cbx_*__*_/mem_bottom_ipin_*/DFFRX*LVT_*_/Q
 set_disable_timing fpga_top/cbx_*__*_/mem_bottom_ipin_*/DFFRX*LVT_*_/QN
 set_disable_timing fpga_top/cbx_*__*_/mem_top_ipin_*/DFFRX*LVT_*_/Q
 set_disable_timing fpga_top/cbx_*__*_/mem_top_ipin_*/DFFRX*LVT_*_/QN
-set_disable_timing fpga_top/grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
-set_disable_timing fpga_top/grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
-set_disable_timing fpga_top/grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
-set_disable_timing fpga_top/grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
-set_disable_timing fpga_top/grid_io_top_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
-set_disable_timing fpga_top/grid_io_top_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
+set_disable_timing fpga_top/grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
+set_disable_timing fpga_top/grid_io_bottom_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
+set_disable_timing fpga_top/grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
+set_disable_timing fpga_top/grid_io_right_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
+set_disable_timing fpga_top/grid_io_top_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
+set_disable_timing fpga_top/grid_io_top_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
 set_disable_timing fpga_top/sb_*__*_/mem_right_track_*/DFFRX*LVT_*_/Q
 set_disable_timing fpga_top/sb_*__*_/mem_right_track_*/DFFRX*LVT_*_/QN
 set_disable_timing fpga_top/sb_*__*_/mem_right_track_*/DFFRX*LVT_*_/Q
@@ -101,8 +101,8 @@ set_disable_timing fpga_top/cby_*__*_/mem_left_ipin_*/DFFRX*LVT_*_/Q
 set_disable_timing fpga_top/cby_*__*_/mem_left_ipin_*/DFFRX*LVT_*_/QN
 set_disable_timing fpga_top/cby_*__*_/mem_right_ipin_*/DFFRX*LVT_*_/Q
 set_disable_timing fpga_top/cby_*__*_/mem_right_ipin_*/DFFRX*LVT_*_/QN
-set_disable_timing fpga_top/grid_io_left_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
-set_disable_timing fpga_top/grid_io_left_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/GPIO_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
+set_disable_timing fpga_top/grid_io_left_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/Q
+set_disable_timing fpga_top/grid_io_left_*__*_/logical_tile_io_mode_io__*/logical_tile_io_mode_physical__iopad_*/PADDB_DFFRX*LVT_mem/DFFRX*LVT_*_/QN
 set_disable_timing fpga_top/sb_*__*_/mem_bottom_track_*/DFFRX*LVT_*_/Q
 set_disable_timing fpga_top/sb_*__*_/mem_bottom_track_*/DFFRX*LVT_*_/QN
 set_disable_timing fpga_top/sb_*__*_/mem_bottom_track_*/DFFRX*LVT_*_/Q

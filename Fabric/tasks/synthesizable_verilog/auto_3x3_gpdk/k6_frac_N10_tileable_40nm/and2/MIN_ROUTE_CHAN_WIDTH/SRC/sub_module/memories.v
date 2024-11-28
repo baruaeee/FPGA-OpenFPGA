@@ -3,7 +3,7 @@
 //	Description: Memories used in FPGA
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Fri Nov  8 19:01:05 2024
+//	Date: Wed Nov 27 19:26:12 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -850,13 +850,13 @@ endmodule
 //----- Default net type -----
 `default_nettype none
 
-// ----- Verilog module for GPIO_DFFRX1LVT_mem -----
-module GPIO_DFFRX1LVT_mem(pReset,
-                          prog_clk,
-                          ccff_head,
-                          ccff_tail,
-                          mem_out,
-                          mem_outb);
+// ----- Verilog module for PADDB_DFFRX1LVT_mem -----
+module PADDB_DFFRX1LVT_mem(pReset,
+                           prog_clk,
+                           ccff_head,
+                           ccff_tail,
+                           mem_out,
+                           mem_outb);
 //----- GLOBAL PORTS -----
 input [0:0] pReset;
 //----- GLOBAL PORTS -----
@@ -893,7 +893,7 @@ output [0:0] mem_outb;
 		.QN(mem_outb));
 
 endmodule
-// ----- END Verilog module for GPIO_DFFRX1LVT_mem -----
+// ----- END Verilog module for PADDB_DFFRX1LVT_mem -----
 
 //----- Default net type -----
 `default_nettype wire

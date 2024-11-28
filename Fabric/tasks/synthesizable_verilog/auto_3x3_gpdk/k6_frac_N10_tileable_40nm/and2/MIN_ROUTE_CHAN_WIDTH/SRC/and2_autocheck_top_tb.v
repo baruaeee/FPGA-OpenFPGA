@@ -3,7 +3,7 @@
 //	Description: FPGA Verilog full testbench for top-level netlist of design: and2
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Fri Nov  8 19:01:05 2024
+//	Date: Wed Nov 27 19:26:12 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -17,7 +17,7 @@ wire [0:0] reset;
 wire [0:0] clk;
 
 // ----- Local wires for I/Os of FPGA fabric -----
-wire [0:31] gfpga_pad_GPIO_PAD;
+wire [0:31] gfpga_pad_PADDB_PAD;
 
 
 
@@ -140,50 +140,50 @@ initial
 		.set(set[0]),
 		.reset(reset[0]),
 		.clk(clk[0]),
-		.gfpga_pad_GPIO_PAD(gfpga_pad_GPIO_PAD[0:31]),
+		.gfpga_pad_PADDB_PAD(gfpga_pad_PADDB_PAD[0:31]),
 		.ccff_head(ccff_head[0]),
 		.ccff_tail(ccff_tail[0]));
 
 // ----- Link BLIF Benchmark I/Os to FPGA I/Os -----
-// ----- Blif Benchmark input a is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[11] -----
-	assign gfpga_pad_GPIO_PAD[11] = a_shared_input[0];
+// ----- Blif Benchmark input a is mapped to FPGA IOPAD gfpga_pad_PADDB_PAD[11] -----
+	assign gfpga_pad_PADDB_PAD[11] = a_shared_input[0];
 
-// ----- Blif Benchmark input b is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[14] -----
-	assign gfpga_pad_GPIO_PAD[14] = b_shared_input[0];
+// ----- Blif Benchmark input b is mapped to FPGA IOPAD gfpga_pad_PADDB_PAD[14] -----
+	assign gfpga_pad_PADDB_PAD[14] = b_shared_input[0];
 
-// ----- Blif Benchmark output c is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[12] -----
-	assign c_fpga[0] = gfpga_pad_GPIO_PAD[12];
+// ----- Blif Benchmark output c is mapped to FPGA IOPAD gfpga_pad_PADDB_PAD[12] -----
+	assign c_fpga[0] = gfpga_pad_PADDB_PAD[12];
 
 // ----- Wire unused FPGA I/Os to constants -----
-	assign gfpga_pad_GPIO_PAD[0] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[1] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[2] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[3] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[4] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[5] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[6] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[7] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[8] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[9] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[10] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[13] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[15] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[16] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[17] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[18] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[19] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[20] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[21] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[22] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[23] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[24] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[25] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[26] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[27] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[28] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[29] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[30] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[31] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[0] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[1] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[2] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[3] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[4] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[5] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[6] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[7] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[8] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[9] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[10] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[13] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[15] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[16] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[17] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[18] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[19] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[20] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[21] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[22] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[23] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[24] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[25] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[26] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[27] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[28] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[29] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[30] = 1'b0;
+	assign gfpga_pad_PADDB_PAD[31] = 1'b0;
 
 // ----- Reference Benchmark Instanication -------
 	and2 REF_DUT(
