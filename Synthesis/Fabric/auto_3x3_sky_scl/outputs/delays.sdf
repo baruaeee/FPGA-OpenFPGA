@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION  "OVI 3.0")
   (DESIGN      "fpga_top")
-  (DATE        "Thu Nov 21 17:23:23 CET 2024")
+  (DATE        "Fri Nov 29 12:53:25 CET 2024")
   (VENDOR      "Cadence, Inc.")
   (PROGRAM     "Genus(TM) Synthesis Solution")
   (VERSION     "22.13-s093_1")
@@ -112023,10 +112023,6 @@
   )
   (CELL
      (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker1)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
      (INSTANCE cdn_loop_breaker2)
   )
   (CELL
@@ -112036,5 +112032,9 @@
   (CELL
      (CELLTYPE "CLKBUFX2")
      (INSTANCE cdn_loop_breaker4)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker5)
   )
 )

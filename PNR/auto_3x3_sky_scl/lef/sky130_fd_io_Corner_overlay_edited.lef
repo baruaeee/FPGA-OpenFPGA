@@ -274,7 +274,7 @@ MACRO sky130_fd_io__corner_bus_overlay
   END VCCD
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 56.790 22.910 59.770 ;
@@ -286,7 +286,7 @@ MACRO sky130_fd_io__corner_bus_overlay
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 52.030 20.935 55.010 ;
@@ -2783,14 +2783,14 @@ MACRO sky130_fd_io__overlay_gpiov2
     END
   END VDDA
   PIN AMUXBUS_A
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 80.000 56.105 ;
     END
   END AMUXBUS_A
   PIN AMUXBUS_B
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 80.000 51.345 ;
@@ -8537,7 +8537,7 @@ MACRO sky130_fd_io__overlay_vccd_hvc
   END VDDA
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -8545,7 +8545,7 @@ MACRO sky130_fd_io__overlay_vccd_hvc
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -14345,7 +14345,7 @@ MACRO sky130_fd_io__overlay_vccd_lvc
   END VSSD
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -14353,7 +14353,7 @@ MACRO sky130_fd_io__overlay_vccd_lvc
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -18617,7 +18617,7 @@ MACRO sky130_fd_io__overlay_vdda_hvc
   END VDDIO_Q
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -18625,7 +18625,7 @@ MACRO sky130_fd_io__overlay_vdda_hvc
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -22913,7 +22913,7 @@ MACRO sky130_fd_io__overlay_vdda_lvc
   END VSSIO_Q
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -22921,7 +22921,7 @@ MACRO sky130_fd_io__overlay_vdda_lvc
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -23222,14 +23222,14 @@ MACRO sky130_fd_io__overlay_vddio_hvc
     END
   END VSSD
   PIN AMUXBUS_A
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
     END
   END AMUXBUS_A
   PIN AMUXBUS_B
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -63343,7 +63343,7 @@ MACRO sky130_fd_io__overlay_vddio_lvc
   END VSSIO
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -63351,7 +63351,7 @@ MACRO sky130_fd_io__overlay_vddio_lvc
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -68359,7 +68359,7 @@ MACRO sky130_fd_io__overlay_vssa_hvc
   END VSSD
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -68367,7 +68367,7 @@ MACRO sky130_fd_io__overlay_vssa_hvc
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -73389,7 +73389,7 @@ MACRO sky130_fd_io__overlay_vssa_lvc
   END VDDIO
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -73397,7 +73397,7 @@ MACRO sky130_fd_io__overlay_vssa_lvc
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -79121,7 +79121,7 @@ MACRO sky130_fd_io__overlay_vssd_hvc
   END VDDIO_Q
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -79129,7 +79129,7 @@ MACRO sky130_fd_io__overlay_vssd_hvc
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -84973,7 +84973,7 @@ MACRO sky130_fd_io__overlay_vssd_lvc
   END VCCHIB
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -84981,7 +84981,7 @@ MACRO sky130_fd_io__overlay_vssd_lvc
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -101715,7 +101715,7 @@ MACRO sky130_fd_io__overlay_vssio_hvc
   END VCCHIB
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -101723,7 +101723,7 @@ MACRO sky130_fd_io__overlay_vssio_hvc
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -124246,7 +124246,7 @@ MACRO sky130_fd_io__overlay_vssio_lvc
   END VDDIO_Q
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -124254,7 +124254,7 @@ MACRO sky130_fd_io__overlay_vssio_lvc
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -124925,7 +124925,7 @@ MACRO sky130_fd_io__top_analog_pad
   END pad
   PIN amuxbus_b
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -124933,7 +124933,7 @@ MACRO sky130_fd_io__top_analog_pad
   END amuxbus_b
   PIN amuxbus_a
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -125286,7 +125286,7 @@ MACRO sky130_fd_io__top_gpio_ovtv2
   END PAD
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     ANTENNADIFFAREA 24.599998 ;
     PORT
       LAYER met4 ;
@@ -125299,7 +125299,7 @@ MACRO sky130_fd_io__top_gpio_ovtv2
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     ANTENNADIFFAREA 24.599998 ;
     PORT
       LAYER met4 ;
@@ -125760,7 +125760,7 @@ MACRO sky130_fd_io__top_gpiov2
   END VSSD
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     ANTENNADIFFAREA 23.275000 ;
     PORT
       LAYER met4 ;
@@ -125773,7 +125773,7 @@ MACRO sky130_fd_io__top_gpiov2
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     ANTENNADIFFAREA 23.275000 ;
     PORT
       LAYER met4 ;
@@ -126777,7 +126777,7 @@ MACRO sky130_fd_io__top_gpiovrefv2
   END vssd
   PIN amuxbus_b
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 80.000 51.345 ;
@@ -126785,7 +126785,7 @@ MACRO sky130_fd_io__top_gpiovrefv2
   END amuxbus_b
   PIN amuxbus_a
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 80.000 56.105 ;
@@ -127144,7 +127144,7 @@ MACRO sky130_fd_io__top_ground_hvc_wpad
   END G_PAD
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -127152,7 +127152,7 @@ MACRO sky130_fd_io__top_ground_hvc_wpad
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -127402,10 +127402,12 @@ MACRO sky130_fd_io__top_ground_hvc_wpad
     DIRECTION INOUT ;
     USE GROUND ;
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 0.495 0.000 24.395 32.515 ;
     END
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 50.390 0.000 74.290 57.320 ;
     END
@@ -127789,7 +127791,7 @@ MACRO sky130_fd_io__top_ground_lvc_wpad
   END VDDIO_Q
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -127797,7 +127799,7 @@ MACRO sky130_fd_io__top_ground_lvc_wpad
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -127875,10 +127877,12 @@ MACRO sky130_fd_io__top_ground_lvc_wpad
     DIRECTION INOUT ;
     USE GROUND ;
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 50.755 0.000 74.700 55.320 ;
     END
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 0.500 0.000 24.500 55.320 ;
     END
@@ -128538,7 +128542,7 @@ MACRO sky130_fd_io__top_power_hvc_wpad
   SYMMETRY X Y R90 ;
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -128546,7 +128550,7 @@ MACRO sky130_fd_io__top_power_hvc_wpad
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -128976,10 +128980,12 @@ MACRO sky130_fd_io__top_power_hvc_wpad
     DIRECTION INOUT ;
     USE POWER ;
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 0.495 0.000 24.395 36.510 ;
     END
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 50.390 0.000 74.290 50.000 ;
     END
@@ -130422,10 +130428,12 @@ MACRO sky130_fd_io__top_power_hvc_wpadv2
     DIRECTION INOUT ;
     USE POWER ;
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 0.495 0.000 24.395 32.515 ;
     END
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 50.390 0.000 74.290 63.120 ;
     END
@@ -131000,7 +131008,7 @@ MACRO sky130_fd_io__top_power_hvc_wpadv2
   END VSSD
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -131008,7 +131016,7 @@ MACRO sky130_fd_io__top_power_hvc_wpadv2
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;
@@ -131657,7 +131665,7 @@ MACRO sky130_fd_io__top_power_lvc_wpad
   END VDDIO_Q
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 51.125 75.000 54.105 ;
@@ -131665,7 +131673,7 @@ MACRO sky130_fd_io__top_power_lvc_wpad
   END AMUXBUS_A
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 46.365 75.000 49.345 ;
@@ -131743,10 +131751,12 @@ MACRO sky130_fd_io__top_power_lvc_wpad
     DIRECTION INOUT ;
     USE POWER ;
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 50.755 0.000 74.700 61.120 ;
     END
     PORT
+      CLASS CORE ;
       LAYER met3 ;
         RECT 0.500 0.000 24.500 61.120 ;
     END
@@ -132974,7 +132984,7 @@ MACRO sky130_fd_io__top_sio_macro
   END pad<0>
   PIN amuxbus_b
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     ANTENNADIFFAREA 2.650000 ;
     PORT
       LAYER met4 ;
@@ -132991,7 +133001,7 @@ MACRO sky130_fd_io__top_sio_macro
   END amuxbus_b
   PIN amuxbus_a
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     ANTENNADIFFAREA 2.650000 ;
     PORT
       LAYER met4 ;
@@ -134074,7 +134084,7 @@ MACRO sky130_fd_io__top_vrefcapv2
   END vssd
   PIN amuxbus_b
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 17.280 51.345 ;
@@ -134082,7 +134092,7 @@ MACRO sky130_fd_io__top_vrefcapv2
   END amuxbus_b
   PIN amuxbus_a
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 17.280 56.105 ;
@@ -134415,7 +134425,7 @@ MACRO sky130_fd_io__top_xres4v2
   END VSSD
   PIN AMUXBUS_B
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 48.365 75.000 51.345 ;
@@ -134423,7 +134433,7 @@ MACRO sky130_fd_io__top_xres4v2
   END AMUXBUS_B
   PIN AMUXBUS_A
     DIRECTION INOUT ;
-    USE SIGNAL ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 0.000 53.125 75.000 56.105 ;

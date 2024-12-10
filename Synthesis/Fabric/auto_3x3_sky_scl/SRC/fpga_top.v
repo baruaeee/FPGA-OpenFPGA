@@ -9,32 +9,45 @@
 `default_nettype none
 
 // ----- Verilog module for fpga_top -----
-module fpga_top(pReset,
-                prog_clk,
-                set,
-                reset,
-                clk,
+module fpga_top(PAD_pReset,
+                PAD_prog_clk,
+                PAD_set,
+                PAD_reset,
+                PAD_clk,
                 gfpga_pad_GPIO_PAD,
-                ccff_head,
-                ccff_tail);
+                PAD_ccff_head,
+                PAD_ccff_tail);
 //----- GLOBAL PORTS -----
-input [0:0] pReset;
+input [0:0] PAD_pReset;
 //----- GLOBAL PORTS -----
-input [0:0] prog_clk;
+input [0:0] PAD_prog_clk;
 //----- GLOBAL PORTS -----
-input [0:0] set;
+input [0:0] PAD_set;
 //----- GLOBAL PORTS -----
-input [0:0] reset;
+input [0:0] PAD_reset;
 //----- GLOBAL PORTS -----
-input [0:0] clk;
+input [0:0] PAD_clk;
 //----- GPIO PORTS -----
 inout [0:31] gfpga_pad_GPIO_PAD;
 //----- INPUT PORTS -----
-input [0:0] ccff_head;
+input [0:0] PAD_ccff_head;
 //----- OUTPUT PORTS -----
-output [0:0] ccff_tail;
+output [0:0] PAD_ccff_tail;
 
 //----- BEGIN wire-connection ports -----
+wire [0:0] pReset;
+//----- GLOBAL PORTS -----
+wire [0:0] prog_clk;
+//----- GLOBAL PORTS -----
+wire [0:0] set;
+//----- GLOBAL PORTS -----
+wire [0:0] reset;
+//----- GLOBAL PORTS -----
+wire [0:0] clk;
+//----- INPUT PORTS -----
+wire [0:0] ccff_head;
+//----- OUTPUT PORTS -----
+wire [0:0] ccff_tail;
 //----- END wire-connection ports -----
 
 
@@ -195,10 +208,19 @@ wire [0:9] sb_1__0__0_chany_top_out;
 wire [0:0] sb_1__1__0_ccff_tail;
 wire [0:9] sb_1__1__0_chanx_left_out;
 wire [0:9] sb_1__1__0_chany_bottom_out;
+//wire p_core, g_core;
 
 // ----- BEGIN Local short connections -----
+//pReset, prog_clk, set, reset, clk, ccff_head, ccff_tail
+	GPIO_IN pad_pReset(.Y(pReset), .PAD(PAD_pReset));
+	GPIO_IN pad_prog_clk(.Y(prog_clk), .PAD(PAD_prog_clk));
+	GPIO_IN pad_set(.Y(set), .PAD(PAD_set));
+	GPIO_IN pad_reset(.Y(reset), .PAD(PAD_reset));
+	GPIO_IN pad_clk(.Y(clk), .PAD(PAD_clk));
+	GPIO_IN pad_ccff_head(.Y(ccff_head), .PAD(PAD_ccff_head));
 // ----- END Local short connections -----
 // ----- BEGIN Local output short connections -----
+	GPIO_OUT pad_ccff_tail(.A(ccff_tail), .PAD(PAD_ccff_tail));
 // ----- END Local output short connections -----
 
 	grid_io_top grid_io_top_1__2_ (

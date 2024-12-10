@@ -3,19 +3,19 @@ Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
 Cadence and the Cadence logo are registered trademarks and Genus is a trademark
 of Cadence Design Systems, Inc. in the United States and other countries.
 
-[03:27:40.434052] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+[12:52:36.434076] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
 Version: 22.13-s093_1, built Tue Sep 05 08:56:02 PDT 2023
-Options: -files Resynth.tcl 
-Date:    Thu Nov 21 03:27:40 2024
-Host:    ei-vm-011 (x86_64 w/Linux 4.18.0-553.22.1.el8_10.x86_64) (24cores*24cpus*1physical cpu*QEMU Virtual CPU version 2.5+ 512KB) (131477000KB)
-PID:     24374
+Options: -files Resynth_1sdc.tcl 
+Date:    Fri Nov 29 12:52:36 2024
+Host:    ei-vm-011 (x86_64 w/Linux 4.18.0-553.30.1.el8_10.x86_64) (24cores*24cpus*1physical cpu*QEMU Virtual CPU version 2.5+ 512KB) (131477004KB)
+PID:     72721
 OS:      Red Hat Enterprise Linux release 8.10 (Green Obsidian)
 
 Checking out license: Genus_Synthesis
-[03:27:40.305744] Periodic Lic check successful
-[03:27:40.305745] Feature usage summary:
-[03:27:40.305746] Genus_Synthesis
+[12:52:36.464738] Periodic Lic check successful
+[12:52:36.464747] Feature usage summary:
+[12:52:36.464747] Genus_Synthesis
 
 
 
@@ -24,15 +24,15 @@ Checking out license: Genus_Synthesis
 
 
 
-Finished executable startup (0 seconds elapsed).
+Finished executable startup (1 second elapsed).
 
 Loading tool scripts...
 Finished loading tool scripts (7 seconds elapsed).
 
 #@ Processing -files option
-@genus 1> source Resynth.tcl
-#@ Begin verbose source ./Resynth.tcl
-@file(Resynth.tcl) 2: read_libs LIB/sky130_ff_1.98_0_nldm.lib \
+@genus 1> source Resynth_1sdc.tcl
+#@ Begin verbose source ./Resynth_1sdc.tcl
+@file(Resynth_1sdc.tcl) 2: read_libs LIB/sky130_ff_1.98_0_nldm.lib \
 	LIB/sky130_ss_1.62_125_nldm.lib \
 	LIB/sky130_tt_1.8_25_nldm.lib
 Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
@@ -97,17 +97,113 @@ Warning : Multiply-defined library cell. [LBR-22]
         : Library-cell name collision (sky130_ff_1.98_0/BUFX2 and sky130_ss_1.62_125/BUFX2).  Deleting (sky130_ss_1.62_125/BUFX2).
 Warning : Maximum message print count reached. [MESG-11]
         : Maximum print count of '20' reached for message 'LBR-22'.
-@file(Resynth.tcl) 7: read_hdl flat.v
-@file(Resynth.tcl) 11: elaborate fpga_top
+@file(Resynth_1sdc.tcl) 8: read_hdl SRC/fabric_netlists.v
+output [0:0] const0;
+                   |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'const0' in file './SRC/sub_module/inv_buf_passgate.v' on line 14, column 20.
+        : When `default_nettype is none, each input and inout port declaration requires a corresponding net type.
+output [0:0] const1;
+                   |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'const1' in file './SRC/sub_module/inv_buf_passgate.v' on line 36, column 20.
+input [0:3] in;
+              |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'in' in file './SRC/sub_module/muxes.v' on line 17, column 15.
+input [0:2] sram;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram' in file './SRC/sub_module/muxes.v' on line 19, column 17.
+input [0:2] sram_inv;
+                    |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram_inv' in file './SRC/sub_module/muxes.v' on line 21, column 21.
+output [0:0] out;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'out' in file './SRC/sub_module/muxes.v' on line 23, column 17.
+input [0:1] in;
+              |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'in' in file './SRC/sub_module/muxes.v' on line 113, column 15.
+input [0:1] sram;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram' in file './SRC/sub_module/muxes.v' on line 115, column 17.
+input [0:1] sram_inv;
+                    |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram_inv' in file './SRC/sub_module/muxes.v' on line 117, column 21.
+output [0:0] out;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'out' in file './SRC/sub_module/muxes.v' on line 119, column 17.
+input [0:2] in;
+              |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'in' in file './SRC/sub_module/muxes.v' on line 185, column 15.
+input [0:1] sram;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram' in file './SRC/sub_module/muxes.v' on line 187, column 17.
+input [0:1] sram_inv;
+                    |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram_inv' in file './SRC/sub_module/muxes.v' on line 189, column 21.
+output [0:0] out;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'out' in file './SRC/sub_module/muxes.v' on line 191, column 17.
+input [0:59] in;
+               |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'in' in file './SRC/sub_module/muxes.v' on line 269, column 16.
+input [0:5] sram;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram' in file './SRC/sub_module/muxes.v' on line 271, column 17.
+input [0:5] sram_inv;
+                    |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram_inv' in file './SRC/sub_module/muxes.v' on line 273, column 21.
+output [0:0] out;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'out' in file './SRC/sub_module/muxes.v' on line 275, column 17.
+input [0:1] in;
+              |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'in' in file './SRC/sub_module/muxes.v' on line 1037, column 15.
+input [0:1] sram;
+                |
+Warning : Implicit net declaration not allowed with `default_nettype none. [VLOGPT-43]
+        : Assuming a wire net type for declaration 'sram' in file './SRC/sub_module/muxes.v' on line 1039, column 17.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-43'.
+@file(Resynth_1sdc.tcl) 11: elaborate fpga_top
   Libraries have 88 usable logic and 18 usable sequential lib-cells.
 Info    : Elaborating Design. [ELAB-1]
-        : Elaborating top-level block 'fpga_top' from file 'flat.v'.
+        : Elaborating top-level block 'fpga_top' from file './SRC/fpga_top.v'.
 Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
-        : A blackbox was created for instance 'gpio' in file 'flat.v' on line 15.
+        : A blackbox was created for instance 'gpio' in file '/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/outputs/inpad_netlist.v' on line 13.
         : Check the kind of module a black box is. If it is a lib_cell or a macro, check why the corresponding .lib was not read in. This could be either due to a missing or faulty file or due to an incomplete init_lib_search_path attribute value making restricting access to the missing file. If it is a module of your design, verify whether the path to this module is a part of the files you read or else check that the init_hdl_search_path attribute is not missing some paths.
 Warning : Undriven module input port. [ELABUTL-127]
-        : Undriven bits of port 'top_width_0_height_0_subtile_0__pin_clk_0_' of instance 'grid_clb_1__1_' of module 'grid_clb' in file 'flat.v' on line 6812, column 26, hid = 0.
+        : Undriven bits of port 'top_width_0_height_0_subtile_0__pin_clk_0_' of instance 'grid_clb_1__1_' of module 'grid_clb' in file './SRC/fpga_top.v' on line 318, column 26, hid = 0.
         : Run check_design to check 'Undriven Port(s)/Pin(s)' section for all undriven module input ports. It is better to double confirm with designer if these undriven ports are expected. During syn_gen the undriven ports are controlled by attribute 'hdl_unconnected_value', the default value is 0.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'PAD_pReset[0]' in module 'fpga_top'.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'PAD_prog_clk[0]' in module 'fpga_top'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'PAD_set[0]' in module 'fpga_top'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'PAD_reset[0]' in module 'fpga_top'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'PAD_clk[0]' in module 'fpga_top'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'PAD_ccff_head[0]' in module 'fpga_top'.
 Info    : Done Elaborating Design. [ELAB-3]
         : Done elaborating 'fpga_top'.
 Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
@@ -124,15 +220,15 @@ Stage: post_elab
 --------------------------------------------------------
 | Trick             | Accepts | Rejects | Runtime (ms) | 
 --------------------------------------------------------
-| ume_constant_bmux |       0 |       0 |         0.00 | 
+| ume_constant_bmux |       0 |       0 |         1.00 | 
 | ume_merge         |       0 |       0 |         0.00 | 
 | ume_ssm           |       0 |       0 |         0.00 | 
-| ume_cse           |       0 |       0 |         3.00 | 
+| ume_cse           |       0 |       0 |         2.00 | 
 | ume_shrink        |       0 |       0 |         0.00 | 
 | ume_sweep         |       0 |       0 |         0.00 | 
 --------------------------------------------------------
 Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: fpga_top, recur: true)
-Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: fpga_top, recur: true)
 Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: fpga_top, recur: true)
@@ -144,7 +240,7 @@ Stage: post_elab
 ---------------------------------------------------------------------
 | Transform                      | Accepts | Rejects | Runtime (ms) | 
 ---------------------------------------------------------------------
-| hlo_optimize_datapath_shifters |       0 |       0 |         0.00 | 
+| hlo_optimize_datapath_shifters |       0 |       0 |         1.00 | 
 | hlo_clip_mux_input             |       0 |       0 |         0.00 | 
 | hlo_clip                       |       0 |       0 |         0.00 | 
 | hlo_cleanup                    |       0 |       0 |         0.00 | 
@@ -154,86 +250,24 @@ Info    : To insure proper verification, preserved netlist point(s) because they
 
 UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   elaborate
-@file(Resynth.tcl) 14: set sdc_dir "./SDC"
-@file(Resynth.tcl) 16: set sdc_files {
-	"cbx_1__0_.sdc"
-	"cbx_1__1_.sdc"
-	"cby_0__1_.sdc"
-	"cby_1__1_.sdc"
-	"disable_configurable_memory_outputs.sdc"
-	"disable_configure_ports.sdc"
-	"disable_routing_multiplexer_outputs.sdc"
-	"disable_sb_outputs.sdc"
-	"logical_tile_clb_mode_clb_.sdc"
-	"logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc"
-	"logical_tile_io_mode_io_.sdc"
-	"sb_0__0_.sdc"
-	"sb_0__1_.sdc"
-	"sb_1__0_.sdc"
-	"sb_1__1_.sdc"
+@file(Resynth_1sdc.tcl) 12: flat
+@file(Resynth_1sdc.tcl) 15: set sdc_dir "./SDC"
+@file(Resynth_1sdc.tcl) 17: set sdc_files {
+	"fabric.sdc"
 }
-@file(Resynth.tcl) 34: foreach sdc_file $sdc_files {
+@file(Resynth_1sdc.tcl) 21: foreach sdc_file $sdc_files {
 	read_sdc [file join $sdc_dir $sdc_file]
 }
 Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     82 , failed      0 (runtime  0.08)
+ "create_clock"             - successful      2 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      2 , failed      0 (runtime  0.00)
+ "set_disable_timing"       - successful     78 , failed      0 (runtime  0.20)
+ "set_max_delay"            - successful   4118 , failed      0 (runtime  7.58)
  "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:01 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     82 , failed      0 (runtime  0.09)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     82 , failed      0 (runtime  0.08)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     82 , failed      0 (runtime  0.09)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_disable_timing"       - successful     72 , failed      0 (runtime  0.13)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_disable_timing"       - successful     70 , failed      0 (runtime  0.17)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_disable_timing"       - successful     31 , failed      0 (runtime  0.03)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_disable_timing"       - successful     12 , failed      0 (runtime  0.01)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful   3600 , failed      0 (runtime  6.07)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:07 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful      4 , failed      0 (runtime  0.00)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful      2 , failed      0 (runtime  0.00)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-Statistics for commands executed by read_sdc:
- "set_max_delay"            - successful     46 , failed      0 (runtime  0.05)
- "set_units"                - successful      1 , failed      0 (runtime  0.00)
-read_sdc completed in 00:00:00 (hh:mm:ss)
-@file(Resynth.tcl) 40: set_db syn_opt_effort medium
+read_sdc completed in 00:00:08 (hh:mm:ss)
+@file(Resynth_1sdc.tcl) 27: set_db syn_opt_effort medium
   Setting attribute of root '/': 'syn_opt_effort' = medium
-@file(Resynth.tcl) 45: syn_opt
+@file(Resynth_1sdc.tcl) 32: syn_opt
 Warning : A combinational loop has been found. [TIM-20]
         : The design 'fpga_top' contains the following combinational loop:
           grid_clb_1__1_/logical_tile_clb_mode_clb__0/clb_I[0]
@@ -7277,9 +7311,10 @@ Info    : Incrementally optimizing. [SYNTH-7]
  
 Incremental optimization status
 ===============================
-                                    Worst     Total - - DRC Totals - -
-                           Total  Weighted     Neg      Max       Max 
-Operation                   Area  Neg Slk     Slack    Trans      Cap 
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
  init_iopt                185393        0         0     71700      497
 Info    : Deleting instances not driving any primary outputs. [GLO-34]
         : Deleting 556 hierarchical instances.
@@ -7289,9 +7324,10 @@ Info    : Deleting instances not driving any primary outputs. [GLO-34]
  
 Incremental optimization status
 ===============================
-                                    Worst     Total - - DRC Totals - -
-                           Total  Weighted     Neg      Max       Max 
-Operation                   Area  Neg Slk     Slack    Trans      Cap 
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
  init_delay               183005        0         0     70088      488
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
@@ -7329,7 +7365,7 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
         drc_bufs        16  (        0 /        0 )  0.00
         drc_fopt        16  (        0 /        0 )  0.00
         drc_bufb        16  (        0 /        0 )  0.00
-      simple_buf        16  (       16 /       16 )  0.04
+      simple_buf        16  (       16 /       16 )  0.05
              dup         0  (        0 /        0 )  0.00
        crit_dnsz         0  (        0 /        0 )  0.00
        crit_upsz         0  (        0 /        0 )  0.00
@@ -7391,28 +7427,29 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
            undup         0  (        0 /        0 )  0.01
-         rem_buf       280  (      264 /      264 )  0.26
+         rem_buf       280  (      264 /      264 )  0.33
          rem_inv         0  (        0 /        0 )  0.00
-        merge_bi         0  (        0 /        0 )  0.04
+        merge_bi         0  (        0 /        0 )  0.06
       rem_inv_qb         0  (        0 /        0 )  0.00
-        io_phase      2641  (     2641 /     2641 )  6.31
-       gate_comp        17  (       17 /       17 )  0.27
-       gcomp_mog         0  (        0 /        0 )  0.04
-       glob_area       221  (       48 /      221 )  0.04
-       area_down        61  (       44 /       44 )  0.09
+        io_phase      2641  (     2641 /     2641 )  7.74
+       gate_comp        17  (       17 /       17 )  0.28
+       gcomp_mog         0  (        0 /        0 )  0.05
+       glob_area       221  (       48 /      221 )  0.05
+       area_down        61  (       44 /       44 )  0.12
       size_n_buf         0  (        0 /        0 )  0.00
   gate_deco_area         0  (        0 /        0 )  0.00
-         rem_buf        16  (        6 /        6 )  0.02
-         rem_inv        20  (       20 /       20 )  0.02
-        merge_bi         0  (        0 /        0 )  0.02
+         rem_buf        16  (        6 /        6 )  0.03
+         rem_inv        20  (       20 /       20 )  0.03
+        merge_bi         0  (        0 /        0 )  0.04
       rem_inv_qb         0  (        0 /        0 )  0.00
 
  
 Incremental optimization status
 ===============================
-                                    Worst     Total - - DRC Totals - -
-                           Total  Weighted     Neg      Max       Max 
-Operation                   Area  Neg Slk     Slack    Trans      Cap 
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
  init_delay               164209        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
@@ -7487,13 +7524,13 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
            undup         0  (        0 /        0 )  0.01
          rem_buf        10  (        0 /        0 )  0.01
          rem_inv         0  (        0 /        0 )  0.00
-        merge_bi         0  (        0 /        0 )  0.01
+        merge_bi         0  (        0 /        0 )  0.02
       rem_inv_qb         0  (        0 /        0 )  0.00
         io_phase         2  (        2 /        2 )  0.01
-       gate_comp         0  (        0 /        0 )  0.21
+       gate_comp         0  (        0 /        0 )  0.20
        gcomp_mog         0  (        0 /        0 )  0.04
-       glob_area        50  (        0 /       50 )  0.03
-       area_down         0  (        0 /        0 )  0.02
+       glob_area        50  (        0 /       50 )  0.04
+       area_down         0  (        0 /        0 )  0.03
       size_n_buf         0  (        0 /        0 )  0.00
   gate_deco_area         0  (        0 /        0 )  0.00
 
@@ -7503,137 +7540,90 @@ Stage : incr_opt
   =================
    Message Summary
   =================
----------------------------------------------------------------------------
-|    Id     |  Sev  |Count|                 Message Text                  |
----------------------------------------------------------------------------
-|CDFG-428   |Warning|    1|In legacy_ui mode, Genus creates a blackbox as |
-|           |       |     | description for a module is not found. Black  |
-|           |       |     | boxes represent unresolved references in the  |
-|           |       |     | design and are usually not expected. Another  |
-|           |       |     | possible reason is, some libraries are not    |
-|           |       |     | read and the tool could not get the content   |
-|           |       |     | for some macros or lib_cells.                 |
-|           |       |     |Check the kind of module a black box is. If it |
-|           |       |     | is a lib_cell or a macro, check why the       |
-|           |       |     | corresponding .lib was not read in. This could|
-|           |       |     | be either due to a missing or faulty file or  |
-|           |       |     | due to an incomplete init_lib_search_path     |
-|           |       |     | attribute value making restricting access to  |
-|           |       |     | the missing file. If it is a module of your   |
-|           |       |     | design, verify whether the path to this module|
-|           |       |     | is a part of the files you read or else check |
-|           |       |     | that the init_hdl_search_path attribute is not|
-|           |       |     | missing some paths.                           |
-|CDFG-500   |Info   |    9|Unused module input port.                      |
-|           |       |     |(In port definition within the module, the inpu|
-|           |       |     | t port is not used in any assignment          |
-|           |       |     | statements or conditional expressions for     |
-|           |       |     | decision statements.                          |
-|CDFG-738   |Info   |   91|Common subexpression eliminated.               |
-|CDFG-739   |Info   |   91|Common subexpression kept.                     |
-|CDFG-771   |Info   |    1|Replaced logic with a constant value.          |
-|ELAB-1     |Info   |    1|Elaborating Design.                            |
-|ELAB-2     |Info   |   38|Elaborating Subdesign.                         |
-|ELAB-3     |Info   |    1|Done Elaborating Design.                       |
-|ELABUTL-127|Warning|    1|Undriven module input port.                    |
-|           |       |     |Run check_design to check 'Undriven Port(s)    |
-|           |       |     | /Pin(s)                                       |
-|           |       |     | ' section for all undriven module input ports.|
-|           |       |     | It is better to double confirm with designer  |
-|           |       |     | if these undriven ports are expected. During  |
-|           |       |     | syn_gen the undriven ports are controlled by  |
-|           |       |     | attribute 'hdl_unconnected_value', the default|
-|           |       |     | value is 0.                                   |
-|ELABUTL-133|Info   |    1|To insure proper verification, preserved       |
-|           |       |     | netlist point(s)                              |
-|           |       |     | because they are involved in combinational    |
-|           |       |     | loop(s)                                       |
-|           |       |     | . To disable this, set the                    |
-|           |       |     | 'cb_preserve_ports_nets' root attribute to    |
-|           |       |     | 'false'.                                      |
-|GLO-34     |Info   |    2|Deleting instances not driving any primary     |
-|           |       |     | outputs.                                      |
-|           |       |     |Optimizations such as constant propagation or  |
-|           |       |     | redundancy removal could change the           |
-|           |       |     | connections so a hierarchical instance does   |
-|           |       |     | not drive any primary outputs anymore. To see |
-|           |       |     | the list of deleted hierarchical instances,   |
-|           |       |     | set the 'information_level' attribute to 2 or |
-|           |       |     | above. If the message is truncated set the    |
-|           |       |     | message attribute 'truncate' to false to see  |
-|           |       |     | the complete list. To prevent this            |
-|           |       |     | optimization, set the 'delete_unloaded_insts' |
-|           |       |     | root/subdesign attribute to 'false' or        |
-|           |       |     | 'preserve' instance attribute to 'true'.      |
-|LBR-22     |Warning|  218|Multiply-defined library cell.                 |
-|           |       |     |Library cell names must be unique.  Any        |
-|           |       |     | duplicates will be deleted.  Only the first   |
-|           |       |     | (as determined by the order of libraries)     |
-|           |       |     | will be retained.                             |
-|LBR-38     |Warning|    2|Libraries have inconsistent nominal operating  |
-|           |       |     | conditions. In the Liberty library, there are |
-|           |       |     | attributes called nom_voltage, nom_process and|
-|           |       |     | nom_temperature. Genus reports the message, if|
-|           |       |     | the respective values of the 2 given .libs    |
-|           |       |     | differ.                                       |
-|           |       |     |This is a common source of delay calculation   |
-|           |       |     | confusion and should be avoided.              |
-|LBR-101    |Warning|    3|Unusable clock gating integrated cell found at |
-|           |       |     | the time of loading libraries. This warning   |
-|           |       |     | happens because a particular library cell is  |
-|           |       |     | defined as 'clock_gating_integrated_cell', but|
-|           |       |     | 'dont_use' attribute is defined as true in the|
-|           |       |     | liberty library. To make Genus use this cell  |
-|           |       |     | for clock gating insertion, 'dont_use'        |
-|           |       |     | attribute should be set to false.             |
-|           |       |     |To make the cell usable, change the value of   |
-|           |       |     | 'dont_use' attribute to false.                |
-|LBR-162    |Info   |   26|Both 'pos_unate' and 'neg_unate' timing_sense  |
-|           |       |     | arcs have been processed.                     |
-|           |       |     |Setting the 'timing_sense' to non_unate.       |
-|LBR-412    |Info   |    3|Created nominal operating condition.           |
-|           |       |     |The nominal operating condition is represented,|
-|           |       |     | either by the nominal PVT values specified in |
-|           |       |     | the library source                            |
-|           |       |     | (via nom_process,nom_voltage and nom_temperatu|
-|           |       |     | re respectively)                              |
-|           |       |     | , or by the default PVT values (1.0,1.0,1.0). |
-|LBR-785    |Info   |  218|Stored shadowed libcells.                      |
-|           |       |     |Before deleting duplicate libcells, their names|
-|           |       |     | are stored.                                   |
-|PA-7       |Info   |    2|Resetting power analysis results.              |
-|           |       |     |All computed switching activities are removed. |
-|SYNTH-7    |Info   |    1|Incrementally optimizing.                      |
-|TIM-20     |Warning| 3223|A combinational loop has been found.           |
-|           |       |     |Run 'check_timing_intent' to get the detailed  |
-|           |       |     | information By default Genus inserts          |
-|           |       |     | cdn_loop_breaker instances to break           |
-|           |       |     | combinational feedback loops during timing    |
-|           |       |     | analysis. You can use command 'report         |
-|           |       |     | cdn_loop_breaker' to report all the loop      |
-|           |       |     | breakers in the design. You can use command   |
-|           |       |     | 'remove_cdn_loop_breaker' to remove the loop  |
-|           |       |     | breakers. Once the loop breaker instances     |
-|           |       |     | inserted by Genus are removed, the user can   |
-|           |       |     | break the loops manually using command        |
-|           |       |     | set_disable_timing.                           |
-|TUI-273    |Warning|    1|Black-boxes are represented as unresolved      |
-|           |       |     | references in the design.                     |
-|           |       |     |Run check_design to get all unresolved         |
-|           |       |     | instance. To resolve the reference, either    |
-|           |       |     | load a technology library containing the cell |
-|           |       |     | by appending to the 'library' attribute, or   |
-|           |       |     | read in the hdl file containing the module    |
-|           |       |     | before performing elaboration. As the design  |
-|           |       |     | is incomplete, synthesis results may not      |
-|           |       |     | correspond to the entire design.              |
----------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
+|    Id     |  Sev  |Count|                                            Message Text                                             |
+---------------------------------------------------------------------------------------------------------------------------------
+|CDFG-428   |Warning|    1|In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes    |
+|           |       |     | represent unresolved references in the design and are usually not expected. Another possible reason |
+|           |       |     | is, some libraries are not read and the tool could not get the content for some macros or lib_cells.|
+|           |       |     |Check the kind of module a black box is. If it is a lib_cell or a macro, check why the corresponding |
+|           |       |     | .lib was not read in. This could be either due to a missing or faulty file or due to an incomplete  |
+|           |       |     | init_lib_search_path attribute value making restricting access to the missing file. If it is a      |
+|           |       |     | module of your design, verify whether the path to this module is a part of the files you read or    |
+|           |       |     | else check that the init_hdl_search_path attribute is not missing some paths.                       |
+|CDFG-500   |Info   |    9|Unused module input port.                                                                            |
+|           |       |     |(In port definition within the module, the input port is not used in any assignment statements or con|
+|           |       |     | ditional expressions for decision statements.                                                       |
+|CDFG-738   |Info   |   91|Common subexpression eliminated.                                                                     |
+|CDFG-739   |Info   |   91|Common subexpression kept.                                                                           |
+|CDFG-771   |Info   |    1|Replaced logic with a constant value.                                                                |
+|CDFG2G-622 |Warning|    6|Signal or variable has multiple drivers.                                                             |
+|           |       |     |This may cause simulation mismatches between the original and synthesized designs.                   |
+|ELAB-1     |Info   |    1|Elaborating Design.                                                                                  |
+|ELAB-2     |Info   |   40|Elaborating Subdesign.                                                                               |
+|ELAB-3     |Info   |    1|Done Elaborating Design.                                                                             |
+|ELABUTL-127|Warning|    1|Undriven module input port.                                                                          |
+|           |       |     |Run check_design to check 'Undriven Port(s)/Pin(s)                                                   |
+|           |       |     | ' section for all undriven module input ports. It is better to double confirm with designer if these|
+|           |       |     | undriven ports are expected. During syn_gen the undriven ports are controlled by attribute          |
+|           |       |     | 'hdl_unconnected_value', the default value is 0.                                                    |
+|ELABUTL-132|Info   |    1|Unused instance port.                                                                                |
+|           |       |     |Please check the reported scenario of unconnected instance port to ensure that it matches the design |
+|           |       |     | intent.                                                                                             |
+|ELABUTL-133|Info   |    1|To insure proper verification, preserved netlist point(s)                                            |
+|           |       |     | because they are involved in combinational loop(s)                                                  |
+|           |       |     | . To disable this, set the 'cb_preserve_ports_nets' root attribute to 'false'.                      |
+|GLO-34     |Info   |    2|Deleting instances not driving any primary outputs.                                                  |
+|           |       |     |Optimizations such as constant propagation or redundancy removal could change the connections so a   |
+|           |       |     | hierarchical instance does not drive any primary outputs anymore. To see the list of deleted        |
+|           |       |     | hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is      |
+|           |       |     | truncated set the message attribute 'truncate' to false to see the complete list. To prevent this   |
+|           |       |     | optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve'     |
+|           |       |     | instance attribute to 'true'.                                                                       |
+|LBR-22     |Warning|  218|Multiply-defined library cell.                                                                       |
+|           |       |     |Library cell names must be unique.  Any duplicates will be deleted.  Only the first                  |
+|           |       |     | (as determined by the order of libraries) will be retained.                                         |
+|LBR-38     |Warning|    2|Libraries have inconsistent nominal operating conditions. In the Liberty library, there are          |
+|           |       |     | attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the   |
+|           |       |     | respective values of the 2 given .libs differ.                                                      |
+|           |       |     |This is a common source of delay calculation confusion and should be avoided.                        |
+|LBR-101    |Warning|    3|Unusable clock gating integrated cell found at the time of loading libraries. This warning happens   |
+|           |       |     | because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use'      |
+|           |       |     | attribute is defined as true in the liberty library. To make Genus use this cell for clock gating   |
+|           |       |     | insertion, 'dont_use' attribute should be set to false.                                             |
+|           |       |     |To make the cell usable, change the value of 'dont_use' attribute to false.                          |
+|LBR-162    |Info   |   26|Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.                              |
+|           |       |     |Setting the 'timing_sense' to non_unate.                                                             |
+|LBR-412    |Info   |    3|Created nominal operating condition.                                                                 |
+|           |       |     |The nominal operating condition is represented, either by the nominal PVT values specified in the    |
+|           |       |     | library source (via nom_process,nom_voltage and nom_temperature respectively)                       |
+|           |       |     | , or by the default PVT values (1.0,1.0,1.0).                                                       |
+|LBR-785    |Info   |  218|Stored shadowed libcells.                                                                            |
+|           |       |     |Before deleting duplicate libcells, their names are stored.                                          |
+|PA-7       |Info   |    2|Resetting power analysis results.                                                                    |
+|           |       |     |All computed switching activities are removed.                                                       |
+|SYNTH-7    |Info   |    1|Incrementally optimizing.                                                                            |
+|TIM-20     |Warning| 3223|A combinational loop has been found.                                                                 |
+|           |       |     |Run 'check_timing_intent' to get the detailed information By default Genus inserts cdn_loop_breaker  |
+|           |       |     | instances to break combinational feedback loops during timing analysis. You can use command 'report |
+|           |       |     | cdn_loop_breaker' to report all the loop breakers in the design. You can use command                |
+|           |       |     | 'remove_cdn_loop_breaker' to remove the loop breakers. Once the loop breaker instances inserted by  |
+|           |       |     | Genus are removed, the user can break the loops manually using command set_disable_timing.          |
+|TUI-273    |Warning|    1|Black-boxes are represented as unresolved references in the design.                                  |
+|           |       |     |Run check_design to get all unresolved instance. To resolve the reference, either load a technology  |
+|           |       |     | library containing the cell by appending to the 'library' attribute, or read in the hdl file        |
+|           |       |     | containing the module before performing elaboration. As the design is incomplete, synthesis results |
+|           |       |     | may not correspond to the entire design.                                                            |
+|VLOGPT-43  |Warning|  541|Implicit net declaration not allowed with `default_nettype none.                                     |
+|           |       |     |When `default_nettype is none, each input and inout port declaration requires a corresponding net    |
+|           |       |     | type.                                                                                               |
+---------------------------------------------------------------------------------------------------------------------------------
 Info    : Done incrementally optimizing. [SYNTH-8]
         : Done incrementally optimizing 'fpga_top'.
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   syn_opt
-@file(Resynth.tcl) 49: report_timing > reports/report_timing.rpt
-@file(Resynth.tcl) 50: report_power  > reports/report_power.rpt
+@file(Resynth_1sdc.tcl) 36: report_timing > reports/report_timing.rpt
+@file(Resynth_1sdc.tcl) 37: report_power  > reports/report_power.rpt
 Info    : Joules engine is used. [RPT-16]
         : Joules engine is being used for the command report_power.
 Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
@@ -7661,15 +7651,12 @@ Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=2, Error=0, Fatal=0
 Output file: reports/report_power.rpt
-@file(Resynth.tcl) 51: report_area   > reports/report_area.rpt
-@file(Resynth.tcl) 52: report_qor    > reports/report_qor.rpt
-Warning : No clock. [RPT-10]
-        : There are no clocks in the design.
-        : Clock is not defined.
-@file(Resynth.tcl) 55: write_hdl > outputs/post_synth_fabric_netlist.v
-@file(Resynth.tcl) 56: write_sdc > outputs/post_synth_fabric_sdc.sdc
+@file(Resynth_1sdc.tcl) 38: report_area   > reports/report_area.rpt
+@file(Resynth_1sdc.tcl) 39: report_qor    > reports/report_qor.rpt
+@file(Resynth_1sdc.tcl) 42: write_hdl > outputs/post_synth_fabric_netlist.v
+@file(Resynth_1sdc.tcl) 43: write_sdc > outputs/post_synth_fabric_sdc.sdc
 Finished SDC export (command execution time mm:ss (real) = 00:01).
-@file(Resynth.tcl) 57: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
+@file(Resynth_1sdc.tcl) 44: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
 Warning : No delay description exists for an instance. [WSDF-201]
         : Cell grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_0/INVX1_0_.
         : The timing arc of the instance does not exist or is disabled by disable_timing or constant value. The delay information will not be generated for the instance. The instance could be a loop breaker or its inputs could be driven by constant
@@ -7713,10 +7700,10 @@ Warning : No delay description exists for an instance. [WSDF-201]
         : Cell grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_1/INVX1_1_.
 Warning : Maximum message print count reached. [MESG-11]
         : Maximum print count of '20' reached for message 'WSDF-201'.
-@file(Resynth.tcl) 58: write_design
+@file(Resynth_1sdc.tcl) 45: write_design
 (write_design): Writing Genus content. Constraint interface is 'smsc'
 Exporting design data for 'fpga_top' to genus_invs_des/genus...
-%# Begin write_design (11/21 03:28:28, mem=1584.38M)
+%# Begin write_design (11/29 12:53:28, mem=1568.98M)
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   write_design
 No scan chains were found.
@@ -7725,14 +7712,14 @@ Finished SDC export (command execution time mm:ss (real) = 00:01).
 Info: file genus_invs_des/genus.default_emulate_constraint_mode.sdc has been written
 Info: file genus_invs_des/genus.default_emulate_constraint_mode.sdc has been written
 ** To load the database source genus_invs_des/genus.genus_setup.tcl in an Genus(TM) Synthesis Solution session.
-Finished exporting design data for 'fpga_top' (command execution time mm:ss cpu = 00:01, real = 00:01).
+Finished exporting design data for 'fpga_top' (command execution time mm:ss cpu = 00:00, real = 00:02).
 .
-%# End write_design (11/21 03:28:29, total cpu=09:00:01, real=09:00:01, peak res=609.00M, current mem=1584.38M)
-@file(Resynth.tcl) 59: exit
+%# End write_design (11/29 12:53:30, total cpu=09:00:00, real=09:00:02, peak res=603.60M, current mem=1568.98M)
+@file(Resynth_1sdc.tcl) 46: exit
 
 Lic Summary:
-[03:28:29.391472] Cdslmd servers: hs-lic3
-[03:28:29.391482] Feature usage summary:
-[03:28:29.391483] Genus_Synthesis
+[12:53:30.003272] Cdslmd servers: hs-lic3
+[12:53:30.003283] Feature usage summary:
+[12:53:30.003283] Genus_Synthesis
 
 Normal exit.

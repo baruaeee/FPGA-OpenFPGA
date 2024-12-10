@@ -4678,7 +4678,7 @@ catch {set_db inst:fpga_top/cby_1__1_/cdn_loop_breaker8 .dont_touch true}
 catch {set_db inst:fpga_top/cby_1__1_/cdn_loop_breaker9 .dont_touch true}
 catch {set_db inst:fpga_top/cby_1__1_/cdn_loop_breaker10 .dont_touch true}
 catch {set_db inst:fpga_top/cdn_loop_breaker .dont_touch true}
-catch {set_db inst:fpga_top/cdn_loop_breaker1 .dont_touch true}
 catch {set_db inst:fpga_top/cdn_loop_breaker2 .dont_touch true}
 catch {set_db inst:fpga_top/cdn_loop_breaker3 .dont_touch true}
 catch {set_db inst:fpga_top/cdn_loop_breaker4 .dont_touch true}
+catch {set_db inst:fpga_top/cdn_loop_breaker5 .dont_touch true}

@@ -4,12 +4,12 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v22.33-s094_1, built Fri Aug 25 16:48:21 PDT 2023
 Options:	
-Date:		Sun Nov 24 19:01:45 2024
-Host:		ei-vm-011 (x86_64 w/Linux 4.18.0-553.22.1.el8_10.x86_64) (24cores*24cpus*QEMU Virtual CPU version 2.5+ 512KB)
+Date:		Sat Dec  7 18:26:57 2024
+Host:		ei-vm-011 (x86_64 w/Linux 4.18.0-553.30.1.el8_10.x86_64) (24cores*24cpus*QEMU Virtual CPU version 2.5+ 512KB)
 OS:		Red Hat Enterprise Linux 8.10 (Green Obsidian)
 
 License:
-		[19:01:45.434084] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+		[18:26:57.434156] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
 		invs	Innovus Implementation System	22.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
@@ -61,8 +61,6 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 }
 <CMD> win
 <CMD> set enc_check_rename_command_name 1
-**WARN: (IMPOAX-793):	Problem in processing library definition file /home/cae1/cds.lib - Unable to open library gpdk045_v_6_0 at path /mnt/cae_storage_sw/eda/cadence/pdks/gpdk045_v_6_0/gpdk045: Invalid Lib Path..
-**WARN: (IMPOAX-793):	Problem in processing library definition file /home/cae1/cds.lib - Unable to open library sky130_fd_pr_main at path /mnt/cae_storage_sw/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main: Invalid Lib Path..
 <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
 <CMD> set conf_qxconf_file NULL
 <CMD> set conf_qxlib_file NULL
@@ -76,10 +74,10 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set enc_enable_print_mode_command_reset_options 1
 <CMD> set init_design_uniquify 1
 <CMD> set init_gnd_net {VSS VSSA VSSD VSSIO_Q VSSIO G_CORE}
-<CMD> set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/sky130_fd_io.lef}
-<CMD> set init_mmmc_file Fabric.view
+<CMD> set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/IO/sky130_fd_io__corner_bus_overlay.lef lef/IO/sky130_fd_io__top_gpio_ovtv2.lef lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef}
+<CMD> set init_mmmc_file Fabric1.view
 <CMD> set init_original_verilog_files SRC/comb_fabric.v
-<CMD> set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE}
+<CMD> set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B}
 <CMD> set init_verilog SRC/post_synth_fabric_netlist.v
 <CMD> get_message -id GLOBAL-100 -suppress
 <CMD> get_message -id GLOBAL-100 -suppress
@@ -102,8 +100,8 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set lefdefInputCheckColoredShape 0
 <CMD> set load_netlist_ignore_undefined_cell 1
 <CMD> init_design
-#% Begin Load MMMC data ... (date=11/24 19:03:52, mem=1458.7M)
-#% End Load MMMC data ... (date=11/24 19:03:52, total cpu=0:00:00.0, real=0:00:00.0, peak res=1459.9M, current mem=1459.9M)
+#% Begin Load MMMC data ... (date=12/07 18:29:39, mem=1452.9M)
+#% End Load MMMC data ... (date=12/07 18:29:39, total cpu=0:00:00.0, real=0:00:00.0, peak res=1453.5M, current mem=1453.5M)
 RC_CORNER
 
 Loading LEF file lef/sky130_scl_9T.tlef ...
@@ -111,155 +109,90 @@ Loading LEF file lef/sky130_scl_9T.tlef ...
 Loading LEF file lef/sky130_scl_9T.lef ...
 Set DBUPerIGU to M2 pitch 460.
 
-Loading LEF file lef/sky130_fd_io.lef ...
-WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
-The NOWIREEXTENSIONATPIN statement will be ignored. See file lef/sky130_fd_io.lef at line 2.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__hvclampv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_amuxsplitv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_amuxsplitv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_analog_pad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_analog_pad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
+Loading LEF file lef/IO/sky130_fd_io__corner_bus_overlay.lef ...
+
+Loading LEF file lef/IO/sky130_fd_io__top_gpio_ovtv2.lef ...
 **WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
 Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_gpiovrefv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
+
+Loading LEF file lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef ...
 **WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_ground_hvc_wpad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
 Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_ground_lvc_wpad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+
+Loading LEF file lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef ...
+**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_power_hvc_wpadv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
 Type 'man IMPLF-63' for more detail.
-**WARN: (EMS-27):	Message (IMPLF-63) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-**WARN: (IMPLF-201):	Pin 'PAD_A_ESD_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef at line 1013.
+**WARN: (IMPLF-201):	Pin 'P_PAD' in macro 'sky130_fd_io__top_power_hvc_wpadv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'PAD_A_ESD_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'P_PAD' in macro 'sky130_fd_io__top_power_hvc_wpadv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'FILT_IN_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'TIE_WEAK_HI_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'G_PAD' in macro 'sky130_fd_io__top_ground_hvc_wpad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'TIE_WEAK_HI_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'G_PAD' in macro 'sky130_fd_io__top_ground_hvc_wpad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'PULLUP_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'PULLUP_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'ANALOG_EN' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'TIE_LO_ESD' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'TIE_HI_ESD' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'ANALOG_POL' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'ANALOG_SEL' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'HLD_OVR' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'HYS_TRIM' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'IN' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'INP_DIS' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'PAD' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'amuxbus_b' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'IN_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_b' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'OE_N' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'amuxbus_a' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_a' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_b' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_a' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'vohref' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'voutref_dft' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_1_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD_A_ESD_0_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_1_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'PAD_A_ESD_0_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'vinref_dft' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD_A_ESD_1_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD_A_ESD_1_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_1_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD_A_NOESD_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_1_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'PAD_A_NOESD_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_0_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'TIE_HI_ESD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_0_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'TIE_LO_ESD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_0_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_0_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_noesd_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-**WARN: (IMPLF-201):	Pin 'pad_a_noesd_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'tie_lo_esd<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'tie_lo_esd<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'tie_lo_esd' in macro 'sky130_fd_io__top_pwrdetv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_fd_io__top_power_lvc_wpad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_fd_io__top_power_lvc_wpad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
 
 ##  Check design process and node:  
 ##  Both design process and tech node are not set.
 
-Loading view definition file from Fabric.view
+Loading view definition file from Fabric1.view
 Reading MAX_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib' ...
 Read 109 cells in library 'sky130_ss_1.62_125' 
 Reading MIN_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
 Read 109 cells in library 'sky130_ff_1.98_0' 
-*** End library_loading (cpu=0.01min, real=0.00min, mem=32.0M, fe_cpu=0.38min, fe_real=2.12min, fe_mem=1478.9M) ***
-#% Begin Load netlist data ... (date=11/24 19:03:52, mem=1481.1M)
-*** Begin netlist parsing (mem=1478.9M) ***
+*** End library_loading (cpu=0.01min, real=0.00min, mem=34.0M, fe_cpu=0.41min, fe_real=2.70min, fe_mem=1476.8M) ***
+#% Begin Load netlist data ... (date=12/07 18:29:39, mem=1471.0M)
+*** Begin netlist parsing (mem=1476.8M) ***
 Created 109 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist 'SRC/post_synth_fabric_netlist.v'
+**WARN: (IMPVL-321):	The cell sky130_fd_io__top_power_hvc_wpadv2 is defined in netlist and also in lef file, so instance, instead of hinstance, will be created for the module instantiation.
+**WARN: (IMPVL-321):	The cell sky130_fd_io__top_ground_hvc_wpad is defined in netlist and also in lef file, so instance, instead of hinstance, will be created for the module instantiation.
 
-*** Memory Usage v#1 (Current mem = 1489.859M, initial mem = 635.109M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1489.9M) ***
-#% End Load netlist data ... (date=11/24 19:03:52, total cpu=0:00:00.1, real=0:00:00.0, peak res=1500.2M, current mem=1500.2M)
+*** Memory Usage v#1 (Current mem = 1485.836M, initial mem = 635.109M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1485.8M) ***
+#% End Load netlist data ... (date=12/07 18:29:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1489.9M, current mem=1489.9M)
 Top level cell is fpga_top.
 Hooked 218 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -267,17 +200,18 @@ No recursion found.
 Building hierarchical netlist for Cell fpga_top ...
 ***** UseNewTieNetMode *****.
 *** Netlist is unique.
-** info: there are 975 modules.
+** info: there are 954 modules.
 ** info: there are 11552 stdCell insts.
-** info: there are 32 Pad insts.
+** info: there are 44 Pad insts.
 
-*** Memory Usage v#1 (Current mem = 1551.773M, initial mem = 635.109M) ***
+*** Memory Usage v#1 (Current mem = 1548.250M, initial mem = 635.109M) ***
 Initializing I/O assignment ...
 Adjusting Core to Left to: 0.1000. Core to Bottom to: 0.1000.
 Start create_tracks
 Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+Pre-connect netlist-defined P/G connections...
 Extraction setup Started 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
 Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
@@ -326,116 +260,21 @@ Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
 Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
 *Info: initialize multi-corner CTS.
-Reading timing constraints file 'SDC/global_ports.sdc' ...
-Current (total cpu=0:00:25.0, real=0:02:09, peak res=1950.1M, current mem=1950.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/global_ports.sdc, Line 10).
+Reading timing constraints file 'SDC/genus.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:00:27.0, real=0:02:44, peak res=1940.7M, current mem=1940.7M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/genus.default_emulate_constraint_mode.sdc, Line 9).
 
-INFO (CTE): Reading of timing constraints file SDC/global_ports.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1951.8M, current mem=1951.8M)
-Current (total cpu=0:00:25.0, real=0:02:09, peak res=1951.8M, current mem=1951.8M)
-Reading timing constraints file 'SDC/cbx_1__0_.sdc' ...
-Current (total cpu=0:00:25.1, real=0:02:09, peak res=1951.8M, current mem=1951.8M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__0_.sdc, Line 10).
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/genus.default_emulate_constraint_mode.sdc, Line 10).
 
-INFO (CTE): Reading of timing constraints file SDC/cbx_1__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1993.1M, current mem=1993.1M)
-Current (total cpu=0:00:25.1, real=0:02:09, peak res=1993.1M, current mem=1993.1M)
-Reading timing constraints file 'SDC/cbx_1__1_.sdc' ...
-Current (total cpu=0:00:25.1, real=0:02:09, peak res=1993.1M, current mem=1993.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/cbx_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1993.2M, current mem=1993.2M)
-Current (total cpu=0:00:25.2, real=0:02:09, peak res=1993.2M, current mem=1993.2M)
-Reading timing constraints file 'SDC/cby_0__1_.sdc' ...
-Current (total cpu=0:00:25.2, real=0:02:09, peak res=1993.2M, current mem=1993.2M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_0__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/cby_0__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1993.9M, current mem=1993.8M)
-Current (total cpu=0:00:25.3, real=0:02:09, peak res=1993.9M, current mem=1993.8M)
-Reading timing constraints file 'SDC/cby_1__1_.sdc' ...
-Current (total cpu=0:00:25.3, real=0:02:09, peak res=1993.9M, current mem=1993.8M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_1__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/cby_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1994.3M, current mem=1994.3M)
-Current (total cpu=0:00:25.4, real=0:02:10, peak res=1994.3M, current mem=1994.3M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_clb_.sdc' ...
-Current (total cpu=0:00:25.4, real=0:02:10, peak res=1994.3M, current mem=1994.3M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_clb_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_clb_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.5, real=0:00:00.0, peak res=1995.1M, current mem=1995.1M)
-Current (total cpu=0:00:25.9, real=0:02:10, peak res=1995.1M, current mem=1995.1M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle.sdc' ...
-Current (total cpu=0:00:25.9, real=0:02:10, peak res=1995.1M, current mem=1995.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1995.5M, current mem=1995.5M)
-Current (total cpu=0:00:26.0, real=0:02:10, peak res=1995.5M, current mem=1995.5M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc' ...
-Current (total cpu=0:00:26.0, real=0:02:10, peak res=1995.5M, current mem=1995.5M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1995.9M, current mem=1995.9M)
-Current (total cpu=0:00:26.0, real=0:02:10, peak res=1995.9M, current mem=1995.9M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc' ...
-Current (total cpu=0:00:26.1, real=0:02:10, peak res=1995.9M, current mem=1995.9M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1996.2M, current mem=1996.2M)
-Current (total cpu=0:00:26.1, real=0:02:10, peak res=1996.2M, current mem=1996.2M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc' ...
-Current (total cpu=0:00:26.1, real=0:02:10, peak res=1996.2M, current mem=1996.2M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1996.6M, current mem=1996.6M)
-Current (total cpu=0:00:26.2, real=0:02:10, peak res=1996.6M, current mem=1996.6M)
-Reading timing constraints file 'SDC/logical_tile_io_mode_io_.sdc' ...
-Current (total cpu=0:00:26.2, real=0:02:10, peak res=1996.6M, current mem=1996.6M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_io_mode_io_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_io_mode_io_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1996.9M, current mem=1996.9M)
-Current (total cpu=0:00:26.2, real=0:02:10, peak res=1996.9M, current mem=1996.9M)
-Reading timing constraints file 'SDC/sb_0__0_.sdc' ...
-Current (total cpu=0:00:26.3, real=0:02:10, peak res=1996.9M, current mem=1996.9M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__0_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_0__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1997.3M, current mem=1997.3M)
-Current (total cpu=0:00:26.3, real=0:02:10, peak res=1997.3M, current mem=1997.3M)
-Reading timing constraints file 'SDC/sb_0__1_.sdc' ...
-Current (total cpu=0:00:26.3, real=0:02:10, peak res=1997.3M, current mem=1997.3M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_0__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1997.7M, current mem=1997.7M)
-Current (total cpu=0:00:26.4, real=0:02:11, peak res=1997.7M, current mem=1997.7M)
-Reading timing constraints file 'SDC/sb_1__0_.sdc' ...
-Current (total cpu=0:00:26.4, real=0:02:11, peak res=1997.7M, current mem=1997.7M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__0_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_1__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1998.1M, current mem=1998.1M)
-Current (total cpu=0:00:26.5, real=0:02:11, peak res=1998.1M, current mem=1998.1M)
-Reading timing constraints file 'SDC/sb_1__1_.sdc' ...
-Current (total cpu=0:00:26.5, real=0:02:11, peak res=1998.1M, current mem=1998.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1998.7M, current mem=1998.6M)
-Current (total cpu=0:00:26.5, real=0:02:11, peak res=1998.7M, current mem=1998.6M)
-Reading timing constraints file 'SDC/disable_configurable_memory_outputs.sdc' ...
-Current (total cpu=0:00:26.6, real=0:02:11, peak res=1998.7M, current mem=1998.6M)
+fpga_top
+INFO (CTE): Reading of timing constraints file SDC/genus.default_emulate_constraint_mode.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.3, real=0:00:00.0, peak res=1988.4M, current mem=1988.4M)
+Current (total cpu=0:00:27.2, real=0:02:45, peak res=1988.4M, current mem=1988.4M)
+Reading timing constraints file 'SDC/genus.dont_touch.sdc' ...
+Current (total cpu=0:00:27.3, real=0:02:45, peak res=1988.4M, current mem=1988.4M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1999.4M, current mem=1999.4M)
-Current (total cpu=0:00:26.6, real=0:02:11, peak res=1999.4M, current mem=1999.4M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1988.5M, current mem=1988.5M)
+Current (total cpu=0:00:27.4, real=0:02:45, peak res=1988.5M, current mem=1988.5M)
 Total number of combinational cells: 87
 Total number of sequential cells: 19
 Total number of tristate cells: 3
@@ -459,1411 +298,122 @@ List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X4 DLY4X4
 Total number of identified usable delay cells: 4
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_power_hvc_wpadv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_ground_hvc_wpad; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
 **WARN: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_gpio_ovtv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
 Type 'man IMPSYC-2' for more detail.
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
-WARNING   IMPLF-63            35  The layer '%s' referenced %s is not foun...
-WARNING   IMPLF-200           95  Pin '%s' in macro '%s' has no ANTENNAGAT...
-WARNING   IMPLF-201           82  Pin '%s' in macro '%s' has no ANTENNADIF...
-WARNING   IMPSYC-2             1  Timing information is not defined for ce...
-WARNING   TCLCMD-1461         15  Skipped unsupported command: %s          
-*** Message Summary: 228 warning(s), 0 error(s)
+WARNING   IMPLF-63             3  The layer '%s' referenced %s is not foun...
+WARNING   IMPLF-200           14  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201           10  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPSYC-2             3  Timing information is not defined for ce...
+WARNING   IMPVL-321            2  The cell %s is defined in netlist and al...
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+*** Message Summary: 34 warning(s), 0 error(s)
 
-<CMD> floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+<CMD> zoomBox -623.51600 -368.55700 2180.94100 2142.03100
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
 Start create_tracks
 Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
-<CMD> loadIoFile IO_PAD.io
-Reading IO assignment file "IO_PAD.io" ...
-<CMD> setDesignMode -process 130
-##  Process: 130           (User Set)               
-##     Node: (not set)                           
-
-##  Check design process and node:  
-##  Design tech node is not set.
-
-Applying the recommended capacitance filtering threshold values for 130nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.4.
-	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
-	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
-	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
-	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-11552 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-11552 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDDIO -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSIO -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSD -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDDA -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSA -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin P_CORE -override -verbose -netlistOverride
-3 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin G_CORE -override -verbose -netlistOverride
-2 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDDIO'.
-<CMD> globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDDIO_Q'.
-<CMD> globalNetConnect VDDIA -type pgpin -pin VDDIA -override -verbose -netlistOverride
-**ERROR: (IMPDB-1216):	The global net 'VDDIA' specified in the global net connection(GNC) rule doesn't exist in the design.
-Type 'man IMPDB-1216' for more detail.
-<CMD> globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VCCD'.
-<CMD> globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VSWITCH'.
-<CMD> globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VCCHIB'.
-<CMD> globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSA'.
-<CMD> globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSD'.
-<CMD> globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSIO_Q'.
-<CMD> globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSIO'.
-<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 5 bottom 5 left 5 right 5} -spacing {top 5 bottom 5 left 5 right 5} -offset {top 20 bottom 20 left 20 right 20} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-#% Begin addRing (date=11/24 19:41:40, mem=2233.5M)
-
-
-viaInitial starts at Sun Nov 24 19:41:40 2024
-viaInitial ends at Sun Nov 24 19:41:40 2024
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Ring generation is complete.
-vias are now being generated.
-addRing created 8 wires.
-ViaGen created 8 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |        4       |       NA       |
-|  via4  |        8       |        0       |
-|  met5  |        4       |       NA       |
-+--------+----------------+----------------+
-#% End addRing (date=11/24 19:41:40, total cpu=0:00:00.0, real=0:00:00.0, peak res=2236.4M, current mem=2236.4M)
-<CMD> addStripe -nets {VDD VSS} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 120 -start_from left -start_offset 120 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
-#% Begin addStripe (date=11/24 19:41:40, mem=2236.4M)
-
-Initialize fgc environment(mem: 2257.4M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Starting stripe generation ...
-Non-Default Mode Option Settings :
-  NONE
-Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Stripe generation is complete.
-vias are now being generated.
-addStripe created 24 wires.
-ViaGen created 48 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |       24       |       NA       |
-|  via4  |       48       |        0       |
-+--------+----------------+----------------+
-#% End addStripe (date=11/24 19:41:40, total cpu=0:00:00.0, real=0:00:00.0, peak res=2237.6M, current mem=2237.6M)
-<CMD> setPlaceMode -fp false
-<CMD> fit
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-*** Begin SPECIAL ROUTE on Sun Nov 24 19:42:38 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "VDD VSS"
-routeSpecial set to true
-srouteBlockPin set to "useLef"
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectConverterPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
-srouteFollowCorePinEnd set to 3
-srouteFollowPadPin set to false
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3764.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 121 macros, 17 used
-Read in 60 components
-  12 core components: 12 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 2 routed
-Read in 469 terminals
-2 nets selected.
-
-Begin power routing ...
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSS net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
-CPU time for VDD FollowPin 0 seconds
-CPU time for VSS FollowPin 0 seconds
-  Number of IO ports routed: 0
-  Number of Block ports routed: 0
-  Number of Stripe ports routed: 0
-  Number of Core ports routed: 754
-  Number of Power Bump ports routed: 0
-  Number of Followpin connections: 377
-End power routing: cpu: 0:00:00, real: 0:00:01, peak: 3766.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
-Pin and blockage extraction finished
-
-sroute created 1131 wires.
-ViaGen created 2262 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met1  |      1131      |       NA       |
-|   via  |       754      |        0       |
-|  via2  |       754      |        0       |
-|  via3  |       754      |        0       |
-+--------+----------------+----------------+
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-*** Begin SPECIAL ROUTE on Sun Nov 24 19:45:47 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH"
-routeSpecial set to true
-srouteBlockPin set to "useLef"
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectConverterPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
-srouteFollowCorePinEnd set to 3
-srouteFollowPadPin set to false
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3766.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 121 macros, 17 used
-Read in 60 components
-  12 core components: 12 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 2 routed
-Read in 469 terminals
-12 nets selected.
-
-Begin power routing ...
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the P_CORE net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the P_CORE net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the P_CORE net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net P_CORE. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VCCD net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VCCD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VCCD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VCCD. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VCCHIB net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VCCHIB net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VCCHIB net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VCCHIB. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDDA net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDDA net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDDA net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDDA. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDDIO net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDDIO net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDDIO net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDDIO. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDDIO_Q net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDDIO_Q net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDDIO_Q net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDDIO_Q. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSWITCH net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSWITCH net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSWITCH net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSWITCH. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the G_CORE net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the G_CORE net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the G_CORE net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net G_CORE. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSA net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSA net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSA net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSA. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSD net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSD. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSIO net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSIO net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSIO net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSIO. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSIO_Q net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSIO_Q net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSIO_Q net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSIO_Q. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net P_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net P_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCHIB.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCHIB.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO_Q.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO_Q.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSWITCH.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSWITCH.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net G_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net G_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (EMS-27):	Message (IMPSR-468) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-CPU time for P_CORE FollowPin 0 seconds
-CPU time for VCCD FollowPin 0 seconds
-CPU time for VCCHIB FollowPin 0 seconds
-CPU time for VDDA FollowPin 0 seconds
-CPU time for VDDIO FollowPin 0 seconds
-CPU time for VDDIO_Q FollowPin 0 seconds
-CPU time for VSWITCH FollowPin 0 seconds
-CPU time for G_CORE FollowPin 0 seconds
-CPU time for VSSA FollowPin 0 seconds
-CPU time for VSSD FollowPin 0 seconds
-CPU time for VSSIO FollowPin 0 seconds
-CPU time for VSSIO_Q FollowPin 0 seconds
-  Number of IO ports routed: 0
-  Number of Block ports routed: 0
-  Number of Stripe ports routed: 0
-  Number of Core ports routed: 0
-  Number of Power Bump ports routed: 0
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3767.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...
-sroute created 0 wire.
-ViaGen created 0 via, deleted 0 via to avoid violation.
-<CMD> zoomBox -584.65900 -299.08700 2478.07500 2442.71400
-<CMD> zoomBox -242.33000 -105.93300 2360.99400 2224.59800
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Sun Nov 24 19:46:25 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH"
-routeSpecial set to true
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectBlockPin set to false
-srouteConnectConverterPin set to false
-srouteConnectCorePin set to false
-srouteConnectPadPin set to false
-srouteConnectStripe set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFollowCorePinEnd set to 3
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3767.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 16 macros, 16 used
-Read in 60 components
-  12 core components: 12 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 2 routed
-Read in 469 terminals
-12 nets selected.
-
-Begin power routing ...
-  Number of Pad ports routed: 0
-  Number of Pad Ring connections: 1066
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3775.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...
-sroute created 1066 wires.
-ViaGen created 0 via, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |       584      |       NA       |
-|  met5  |       482      |       NA       |
-+--------+----------------+----------------+
-<CMD> zoomBox 1886.13200 1928.23000 2172.39600 1766.57500
-<CMD> zoomBox 1895.58500 1740.95200 2102.41200 1926.10600
-<CMD> zoomBox 1902.71300 1757.06400 2052.14600 1890.83800
-<CMD> zoomBox 1905.49700 1763.35600 2032.51500 1877.06400
-<CMD> zoomBox 1915.89400 1775.62200 2007.66400 1857.77600
-<CMD> zoomBox 1921.32500 1780.71500 1999.33000 1850.54600
-<CMD> zoomBox 1925.94100 1785.04400 1992.24600 1844.40100
-<CMD> zoomBox 1929.86500 1788.72300 1986.22500 1839.17700
-<CMD> zoomBox 1933.20100 1791.85100 1981.10700 1834.73700
-<CMD> zoomBox 1940.49500 1798.69100 1969.91500 1825.02800
-<CMD> zoomBox 1937.65400 1796.30600 1972.26600 1827.29100
-<CMD> zoomBox 1934.31200 1793.50100 1975.03200 1829.95400
-<CMD> zoomBox 1930.38000 1790.20100 1978.28600 1833.08700
-<CMD> selectWire 1957.1050 1802.3950 1958.7500 1824.9350 5 VSSA
 <CMD> deselectAll
-<CMD> selectWire 1960.3500 1802.3950 1964.8000 1824.9350 5 VSSD
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+<CMD> zoomBox -666.41300 -533.73800 2632.94900 2419.89500
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> zoomBox -531.32300 -426.17900 2273.13500 2084.41000
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+<CMD> zoomBox -595.34800 -601.60500 2704.01600 2352.03000
+<CMD> zoomBox -531.32500 -426.18000 2273.13500 2084.41000
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> zoomBox -326.16000 -312.44200 2057.63100 1821.56000
+<CMD> zoomBox -151.77000 -215.76400 1874.45200 1598.13700
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__6/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
 <CMD> deselectAll
-<CMD> selectWire 1966.4000 1802.3950 1975.4000 1824.9350 5 VSSA
-<CMD> zoomBox 1925.51200 1787.37900 1981.87300 1837.83400
-<CMD> zoomBox 1919.78600 1784.05900 1986.09300 1843.41800
-<CMD> zoomBox 1913.05000 1780.15400 1991.05800 1849.98800
-<CMD> zoomBox 1900.69100 1775.52400 1992.46500 1857.68100
-<CMD> zoomBox 1869.04500 1763.66800 1996.06700 1877.38000
-<CMD> zoomBox 1825.24400 1747.25800 2001.05300 1904.64500
-<CMD> fit
-<CMD> zoomBox 1902.97100 1682.37900 2152.19000 1618.39100
-<CMD> zoomBox 1921.40100 1568.80400 2101.46200 1729.99700
-<CMD> deselectAll
-<CMD> selectInst grid_io_right_2__1_/logical_tile_io_mode_io__5/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-<CMD> zoomBox 1907.87600 1561.52800 2119.71300 1751.16700
-<CMD> zoomBox 1891.96500 1552.96800 2141.18500 1776.07300
-<CMD> zoomBox 1873.24600 1542.89700 2166.44600 1805.37400
-<CMD> zoomBox 1851.22300 1531.04900 2196.16500 1839.84600
-<CMD> zoomBox 1716.78800 1458.72400 2377.58900 2050.28200
-<CMD> deselectAll
-<CMD> zoomBox 1637.43800 1415.12600 2414.85100 2111.07700
-<CMD> zoomBox 1544.08400 1363.83500 2458.68800 2182.60100
-<CMD> zoomBox 1434.25500 1303.49200 2510.26100 2266.74700
-<CMD> fit
-<CMD> zoomBox 1320.33800 220.74500 1643.64900 96.13600
-<CMD> zoomBox 1323.34900 33.73700 1598.16400 279.75500
-<CMD> zoomBox 1328.08500 65.20800 1526.63900 242.95600
-<CMD> zoomBox 1329.93400 77.49900 1498.70500 228.58500
-<CMD> zoomBox 1332.84200 96.82600 1454.77900 205.98600
-<CMD> zoomBox 1328.44400 92.56700 1471.89900 220.99000
-<CMD> zoomBox 1323.26900 87.55600 1492.04000 238.64200
-<CMD> zoomBox 1317.18100 81.66100 1515.73500 259.40900
-<CMD> zoomBox 1310.01900 74.72500 1543.61200 283.84100
-<CMD> zoomBox 1291.68000 56.96700 1614.99300 346.40100
-<CMD> zoomBox 1280.01700 45.67400 1660.38600 386.18500
-<CMD> zoomBox 1250.15500 16.75600 1776.61800 488.05300
-<CMD> pan -14.30300 -1312.40300
-<CMD> zoomBox 1331.20100 211.54000 1382.28100 -10.48700
-<CMD> zoomBox 1285.35000 40.27200 1437.66400 176.62600
-<CMD> zoomBox 1271.57900 24.58900 1450.77300 185.00600
-<CMD> zoomBox 1236.32000 -15.56700 1484.34000 206.46400
-<CMD> zoomBox 1255.76400 16.77500 1466.58100 205.50100
-<CMD> zoomBox 1286.64200 66.42200 1438.95700 202.77600
-<CMD> zoomBox 1298.70100 85.81100 1428.16900 201.71200
-<CMD> zoomBox 1308.97600 102.26600 1419.02400 200.78200
-<CMD> zoomBox 1317.26200 108.54400 1410.80300 192.28300
-<CMD> selectInst pad_pwr3
-<CMD> zoomBox 1282.51200 90.14300 1434.83000 226.50000
-<CMD> fit
-<CMD> zoomBox 1815.40800 2170.71300 2020.84500 1857.50600
-<CMD> zoomBox 1768.78700 1868.50300 2066.17600 2134.73000
-<CMD> zoomBox 1687.08000 1810.00300 2171.33000 2243.51000
-<CMD> zoomBox 1721.28400 1824.94400 2132.89700 2193.42500
-<CMD> zoomBox 1750.35800 1837.64400 2100.22900 2150.85300
-<CMD> zoomBox 1813.93200 1865.41300 2028.79600 2057.76200
-<CMD> zoomBox 1829.10800 1872.04200 2011.74300 2035.53900
-<CMD> zoomBox 1843.49700 1876.01100 1998.73700 2014.98400
-<CMD> zoomBox 1855.72700 1879.38500 1987.68100 1997.51200
-<CMD> zoomBox 1846.99100 1873.39000 2002.23100 2012.36300
-<CMD> zoomBox 1836.71300 1866.33700 2019.34900 2029.83500
-<CMD> zoomBox 1824.62200 1858.04000 2039.48700 2050.39000
-<CMD> zoomBox 1810.39700 1848.27900 2063.17900 2074.57300
-<CMD> zoomBox 1723.55700 1788.68900 2207.81000 2222.19900
-<CMD> zoomBox 1609.40400 1710.35700 2397.93000 2416.25600
-<CMD> zoomBox 1714.14100 1764.42400 2283.85100 2274.43600
-<CMD> deselectAll
-<CMD> selectInst Corner_TR
-<CMD> deselectAll
-<CMD> selectInst Corner_TR
-<CMD> deselectAll
-<CMD> selectInst Corner_TR
-<CMD> deselectAll
-<CMD> zoomBox 1777.74700 1772.19600 2189.36200 2140.67900
-<CMD> zoomBox 1802.58700 1775.23100 2152.46000 2088.44200
-<CMD> zoomBox 1823.70200 1777.81100 2121.09400 2044.04000
-<CMD> zoomBox 1873.28600 1783.89800 2055.92200 1947.39600
-<CMD> zoomBox 1886.43400 1786.02400 2041.67500 1924.99800
-<CMD> zoomBox 1897.61000 1787.83100 2029.56500 1905.95900
-<CMD> zoomBox 1904.85700 1793.94100 2000.19500 1879.28900
-<CMD> zoomBox 1907.68700 1796.32700 1988.72500 1868.87300
-<CMD> zoomBox 1910.09200 1798.35500 1978.97500 1860.02000
-<CMD> zoomBox 1904.85500 1796.27900 1985.89400 1868.82600
-<CMD> zoomBox 1891.48700 1790.96300 2003.65200 1891.37500
-<CMD> zoomBox 1872.98300 1783.60600 2028.23000 1922.58500
-<CMD> zoomBox 1861.21600 1778.92700 2043.86000 1942.43200
-<CMD> zoomBox 1811.92700 1759.32900 2109.33200 2025.57000
-<CMD> zoomBox 1753.11300 1739.52800 2164.74700 2108.02800
-<CMD> zoomBox 1796.64600 1750.15200 2146.53500 2063.37700
-<CMD> zoomBox 1827.87800 1758.84200 2125.28400 2025.08400
-<CMD> zoomBox 1868.98300 1773.36200 2083.85900 1965.72200
-<CMD> zoomBox 1883.70200 1778.32400 2066.34700 1941.83000
-<CMD> zoomBox 1896.21300 1782.54200 2051.46100 1921.52200
-<CMD> zoomBox 1906.84700 1786.12700 2038.80800 1904.26000
-<CMD> zoomBox 1930.23200 1794.09700 2011.27300 1866.64600
-<CMD> zoomBox 1935.81500 1796.00000 2004.70000 1857.66700
-<CMD> zoomBox 1940.56000 1797.61700 1999.11300 1850.03400
-<CMD> zoomBox 1944.59300 1798.99100 1994.36400 1843.54700
-<CMD> zoomBox 1948.02200 1800.16000 1990.32700 1838.03200
-<CMD> zoomBox 1950.93600 1801.15300 1986.89600 1833.34500
-<CMD> zoomBox 1953.41200 1801.99700 1983.97900 1829.36100
-<CMD> zoomBox 1955.51800 1802.71500 1981.50000 1825.97400
-<CMD> zoomBox 1957.30800 1803.32400 1979.39300 1823.09500
-<CMD> zoomBox 1958.82900 1803.84200 1977.60200 1820.64800
-<CMD> zoomBox 1960.12200 1804.28300 1976.07900 1818.56800
-<CMD> zoomBox 1961.22100 1804.65700 1974.78500 1816.80000
-<CMD> zoomBox 1962.15500 1804.97500 1973.68500 1815.29700
-<CMD> zoomBox 1962.94900 1805.24500 1972.75000 1814.01900
-<CMD> zoomBox 1962.15400 1804.97400 1973.68500 1815.29700
-<CMD> zoomBox 1958.82400 1803.83800 1977.60300 1820.64900
-<CMD> zoomBox 1955.51100 1802.70900 1981.50300 1825.97700
-<CMD> zoomBox 1953.40400 1801.99000 1983.98300 1829.36500
-<CMD> zoomBox 1950.92500 1801.14500 1986.90100 1833.35100
-<CMD> zoomBox 1948.00900 1800.15100 1990.33400 1838.04100
-<CMD> zoomBox 1935.79500 1795.98700 2004.71500 1857.68500
-<CMD> zoomBox 1923.63800 1791.84300 2019.03000 1877.23900
-<CMD> zoomBox 1896.11200 1782.46100 2051.44100 1921.51400
-<CMD> zoomBox 1883.52200 1778.17000 2066.26300 1941.76200
-<CMD> zoomBox 1868.71200 1773.12200 2083.70100 1965.58300
-<CMD> zoomBox 1851.28800 1767.18300 2104.21700 1993.60800
-<CMD> pan 13.74300 -217.27700
-<CMD> zoomBox 1849.09400 1615.01300 2146.65800 1881.39600
-<CMD> pan 3.07900 -153.62700
-<CMD> zoomBox 1834.17100 1683.37500 2184.24600 1996.76700
-<CMD> fit
-<CMD> zoomBox 1327.07400 220.74500 1394.43000 -38.57700
-<CMD> zoomBox 1238.06100 -3.05200 1484.28600 217.37200
-<CMD> zoomBox 1256.83800 26.04500 1466.13000 213.40600
-<CMD> zoomBox 1272.79900 50.77800 1450.69700 210.03500
-<CMD> zoomBox 1286.36500 70.55800 1437.57900 205.92700
-<CMD> zoomBox 1297.98500 84.96500 1426.51700 200.02900
-<CMD> zoomBox 1316.25500 107.62000 1409.12100 190.75500
-<CMD> zoomBox 1299.41200 91.70100 1427.94700 206.76700
-<CMD> zoomBox 1261.27600 55.65400 1470.57500 243.02100
-<CMD> zoomBox 1199.17900 -3.04200 1539.98800 302.05500
-<CMD> zoomBox 1098.06300 -98.61600 1653.01500 398.18400
-<CMD> zoomBox 933.41400 -254.24400 1837.06100 554.71300
-<CMD> zoomBox 858.11600 -325.41600 1921.23000 626.29800
-<CMD> zoomBox 398.45100 -759.89400 2435.04500 1063.29200
-<CMD> zoomBox 132.50500 -933.31700 2528.49800 1211.60800
-<CMD> zoomBox -184.20100 -1128.04500 2634.61400 1395.39600
-<CMD> fit
-<CMD> zoomBox 287.57100 -39.57900 2168.47300 1644.23000
-<CMD> zoomBox 947.03700 42.99900 1928.88000 921.95800
-<CMD> zoomBox 1054.49300 63.76600 1889.06000 810.88200
-<CMD> zoomBox 1145.83000 81.41800 1855.21300 716.46700
-<CMD> zoomBox 1223.46700 96.42200 1826.44300 636.21400
 <CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-<CMD> zoomBox 1372.76200 114.78200 1743.06600 446.28300
-<CMD> zoomBox 1408.40300 119.16500 1723.16200 400.94100
-<CMD> zoomBox 1464.44900 126.05700 1691.86200 329.64000
-<CMD> zoomBox 1501.92100 138.38400 1666.22700 285.47300
-<CMD> zoomBox 1516.55500 143.19800 1656.21600 268.22400
-<CMD> zoomBox 1528.99400 147.28900 1647.70600 253.56200
-<CMD> zoomBox 1516.55400 143.19700 1656.21600 268.22400
-<CMD> zoomBox 1501.91900 138.38200 1666.22800 285.47400
-<CMD> zoomBox 1484.70100 132.71800 1678.00600 305.76700
-<CMD> zoomBox 1464.44500 126.05300 1691.86300 329.64100
-<CMD> zoomBox 1440.61400 118.21300 1708.16600 357.72900
-<CMD> zoomBox 1340.79000 85.37200 1776.45500 475.38500
-<CMD> zoomBox 1295.13800 70.35300 1807.68500 529.19200
-<CMD> zoomBox 1103.90600 7.44200 1938.50500 754.58600
-<CMD> zoomBox 792.51700 -94.99800 2151.52300 1121.60200
-<CMD> zoomBox 650.11100 -141.84700 2248.94200 1289.44800
-<CMD> zoomBox 482.57500 -196.96300 2363.55300 1486.91400
-<CMD> fit
-**WARN: (IMPTCM-77):	Option "-allowSwapping" for command getScanReorderMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
-<CMD> setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
-<CMD> setEndCapMode -reset
-<CMD> setEndCapMode -boundary_tap false
-<CMD> setNanoRouteMode -quiet -drouteAutoStop 0
-<CMD> setNanoRouteMode -quiet -drouteFixAntenna 0
-<CMD> setNanoRouteMode -quiet -droutePostRouteSwapVia {}
-<CMD> setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
-<CMD> setNanoRouteMode -quiet -drouteUseMultiCutViaEffort {}
-<CMD> setNanoRouteMode -quiet -drouteOnGridOnly 0
-#WARNING (NRIF-67) In option 'OnGridOnly 0', 0 is an unknown type. It will be ignored.
-#WARNING (NRIF-68) Option 'OnGridOnly 0' did not specify a correct type. It will be ignored.
-<CMD> setNanoRouteMode -quiet -routeIgnoreAntennaTopCellPin 0
-<CMD> setNanoRouteMode -quiet -timingEngine {}
-<CMD> setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
-<CMD> setPlaceMode -reset
-<CMD> setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 5 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
-**WARN: (IMPSP-105):	'setPlaceMode -maxRouteLayer' will become obsolete from next release. Use 'setRouteMode -earlyGlobalMaxRouteLayer N' to set maximum routing layer.Type 'man IMPSP-105' for more detail.
-**WARN: (IMPTCM-77):	Option "-allowSwapping" for command getScanReorderMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
-<CMD> setPlaceMode -fp false
-<CMD> place_design
-**WARN: (IMPSP-9525):	setPlaceMode -maxRouteLayer will overwrite setTrialRouteMode -maxRouteLayer inside placeDesign.
-**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
-*** placeDesign #1 [begin] : totSession cpu/real = 0:11:12.8/3:03:53.5 (0.1), mem = 2273.5M
-Extracting standard cell pins and blockage ...... 
-Pin and blockage extraction finished
-*** Starting placeDesign default flow ***
-*** Start deleteBufferTree ***
-**WARN: (TA-146):	A combinational timing loop(s) was found in the design. You can find detailed information about all timing loops in the file './CTE_loops.rpt'. You should examine loop break points chosen automatically by the tool to ensure they are the most appropriate break locations. It is further recommended that validated loop break points be added to the constraint set via set_disable_timing to ensure consistent handling during the design flow.
-Info: Detect buffers to remove automatically.
-Analyzing netlist ...
-Updating netlist
-
-*summary: 3206 instances (buffers/inverters) removed
-*** Finish deleteBufferTree (0:00:00.6) ***
-**INFO: Enable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-Set Default Input Pin Transition as 1 ps.
-**INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.232628 path_group
-AAE_INFO: opIsDesignInPostRouteState() is 0
-AAE DB initialization (MEM=2323.03 CPU=0:00:00.0 REAL=0:00:00.0) 
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: fpga_top
-# Design Mode: 130nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB 
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (1 T). (MEM=2323.03)
-Total number of fetched objects 10448
-End delay calculation. (MEM=2474.56 CPU=0:00:01.0 REAL=0:00:01.0)
-End delay calculation (fullDC). (MEM=2474.56 CPU=0:00:01.2 REAL=0:00:02.0)
-**INFO: Disable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 1000.
-Set Default Net Delay as 1000 ps.
-Set Default Input Pin Transition as 0.1 ps.
-Set Default Net Load as 0.5 pF. 
-**INFO: Pre-place timing setting for timing analysis already disabled
-Deleted 0 physical inst  (cell - / prefix -).
-INFO: #ExclusiveGroups=0
-INFO: There are no Exclusive Groups.
-*** Starting "NanoPlace(TM) placement v#7 (mem=2457.0M)" ...
-Estimated loop count for BSM: 7077
-*** Build Buffered Sizing Timing Model
-(cpu=0:00:00.2 mem=2465.0M) ***
-*** Build Virtual Sizing Timing Model
-(cpu=0:00:00.3 mem=2465.0M) ***
-No user-set net weight.
-Net fanout histogram:
-2		: 6733 (79.7%) nets
-3		: 1112 (13.2%) nets
-4     -	14	: 398 (4.7%) nets
-15    -	39	: 143 (1.7%) nets
-40    -	79	: 60 (0.7%) nets
-80    -	159	: 0 (0.0%) nets
-160   -	319	: 0 (0.0%) nets
-320   -	639	: 0 (0.0%) nets
-640   -	1279	: 0 (0.0%) nets
-1280  -	2559	: 2 (0.0%) nets
-2560  -	5119	: 0 (0.0%) nets
-5120+		: 0 (0.0%) nets
-Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
-**WARN: (IMPSP-9042):	Scan chains were not defined, -place_global_ignore_scan option will be ignored.
-Define the scan chains before using this option.
-Type 'man IMPSP-9042' for more detail.
-#std cell=8346 (0 fixed + 8346 movable) #buf cell=43 #inv cell=2093 #block=0 (0 floating + 0 preplaced)
-#ioInst=48 #net=8448 #term=29143 #term/net=3.45, #fixedIo=49, #floatIo=0, #fixedPin=32, #floatPin=7
-stdCell: 8346 single + 0 double + 0 multi
-Total standard cell length = 33.7838 (mm), area = 0.1399 (mm^2)
-**WARN: (IMPSP-362):	Site 'CoreSite' has one std.Cell height, so ignoring its X-symmetry.
-Type 'man IMPSP-362' for more detail.
-Estimated cell power/ground rail width = 0.517 um
-Average module density = 0.058.
-Density for the design = 0.058.
-       = stdcell_area 73443 sites (139865 um^2) / alloc_area 1273888 sites (2425992 um^2).
-Pin Density = 0.02288.
-            = total # of pins 29143 / total area 1273888.
-=== lastAutoLevel = 10 
-Clock gating cells determined by native netlist tracing.
-Iteration  1: Total net bbox = 2.103e+05 (1.10e+05 1.00e+05)
-              Est.  stn bbox = 2.247e+05 (1.17e+05 1.07e+05)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2648.8M
-Iteration  2: Total net bbox = 2.103e+05 (1.10e+05 1.00e+05)
-              Est.  stn bbox = 2.247e+05 (1.17e+05 1.07e+05)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2649.8M
-Iteration  3: Total net bbox = 1.807e+05 (9.71e+04 8.36e+04)
-              Est.  stn bbox = 2.273e+05 (1.21e+05 1.06e+05)
-              cpu = 0:00:00.6 real = 0:00:01.0 mem = 2683.4M
-Active setup views:
-    VIEW_SETUP
-Iteration  4: Total net bbox = 1.650e+05 (8.99e+04 7.51e+04)
-              Est.  stn bbox = 2.053e+05 (1.12e+05 9.37e+04)
-              cpu = 0:00:00.5 real = 0:00:00.0 mem = 2683.4M
-Iteration  5: Total net bbox = 2.180e+05 (9.24e+04 1.26e+05)
-              Est.  stn bbox = 2.732e+05 (1.16e+05 1.57e+05)
-              cpu = 0:00:00.7 real = 0:00:01.0 mem = 2683.4M
-Iteration  6: Total net bbox = 2.209e+05 (1.09e+05 1.11e+05)
-              Est.  stn bbox = 3.007e+05 (1.47e+05 1.54e+05)
-              cpu = 0:00:01.2 real = 0:00:01.0 mem = 2702.7M
-Iteration  7: Total net bbox = 2.441e+05 (1.23e+05 1.21e+05)
-              Est.  stn bbox = 3.339e+05 (1.65e+05 1.69e+05)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2702.7M
-Iteration  8: Total net bbox = 2.487e+05 (1.25e+05 1.23e+05)
-              Est.  stn bbox = 3.391e+05 (1.67e+05 1.72e+05)
-              cpu = 0:00:06.7 real = 0:00:07.0 mem = 2702.7M
-[NR-eGR] Started Early Global Route kernel ( Curr Mem: 2.59 MB )
-Iteration  9: Total net bbox = 2.525e+05 (1.32e+05 1.20e+05)
-              Est.  stn bbox = 3.501e+05 (1.79e+05 1.71e+05)
-              cpu = 0:00:01.9 real = 0:00:02.0 mem = 2705.8M
-Iteration 10: Total net bbox = 2.556e+05 (1.34e+05 1.22e+05)
-              Est.  stn bbox = 3.534e+05 (1.81e+05 1.73e+05)
-              cpu = 0:00:06.9 real = 0:00:07.0 mem = 2705.8M
-Iteration 11: Total net bbox = 2.696e+05 (1.43e+05 1.26e+05)
-              Est.  stn bbox = 3.712e+05 (1.94e+05 1.77e+05)
-              cpu = 0:00:01.5 real = 0:00:01.0 mem = 2705.1M
-Iteration 12: Total net bbox = 2.756e+05 (1.46e+05 1.29e+05)
-              Est.  stn bbox = 3.779e+05 (1.98e+05 1.80e+05)
-              cpu = 0:00:07.4 real = 0:00:08.0 mem = 2705.1M
-MH packer: No MH instances from GP
-Iteration 13: Total net bbox = 2.759e+05 (1.48e+05 1.28e+05)
-              Est.  stn bbox = 3.774e+05 (2.00e+05 1.77e+05)
-              cpu = 0:00:02.2 real = 0:00:02.0 mem = 2714.4M
-Iteration 14: Total net bbox = 2.759e+05 (1.48e+05 1.28e+05)
-              Est.  stn bbox = 3.774e+05 (2.00e+05 1.77e+05)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2714.4M
-MH packer: No MH instances from GP
-Iteration 15: Total net bbox = 2.982e+05 (1.59e+05 1.39e+05)
-              Est.  stn bbox = 3.978e+05 (2.10e+05 1.88e+05)
-              cpu = 0:00:04.2 real = 0:00:04.0 mem = 2738.9M
-Iteration 16: Total net bbox = 2.982e+05 (1.59e+05 1.39e+05)
-              Est.  stn bbox = 3.978e+05 (2.10e+05 1.88e+05)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2738.9M
-*** cost = 2.982e+05 (1.59e+05 1.39e+05) (cpu for global=0:00:35.0) real=0:00:36.0***
-Info: 0 clock gating cells identified, 0 (on average) moved 0/8
-Solver runtime cpu: 0:00:11.0 real: 0:00:11.5
-Core Placement runtime cpu: 0:00:12.4 real: 0:00:13.0
-Begin: Reorder Scan Chains
-**WARN: (IMPSP-9025):	No scan chain specified/traced.
-Type 'man IMPSP-9025' for more detail.
-End: Reorder Scan Chains
-*** Starting refinePlace (0:11:56 mem=2738.9M) ***
-Total net bbox length = 2.982e+05 (1.587e+05 1.395e+05) (ext = 7.139e+04)
-Move report: Detail placement moves 8346 insts, mean move: 2.87 um, max move: 48.05 um 
-	Max move on inst (grid_clb_1__1_/logical_tile_clb_mode_clb__0/mem_fle_9_in_0/DFFRX1_0_): (927.53, 1282.86) --> (962.18, 1269.46)
-	Runtime: CPU: 0:00:01.0 REAL: 0:00:01.0 MEM: 2783.9MB
-Summary Report:
-Instances move: 8346 (out of 8346 movable)
-Instances flipped: 0
-Mean displacement: 2.87 um
-Max displacement: 48.05 um (Instance: grid_clb_1__1_/logical_tile_clb_mode_clb__0/mem_fle_9_in_0/DFFRX1_0_) (927.53, 1282.86) -> (962.18, 1269.46)
-	Length: 20 sites, height: 1 rows, site name: CoreSite, cell type: DFFRX1
-Total net bbox length = 2.875e+05 (1.495e+05 1.381e+05) (ext = 7.150e+04)
-Runtime: CPU: 0:00:01.0 REAL: 0:00:01.0 MEM: 2783.9MB
-*** Finished refinePlace (0:11:57 mem=2783.9M) ***
-*** End of Placement (cpu=0:00:38.2, real=0:00:39.0, mem=2772.9M) ***
-default core: bins with density > 0.750 =  0.00 % ( 0 / 1444 )
-Density distribution unevenness ratio = 86.935%
-*** Free Virtual Timing Model ...(mem=2772.9M)
-**INFO: Enable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-**INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.232628 path_group
-AAE_INFO: opIsDesignInPostRouteState() is 0
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: fpga_top
-# Design Mode: 130nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB 
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (1 T). (MEM=2761.36)
-Total number of fetched objects 10517
-End delay calculation. (MEM=2830.57 CPU=0:00:00.9 REAL=0:00:01.0)
-End delay calculation (fullDC). (MEM=2830.57 CPU=0:00:01.0 REAL=0:00:01.0)
-**INFO: Disable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 1000.
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-Info: Disable timing driven in postCTS congRepair.
-
-Starting congRepair ...
-[NR-eGR] Track table information for default rule: 
-[NR-eGR] met1 has single uniform track structure
-[NR-eGR] met2 has single uniform track structure
-[NR-eGR] met3 has single uniform track structure
-[NR-eGR] met4 has single uniform track structure
-[NR-eGR] met5 has single uniform track structure
-[NR-eGR] Read 4980 PG shapes
-[NR-eGR] Read 0 clock shapes
-[NR-eGR] Read 0 other shapes
-[NR-eGR] #Routing Blockages  : 0
-[NR-eGR] #Instance Blockages : 9014
-[NR-eGR] #PG Blockages       : 4980
-[NR-eGR] #Halo Blockages     : 0
-[NR-eGR] #Boundary Blockages : 0
-[NR-eGR] #Clock Blockages    : 0
-[NR-eGR] #Other Blockages    : 0
-[NR-eGR] Early global route reroute all routable nets
-[NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
-[NR-eGR] Read 8447 nets ( ignored 0 )
-[NR-eGR] There are 2 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id: 0  Nets: 8415
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 8415 net(s) in layer range [2, 5]
-[NR-eGR] Early Global Route overflow of layer group 1: 0.73% H + 0.00% V. EstWL: 3.817867e+05um
-[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
-[NR-eGR]                        OverCon           OverCon           OverCon           OverCon            
-[NR-eGR]                         #Gcell            #Gcell            #Gcell            #Gcell     %Gcell
-[NR-eGR]        Layer             (1-4)             (5-8)            (9-12)              (13)    OverCon
-[NR-eGR] -------------------------------------------------------------------------------------------------
-[NR-eGR]    met1 ( 1)         0( 0.00%)         0( 0.00%)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
-[NR-eGR]    met2 ( 2)         1( 0.00%)         0( 0.00%)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
-[NR-eGR]    met3 ( 3)      3339( 1.72%)       488( 0.25%)        19( 0.01%)         1( 0.00%)   ( 1.98%) 
-[NR-eGR]    met4 ( 4)       239( 0.14%)         2( 0.00%)         0( 0.00%)         0( 0.00%)   ( 0.14%) 
-[NR-eGR]    met5 ( 5)       201( 0.12%)         0( 0.00%)         0( 0.00%)         0( 0.00%)   ( 0.12%) 
-[NR-eGR] -------------------------------------------------------------------------------------------------
-[NR-eGR]        Total      3780( 0.51%)       490( 0.07%)        19( 0.00%)         1( 0.00%)   ( 0.58%) 
-[NR-eGR] 
-[NR-eGR] Overflow after Early Global Route 1.50% H + 0.00% V
-[NR-eGR] Finished Early Global Route kernel ( CPU: 0.28 sec, Real: 0.28 sec, Curr Mem: 2.59 MB )
-Early Global Route congestion estimation runtime: 0.28 seconds, mem = 2760.3M
-Local HotSpot Analysis: normalized max congestion hotspot area = 371.99, normalized total congestion hotspot area = 413.57 (area is in unit of 4 std-cell row bins)
-
-=== incrementalPlace Internal Loop 1 ===
-Iteration  8: Total net bbox = 2.668e+05 (1.42e+05 1.25e+05)
-              Est.  stn bbox = 3.719e+05 (1.97e+05 1.75e+05)
-              cpu = 0:00:00.9 real = 0:00:01.0 mem = 2808.9M
-Iteration  9: Total net bbox = 2.712e+05 (1.45e+05 1.26e+05)
-              Est.  stn bbox = 3.773e+05 (2.01e+05 1.77e+05)
-              cpu = 0:00:01.1 real = 0:00:01.0 mem = 2808.9M
-MH packer: No MH instances from GP
-MH packer: No MH instances from GP
-[NR-eGR] Started Early Global Route kernel ( Curr Mem: 2.67 MB )
-Iteration 10: Total net bbox = 2.879e+05 (1.53e+05 1.35e+05)
-              Est.  stn bbox = 3.941e+05 (2.08e+05 1.86e+05)
-              cpu = 0:00:09.0 real = 0:00:09.0 mem = 2815.9M
-Iteration 11: Total net bbox = 2.998e+05 (1.58e+05 1.42e+05)
-              Est.  stn bbox = 4.058e+05 (2.13e+05 1.93e+05)
-              cpu = 0:00:13.0 real = 0:00:14.0 mem = 2946.2M
-Iteration 12: Total net bbox = 2.990e+05 (1.57e+05 1.42e+05)
-              Est.  stn bbox = 4.048e+05 (2.12e+05 1.93e+05)
-              cpu = 0:00:01.0 real = 0:00:01.0 mem = 2946.2M
-MH packer: No MH instances from GP
-Move report: Congestion Driven Placement moves 8346 insts, mean move: 53.95 um, max move: 188.03 um 
-	Max move on inst (cby_0__1_/mux_right_ipin_5/INVX4_0_): (593.26, 1281.88) --> (504.57, 1381.23)
-
-Finished Incremental Placement (cpu=0:00:26.4, real=0:00:27.0, mem=2930.2M)
-*** Starting refinePlace (0:12:27 mem=2930.2M) ***
-Total net bbox length = 3.196e+05 (1.678e+05 1.518e+05) (ext = 6.993e+04)
-Move report: Detail placement moves 8346 insts, mean move: 1.20 um, max move: 26.65 um 
-	Max move on inst (grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_3/INVX1_3_): (972.38, 1015.03) --> (997.14, 1016.92)
-	Runtime: CPU: 0:00:00.5 REAL: 0:00:00.0 MEM: 2725.2MB
-Summary Report:
-Instances move: 8346 (out of 8346 movable)
-Instances flipped: 0
-Mean displacement: 1.20 um
-Max displacement: 26.65 um (Instance: grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_3/INVX1_3_) (972.381, 1015.03) -> (997.14, 1016.92)
-	Length: 3 sites, height: 1 rows, site name: CoreSite, cell type: INVX1
-Total net bbox length = 3.109e+05 (1.594e+05 1.514e+05) (ext = 6.998e+04)
-Runtime: CPU: 0:00:00.5 REAL: 0:00:00.0 MEM: 2725.2MB
-*** Finished refinePlace (0:12:27 mem=2725.2M) ***
-[NR-eGR] Track table information for default rule: 
-[NR-eGR] met1 has single uniform track structure
-[NR-eGR] met2 has single uniform track structure
-[NR-eGR] met3 has single uniform track structure
-[NR-eGR] met4 has single uniform track structure
-[NR-eGR] met5 has single uniform track structure
-[NR-eGR] Read 4980 PG shapes
-[NR-eGR] Read 0 clock shapes
-[NR-eGR] Read 0 other shapes
-[NR-eGR] #Routing Blockages  : 0
-[NR-eGR] #Instance Blockages : 9014
-[NR-eGR] #PG Blockages       : 4980
-[NR-eGR] #Halo Blockages     : 0
-[NR-eGR] #Boundary Blockages : 0
-[NR-eGR] #Clock Blockages    : 0
-[NR-eGR] #Other Blockages    : 0
-[NR-eGR] Early global route reroute all routable nets
-[NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
-[NR-eGR] Read 8447 nets ( ignored 0 )
-[NR-eGR] There are 2 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id: 0  Nets: 8415
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 8415 net(s) in layer range [2, 5]
-[NR-eGR] Early Global Route overflow of layer group 1: 0.32% H + 0.00% V. EstWL: 4.216010e+05um
-[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
-[NR-eGR]                        OverCon           OverCon           OverCon            
-[NR-eGR]                         #Gcell            #Gcell            #Gcell     %Gcell
-[NR-eGR]        Layer             (1-4)             (5-8)            (9-11)    OverCon
-[NR-eGR] --------------------------------------------------------------------------------
-[NR-eGR]    met1 ( 1)         0( 0.00%)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
-[NR-eGR]    met2 ( 2)         0( 0.00%)         0( 0.00%)         0( 0.00%)   ( 0.00%) 
-[NR-eGR]    met3 ( 3)      2768( 1.42%)       237( 0.12%)         1( 0.00%)   ( 1.55%) 
-[NR-eGR]    met4 ( 4)       191( 0.11%)         4( 0.00%)         0( 0.00%)   ( 0.11%) 
-[NR-eGR]    met5 ( 5)        39( 0.02%)         0( 0.00%)         0( 0.00%)   ( 0.02%) 
-[NR-eGR] --------------------------------------------------------------------------------
-[NR-eGR]        Total      2998( 0.41%)       241( 0.03%)         1( 0.00%)   ( 0.44%) 
-[NR-eGR] 
-[NR-eGR] Overflow after Early Global Route 1.05% H + 0.00% V
-[NR-eGR] Finished Early Global Route kernel ( CPU: 0.27 sec, Real: 0.27 sec, Curr Mem: 2.60 MB )
-Early Global Route congestion estimation runtime: 0.27 seconds, mem = 2717.3M
-Local HotSpot Analysis: normalized max congestion hotspot area = 1.99, normalized total congestion hotspot area = 16.04 (area is in unit of 4 std-cell row bins)
-[NR-eGR] Connected 0 must-join pins/ports (post-process)
-[NR-eGR] Total eGR-routed clock nets wire length: 19106um, number of vias: 4983
-[NR-eGR] --------------------------------------------------------------------------
-[NR-eGR]               Length (um)   Vias 
-[NR-eGR] ---------------------------------
-[NR-eGR]  met1  (1H)             0  28879 
-[NR-eGR]  met2  (2V)        185672  40417 
-[NR-eGR]  met3  (3H)        189553   7756 
-[NR-eGR]  met4  (4V)         40126   6084 
-[NR-eGR]  met5  (5H)         19866      0 
-[NR-eGR] ---------------------------------
-[NR-eGR]        Total       435217  83136 
-[NR-eGR] --------------------------------------------------------------------------
-[NR-eGR] Total half perimeter of net bounding box: 310859um
-[NR-eGR] Total length: 435217um, number of vias: 83136
-[NR-eGR] --------------------------------------------------------------------------
-Early Global Route wiring runtime: 0.13 seconds, mem = 2739.5M
-Tdgp not enabled or already been cleared! skip clearing
-End of congRepair (cpu=0:00:27.6, real=0:00:28.0)
-*** Finishing placeDesign default flow ***
-**placeDesign ... cpu = 0: 1:15, real = 0: 1:17, mem = 2722.5M **
-Tdgp not enabled or already been cleared! skip clearing
-**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
-**WARN: (IMPSP-9526):	Restoring setTrialRouteMode -maxRouteLayer after placeDesign. Use 'setTrialRouteMode -maxRoutingLayer N' to set maximum routing layer.
-
-*** Summary of all messages that are not suppressed in this session:
-Severity  ID               Count  Summary                                  
-WARNING   IMPDC-1629           2  The default delay limit was set to %d. T...
-WARNING   IMPSP-9525           1  setPlaceMode -maxRouteLayer will overwri...
-WARNING   IMPSP-9526           1  Restoring setTrialRouteMode -maxRouteLay...
-WARNING   IMPSP-9025           1  No scan chain specified/traced.          
-WARNING   IMPSP-9042           1  Scan chains were not defined, -place_glo...
-WARNING   IMPSP-362            1  Site '%s' has %s std.Cell height, so ign...
-WARNING   NRDB-741            10  Found shorts between two different ports...
-WARNING   IMPPSP-1003          2  Found use of '%s'. This will continue to...
-WARNING   TA-112              20  A timing loop was found in the design. T...
-WARNING   TA-146               1  A combinational timing loop(s) was found...
-*** Message Summary: 40 warning(s), 0 error(s)
-
-*** placeDesign #1 [finish] : cpu/real = 0:01:14.8/0:01:16.6 (1.0), totSession cpu/real = 0:12:27.6/3:05:10.1 (0.1), mem = 2722.5M
-<CMD> zoomBox -116.03700 -78.14900 2096.78900 1902.80300
-<CMD> zoomBox -8.68800 -54.53200 1872.21400 1629.27700
-<CMD> zoomBox 82.55900 -34.45800 1681.32600 1396.78000
-<CMD> zoomBox 160.11900 -17.39500 1519.07100 1199.15700
-<CMD> zoomBox 226.04500 -2.89100 1381.15400 1031.17800
-<CMD> zoomBox 160.11900 -17.39500 1519.07100 1199.15700
-<CMD> zoomBox 82.55900 -34.45800 1681.32600 1396.78000
-<CMD> zoomBox -8.68800 -54.53200 1872.21400 1629.27700
-<CMD> zoomBox -116.03700 -78.14900 2096.78900 1902.80300
-<CMD> zoomBox -242.33100 -105.93400 2360.99400 2224.59800
-<CMD> zoomBox -86.38500 257.94000 1512.38400 1689.18000
-<CMD> zoomBox 9.38400 481.40500 991.22900 1360.36600
-<CMD> zoomBox 32.24600 534.75200 866.81500 1281.86900
-<CMD> zoomBox 51.67900 580.09700 761.06300 1215.14700
-<CMD> zoomBox 100.54700 722.09700 536.19800 1112.09800
-<CMD> zoomBox 122.12900 784.81200 436.88800 1066.58800
-<CMD> zoomBox 130.55800 809.30400 398.10300 1048.81400
-<CMD> zoomBox 138.08500 829.18800 365.49900 1032.77200
-<CMD> zoomBox 144.48400 846.08900 337.78600 1019.13600
-<CMD> zoomBox 151.08500 858.61700 315.39200 1005.70700
-<CMD> zoomBox 156.69500 869.26600 296.35700 994.29300
-<CMD> zoomBox 166.52200 883.30400 267.42800 973.63600
-<CMD> zoomBox 170.35900 888.78600 256.13000 965.56900
-<CMD> zoomBox 173.62100 893.44600 246.52700 958.71200
-<CMD> zoomBox 176.39400 897.40700 238.36400 952.88300
-<CMD> zoomBox 178.75000 900.77400 231.42500 947.92900
-<CMD> zoomBox 180.75300 903.63600 225.52700 943.71800
-<CMD> zoomBox 178.75000 900.77400 231.42500 947.92900
-<CMD> zoomBox 176.39300 897.40600 238.36400 952.88300
-<CMD> zoomBox 166.52000 883.30100 267.43000 973.63700
-<CMD> zoomBox 156.69300 869.26200 296.36000 994.29400
-<CMD> zoomBox 134.44100 837.47400 361.86600 1041.06800
-<CMD> zoomBox 81.63800 762.04100 517.31300 1152.06300
-<CMD> zoomBox 39.20800 701.42700 642.21900 1241.25100
-<CMD> zoomBox 12.22600 662.88100 721.65100 1297.96800
-<CMD> pan 34.87500 880.09400
-<CMD> fit
-<CMD> zoomBox -55.41700 224.95500 2157.40900 2205.90700
-<CMD> zoomBox 103.46000 506.21000 1984.36200 2190.01900
-<CMD> zoomBox 238.50500 745.27700 1837.27200 2176.51500
-<CMD> zoomBox 450.86400 1121.20900 1605.97400 2155.27900
-<CMD> zoomBox 602.85800 1379.35900 1437.42600 2126.47600
-<CMD> zoomBox 662.12900 1480.09000 1371.51300 2115.14000
-<CMD> zoomBox 706.86600 1556.62600 1309.84300 2096.41900
-<CMD> zoomBox 800.77700 1719.16500 1171.08200 2050.66700
-<CMD> zoomBox 827.36400 1747.54900 1142.12300 2029.32500
-<CMD> zoomBox 849.96300 1771.67500 1117.50800 2011.18500
-<CMD> zoomBox 869.17200 1792.18200 1096.58600 1995.76600
-<CMD> zoomBox 800.77700 1719.16400 1171.08300 2050.66700
-<CMD> zoomBox 732.69700 1646.48500 1245.23300 2105.31400
-<CMD> zoomBox 508.05400 1406.66300 1489.91200 2285.63500
-<CMD> zoomBox 327.54600 1213.95800 1686.51900 2430.52900
-<CMD> zoomBox -81.17200 777.62500 2131.68900 2758.60800
-<CMD> zoomBox 43.65200 1199.59700 1402.62600 2416.16900
-<CMD> zoomBox 68.96700 1311.93600 1224.09600 2346.02300
-<CMD> zoomBox 108.77600 1488.59000 943.35700 2235.71800
-<CMD> zoomBox 137.53800 1616.52200 740.52300 2156.32200
-<CMD> zoomBox 150.17500 1665.19800 662.71200 2124.02800
-<CMD> zoomBox 160.91600 1706.57200 596.57300 2096.57800
-<CMD> zoomBox 170.04600 1741.73900 540.35500 2073.24500
-<CMD> zoomBox 177.80600 1771.63200 492.56900 2053.41200
-<CMD> zoomBox 184.40300 1797.04100 451.95100 2036.55400
-<CMD> zoomBox 196.18800 1812.87600 423.60400 2016.46200
-<CMD> zoomBox 206.20500 1826.33600 399.50900 1999.38400
-<CMD> zoomBox 214.72000 1837.77600 379.02800 1984.86700
-<CMD> zoomBox 221.95700 1847.50100 361.61900 1972.52800
-<CMD> zoomBox 214.71900 1837.77500 379.02800 1984.86700
-<CMD> zoomBox 206.20300 1826.33400 399.50900 1999.38400
-<CMD> zoomBox 196.18500 1812.87300 423.60400 2016.46200
-<CMD> zoomBox 170.53400 1778.40700 485.30200 2060.19200
-<CMD> zoomBox 154.22100 1756.49000 524.53700 2088.00200
-<CMD> zoomBox 135.03000 1730.70500 570.69600 2120.71900
-<CMD> zoomBox 112.45300 1700.37000 625.00100 2159.21000
-<CMD> zoomBox 85.89200 1664.68200 688.88900 2204.49300
-<CMD> zoomBox -76.25600 1446.81900 1078.89900 2480.92900
-<CMD> fit
-<CMD> zoomBox -126.44400 -25.56100 1754.45800 1658.24800
-<CMD> zoomBox -38.66500 38.58600 1320.28700 1255.13800
-<CMD> zoomBox -4.38400 71.54800 1150.72600 1105.61800
-<CMD> zoomBox 71.15200 148.23800 780.53500 783.28700
-<CMD> zoomBox 121.43700 188.25300 557.08700 578.25300
-<CMD> zoomBox 133.44100 197.80600 503.74400 529.30600
-<CMD> zoomBox 143.64500 205.92600 458.40200 487.70100
-<CMD> zoomBox 152.31800 212.82800 419.86200 452.33700
-<CMD> zoomBox 143.64500 205.92600 458.40200 487.70100
-<CMD> zoomBox 133.44100 197.80600 503.74400 529.30600
-<CMD> zoomBox 107.31400 177.01400 619.84400 635.83800
-<CMD> zoomBox 90.69800 163.79200 693.67500 703.58500
-<CMD> zoomBox 71.15100 148.23700 780.53600 783.28800
-<CMD> zoomBox 48.15400 129.93700 882.72500 877.05600
-<CMD> zoomBox 21.09900 108.40700 1002.94700 987.37100
-<CMD> getSrouteMode -allowWrongWayRoute -quiet
-<CMD> getSrouteMode -viaThruToClosestRing -quiet
-<CMD> getSrouteMode -extendNearestTarget -quiet
-<CMD> getSrouteMode -targetNumber -quiet
-<CMD> getSrouteMode -targetSearchDistance -quiet
-<CMD> getSrouteMode -jogThresholdRatio -quiet
-<CMD> getSrouteMode -blockPinConnectRingPinCorners -quiet
-<CMD> getSrouteMode -blockPinRouteWithPinWidth -quiet
-<CMD> getSrouteMode -padPinMinViaSize -quiet
-<CMD> getSrouteMode -padPinSplit -quiet
-<CMD> getSrouteMode -padRingLefConvention -quiet
-<CMD> getSrouteMode -signalPinAsPG -quiet
-<CMD> getSrouteMode -corePinJoinLimit -quiet
-<CMD> getSrouteMode -corePinLength -quiet
-<CMD> getSrouteMode -corePinLengthAsInstance -quiet
-<CMD> getSrouteMode -corePinReferenceMacro -quiet
-<CMD> getSrouteMode -treatEndcapAsCore -quiet
-<CMD> getSrouteMode -secondaryPinMaxGap -quiet
-<CMD> getSrouteMode -secondaryPinRailWidth -quiet
-<CMD> getSrouteMode -srpgAonCellPin -quiet
-<CMD> getSrouteMode -viaConnectToShape -quiet
-<CMD> getSrouteMode -layerNormalCost -quiet
-<CMD> getSrouteMode -layerWrongWayCost -quiet
-<CMD> setSrouteMode -allowWrongWayRoute false -viaThruToClosestRing false -extendNearestTarget false -viaConnectToShape { noshape} -blockPinConnectRingPinCorners true -blockPinRouteWithPinWidth true -padRingLefConvention true -signalPinAsPG false -corePinLengthAsInstance false -treatEndcapAsCore false
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Sun Nov 24 22:11:04 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH"
-routeSpecial set to true
-srouteBlockPinConnectRingPinCorners set to true
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectBlockPin set to false
-srouteConnectConverterPin set to false
-srouteConnectCorePin set to false
-srouteConnectPadPin set to false
-srouteConnectStripe set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFollowCorePinEnd set to 3
-srouteFullWidthBlockpinRoute set to true
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3775.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Updating RC grid for preRoute extraction ...
-Initializing multi-corner resistance tables ...
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 15 macros, 15 used
-Read in 59 components
-  11 core components: 0 unplaced, 11 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 11 routed
-Read in 467 terminals
-12 nets selected.
-
-Begin power routing ...
-  Number of Pad ports routed: 0
-  Number of Pad Ring connections: 176
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3775.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...
-sroute created 176 wires.
-ViaGen created 0 via, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |       96       |       NA       |
-|  met5  |       80       |       NA       |
-+--------+----------------+----------------+
-<CMD> zoomBox -130.13700 12.78800 1228.82300 1229.34700
-<CMD> zoomBox -226.31200 -48.02000 1372.46500 1383.22700
-<CMD> zoomBox -629.17900 -302.73700 1974.16400 2027.81100
-<CMD> zoomBox -1030.17400 -556.27000 2573.06900 2669.40200
-<CMD> zoomBox -146.69200 139.64900 2456.65200 2470.19800
-<CMD> zoomBox 740.91100 838.81600 2339.69100 2270.06500
-<CMD> zoomBox 1124.30800 1141.28600 2279.42700 2175.36400
-<CMD> zoomBox 1494.50200 1445.16800 2203.88900 2080.22100
-<CMD> zoomBox 1576.82000 1516.74900 2179.79900 2056.54400
-<CMD> zoomBox 1642.34300 1576.65700 2154.87600 2035.48300
-<CMD> zoomBox 1693.86200 1624.49600 2129.51500 2014.49800
-<CMD> zoomBox 1737.65300 1665.15800 2107.95800 1996.66000
-<CMD> zoomBox 1822.87000 1759.43300 2050.28400 1963.01700
-<CMD> zoomBox 1804.80300 1732.85100 2072.34900 1972.36200
-<CMD> zoomBox 1783.54700 1701.57900 2098.30700 1983.35600
-<CMD> zoomBox 1758.54100 1664.78800 2128.84600 1996.29000
-<CMD> zoomBox 1694.51100 1570.58300 2207.04400 2029.40900
-<CMD> zoomBox 1653.79200 1510.67400 2256.77200 2050.47000
-<CMD> zoomBox 1605.88800 1440.19400 2315.27600 2075.24800
-<CMD> zoomBox 1549.52900 1357.27600 2384.10400 2104.39900
-<CMD> zoomBox 1483.22500 1259.72600 2465.07800 2138.69400
-<CMD> zoomBox 1545.33700 1341.84300 2379.91200 2088.96600
-<CMD> zoomBox 1598.13200 1411.64200 2307.52100 2046.69700
-<CMD> zoomBox 1716.05400 1564.62200 2151.70800 1954.62500
-<CMD> zoomBox 1744.20500 1601.14200 2114.51100 1932.64500
-<CMD> zoomBox 1768.13300 1632.18400 2082.89400 1913.96200
-<CMD> zoomBox 1788.47200 1658.57000 2056.01900 1898.08200
-<CMD> zoomBox 1820.45400 1700.06200 2013.75800 1873.11000
-<CMD> zoomBox 1836.80800 1717.24100 2001.11700 1864.33300
-<CMD> zoomBox 1850.70900 1731.84400 1990.37200 1856.87200
-<CMD> zoomBox 1862.52500 1744.25600 1981.23900 1850.53000
-<CMD> zoomBox 1872.56900 1754.80600 1973.47600 1845.13900
-<CMD> zoomBox 1836.80800 1717.24000 2001.11700 1864.33200
-<CMD> zoomBox 1778.57500 1656.06900 2046.12700 1895.58500
-<CMD> zoomBox 1720.61300 1595.18200 2090.92800 1926.69300
-<CMD> zoomBox 1683.75300 1556.46300 2119.41800 1946.47600
-<CMD> zoomBox 1589.37200 1457.31900 2192.36900 1997.13000
-<CMD> zoomBox 1529.35200 1394.27000 2238.76000 2029.34200
-<CMD> zoomBox 1458.74000 1320.09600 2293.33800 2067.23900
-<CMD> zoomBox 1375.66800 1232.83200 2357.54800 2111.82400
-<CMD> zoomBox 828.95400 981.42300 2427.78300 2412.71600
-<CMD> zoomBox 578.92700 866.44700 2459.90300 2550.32200
-<CMD> zoomBox -468.40600 384.82700 2594.45000 3126.73700
-<CMD> zoomBox -947.37800 164.57000 2655.98200 3390.34600
-<CMD> zoomBox -2173.81100 -399.41100 2813.53900 4065.33200
-<CMD> zoomBox -1529.26200 -324.89100 2709.98500 3470.14000
-<CMD> zoomBox -981.39600 -261.54900 2621.96400 2964.22700
-<CMD> fit
-<CMD> zoomBox 232.53300 207.27400 434.60200 72.56100
-<CMD> selectInst pad_ccff_tail/gpio
-<CMD> zoomBox 178.00000 20.06800 507.03700 314.62600
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
 <CMD> deselectAll
-<CMD> zoomBox 169.88700 -0.06400 556.99000 346.47600
-<CMD> zoomBox 160.34300 -23.74800 615.75800 383.94600
-<CMD> zoomBox 149.11400 -51.61100 684.89700 428.02900
-<CMD> zoomBox 120.36200 -122.95800 861.93200 540.90500
-<CMD> zoomBox 102.07800 -168.33000 974.51300 612.68600
-<CMD> zoomBox 80.56600 -221.70900 1106.96200 697.13500
-<CMD> zoomBox 55.25900 -284.50700 1262.78400 796.48600
-<CMD> zoomBox -50.74700 -547.55900 1915.50600 1212.65700
-<CMD> zoomBox -34.34000 -439.96200 1636.97500 1056.22200
-<CMD> zoomBox -20.39500 -348.50400 1400.22300 923.25200
-<CMD> zoomBox -1.52600 -190.91800 1024.87100 727.92600
-<CMD> zoomBox 6.24200 -129.37400 878.67900 651.64300
-<CMD> zoomBox 53.27700 -0.02800 589.06300 479.61500
-<CMD> zoomBox 64.50600 30.85100 519.92400 438.54700
-<CMD> zoomBox 74.66900 57.09700 461.77400 403.63900
-<CMD> zoomBox 83.53200 79.33200 412.57200 373.89300
-<CMD> zoomBox 107.98300 111.46100 345.71500 324.28200
-<CMD> zoomBox 120.66900 124.56200 322.74100 305.46000
-<CMD> zoomBox 131.45200 135.69700 303.21400 289.46100
-<CMD> zoomBox 93.05700 96.04500 372.74400 346.42500
-<CMD> zoomBox 75.49800 77.91100 404.54200 372.47600
-<CMD> zoomBox 54.84000 56.57700 441.95100 403.12400
-<CMD> zoomBox 30.53700 31.47800 485.96200 439.18100
-<CMD> zoomBox 1.94400 1.95000 537.73900 481.60100
-<CMD> zoomBox -31.69400 -32.78800 598.65300 531.50700
-<CMD> zoomBox -71.26800 -73.65700 670.31700 590.22000
-<CMD> zoomBox -117.82500 -121.73800 754.62800 659.29400
-<CMD> zoomBox -172.59900 -178.30400 853.81700 740.55700
-<CMD> zoomBox -83.36900 -124.72700 789.08500 656.30600
-<CMD> zoomBox -7.52400 -79.18600 734.06300 584.69300
-<CMD> zoomBox 56.94400 -40.47600 687.29400 523.82200
-<CMD> zoomBox 158.32200 20.39600 613.75000 428.10100
-<CMD> zoomBox 197.91400 44.16800 585.02800 390.71800
-<CMD> loadIoFile IO_PAD.io
-Reading IO assignment file "IO_PAD.io" ...
-<CMD> zoomBox 178.55900 15.88800 633.98800 423.59400
-<CMD> zoomBox 155.78900 -17.38300 691.58800 462.27100
-<CMD> zoomBox 129.00100 -56.52600 759.35300 507.77400
-<CMD> zoomBox 95.47100 -104.44600 837.06200 559.43600
-<CMD> zoomBox 56.02400 -160.82300 928.48400 620.21500
-<CMD> zoomBox 7.42500 -230.53500 1033.84800 688.33300
+<CMD> selectInst grid_io_top_1__2_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+<CMD> zoomBox -161.48400 -399.86900 2222.30700 1734.13300
+<CMD> zoomBox -172.91300 -615.91800 2631.54800 1894.67300
 <CMD> fit
-<CMD> zoomBox 104.21900 208.79000 2317.04400 2189.74100
-<CMD> zoomBox 398.78500 476.30400 2279.68700 2160.11300
-<CMD> zoomBox 868.74300 885.49100 2227.69500 2102.04300
-<CMD> zoomBox 1052.28000 1045.29500 2207.39000 2079.36500
-<CMD> zoomBox 1208.28700 1181.12800 2190.13100 2060.08800
-<CMD> zoomBox 1450.43500 1385.20900 2159.81900 2020.25900
-<CMD> zoomBox 1339.17600 1291.44100 2173.74600 2038.55900
-<CMD> zoomBox 1208.28400 1181.12600 2190.13100 2060.08900
-<CMD> zoomBox 1054.29400 1051.34400 2209.40800 2085.41800
-<CMD> zoomBox 873.12800 898.65900 2232.08700 2115.21700
-<CMD> zoomBox 659.99200 719.02900 2258.76800 2150.27500
-<CMD> zoomBox 409.24400 507.70000 2290.15700 2191.51900
-<CMD> setLayerPreference node_overlay -isVisible 1
-<CMD> setLayerPreference congestH -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
-<CMD> setLayerPreference congestV -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
-<CMD> fit
-<CMD> setLayerPreference node_overlay -isVisible 0
-<CMD> setLayerPreference node_overlay -isVisible 1
-<CMD> fit
-<CMD> setLayerPreference node_track -isVisible 1
-<CMD> setLayerPreference node_track -isVisible 0
-<CMD> zoomBox 350.26800 338.51500 1949.03400 1769.75200
-<CMD> zoomBox 491.73700 444.61700 1850.68800 1661.16800
-<CMD> zoomBox 606.18400 541.39500 1761.29300 1575.46400
-<CMD> zoomBox 702.56700 624.77800 1684.41000 1503.73700
-<CMD> zoomBox 784.49300 695.65300 1619.06000 1442.76900
-<CMD> zoomBox 606.18200 541.39300 1761.29300 1575.46400
-<CMD> zoomBox 492.78900 443.29500 1851.74300 1659.84900
-<CMD> zoomBox 17.79900 32.37400 2230.62900 2013.32900
-<CMD> zoomBox -199.42600 -155.55100 2403.90400 2174.98500
-<CMD> zoomBox 133.28100 222.01600 2014.18700 1905.82800
-<CMD> zoomBox 263.21700 369.47100 1861.98700 1800.71100
-<CMD> zoomBox 547.33700 691.89900 1529.18200 1570.86000
-<CMD> zoomBox 672.81700 834.29800 1382.20100 1469.34800
-<CMD> zoomBox 721.82200 889.91000 1324.79900 1429.70300
-<CMD> zoomBox 763.47700 937.18100 1276.00700 1396.00500
-<CMD> zoomBox 798.88300 977.36100 1234.53400 1367.36200
-<CMD> zoomBox 721.82200 889.91000 1324.79900 1429.70300
-<CMD> zoomBox 828.97800 1011.51400 1199.28200 1343.01500
-<CMD> zoomBox 894.78500 1086.19300 1122.19900 1289.77700
-<CMD> zoomBox 944.84700 1143.00400 1063.55900 1249.27700
-<CMD> zoomBox 960.01800 1160.22200 1045.78800 1237.00400
-<CMD> zoomBox 965.94300 1166.94500 1038.84800 1232.21100
-<CMD> zoomBox 978.89600 1181.64700 1023.67100 1221.73000
-<CMD> zoomBox 981.98900 1185.15700 1020.04800 1219.22800
-<CMD> zoomBox 988.75300 1192.83300 1012.12500 1213.75600
-<CMD> zoomBox 994.07200 1196.39100 1008.42600 1209.24100
-<CMD> zoomBox 996.44700 1198.03500 1006.81800 1207.31900
-<CMD> zoomBox 997.37500 1198.67700 1006.19000 1206.56800
-<CMD> zoomBox 998.83400 1199.68700 1005.20200 1205.38800
-<CMD> zoomBox 999.88800 1200.41600 1004.48900 1204.53500
-<CMD> zoomBox 1000.80400 1201.19700 1003.63000 1203.72700
-<CMD> zoomBox 1000.53600 1200.99800 1003.86100 1203.97500
-<CMD> zoomBox 999.84900 1200.48800 1004.45300 1204.61000
-<CMD> zoomBox 998.29500 1199.33500 1005.79400 1206.04800
-<CMD> zoomBox 995.76600 1197.45700 1007.97600 1208.38800
-<CMD> zoomBox 994.60900 1196.59800 1008.97400 1209.45800
-<CMD> zoomBox 991.64700 1194.39900 1011.52900 1212.19800
-<CMD> zoomBox 978.26200 1184.46600 1023.07400 1224.58200
-<CMD> zoomBox 963.14500 1173.24600 1036.11400 1238.56900
-<CMD> zoomBox 948.09800 1162.07900 1049.09400 1252.49200
-<CMD> zoomBox 966.40800 1174.44200 1039.37800 1239.76600
-<CMD> zoomBox 948.02600 1162.47800 1049.02200 1252.89100
-<CMD> zoomBox 922.58200 1145.91700 1062.37100 1271.05800
-<CMD> zoomBox 887.36700 1122.99500 1080.84700 1296.20100
-<CMD> zoomBox 807.63000 1071.09500 1122.68100 1353.13300
-<CMD> zoomBox 677.79200 986.58400 1190.80100 1445.83700
-<CMD> zoomBox 548.55700 902.46700 1258.60400 1538.11100
-<CMD> zoomBox 466.37200 848.97400 1301.72200 1596.79100
-<CMD> zoomBox 122.11000 624.89800 1482.34100 1842.59500
-<CMD> zoomBox -694.82500 93.16500 1910.95000 2425.89000
-<CMD> zoomBox -996.43000 -103.14600 2069.18900 2641.23700
-<CMD> zoomBox -1475.13400 -293.50900 2131.47700 2935.17800
-<CMD> fit
-<CMD> zoomBox 402.44700 443.16400 2283.34900 2126.97300
-<CMD> zoomBox 654.65300 657.41100 2253.42000 2088.64900
-<CMD> zoomBox 869.02700 839.52100 2227.98000 2056.07400
-<CMD> zoomBox 1052.03700 989.83200 2207.14700 2023.90200
-<CMD> zoomBox 1207.59500 1117.59600 2189.43900 1996.55600
-<CMD> zoomBox 1452.21100 1318.50600 2161.59300 1953.55400
-<CMD> zoomBox 1547.74300 1396.96900 2150.71800 1936.76000
-<CMD> zoomBox 1465.01200 1326.35100 2174.39500 1961.40000
-<CMD> fit
-<CMD> zoomBox 1849.08600 321.78000 2155.55700 123.07900
-<CMD> zoomBox 1836.28200 65.03100 2196.83600 387.80400
-<CMD> zoomBox 1821.21800 41.24300 2245.40000 420.97600
-<CMD> zoomBox 1827.15600 76.87500 2133.62800 351.23300
-<CMD> zoomBox 1832.98400 91.14800 2093.48500 324.35200
-<CMD> zoomBox 1869.45400 126.87100 2057.66700 295.36200
-<CMD> zoomBox 1883.69800 140.82300 2043.67900 284.04000
-<CMD> zoomBox 1906.09600 162.76100 2021.68300 266.23600
-<CMD> zoomBox 1922.27900 178.61200 2005.79100 253.37300
-<CMD> zoomBox 1933.97000 190.06400 1994.30800 244.07900
-<CMD> zoomBox 1938.53600 194.53600 1989.82400 240.45000
-<CMD> zoomBox 1943.69100 199.15400 1987.28600 238.18100
-<CMD> zoomBox 1948.07300 203.07900 1985.12900 236.25200
-<CMD> zoomBox 1957.65400 211.66100 1980.41200 232.03400
-<CMD> zoomBox 1963.53800 216.93100 1977.51600 229.44400
-<CMD> selectWire 1966.4000 223.6650 1975.4000 225.7050 5 VSSA
-<CMD> zoomBox 1967.15800 219.72900 1975.74300 227.41400
-<CMD> zoomBox 1968.02300 220.39700 1975.32000 226.92900
-<CMD> zoomBox 1968.75800 220.96500 1974.96000 226.51700
-<CMD> zoomBox 1967.15800 219.72900 1975.74300 227.41400
-<CMD> zoomBox 1964.94400 218.01700 1976.82700 228.65500
-<CMD> zoomBox 1957.63700 212.37200 1980.40300 232.75200
-<CMD> zoomBox 1948.03300 204.95000 1985.10300 238.13600
-<CMD> zoomBox 1916.82600 180.83900 2000.37500 255.63300
-<CMD> zoomBox 1865.46100 141.15100 2025.51500 284.43300
-<CMD> zoomBox 1797.93900 88.98000 2058.56100 322.29200
-<CMD> zoomBox 1687.99000 4.02700 2112.37100 383.93900
-<CMD> zoomBox 1578.55100 -80.53000 2165.93000 445.30000
-<CMD> fit
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
 <CMD> deselectAll
-<CMD> zoomBox 2158.92500 1766.57500 1902.97100 1850.77000
+<CMD> zoomBox 1044.85200 554.33300 1392.72500 261.08500
+<CMD> fit
+<CMD> zoomBox 323.80500 421.90800 1507.53700 1481.60100
+<CMD> zoomBox 447.38500 535.38100 1453.55700 1436.12000
+<CMD> zoomBox 552.42800 631.83300 1407.67400 1397.46100
+<CMD> zoomBox 178.41600 288.41000 1571.04300 1535.10800
+<CMD> zoomBox 0.37600 196.52900 1638.76100 1663.23300
+<CMD> zoomBox -189.63200 144.91300 1737.87900 1870.44700
+<CMD> zoomBox -413.17100 84.18800 1854.48900 2114.22800
+<CMD> zoomBox -683.92400 51.57300 1983.91200 2439.85600
+<CMD> zoomBox -413.17200 84.18700 1854.48900 2114.22800
+<CMD> zoomBox -183.03200 111.90900 1744.48000 1837.44400
+<CMD> zoomBox -396.45000 40.62300 1871.21100 2070.66400
+<CMD> zoomBox -201.95300 110.58900 1725.55900 1836.12400
+<CMD> zoomBox 103.89100 220.61000 1496.52000 1467.31000
+<CMD> zoomBox -36.63300 170.05900 1601.75400 1636.76500
+<CMD> zoomBox -396.45200 40.62100 1871.21200 2070.66400
+<CMD> zoomBox -625.27200 -41.69200 2042.56800 2346.59400
+<CMD> fit
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio

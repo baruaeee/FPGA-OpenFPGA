@@ -4675,7 +4675,7 @@ set_dont_touch [get_cells cby_1__1_/cdn_loop_breaker8] ; # disabled_arcs
 set_dont_touch [get_cells cby_1__1_/cdn_loop_breaker9] ; # disabled_arcs
 set_dont_touch [get_cells cby_1__1_/cdn_loop_breaker10] ; # disabled_arcs
 set_dont_touch [get_cells cdn_loop_breaker] ; # disabled_arcs
-set_dont_touch [get_cells cdn_loop_breaker1] ; # disabled_arcs
 set_dont_touch [get_cells cdn_loop_breaker2] ; # disabled_arcs
 set_dont_touch [get_cells cdn_loop_breaker3] ; # disabled_arcs
 set_dont_touch [get_cells cdn_loop_breaker4] ; # disabled_arcs
+set_dont_touch [get_cells cdn_loop_breaker5] ; # disabled_arcs
