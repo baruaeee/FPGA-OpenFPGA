@@ -1,9 +1,8 @@
-xrun(64): 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s007: Started on Nov 08, 2024 at 19:01:09 CET
+xrun: 23.03-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	23.03-s007: Started on Nov 27, 2024 at 19:26:19 CET
 xrun
 	./SRC/and2_include_netlists.v
 	-access +rwc
-	-64bit
 	-gui
 file: ./SRC/and2_include_netlists.v
 	module worklib.ACHCONX2LVT:v
@@ -994,7 +993,29 @@ file: ./SRC/and2_include_netlists.v
 		errors: 0, warnings: 0
 	primitive worklib.altos_latch_sr_1:v
 		errors: 0, warnings: 0
-	module worklib.GPIO:v
+	module worklib.PADDB:v
+		errors: 0, warnings: 0
+	module worklib.PADDI:v
+		errors: 0, warnings: 0
+	module worklib.PADDO:v
+		errors: 0, warnings: 0
+	module worklib.PADDOZ:v
+		errors: 0, warnings: 0
+	module worklib.IORINGDB:v
+		errors: 0, warnings: 0
+	module worklib.IORINGDI:v
+		errors: 0, warnings: 0
+	module worklib.IORINGDO:v
+		errors: 0, warnings: 0
+	module worklib.IORINGDOZ:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux2:v
 		errors: 0, warnings: 0
 output [0:0] const0;
                   |
@@ -1247,7 +1268,7 @@ xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,869|19): Implicit net port (mem_o
 output [0:0] mem_outb;
                     |
 xmvlog: *W,NODNTW (./SRC/sub_module/memories.v,871|20): Implicit net port (mem_outb) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-	module worklib.GPIO_DFFRX1LVT_mem:v
+	module worklib.PADDB_DFFRX1LVT_mem:v
 		errors: 0, warnings: 6
 input [0:0] pReset;
                  |
@@ -1255,9 +1276,9 @@ xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,20|17): Impli
 input [0:0] prog_clk;
                    |
 xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,22|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:0] gfpga_pad_GPIO_PAD;
-                             |
-xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,24|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:0] gfpga_pad_PADDB_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,24|30): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] ccff_head;
                     |
 xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_physical__iopad.v,28|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -1272,9 +1293,9 @@ xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,21|17): Implicit net port
 input [0:0] prog_clk;
                    |
 xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,23|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:0] gfpga_pad_GPIO_PAD;
-                             |
-xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,25|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:0] gfpga_pad_PADDB_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,25|30): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] ccff_head;
                     |
 xmvlog: *W,NODNTW (./SRC/lb/logical_tile_io_mode_io_.v,29|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -1397,9 +1418,9 @@ xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,35|17): Implicit net port (pReset) is 
 input [0:0] prog_clk;
                    |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:7] gfpga_pad_GPIO_PAD;
-                             |
-xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_PADDB_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,39|30): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] bottom_width_0_height_0_subtile_0__pin_outpad_0_;
                                                            |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_top.v,41|59): Implicit net port (bottom_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -1462,9 +1483,9 @@ xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,35|17): Implicit net port (pReset) i
 input [0:0] prog_clk;
                    |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:7] gfpga_pad_GPIO_PAD;
-                             |
-xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_PADDB_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,39|30): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] left_width_0_height_0_subtile_0__pin_outpad_0_;
                                                          |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_right.v,41|57): Implicit net port (left_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -1527,9 +1548,9 @@ xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,35|17): Implicit net port (pReset) 
 input [0:0] prog_clk;
                    |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:7] gfpga_pad_GPIO_PAD;
-                             |
-xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_PADDB_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,39|30): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] top_width_0_height_0_subtile_0__pin_outpad_0_;
                                                         |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_bottom.v,41|56): Implicit net port (top_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -1592,9 +1613,9 @@ xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,35|17): Implicit net port (pReset) is
 input [0:0] prog_clk;
                    |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,37|19): Implicit net port (prog_clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:7] gfpga_pad_GPIO_PAD;
-                             |
-xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,39|29): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:7] gfpga_pad_PADDB_PAD;
+                              |
+xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,39|30): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] right_width_0_height_0_subtile_0__pin_outpad_0_;
                                                           |
 xmvlog: *W,NODNTW (./SRC/lb/grid_io_left.v,41|58): Implicit net port (right_width_0_height_0_subtile_0__pin_outpad_0_) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -2608,9 +2629,9 @@ xmvlog: *W,NODNTW (./SRC/fpga_top.v,27|16): Implicit net port (reset) is not all
 input [0:0] clk;
               |
 xmvlog: *W,NODNTW (./SRC/fpga_top.v,29|14): Implicit net port (clk) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
-inout [0:31] gfpga_pad_GPIO_PAD;
-                              |
-xmvlog: *W,NODNTW (./SRC/fpga_top.v,31|30): Implicit net port (gfpga_pad_GPIO_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
+inout [0:31] gfpga_pad_PADDB_PAD;
+                               |
+xmvlog: *W,NODNTW (./SRC/fpga_top.v,31|31): Implicit net port (gfpga_pad_PADDB_PAD) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
 input [0:0] ccff_head;
                     |
 xmvlog: *W,NODNTW (./SRC/fpga_top.v,33|20): Implicit net port (ccff_head) is not allowed since `default_nettype is declared as 'none'; 'wire' used instead [19.2(IEEE 2001)].
@@ -2818,6 +2839,7 @@ xmvlog: *W,NODNTW (./SRC/fpga_top.v,35|21): Implicit net port (ccff_tail) is not
 		INVX3LVT
 		INVX6LVT
 		INVX8LVT
+		INVXLLVT
 		MDFFHQX1LVT
 		MDFFHQX2LVT
 		MDFFHQX4LVT
@@ -3042,6 +3064,7 @@ xmvlog: *W,NODNTW (./SRC/fpga_top.v,35|21): Implicit net port (ccff_tail) is not
 		SMDFFHQX2LVT
 		SMDFFHQX4LVT
 		SMDFFHQX8LVT
+		TBUFX1LVT
 		TBUFX12LVT
 		TBUFX16LVT
 		TBUFX2LVT
@@ -3050,6 +3073,7 @@ xmvlog: *W,NODNTW (./SRC/fpga_top.v,35|21): Implicit net port (ccff_tail) is not
 		TBUFX4LVT
 		TBUFX6LVT
 		TBUFX8LVT
+		TBUFXLLVT
 		TIEHILVT
 		TIELOLVT
 		TLATNCAX12LVT
@@ -3096,382 +3120,389 @@ xmvlog: *W,NODNTW (./SRC/fpga_top.v,35|21): Implicit net port (ccff_tail) is not
 		XOR2XLLVT
 		XOR3X1LVT
 		XOR3XLLVT
+		PADDI
+		PADDO
+		PADDOZ
+		IORINGDB
+		IORINGDI
+		IORINGDO
+		IORINGDOZ
 		const0
 		and2_autocheck_top_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.and2:v <0x26eba44e>
+		worklib.and2:v <0x315ef64f>
 			streams:   0, words:     0
-		worklib.cby_1__1_:v <0x3427ff54>
+		worklib.cby_1__1_:v <0x44c62351>
 			streams:   0, words:     0
-		worklib.cby_0__1_:v <0x505ddfc9>
+		worklib.cby_0__1_:v <0x6d777f87>
 			streams:   0, words:     0
-		worklib.cbx_1__1_:v <0x725615d1>
+		worklib.cbx_1__1_:v <0x717975a6>
 			streams:   0, words:     0
-		worklib.mux_tree_tapbuf_size4_mem:v <0x75a969db>
+		worklib.mux_tree_tapbuf_size4_mem:v <0x30a1ec14>
 			streams:   0, words:     0
-		worklib.cbx_1__0_:v <0x7d5d0691>
+		worklib.cbx_1__0_:v <0x3eceec01>
 			streams:   0, words:     0
-		worklib.sb_1__1_:v <0x5b81bae0>
+		worklib.sb_1__1_:v <0x69b648ee>
 			streams:   0, words:     0
-		worklib.sb_1__0_:v <0x3f0cd64c>
+		worklib.sb_1__0_:v <0x4767a030>
 			streams:   0, words:     0
-		worklib.sb_0__1_:v <0x0299406c>
+		worklib.sb_0__1_:v <0x09d2cbdc>
 			streams:   0, words:     0
-		worklib.mux_tree_tapbuf_size2_mem:v <0x2ca76805>
+		worklib.mux_tree_tapbuf_size2_mem:v <0x7987f7cb>
 			streams:   0, words:     0
-		worklib.mux_tree_tapbuf_size3_mem:v <0x5e77d08a>
+		worklib.mux_tree_tapbuf_size3_mem:v <0x633094a2>
 			streams:   0, words:     0
-		worklib.sb_0__0_:v <0x66142cc0>
+		worklib.sb_0__0_:v <0x27032302>
 			streams:   0, words:     0
-		worklib.mux_tree_size60_mem:v <0x109ab19d>
+		worklib.mux_tree_size60_mem:v <0x42b33ca8>
 			streams:   0, words:     0
-		worklib.DFFSRHQX1LVT:v <0x0f5d3cd4>
+		worklib.DFFSRHQX1LVT:v <0x31d56c85>
 			streams:   0, words:     0
-		worklib.direct_interc:v <0x64595c96>
+		worklib.direct_interc:v <0x577dba1f>
 			streams:   0, words:     0
-		worklib.mux_tree_size2_mem:v <0x52f0a37a>
+		worklib.mux_tree_size2_mem:v <0x2bda76d8>
 			streams:   0, words:     0
-		worklib.const1:v <0x05f483fa>
+		worklib.const1:v <0x174e1738>
 			streams:   0, words:     0
-		worklib.DFFRX1LVT:v <0x43301dc3>
+		worklib.DFFRX1LVT:v <0x2b09cf51>
 			streams:   0, words:     0
-		worklib.frac_lut6_DFFRX1LVT_mem:v <0x5b562b11>
+		worklib.frac_lut6_DFFRX1LVT_mem:v <0x6c8c981a>
 			streams:   0, words:     0
-		worklib.frac_lut6:v <0x17a65bd4>
+		worklib.frac_lut6:v <0x6f6b74b6>
 			streams:   0, words:     0
-		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6:v <0x50b2d1be>
+		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6:v <0x1141b184>
 			streams:   0, words:     0
-		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic:v <0x04e59980>
+		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic:v <0x0b37712d>
 			streams:   0, words:     0
-		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric:v <0x59fc4900>
+		worklib.logical_tile_clb_mode_default__fle_mode_physical__fabric:v <0x0ccda33c>
 			streams:   0, words:     0
-		worklib.logical_tile_clb_mode_default__fle:v <0x53ac8f02>
+		worklib.logical_tile_clb_mode_default__fle:v <0x7b45d9e1>
 			streams:   0, words:     0
-		worklib.logical_tile_clb_mode_clb_:v <0x743dda4f>
+		worklib.logical_tile_clb_mode_clb_:v <0x207c68f3>
 			streams:   0, words:     0
-		worklib.grid_clb:v <0x4dac1040>
+		worklib.grid_clb:v <0x18154632>
 			streams:   0, words:     0
-		worklib.direct_interc:v <0x7e57eff2>
+		worklib.direct_interc:v <0x583e4832>
 			streams:   0, words:     0
-		worklib.DFFRX1LVT:v <0x7033a1c9>
+		worklib.DFFRX1LVT:v <0x60353a65>
 			streams:   0, words:     0
-		worklib.GPIO_DFFRX1LVT_mem:v <0x6f0957c2>
+		worklib.PADDB_DFFRX1LVT_mem:v <0x5f770019>
 			streams:   0, words:     0
-		worklib.and2_autocheck_top_tb:v <0x20005ca1>
-			streams:  43, words: 4191176
-		worklib.const0:v <0x67c552d3>
+		worklib.and2_autocheck_top_tb:v <0x58e3fd47>
+			streams:  43, words: 3612411
+		worklib.const0:v <0x2470f474>
 			streams:   0, words:     0
-		worklib.TLATXLLVT:v <0x4ce7ba3a>
+		worklib.TLATXLLVT:v <0x276fc65d>
 			streams:   0, words:     0
-		worklib.TLATX4LVT:v <0x6677c1af>
+		worklib.TLATX4LVT:v <0x3d2ad3a1>
 			streams:   0, words:     0
-		worklib.TLATX2LVT:v <0x49ea7a21>
+		worklib.TLATX2LVT:v <0x608e4c65>
 			streams:   0, words:     0
-		worklib.TLATX1LVT:v <0x2fc21774>
+		worklib.TLATX1LVT:v <0x38804217>
 			streams:   0, words:     0
-		worklib.TLATSRXLLVT:v <0x5d5dc794>
+		worklib.TLATSRXLLVT:v <0x66c5e43b>
 			streams:   0, words:     0
-		worklib.TLATSRX4LVT:v <0x128c1777>
+		worklib.TLATSRX4LVT:v <0x5c7a0d65>
 			streams:   0, words:     0
-		worklib.TLATSRX2LVT:v <0x06d99b60>
+		worklib.TLATSRX2LVT:v <0x35a8493c>
 			streams:   0, words:     0
-		worklib.TLATSRX1LVT:v <0x214bde4b>
+		worklib.TLATSRX1LVT:v <0x2cf9e830>
 			streams:   0, words:     0
-		worklib.TLATNXLLVT:v <0x49492d59>
+		worklib.TLATNXLLVT:v <0x4d5c40f4>
 			streams:   0, words:     0
-		worklib.TLATNX4LVT:v <0x30163402>
+		worklib.TLATNX4LVT:v <0x7b2b9ba2>
 			streams:   0, words:     0
-		worklib.TLATNX2LVT:v <0x1f6a8c5a>
+		worklib.TLATNX2LVT:v <0x43cba2ce>
 			streams:   0, words:     0
-		worklib.TLATNX1LVT:v <0x1027883f>
+		worklib.TLATNX1LVT:v <0x04df7cc8>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX8LVT:v <0x057821d5>
+		worklib.TLATNTSCAX8LVT:v <0x37805f67>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX6LVT:v <0x495042f2>
+		worklib.TLATNTSCAX6LVT:v <0x48ef9fcf>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX4LVT:v <0x6c13e0a5>
+		worklib.TLATNTSCAX4LVT:v <0x237d6ab7>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX3LVT:v <0x5659e284>
+		worklib.TLATNTSCAX3LVT:v <0x2a16cb73>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX20LVT:v <0x03a7148c>
+		worklib.TLATNTSCAX20LVT:v <0x4dac8c5b>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX2LVT:v <0x6940b08f>
+		worklib.TLATNTSCAX2LVT:v <0x44bb737f>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX16LVT:v <0x29de3dda>
+		worklib.TLATNTSCAX16LVT:v <0x033a263e>
 			streams:   0, words:     0
-		worklib.TLATNTSCAX12LVT:v <0x661b7252>
+		worklib.TLATNTSCAX12LVT:v <0x51037241>
 			streams:   0, words:     0
-		worklib.TLATNSRXLLVT:v <0x15dba183>
+		worklib.TLATNSRXLLVT:v <0x448d5a97>
 			streams:   0, words:     0
-		worklib.TLATNSRX4LVT:v <0x608e1e16>
+		worklib.TLATNSRX4LVT:v <0x0f853f02>
 			streams:   0, words:     0
-		worklib.TLATNSRX2LVT:v <0x7ee3b6cc>
+		worklib.TLATNSRX2LVT:v <0x1b8bfa06>
 			streams:   0, words:     0
-		worklib.TLATNSRX1LVT:v <0x0033d233>
+		worklib.TLATNSRX1LVT:v <0x2750d914>
 			streams:   0, words:     0
-		worklib.TLATNCAX8LVT:v <0x44e7c6cb>
+		worklib.TLATNCAX8LVT:v <0x05975f0e>
 			streams:   0, words:     0
-		worklib.TLATNCAX6LVT:v <0x528c9640>
+		worklib.TLATNCAX6LVT:v <0x2da9e92e>
 			streams:   0, words:     0
-		worklib.TLATNCAX4LVT:v <0x1d2238ca>
+		worklib.TLATNCAX4LVT:v <0x44e38f58>
 			streams:   0, words:     0
-		worklib.TLATNCAX3LVT:v <0x3baf13af>
+		worklib.TLATNCAX3LVT:v <0x3d445768>
 			streams:   0, words:     0
-		worklib.TLATNCAX20LVT:v <0x51f315fc>
+		worklib.TLATNCAX20LVT:v <0x476d7ad0>
 			streams:   0, words:     0
-		worklib.TLATNCAX2LVT:v <0x756dac31>
+		worklib.TLATNCAX2LVT:v <0x1285a6e3>
 			streams:   0, words:     0
-		worklib.TLATNCAX16LVT:v <0x4a1842e0>
+		worklib.TLATNCAX16LVT:v <0x4fb16987>
 			streams:   0, words:     0
-		worklib.TLATNCAX12LVT:v <0x14629005>
+		worklib.TLATNCAX12LVT:v <0x6bc115b8>
 			streams:   0, words:     0
-		worklib.SMDFFHQX8LVT:v <0x15bc6306>
+		worklib.SMDFFHQX8LVT:v <0x68a16bd8>
 			streams:   0, words:     0
-		worklib.SMDFFHQX4LVT:v <0x71b58c5f>
+		worklib.SMDFFHQX4LVT:v <0x19dddefd>
 			streams:   0, words:     0
-		worklib.SMDFFHQX2LVT:v <0x5fef4841>
+		worklib.SMDFFHQX2LVT:v <0x57bfc5ff>
 			streams:   0, words:     0
-		worklib.SMDFFHQX1LVT:v <0x10317207>
+		worklib.SMDFFHQX1LVT:v <0x065289ee>
 			streams:   0, words:     0
-		worklib.SEDFFXLLVT:v <0x0ff75d59>
+		worklib.SEDFFXLLVT:v <0x4ca3f8e8>
 			streams:   0, words:     0
-		worklib.SEDFFX4LVT:v <0x1641c3d5>
+		worklib.SEDFFX4LVT:v <0x0ab9d5e5>
 			streams:   0, words:     0
-		worklib.SEDFFX2LVT:v <0x19d1f1cc>
+		worklib.SEDFFX2LVT:v <0x74f034c2>
 			streams:   0, words:     0
-		worklib.SEDFFX1LVT:v <0x5ab4833b>
+		worklib.SEDFFX1LVT:v <0x7d0885c1>
 			streams:   0, words:     0
-		worklib.SEDFFTRXLLVT:v <0x64809aee>
+		worklib.SEDFFTRXLLVT:v <0x7a9dc1eb>
 			streams:   0, words:     0
-		worklib.SEDFFTRX4LVT:v <0x2a008d22>
+		worklib.SEDFFTRX4LVT:v <0x38b5d3ea>
 			streams:   0, words:     0
-		worklib.SEDFFTRX2LVT:v <0x7daf7bac>
+		worklib.SEDFFTRX2LVT:v <0x1074c585>
 			streams:   0, words:     0
-		worklib.SEDFFTRX1LVT:v <0x679e3079>
+		worklib.SEDFFTRX1LVT:v <0x29accd92>
 			streams:   0, words:     0
-		worklib.SEDFFHQX8LVT:v <0x64699b14>
+		worklib.SEDFFHQX8LVT:v <0x7b59e04b>
 			streams:   0, words:     0
-		worklib.SEDFFHQX4LVT:v <0x10552542>
+		worklib.SEDFFHQX4LVT:v <0x6685e8f4>
 			streams:   0, words:     0
-		worklib.SEDFFHQX2LVT:v <0x035e92b2>
+		worklib.SEDFFHQX2LVT:v <0x686becab>
 			streams:   0, words:     0
-		worklib.SEDFFHQX1LVT:v <0x12281103>
+		worklib.SEDFFHQX1LVT:v <0x74782c34>
 			streams:   0, words:     0
-		worklib.SDFFXLLVT:v <0x790d156e>
+		worklib.SDFFXLLVT:v <0x472ec48b>
 			streams:   0, words:     0
-		worklib.SDFFX4LVT:v <0x16cab859>
+		worklib.SDFFX4LVT:v <0x2182ccdc>
 			streams:   0, words:     0
-		worklib.SDFFX2LVT:v <0x695df52c>
+		worklib.SDFFX2LVT:v <0x3a7a869f>
 			streams:   0, words:     0
-		worklib.SDFFX1LVT:v <0x523b386d>
+		worklib.SDFFX1LVT:v <0x2ce2610e>
 			streams:   0, words:     0
-		worklib.SDFFTRXLLVT:v <0x1e051c8c>
+		worklib.SDFFTRXLLVT:v <0x3dd0e8ea>
 			streams:   0, words:     0
-		worklib.SDFFTRX4LVT:v <0x29167ec5>
+		worklib.SDFFTRX4LVT:v <0x13fb2aba>
 			streams:   0, words:     0
-		worklib.SDFFTRX2LVT:v <0x64fd4383>
+		worklib.SDFFTRX2LVT:v <0x275ecf34>
 			streams:   0, words:     0
-		worklib.SDFFTRX1LVT:v <0x2b1d35fb>
+		worklib.SDFFTRX1LVT:v <0x4bd07c63>
 			streams:   0, words:     0
-		worklib.SDFFSXLLVT:v <0x6f15b7b3>
+		worklib.SDFFSXLLVT:v <0x12d81b7c>
 			streams:   0, words:     0
-		worklib.SDFFSX4LVT:v <0x6e490d28>
+		worklib.SDFFSX4LVT:v <0x0b9dae7c>
 			streams:   0, words:     0
-		worklib.SDFFSX2LVT:v <0x71e57f7f>
+		worklib.SDFFSX2LVT:v <0x67c24c29>
 			streams:   0, words:     0
-		worklib.SDFFSX1LVT:v <0x7a9e2daf>
+		worklib.SDFFSX1LVT:v <0x3c553e23>
 			streams:   0, words:     0
-		worklib.SDFFSRXLLVT:v <0x28bedf8a>
+		worklib.SDFFSRXLLVT:v <0x75d9791e>
 			streams:   0, words:     0
-		worklib.SDFFSRX4LVT:v <0x3deed7df>
+		worklib.SDFFSRX4LVT:v <0x5abe8f5d>
 			streams:   0, words:     0
-		worklib.SDFFSRX2LVT:v <0x44507a8d>
+		worklib.SDFFSRX2LVT:v <0x2e072ad7>
 			streams:   0, words:     0
-		worklib.SDFFSRX1LVT:v <0x607c746d>
+		worklib.SDFFSRX1LVT:v <0x39e37b32>
 			streams:   0, words:     0
-		worklib.SDFFSRHQX8LVT:v <0x5c8c7202>
+		worklib.SDFFSRHQX8LVT:v <0x52d6eb14>
 			streams:   0, words:     0
-		worklib.SDFFSRHQX4LVT:v <0x2f3aed7c>
+		worklib.SDFFSRHQX4LVT:v <0x6052d4df>
 			streams:   0, words:     0
-		worklib.SDFFSRHQX2LVT:v <0x7ff44a18>
+		worklib.SDFFSRHQX2LVT:v <0x0fcc8aaa>
 			streams:   0, words:     0
-		worklib.SDFFSRHQX1LVT:v <0x7e86f171>
+		worklib.SDFFSRHQX1LVT:v <0x4edfe400>
 			streams:   0, words:     0
-		worklib.SDFFSHQX8LVT:v <0x30a38583>
+		worklib.SDFFSHQX8LVT:v <0x259f8e6b>
 			streams:   0, words:     0
-		worklib.SDFFSHQX4LVT:v <0x53e13f4e>
+		worklib.SDFFSHQX4LVT:v <0x01f4dfbd>
 			streams:   0, words:     0
-		worklib.SDFFSHQX2LVT:v <0x4ff8e108>
+		worklib.SDFFSHQX2LVT:v <0x3e79f476>
 			streams:   0, words:     0
-		worklib.SDFFSHQX1LVT:v <0x01f40e2b>
+		worklib.SDFFSHQX1LVT:v <0x17632003>
 			streams:   0, words:     0
-		worklib.SDFFRXLLVT:v <0x2203b9b6>
+		worklib.SDFFRXLLVT:v <0x2e840587>
 			streams:   0, words:     0
-		worklib.SDFFRX4LVT:v <0x235f032d>
+		worklib.SDFFRX4LVT:v <0x37c1b087>
 			streams:   0, words:     0
-		worklib.SDFFRX2LVT:v <0x3cf3717a>
+		worklib.SDFFRX2LVT:v <0x5b9e52d2>
 			streams:   0, words:     0
-		worklib.SDFFRX1LVT:v <0x378823aa>
+		worklib.SDFFRX1LVT:v <0x000920d8>
 			streams:   0, words:     0
-		worklib.SDFFRHQX8LVT:v <0x1d2b140e>
+		worklib.SDFFRHQX8LVT:v <0x3b2f0796>
 			streams:   0, words:     0
-		worklib.SDFFRHQX4LVT:v <0x7e69aec3>
+		worklib.SDFFRHQX4LVT:v <0x1f445640>
 			streams:   0, words:     0
-		worklib.SDFFRHQX2LVT:v <0x62707085>
+		worklib.SDFFRHQX2LVT:v <0x20c97d8b>
 			streams:   0, words:     0
-		worklib.SDFFRHQX1LVT:v <0x2c7c9fa6>
+		worklib.SDFFRHQX1LVT:v <0x09d3a9fe>
 			streams:   0, words:     0
-		worklib.SDFFQXLLVT:v <0x4893fd37>
+		worklib.SDFFQXLLVT:v <0x003fcd59>
 			streams:   0, words:     0
-		worklib.SDFFQX4LVT:v <0x0ef9a927>
+		worklib.SDFFQX4LVT:v <0x3f7eecf3>
 			streams:   0, words:     0
-		worklib.SDFFQX2LVT:v <0x50b4d159>
+		worklib.SDFFQX2LVT:v <0x3c4451bb>
 			streams:   0, words:     0
-		worklib.SDFFQX1LVT:v <0x0e74ddf4>
+		worklib.SDFFQX1LVT:v <0x26bdcdaf>
 			streams:   0, words:     0
-		worklib.SDFFNSRXLLVT:v <0x6bb1e2bf>
+		worklib.SDFFNSRXLLVT:v <0x3a25761e>
 			streams:   0, words:     0
-		worklib.SDFFNSRX4LVT:v <0x00c10e52>
+		worklib.SDFFNSRX4LVT:v <0x02c5a1b8>
 			streams:   0, words:     0
-		worklib.SDFFNSRX2LVT:v <0x1bf75b88>
+		worklib.SDFFNSRX2LVT:v <0x0c2ba5e7>
 			streams:   0, words:     0
-		worklib.SDFFNSRX1LVT:v <0x4e9f292c>
+		worklib.SDFFNSRX1LVT:v <0x10386578>
 			streams:   0, words:     0
-		worklib.SDFFHQX8LVT:v <0x084feae6>
+		worklib.SDFFHQX8LVT:v <0x44dbce3d>
 			streams:   0, words:     0
-		worklib.SDFFHQX4LVT:v <0x4d7bd281>
+		worklib.SDFFHQX4LVT:v <0x37a45593>
 			streams:   0, words:     0
-		worklib.SDFFHQX2LVT:v <0x73bffd00>
+		worklib.SDFFHQX2LVT:v <0x0e1b9844>
 			streams:   0, words:     0
-		worklib.SDFFHQX1LVT:v <0x599631a9>
+		worklib.SDFFHQX1LVT:v <0x7f7cfd8f>
 			streams:   0, words:     0
-		worklib.MDFFHQX8LVT:v <0x30f04b4b>
+		worklib.MDFFHQX8LVT:v <0x5c07bbcc>
 			streams:   0, words:     0
-		worklib.MDFFHQX4LVT:v <0x75c4732c>
+		worklib.MDFFHQX4LVT:v <0x2f782062>
 			streams:   0, words:     0
-		worklib.MDFFHQX2LVT:v <0x4b005cad>
+		worklib.MDFFHQX2LVT:v <0x16c7edb5>
 			streams:   0, words:     0
-		worklib.MDFFHQX1LVT:v <0x61299004>
+		worklib.MDFFHQX1LVT:v <0x67a0887e>
 			streams:   0, words:     0
-		worklib.EDFFXLLVT:v <0x413fe875>
+		worklib.EDFFXLLVT:v <0x0fce5cfc>
 			streams:   0, words:     0
-		worklib.EDFFX4LVT:v <0x6e485baa>
+		worklib.EDFFX4LVT:v <0x216588c1>
 			streams:   0, words:     0
-		worklib.EDFFX2LVT:v <0x45491487>
+		worklib.EDFFX2LVT:v <0x6ea85a50>
 			streams:   0, words:     0
-		worklib.EDFFX1LVT:v <0x1464d8ea>
+		worklib.EDFFX1LVT:v <0x64f63038>
 			streams:   0, words:     0
-		worklib.EDFFTRXLLVT:v <0x24645593>
+		worklib.EDFFTRXLLVT:v <0x1776f37b>
 			streams:   0, words:     0
-		worklib.EDFFTRX4LVT:v <0x3791532b>
+		worklib.EDFFTRX4LVT:v <0x38110538>
 			streams:   0, words:     0
-		worklib.EDFFTRX2LVT:v <0x52021923>
+		worklib.EDFFTRX2LVT:v <0x4ca8a0b2>
 			streams:   0, words:     0
-		worklib.EDFFTRX1LVT:v <0x112d0cb5>
+		worklib.EDFFTRX1LVT:v <0x5b4cf157>
 			streams:   0, words:     0
-		worklib.EDFFHQX8LVT:v <0x695aacfb>
+		worklib.EDFFHQX8LVT:v <0x610f39cd>
 			streams:   0, words:     0
-		worklib.EDFFHQX4LVT:v <0x27007cee>
+		worklib.EDFFHQX4LVT:v <0x7701cbbe>
 			streams:   0, words:     0
-		worklib.EDFFHQX2LVT:v <0x04807f1f>
+		worklib.EDFFHQX2LVT:v <0x11be31a7>
 			streams:   0, words:     0
-		worklib.EDFFHQX1LVT:v <0x11ed151c>
+		worklib.EDFFHQX1LVT:v <0x0f594f8b>
 			streams:   0, words:     0
-		worklib.DFFXLLVT:v <0x65c64208>
+		worklib.DFFXLLVT:v <0x1aac17d7>
 			streams:   0, words:     0
-		worklib.DFFX4LVT:v <0x247ecf8b>
+		worklib.DFFX4LVT:v <0x5dc1b236>
 			streams:   0, words:     0
-		worklib.DFFX2LVT:v <0x6f40e8c8>
+		worklib.DFFX2LVT:v <0x78f3b2a9>
 			streams:   0, words:     0
-		worklib.DFFX1LVT:v <0x3f942000>
+		worklib.DFFX1LVT:v <0x2a6ab2e6>
 			streams:   0, words:     0
-		worklib.DFFTRXLLVT:v <0x6fd9ba8e>
+		worklib.DFFTRXLLVT:v <0x77c6b338>
 			streams:   0, words:     0
-		worklib.DFFTRX4LVT:v <0x08c30d1a>
+		worklib.DFFTRX4LVT:v <0x60564050>
 			streams:   0, words:     0
-		worklib.DFFTRX2LVT:v <0x65d19dc3>
+		worklib.DFFTRX2LVT:v <0x0cd218d7>
 			streams:   0, words:     0
-		worklib.DFFTRX1LVT:v <0x66130ec6>
+		worklib.DFFTRX1LVT:v <0x3a903494>
 			streams:   0, words:     0
-		worklib.DFFSXLLVT:v <0x7d7c5bea>
+		worklib.DFFSXLLVT:v <0x79c94d46>
 			streams:   0, words:     0
-		worklib.DFFSX4LVT:v <0x771f30b2>
+		worklib.DFFSX4LVT:v <0x5031dce1>
 			streams:   0, words:     0
-		worklib.DFFSX2LVT:v <0x467e474e>
+		worklib.DFFSX2LVT:v <0x1886e999>
 			streams:   0, words:     0
-		worklib.DFFSX1LVT:v <0x463da4f9>
+		worklib.DFFSX1LVT:v <0x3cdd7325>
 			streams:   0, words:     0
-		worklib.DFFSRXLLVT:v <0x33edd1f1>
+		worklib.DFFSRXLLVT:v <0x40bd0d05>
 			streams:   0, words:     0
-		worklib.DFFSRX4LVT:v <0x758785e1>
+		worklib.DFFSRX4LVT:v <0x7ffc2caf>
 			streams:   0, words:     0
-		worklib.DFFSRX2LVT:v <0x2bcafd9f>
+		worklib.DFFSRX2LVT:v <0x7cc691e7>
 			streams:   0, words:     0
-		worklib.DFFSRX1LVT:v <0x750af132>
+		worklib.DFFSRX1LVT:v <0x663f0df3>
 			streams:   0, words:     0
-		worklib.DFFSRHQX8LVT:v <0x3763f657>
+		worklib.DFFSRHQX8LVT:v <0x311f5803>
 			streams:   0, words:     0
-		worklib.DFFSRHQX4LVT:v <0x18934d83>
+		worklib.DFFSRHQX4LVT:v <0x7a17856e>
 			streams:   0, words:     0
-		worklib.DFFSRHQX2LVT:v <0x17984820>
+		worklib.DFFSRHQX2LVT:v <0x722b68f8>
 			streams:   0, words:     0
-		worklib.DFFSHQX8LVT:v <0x67e580b9>
+		worklib.DFFSHQX8LVT:v <0x2219aedd>
 			streams:   0, words:     0
-		worklib.DFFSHQX4LVT:v <0x30bc286d>
+		worklib.DFFSHQX4LVT:v <0x6e78af8f>
 			streams:   0, words:     0
-		worklib.DFFSHQX2LVT:v <0x1b10fc07>
+		worklib.DFFSHQX2LVT:v <0x48482f26>
 			streams:   0, words:     0
-		worklib.DFFSHQX1LVT:v <0x0ec69632>
+		worklib.DFFSHQX1LVT:v <0x36e8ec52>
 			streams:   0, words:     0
-		worklib.DFFRXLLVT:v <0x3d186dd2>
+		worklib.DFFRXLLVT:v <0x1538a6ca>
 			streams:   0, words:     0
-		worklib.DFFRX4LVT:v <0x377b068a>
+		worklib.DFFRX4LVT:v <0x3cc0376d>
 			streams:   0, words:     0
-		worklib.DFFRX2LVT:v <0x061a7176>
+		worklib.DFFRX2LVT:v <0x74770215>
 			streams:   0, words:     0
-		worklib.DFFRHQX8LVT:v <0x772a7219>
+		worklib.DFFRHQX8LVT:v <0x3133061d>
 			streams:   0, words:     0
-		worklib.DFFRHQX4LVT:v <0x2073dacd>
+		worklib.DFFRHQX4LVT:v <0x7d52074f>
 			streams:   0, words:     0
-		worklib.DFFRHQX2LVT:v <0x0bdf0ea7>
+		worklib.DFFRHQX2LVT:v <0x5b6287e6>
 			streams:   0, words:     0
-		worklib.DFFRHQX1LVT:v <0x1e096492>
+		worklib.DFFRHQX1LVT:v <0x25c24492>
 			streams:   0, words:     0
-		worklib.DFFQXLLVT:v <0x6f7993a2>
+		worklib.DFFQXLLVT:v <0x2c956e0f>
 			streams:   0, words:     0
-		worklib.DFFQX4LVT:v <0x0937b3a6>
+		worklib.DFFQX4LVT:v <0x582076e3>
 			streams:   0, words:     0
-		worklib.DFFQX2LVT:v <0x3862cccc>
+		worklib.DFFQX2LVT:v <0x0f1c9e6e>
 			streams:   0, words:     0
-		worklib.DFFQX1LVT:v <0x512ec3eb>
+		worklib.DFFQX1LVT:v <0x6482ea28>
 			streams:   0, words:     0
-		worklib.DFFNSRXLLVT:v <0x0a5415e4>
+		worklib.DFFNSRXLLVT:v <0x3ded491d>
 			streams:   0, words:     0
-		worklib.DFFNSRX4LVT:v <0x34cbd4c9>
+		worklib.DFFNSRX4LVT:v <0x21873e63>
 			streams:   0, words:     0
-		worklib.DFFNSRX2LVT:v <0x77e6f224>
+		worklib.DFFNSRX2LVT:v <0x4738c47a>
 			streams:   0, words:     0
-		worklib.DFFNSRX1LVT:v <0x4a2e52e0>
+		worklib.DFFNSRX1LVT:v <0x59dfba56>
 			streams:   0, words:     0
-		worklib.DFFHQX8LVT:v <0x5c960e7e>
+		worklib.DFFHQX8LVT:v <0x453adb88>
 			streams:   0, words:     0
-		worklib.DFFHQX4LVT:v <0x3d3c9201>
+		worklib.DFFHQX4LVT:v <0x5a654258>
 			streams:   0, words:     0
-		worklib.DFFHQX2LVT:v <0x78a20757>
+		worklib.DFFHQX2LVT:v <0x78720d90>
 			streams:   0, words:     0
-		worklib.DFFHQX1LVT:v <0x1a6d4dfc>
+		worklib.DFFHQX1LVT:v <0x321d68c4>
 			streams:   0, words:     0
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                     Instances  Unique
-		Modules:                 13416     522
-		UDPs:                     3224      14
-		Primitives:              32034       6
-		Timing outputs:          13645     419
-		Registers:                1645     183
-		Scalar wires:            19932       -
+		Modules:                 13330     529
+		UDPs:                     3224      18
+		Primitives:              32013       7
+		Timing outputs:          13624     423
+		Registers:                1645     186
+		Scalar wires:            19926       -
 		Always blocks:               7       7
 		Initial blocks:           4734    4734
 		Cont. assignments:           8     131
@@ -3488,7 +3519,7 @@ xcelium>
 xcelium> source /eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007/tools/xcelium/files/xmsimrc
 xcelium> database -open waves -into waves.shm -default
 Created default SHM database waves
-xcelium> probe -create -shm and2_autocheck_top_tb.c_benchmark[0] and2_autocheck_top_tb.c_fpga[0]
+xcelium> probe -create -shm and2_autocheck_top_tb.c_fpga[0] and2_autocheck_top_tb.c_benchmark[0]
 Created probe 1
 xcelium> run
 Simulation start
@@ -3497,4 +3528,4 @@ Simulation complete via $finish(1) at time 14618 NS + 0
 ./SRC/and2_autocheck_top_tb.v:28628 	$finish;
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	23.03-s007: Exiting on Nov 08, 2024 at 19:02:08 CET  (total: 00:00:59)
+TOOL:	xrun	23.03-s007: Exiting on Nov 27, 2024 at 19:27:24 CET  (total: 00:01:05)

@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Nov 24 19:02:01 2024                
+#  Created on Sat Dec  7 18:27:13 2024                
 #                                                     
 #######################################################
 
@@ -69,10 +69,10 @@ set enc_check_rename_command_name 1
 set enc_enable_print_mode_command_reset_options 1
 set init_design_uniquify 1
 set init_gnd_net {VSS VSSA VSSD VSSIO_Q VSSIO G_CORE}
-set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/sky130_fd_io.lef}
-set init_mmmc_file Fabric.view
+set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/IO/sky130_fd_io__corner_bus_overlay.lef lef/IO/sky130_fd_io__top_gpio_ovtv2.lef lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef}
+set init_mmmc_file Fabric1.view
 set init_original_verilog_files SRC/comb_fabric.v
-set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE}
+set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B}
 set init_verilog SRC/post_synth_fabric_netlist.v
 get_message -id GLOBAL-100 -suppress
 get_message -id GLOBAL-100 -suppress
@@ -95,126 +95,49 @@ set init_verilog_tolerate_port_mismatch 0
 set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
 init_design
-floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
-loadIoFile IO_PAD.io
-setDesignMode -process 130
-globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-globalNetConnect VDD -type pgpin -pin VDDIO -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSIO -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSD -override -verbose -netlistOverride
-globalNetConnect VDD -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-globalNetConnect VDD -type pgpin -pin VDDA -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSA -override -verbose -netlistOverride
-globalNetConnect VDD -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-globalNetConnect VDD -type pgpin -pin P_CORE -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin G_CORE -override -verbose -netlistOverride
-globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
-globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-globalNetConnect VDDIA -type pgpin -pin VDDIA -override -verbose -netlistOverride
-globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
-globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
-globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
-globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
-globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
-addRing -nets {VDD VSS} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 5 bottom 5 left 5 right 5} -spacing {top 5 bottom 5 left 5 right 5} -offset {top 20 bottom 20 left 20 right 20} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-addStripe -nets {VDD VSS} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 120 -start_from left -start_offset 120 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
-setPlaceMode -fp false
+loadIoFile Multi_Row_IO_PAD.io
+selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+zoomBox -623.51600 -368.55700 2180.94100 2142.03100
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+deselectAll
+loadIoFile Multi_Row_IO_PAD.io
+zoomBox -666.41300 -533.73800 2632.94900 2419.89500
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+zoomBox -531.32300 -426.17900 2273.13500 2084.41000
+loadIoFile Multi_Row_IO_PAD.io
+zoomBox -595.34800 -601.60500 2704.01600 2352.03000
+zoomBox -531.32500 -426.18000 2273.13500 2084.41000
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+zoomBox -326.16000 -312.44200 2057.63100 1821.56000
+zoomBox -151.77000 -215.76400 1874.45200 1598.13700
+selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__6/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+deselectAll
+selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+loadIoFile Multi_Row_IO_PAD.io
+deselectAll
+selectInst grid_io_top_1__2_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+zoomBox -161.48400 -399.86900 2222.30700 1734.13300
+zoomBox -172.91300 -615.91800 2631.54800 1894.67300
 fit
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-zoomBox -584.65900 -299.08700 2478.07500 2442.71400
-zoomBox -242.33000 -105.93300 2360.99400 2224.59800
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-zoomBox 1886.13200 1928.23000 2172.39600 1766.57500
-zoomBox 1895.58500 1740.95200 2102.41200 1926.10600
-zoomBox 1902.71300 1757.06400 2052.14600 1890.83800
-zoomBox 1905.49700 1763.35600 2032.51500 1877.06400
-zoomBox 1915.89400 1775.62200 2007.66400 1857.77600
-zoomBox 1921.32500 1780.71500 1999.33000 1850.54600
-zoomBox 1925.94100 1785.04400 1992.24600 1844.40100
-zoomBox 1929.86500 1788.72300 1986.22500 1839.17700
-zoomBox 1933.20100 1791.85100 1981.10700 1834.73700
-zoomBox 1940.49500 1798.69100 1969.91500 1825.02800
-zoomBox 1937.65400 1796.30600 1972.26600 1827.29100
-zoomBox 1934.31200 1793.50100 1975.03200 1829.95400
-zoomBox 1930.38000 1790.20100 1978.28600 1833.08700
-selectWire 1957.1050 1802.3950 1958.7500 1824.9350 5 VSSA
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
 deselectAll
-selectWire 1960.3500 1802.3950 1964.8000 1824.9350 5 VSSD
-deselectAll
-selectWire 1966.4000 1802.3950 1975.4000 1824.9350 5 VSSA
-zoomBox 1925.51200 1787.37900 1981.87300 1837.83400
-zoomBox 1919.78600 1784.05900 1986.09300 1843.41800
-zoomBox 1913.05000 1780.15400 1991.05800 1849.98800
-zoomBox 1900.69100 1775.52400 1992.46500 1857.68100
-zoomBox 1869.04500 1763.66800 1996.06700 1877.38000
-zoomBox 1825.24400 1747.25800 2001.05300 1904.64500
+zoomBox 1044.85200 554.33300 1392.72500 261.08500
 fit
-zoomBox 1902.97100 1682.37900 2152.19000 1618.39100
-zoomBox 1921.40100 1568.80400 2101.46200 1729.99700
-deselectAll
-selectInst grid_io_right_2__1_/logical_tile_io_mode_io__5/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-zoomBox 1907.87600 1561.52800 2119.71300 1751.16700
-zoomBox 1891.96500 1552.96800 2141.18500 1776.07300
-zoomBox 1873.24600 1542.89700 2166.44600 1805.37400
-zoomBox 1851.22300 1531.04900 2196.16500 1839.84600
-zoomBox 1716.78800 1458.72400 2377.58900 2050.28200
-deselectAll
-zoomBox 1637.43800 1415.12600 2414.85100 2111.07700
-zoomBox 1544.08400 1363.83500 2458.68800 2182.60100
-zoomBox 1434.25500 1303.49200 2510.26100 2266.74700
+zoomBox 323.80500 421.90800 1507.53700 1481.60100
+zoomBox 447.38500 535.38100 1453.55700 1436.12000
+zoomBox 552.42800 631.83300 1407.67400 1397.46100
+zoomBox 178.41600 288.41000 1571.04300 1535.10800
+zoomBox 0.37600 196.52900 1638.76100 1663.23300
+zoomBox -189.63200 144.91300 1737.87900 1870.44700
+zoomBox -413.17100 84.18800 1854.48900 2114.22800
+zoomBox -683.92400 51.57300 1983.91200 2439.85600
+zoomBox -413.17200 84.18700 1854.48900 2114.22800
+zoomBox -183.03200 111.90900 1744.48000 1837.44400
+zoomBox -396.45000 40.62300 1871.21100 2070.66400
+zoomBox -201.95300 110.58900 1725.55900 1836.12400
+zoomBox 103.89100 220.61000 1496.52000 1467.31000
+zoomBox -36.63300 170.05900 1601.75400 1636.76500
+zoomBox -396.45200 40.62100 1871.21200 2070.66400
+zoomBox -625.27200 -41.69200 2042.56800 2346.59400
 fit
-zoomBox 1320.33800 220.74500 1643.64900 96.13600
-zoomBox 1323.34900 33.73700 1598.16400 279.75500
-zoomBox 1328.08500 65.20800 1526.63900 242.95600
-zoomBox 1329.93400 77.49900 1498.70500 228.58500
-zoomBox 1332.84200 96.82600 1454.77900 205.98600
-zoomBox 1328.44400 92.56700 1471.89900 220.99000
-zoomBox 1323.26900 87.55600 1492.04000 238.64200
-zoomBox 1317.18100 81.66100 1515.73500 259.40900
-zoomBox 1310.01900 74.72500 1543.61200 283.84100
-zoomBox 1291.68000 56.96700 1614.99300 346.40100
-zoomBox 1280.01700 45.67400 1660.38600 386.18500
-zoomBox 1250.15500 16.75600 1776.61800 488.05300
-pan -14.30300 -1312.40300
-zoomBox 1331.20100 211.54000 1382.28100 -10.48700
-zoomBox 1285.35000 40.27200 1437.66400 176.62600
-zoomBox 1271.57900 24.58900 1450.77300 185.00600
-zoomBox 1236.32000 -15.56700 1484.34000 206.46400
-zoomBox 1255.76400 16.77500 1466.58100 205.50100
-zoomBox 1286.64200 66.42200 1438.95700 202.77600
-zoomBox 1298.70100 85.81100 1428.16900 201.71200
-zoomBox 1308.97600 102.26600 1419.02400 200.78200
-zoomBox 1317.26200 108.54400 1410.80300 192.28300
-selectInst pad_pwr3
-zoomBox 1282.51200 90.14300 1434.83000 226.50000
-fit
-zoomBox 1815.40800 2170.71300 2020.84500 1857.50600
-zoomBox 1768.78700 1868.50300 2066.17600 2134.73000
-zoomBox 1687.08000 1810.00300 2171.33000 2243.51000
-zoomBox 1721.28400 1824.94400 2132.89700 2193.42500
-zoomBox 1750.35800 1837.64400 2100.22900 2150.85300
-zoomBox 1813.93200 1865.41300 2028.79600 2057.76200
-zoomBox 1829.10800 1872.04200 2011.74300 2035.53900
-zoomBox 1843.49700 1876.01100 1998.73700 2014.98400
-zoomBox 1855.72700 1879.38500 1987.68100 1997.51200
-zoomBox 1846.99100 1873.39000 2002.23100 2012.36300
-zoomBox 1836.71300 1866.33700 2019.34900 2029.83500
-zoomBox 1824.62200 1858.04000 2039.48700 2050.39000
-zoomBox 1810.39700 1848.27900 2063.17900 2074.57300
-zoomBox 1723.55700 1788.68900 2207.81000 2222.19900
-zoomBox 1609.40400 1710.35700 2397.93000 2416.25600
-zoomBox 1714.14100 1764.42400 2283.85100 2274.43600
-deselectAll
-selectInst Corner_TR
-deselectAll
-selectInst Corner_TR
-deselectAll
-selectInst Corner_TR
+selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio

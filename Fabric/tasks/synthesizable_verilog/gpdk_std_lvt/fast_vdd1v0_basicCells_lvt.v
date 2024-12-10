@@ -13937,3 +13937,5 @@ primitive altos_latch_sr_1 (q, v, clk, d, s, r);
 	endtable
 endprimitive
 `endif
+
+`include "/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/gpdk_std_lvt/pads_TT_s1vg.v"

@@ -2,29 +2,29 @@ fpga_top:
   grid_io_top:
     logical_tile_io_mode_io_:
       logical_tile_io_mode_physical__iopad:
-        GPIO:
-        GPIO_DFFRX1LVT_mem:
+        PADDB:
+        PADDB_DFFRX1LVT_mem:
           - DFFRX1LVT
       direct_interc:
   grid_io_right:
     logical_tile_io_mode_io_:
       logical_tile_io_mode_physical__iopad:
-        GPIO:
-        GPIO_DFFRX1LVT_mem:
+        PADDB:
+        PADDB_DFFRX1LVT_mem:
           - DFFRX1LVT
       direct_interc:
   grid_io_bottom:
     logical_tile_io_mode_io_:
       logical_tile_io_mode_physical__iopad:
-        GPIO:
-        GPIO_DFFRX1LVT_mem:
+        PADDB:
+        PADDB_DFFRX1LVT_mem:
           - DFFRX1LVT
       direct_interc:
   grid_io_left:
     logical_tile_io_mode_io_:
       logical_tile_io_mode_physical__iopad:
-        GPIO:
-        GPIO_DFFRX1LVT_mem:
+        PADDB:
+        PADDB_DFFRX1LVT_mem:
           - DFFRX1LVT
       direct_interc:
   grid_clb:

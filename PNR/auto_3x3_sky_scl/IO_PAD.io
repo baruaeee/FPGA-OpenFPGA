@@ -2,7 +2,7 @@
 	version = 3
 	io_order = clockwise
 	space = 20
-	total_edge = 13
+	total_edge = 4
 )
 (iopad
 	(topleft

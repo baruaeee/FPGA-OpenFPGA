@@ -3,7 +3,7 @@
 //	Description: Top-level Verilog module for FPGA
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Fri Nov  8 19:01:05 2024
+//	Date: Wed Nov 27 19:26:12 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
@@ -14,7 +14,7 @@ module fpga_top(pReset,
                 set,
                 reset,
                 clk,
-                gfpga_pad_GPIO_PAD,
+                gfpga_pad_PADDB_PAD,
                 ccff_head,
                 ccff_tail);
 //----- GLOBAL PORTS -----
@@ -28,7 +28,7 @@ input [0:0] reset;
 //----- GLOBAL PORTS -----
 input [0:0] clk;
 //----- GPIO PORTS -----
-inout [0:31] gfpga_pad_GPIO_PAD;
+inout [0:31] gfpga_pad_PADDB_PAD;
 //----- INPUT PORTS -----
 input [0:0] ccff_head;
 //----- OUTPUT PORTS -----
@@ -204,7 +204,7 @@ wire [0:9] sb_1__1__0_chany_bottom_out;
 	grid_io_top grid_io_top_1__2_ (
 		.pReset(pReset),
 		.prog_clk(prog_clk),
-		.gfpga_pad_GPIO_PAD(gfpga_pad_GPIO_PAD[0:7]),
+		.gfpga_pad_PADDB_PAD(gfpga_pad_PADDB_PAD[0:7]),
 		.bottom_width_0_height_0_subtile_0__pin_outpad_0_(cbx_1__1__0_top_grid_bottom_width_0_height_0_subtile_0__pin_outpad_0_),
 		.bottom_width_0_height_0_subtile_1__pin_outpad_0_(cbx_1__1__0_top_grid_bottom_width_0_height_0_subtile_1__pin_outpad_0_),
 		.bottom_width_0_height_0_subtile_2__pin_outpad_0_(cbx_1__1__0_top_grid_bottom_width_0_height_0_subtile_2__pin_outpad_0_),
@@ -227,7 +227,7 @@ wire [0:9] sb_1__1__0_chany_bottom_out;
 	grid_io_right grid_io_right_2__1_ (
 		.pReset(pReset),
 		.prog_clk(prog_clk),
-		.gfpga_pad_GPIO_PAD(gfpga_pad_GPIO_PAD[8:15]),
+		.gfpga_pad_PADDB_PAD(gfpga_pad_PADDB_PAD[8:15]),
 		.left_width_0_height_0_subtile_0__pin_outpad_0_(cby_1__1__0_right_grid_left_width_0_height_0_subtile_0__pin_outpad_0_),
 		.left_width_0_height_0_subtile_1__pin_outpad_0_(cby_1__1__0_right_grid_left_width_0_height_0_subtile_1__pin_outpad_0_),
 		.left_width_0_height_0_subtile_2__pin_outpad_0_(cby_1__1__0_right_grid_left_width_0_height_0_subtile_2__pin_outpad_0_),
@@ -250,7 +250,7 @@ wire [0:9] sb_1__1__0_chany_bottom_out;
 	grid_io_bottom grid_io_bottom_1__0_ (
 		.pReset(pReset),
 		.prog_clk(prog_clk),
-		.gfpga_pad_GPIO_PAD(gfpga_pad_GPIO_PAD[16:23]),
+		.gfpga_pad_PADDB_PAD(gfpga_pad_PADDB_PAD[16:23]),
 		.top_width_0_height_0_subtile_0__pin_outpad_0_(cbx_1__0__0_bottom_grid_top_width_0_height_0_subtile_0__pin_outpad_0_),
 		.top_width_0_height_0_subtile_1__pin_outpad_0_(cbx_1__0__0_bottom_grid_top_width_0_height_0_subtile_1__pin_outpad_0_),
 		.top_width_0_height_0_subtile_2__pin_outpad_0_(cbx_1__0__0_bottom_grid_top_width_0_height_0_subtile_2__pin_outpad_0_),
@@ -273,7 +273,7 @@ wire [0:9] sb_1__1__0_chany_bottom_out;
 	grid_io_left grid_io_left_0__1_ (
 		.pReset(pReset),
 		.prog_clk(prog_clk),
-		.gfpga_pad_GPIO_PAD(gfpga_pad_GPIO_PAD[24:31]),
+		.gfpga_pad_PADDB_PAD(gfpga_pad_PADDB_PAD[24:31]),
 		.right_width_0_height_0_subtile_0__pin_outpad_0_(cby_0__1__0_left_grid_right_width_0_height_0_subtile_0__pin_outpad_0_),
 		.right_width_0_height_0_subtile_1__pin_outpad_0_(cby_0__1__0_left_grid_right_width_0_height_0_subtile_1__pin_outpad_0_),
 		.right_width_0_height_0_subtile_2__pin_outpad_0_(cby_0__1__0_left_grid_right_width_0_height_0_subtile_2__pin_outpad_0_),

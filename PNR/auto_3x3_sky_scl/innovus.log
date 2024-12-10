@@ -4,12 +4,12 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v22.33-s094_1, built Fri Aug 25 16:48:21 PDT 2023
 Options:	
-Date:		Sun Nov 24 19:01:45 2024
-Host:		ei-vm-011 (x86_64 w/Linux 4.18.0-553.22.1.el8_10.x86_64) (24cores*24cpus*QEMU Virtual CPU version 2.5+ 512KB)
+Date:		Sat Dec  7 18:26:57 2024
+Host:		ei-vm-011 (x86_64 w/Linux 4.18.0-553.30.1.el8_10.x86_64) (24cores*24cpus*QEMU Virtual CPU version 2.5+ 512KB)
 OS:		Red Hat Enterprise Linux 8.10 (Green Obsidian)
 
 License:
-		[19:01:45.434084] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+		[18:26:57.434156] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
 		invs	Innovus Implementation System	22.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
@@ -61,8 +61,6 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 }
 <CMD> win
 <CMD> set enc_check_rename_command_name 1
-**WARN: (IMPOAX-793):	Problem in processing library definition file /home/cae1/cds.lib - Unable to open library gpdk045_v_6_0 at path /mnt/cae_storage_sw/eda/cadence/pdks/gpdk045_v_6_0/gpdk045: Invalid Lib Path..
-**WARN: (IMPOAX-793):	Problem in processing library definition file /home/cae1/cds.lib - Unable to open library sky130_fd_pr_main at path /mnt/cae_storage_sw/eda/cadence/pdks/sky130_release_004a/libs/sky130_fd_pr_main: Invalid Lib Path..
 <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
 <CMD> set conf_qxconf_file NULL
 <CMD> set conf_qxlib_file NULL
@@ -76,10 +74,10 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set enc_enable_print_mode_command_reset_options 1
 <CMD> set init_design_uniquify 1
 <CMD> set init_gnd_net {VSS VSSA VSSD VSSIO_Q VSSIO G_CORE}
-<CMD> set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/sky130_fd_io.lef}
-<CMD> set init_mmmc_file Fabric.view
+<CMD> set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/IO/sky130_fd_io__corner_bus_overlay.lef lef/IO/sky130_fd_io__top_gpio_ovtv2.lef lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef}
+<CMD> set init_mmmc_file Fabric1.view
 <CMD> set init_original_verilog_files SRC/comb_fabric.v
-<CMD> set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE}
+<CMD> set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B}
 <CMD> set init_verilog SRC/post_synth_fabric_netlist.v
 <CMD> get_message -id GLOBAL-100 -suppress
 <CMD> get_message -id GLOBAL-100 -suppress
@@ -102,8 +100,8 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set lefdefInputCheckColoredShape 0
 <CMD> set load_netlist_ignore_undefined_cell 1
 <CMD> init_design
-#% Begin Load MMMC data ... (date=11/24 19:03:52, mem=1458.7M)
-#% End Load MMMC data ... (date=11/24 19:03:52, total cpu=0:00:00.0, real=0:00:00.0, peak res=1459.9M, current mem=1459.9M)
+#% Begin Load MMMC data ... (date=12/07 18:29:39, mem=1452.9M)
+#% End Load MMMC data ... (date=12/07 18:29:39, total cpu=0:00:00.0, real=0:00:00.0, peak res=1453.5M, current mem=1453.5M)
 RC_CORNER
 
 Loading LEF file lef/sky130_scl_9T.tlef ...
@@ -111,155 +109,90 @@ Loading LEF file lef/sky130_scl_9T.tlef ...
 Loading LEF file lef/sky130_scl_9T.lef ...
 Set DBUPerIGU to M2 pitch 460.
 
-Loading LEF file lef/sky130_fd_io.lef ...
-WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
-The NOWIREEXTENSIONATPIN statement will be ignored. See file lef/sky130_fd_io.lef at line 2.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__hvclampv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_amuxsplitv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_amuxsplitv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_analog_pad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_analog_pad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
+Loading LEF file lef/IO/sky130_fd_io__corner_bus_overlay.lef ...
+
+Loading LEF file lef/IO/sky130_fd_io__top_gpio_ovtv2.lef ...
 **WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_gpio_ovtv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
 Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'pwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'nwell' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_gpiov2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_gpiovrefv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
-Type 'man IMPLF-63' for more detail.
+
+Loading LEF file lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef ...
 **WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_ground_hvc_wpad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
 Type 'man IMPLF-63' for more detail.
-**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_ground_lvc_wpad' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+
+Loading LEF file lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef ...
+**WARN: (IMPLF-63):	The layer 'li1' referenced in OBS in macro 'sky130_fd_io__top_power_hvc_wpadv2' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
 Type 'man IMPLF-63' for more detail.
-**WARN: (EMS-27):	Message (IMPLF-63) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-**WARN: (IMPLF-201):	Pin 'PAD_A_ESD_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef at line 1013.
+**WARN: (IMPLF-201):	Pin 'P_PAD' in macro 'sky130_fd_io__top_power_hvc_wpadv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'PAD_A_ESD_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'P_PAD' in macro 'sky130_fd_io__top_power_hvc_wpadv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'FILT_IN_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'TIE_WEAK_HI_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'G_PAD' in macro 'sky130_fd_io__top_ground_hvc_wpad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'TIE_WEAK_HI_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'G_PAD' in macro 'sky130_fd_io__top_ground_hvc_wpad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'PULLUP_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'PULLUP_H' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'ANALOG_EN' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'TIE_LO_ESD' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'TIE_HI_ESD' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'ANALOG_POL' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'ANALOG_SEL' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'HLD_OVR' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'HYS_TRIM' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'IN' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'INP_DIS' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'PAD' in macro 'sky130_fd_io__top_xres4v2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'amuxbus_b' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'IN_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_b' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'OE_N' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'amuxbus_a' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_a' in macro 'sky130_fd_io__top_vrefcapv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_b' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'amuxbus_a' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'vohref' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'voutref_dft' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_1_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD_A_ESD_0_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_1_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'PAD_A_ESD_0_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-200):	Pin 'vinref_dft' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD_A_ESD_1_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD_A_ESD_1_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_1_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'PAD_A_NOESD_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_1_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'PAD_A_NOESD_H' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_0_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'TIE_HI_ESD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_0_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'TIE_LO_ESD' in macro 'sky130_fd_io__top_gpio_ovtv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_esd_0_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-200):	Pin 'pad_a_esd_0_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-200' for more detail.
-**WARN: (IMPLF-201):	Pin 'pad_a_noesd_h<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-**WARN: (IMPLF-201):	Pin 'pad_a_noesd_h<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'tie_lo_esd<0>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'tie_lo_esd<1>' in macro 'sky130_fd_io__top_sio_macro' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'tie_lo_esd' in macro 'sky130_fd_io__top_pwrdetv2' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_fd_io__top_power_lvc_wpad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_fd_io__top_power_lvc_wpad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
-Type 'man IMPLF-201' for more detail.
-**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
 
 ##  Check design process and node:  
 ##  Both design process and tech node are not set.
 
-Loading view definition file from Fabric.view
+Loading view definition file from Fabric1.view
 Reading MAX_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib' ...
 Read 109 cells in library 'sky130_ss_1.62_125' 
 Reading MIN_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
 Read 109 cells in library 'sky130_ff_1.98_0' 
-*** End library_loading (cpu=0.01min, real=0.00min, mem=32.0M, fe_cpu=0.38min, fe_real=2.12min, fe_mem=1478.9M) ***
-#% Begin Load netlist data ... (date=11/24 19:03:52, mem=1481.1M)
-*** Begin netlist parsing (mem=1478.9M) ***
+*** End library_loading (cpu=0.01min, real=0.00min, mem=34.0M, fe_cpu=0.41min, fe_real=2.70min, fe_mem=1476.8M) ***
+#% Begin Load netlist data ... (date=12/07 18:29:39, mem=1471.0M)
+*** Begin netlist parsing (mem=1476.8M) ***
 Created 109 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist 'SRC/post_synth_fabric_netlist.v'
+**WARN: (IMPVL-321):	The cell sky130_fd_io__top_power_hvc_wpadv2 is defined in netlist and also in lef file, so instance, instead of hinstance, will be created for the module instantiation.
+**WARN: (IMPVL-321):	The cell sky130_fd_io__top_ground_hvc_wpad is defined in netlist and also in lef file, so instance, instead of hinstance, will be created for the module instantiation.
 
-*** Memory Usage v#1 (Current mem = 1489.859M, initial mem = 635.109M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1489.9M) ***
-#% End Load netlist data ... (date=11/24 19:03:52, total cpu=0:00:00.1, real=0:00:00.0, peak res=1500.2M, current mem=1500.2M)
+*** Memory Usage v#1 (Current mem = 1485.836M, initial mem = 635.109M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1485.8M) ***
+#% End Load netlist data ... (date=12/07 18:29:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1489.9M, current mem=1489.9M)
 Top level cell is fpga_top.
 Hooked 218 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -267,17 +200,18 @@ No recursion found.
 Building hierarchical netlist for Cell fpga_top ...
 ***** UseNewTieNetMode *****.
 *** Netlist is unique.
-** info: there are 975 modules.
+** info: there are 954 modules.
 ** info: there are 11552 stdCell insts.
-** info: there are 32 Pad insts.
+** info: there are 44 Pad insts.
 
-*** Memory Usage v#1 (Current mem = 1551.773M, initial mem = 635.109M) ***
+*** Memory Usage v#1 (Current mem = 1548.250M, initial mem = 635.109M) ***
 Initializing I/O assignment ...
 Adjusting Core to Left to: 0.1000. Core to Bottom to: 0.1000.
 Start create_tracks
 Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+Pre-connect netlist-defined P/G connections...
 Extraction setup Started 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
 Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
@@ -326,116 +260,21 @@ Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
 Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
 *Info: initialize multi-corner CTS.
-Reading timing constraints file 'SDC/global_ports.sdc' ...
-Current (total cpu=0:00:25.0, real=0:02:09, peak res=1950.1M, current mem=1950.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/global_ports.sdc, Line 10).
+Reading timing constraints file 'SDC/genus.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:00:27.0, real=0:02:44, peak res=1940.7M, current mem=1940.7M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/genus.default_emulate_constraint_mode.sdc, Line 9).
 
-INFO (CTE): Reading of timing constraints file SDC/global_ports.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1951.8M, current mem=1951.8M)
-Current (total cpu=0:00:25.0, real=0:02:09, peak res=1951.8M, current mem=1951.8M)
-Reading timing constraints file 'SDC/cbx_1__0_.sdc' ...
-Current (total cpu=0:00:25.1, real=0:02:09, peak res=1951.8M, current mem=1951.8M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__0_.sdc, Line 10).
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/genus.default_emulate_constraint_mode.sdc, Line 10).
 
-INFO (CTE): Reading of timing constraints file SDC/cbx_1__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1993.1M, current mem=1993.1M)
-Current (total cpu=0:00:25.1, real=0:02:09, peak res=1993.1M, current mem=1993.1M)
-Reading timing constraints file 'SDC/cbx_1__1_.sdc' ...
-Current (total cpu=0:00:25.1, real=0:02:09, peak res=1993.1M, current mem=1993.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/cbx_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1993.2M, current mem=1993.2M)
-Current (total cpu=0:00:25.2, real=0:02:09, peak res=1993.2M, current mem=1993.2M)
-Reading timing constraints file 'SDC/cby_0__1_.sdc' ...
-Current (total cpu=0:00:25.2, real=0:02:09, peak res=1993.2M, current mem=1993.2M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_0__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/cby_0__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1993.9M, current mem=1993.8M)
-Current (total cpu=0:00:25.3, real=0:02:09, peak res=1993.9M, current mem=1993.8M)
-Reading timing constraints file 'SDC/cby_1__1_.sdc' ...
-Current (total cpu=0:00:25.3, real=0:02:09, peak res=1993.9M, current mem=1993.8M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_1__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/cby_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1994.3M, current mem=1994.3M)
-Current (total cpu=0:00:25.4, real=0:02:10, peak res=1994.3M, current mem=1994.3M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_clb_.sdc' ...
-Current (total cpu=0:00:25.4, real=0:02:10, peak res=1994.3M, current mem=1994.3M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_clb_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_clb_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.5, real=0:00:00.0, peak res=1995.1M, current mem=1995.1M)
-Current (total cpu=0:00:25.9, real=0:02:10, peak res=1995.1M, current mem=1995.1M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle.sdc' ...
-Current (total cpu=0:00:25.9, real=0:02:10, peak res=1995.1M, current mem=1995.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1995.5M, current mem=1995.5M)
-Current (total cpu=0:00:26.0, real=0:02:10, peak res=1995.5M, current mem=1995.5M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc' ...
-Current (total cpu=0:00:26.0, real=0:02:10, peak res=1995.5M, current mem=1995.5M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1995.9M, current mem=1995.9M)
-Current (total cpu=0:00:26.0, real=0:02:10, peak res=1995.9M, current mem=1995.9M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc' ...
-Current (total cpu=0:00:26.1, real=0:02:10, peak res=1995.9M, current mem=1995.9M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1996.2M, current mem=1996.2M)
-Current (total cpu=0:00:26.1, real=0:02:10, peak res=1996.2M, current mem=1996.2M)
-Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc' ...
-Current (total cpu=0:00:26.1, real=0:02:10, peak res=1996.2M, current mem=1996.2M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1996.6M, current mem=1996.6M)
-Current (total cpu=0:00:26.2, real=0:02:10, peak res=1996.6M, current mem=1996.6M)
-Reading timing constraints file 'SDC/logical_tile_io_mode_io_.sdc' ...
-Current (total cpu=0:00:26.2, real=0:02:10, peak res=1996.6M, current mem=1996.6M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_io_mode_io_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/logical_tile_io_mode_io_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1996.9M, current mem=1996.9M)
-Current (total cpu=0:00:26.2, real=0:02:10, peak res=1996.9M, current mem=1996.9M)
-Reading timing constraints file 'SDC/sb_0__0_.sdc' ...
-Current (total cpu=0:00:26.3, real=0:02:10, peak res=1996.9M, current mem=1996.9M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__0_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_0__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1997.3M, current mem=1997.3M)
-Current (total cpu=0:00:26.3, real=0:02:10, peak res=1997.3M, current mem=1997.3M)
-Reading timing constraints file 'SDC/sb_0__1_.sdc' ...
-Current (total cpu=0:00:26.3, real=0:02:10, peak res=1997.3M, current mem=1997.3M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_0__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1997.7M, current mem=1997.7M)
-Current (total cpu=0:00:26.4, real=0:02:11, peak res=1997.7M, current mem=1997.7M)
-Reading timing constraints file 'SDC/sb_1__0_.sdc' ...
-Current (total cpu=0:00:26.4, real=0:02:11, peak res=1997.7M, current mem=1997.7M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__0_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_1__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1998.1M, current mem=1998.1M)
-Current (total cpu=0:00:26.5, real=0:02:11, peak res=1998.1M, current mem=1998.1M)
-Reading timing constraints file 'SDC/sb_1__1_.sdc' ...
-Current (total cpu=0:00:26.5, real=0:02:11, peak res=1998.1M, current mem=1998.1M)
-**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__1_.sdc, Line 10).
-
-INFO (CTE): Reading of timing constraints file SDC/sb_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1998.7M, current mem=1998.6M)
-Current (total cpu=0:00:26.5, real=0:02:11, peak res=1998.7M, current mem=1998.6M)
-Reading timing constraints file 'SDC/disable_configurable_memory_outputs.sdc' ...
-Current (total cpu=0:00:26.6, real=0:02:11, peak res=1998.7M, current mem=1998.6M)
+fpga_top
+INFO (CTE): Reading of timing constraints file SDC/genus.default_emulate_constraint_mode.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.3, real=0:00:00.0, peak res=1988.4M, current mem=1988.4M)
+Current (total cpu=0:00:27.2, real=0:02:45, peak res=1988.4M, current mem=1988.4M)
+Reading timing constraints file 'SDC/genus.dont_touch.sdc' ...
+Current (total cpu=0:00:27.3, real=0:02:45, peak res=1988.4M, current mem=1988.4M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1999.4M, current mem=1999.4M)
-Current (total cpu=0:00:26.6, real=0:02:11, peak res=1999.4M, current mem=1999.4M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1988.5M, current mem=1988.5M)
+Current (total cpu=0:00:27.4, real=0:02:45, peak res=1988.5M, current mem=1988.5M)
 Total number of combinational cells: 87
 Total number of sequential cells: 19
 Total number of tristate cells: 3
@@ -459,549 +298,122 @@ List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X4 DLY4X4
 Total number of identified usable delay cells: 4
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_power_hvc_wpadv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_ground_hvc_wpad; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
 **WARN: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_gpio_ovtv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
 Type 'man IMPSYC-2' for more detail.
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
-WARNING   IMPLF-63            35  The layer '%s' referenced %s is not foun...
-WARNING   IMPLF-200           95  Pin '%s' in macro '%s' has no ANTENNAGAT...
-WARNING   IMPLF-201           82  Pin '%s' in macro '%s' has no ANTENNADIF...
-WARNING   IMPSYC-2             1  Timing information is not defined for ce...
-WARNING   TCLCMD-1461         15  Skipped unsupported command: %s          
-*** Message Summary: 228 warning(s), 0 error(s)
+WARNING   IMPLF-63             3  The layer '%s' referenced %s is not foun...
+WARNING   IMPLF-200           14  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201           10  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPSYC-2             3  Timing information is not defined for ce...
+WARNING   IMPVL-321            2  The cell %s is defined in netlist and al...
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+*** Message Summary: 34 warning(s), 0 error(s)
 
-<CMD> floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+<CMD> zoomBox -623.51600 -368.55700 2180.94100 2142.03100
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
 Start create_tracks
 Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
-<CMD> loadIoFile IO_PAD.io
-Reading IO assignment file "IO_PAD.io" ...
-<CMD> setDesignMode -process 130
-##  Process: 130           (User Set)               
-##     Node: (not set)                           
-
-##  Check design process and node:  
-##  Design tech node is not set.
-
-Applying the recommended capacitance filtering threshold values for 130nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.4.
-	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
-	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
-	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
-	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-11552 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-11552 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDDIO -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSIO -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSD -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDDA -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSA -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDD -type pgpin -pin P_CORE -override -verbose -netlistOverride
-3 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin G_CORE -override -verbose -netlistOverride
-2 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDDIO'.
-<CMD> globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VDDIO_Q'.
-<CMD> globalNetConnect VDDIA -type pgpin -pin VDDIA -override -verbose -netlistOverride
-**ERROR: (IMPDB-1216):	The global net 'VDDIA' specified in the global net connection(GNC) rule doesn't exist in the design.
-Type 'man IMPDB-1216' for more detail.
-<CMD> globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VCCD'.
-<CMD> globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VSWITCH'.
-<CMD> globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
-44 new pwr-pin connections were made to global net 'VCCHIB'.
-<CMD> globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSA'.
-<CMD> globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSD'.
-<CMD> globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSIO_Q'.
-<CMD> globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
-44 new gnd-pin connections were made to global net 'VSSIO'.
-<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 5 bottom 5 left 5 right 5} -spacing {top 5 bottom 5 left 5 right 5} -offset {top 20 bottom 20 left 20 right 20} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-#% Begin addRing (date=11/24 19:41:40, mem=2233.5M)
-
-
-viaInitial starts at Sun Nov 24 19:41:40 2024
-viaInitial ends at Sun Nov 24 19:41:40 2024
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Ring generation is complete.
-vias are now being generated.
-addRing created 8 wires.
-ViaGen created 8 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |        4       |       NA       |
-|  via4  |        8       |        0       |
-|  met5  |        4       |       NA       |
-+--------+----------------+----------------+
-#% End addRing (date=11/24 19:41:40, total cpu=0:00:00.0, real=0:00:00.0, peak res=2236.4M, current mem=2236.4M)
-<CMD> addStripe -nets {VDD VSS} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 120 -start_from left -start_offset 120 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
-#% Begin addStripe (date=11/24 19:41:40, mem=2236.4M)
-
-Initialize fgc environment(mem: 2257.4M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Starting stripe generation ...
-Non-Default Mode Option Settings :
-  NONE
-Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2257.4M)
-Stripe generation is complete.
-vias are now being generated.
-addStripe created 24 wires.
-ViaGen created 48 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |       24       |       NA       |
-|  via4  |       48       |        0       |
-+--------+----------------+----------------+
-#% End addStripe (date=11/24 19:41:40, total cpu=0:00:00.0, real=0:00:00.0, peak res=2237.6M, current mem=2237.6M)
-<CMD> setPlaceMode -fp false
+<CMD> deselectAll
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+<CMD> zoomBox -666.41300 -533.73800 2632.94900 2419.89500
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> zoomBox -531.32300 -426.17900 2273.13500 2084.41000
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+<CMD> zoomBox -595.34800 -601.60500 2704.01600 2352.03000
+<CMD> zoomBox -531.32500 -426.18000 2273.13500 2084.41000
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> zoomBox -326.16000 -312.44200 2057.63100 1821.56000
+<CMD> zoomBox -151.77000 -215.76400 1874.45200 1598.13700
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__6/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+<CMD> deselectAll
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+<CMD> deselectAll
+<CMD> selectInst grid_io_top_1__2_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+<CMD> zoomBox -161.48400 -399.86900 2222.30700 1734.13300
+<CMD> zoomBox -172.91300 -615.91800 2631.54800 1894.67300
 <CMD> fit
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-*** Begin SPECIAL ROUTE on Sun Nov 24 19:42:38 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "VDD VSS"
-routeSpecial set to true
-srouteBlockPin set to "useLef"
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectConverterPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
-srouteFollowCorePinEnd set to 3
-srouteFollowPadPin set to false
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3764.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 121 macros, 17 used
-Read in 60 components
-  12 core components: 12 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 2 routed
-Read in 469 terminals
-2 nets selected.
-
-Begin power routing ...
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSS net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
-CPU time for VDD FollowPin 0 seconds
-CPU time for VSS FollowPin 0 seconds
-  Number of IO ports routed: 0
-  Number of Block ports routed: 0
-  Number of Stripe ports routed: 0
-  Number of Core ports routed: 754
-  Number of Power Bump ports routed: 0
-  Number of Followpin connections: 377
-End power routing: cpu: 0:00:00, real: 0:00:01, peak: 3766.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
-Pin and blockage extraction finished
-
-sroute created 1131 wires.
-ViaGen created 2262 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met1  |      1131      |       NA       |
-|   via  |       754      |        0       |
-|  via2  |       754      |        0       |
-|  via3  |       754      |        0       |
-+--------+----------------+----------------+
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-*** Begin SPECIAL ROUTE on Sun Nov 24 19:45:47 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH"
-routeSpecial set to true
-srouteBlockPin set to "useLef"
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectConverterPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
-srouteFollowCorePinEnd set to 3
-srouteFollowPadPin set to false
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3766.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 121 macros, 17 used
-Read in 60 components
-  12 core components: 12 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 2 routed
-Read in 469 terminals
-12 nets selected.
-
-Begin power routing ...
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the P_CORE net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the P_CORE net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the P_CORE net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net P_CORE. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VCCD net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VCCD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VCCD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VCCD. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VCCHIB net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VCCHIB net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VCCHIB net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VCCHIB. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDDA net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDDA net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDDA net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDDA. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDDIO net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDDIO net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDDIO net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDDIO. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDDIO_Q net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDDIO_Q net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDDIO_Q net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VDDIO_Q. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSWITCH net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSWITCH net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSWITCH net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSWITCH. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the G_CORE net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the G_CORE net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the G_CORE net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net G_CORE. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSA net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSA net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSA net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSA. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSD net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSD. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSIO net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSIO net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSIO net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSIO. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSSIO_Q net.
- Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
-**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSSIO_Q net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
-**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSSIO_Q net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net VSSIO_Q. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net P_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net P_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCHIB.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VCCHIB.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO_Q.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDDIO_Q.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSWITCH.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSWITCH.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net G_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net G_CORE.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSA.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSSD.
-Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
-**WARN: (EMS-27):	Message (IMPSR-468) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-CPU time for P_CORE FollowPin 0 seconds
-CPU time for VCCD FollowPin 0 seconds
-CPU time for VCCHIB FollowPin 0 seconds
-CPU time for VDDA FollowPin 0 seconds
-CPU time for VDDIO FollowPin 0 seconds
-CPU time for VDDIO_Q FollowPin 0 seconds
-CPU time for VSWITCH FollowPin 0 seconds
-CPU time for G_CORE FollowPin 0 seconds
-CPU time for VSSA FollowPin 0 seconds
-CPU time for VSSD FollowPin 0 seconds
-CPU time for VSSIO FollowPin 0 seconds
-CPU time for VSSIO_Q FollowPin 0 seconds
-  Number of IO ports routed: 0
-  Number of Block ports routed: 0
-  Number of Stripe ports routed: 0
-  Number of Core ports routed: 0
-  Number of Power Bump ports routed: 0
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3767.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...
-sroute created 0 wire.
-ViaGen created 0 via, deleted 0 via to avoid violation.
-<CMD> zoomBox -584.65900 -299.08700 2478.07500 2442.71400
-<CMD> zoomBox -242.33000 -105.93300 2360.99400 2224.59800
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Sun Nov 24 19:46:25 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.22.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "G_CORE P_CORE VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH"
-routeSpecial set to true
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectBlockPin set to false
-srouteConnectConverterPin set to false
-srouteConnectCorePin set to false
-srouteConnectPadPin set to false
-srouteConnectStripe set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFollowCorePinEnd set to 3
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3767.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 16 macros, 16 used
-Read in 60 components
-  12 core components: 12 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 14 special nets, 2 routed
-Read in 469 terminals
-12 nets selected.
-
-Begin power routing ...
-  Number of Pad ports routed: 0
-  Number of Pad Ring connections: 1066
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3775.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...
-sroute created 1066 wires.
-ViaGen created 0 via, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |       584      |       NA       |
-|  met5  |       482      |       NA       |
-+--------+----------------+----------------+
-<CMD> zoomBox 1886.13200 1928.23000 2172.39600 1766.57500
-<CMD> zoomBox 1895.58500 1740.95200 2102.41200 1926.10600
-<CMD> zoomBox 1902.71300 1757.06400 2052.14600 1890.83800
-<CMD> zoomBox 1905.49700 1763.35600 2032.51500 1877.06400
-<CMD> zoomBox 1915.89400 1775.62200 2007.66400 1857.77600
-<CMD> zoomBox 1921.32500 1780.71500 1999.33000 1850.54600
-<CMD> zoomBox 1925.94100 1785.04400 1992.24600 1844.40100
-<CMD> zoomBox 1929.86500 1788.72300 1986.22500 1839.17700
-<CMD> zoomBox 1933.20100 1791.85100 1981.10700 1834.73700
-<CMD> zoomBox 1940.49500 1798.69100 1969.91500 1825.02800
-<CMD> zoomBox 1937.65400 1796.30600 1972.26600 1827.29100
-<CMD> zoomBox 1934.31200 1793.50100 1975.03200 1829.95400
-<CMD> zoomBox 1930.38000 1790.20100 1978.28600 1833.08700
-<CMD> selectWire 1957.1050 1802.3950 1958.7500 1824.9350 5 VSSA
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
 <CMD> deselectAll
-<CMD> selectWire 1960.3500 1802.3950 1964.8000 1824.9350 5 VSSD
-<CMD> deselectAll
-<CMD> selectWire 1966.4000 1802.3950 1975.4000 1824.9350 5 VSSA
-<CMD> zoomBox 1925.51200 1787.37900 1981.87300 1837.83400
-<CMD> zoomBox 1919.78600 1784.05900 1986.09300 1843.41800
-<CMD> zoomBox 1913.05000 1780.15400 1991.05800 1849.98800
-<CMD> zoomBox 1900.69100 1775.52400 1992.46500 1857.68100
-<CMD> zoomBox 1869.04500 1763.66800 1996.06700 1877.38000
-<CMD> zoomBox 1825.24400 1747.25800 2001.05300 1904.64500
+<CMD> zoomBox 1044.85200 554.33300 1392.72500 261.08500
 <CMD> fit
-<CMD> zoomBox 1902.97100 1682.37900 2152.19000 1618.39100
-<CMD> zoomBox 1921.40100 1568.80400 2101.46200 1729.99700
-<CMD> deselectAll
-<CMD> selectInst grid_io_right_2__1_/logical_tile_io_mode_io__5/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-<CMD> zoomBox 1907.87600 1561.52800 2119.71300 1751.16700
-<CMD> zoomBox 1891.96500 1552.96800 2141.18500 1776.07300
-<CMD> zoomBox 1873.24600 1542.89700 2166.44600 1805.37400
-<CMD> zoomBox 1851.22300 1531.04900 2196.16500 1839.84600
-<CMD> zoomBox 1716.78800 1458.72400 2377.58900 2050.28200
-<CMD> deselectAll
-<CMD> zoomBox 1637.43800 1415.12600 2414.85100 2111.07700
-<CMD> zoomBox 1544.08400 1363.83500 2458.68800 2182.60100
-<CMD> zoomBox 1434.25500 1303.49200 2510.26100 2266.74700
+<CMD> zoomBox 323.80500 421.90800 1507.53700 1481.60100
+<CMD> zoomBox 447.38500 535.38100 1453.55700 1436.12000
+<CMD> zoomBox 552.42800 631.83300 1407.67400 1397.46100
+<CMD> zoomBox 178.41600 288.41000 1571.04300 1535.10800
+<CMD> zoomBox 0.37600 196.52900 1638.76100 1663.23300
+<CMD> zoomBox -189.63200 144.91300 1737.87900 1870.44700
+<CMD> zoomBox -413.17100 84.18800 1854.48900 2114.22800
+<CMD> zoomBox -683.92400 51.57300 1983.91200 2439.85600
+<CMD> zoomBox -413.17200 84.18700 1854.48900 2114.22800
+<CMD> zoomBox -183.03200 111.90900 1744.48000 1837.44400
+<CMD> zoomBox -396.45000 40.62300 1871.21100 2070.66400
+<CMD> zoomBox -201.95300 110.58900 1725.55900 1836.12400
+<CMD> zoomBox 103.89100 220.61000 1496.52000 1467.31000
+<CMD> zoomBox -36.63300 170.05900 1601.75400 1636.76500
+<CMD> zoomBox -396.45200 40.62100 1871.21200 2070.66400
+<CMD> zoomBox -625.27200 -41.69200 2042.56800 2346.59400
 <CMD> fit
-<CMD> zoomBox 1320.33800 220.74500 1643.64900 96.13600
-<CMD> zoomBox 1323.34900 33.73700 1598.16400 279.75500
-<CMD> zoomBox 1328.08500 65.20800 1526.63900 242.95600
-<CMD> zoomBox 1329.93400 77.49900 1498.70500 228.58500
-<CMD> zoomBox 1332.84200 96.82600 1454.77900 205.98600
-<CMD> zoomBox 1328.44400 92.56700 1471.89900 220.99000
-<CMD> zoomBox 1323.26900 87.55600 1492.04000 238.64200
-<CMD> zoomBox 1317.18100 81.66100 1515.73500 259.40900
-<CMD> zoomBox 1310.01900 74.72500 1543.61200 283.84100
-<CMD> zoomBox 1291.68000 56.96700 1614.99300 346.40100
-<CMD> zoomBox 1280.01700 45.67400 1660.38600 386.18500
-<CMD> zoomBox 1250.15500 16.75600 1776.61800 488.05300
-<CMD> pan -14.30300 -1312.40300
-<CMD> zoomBox 1331.20100 211.54000 1382.28100 -10.48700
-<CMD> zoomBox 1285.35000 40.27200 1437.66400 176.62600
-<CMD> zoomBox 1271.57900 24.58900 1450.77300 185.00600
-<CMD> zoomBox 1236.32000 -15.56700 1484.34000 206.46400
-<CMD> zoomBox 1255.76400 16.77500 1466.58100 205.50100
-<CMD> zoomBox 1286.64200 66.42200 1438.95700 202.77600
-<CMD> zoomBox 1298.70100 85.81100 1428.16900 201.71200
-<CMD> zoomBox 1308.97600 102.26600 1419.02400 200.78200
-<CMD> zoomBox 1317.26200 108.54400 1410.80300 192.28300
-<CMD> selectInst pad_pwr3
-<CMD> zoomBox 1282.51200 90.14300 1434.83000 226.50000
-<CMD> fit
-<CMD> zoomBox 1815.40800 2170.71300 2020.84500 1857.50600
-<CMD> zoomBox 1768.78700 1868.50300 2066.17600 2134.73000
-<CMD> zoomBox 1687.08000 1810.00300 2171.33000 2243.51000
-<CMD> zoomBox 1721.28400 1824.94400 2132.89700 2193.42500
-<CMD> zoomBox 1750.35800 1837.64400 2100.22900 2150.85300
-<CMD> zoomBox 1813.93200 1865.41300 2028.79600 2057.76200
-<CMD> zoomBox 1829.10800 1872.04200 2011.74300 2035.53900
-<CMD> zoomBox 1843.49700 1876.01100 1998.73700 2014.98400
-<CMD> zoomBox 1855.72700 1879.38500 1987.68100 1997.51200
-<CMD> zoomBox 1846.99100 1873.39000 2002.23100 2012.36300
-<CMD> zoomBox 1836.71300 1866.33700 2019.34900 2029.83500
-<CMD> zoomBox 1824.62200 1858.04000 2039.48700 2050.39000
-<CMD> zoomBox 1810.39700 1848.27900 2063.17900 2074.57300
-<CMD> zoomBox 1723.55700 1788.68900 2207.81000 2222.19900
-<CMD> zoomBox 1609.40400 1710.35700 2397.93000 2416.25600
-<CMD> zoomBox 1714.14100 1764.42400 2283.85100 2274.43600
-<CMD> deselectAll
-<CMD> selectInst Corner_TR
-<CMD> deselectAll
-<CMD> selectInst Corner_TR
-<CMD> deselectAll
-<CMD> selectInst Corner_TR
+<CMD> selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio

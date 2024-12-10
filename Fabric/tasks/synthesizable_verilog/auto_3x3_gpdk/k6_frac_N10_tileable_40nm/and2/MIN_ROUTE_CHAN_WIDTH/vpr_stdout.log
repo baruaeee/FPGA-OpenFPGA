@@ -27,7 +27,7 @@ mode 'io[physical]' is defined by user to be disabled in packing
 mode 'fle[physical]' is defined by user to be disabled in packing
 mode 'fabric[default]' is defined by user to be disabled in packing
 mode 'frac_logic[default]' is defined by user to be disabled in packing
-# Loading Architecture Description took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Loading Architecture Description took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 
 Timing analysis: ON
 Circuit netlist file: and2.net
@@ -146,10 +146,10 @@ AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
 AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
 
 # Building complex block graph
-# Building complex block graph took 0.02 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Building complex block graph took 0.02 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 Circuit file: and2.blif
 # Load circuit
-# Load circuit took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Load circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 # Clean circuit
 Absorbed 0 LUT buffers
 Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
@@ -159,11 +159,11 @@ Swept output(s)     : 0 (0 dangling, 0 constant)
 Swept net(s)        : 0
 Swept block(s)      : 0
 Constant Pins Marked: 0
-# Clean circuit took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Clean circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 # Compress circuit
-# Compress circuit took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Compress circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 # Verify circuit
-# Verify circuit took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Verify circuit took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 Circuit Statistics:
   Blocks: 4
     .input :       2
@@ -179,7 +179,7 @@ Circuit Statistics:
   Timing Graph Nodes: 6
   Timing Graph Edges: 5
   Timing Graph Levels: 4
-# Build Timing Graph took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Build Timing Graph took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 Netlist contains 0 clocks
 # Load Timing Constraints
 
@@ -190,7 +190,7 @@ Setting default timing constraints:
 Timing constraints created 1 clocks
   Constrained Clock 'virtual_io_clock' (Virtual Clock)
 
-# Load Timing Constraints took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Load Timing Constraints took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 # Packing
 Begin packing 'and2.blif'.
 
@@ -213,11 +213,11 @@ Logic Element (fle) detailed count:
   LEs used for logic only             : 1
   LEs used for registers only         : 0
 
-Incr Slack updates 1 in 2.585e-06 sec
-Full Max Req/Worst Slack updates 1 in 6.343e-06 sec
+Incr Slack updates 1 in 3.006e-06 sec
+Full Max Req/Worst Slack updates 1 in 7.374e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 1.953e-06 sec
+Full Criticality updates 1 in 2.385e-06 sec
 FPGA sized to 3 x 3 (auto)
 Device Utilization: 0.15 (target 1.00)
 	Block Utilization: 0.09 Type: io
@@ -236,14 +236,14 @@ Absorbed logical nets 0 out of 3 nets, 3 nets not absorbed.
 
 Netlist conversion complete.
 
-# Packing took 0.00 seconds (max_rss 18.0 MiB, delta_rss +0.0 MiB)
+# Packing took 0.00 seconds (max_rss 17.9 MiB, delta_rss +0.0 MiB)
 # Load packing
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'and2.net'.
 Detected 0 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.027745 seconds).
+Finished loading packed FPGA netlist file (took 0.027039 seconds).
 Warning 6: Treated 0 constant nets as global which will not be routed (to see net names increase packer verbosity).
-# Load packing took 0.03 seconds (max_rss 51.4 MiB, delta_rss +33.4 MiB)
+# Load packing took 0.03 seconds (max_rss 51.6 MiB, delta_rss +33.8 MiB)
 Warning 7: Netlist contains 0 global net to non-global architecture pin connections
 
 Pb types usage...
@@ -277,30 +277,30 @@ Device Utilization: 0.15 (target 1.00)
 	Physical Tile clb:
 	Block Utilization: 1.00 Logical Block: clb
 
-## Build Device Grid took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Build Device Grid took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Warning 8: Tileable routing resource graph does not support clock modeling yet! Related options are ignored...
 ## Build tileable routing resource graph
 X-direction routing channel width is 20
 Y-direction routing channel width is 20
-## Build tileable routing resource graph took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Build tileable routing resource graph took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
   RR Graph Nodes: 291
   RR Graph Edges: 557
-# Create Device took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Create Device took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 # Computing router lookahead map
 ## Computing wire lookahead
-## Computing wire lookahead took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Computing wire lookahead took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Computing src/opin lookahead
 Warning 9: Found no more sample locations for SOURCE in io
 Warning 10: Found no more sample locations for OPIN in io
 Warning 11: Found no more sample locations for SOURCE in clb
 Warning 12: Found no more sample locations for OPIN in clb
-## Computing src/opin lookahead took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
-# Computing router lookahead map took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Computing placement delta delay look-up
 RR graph channel widths unchanged, skipping RR graph rebuild
 Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
-# Computing placement delta delay look-up took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Computing placement delta delay look-up took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Bounding box mode is Cube
 
@@ -309,7 +309,7 @@ Warning 14: CHANY place cost fac is 0 at -1 -1
 # Placement
 ## Initial Placement
 Initial placement iteration 0 has finished successfully
-## Initial Placement took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Initial Placement took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Using simple RL 'Softmax agent' for choosing move and block types
 
 There are 3 point to point connections in this circuit.
@@ -345,7 +345,7 @@ Tnum   Time       T Av Cost Av BB Cost Av TD Cost     CPD       sTNS     sWNS Ac
 ---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
    1    0.0 2.8e-04   0.974       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         3  0.200
    2    0.0 0.0e+00   1.000       0.45 3.9141e-10   0.672     -0.672   -0.672   0.333  0.0000    2.0     1.00         6  0.950
-## Placement Quench took 0.00 seconds (max_rss 51.8 MiB)
+## Placement Quench took 0.00 seconds (max_rss 51.9 MiB)
 post-quench CPD = 0.67231 (ns) 
 
 BB estimate of min-dist (placement) wire length: 9
@@ -400,15 +400,15 @@ io                 Uniform                66.67            66.67           33.33
                    Feasible Region        11.11            0.00            0.00           100.00       
 
 
-Placement Quench timing analysis took 1.3616e-05 seconds (6.473e-06 STA, 7.143e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
-Placement Total  timing analysis took 0.000126374 seconds (5.8442e-05 STA, 6.7932e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
+Placement Quench timing analysis took 5.079e-06 seconds (2.244e-06 STA, 2.835e-06 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 4.4685e-05 seconds (2.7062e-05 STA, 1.7623e-05 slack) (4 full updates: 4 setup, 0 hold, 0 combined).
 update_td_costs: connections 0 nets 0 sum_nets 0 total 0
-# Placement took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
-Incr Slack updates 4 in 1.3054e-05 sec
-Full Max Req/Worst Slack updates 2 in 7.043e-06 sec
-Incr Max Req/Worst Slack updates 2 in 4.049e-06 sec
-Incr Criticality updates 2 in 4.358e-06 sec
-Full Criticality updates 2 in 3.0288e-05 sec
+# Placement took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+Incr Slack updates 4 in 5.24e-06 sec
+Full Max Req/Worst Slack updates 2 in 2.876e-06 sec
+Incr Max Req/Worst Slack updates 2 in 1.594e-06 sec
+Incr Criticality updates 2 in 1.752e-06 sec
+Full Criticality updates 2 in 2.274e-06 sec
 
 # Routing
 RR graph channel widths unchanged, skipping RR graph rebuild
@@ -424,7 +424,7 @@ Initial Net Connection Criticality Histogram:
 [      0.7:      0.8) 0 (  0.0%) |
 [      0.8:      0.9) 0 (  0.0%) |
 [      0.9:        1) 3 (100.0%) |*************************************************
-## Initializing router criticalities took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Initializing router criticalities took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
 Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
       (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
@@ -446,26 +446,26 @@ Final Net Connection Criticality Histogram:
 [      0.9:        1) 3 (100.0%) |*************************************************
 Router Stats: total_nets_routed: 3 total_connections_routed: 3 total_heap_pushes: 50 total_heap_pops: 44 
 Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
-# Routing took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Routing took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Checking to ensure routing is legal...
 # Checking to ensure non-configurable edges are legal
-# Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Completed routing consistency check successfully.
 
 Serial number (magic cookie) for the routing is: -26992
 Circuit successfully routed with a channel width factor of 20.
-Incr Slack updates 2 in 1.3297e-05 sec
-Full Max Req/Worst Slack updates 1 in 3.626e-06 sec
-Incr Max Req/Worst Slack updates 1 in 2.505e-06 sec
+Incr Slack updates 2 in 2.975e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.202e-06 sec
+Incr Max Req/Worst Slack updates 1 in 1.033e-06 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 2 in 6.552e-06 sec
+Full Criticality updates 2 in 2.305e-06 sec
 # Synchronize the packed netlist to routing optimization
 ## Annotating rr_node with routed nets
-## Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Found 2 mismatches between routing and packing results.
 Fixed 1 routing traces due to mismatch between routing and packing results.
-# Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Final Clustering Statistics: 
 ----------   --------   ------------------------------------   --------------------------
 Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
@@ -576,14 +576,14 @@ Final setup slack histogram:
 Final geomean non-virtual intra-domain period: nan ns (nan MHz)
 Final fanout-weighted geomean non-virtual intra-domain period: nan ns (nan MHz)
 
-Incr Slack updates 1 in 4.729e-06 sec
-Full Max Req/Worst Slack updates 1 in 2.685e-06 sec
+Incr Slack updates 1 in 2.165e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.112e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 2.685e-06 sec
-Flow timing analysis took 0.000305299 seconds (0.000177921 STA, 0.000127378 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
+Full Criticality updates 1 in 1.172e-06 sec
+Flow timing analysis took 0.000125161 seconds (7.6546e-05 STA, 4.8615e-05 slack) (8 full updates: 5 setup, 0 hold, 3 combined).
 VPR succeeded
-The entire flow of VPR took 0.12 seconds (max_rss 51.8 MiB)
+The entire flow of VPR took 0.10 seconds (max_rss 51.9 MiB)
 
 Command line to execute: read_openfpga_arch -f /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/arch/k6frN10_std_mx_gsclib45lvt_openfpga_synthesizable.xml
 
@@ -594,14 +594,14 @@ Read OpenFPGA architecture
 Warning 16: Automatically set circuit model 'frac_lut6' to be default in its type.
 Warning 17: Automatically set circuit model 'DFFSRHQX1LVT' to be default in its type.
 Warning 18: Automatically set circuit model 'DFFRX1LVT' to be default in its type.
-Warning 19: Automatically set circuit model 'GPIO' to be default in its type.
+Warning 19: Automatically set circuit model 'PADDB' to be default in its type.
 Use the default configurable memory model 'DFFRX1LVT' for circuit model 'mux_tree' port 'sram')
 Use the default configurable memory model 'DFFRX1LVT' for circuit model 'mux_tree_tapbuf' port 'sram')
 Use the default configurable memory model 'DFFRX1LVT' for circuit model 'frac_lut6' port 'sram')
-Read OpenFPGA architecture took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Read OpenFPGA architecture took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Check circuit library
 Checking circuit library passed.
-Check circuit library took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Check circuit library took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Found 0 errors when checking configurable memory circuit models!
 Found 0 errors when checking configuration protocol!
 Found 0 errors when checking tile annotation!
@@ -612,7 +612,7 @@ Confirm selected options when call command 'read_openfpga_simulation_setting':
 --file, -f: /home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml
 Reading XML simulation setting '/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_simulation_settings/auto_sim_openfpga.xml'...
 Read OpenFPGA simulation settings
-Read OpenFPGA simulation settings took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Read OpenFPGA simulation settings took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: link_openfpga_arch --activity_file and2_ace_out.act --sort_gsb_chan_node_in_edges
 
@@ -622,7 +622,7 @@ Confirm selected options when call command 'link_openfpga_arch':
 --verbose: off
 Link OpenFPGA architecture to VPR architecture
 # Build fast look-up for physical tile pins
-# Build fast look-up for physical tile pins took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build fast look-up for physical tile pins took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Building annotation for physical modes in pb_type...Done
 Check physical mode annotation for pb_types passed.
@@ -644,20 +644,20 @@ Binded 2 routing resource graph switches to circuit models
 Binded 1 routing segments to circuit models
 Binded 0 direct connections to circuit models
 # Annotating rr_node with routed nets
-# Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Annotating rr_node with routed nets took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Loaded node-to-net mapping
 Annotating previous nodes for rr_node...Warning 20: Override the previous node 'IPIN:120 side: (RIGHT,) (1,1,0)' by previous node 'IPIN:117 side: (RIGHT,) (1,1,0)' for node 'SINK:84  (1,1,0)' with in routing context annotation!
 Done with 0 nodes mapping
 Built 557 incoming edges for routing resource graph
 # Build General Switch Block(GSB) annotation on top of routing resource graph
 [25%] Backannotated GSB[0][0][50%] Backannotated GSB[0][1][75%] Backannotated GSB[1][0][100%] Backannotated GSB[1][1]Backannotated 4 General Switch Blocks (GSBs).
-# Build General Switch Block(GSB) annotation on top of routing resource graph took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build General Switch Block(GSB) annotation on top of routing resource graph took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Sort incoming edges for each routing track output node of General Switch Block(GSB)
 [25%] Sorted incoming edges for each routing track output node of GSB[0][0][50%] Sorted incoming edges for each routing track output node of GSB[0][1][75%] Sorted incoming edges for each routing track output node of GSB[1][0][100%] Sorted incoming edges for each routing track output node of GSB[1][1]Sorted incoming edges for each routing track output node of 4 General Switch Blocks (GSBs).
-# Sort incoming edges for each routing track output node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Sort incoming edges for each routing track output node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Sort incoming edges for each input pin node of General Switch Block(GSB)
 [25%] Sorted incoming edges for each input pin node of GSB[0][0][50%] Sorted incoming edges for each input pin node of GSB[0][1][75%] Sorted incoming edges for each input pin node of GSB[1][0][100%] Sorted incoming edges for each input pin node of GSB[1][1]Sorted incoming edges for each input pin node of 4 General Switch Blocks (GSBs).
-# Sort incoming edges for each input pin node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Sort incoming edges for each input pin node of General Switch Block(GSB) took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build a library of physical multiplexers
 Built a multiplexer library of 6 physical multiplexers.
 Maximum multiplexer size is 64.
@@ -667,26 +667,26 @@ Maximum multiplexer size is 64.
 	model 'mux_tree', input_size='61'
 	model 'mux_tree', input_size='3'
 	model 'frac_lut6', input_size='64'
-# Build a library of physical multiplexers took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build a library of physical multiplexers took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build the annotation about direct connection between tiles
 Built 0 tile-to-tile direct connections
-# Build the annotation about direct connection between tiles took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build the annotation about direct connection between tiles took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Building annotation for post-routing and clustering synchornization results...Done
 Building annotation for mapped blocks on grid locations...Done
 User specified the operating clock frequency to use VPR results
 Use VPR critical path delay 1.77717e-18 [ns] with a 20 [%] slack in OpenFPGA.
-Incr Slack updates 1 in 3.978e-06 sec
-Full Max Req/Worst Slack updates 1 in 2.886e-06 sec
+Incr Slack updates 1 in 1.883e-06 sec
+Full Max Req/Worst Slack updates 1 in 1.152e-06 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 3.006e-06 sec
+Full Criticality updates 1 in 1.272e-06 sec
 Will apply operating clock frequency 562.692 [MHz] to simulations
 User specified the number of operating clock cycles to be inferred from signal activities
 Average net density: 0.42
 Median net density: 0.00
 Average net density after weighting: 0.42
 Will apply 2 operating clock cycles to simulations
-Link OpenFPGA architecture to VPR architecture took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Link OpenFPGA architecture to VPR architecture took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: check_netlist_naming_conflict --fix --report ./netlist_renaming.xml
 
@@ -696,14 +696,14 @@ Confirm selected options when call command 'check_netlist_naming_conflict':
 Check naming violations of netlist blocks and nets
 Fixed 1 naming conflicts in the netlist.
 Naming fix-up report is generated to file './netlist_renaming.xml'
-Check naming violations of netlist blocks and nets took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Check naming violations of netlist blocks and nets took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: lut_truth_table_fixup
 
 Confirm selected options when call command 'lut_truth_table_fixup':
 --verbose: off
 Fix up LUT truth tables after packing optimization
-Fix up LUT truth tables after packing optimization took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Fix up LUT truth tables after packing optimization took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: build_fabric --compress_routing
 
@@ -720,55 +720,55 @@ Confirm selected options when call command 'build_fabric':
 --verbose: off
 Identify unique General Switch Blocks (GSBs)
 Detected 4 unique general switch blocks from a total of 4 (compression rate=0.00%)
-Identify unique General Switch Blocks (GSBs) took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Identify unique General Switch Blocks (GSBs) took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 
 Build fabric module graph
 # Build constant generator modules
-# Build constant generator modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build constant generator modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build user-defined modules
-# Build user-defined modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build user-defined modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build essential (inverter/buffer/logic gate) modules
-# Build essential (inverter/buffer/logic gate) modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build essential (inverter/buffer/logic gate) modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build local encoder (for multiplexers) modules
-# Build local encoder (for multiplexers) modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build local encoder (for multiplexers) modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Building multiplexer modules
-# Building multiplexer modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Building multiplexer modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build Look-Up Table (LUT) modules
-# Build Look-Up Table (LUT) modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build Look-Up Table (LUT) modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build wire modules
-# Build wire modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build wire modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build memory modules
-# Build memory modules took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build memory modules took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build grid modules
 Building logical tiles...Done
 Building physical tiles...Done
-# Build grid modules took 0.01 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build grid modules took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build unique routing modules...
-# Build unique routing modules... took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Build unique routing modules... took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 # Build FPGA fabric module
 ## Add grid instances to top module
-## Add grid instances to top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add grid instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add switch block instances to top module
-## Add switch block instances to top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add switch block instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add connection block instances to top module
-## Add connection block instances to top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add connection block instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add connection block instances to top module
-## Add connection block instances to top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add connection block instances to top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add module nets between grids and GSBs
-## Add module nets between grids and GSBs took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add module nets between grids and GSBs took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add module nets for inter-tile connections
-## Add module nets for inter-tile connections took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add module nets for inter-tile connections took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Build configurable regions for the top module
-## Build configurable regions for the top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Build configurable regions for the top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 ## Add module nets for configuration buses
-## Add module nets for configuration buses took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
-# Build FPGA fabric module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
-Build fabric module graph took 0.02 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+## Add module nets for configuration buses took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+# Build FPGA fabric module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
+Build fabric module graph took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Create I/O location mapping for top module
-Create I/O location mapping for top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Create I/O location mapping for top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Create global port info for top module
-Create global port info for top module took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Create global port info for top module took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_fabric_hierarchy --file ./fabric_hierarchy.txt
 
@@ -782,7 +782,7 @@ Confirm selected options when call command 'write_fabric_hierarchy':
 Warning 21: Directory '.' already exists. Will overwrite contents
 Write fabric hierarchy to plain-text file './fabric_hierarchy.txt'
 Outputted 1 modules as root
-Write fabric hierarchy to plain-text file './fabric_hierarchy.txt' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write fabric hierarchy to plain-text file './fabric_hierarchy.txt' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: repack
 
@@ -791,18 +791,18 @@ Confirm selected options when call command 'repack':
 --ignore_global_nets_on_pins: off
 --verbose: off
 Build routing resource graph for the physical implementation of logical tile
-Build routing resource graph for the physical implementation of logical tile took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Build routing resource graph for the physical implementation of logical tile took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Repack clustered blocks to physical implementation of logical tile
 Repack clustered block 'c'...Done
 Repack clustered block 'out:c'...Done
 Repack clustered block 'a'...Done
 Repack clustered block 'b'...Done
-Repack clustered blocks to physical implementation of logical tile took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Repack clustered blocks to physical implementation of logical tile took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Identify wire LUTs created by repacking
 Identified 0 wire LUTs created by repacker
-Identify wire LUTs created by repacking took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Identify wire LUTs created by repacking took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Build truth tables for physical LUTs
-Build truth tables for physical LUTs took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Build truth tables for physical LUTs took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: build_architecture_bitstream --verbose --write_file fabric_independent_bitstream.xml
 
@@ -918,38 +918,38 @@ Added 6 bits to 'mem_fle_9_in_3' under 'logical_tile_clb_mode_clb__0'
 Added 6 bits to 'mem_fle_9_in_4' under 'logical_tile_clb_mode_clb__0'
 Added 6 bits to 'mem_fle_9_in_5' under 'logical_tile_clb_mode_clb__0'
 Done
-Generating bitstream for I/O grids...Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
-Added 1 bits to 'GPIO_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Generating bitstream for I/O grids...Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
+Added 1 bits to 'PADDB_DFFRX1LVT_mem' under 'logical_tile_io_mode_physical__iopad_0'
 Done
 Done
 Building routing bitstream...
@@ -1530,23 +1530,23 @@ Done
 Decoded 1458 configuration bits into 403 blocks
 
 Build fabric-independent bitstream for implementation 'and2'
- took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Overwrite Bitstream
 
 
 Overwrite Bitstream
- took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Warning 22: Directory path is empty and nothing will be created.
 Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml'
-Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.01 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write 1458 architecture independent bitstream into XML file 'fabric_independent_bitstream.xml' took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Build non-fabric bitstream for implementation 'and2'
 
 Done
 
 Build non-fabric bitstream for implementation 'and2'
- took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: build_fabric_bitstream --verbose
 
@@ -1615,76 +1615,76 @@ Try to find a configurable block corresponding to module 'mem_top_ipin_6' in FPG
 Try to find a configurable block corresponding to module 'mem_top_ipin_7' in FPGA fabric under its parent block 'cbx_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_bottom_1__0_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_right_2__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_top_1__2_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'mem_right_track_0' in FPGA fabric under its parent block 'sb_0__1_'
 Try to find a configurable block corresponding to module 'mem_right_track_2' in FPGA fabric under its parent block 'sb_0__1_'
 Try to find a configurable block corresponding to module 'mem_right_track_4' in FPGA fabric under its parent block 'sb_0__1_'
@@ -1725,28 +1725,28 @@ Try to find a configurable block corresponding to module 'mem_right_ipin_6' in F
 Try to find a configurable block corresponding to module 'mem_right_ipin_7' in FPGA fabric under its parent block 'cby_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__0' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__0'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__1' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__1'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__2' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__2'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__3' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__3'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__4' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__4'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__5' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__5'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__6' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__6'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_io__7' in FPGA fabric under its parent block 'grid_io_left_0__1_'
 Try to find a configurable block corresponding to module 'logical_tile_io_mode_physical__iopad_0' in FPGA fabric under its parent block 'logical_tile_io_mode_io__7'
-Try to find a configurable block corresponding to module 'GPIO_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
+Try to find a configurable block corresponding to module 'PADDB_DFFRX1LVT_mem' in FPGA fabric under its parent block 'logical_tile_io_mode_physical__iopad_0'
 Try to find a configurable block corresponding to module 'mem_bottom_track_1' in FPGA fabric under its parent block 'sb_1__1_'
 Try to find a configurable block corresponding to module 'mem_bottom_track_3' in FPGA fabric under its parent block 'sb_1__1_'
 Try to find a configurable block corresponding to module 'mem_bottom_track_5' in FPGA fabric under its parent block 'sb_1__1_'
@@ -1947,7 +1947,7 @@ Try to find a configurable block corresponding to module 'mem_fle_9_in_5' in FPG
 Built 1458 configuration bits for fabric
 
 Build fabric dependent bitstream
- took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+ took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_fabric_bitstream --file fabric_bitstream.bit --format plain_text
 
@@ -1965,7 +1965,7 @@ Confirm selected options when call command 'write_fabric_bitstream':
 --verbose: off
 Warning 23: Directory path is empty and nothing will be created.
 Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit'
-Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write 1458 fabric bitstream into plain text file 'fabric_bitstream.bit' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_fabric_verilog --file ./SRC --explicit_port_mapping --include_timing --print_user_defined_template --verbose
 
@@ -2032,7 +2032,7 @@ Building physical tiles...Done
 Writing Verilog netlist for top-level module of FPGA fabric './SRC/fpga_top.v'...Done
 Written 47 Verilog modules in total
 Write Verilog netlists for FPGA fabric
- took 0.03 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+ took 0.03 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_full_testbench --file ./SRC --reference_benchmark_file_path and2_output_verilog.v --include_signal_init --explicit_port_mapping --bitstream fabric_bitstream.bit
 
@@ -2058,9 +2058,9 @@ Write Verilog full testbenches for FPGA fabric
 Warning 24: Directory './SRC' already exists. Will overwrite contents
 # Write autocheck testbench for FPGA top-level Verilog netlist for 'and2'
 Will use 1459 configuration clock cycles to top testbench
-# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.04 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+# Write autocheck testbench for FPGA top-level Verilog netlist for 'and2' took 0.04 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write Verilog full testbenches for FPGA fabric
- took 0.04 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+ took 0.04 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_pnr_sdc --file ./SDC
 
@@ -2083,19 +2083,19 @@ Confirm selected options when call command 'write_pnr_sdc':
 --verbose: off
 Succeed to create directory './SDC'
 Write SDC for constraining clocks for P&R flow './SDC/global_ports.sdc'
-Write SDC for constraining clocks for P&R flow './SDC/global_ports.sdc' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC for constraining clocks for P&R flow './SDC/global_ports.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC to disable configurable memory outputs for P&R flow './SDC/disable_configurable_memory_outputs.sdc'
-Write SDC to disable configurable memory outputs for P&R flow './SDC/disable_configurable_memory_outputs.sdc' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC to disable configurable memory outputs for P&R flow './SDC/disable_configurable_memory_outputs.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC to disable routing multiplexer outputs for P&R flow './SDC/disable_routing_multiplexer_outputs.sdc'
-Write SDC to disable routing multiplexer outputs for P&R flow './SDC/disable_routing_multiplexer_outputs.sdc' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC to disable routing multiplexer outputs for P&R flow './SDC/disable_routing_multiplexer_outputs.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC to disable switch block outputs for P&R flow './SDC/disable_sb_outputs.sdc'
-Write SDC to disable switch block outputs for P&R flow './SDC/disable_sb_outputs.sdc' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC to disable switch block outputs for P&R flow './SDC/disable_sb_outputs.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC for constrain Switch Block timing for P&R flow
-Write SDC for constrain Switch Block timing for P&R flow took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC for constrain Switch Block timing for P&R flow took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC for constrain Connection Block timing for P&R flow
-Write SDC for constrain Connection Block timing for P&R flow took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC for constrain Connection Block timing for P&R flow took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 Write SDC for constraining grid timing for P&R flow
-Write SDC for constraining grid timing for P&R flow took 0.01 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC for constraining grid timing for P&R flow took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_sdc_disable_timing_configure_ports --file ./SDC/disable_configure_ports.sdc
 
@@ -2106,7 +2106,7 @@ Confirm selected options when call command 'write_sdc_disable_timing_configure_p
 --verbose: off
 Warning 25: Directory './SDC' already exists. Will overwrite contents
 Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc'
-Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc' took 0.00 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Write SDC to disable timing on configuration outputs of programmable cells for P&R flow './SDC/disable_configure_ports.sdc' took 0.00 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: write_analysis_sdc --file ./SDC_analysis
 
@@ -2118,7 +2118,7 @@ Confirm selected options when call command 'write_analysis_sdc':
 --no_time_stamp: off
 Succeed to create directory './SDC_analysis'
 Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc'
-Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc' took 0.01 seconds (max_rss 51.8 MiB, delta_rss +0.0 MiB)
+Generating SDC for Timing/Power analysis on the mapped FPGA './SDC_analysis/and2_fpga_top_analysis.sdc' took 0.01 seconds (max_rss 51.9 MiB, delta_rss +0.0 MiB)
 
 Command line to execute: exit
 
@@ -2126,6 +2126,6 @@ Confirm selected options when call command 'exit':
 
 Finish execution with 0 errors
 
-The entire OpenFPGA flow took 0.25787 seconds
+The entire OpenFPGA flow took 0.227945 seconds
 
 Thank you for using OpenFPGA!

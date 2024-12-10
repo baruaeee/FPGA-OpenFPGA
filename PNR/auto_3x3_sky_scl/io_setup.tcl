@@ -8,7 +8,7 @@ floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 
 setDesignMode -process 130
 
-loadIoFile IO_PAD.io
+loadIoFile IO_PAD_corner_edited.io
 
 ## IO filler
 # no IO filler cell in sky 130

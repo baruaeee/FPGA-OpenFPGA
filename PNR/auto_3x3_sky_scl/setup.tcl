@@ -5,7 +5,8 @@ floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
 
-loadIoFile IO_PAD.io
+#loadIoFile IO_PAD.io
+loadIoFile IO_PAD_corner_edited.io
 
 ## IO filler
 # no IO filler cell in sky 130
@@ -16,24 +17,28 @@ setDesignMode -process 130
 globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
 globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
 
-globalNetConnect VDD -type pgpin -pin VDDIO -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSIO -override -verbose -netlistOverride
+globalNetConnect P_CORE -type pgpin -pin VDD -override -verbose -netlistOverride
+globalNetConnect G_CORE -type pgpin -pin VSS -override -verbose -netlistOverride
 
-globalNetConnect VSS -type pgpin -pin VSSD -override -verbose -netlistOverride
+globalNetConnect AMUXBUS_A -type pgpin -pin AMUXBUS_A -override -verbose -netlistOverride
+globalNetConnect AMUXBUS_B -type pgpin -pin AMUXBUS_B -override -verbose -netlistOverride
+globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
+globalNetConnect VDDA -type pgpin -pin VDDA -override -verbose -netlistOverride
+globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
+globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
+globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
+globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
 
-globalNetConnect VDD -type pgpin -pin VSWITCH -override -verbose -netlistOverride
+globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
+globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
+globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
+globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
 
-globalNetConnect VDD -type pgpin -pin VDDA -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSA -override -verbose -netlistOverride
-
-globalNetConnect VDD -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-
-#globalNetConnect VDD -type pgpin -pin P_CORE -override -verbose -netlistOverride
-#globalNetConnect VSS -type pgpin -pin G_CORE -override -verbose -netlistOverride
+globalNetConnect P_CORE -type pgpin -pin P_CORE -override -verbose -netlistOverride
+globalNetConnect G_CORE -type pgpin -pin G_CORE -override -verbose -netlistOverride
 
 ## Add Power Ring
-addRing -nets {VDD VSS} \
+addRing -nets {P_CORE G_CORE} \
 	-type core_rings \
 	-follow core \
 	-layer {top met5 bottom met5 left met4 right met4} \
@@ -45,21 +50,28 @@ addRing -nets {VDD VSS} \
 	-jog_distance 0 \
 	-snap_wire_center_to_grid None
 
-## Add Special Route
-sroute -connect { blockPin padPin corePin floatingStripe } \
+## Add Special Route in Core
+sroute -connect { corePin floatingStripe } \
 	-layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } \
 	-padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } \
 	-corePinTarget { firstAfterRowEnd } \
 	-floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } \
 	-allowJogging 1 \
 	-crossoverViaLayerRange { met1(1) met5(5) } \
-	-nets { VSS VDD } \
+	-nets { P_CORE G_CORE } \
 	-allowLayerChange 1 \
 	-blockPin useLef \
 	-targetViaLayerRange { met1(1) met5(5) }
 
+## Add Special Route in PAD Ring
+sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+
+## Add Special Route between PADs and Power Ring
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+
 ## Add Power Stripes
-addStripe -nets {VDD VSS} \
+addStripe -nets {P_CORE G_CORE} \
 	-layer met4 \
 	-direction vertical \
 	-width 5 -spacing 5 \
