@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sat Dec  7 18:27:13 2024                
+#  Created on Sun Dec 15 03:01:27 2024                
 #                                                     
 #######################################################
 
@@ -70,7 +70,7 @@ set enc_enable_print_mode_command_reset_options 1
 set init_design_uniquify 1
 set init_gnd_net {VSS VSSA VSSD VSSIO_Q VSSIO G_CORE}
 set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/IO/sky130_fd_io__corner_bus_overlay.lef lef/IO/sky130_fd_io__top_gpio_ovtv2.lef lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef}
-set init_mmmc_file Fabric1.view
+set init_mmmc_file Fabric.view
 set init_original_verilog_files SRC/comb_fabric.v
 set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B}
 set init_verilog SRC/post_synth_fabric_netlist.v
@@ -94,50 +94,60 @@ set init_lef_check_antenna 1
 set init_verilog_tolerate_port_mismatch 0
 set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
+set init_mmmc_file Fabric1.view
 init_design
 loadIoFile Multi_Row_IO_PAD.io
-selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-zoomBox -623.51600 -368.55700 2180.94100 2142.03100
 floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-deselectAll
 loadIoFile Multi_Row_IO_PAD.io
-zoomBox -666.41300 -533.73800 2632.94900 2419.89500
 floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-zoomBox -531.32300 -426.17900 2273.13500 2084.41000
-loadIoFile Multi_Row_IO_PAD.io
-zoomBox -595.34800 -601.60500 2704.01600 2352.03000
-zoomBox -531.32500 -426.18000 2273.13500 2084.41000
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-zoomBox -326.16000 -312.44200 2057.63100 1821.56000
-zoomBox -151.77000 -215.76400 1874.45200 1598.13700
-selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__6/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-deselectAll
-selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-loadIoFile Multi_Row_IO_PAD.io
-deselectAll
-selectInst grid_io_top_1__2_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
-zoomBox -161.48400 -399.86900 2222.30700 1734.13300
-zoomBox -172.91300 -615.91800 2631.54800 1894.67300
+setDesignMode -process 130
+globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
+globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
+globalNetConnect P_CORE -type pgpin -pin VDD -override -verbose -netlistOverride
+globalNetConnect G_CORE -type pgpin -pin VSS -override -verbose -netlistOverride
+globalNetConnect AMUXBUS_A -type pgpin -pin AMUXBUS_A -override -verbose -netlistOverride
+globalNetConnect AMUXBUS_B -type pgpin -pin AMUXBUS_B -override -verbose -netlistOverride
+globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
+globalNetConnect VDDA -type pgpin -pin VDDA -override -verbose -netlistOverride
+globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
+globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
+globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
+globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
+globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
+globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
+globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
+globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
+globalNetConnect P_CORE -type pgpin -pin P_CORE -override -verbose -netlistOverride
+globalNetConnect G_CORE -type pgpin -pin G_CORE -override -verbose -netlistOverride
+addRing -nets {P_CORE G_CORE} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 5 bottom 5 left 5 right 5} -spacing {top 5 bottom 5 left 5 right 5} -offset {top 10 bottom 10 left 10 right 10} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+sroute -connect { corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { P_CORE G_CORE } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
+sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+addStripe -nets {P_CORE G_CORE} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 120 -start_from left -start_offset 110 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 5 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
+setPlaceMode -fp false
+place_design
 fit
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-deselectAll
-zoomBox 1044.85200 554.33300 1392.72500 261.08500
-fit
-zoomBox 323.80500 421.90800 1507.53700 1481.60100
-zoomBox 447.38500 535.38100 1453.55700 1436.12000
-zoomBox 552.42800 631.83300 1407.67400 1397.46100
-zoomBox 178.41600 288.41000 1571.04300 1535.10800
-zoomBox 0.37600 196.52900 1638.76100 1663.23300
-zoomBox -189.63200 144.91300 1737.87900 1870.44700
-zoomBox -413.17100 84.18800 1854.48900 2114.22800
-zoomBox -683.92400 51.57300 1983.91200 2439.85600
-zoomBox -413.17200 84.18700 1854.48900 2114.22800
-zoomBox -183.03200 111.90900 1744.48000 1837.44400
-zoomBox -396.45000 40.62300 1871.21100 2070.66400
-zoomBox -201.95300 110.58900 1725.55900 1836.12400
-zoomBox 103.89100 220.61000 1496.52000 1467.31000
-zoomBox -36.63300 170.05900 1601.75400 1636.76500
-zoomBox -396.45200 40.62100 1871.21200 2070.66400
-zoomBox -625.27200 -41.69200 2042.56800 2346.59400
-fit
-selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+zoomBox 24.38300 -9.95300 1657.54200 1452.07300
+zoomBox 204.07300 48.04200 1592.25800 1290.76400
+zoomBox 24.38300 -9.95300 1657.54200 1452.07300
+zoomBox -187.01700 -78.18300 1734.34700 1641.84800
+timeDesign -preCTS
+optDesign -preCTS
+set_ccopt_property buffer_cells {CKBUFX8 CKBUFX4 CKBUFX2}
+create_ccopt_clock_tree_spec
+get_ccopt_clock_trees *
+create_ccopt_clock_tree_spec
+ccopt_design
+create_clock -name clk[0] -period 1.777171521 -waveform {0 0.8885857605} [get_ports {PAD_clk[0]}]
+man TCLCMD-1048
+ccopt_design
+timeDesign -preCTS
+get_ccopt_clock_trees
+get_ccopt_clock_trees *
+get_ccopt_clock_trees
+report_clocks
+set_ccopt_property buffer_cells {BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8}
+create_ccopt_clock_tree_spec -keep_all_sdc_clocks

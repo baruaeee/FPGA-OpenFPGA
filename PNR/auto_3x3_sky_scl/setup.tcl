@@ -1,12 +1,16 @@
+#loadIoFile IO_PAD.io
+#loadIoFile IO_PAD_corner_edited.io
+loadIoFile Multi_Row_IO_PAD.io
+
+
 ## Specify floorplan
-#floorPlan -coreMarginsBy io -r 1.00 0.71 8 8 8 8
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
 #floorPlan -site 18T -b 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
-floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
+#floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
 
-#loadIoFile IO_PAD.io
-loadIoFile IO_PAD_corner_edited.io
+
 
 ## IO filler
 # no IO filler cell in sky 130
@@ -44,7 +48,7 @@ addRing -nets {P_CORE G_CORE} \
 	-layer {top met5 bottom met5 left met4 right met4} \
 	-width {top 5 bottom 5 left 5 right 5} \
 	-spacing {top 5 bottom 5 left 5 right 5} \
-	-offset {top 20 bottom 20 left 20 right 20} \
+	-offset {top 10 bottom 10 left 10 right 10} \
 	-center 0 \
 	-threshold 0 \
 	-jog_distance 0 \
@@ -77,7 +81,7 @@ addStripe -nets {P_CORE G_CORE} \
 	-width 5 -spacing 5 \
 	-set_to_set_distance 120 \
 	-start_from left \
-	-start_offset 120 \
+	-start_offset 110 \
 	-switch_layer_over_obs false \
 	-max_same_layer_jog_length 2 \
 	-padcore_ring_top_layer_limit met5 \
@@ -104,18 +108,22 @@ setPlaceMode -congEffort auto \
 	-checkRoute 0 -swapEEQ 0
 
 ## config cpu
-setMultiCpuUsage -localCpu 16 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
+setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 
 ## Place STD cells
 setPlaceMode -fp false
-#place_design
+place_design
 
 ## Pre-CTS optimization
-#optDesign -preCTS
+timeDesign -preCTS
+optDesign -preCTS
 
 ## CTS
 ##without specification file
-#create_ccopt_clock_tree_spec ## create specification file from SDC file
+set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8"
+## create specification file from SDC file
+create_ccopt_clock_tree_spec
+#get_ccopt_clock_tree * 
 #ccopt_design
 
 ## Post CTS Optimization

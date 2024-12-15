@@ -1,14 +1,14 @@
 ## Specify floorplan
-#floorPlan -coreMarginsBy io -r 0.99 0.21 98 98 98 98
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
 #floorPlan -site 18T -b 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
-floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
+#floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 #floorPlan -site 18T -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
 
 setDesignMode -process 130
 
-loadIoFile IO_PAD_corner_edited.io
+loadIoFile Multi_Row_IO_PAD.io
 
 ## IO filler
 # no IO filler cell in sky 130
