@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Tue Nov 12 16:28:10 CET 2024
+#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Mon Dec 16 23:52:06 CET 2024
 
 # ####################################################################
 
@@ -11260,27 +11260,3 @@ set_disable_timing -from QN -to Q [get_cells cby_1__1_/mem_right_ipin_9/sky130_o
 set_disable_timing -from RN -to QN [get_cells cby_1__1_/mem_right_ipin_9/sky130_osu_sc_18T_hs__dffr_1_1_]
 set_disable_timing -from CK -to QN [get_cells cby_1__1_/mem_right_ipin_9/sky130_osu_sc_18T_hs__dffr_1_1_]
 set_wire_load_mode "enclosed"
-
-## disable IO pad timing
-
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__6/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__2/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__5/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__4/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_left_0__1_/logical_tile_io_mode_io__1/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__5/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__4/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_right_2__1_/logical_tile_io_mode_io__7/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__6/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__1/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_right_2__1_/logical_tile_io_mode_io__2/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_right_2__1_/logical_tile_io_mode_io__5/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_bottom_1__0_/logical_tile_io_mode_io__2/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-set_disable_timing [get_pins grid_io_right_2__1_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio/PAD]
-

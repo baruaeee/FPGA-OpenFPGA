@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Fri Nov 29 12:53:24 CET 2024
+#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Tue Dec 17 21:08:51 CET 2024
 
 # ####################################################################
 
@@ -12,8 +12,8 @@ set_units -time 1000ps
 # Set the current design
 current_design fpga_top
 
-create_clock -name "clk[0]" -period 1.77717 -waveform {0.0 0.8885858} [get_ports {PAD_clk[0]}]
-create_clock -name "prog_clk[0]" -period 10.0 -waveform {0.0 5.0} [get_ports {PAD_prog_clk[0]}]
+create_clock -name "clk[0]" -period 1.77717 -waveform {0.0 0.8885858} [get_ports {clk[0]}]
+create_clock -name "prog_clk[0]" -period 10.0 -waveform {0.0 5.0} [get_ports {prog_clk[0]}]
 set_max_delay 0.0602 -from [list \
   [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
   [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_11_[0]}]  \

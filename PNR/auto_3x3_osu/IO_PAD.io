@@ -2,20 +2,20 @@
 	version = 3
 	io_order = clockwise
 	space = 20
-	total_edge = 13
+	total_edge = 4
 )
 (iopad
 	(topleft
-		(inst name="Corner_TL"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R180 place_status = fixed)
+		(inst name="Corner_TL"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R90 place_status = fixed)
 	)
 	(topright
-		(inst name="Corner_TR"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R90 place_status = fixed)
+		(inst name="Corner_TR"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R0 place_status = fixed)
 	)
 	(bottomright
-		(inst name="Corner_BR"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R0 place_status = fixed)
+		(inst name="Corner_BR"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R270 place_status = fixed)
 	)
 	(bottomleft
-		(inst name="Corner_BL"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R270 place_status = fixed)
+		(inst name="Corner_BL"	cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R180 place_status = fixed)
 	)
 	
 	(left

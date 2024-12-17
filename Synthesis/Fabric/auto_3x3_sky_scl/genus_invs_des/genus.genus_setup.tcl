@@ -2,7 +2,7 @@
 #
 # Genus(TM) Synthesis Solution setup file
 # Created by Genus(TM) Synthesis Solution 22.13-s093_1
-#   on 11/29/2024 12:53:30
+#   on 12/17/2024 21:09:05
 #
 # This file can only be run in Genus Common UI mode.
 #
@@ -75,8 +75,8 @@ set _cell_area_ [::legacy::get_attribute cell_area design:fpga_top]
 if {[regexp {^-?[0-9.]+$} $_cell_area_]} {
   set _cell_area_ [format %.0f $_cell_area_]
 }
-if {$_cell_area_ != "164175"} {
-   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden cell area: 164175,  current cell area: $_cell_area_"
+if {$_cell_area_ != "163306"} {
+   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden cell area: 163306,  current cell area: $_cell_area_"
 }
 unset _cell_area_
 # net area

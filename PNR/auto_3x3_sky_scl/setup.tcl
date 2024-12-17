@@ -4,12 +4,14 @@ loadIoFile Multi_Row_IO_PAD.io
 
 
 ## Specify floorplan
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-#floorPlan -site 18T -b 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
+#floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+floorPlan -site CoreSite -b 0 0 1670.00 1670.00 430.00 430.00 1240.00 1240.00 460.00 460.00 1210.00 1210.00
 #floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
 
+## Check Floorplan
+#checkDesign -floorplan
 
 
 ## IO filler
@@ -46,8 +48,8 @@ addRing -nets {P_CORE G_CORE} \
 	-type core_rings \
 	-follow core \
 	-layer {top met5 bottom met5 left met4 right met4} \
-	-width {top 5 bottom 5 left 5 right 5} \
-	-spacing {top 5 bottom 5 left 5 right 5} \
+	-width {top 4 bottom 4 left 4 right 4} \
+	-spacing {top 4 bottom 4 left 4 right 4} \
 	-offset {top 10 bottom 10 left 10 right 10} \
 	-center 0 \
 	-threshold 0 \
@@ -73,6 +75,7 @@ sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarge
 ## Add Special Route between PADs and Power Ring
 setSrouteMode -viaConnectToShape { noshape }
 sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+
 
 ## Add Power Stripes
 addStripe -nets {P_CORE G_CORE} \
@@ -122,8 +125,8 @@ optDesign -preCTS
 ##without specification file
 set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8"
 ## create specification file from SDC file
-create_ccopt_clock_tree_spec
-#get_ccopt_clock_tree * 
+#create_ccopt_clock_tree_spec
+#get_ccopt_clock_trees * 
 #ccopt_design
 
 ## Post CTS Optimization
@@ -147,4 +150,10 @@ create_ccopt_clock_tree_spec
 #setNanoRouteMode -quiet -routeWithTimingDriven true
 #setNanoRouteMode -quiet -routeWithSiDriven false
 #routeDesign -globalDetail
+
+## Post Routing
+setDelayCalMode -SIAware false
+setAnalysisMode -analysisType onChipVariation
+timeDesign -postRoute
+optDesign -postRoute
 

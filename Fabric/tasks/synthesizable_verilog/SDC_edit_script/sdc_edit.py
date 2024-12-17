@@ -91,7 +91,8 @@ replacements = {
 	'_out\n': '_out*\n',
 	'_tail\n': '_tail*\n',
 	'/grid_clb/': '/grid_clb_*__*_/',
-	'/grid_io_left/': '/grid_io_left_*__*_/'
+	'/grid_io_left/': '/grid_io_left_*__*_/',
+	' fpga_top/': ' '
 }
 
 multiple_find_and_replace(output_file, replacements)

@@ -3,51 +3,38 @@
 //	Description: Top-level Verilog module for FPGA
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov 21 02:53:53 2024
+//	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 //----- Default net type -----
 `default_nettype none
 
 // ----- Verilog module for fpga_top -----
-module fpga_top(PAD_pReset,
-                PAD_prog_clk,
-                PAD_set,
-                PAD_reset,
-                PAD_clk,
+module fpga_top(pReset,
+                prog_clk,
+                set,
+                reset,
+                clk,
                 gfpga_pad_GPIO_PAD,
-                PAD_ccff_head,
-                PAD_ccff_tail);
+                ccff_head,
+                ccff_tail);
 //----- GLOBAL PORTS -----
-input [0:0] PAD_pReset;
+input [0:0] pReset;
 //----- GLOBAL PORTS -----
-input [0:0] PAD_prog_clk;
+input [0:0] prog_clk;
 //----- GLOBAL PORTS -----
-input [0:0] PAD_set;
+input [0:0] set;
 //----- GLOBAL PORTS -----
-input [0:0] PAD_reset;
+input [0:0] reset;
 //----- GLOBAL PORTS -----
-input [0:0] PAD_clk;
+input [0:0] clk;
 //----- GPIO PORTS -----
 inout [0:31] gfpga_pad_GPIO_PAD;
 //----- INPUT PORTS -----
-input [0:0] PAD_ccff_head;
+input [0:0] ccff_head;
 //----- OUTPUT PORTS -----
-output [0:0] PAD_ccff_tail;
+output [0:0] ccff_tail;
 
 //----- BEGIN wire-connection ports -----
-wire [0:0] pReset;
-//----- GLOBAL PORTS -----
-wire [0:0] prog_clk;
-//----- GLOBAL PORTS -----
-wire [0:0] set;
-//----- GLOBAL PORTS -----
-wire [0:0] reset;
-//----- GLOBAL PORTS -----
-wire [0:0] clk;
-//----- INPUT PORTS -----
-wire [0:0] ccff_head;
-//----- OUTPUT PORTS -----
-wire [0:0] ccff_tail;
 //----- END wire-connection ports -----
 
 
@@ -208,20 +195,28 @@ wire [0:9] sb_1__0__0_chany_top_out;
 wire [0:0] sb_1__1__0_ccff_tail;
 wire [0:9] sb_1__1__0_chanx_left_out;
 wire [0:9] sb_1__1__0_chany_bottom_out;
-//wire p_core, g_core;
 
-// ----- BEGIN Local short connections -----
-//pReset, prog_clk, set, reset, clk, ccff_head, ccff_tail
-	GPIO_IN pad_pReset(.Y(pReset), .PAD(PAD_pReset));
-	GPIO_IN pad_prog_clk(.Y(prog_clk), .PAD(PAD_prog_clk));
-	GPIO_IN pad_set(.Y(set), .PAD(PAD_set));
-	GPIO_IN pad_reset(.Y(reset), .PAD(PAD_reset));
-	GPIO_IN pad_clk(.Y(clk), .PAD(PAD_clk));
-	GPIO_IN pad_ccff_head(.Y(ccff_head), .PAD(PAD_ccff_head));
-// ----- END Local short connections -----
-// ----- BEGIN Local output short connections -----
-	GPIO_OUT pad_ccff_tail(.A(ccff_tail), .PAD(PAD_ccff_tail));
-// ----- END Local output short connections -----
+// Begin adding input and output pads
+// pReset, prog_clk, set, reset, clk, gfpga_pad_GPIO_PAD, ccff_head, ccff_tail
+  wire padin_pReset, padin_prog_clk, padin_set, padin_reset, padin_clk, padin_ccff_head, padin_ccff_tail;
+  wire padout_pReset, padout_prog_clk, padout_set, padout_reset, padout_clk, padout_ccff_head, padout_ccff_tail;
+  
+  assign padout_pReset = pReset;
+  assign padout_prog_clk = prog_clk;
+  assign padout_set = set;
+  assign padout_reset = reset;
+  assign padout_clk = clk;
+  assign padout_ccff_head = ccff_head;
+  assign padout_ccff_tail = ccff_tail;
+
+  GPIO_IN pad_pReset(.Y(padout_pReset), .PAD(padin_pReset));
+  GPIO_IN pad_prog_clk(.Y(padout_prog_clk), .PAD(padin_prog_clk));
+  GPIO_IN pad_set(.Y(padout_set), .PAD(padin_set));
+  GPIO_IN pad_reset(.Y(padout_reset), .PAD(padin_reset));
+  GPIO_IN pad_clk(.Y(padout_clk), .PAD(padin_clk));
+  GPIO_IN pad_ccff_head(.Y(padout_ccff_head), .PAD(padin_ccff_head));
+  GPIO_OUT pad_ccff_tail(.A(padout_ccff_tail), .PAD(padin_ccff_tail));
+// end adding input and output pads
 
 	grid_io_top grid_io_top_1__2_ (
 		.pReset(pReset),
