@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION  "OVI 3.0")
   (DESIGN      "fpga_top")
-  (DATE        "Tue Dec 17 21:08:51 CET 2024")
+  (DATE        "Wed Dec 18 01:59:00 CET 2024")
   (VENDOR      "Cadence, Inc.")
   (PROGRAM     "Genus(TM) Synthesis Solution")
   (VERSION     "22.13-s093_1")
@@ -111937,6 +111937,30 @@
   )
   (CELL
      (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker6)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker7)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker8)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker9)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker10)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
+     (INSTANCE cdn_loop_breaker11)
+  )
+  (CELL
+     (CELLTYPE "CLKBUFX2")
      (INSTANCE cdn_loop_breaker12)
   )
   (CELL
@@ -111946,29 +111970,5 @@
   (CELL
      (CELLTYPE "CLKBUFX2")
      (INSTANCE cdn_loop_breaker14)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker15)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker16)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker17)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker18)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker19)
-  )
-  (CELL
-     (CELLTYPE "CLKBUFX2")
-     (INSTANCE cdn_loop_breaker20)
   )
 )

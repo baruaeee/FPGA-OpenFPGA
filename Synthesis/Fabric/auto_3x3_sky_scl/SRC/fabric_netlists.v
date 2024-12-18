@@ -54,5 +54,5 @@
 // ------ Include tile module netlists -----
 
 // ------ Include fabric top-level netlists -----
-`include "./SRC/fpga_top.v"
-
+//`include "./SRC/fpga_top.v"
+`include "./SRC/fpga_top_pads.v"

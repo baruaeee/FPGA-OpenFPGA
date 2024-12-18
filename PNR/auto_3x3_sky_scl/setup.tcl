@@ -82,7 +82,7 @@ addStripe -nets {P_CORE G_CORE} \
 	-layer met4 \
 	-direction vertical \
 	-width 5 -spacing 5 \
-	-set_to_set_distance 120 \
+	-set_to_set_distance 130 \
 	-start_from left \
 	-start_offset 110 \
 	-switch_layer_over_obs false \
