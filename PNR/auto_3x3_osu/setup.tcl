@@ -138,9 +138,9 @@ create_ccopt_clock_tree_spec
 ccopt_design
 
 ## Post CTS Optimization
-#timeDesign -postCTS
-#optDesign -postCTS
-#timeDesign -postCTS
+timeDesign -postCTS
+optDesign -postCTS
+timeDesign -postCTS
 
 ## Routing
 

@@ -9,30 +9,30 @@
 `default_nettype none
 
 // ----- Verilog module for fpga_top -----
-module fpga_top(padout_pReset,
-                padout_prog_clk,
-                padout_set,
-                padout_reset,
-                padout_clk,
+module fpga_top(pReset,
+                prog_clk,
+                set,
+                reset,
+                clk,
                 gfpga_pad_GPIO_PAD,
-                padout_ccff_head,
-                padout_ccff_tail);
+                ccff_head,
+                ccff_tail);
 //----- GLOBAL PORTS -----
-input [0:0] padout_pReset;
+input [0:0] pReset;
 //----- GLOBAL PORTS -----
-input [0:0] padout_prog_clk;
+input [0:0] prog_clk;
 //----- GLOBAL PORTS -----
-input [0:0] padout_set;
+input [0:0] set;
 //----- GLOBAL PORTS -----
-input [0:0] padout_reset;
+input [0:0] reset;
 //----- GLOBAL PORTS -----
-input [0:0] padout_clk;
+input [0:0] clk;
 //----- GPIO PORTS -----
 inout [0:31] gfpga_pad_GPIO_PAD;
 //----- INPUT PORTS -----
-input [0:0] padout_ccff_head;
+input [0:0] ccff_head;
 //----- OUTPUT PORTS -----
-output [0:0] padout_ccff_tail;
+output [0:0] ccff_tail;
 
 //----- BEGIN wire-connection ports -----
 //----- END wire-connection ports -----
@@ -199,7 +199,7 @@ wire [0:9] sb_1__1__0_chany_bottom_out;
 // Begin adding input and output pads
 // pReset, prog_clk, set, reset, clk, gfpga_pad_GPIO_PAD, ccff_head, ccff_tail
   wire padin_pReset, padin_prog_clk, padin_set, padin_reset, padin_clk, padin_ccff_head, padin_ccff_tail;
-  wire pReset, prog_clk, set, reset, clk, ccff_head, ccff_tail;
+  wire padout_pReset, padout_prog_clk, padout_set, padout_reset, padout_clk, padout_ccff_head, padout_ccff_tail;
   
   assign padout_pReset = pReset;
   assign padout_prog_clk = prog_clk;
