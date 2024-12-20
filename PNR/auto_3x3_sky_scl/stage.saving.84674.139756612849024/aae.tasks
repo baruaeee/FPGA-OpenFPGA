@@ -1,0 +1,64 @@
+tasks:
+  task: 1 rise none
+    event: 0 rise none
+      stage_driver: fpga_top:PADOUT_clk[0]
+      event_input: fpga_top:PADOUT_clk[0]
+      event_analysis_point: taskAP
+      wavelop: BDWavelop
+        wave: 0 1.62 5e-13 1.539 5.25e-13 1.532 7.5e-13 1.41586 1e-12 1.296 1.3e-12 1.16352 1.625e-12 1.0322 1.975e-12 0.903008 2.325e-12 0.784639 2.7e-12 0.667999 3.1e-12 0.553347 3.525e-12 0.440713 4e-12 0.324 4.35e-12 0.243108 4.7e-12 0.165828 5.1e-12 0.0812446 5.5e-12 0
+        measure: MsrRefTime
+          params: 0.81
+          value: 2.25001e-12
+        measure: MsrSlew
+          params: 0.324 1.296 1.66667 0.6
+          value: 5e-12
+    end_event:
+    event: 1 fall none
+      stage_driver: INVX2:Y
+      arc_descriptor: A Y fall rise - -  Timing  0
+      event_input: INVX2:A
+      event_analysis_point: taskAP
+      wavelop: BDWavelop
+        wave: 0 1.62 5e-12 0
+        measure: MsrRefTime
+          params: 0.81
+          value: 2.5e-12
+        measure: MsrSlew
+          params: 0.324 1.296 1.66667 0.6
+          value: 5e-12
+    end_event:
+    out_terms: DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK fpga_top:PADOUT_clk[0] INVX2:Y
+  end_task:
+
+  task: 1 fall none
+    event: 0 fall none
+      stage_driver: fpga_top:PADOUT_clk[0]
+      event_input: fpga_top:PADOUT_clk[0]
+      event_analysis_point: taskAP
+      wavelop: BDWavelop
+        wave: 0 1.62 5e-13 1.539 5.25e-13 1.532 7.5e-13 1.41586 1e-12 1.296 1.3e-12 1.16352 1.625e-12 1.0322 1.975e-12 0.903008 2.325e-12 0.784639 2.7e-12 0.667999 3.1e-12 0.553347 3.525e-12 0.440713 4e-12 0.324 4.35e-12 0.243108 4.7e-12 0.165828 5.1e-12 0.0812446 5.5e-12 0
+        measure: MsrRefTime
+          params: 0.81
+          value: 2.25001e-12
+        measure: MsrSlew
+          params: 0.324 1.296 1.66667 0.6
+          value: 5e-12
+    end_event:
+    event: 1 rise none
+      stage_driver: INVX2:Y
+      arc_descriptor: A Y rise fall - -  Timing  0
+      event_input: INVX2:A
+      event_analysis_point: taskAP
+      wavelop: BDWavelop
+        wave: 0 1.62 5e-12 0
+        measure: MsrRefTime
+          params: 0.81
+          value: 2.5e-12
+        measure: MsrSlew
+          params: 0.324 1.296 1.66667 0.6
+          value: 5e-12
+    end_event:
+    out_terms: DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK DFFSRX1:CK fpga_top:PADOUT_clk[0] INVX2:Y
+  end_task:
+end_tasks:
+

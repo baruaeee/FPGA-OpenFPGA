@@ -1,0 +1,108 @@
+# PPCMD 1 
+# addStripe -nets {P_CORE G_CORE} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 130 -start_from left -start_offset 110 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
+# 6 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 448220 448220 1111520 1109220 0 
+# 456220 456220 1103520 1101220 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# G_CORE 5000 4 0 590220 1093645 130000 0 0 
+# P_CORE 5000 4 0 580220 1093645 130000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addStripe -nets {P_CORE G_CORE} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 130 -start_from left -start_offset 110 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
+# 5 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 448220 448220 1111520 1109220 0 
+# 456220 456220 1103520 1101220 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# G_CORE 5000 4 0 590220 1093645 130000 0 0 
+# P_CORE 5000 4 0 580220 1093645 130000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+# 4 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
+# PPCMD 4 
+# sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+# 3 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 4 
+
+# PPCMD 5 
+# sroute -connect { corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { P_CORE G_CORE } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
+# 2 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 5 
+
+# PPCMD 6 
+# addRing -nets {P_CORE G_CORE} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 4 bottom 4 left 4 right 4} -spacing {top 4 bottom 4 left 4 right 4} -offset {top 10 bottom 10 left 10 right 10} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+# 1 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# G_CORE 4000 5 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 781870 450220 781870 1111220 
+# END_RING_PT_INFO_LIST 
+# G_CORE 4000 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 450220 780720 1113520 780720 
+# END_RING_PT_INFO_LIST 
+# P_CORE 4000 5 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 781870 458220 781870 1103220 
+# END_RING_PT_INFO_LIST 
+# P_CORE 4000 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 458220 780720 1105520 780720 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 6 
+

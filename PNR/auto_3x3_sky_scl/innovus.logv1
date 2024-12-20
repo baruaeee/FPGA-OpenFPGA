@@ -1,0 +1,38 @@
+[12/19 19:42:39      0s] 
+[12/19 19:42:39      0s] Cadence Innovus(TM) Implementation System.
+[12/19 19:42:39      0s] Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+[12/19 19:42:39      0s] 
+[12/19 19:42:39      0s] Version:	v19.11-s128_1, built Tue Aug 20 20:54:34 PDT 2019
+[12/19 19:42:39      0s] Options:	
+[12/19 19:42:39      0s] Date:		Thu Dec 19 19:42:39 2024
+[12/19 19:42:39      0s] Host:		exotic-rhel (x86_64 w/Linux 3.10.0-1160.114.2.el7.x86_64) (2cores*2cpus*Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz 3072KB)
+[12/19 19:42:39      0s] OS:		Red Hat Enterprise Linux Server release 7.9 (Maipo)
+[12/19 19:42:39      0s] 
+[12/19 19:42:39      0s] License:
+[12/19 19:42:39      0s] 		invs	Innovus Implementation System	19.1	checkout succeeded
+[12/19 19:42:39      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[12/19 19:43:14     47s] @(#)CDS: Innovus v19.11-s128_1 (64bit) 08/20/2019 20:54 (Linux 2.6.32-431.11.2.el6.x86_64)
+[12/19 19:43:14     47s] @(#)CDS: NanoRoute 19.11-s128_1 NR190815-2055/19_11-UB (database version 18.20, 469.7.1) {superthreading v1.51}
+[12/19 19:43:14     47s] @(#)CDS: AAE 19.11-s034 (64bit) 08/20/2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+[12/19 19:43:14     47s] @(#)CDS: CTE 19.11-s040_1 () Aug  1 2019 08:53:57 ( )
+[12/19 19:43:14     47s] @(#)CDS: SYNTECH 19.11-e010_1 () Jul 15 2019 20:31:02 ( )
+[12/19 19:43:14     47s] @(#)CDS: CPE v19.11-s006
+[12/19 19:43:14     47s] @(#)CDS: IQuantus/TQuantus 19.1.2-s245 (64bit) Thu Aug 1 10:22:01 PDT 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+[12/19 19:43:14     47s] @(#)CDS: OA 22.60-p020 Mon May 13 19:21:36 2019
+[12/19 19:43:14     47s] @(#)CDS: SGN 18.10-d003 (18-Jul-2018) (64 bit executable, Qt5.9.1)
+[12/19 19:43:14     47s] @(#)CDS: RCDB 11.14.18
+[12/19 19:43:14     47s] @(#)CDS: STYLUS 19.10-s008_1 (06/27/2019 02:55 PDT)
+[12/19 19:43:15     47s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_104303_exotic-rhel_exotic_rdUaGO.
+
+[12/19 19:43:15     47s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[12/19 19:43:17     49s] 
+[12/19 19:43:17     49s] **INFO:  MMMC transition support version v31-84 
+[12/19 19:43:17     49s] 
+[12/19 19:43:17     49s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[12/19 19:43:17     49s] <CMD> suppressMessage ENCEXT-2799
+[12/19 19:43:17     49s] <CMD> win
+[12/19 19:43:26     53s] 
+[12/19 19:43:26     53s] *** Memory Usage v#1 (Current mem = 626.160M, initial mem = 256.797M) ***
+[12/19 19:43:26     53s] *** Message Summary: 0 warning(s), 0 error(s)
+[12/19 19:43:26     53s] 
+[12/19 19:43:26     53s] --- Ending "Innovus" (totcpu=0:00:53.1, real=0:00:47.0, mem=626.2M) ---

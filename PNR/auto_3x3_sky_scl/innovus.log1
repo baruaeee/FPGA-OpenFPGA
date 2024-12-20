@@ -4,7 +4,7 @@ Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v19.11-s128_1, built Tue Aug 20 20:54:34 PDT 2019
 Options:	
-Date:		Thu Dec 19 19:40:41 2024
+Date:		Thu Dec 19 19:42:39 2024
 Host:		exotic-rhel (x86_64 w/Linux 3.10.0-1160.114.2.el7.x86_64) (2cores*2cpus*Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz 3072KB)
 OS:		Red Hat Enterprise Linux Server release 7.9 (Maipo)
 
@@ -19,7 +19,7 @@ The soft stacksize limit is either up to the hard limit or larger than 0.2% of R
 <CMD> suppressMessage ENCEXT-2799
 <CMD> win
 
-*** Memory Usage v#1 (Current mem = 635.238M, initial mem = 264.797M) ***
+*** Memory Usage v#1 (Current mem = 626.160M, initial mem = 256.797M) ***
 *** Message Summary: 0 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:00:58.0, real=0:01:07, mem=635.2M) ---
+--- Ending "Innovus" (totcpu=0:00:53.1, real=0:00:47.0, mem=626.2M) ---
