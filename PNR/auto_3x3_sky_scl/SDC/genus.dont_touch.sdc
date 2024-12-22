@@ -1456,3 +1456,8 @@ set_dont_touch [get_cells cby_1__1_/mem_right_ipin_8/DFFRX1_0_] ; # disabled_arc
 set_dont_touch [get_cells cby_1__1_/mem_right_ipin_8/DFFRX1_1_] ; # disabled_arcs
 set_dont_touch [get_cells cby_1__1_/mem_right_ipin_9/DFFRX1_0_] ; # disabled_arcs
 set_dont_touch [get_cells cby_1__1_/mem_right_ipin_9/DFFRX1_1_] ; # disabled_arcs
+
+
+
+
+

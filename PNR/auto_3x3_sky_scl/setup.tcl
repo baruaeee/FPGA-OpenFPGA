@@ -1,11 +1,14 @@
-#loadIoFile IO_PAD.io
+source fabric_comb_test.globals
+init_design
+
+loadIoFile IO_PAD.io
 #loadIoFile IO_PAD_corner_edited.io
-loadIoFile Multi_Row_IO_PAD.io
+#loadIoFile Multi_Row_IO_PAD.io
 
 
 ## Specify floorplan
-#floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-floorPlan -site CoreSite -b 0 0 1670.00 1670.00 430.00 430.00 1240.00 1240.00 460.00 460.00 1210.00 1210.00
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+#floorPlan -site CoreSite -b 0 0 1670.00 1670.00 430.00 430.00 1240.00 1240.00 460.00 460.00 1210.00 1210.00
 #floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
@@ -123,7 +126,7 @@ optDesign -preCTS
 
 ## CTS
 ##without specification file
-set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8"
+#set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8"
 ## create specification file from SDC file
 #create_ccopt_clock_tree_spec
 #get_ccopt_clock_trees * 
@@ -152,8 +155,8 @@ set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKB
 #routeDesign -globalDetail
 
 ## Post Routing
-setDelayCalMode -SIAware false
-setAnalysisMode -analysisType onChipVariation
-timeDesign -postRoute
-optDesign -postRoute
-
+#setDelayCalMode -SIAware false
+#setAnalysisMode -analysisType onChipVariation
+#timeDesign -postRoute
+#optDesign -postRoute
+#exit

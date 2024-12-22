@@ -10,5 +10,13 @@
 
 
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/mux_fle_*_in_*/out*
-set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/logical_tile_clb_mode_default__fle_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_*/mux_frac_logic_out_*/out*
+
+###### crash cause
+## set_disable_timing [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_0/out[0]}]
+## set_disable_timing [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1/out[0]}]
+##  set_disable_timing [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0/out[0]}]
+
+
+
+
 set_disable_timing grid_clb_*__*_/logical_tile_clb_mode_clb__*/logical_tile_clb_mode_default__fle_*/logical_tile_clb_mode_default__fle_mode_physical__fabric_*/mux_fabric_out_*/out*
