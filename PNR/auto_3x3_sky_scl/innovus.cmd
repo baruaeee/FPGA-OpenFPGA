@@ -1,17 +1,17 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Dec 22 04:44:10 2024                
+#  Created on Mon Dec 23 21:30:51 2024                
 #                                                     
 #######################################################
 
-#@(#)CDS: Innovus v22.33-s094_1 (64bit) 08/25/2023 16:48 (Linux 3.10.0-693.el7.x86_64)
-#@(#)CDS: NanoRoute 22.33-s094_1 NR230808-0153/22_13-UB (database version 18.20.615_1) {superthreading v2.20}
-#@(#)CDS: AAE 22.13-s029 (64bit) 08/25/2023 (Linux 3.10.0-693.el7.x86_64)
-#@(#)CDS: CTE 22.13-s030_1 () Aug 22 2023 02:51:11 ( )
-#@(#)CDS: SYNTECH 22.13-s015_1 () Aug 20 2023 22:21:55 ( )
-#@(#)CDS: CPE v22.13-s082
-#@(#)CDS: IQuantus/TQuantus 21.2.2-s211 (64bit) Tue Jun 20 22:12:10 PDT 2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: Innovus v23.31-s109_1 (64bit) 04/22/2024 16:02 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.31-s109_1 NR240401-0735/23_11-UB (database version 18.20.622_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.11-s030 (64bit) 04/22/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.11-s024_1 () Apr 22 2024 08:03:17 ( )
+#@(#)CDS: SYNTECH 23.11-s010_1 () Apr  5 2024 04:21:08 ( )
+#@(#)CDS: CPE v23.11-s057
+#@(#)CDS: IQuantus/TQuantus 22.1.1-s233 (64bit) Mon Dec 11 23:11:23 PST 2023 (Linux 3.10.0-693.el7.x86_64)
 
 set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
 suppressMessage ENCEXT-2799
@@ -55,7 +55,6 @@ define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill
     {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
 }
 win
-set enc_check_rename_command_name 1
 set ::TimeLib::tsgMarkCellLatchConstructFlag 1
 set conf_qxconf_file NULL
 set conf_qxlib_file NULL
@@ -95,34 +94,20 @@ set init_verilog_tolerate_port_mismatch 0
 set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
 init_design
-loadIoFile IO_PAD.io
+loadIoFile IO_PAD_corner_edited.io
 floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-setDesignMode -process 130
-globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-globalNetConnect P_CORE -type pgpin -pin VDD -override -verbose -netlistOverride
-globalNetConnect G_CORE -type pgpin -pin VSS -override -verbose -netlistOverride
-globalNetConnect AMUXBUS_A -type pgpin -pin AMUXBUS_A -override -verbose -netlistOverride
-globalNetConnect AMUXBUS_B -type pgpin -pin AMUXBUS_B -override -verbose -netlistOverride
-globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
-globalNetConnect VDDA -type pgpin -pin VDDA -override -verbose -netlistOverride
-globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
-globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
-globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
-globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
-globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
-globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-globalNetConnect P_CORE -type pgpin -pin P_CORE -override -verbose -netlistOverride
-globalNetConnect G_CORE -type pgpin -pin G_CORE -override -verbose -netlistOverride
-addRing -nets {P_CORE G_CORE} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 4 bottom 4 left 4 right 4} -spacing {top 4 bottom 4 left 4 right 4} -offset {top 10 bottom 10 left 10 right 10} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-sroute -connect { corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { P_CORE G_CORE } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-addStripe -nets {P_CORE G_CORE} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 130 -start_from left -start_offset 110 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
-setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 5 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
-setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
-setPlaceMode -fp false
-place_design
+loadIoFile Multi_Row_IO_PAD.io
+floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+fit
+zoomBox -39.14900 212.36600 230.76900 -33.01500
+uiSetTool ruler
+uiSetTool select
+fit
+zoomBox -41.60300 256.53400 267.57600 -57.55300
+uiSetTool ruler
+uiSetTool select
+fit
+floorPlan -site CoreSite -b 0 0 1543.665 1543.665 437.33 437.33 1106,335 1106,335 467.33 467.33 1076.335 1076.335
+fit
+zoomBox 95.08000 -38.53800 1707.45000 1404.87700
+fit

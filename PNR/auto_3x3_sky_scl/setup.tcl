@@ -8,7 +8,7 @@ loadIoFile IO_PAD.io
 
 ## Specify floorplan
 floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-#floorPlan -site CoreSite -b 0 0 1670.00 1670.00 430.00 430.00 1240.00 1240.00 460.00 460.00 1210.00 1210.00
+#floorPlan -site CoreSite -b 0 0 1543.665 1543.665 437.33 437.33 1106,335 1106,335 467.33 467.33 1076.335 1076.335
 #floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
 #floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
 # 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245

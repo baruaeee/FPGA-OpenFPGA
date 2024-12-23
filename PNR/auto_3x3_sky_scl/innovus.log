@@ -1,17 +1,17 @@
 
 Cadence Innovus(TM) Implementation System.
-Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
 
-Version:	v22.33-s094_1, built Fri Aug 25 16:48:21 PDT 2023
+Version:	v23.31-s109_1, built Mon Apr 22 16:02:43 PDT 2024
 Options:	
-Date:		Sun Dec 22 04:43:53 2024
+Date:		Mon Dec 23 21:30:30 2024
 Host:		ei-vm-011 (x86_64 w/Linux 4.18.0-553.30.1.el8_10.x86_64) (24cores*24cpus*AMD Ryzen Threadripper PRO 5965WX 24-Cores 512KB)
 OS:		Red Hat Enterprise Linux 8.10 (Green Obsidian)
 
 License:
-		[04:43:53.434076] Configured Lic search path (21.01-s002): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+		[21:30:30.483148] Configured Lic search path (23.02-s005): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
-		invs	Innovus Implementation System	22.1	checkout succeeded
+		invs	Innovus Implementation System	23.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
 Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_size_limit to change the value.
 
@@ -27,7 +27,7 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
         {-window_size "window size in microns" "" string optional}
     
     }
-[INFO] Loading Pegasus 23.11 fill procedures
+[INFO] Loading Pegasus 24.10 fill procedures
 <CMD> define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
     {-fillInfo "Design Fill data" "" list required}
 				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
@@ -60,7 +60,6 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
     {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
 }
 <CMD> win
-<CMD> set enc_check_rename_command_name 1
 <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
 <CMD> set conf_qxconf_file NULL
 <CMD> set conf_qxlib_file NULL
@@ -100,8 +99,8 @@ Change the soft stacksize limit to 0.2%RAM (256 mbytes). Set global soft_stack_s
 <CMD> set lefdefInputCheckColoredShape 0
 <CMD> set load_netlist_ignore_undefined_cell 1
 <CMD> init_design
-#% Begin Load MMMC data ... (date=12/22 04:45:00, mem=1449.2M)
-#% End Load MMMC data ... (date=12/22 04:45:00, total cpu=0:00:00.0, real=0:00:00.0, peak res=1450.5M, current mem=1450.5M)
+#% Begin Load MMMC data ... (date=12/23 21:37:12, mem=1881.5M)
+#% End Load MMMC data ... (date=12/23 21:37:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=1882.1M, current mem=1882.1M)
 RC_CORNER
 
 Loading LEF file lef/sky130_scl_9T.tlef ...
@@ -180,17 +179,17 @@ Reading MAX_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sk
 Read 109 cells in library 'sky130_ss_1.62_125' 
 Reading MIN_LIB timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
 Read 109 cells in library 'sky130_ff_1.98_0' 
-*** End library_loading (cpu=0.01min, real=0.00min, mem=41.0M, fe_cpu=0.36min, fe_real=1.12min, fe_mem=1474.9M) ***
-#% Begin Load netlist data ... (date=12/22 04:45:00, mem=1468.9M)
-*** Begin netlist parsing (mem=1474.9M) ***
+*** End library_loading (cpu=0.01min, real=0.00min, mem=43.0M, fe_cpu=0.63min, fe_real=6.70min, fe_mem=1804.3M) ***
+#% Begin Load netlist data ... (date=12/23 21:37:12, mem=1900.3M)
+*** Begin netlist parsing (mem=1804.3M) ***
 Created 109 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist 'SRC/post_synth_fabric_netlist.v'
 
-*** Memory Usage v#1 (Current mem = 1483.945M, initial mem = 635.109M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1483.9M) ***
-#% End Load netlist data ... (date=12/22 04:45:00, total cpu=0:00:00.1, real=0:00:00.0, peak res=1486.5M, current mem=1486.5M)
+*** Memory Usage v#2 (Current mem = 1812.305M, initial mem = 835.574M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1812.3M) ***
+#% End Load netlist data ... (date=12/23 21:37:12, total cpu=0:00:00.1, real=0:00:00.0, peak res=1918.7M, current mem=1918.7M)
 Top level cell is fpga_top.
 Hooked 218 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -200,23 +199,24 @@ Building hierarchical netlist for Cell fpga_top ...
 *** Netlist is unique.
 ** info: there are 954 modules.
 ** info: there are 8329 stdCell insts.
+** info: there are 8329 stdCell insts with at least one signal pin.
 ** info: there are 39 Pad insts.
 
-*** Memory Usage v#1 (Current mem = 1542.359M, initial mem = 635.109M) ***
+*** Memory Usage v#2 (Current mem = 1871.719M, initial mem = 835.574M) ***
 Initializing I/O assignment ...
 Adjusting Core to Left to: 0.1000. Core to Bottom to: 0.1000.
 Start create_tracks
 Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
-Extraction setup Started 
+Extraction setup Started for TopCell fpga_top 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
 Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
 Generating auto layer map file.
 Importing multi-corner technology file(s) for preRoute extraction...
 lef/qrcTechFile_RCgen
 Generating auto layer map file.
-Completed (cpu: 0:00:01.2 real: 0:00:02.0)
+Completed (cpu: 0:00:00.6 real: 0:00:01.0)
 Set Shrink Factor to 1.00000
 Summary of Active RC-Corners : 
  
@@ -253,138 +253,138 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
     RC-Corner Technology file: 'lef/qrcTechFile_RCgen'
-Updating RC grid for preRoute extraction ...
+Updating RC Grid density data for preRoute extraction ...
 Initializing multi-corner resistance tables ...
 Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
 *Info: initialize multi-corner CTS.
 Reading timing constraints file 'SDC/global_ports.sdc' ...
-Current (total cpu=0:00:24.3, real=0:01:10, peak res=1939.8M, current mem=1939.8M)
+Current (total cpu=0:00:40.1, real=0:06:44, peak res=2365.4M, current mem=2333.6M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1942.1M, current mem=1942.1M)
-Current (total cpu=0:00:24.4, real=0:01:10, peak res=1942.1M, current mem=1942.1M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=2336.2M, current mem=2336.2M)
+Current (total cpu=0:00:40.2, real=0:06:45, peak res=2365.4M, current mem=2336.2M)
 Reading timing constraints file 'SDC/cbx_1__0_.sdc' ...
-Current (total cpu=0:00:24.4, real=0:01:10, peak res=1942.1M, current mem=1942.1M)
+Current (total cpu=0:00:40.2, real=0:06:45, peak res=2365.4M, current mem=2336.2M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__0_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/cbx_1__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1983.1M, current mem=1983.1M)
-Current (total cpu=0:00:24.6, real=0:01:10, peak res=1983.1M, current mem=1983.1M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2373.5M, current mem=2373.5M)
+Current (total cpu=0:00:40.3, real=0:06:45, peak res=2373.5M, current mem=2373.5M)
 Reading timing constraints file 'SDC/cbx_1__1_.sdc' ...
-Current (total cpu=0:00:24.6, real=0:01:10, peak res=1983.1M, current mem=1983.1M)
+Current (total cpu=0:00:40.4, real=0:06:45, peak res=2373.5M, current mem=2373.5M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__1_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/cbx_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1983.5M, current mem=1983.5M)
-Current (total cpu=0:00:24.7, real=0:01:10, peak res=1983.5M, current mem=1983.5M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2373.9M, current mem=2373.9M)
+Current (total cpu=0:00:40.5, real=0:06:45, peak res=2373.9M, current mem=2373.9M)
 Reading timing constraints file 'SDC/cby_0__1_.sdc' ...
-Current (total cpu=0:00:24.7, real=0:01:10, peak res=1983.5M, current mem=1983.5M)
+Current (total cpu=0:00:40.5, real=0:06:45, peak res=2373.9M, current mem=2373.9M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_0__1_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/cby_0__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1983.9M, current mem=1983.9M)
-Current (total cpu=0:00:24.8, real=0:01:10, peak res=1983.9M, current mem=1983.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2374.0M, current mem=2374.0M)
+Current (total cpu=0:00:40.6, real=0:06:45, peak res=2374.0M, current mem=2374.0M)
 Reading timing constraints file 'SDC/cby_1__1_.sdc' ...
-Current (total cpu=0:00:24.8, real=0:01:11, peak res=1983.9M, current mem=1983.9M)
+Current (total cpu=0:00:40.6, real=0:06:45, peak res=2374.0M, current mem=2374.0M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_1__1_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/cby_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1984.4M, current mem=1984.4M)
-Current (total cpu=0:00:24.9, real=0:01:11, peak res=1984.4M, current mem=1984.4M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2374.5M, current mem=2374.5M)
+Current (total cpu=0:00:40.7, real=0:06:45, peak res=2374.5M, current mem=2374.5M)
 Reading timing constraints file 'SDC/logical_tile_clb_mode_clb_.sdc' ...
-Current (total cpu=0:00:25.0, real=0:01:11, peak res=1984.4M, current mem=1984.4M)
+Current (total cpu=0:00:40.7, real=0:06:45, peak res=2374.5M, current mem=2374.5M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_clb_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_clb_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.6, real=0:00:00.0, peak res=1985.2M, current mem=1985.2M)
-Current (total cpu=0:00:25.5, real=0:01:11, peak res=1985.2M, current mem=1985.2M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.5, real=0:00:01.0, peak res=2375.3M, current mem=2375.3M)
+Current (total cpu=0:00:41.3, real=0:06:46, peak res=2375.3M, current mem=2375.3M)
 Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle.sdc' ...
-Current (total cpu=0:00:25.6, real=0:01:11, peak res=1985.2M, current mem=1985.2M)
+Current (total cpu=0:00:41.3, real=0:06:46, peak res=2375.3M, current mem=2375.3M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1985.5M, current mem=1985.5M)
-Current (total cpu=0:00:25.6, real=0:01:11, peak res=1985.5M, current mem=1985.5M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2375.6M, current mem=2375.6M)
+Current (total cpu=0:00:41.4, real=0:06:46, peak res=2375.6M, current mem=2375.6M)
 Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc' ...
-Current (total cpu=0:00:25.7, real=0:01:11, peak res=1985.5M, current mem=1985.5M)
+Current (total cpu=0:00:41.4, real=0:06:46, peak res=2375.6M, current mem=2375.6M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1985.9M, current mem=1985.9M)
-Current (total cpu=0:00:25.7, real=0:01:11, peak res=1985.9M, current mem=1985.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2376.0M, current mem=2376.0M)
+Current (total cpu=0:00:41.5, real=0:06:46, peak res=2376.0M, current mem=2376.0M)
 Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc' ...
-Current (total cpu=0:00:25.8, real=0:01:11, peak res=1985.9M, current mem=1985.9M)
+Current (total cpu=0:00:41.5, real=0:06:46, peak res=2376.0M, current mem=2376.0M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1986.3M, current mem=1986.2M)
-Current (total cpu=0:00:25.8, real=0:01:12, peak res=1986.3M, current mem=1986.2M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2376.3M, current mem=2376.3M)
+Current (total cpu=0:00:41.6, real=0:06:46, peak res=2376.3M, current mem=2376.3M)
 Reading timing constraints file 'SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc' ...
-Current (total cpu=0:00:25.9, real=0:01:12, peak res=1986.3M, current mem=1986.2M)
+Current (total cpu=0:00:41.6, real=0:06:46, peak res=2376.4M, current mem=2376.4M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1986.6M, current mem=1986.6M)
-Current (total cpu=0:00:25.9, real=0:01:12, peak res=1986.6M, current mem=1986.6M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2376.7M, current mem=2376.7M)
+Current (total cpu=0:00:41.7, real=0:06:46, peak res=2376.7M, current mem=2376.7M)
 Reading timing constraints file 'SDC/logical_tile_io_mode_io_.sdc' ...
-Current (total cpu=0:00:26.0, real=0:01:12, peak res=1986.6M, current mem=1986.6M)
+Current (total cpu=0:00:41.7, real=0:06:46, peak res=2376.7M, current mem=2376.7M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_io_mode_io_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/logical_tile_io_mode_io_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1987.0M, current mem=1987.0M)
-Current (total cpu=0:00:26.0, real=0:01:12, peak res=1987.0M, current mem=1987.0M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2377.1M, current mem=2377.1M)
+Current (total cpu=0:00:41.8, real=0:06:46, peak res=2377.1M, current mem=2377.1M)
 Reading timing constraints file 'SDC/sb_0__0_.sdc' ...
-Current (total cpu=0:00:26.1, real=0:01:12, peak res=1987.0M, current mem=1987.0M)
+Current (total cpu=0:00:41.8, real=0:06:46, peak res=2377.1M, current mem=2377.1M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__0_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/sb_0__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1987.3M, current mem=1987.3M)
-Current (total cpu=0:00:26.1, real=0:01:12, peak res=1987.3M, current mem=1987.3M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2377.5M, current mem=2377.4M)
+Current (total cpu=0:00:41.9, real=0:06:46, peak res=2377.5M, current mem=2377.4M)
 Reading timing constraints file 'SDC/sb_0__1_.sdc' ...
-Current (total cpu=0:00:26.2, real=0:01:12, peak res=1987.3M, current mem=1987.3M)
+Current (total cpu=0:00:42.0, real=0:06:46, peak res=2377.5M, current mem=2377.4M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__1_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/sb_0__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1987.7M, current mem=1987.7M)
-Current (total cpu=0:00:26.2, real=0:01:12, peak res=1987.7M, current mem=1987.7M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2378.1M, current mem=2378.1M)
+Current (total cpu=0:00:42.0, real=0:06:46, peak res=2378.1M, current mem=2378.1M)
 Reading timing constraints file 'SDC/sb_1__0_.sdc' ...
-Current (total cpu=0:00:26.3, real=0:01:12, peak res=1987.7M, current mem=1987.7M)
+Current (total cpu=0:00:42.1, real=0:06:46, peak res=2378.1M, current mem=2378.1M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__0_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/sb_1__0_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1988.4M, current mem=1988.4M)
-Current (total cpu=0:00:26.3, real=0:01:12, peak res=1988.4M, current mem=1988.4M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2378.5M, current mem=2378.5M)
+Current (total cpu=0:00:42.1, real=0:06:47, peak res=2378.5M, current mem=2378.5M)
 Reading timing constraints file 'SDC/sb_1__1_.sdc' ...
-Current (total cpu=0:00:26.4, real=0:01:12, peak res=1988.4M, current mem=1988.4M)
+Current (total cpu=0:00:42.2, real=0:06:47, peak res=2378.5M, current mem=2378.5M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__1_.sdc, Line 10).
 
 INFO (CTE): Reading of timing constraints file SDC/sb_1__1_.sdc completed, with 1 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1988.9M, current mem=1988.9M)
-Current (total cpu=0:00:26.4, real=0:01:12, peak res=1988.9M, current mem=1988.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2379.1M, current mem=2379.1M)
+Current (total cpu=0:00:42.2, real=0:06:47, peak res=2379.1M, current mem=2379.1M)
 Reading timing constraints file 'SDC/disable_configurable_memory_outputs.sdc' ...
-Current (total cpu=0:00:26.5, real=0:01:12, peak res=1988.9M, current mem=1988.9M)
+Current (total cpu=0:00:42.3, real=0:06:47, peak res=2379.1M, current mem=2379.1M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1989.9M, current mem=1989.9M)
-Current (total cpu=0:00:26.6, real=0:01:12, peak res=1989.9M, current mem=1989.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2380.0M, current mem=2380.0M)
+Current (total cpu=0:00:42.4, real=0:06:47, peak res=2380.0M, current mem=2380.0M)
 Reading timing constraints file 'SDC/disable_configure_ports.sdc' ...
-Current (total cpu=0:00:26.6, real=0:01:12, peak res=1989.9M, current mem=1989.9M)
+Current (total cpu=0:00:42.4, real=0:06:47, peak res=2380.0M, current mem=2380.0M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1992.4M, current mem=1992.4M)
-Current (total cpu=0:00:26.7, real=0:01:12, peak res=1992.4M, current mem=1992.4M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2382.4M, current mem=2382.4M)
+Current (total cpu=0:00:42.5, real=0:06:47, peak res=2382.4M, current mem=2382.4M)
 Reading timing constraints file 'SDC/disable_routing_multiplexer_outputs.sdc' ...
-Current (total cpu=0:00:26.7, real=0:01:12, peak res=1992.4M, current mem=1992.4M)
+Current (total cpu=0:00:42.6, real=0:06:47, peak res=2382.4M, current mem=2382.4M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:01.0, peak res=1992.9M, current mem=1992.9M)
-Current (total cpu=0:00:26.8, real=0:01:13, peak res=1992.9M, current mem=1992.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2382.9M, current mem=2382.9M)
+Current (total cpu=0:00:42.6, real=0:06:47, peak res=2382.9M, current mem=2382.9M)
 Reading timing constraints file 'SDC/disable_sb_outputs.sdc' ...
-Current (total cpu=0:00:26.9, real=0:01:13, peak res=1992.9M, current mem=1992.9M)
+Current (total cpu=0:00:42.7, real=0:06:47, peak res=2382.9M, current mem=2382.9M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1993.2M, current mem=1993.2M)
-Current (total cpu=0:00:26.9, real=0:01:13, peak res=1993.2M, current mem=1993.2M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2383.5M, current mem=2383.5M)
+Current (total cpu=0:00:42.7, real=0:06:47, peak res=2383.5M, current mem=2383.5M)
 Reading timing constraints file 'SDC/genus.dont_touch.sdc' ...
-Current (total cpu=0:00:27.0, real=0:01:13, peak res=1993.2M, current mem=1993.2M)
+Current (total cpu=0:00:42.8, real=0:06:47, peak res=2383.5M, current mem=2383.5M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1993.9M, current mem=1993.9M)
-Current (total cpu=0:00:27.0, real=0:01:13, peak res=1993.9M, current mem=1993.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2383.9M, current mem=2383.9M)
+Current (total cpu=0:00:42.9, real=0:06:47, peak res=2383.9M, current mem=2383.9M)
 Total number of combinational cells: 87
 Total number of sequential cells: 19
 Total number of tristate cells: 3
@@ -420,8 +420,9 @@ WARNING   IMPSYC-2             1  Timing information is not defined for ce...
 WARNING   TCLCMD-1461         14  Skipped unsupported command: %s          
 *** Message Summary: 42 warning(s), 0 error(s)
 
-<CMD> loadIoFile IO_PAD.io
-Reading IO assignment file "IO_PAD.io" ...
+<CMD> loadIoFile IO_PAD_corner_edited.io
+Reading IO assignment file "IO_PAD_corner_edited.io" ...
+WARNING (IMPFP-3997): The Floorplan box has been changed from {(0.0000000000 , 0.0000000000) (1660.0000000000 , 1940.0000000000)} to {(-219.3320000000 , -79.3320000000) (1879.3320000000 , 2019.3320000000)}.
 **WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'N' between IOs 'pad_gnd1' and 'grid_io_right_2__1_/logical_tile_io_mode_io__3/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio'.
 **WARN: (IMPFP-3108):	The tool will relocate the IOs because of not enough space to accommodate the IOs for side 'W' between IOs 'pad_pwr1' and 'grid_io_top_1__2_/logical_tile_io_mode_io__1/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio'.
 Start create_tracks
@@ -429,1365 +430,58 @@ Generated pitch 3.66 in met5 is different from 3.22 defined in technology file i
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
 <CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting core size to PlacementGrid : width :444.36 height : 442.98
 Adjusting Core to Left to: 40.1200. Core to Bottom to: 40.1200.
 Start create_tracks
 Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
 Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
-<CMD> setDesignMode -process 130
-##  Process: 130           (User Set)               
-##     Node: (not set)                           
-
-##  Check design process and node:  
-##  Design tech node is not set.
-
-Applying the recommended capacitance filtering threshold values for 130nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.4.
-	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
-	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
-	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
-	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
-<CMD> globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-8329 new pwr-pin connections were made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-8329 new gnd-pin connections were made to global net 'VSS'.
-<CMD> globalNetConnect P_CORE -type pgpin -pin VDD -override -verbose -netlistOverride
-8329 new pwr-pin connections were made to global net 'P_CORE'.
-<CMD> globalNetConnect G_CORE -type pgpin -pin VSS -override -verbose -netlistOverride
-8329 new gnd-pin connections were made to global net 'G_CORE'.
-<CMD> globalNetConnect AMUXBUS_A -type pgpin -pin AMUXBUS_A -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'AMUXBUS_A'.
-<CMD> globalNetConnect AMUXBUS_B -type pgpin -pin AMUXBUS_B -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'AMUXBUS_B'.
-<CMD> globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
-48 new gnd-pin connections were made to global net 'VSSA'.
-<CMD> globalNetConnect VDDA -type pgpin -pin VDDA -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'VDDA'.
-<CMD> globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'VSWITCH'.
-<CMD> globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'VDDIO_Q'.
-<CMD> globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'VCCHIB'.
-<CMD> globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'VDDIO'.
-<CMD> globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
-48 new pwr-pin connections were made to global net 'VCCD'.
-<CMD> globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
-48 new gnd-pin connections were made to global net 'VSSIO'.
-<CMD> globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
-48 new gnd-pin connections were made to global net 'VSSD'.
-<CMD> globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-48 new gnd-pin connections were made to global net 'VSSIO_Q'.
-<CMD> globalNetConnect P_CORE -type pgpin -pin P_CORE -override -verbose -netlistOverride
-3 new pwr-pin connections were made to global net 'P_CORE'.
-<CMD> globalNetConnect G_CORE -type pgpin -pin G_CORE -override -verbose -netlistOverride
-2 new gnd-pin connections were made to global net 'G_CORE'.
-<CMD> addRing -nets {P_CORE G_CORE} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 4 bottom 4 left 4 right 4} -spacing {top 4 bottom 4 left 4 right 4} -offset {top 10 bottom 10 left 10 right 10} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-#% Begin addRing (date=12/22 04:45:06, mem=2002.3M)
-
-
-viaInitial starts at Sun Dec 22 04:45:06 2024
-viaInitial ends at Sun Dec 22 04:45:06 2024
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2029.1M)
-Ring generation is complete.
-vias are now being generated.
-addRing created 8 wires.
-ViaGen created 8 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |        4       |       NA       |
-|  via4  |        8       |        0       |
-|  met5  |        4       |       NA       |
-+--------+----------------+----------------+
-#% End addRing (date=12/22 04:45:06, total cpu=0:00:00.0, real=0:00:00.0, peak res=2006.3M, current mem=2006.3M)
-<CMD> sroute -connect { corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { P_CORE G_CORE } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-#% Begin sroute (date=12/22 04:45:06, mem=2006.3M)
-**WARN: (IMPSR-4058):	Sroute option: padPinPortConnect should be used in conjunction with option: -connect padPin. 
-**WARN: (IMPSR-4058):	Sroute option: padPinPortConnect should be used in conjunction with option: -connect padPin. 
-**WARN: (IMPSR-4058):	Sroute option: padPinTarget should be used in conjunction with option: -connect padPin. 
-**WARN: (IMPSR-4058):	Sroute option: blockPin should be used in conjunction with option: -connect blockPin. 
-**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Sun Dec 22 04:45:06 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.30.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "P_CORE G_CORE"
-routeSpecial set to true
-srouteBlockPin set to "useLef"
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectBlockPin set to false
-srouteConnectConverterPin set to false
-srouteConnectPadPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
-srouteFollowCorePinEnd set to 3
-srouteFollowPadPin set to false
-srouteJogControl set to "preferWithChanges differentLayer"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3533.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 121 macros, 16 used
-Read in 59 components
-  11 core components: 11 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 16 special nets, 2 routed
-Read in 603 terminals
-2 nets selected.
-
-Begin power routing ...
-CPU time for P_CORE FollowPin 0 seconds
-CPU time for G_CORE FollowPin 0 seconds
-  Number of Stripe ports routed: 0
-  Number of Core ports routed: 782
-  Number of Followpin connections: 391
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3535.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
-Pin and blockage extraction finished
-
-sroute created 1173 wires.
-ViaGen created 2346 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met1  |      1173      |       NA       |
-|   via  |       782      |        0       |
-|  via2  |       782      |        0       |
-|  via3  |       782      |        0       |
-+--------+----------------+----------------+
-#% End sroute (date=12/22 04:45:06, total cpu=0:00:00.2, real=0:00:00.0, peak res=2028.9M, current mem=2017.2M)
-<CMD> sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-#% Begin sroute (date=12/22 04:45:06, mem=2017.2M)
-**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Sun Dec 22 04:45:06 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.30.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH"
-routeSpecial set to true
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectBlockPin set to false
-srouteConnectConverterPin set to false
-srouteConnectCorePin set to false
-srouteConnectPadPin set to false
-srouteConnectStripe set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFollowCorePinEnd set to 3
-srouteJogControl set to "preferWithChanges differentLayer"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3535.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 15 macros, 15 used
-Read in 59 components
-  11 core components: 11 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 16 special nets, 2 routed
-Read in 603 terminals
-12 nets selected.
-
-Begin power routing ...
-  Number of Pad ports routed: 0
-  Number of Pad Ring connections: 1423
-End power routing: cpu: 0:00:00, real: 0:00:01, peak: 3536.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 0 via definition ...
-sroute created 1409 wires.
-ViaGen created 0 via, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met4  |       889      |       NA       |
-|  met5  |       520      |       NA       |
-+--------+----------------+----------------+
-#% End sroute (date=12/22 04:45:07, total cpu=0:00:00.4, real=0:00:01.0, peak res=2030.7M, current mem=2023.9M)
-<CMD> setSrouteMode -viaConnectToShape { noshape }
-<CMD> sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-#% Begin sroute (date=12/22 04:45:07, mem=2023.9M)
-**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
-*** Begin SPECIAL ROUTE on Sun Dec 22 04:45:07 2024 ***
-SPECIAL ROUTE ran on directory: /home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl
-SPECIAL ROUTE ran on machine: ei-vm-011 (Linux 4.18.0-553.30.1.el8_10.x86_64 x86_64 3.79Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "G_CORE P_CORE"
-routeSpecial set to true
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectBlockPin set to false
-srouteConnectConverterPin set to false
-srouteConnectCorePin set to false
-srouteConnectStripe set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 5
-srouteFollowCorePinEnd set to 3
-srouteFollowPadPin set to false
-srouteJogControl set to "preferWithChanges differentLayer"
-srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 5
-srouteTopTargetLayerLimit set to 5
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3536.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
-Read in 11 layers, 5 routing layers, 1 overlap layer
-Read in 15 macros, 15 used
-Read in 59 components
-  11 core components: 11 unplaced, 0 placed, 0 fixed
-  48 pad components: 0 unplaced, 0 placed, 48 fixed
-Read in 39 logical pins
-Read in 39 nets
-Read in 16 special nets, 14 routed
-Read in 603 terminals
-2 nets selected.
-
-Begin power routing ...
-  Number of IO ports routed: 9  open: 1
-End power routing: cpu: 0:00:08, real: 0:00:08, peak: 3538.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 2 via definition ...
-
-sroute post-processing starts at Sun Dec 22 04:45:15 2024
-The viaGen is rebuilding shadow vias for net P_CORE.
-sroute post-processing ends at Sun Dec 22 04:45:15 2024
-sroute created 14 wires.
-ViaGen created 20 vias, deleted 1 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  met3  |       12       |       NA       |
-|  via3  |        9       |        0       |
-|  via4  |       11       |        1       |
-|  met5  |        2       |       NA       |
-+--------+----------------+----------------+
-#% End sroute (date=12/22 04:45:15, total cpu=0:00:08.0, real=0:00:08.0, peak res=4579.2M, current mem=2060.1M)
-<CMD> addStripe -nets {P_CORE G_CORE} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 130 -start_from left -start_offset 110 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
-#% Begin addStripe (date=12/22 04:45:15, mem=2060.1M)
-
-Initialize fgc environment(mem: 2200.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Starting stripe generation ...
-Non-Default Mode Option Settings :
-  NONE
-Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2200.9M)
-Stripe generation is complete.
-vias are now being generated.
-addStripe created 27 wires.
-ViaGen created 14129 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|   via  |      4692      |        0       |
-|  met2  |        1       |       NA       |
-|  via2  |      4694      |        0       |
-|  via3  |      4694      |        0       |
-|  met4  |       25       |       NA       |
-|  via4  |       49       |        0       |
-|  met5  |        1       |       NA       |
-+--------+----------------+----------------+
-#% End addStripe (date=12/22 04:45:15, total cpu=0:00:00.3, real=0:00:00.0, peak res=2060.1M, current mem=2059.8M)
-<CMD> setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 5 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
-**WARN: (IMPSP-105):	'setPlaceMode -maxRouteLayer' will become obsolete from next release. Use 'setRouteMode -earlyGlobalMaxRouteLayer N' to set maximum routing layer.Type 'man IMPSP-105' for more detail.
-<CMD> setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
-Setting releaseMultiCpuLicenseMode to false.
-<CMD> setPlaceMode -fp false
-<CMD> place_design
-**WARN: (IMPSP-9525):	setPlaceMode -maxRouteLayer will overwrite setTrialRouteMode -maxRouteLayer inside placeDesign.
-**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
-*** placeDesign #1 [begin] : totSession cpu/real = 0:00:36.3/0:01:20.4 (0.5), mem = 2196.9M
-Extracting standard cell pins and blockage ...... 
-Pin and blockage extraction finished
-*** Starting placeDesign default flow ***
-*** Start deleteBufferTree ***
-Multithreaded Timing Analysis is initialized with 8 threads
-
-Info: Detect buffers to remove automatically.
-Analyzing netlist ...
-Updating netlist
-
-*summary: 26 instances (buffers/inverters) removed
-*** Finish deleteBufferTree (0:00:00.5) ***
-**INFO: Enable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-Set Default Input Pin Transition as 1 ps.
-**INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.1669801 path_group
-AAE_INFO: opIsDesignInPostRouteState() is 0
-AAE DB initialization (MEM=2279.29 CPU=0:00:00.0 REAL=0:00:00.0) 
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: fpga_top
-# Design Mode: 130nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB 
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (8 T). (MEM=2293.56)
-Total number of fetched objects 10460
-End delay calculation. (MEM=2976.73 CPU=0:00:01.1 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2976.73 CPU=0:00:01.4 REAL=0:00:00.0)
-**INFO: Disable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 1000.
-Set Default Net Delay as 1000 ps.
-Set Default Input Pin Transition as 0.1 ps.
-Set Default Net Load as 0.5 pF. 
-**INFO: Pre-place timing setting for timing analysis already disabled
-Deleted 0 physical inst  (cell - / prefix -).
-INFO: #ExclusiveGroups=0
-INFO: There are no Exclusive Groups.
-*** Starting "NanoPlace(TM) placement v#7 (mem=2911.2M)" ...
-Estimated loop count for BSM: 7077
-*** Build Buffered Sizing Timing Model
-(cpu=0:00:00.2 mem=2975.2M) ***
-*** Build Virtual Sizing Timing Model
-(cpu=0:00:00.3 mem=2975.2M) ***
-No user-set net weight.
-Net fanout histogram:
-2		: 6689 (79.5%) nets
-3		: 1112 (13.2%) nets
-4     -	14	: 413 (4.9%) nets
-15    -	39	: 143 (1.7%) nets
-40    -	79	: 60 (0.7%) nets
-80    -	159	: 0 (0.0%) nets
-160   -	319	: 0 (0.0%) nets
-320   -	639	: 0 (0.0%) nets
-640   -	1279	: 0 (0.0%) nets
-1280  -	2559	: 2 (0.0%) nets
-2560  -	5119	: 0 (0.0%) nets
-5120+		: 0 (0.0%) nets
-Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
-**WARN: (IMPSP-9042):	Scan chains were not defined, -place_global_ignore_scan option will be ignored.
-Define the scan chains before using this option.
-Type 'man IMPSP-9042' for more detail.
-#std cell=8303 (0 fixed + 8303 movable) #buf cell=0 #inv cell=2093 #block=0 (0 floating + 0 preplaced)
-#ioInst=48 #net=8419 #term=29169 #term/net=3.46, #fixedIo=49, #floatIo=0, #fixedPin=39, #floatPin=0
-stdCell: 8303 single + 0 double + 0 multi
-Total standard cell length = 33.6849 (mm), area = 0.1395 (mm^2)
-**WARN: (IMPSP-362):	Site 'CoreSite' has one std.Cell height, so ignoring its X-symmetry.
-Type 'man IMPSP-362' for more detail.
-Estimated cell power/ground rail width = 0.517 um
-Average module density = 0.053.
-Density for the design = 0.053.
-       = stdcell_area 73228 sites (139455 um^2) / alloc_area 1372020 sites (2612875 um^2).
-Pin Density = 0.02126.
-            = total # of pins 29169 / total area 1372020.
-Enabling multi-CPU acceleration with 8 CPU(s) for placement
-=== lastAutoLevel = 10 
-Clock gating cells determined by native netlist tracing.
-Innovus terminated by internal (SEGV) error/signal.
-*** Stack trace:
-*** Stack trace:
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus[0x1e51faa6]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(syStackTrace+0xad)[0x1e51ffd8]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus[0xb81d63c]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN15goSignalHandler13executeActionEiP9siginfo_tPv+0x46)[0xfd724b6]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN15goSignalHandler16executeSigActionEiP9siginfo_tPv+0x9b)[0xfd725bb]
-/lib64/libpthread.so.0(+0x12d0f)[0x7f6ab3a00d0f]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN7TATimer30getFromPhaseTransformAndAdjustERK14TATimingPinPtrP7TAPhase14taanalysistype16tatransitiontypeRS4_R10TAPropTimeR12TALinkedList13TADelayArcPtr9tabooleanS8_SD_S4_SD_P10TATimeList26ta_use_zero_delays_optionsPSD_8pathtype+0x480)[0x1efcf930]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN10TATimeList11propagateATE13TADelayArcPtrRS_9taboolean14TATimingPinPtrS3_26ta_use_zero_delays_optionsS2_S2_PA2_A2_fPA2_A2_A2_10TAPropTimeSC_S2_S3_8pathtypeS0_P12TADerateInfo13taarcproptypeP19TATimingDerateCache+0x2cb0)[0x1f0bbf40]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN7TATimer16calculateArrivalERK13TADelayArcPtrR10TATimeList9tabooleanS5_RS5_PS3_26ta_use_zero_delays_optionsS5_S5_PA2_A2_fPA2_A2_A2_10TAPropTimeSG_8pathtypeS5_S5_S0_14TATimingPinPtrSI_PS5_P17TAClockDefinitionS5_P12TADerateInfoS5_S5_P19TATimingDerateCacheS5_S5_S5_S5_P7TAPhaseP16TALatchInfoCache+0x1a8d)[0x1f18708d]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN7TATimer16calculateArrivalERK14TATimingPinPtriR9taboolean8pathtype26ta_use_zero_delays_optionsP10TATimeList+0xc2b)[0x1f17ed8b]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN7TATimer21forceCalculateArrivalERK14TATimingPinPtrP18TAMainBoundaryInfo9taboolean8pathtype+0x4e)[0x1f187dae]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN24TAPhaseSetCompactListJob10processJobER16TAJobElemCompact+0x274)[0x1f1923e4]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN16TACompactListJob7executeEi+0x1d6)[0x20b53406]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN13TATimerWorker7consumeEPv+0x5e1)[0x1eacd091]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN14TAThreadWorker4loopEv+0x8b)[0x20b4cd9b]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus(_ZN8TAThread3runEP14TAThreadWorker+0x10)[0x20b4cea0]
-/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/innovus[0xbc01ec4]
-/lib64/libpthread.so.0(+0x81c9)[0x7f6ab39f61c9]
-/lib64/libc.so.6(clone+0x42)[0x7f6ab2e398d2]
-========================================
-               pstack
-========================================
-Thread 34 (Thread 0x7f69cf7a1700 (LWP 1670530)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 33 (Thread 0x7f69d13a1700 (LWP 1670529)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 32 (Thread 0x7f69d2ed1700 (LWP 1670528)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 31 (Thread 0x7f69d4831700 (LWP 1670527)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 30 (Thread 0x7f69d7d81700 (LWP 1670526)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 29 (Thread 0x7f69de361700 (LWP 1670525)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 28 (Thread 0x7f69e4731700 (LWP 1670524)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 27 (Thread 0x7f69e7841700 (LWP 1670523)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 26 (Thread 0x7f69f60d1700 (LWP 1670505)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 25 (Thread 0x7f69f7681700 (LWP 1670504)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 24 (Thread 0x7f69f8c61700 (LWP 1670503)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 23 (Thread 0x7f69fa271700 (LWP 1670502)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 22 (Thread 0x7f6a207b1700 (LWP 1670501)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 21 (Thread 0x7f6a21821700 (LWP 1670500)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 20 (Thread 0x7f6a226c1700 (LWP 1670499)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 19 (Thread 0x7f6a23591700 (LWP 1670498)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 18 (Thread 0x7f6a254c1700 (LWP 1670470)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 17 (Thread 0x7f6a27f71700 (LWP 1670469)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 16 (Thread 0x7f6a2b551700 (LWP 1670468)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 15 (Thread 0x7f6a2e931700 (LWP 1670467)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 14 (Thread 0x7f6a28d61700 (LWP 1670466)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 13 (Thread 0x7f6a57225700 (LWP 1670465)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 12 (Thread 0x7f6a57a26700 (LWP 1670464)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 11 (Thread 0x7f6a3030b700 (LWP 1670463)):
-#0  0x00007f6ab2f07e42 in waitpid () from /lib64/libc.so.6
-#1  0x00007f6ab2e5b747 in do_system () from /lib64/libc.so.6
-#2  0x000000001e51fbd2 in syStackTraceDump(_IO_FILE*, bool) ()
-#3  0x000000001e51ffd9 in syStackTrace ()
-#4  0x000000000b81d63d in rdaiErrorHandler1(int) ()
-#5  0x000000000fd724b7 in goSignalHandler::executeAction(int, siginfo_t*, void*) ()
-#6  0x000000000fd725bc in goSignalHandler::executeSigAction(int, siginfo_t*, void*) ()
-#7  <signal handler called>
-#8  0x000000001efcf930 in TATimer::getFromPhaseTransformAndAdjust(TATimingPinPtr const&, TAPhase*, taanalysistype, tatransitiontype, TAPhase*&, TAPropTime&, TALinkedList&, TADelayArcPtr, taboolean, TAPropTime, taboolean, TAPhase*, taboolean, TATimeList*, ta_use_zero_delays_options, taboolean*, pathtype) ()
-#9  0x000000001f0bbf41 in TATimeList::propagateAT(TADelayArcPtr, TATimeList&, taboolean, TATimingPinPtr, TATimingPinPtr, ta_use_zero_delays_options, taboolean, taboolean, float (*) [2][2], TAPropTime (*) [2][2][2], TAPropTime (*) [2][2][2], taboolean, TATimingPinPtr, pathtype, TADelayArcPtr, TADerateInfo*, taarcproptype, TATimingDerateCache*) ()
-#10 0x000000001f18708e in TATimer::calculateArrival(TADelayArcPtr const&, TATimeList&, taboolean, taboolean, taboolean&, TATimeList*, ta_use_zero_delays_options, taboolean, taboolean, float (*) [2][2], TAPropTime (*) [2][2][2], TAPropTime (*) [2][2][2], pathtype, taboolean, taboolean, TADelayArcPtr, TATimingPinPtr, TATimingPinPtr, taboolean*, TAClockDefinition*, taboolean, TADerateInfo*, taboolean, taboolean, TATimingDerateCache*, taboolean, taboolean, taboolean, taboolean, TAPhase*, TALatchInfoCache*) ()
-#11 0x000000001f17ed8c in TATimer::calculateArrival(TATimingPinPtr const&, int, taboolean&, pathtype, ta_use_zero_delays_options, TATimeList*) ()
-#12 0x000000001f187daf in TATimer::forceCalculateArrival(TATimingPinPtr const&, TAMainBoundaryInfo*, taboolean, pathtype) ()
-#13 0x000000001f1923e5 in TAPhaseSetCompactListJob::processJob(TAJobElemCompact&) ()
-#14 0x0000000020b53407 in TACompactListJob::execute(int) ()
-#15 0x000000001eacd092 in TATimerWorker::consume(void*) ()
-#16 0x0000000020b4cd9c in TAThreadWorker::loop() ()
-#17 0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#18 0x000000000bc01ec5 in create_head(void*) ()
-#19 0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#20 0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 10 (Thread 0x7f6a666d7700 (LWP 1670095)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6ab77e1dfb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f6ab742d4f5 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#3  0x00007f6ab77e165b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 9 (Thread 0x7f6a8ec35700 (LWP 1670064)):
-#0  0x00007f6ab2f32bb6 in ppoll () from /lib64/libc.so.6
-#1  0x00007f6ab7a02a99 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f6ab7a03f94 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#3  0x00007f6ab79b4abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#4  0x00007f6ab77dd551 in QThread::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#5  0x00007f6aa149ce26 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
-#6  0x00007f6ab77e165b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#7  0x000000000bc01ec5 in create_head(void*) ()
-#8  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#9  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 8 (Thread 0x7f6a8fbcb700 (LWP 1670063)):
-#0  0x00007f6ab2e4f30c in sigtimedwait () from /lib64/libc.so.6
-#1  0x00007f6ab3a0089c in sigwait () from /lib64/libpthread.so.0
-#2  0x000000000b81aea0 in ctrlCHandle(void*) ()
-#3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 7 (Thread 0x7f6a90c5a700 (LWP 1669995)):
-#0  0x00007f6ab2f351ff in select () from /lib64/libc.so.6
-#1  0x00000000306a7028 in NotifierThreadProc ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 6 (Thread 0x7f6aa02ca700 (LWP 1669994)):
-#0  0x00007f6ab2f32ac1 in poll () from /lib64/libc.so.6
-#1  0x00007f6ab48ee6ff in _xcb_conn_wait () from /lib64/libxcb.so.1
-#2  0x00007f6ab48f038a in xcb_wait_for_event () from /lib64/libxcb.so.1
-#3  0x00007f6aa1591709 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
-#4  0x00007f6ab77e165b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 5 (Thread 0x7f6aa22cd700 (LWP 1669926)):
-#0  0x00007f6ab2f08098 in nanosleep () from /lib64/libc.so.6
-#1  0x00007f6ab2f07f9e in sleep () from /lib64/libc.so.6
-#2  0x000000001e53b932 in syiPeakMem(void*) ()
-#3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 4 (Thread 0x7f6aa32cf700 (LWP 1669924)):
-#0  0x00007f6ab3a001a0 in nanosleep () from /lib64/libpthread.so.0
-#1  0x000000000d7476cd in rdaiLicRecheck(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 3 (Thread 0x7f6aa3fe2700 (LWP 1669920)):
-#0  0x00007f6ab2f351ff in select () from /lib64/libc.so.6
-#1  0x000000002edc5cdb in ProcessInfo::sampleUsage(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 2 (Thread 0x7f6aa47e3700 (LWP 1669919)):
-#0  0x00007f6ab39ffbf7 in accept () from /lib64/libpthread.so.0
-#1  0x000000002edce077 in ProcessInfo::handleConnection(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-Thread 1 (Thread 0x7f6aabff1080 (LWP 1669801)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4c976 in TAThreadJobPool::add(void*, unsigned int, taboolean) ()
-#3  0x0000000020b5379f in TACompactListJob::run(TACompactListJob::TACurrentProcessingType, TALinkedList&, bool) ()
-#4  0x0000000020b53e6e in TACompactListJob::run() ()
-#5  0x000000001f1985cc in TATimer::processPhaseSetInvalidListNonIncBFS(TAMainBoundaryInfo*, TATimingPinPtr const&) ()
-#6  0x000000001f19980d in TATimer::processPhaseSetInvalidList(TAMainBoundaryInfo*) ()
-#7  0x000000001f3d6007 in TATimer::evaluateLoopBreakerPinList(TALinkedList&, TALinkedList&, TALinkedList&, int, taboolean, taboolean, taboolean, taboolean) ()
-#8  0x000000001f3ede0c in TATimer::processLoop(TALinkedList&, TALinkedList&, TALinkedList&, taboolean, taboolean, taboolean, taboolean) ()
-#9  0x000000001f3da842 in TATimer::_slackStealAndDynamicLoop(TABoundary*, TALinkedList*, TALinkedList*, taboolean, taboolean, taboolean) ()
-#10 0x000000001f3dae23 in TATimer::reevaluateNonIncrementalTimingComputationPrivate(TABoundary*, taboolean, taboolean, taboolean, TAPrunedRequiredInfo*) ()
-#11 0x000000001f3dbc6d in TATimer::reevaluateNonIncrementalTimingComputation(TABoundary*, taboolean, taboolean, taboolean, TAPrunedRequiredInfo*) ()
-#12 0x000000001e800216 in TAExtApi::reevaluateNonIncrementalComputation(TADbBoundary*, TAAnalysisId*, TADbContext*, taboolean, taboolean, taboolean, taboolean, taboolean, TAPrunedRequiredInfo*) [clone .part.0] ()
-#13 0x000000001e8007e5 in TAExtApi::reevaluateNonIncrementalComputation(TADbBoundary*, TAAnalysisId*, TADbContext*, taboolean) ()
-#14 0x000000001a2a4f2c in tomRunLatchSTA() ()
-#15 0x000000000ecfae6a in coePathGroup::createPathGroupsIfNotPresentAndCategories(coeDesignState, bool&) ()
-#16 0x0000000012fb0cbd in spd_ignore_low_effort_path_group_init() ()
-#17 0x0000000012fb60dc in spd_map_PathGroup2net() ()
-#18 0x0000000012e621e3 in spIPlaceForNP(dbsHead*, spsSecHead*, char*, int) ()
-#19 0x00000000130998bd in spMain(dbsHead*) ()
-#20 0x000000000ba98522 in rdaiPlaceCmd ()
-#21 0x000000003059e65b in TclInvokeStringCommand ()
-#22 0x00000000305a3152 in TclNRRunCallbacks ()
-#23 0x00000000305a5364 in TclEvalEx ()
-#24 0x00000000305a5db3 in Tcl_EvalEx ()
-#25 0x00000000305a5e62 in TclNREvalObjEx ()
-#26 0x000000003065b9b0 in TclNREvalFile ()
-#27 0x00000000305b94e5 in TclNRSourceObjCmd ()
-#28 0x00000000305a3152 in TclNRRunCallbacks ()
-#29 0x0000000030640e14 in Tcl_RecordAndEvalObj ()
-#30 0x0000000030640f89 in Tcl_RecordAndEval ()
-#31 0x000000000b918ee7 in rdaEditCmdLineEnd(char*) ()
-#32 0x000000001a3ade21 in seConsole::sesMode::DoExecute(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void*) ()
-#33 0x000000001bbd3fe0 in Redline::EmacsMode::AcceptLine() ()
-#34 0x000000001bbdc3a1 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
-#35 0x000000001bbeb46b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
-#36 0x000000001bbeac8c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
-#37 0x000000001bbd1077 in Redline::Editor::Internals::Run(bool) ()
-#38 0x00000000306a732e in FileHandlerEventProc ()
-#39 0x0000000030667b29 in Tcl_ServiceEvent ()
-#40 0x0000000030667e39 in Tcl_DoOneEvent ()
-#41 0x00007f6ab85e323a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#42 0x00007f6ab79b4abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#43 0x00007f6ab79bc27e in QCoreApplication::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#44 0x00007f6ab85e2897 in TqApplication::exec() () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#45 0x000000000b8f2adc in edi_app_init(Tcl_Interp*) ()
-#46 0x000000003066257c in Tcl_MainEx ()
-#47 0x0000000006b69781 in main ()
-========================================
-                gdb
-========================================
-Using: gdb
-[New LWP 1669919]
-[New LWP 1669920]
-[New LWP 1669924]
-[New LWP 1669926]
-[New LWP 1669994]
-[New LWP 1669995]
-[New LWP 1670063]
-[New LWP 1670064]
-[New LWP 1670095]
-[New LWP 1670463]
-[New LWP 1670464]
-[New LWP 1670465]
-[New LWP 1670466]
-[New LWP 1670467]
-[New LWP 1670468]
-[New LWP 1670469]
-[New LWP 1670470]
-[New LWP 1670498]
-[New LWP 1670499]
-[New LWP 1670500]
-[New LWP 1670501]
-[New LWP 1670502]
-[New LWP 1670503]
-[New LWP 1670504]
-[New LWP 1670505]
-[New LWP 1670523]
-[New LWP 1670524]
-[New LWP 1670525]
-[New LWP 1670526]
-[New LWP 1670527]
-[New LWP 1670528]
-[New LWP 1670529]
-[New LWP 1670530]
-
-warning: Unable to open "librpm.so.8" (/lib64/librpm.so.8: undefined symbol: sqlite3_errstr), missing debuginfos notifications will not be displayed
-Missing separate debuginfo for /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/OrbitIO/jre/lib/server/libjvm.so
-Missing separate debuginfo for /lib64/libXm.so.4
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/e8/c801fff4373bfcced0c2b54834b9eb8ec3469d.debug
-Missing separate debuginfo for /lib64/libpng12.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/b6/ca4d2654e501792360f9838e27db4b22c25e00.debug
-Missing separate debuginfo for /lib64/libjpeg.so.62
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/47/91ca4e7c88ca1315f87c36157076c6828be6f5.debug
-Missing separate debuginfo for /lib64/libXft.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/b3/3167ff4b353260d5269e11b8a2733e4bf11216.debug
-Missing separate debuginfo for /lib64/libXp.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/4e/90fdbcaf9b684e04378a6264a9c0059a8136e4.debug
-Missing separate debuginfo for /lib64/libXmu.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/f4/678364a78a6169757f4fb70c1a96769bba68f1.debug
-Missing separate debuginfo for /lib64/libXt.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/c4/6565c3f0c4de8e9259de40046ddaabc2d644dd.debug
-Missing separate debuginfo for /lib64/libfreetype.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/70/fcfc9d879d2d095c2bacfa50f638e957d28a21.debug
-Missing separate debuginfo for /lib64/libGLU.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/90/f794040ac70c5fb1a5bb879ca211007ef65668.debug
-Missing separate debuginfo for /lib64/libGL.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/c4/45828b333cedbe3ca1bc77e9de58843a306507.debug
-Missing separate debuginfo for /lib64/libssl.so.10
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/97/f01bd6cb968372c03fea6fc7c0806adbf40ba0.debug
-Missing separate debuginfo for /lib64/libcrypto.so.10
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/7b/b58c473d7139e785790ba04ff391537f6dd1f9.debug
-Missing separate debuginfo for /lib64/libelf.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/36/8d14e88991a2d0022c1f119fe4c36760c7ebac.debug
-Missing separate debuginfo for /lib64/libuuid.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/2b/6b569cf9370b368b32c0ee5f423a1b98ef8e1a.debug
-Missing separate debuginfo for /lib64/libcurl.so.4
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/97/97cbd3c6970c393e825cb0d29e0253571d3cfe.debug
-Missing separate debuginfo for /lib64/libz.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/f5/4a429431ddced4b481887b9289ba04ab937ecf.debug
-Missing separate debuginfo for /lib64/libXext.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/15/35472c03b66a18c3dd2bbecd4b910840c1bae9.debug
-Missing separate debuginfo for /lib64/libXss.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/52/65f6ee3cccd3b23df0f32130e6b96a64e849c7.debug
-Missing separate debuginfo for /lib64/libX11.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/b6/292d756bb41eca677d4bd44449244222fb4094.debug
-Missing separate debuginfo for /lib64/libX11-xcb.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/34/c85147eb1f7be7ee0a5b4ada2f0952ddb6d14e.debug
-Missing separate debuginfo for /lib64/libxcb.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/12/80aa7d248e87160ee8ace5ed22824e5381f465.debug
-Missing separate debuginfo for /lib64/libxcb-render.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/44/661a3e1f9d19701a1f89f5c115deff13eb2fa7.debug
-Missing separate debuginfo for /lib64/libfontconfig.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/02/f21936a10e876faf363fe26b06274549e72372.debug
-Missing separate debuginfo for /lib64/libutil.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/a0/5cccdcb3ca60c344b0cdaaf24e659d3f8e19b6.debug
-Missing separate debuginfo for /lib64/libcrypt.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/31/2e8f01976e58c74f881f3d9239efc7f5bdb0e9.debug
-Missing separate debuginfo for /lib64/libncurses.so.5
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/a6/4b5f4ede7ab54a9607864b94e4d1364a4da3c6.debug
-Missing separate debuginfo for /lib64/libtinfo.so.5
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/67/02632ac72ecd6773ee7f92d4794d2642792e25.debug
-[Thread debugging using libthread_db enabled]
-Using host libthread_db library "/lib64/libthread_db.so.1".
-Missing separate debuginfo for /lib64/libm.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/2d/f599a619ef168eda0636dd072a6528ecc3f16a.debug
-Missing separate debuginfo for /lib64/libc.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/37/e4ac6a7fb96950b0e6bf72d73d94f3296c77eb.debug
-Missing separate debuginfo for /lib64/libpng16.so.16
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/31/bae13afed80d57aa8c4c236d252cb599672c47.debug
-Missing separate debuginfo for /lib64/libXrender.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/eb/e0bd08fb079ab5826855567e65c4875bfb074d.debug
-Missing separate debuginfo for /lib64/libXau.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/31/207101ca01974ba406b3c442ee1232c7738269.debug
-Missing separate debuginfo for /lib64/libSM.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/17/08a5243fe07245de25596ee67eb47962bbb760.debug
-Missing separate debuginfo for /lib64/libICE.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/1d/01c88a0a7480e19113343bbd968f8f2a6700d6.debug
-Missing separate debuginfo for /lib64/libbz2.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/d3/c0cafc78056b9111dc7fcf05bd6e317423576c.debug
-Missing separate debuginfo for /lib64/libGLX.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/02/768c6a8e1ae4d113152802b20c93f5376d42f9.debug
-Missing separate debuginfo for /lib64/libGLdispatch.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/68/60ffd93150d1ace9a559ac80acbad0e8f30bc9.debug
-Missing separate debuginfo for /lib64/libgthread-2.0.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/01/6672a359edea162f21a5aa537d05f92b0c161a.debug
-Missing separate debuginfo for /lib64/libglib-2.0.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/08/fdc6aede266d5720db3d7596a264aa085e9ff4.debug
-Missing separate debuginfo for /lib64/libzstd.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/93/bac6d5e2e9c93e608ab486586aa55650cd4d6c.debug
-Missing separate debuginfo for /lib64/liblzma.so.5
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/c5/8c4ba116cedc45f221eec1fe99f6686a564939.debug
-Missing separate debuginfo for /lib64/libnghttp2.so.14
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/e5/a9835a43669b1511acab68660bc4076f82deb8.debug
-Missing separate debuginfo for /lib64/libidn2.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/20/84139699574a5705e92ce89a3cd5cc18ee316b.debug
-Missing separate debuginfo for /lib64/libssh.so.4
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/16/66f7572762007e784846436f0e5b996eca014d.debug
-Missing separate debuginfo for /lib64/libpsl.so.5
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ad/d3b992d60e5da6355e29db048ff3fe19dda374.debug
-Missing separate debuginfo for /lib64/libssl.so.1.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/61/b1405646baa8494ad9f4e75be7e172fd92622b.debug
-Missing separate debuginfo for /lib64/libcrypto.so.1.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ee/1cc914ef7dd2f34726cf7fa7956590e499a6a9.debug
-Missing separate debuginfo for /lib64/libgssapi_krb5.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/82/86d0c0966b9a87ada030cd3448124cb51ecf0b.debug
-Missing separate debuginfo for /lib64/libkrb5.so.3
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/78/06167ae4a77da8fd1229276dd55243758e5498.debug
-Missing separate debuginfo for /lib64/libk5crypto.so.3
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/d9/f83f2c0ee695507c8a04b6f6a8b459aedf5647.debug
-Missing separate debuginfo for /lib64/libcom_err.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/0f/66ddecfc27c989e43dfb8e10f11866458aaceb.debug
-Missing separate debuginfo for /lib64/libldap-2.4.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/15/69e9345959c5bc22fa6e4b94ff24cb8707b13b.debug
-Missing separate debuginfo for /lib64/liblber-2.4.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/e7/e8ad18f1001edd481d9a749ddc249f997524e2.debug
-Missing separate debuginfo for /lib64/libbrotlidec.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/e1/378319bd1ec1dc5940a870b18174ab3d481a21.debug
-Missing separate debuginfo for /lib64/libexpat.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ba/7bbaba8678297bbbd29314f2e2bda978abf235.debug
-Missing separate debuginfo for /lib64/libgnutls.so.30
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/43/207efe31b3ce8946e17b6d62562bcbc8937a75.debug
-Missing separate debuginfo for /lib64/libpcre.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/1c/197d4473de618daa10bee7c6f35ddf0b4cee5a.debug
-Missing separate debuginfo for /lib64/libunistring.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/fe/d030680f0247e18c3aa5bfb0c0f4f95583fe7f.debug
-Missing separate debuginfo for /lib64/libkrb5support.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/39/3326c355f35c4a6e559d87b472a6e97bb03e0a.debug
-Missing separate debuginfo for /lib64/libkeyutils.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/65/6ffc637154b12f4b3fb3b2cb3b154662823854.debug
-Missing separate debuginfo for /lib64/libresolv.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ff/60e72cb858326e6cd6b6d0814423d0c204eb6c.debug
-Missing separate debuginfo for /lib64/libsasl2.so.3
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/16/2f251927bb61a2a3f67d050da1f51858c40041.debug
-Missing separate debuginfo for /lib64/libbrotlicommon.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/65/5ee0295d320913f973843e9b519ceef543a925.debug
-Missing separate debuginfo for /lib64/libp11-kit.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/a7/29febd23b69f7061fbe8f154202b6ac6679e64.debug
-Missing separate debuginfo for /lib64/libtasn1.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/0f/d3d75bec8eec4b1ba6f1386768af49b3239da9.debug
-Missing separate debuginfo for /lib64/libnettle.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/df/665e10e6c8583dcc8d775e5715d9d19c042de4.debug
-Missing separate debuginfo for /lib64/libhogweed.so.4
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/c0/9155b97d170b106b5a329e6ea6f1c66d85052c.debug
-Missing separate debuginfo for /lib64/libgmp.so.10
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ef/ce00f2cfca2c1594baa99ead9f1d4b035a0a40.debug
-Missing separate debuginfo for /lib64/libselinux.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/9e/62372489a1a17a06f7a7f93c917cbeec84fc52.debug
-Missing separate debuginfo for /lib64/libffi.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/f7/5387f2d27805f833650f5ece14535ab8792134.debug
-Missing separate debuginfo for /lib64/libpcre2-8.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/fb/6f8c4e86e8c48432f60eb77b33905491b2c5bf.debug
-Missing separate debuginfo for /lib64/libnss_files.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/34/5a530b3d06e49c6fdb8022be2ff28d084264c4.debug
-Missing separate debuginfo for /lib64/libnss_sss.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/fb/9c1ea56d8baf543efaf8950f2ea3a2665ec4c1.debug
-Missing separate debuginfo for /lib64/libnss_dns.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/25/4f29c29d2b06fb3b6f5e1d1cde6dc8e41ad076.debug
-Missing separate debuginfo for /usr/lib64/gconv/UTF-16.so
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/29/ccc27050aecc6dc5ae805b209653bbc960ad00.debug
-Missing separate debuginfo for /lib64/libdbus-1.so.3
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/44/93ae3a1de9e920869f272596f4f1156ea020d4.debug
-Missing separate debuginfo for /lib64/libsystemd.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/5a/2598316e42bf1d2b904ec735b508d3f4ee77a7.debug
-Missing separate debuginfo for /lib64/libcap.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ce/ad2c393d24cbe335121c18623f47a49f6bfc69.debug
-Missing separate debuginfo for /lib64/libmount.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/59/ad97cea64b51e49e987aeeeaa48b6288fafb33.debug
-Missing separate debuginfo for /lib64/libgcrypt.so.20
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/b4/14a61a983376dce2d482c943e2e0c0d0eb74f8.debug
-Missing separate debuginfo for /lib64/libblkid.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/9c/a46ccf1b771b2ec51035a7433d34b6cf6b1bfa.debug
-Missing separate debuginfo for /lib64/libgpg-error.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/62/d53a38e53503c9651217c623d8a3ca5bf68cee.debug
-Missing separate debuginfo for /lib64/libXcursor.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/70/bf999c218c31093f865bbaf7f74d5716f35ccf.debug
-Missing separate debuginfo for /lib64/libXfixes.so.3
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/aa/4b4e2491564f098ff7b8c26868f77397019a22.debug
-Missing separate debuginfo for /lib64/libxcb-glx.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/d3/44f0e5078829e500369756974059e4813f952f.debug
-Missing separate debuginfo for /lib64/libGLX_mesa.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/bf/65d4dcf5e0ae7d8dbd5e9e0064cf6752a592af.debug
-Missing separate debuginfo for /lib64/libglapi.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/d7/65ca06f618a63e2e72709911f1e93ced9bf247.debug
-Missing separate debuginfo for /lib64/libdrm.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/8f/6aa6a2bee102ddebd7d218f4fe8b84a9fe7b2f.debug
-Missing separate debuginfo for /lib64/libxcb-dri2.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/06/ddbfb54b3c7900a916eb176c1a2e1f9220e732.debug
-Missing separate debuginfo for /lib64/libXxf86vm.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/0f/79db6be8738defc01ef6f5817ae1f3fe1d73e3.debug
-Missing separate debuginfo for /lib64/libxcb-shm.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/47/94bda992fe93f53ee00f092802b7891ad2e332.debug
-Missing separate debuginfo for /lib64/libxshmfence.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/25/fdb218e34acea3b9c26ed25f8254878d2229ac.debug
-Missing separate debuginfo for /lib64/libxcb-randr.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/9e/8b8df7999e19f0e656687ecfaeb9b247132069.debug
-Missing separate debuginfo for /lib64/libxcb-dri3.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/3e/1f657a293ea897d56be90cdcecdcdd59bc62e8.debug
-Missing separate debuginfo for /lib64/libxcb-present.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/82/8b6c2aca1c0de9e2b2a0bebe77f8028a6f93a0.debug
-Missing separate debuginfo for /lib64/libxcb-sync.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/bc/fd3bc653c350cd650750d1ebad529cb0aa103a.debug
-Missing separate debuginfo for /lib64/libxcb-xfixes.so.0
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/42/821e125d955f25e3f763e36cb7e67ebf0a2fd7.debug
-Missing separate debuginfo for /usr/lib64/dri/swrast_dri.so
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/5d/be8f2e207eb9bdc662a3ee4d9f621f21ab877e.debug
-Missing separate debuginfo for /usr/lib64/llvm17/lib/libLLVM-17.so
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/b0/177c66942c8f07af221a61b9225c4d5e33e87d.debug
-Missing separate debuginfo for /lib64/libdrm_radeon.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/de/e5b7873715c14b6e7e99b0a24f492015696578.debug
-Missing separate debuginfo for /lib64/libdrm_amdgpu.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ea/cb68c3394f07800fd9dd1fc5d1c02e0423ff63.debug
-Missing separate debuginfo for /lib64/libdrm_nouveau.so.2
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/a6/7d51fbaab391fd6fa36a3c0c7b1a12cdb1d7ef.debug
-Missing separate debuginfo for /lib64/libtinfo.so.6
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/ac/8ca34595aa69d3dcb5a3151b34a1bef09cc071.debug
-Missing separate debuginfo for /lib64/libtiff.so.5
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/17/78eb51e11f2fe9eff2ef475f850c28d71add49.debug
-Missing separate debuginfo for /lib64/libjbig.so.2.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/77/4122c1f94f8239fbc3ad2485bc928547047cff.debug
-Missing separate debuginfo for /lib64/libnsl.so.1
-Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/b4/f0f94359c0560c79249b962e438cd242cdfc05.debug
-0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-
-Thread 34 (Thread 0x7f69cf7a1700 (LWP 1670530)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 33 (Thread 0x7f69d13a1700 (LWP 1670529)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 32 (Thread 0x7f69d2ed1700 (LWP 1670528)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 31 (Thread 0x7f69d4831700 (LWP 1670527)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 30 (Thread 0x7f69d7d81700 (LWP 1670526)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 29 (Thread 0x7f69de361700 (LWP 1670525)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 28 (Thread 0x7f69e4731700 (LWP 1670524)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 27 (Thread 0x7f69e7841700 (LWP 1670523)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000000d856697 in syThreadPoolNS1::syThreadPoolNS2::syThreadPool<void>::threadLoopFunc(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 26 (Thread 0x7f69f60d1700 (LWP 1670505)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 25 (Thread 0x7f69f7681700 (LWP 1670504)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 24 (Thread 0x7f69f8c61700 (LWP 1670503)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 23 (Thread 0x7f69fa271700 (LWP 1670502)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 22 (Thread 0x7f6a207b1700 (LWP 1670501)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 21 (Thread 0x7f6a21821700 (LWP 1670500)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 20 (Thread 0x7f6a226c1700 (LWP 1670499)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 19 (Thread 0x7f6a23591700 (LWP 1670498)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6abc51485c in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#2  0x000000001364c390 in spThread::spThreadPool::Worker<void>::loop() ()
-#3  0x00007f6abc519af0 in ?? () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libstdc++.so.6
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 18 (Thread 0x7f6a254c1700 (LWP 1670470)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 17 (Thread 0x7f6a27f71700 (LWP 1670469)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 16 (Thread 0x7f6a2b551700 (LWP 1670468)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 15 (Thread 0x7f6a2e931700 (LWP 1670467)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 14 (Thread 0x7f6a28d61700 (LWP 1670466)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 13 (Thread 0x7f6a57225700 (LWP 1670465)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 12 (Thread 0x7f6a57a26700 (LWP 1670464)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4cbbf in TAThreadJobPool::oneWorkerDone(int) ()
-#3  0x0000000020b4ce69 in TAThreadWorker::loop() ()
-#4  0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 11 (Thread 0x7f6a3030b700 (LWP 1670463)):
-#0  0x00007f6ab2f07e42 in waitpid () from /lib64/libc.so.6
-#1  0x00007f6ab2e5b747 in do_system () from /lib64/libc.so.6
-#2  0x000000001e51fbd2 in syStackTraceDump(_IO_FILE*, bool) ()
-#3  0x000000001e51ffd9 in syStackTrace ()
-#4  0x000000000b81d63d in rdaiErrorHandler1(int) ()
-#5  0x000000000fd724b7 in goSignalHandler::executeAction(int, siginfo_t*, void*) ()
-#6  0x000000000fd725bc in goSignalHandler::executeSigAction(int, siginfo_t*, void*) ()
-#7  <signal handler called>
-#8  0x000000001efcf930 in TATimer::getFromPhaseTransformAndAdjust(TATimingPinPtr const&, TAPhase*, taanalysistype, tatransitiontype, TAPhase*&, TAPropTime&, TALinkedList&, TADelayArcPtr, taboolean, TAPropTime, taboolean, TAPhase*, taboolean, TATimeList*, ta_use_zero_delays_options, taboolean*, pathtype) ()
-#9  0x000000001f0bbf41 in TATimeList::propagateAT(TADelayArcPtr, TATimeList&, taboolean, TATimingPinPtr, TATimingPinPtr, ta_use_zero_delays_options, taboolean, taboolean, float (*) [2][2], TAPropTime (*) [2][2][2], TAPropTime (*) [2][2][2], taboolean, TATimingPinPtr, pathtype, TADelayArcPtr, TADerateInfo*, taarcproptype, TATimingDerateCache*) ()
-#10 0x000000001f18708e in TATimer::calculateArrival(TADelayArcPtr const&, TATimeList&, taboolean, taboolean, taboolean&, TATimeList*, ta_use_zero_delays_options, taboolean, taboolean, float (*) [2][2], TAPropTime (*) [2][2][2], TAPropTime (*) [2][2][2], pathtype, taboolean, taboolean, TADelayArcPtr, TATimingPinPtr, TATimingPinPtr, taboolean*, TAClockDefinition*, taboolean, TADerateInfo*, taboolean, taboolean, TATimingDerateCache*, taboolean, taboolean, taboolean, taboolean, TAPhase*, TALatchInfoCache*) ()
-#11 0x000000001f17ed8c in TATimer::calculateArrival(TATimingPinPtr const&, int, taboolean&, pathtype, ta_use_zero_delays_options, TATimeList*) ()
-#12 0x000000001f187daf in TATimer::forceCalculateArrival(TATimingPinPtr const&, TAMainBoundaryInfo*, taboolean, pathtype) ()
-#13 0x000000001f1923e5 in TAPhaseSetCompactListJob::processJob(TAJobElemCompact&) ()
-#14 0x0000000020b53407 in TACompactListJob::execute(int) ()
-#15 0x000000001eacd092 in TATimerWorker::consume(void*) ()
-#16 0x0000000020b4cd9c in TAThreadWorker::loop() ()
-#17 0x0000000020b4cea1 in TAThread::run(TAThreadWorker*) ()
-#18 0x000000000bc01ec5 in create_head(void*) ()
-#19 0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#20 0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 10 (Thread 0x7f6a666d7700 (LWP 1670095)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007f6ab77e1dfb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f6ab742d4f5 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
-#3  0x00007f6ab77e165b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#4  0x000000000bc01ec5 in create_head(void*) ()
-#5  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#6  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 9 (Thread 0x7f6a8ec35700 (LWP 1670064)):
-#0  0x00007f6ab2f32bb6 in ppoll () from /lib64/libc.so.6
-#1  0x00007f6ab7a02a99 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#2  0x00007f6ab7a03f94 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#3  0x00007f6ab79b4abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#4  0x00007f6ab77dd551 in QThread::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#5  0x00007f6aa149ce26 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
-#6  0x00007f6ab77e165b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#7  0x000000000bc01ec5 in create_head(void*) ()
-#8  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#9  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 8 (Thread 0x7f6a8fbcb700 (LWP 1670063)):
-#0  0x00007f6ab2e4f30c in sigtimedwait () from /lib64/libc.so.6
-#1  0x00007f6ab3a0089c in sigwait () from /lib64/libpthread.so.0
-#2  0x000000000b81aea0 in ctrlCHandle(void*) ()
-#3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 7 (Thread 0x7f6a90c5a700 (LWP 1669995)):
-#0  0x00007f6ab2f351ff in select () from /lib64/libc.so.6
-#1  0x00000000306a7028 in NotifierThreadProc ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 6 (Thread 0x7f6aa02ca700 (LWP 1669994)):
-#0  0x00007f6ab2f32ac1 in poll () from /lib64/libc.so.6
-#1  0x00007f6ab48ee6ff in _xcb_conn_wait () from /lib64/libxcb.so.1
-#2  0x00007f6ab48f038a in xcb_wait_for_event () from /lib64/libxcb.so.1
-#3  0x00007f6aa1591709 in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
-#4  0x00007f6ab77e165b in ?? () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#5  0x000000000bc01ec5 in create_head(void*) ()
-#6  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#7  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 5 (Thread 0x7f6aa22cd700 (LWP 1669926)):
-#0  0x00007f6ab2f08098 in nanosleep () from /lib64/libc.so.6
-#1  0x00007f6ab2f07f9e in sleep () from /lib64/libc.so.6
-#2  0x000000001e53b932 in syiPeakMem(void*) ()
-#3  0x000000000bc01ec5 in create_head(void*) ()
-#4  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#5  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 4 (Thread 0x7f6aa32cf700 (LWP 1669924)):
-#0  0x00007f6ab3a001a0 in nanosleep () from /lib64/libpthread.so.0
-#1  0x000000000d7476cd in rdaiLicRecheck(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 3 (Thread 0x7f6aa3fe2700 (LWP 1669920)):
-#0  0x00007f6ab2f351ff in select () from /lib64/libc.so.6
-#1  0x000000002edc5cdb in ProcessInfo::sampleUsage(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 2 (Thread 0x7f6aa47e3700 (LWP 1669919)):
-#0  0x00007f6ab39ffbf7 in accept () from /lib64/libpthread.so.0
-#1  0x000000002edce077 in ProcessInfo::handleConnection(void*) ()
-#2  0x000000000bc01ec5 in create_head(void*) ()
-#3  0x00007f6ab39f61ca in start_thread () from /lib64/libpthread.so.0
-#4  0x00007f6ab2e398d3 in clone () from /lib64/libc.so.6
-
-Thread 1 (Thread 0x7f6aabff1080 (LWP 1669801)):
-#0  0x00007f6ab39fc47c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x000000001ececdb9 in TAThreadCondition::wait(TAThreadMutex&) ()
-#2  0x0000000020b4c976 in TAThreadJobPool::add(void*, unsigned int, taboolean) ()
-#3  0x0000000020b5379f in TACompactListJob::run(TACompactListJob::TACurrentProcessingType, TALinkedList&, bool) ()
-#4  0x0000000020b53e6e in TACompactListJob::run() ()
-#5  0x000000001f1985cc in TATimer::processPhaseSetInvalidListNonIncBFS(TAMainBoundaryInfo*, TATimingPinPtr const&) ()
-#6  0x000000001f19980d in TATimer::processPhaseSetInvalidList(TAMainBoundaryInfo*) ()
-#7  0x000000001f3d6007 in TATimer::evaluateLoopBreakerPinList(TALinkedList&, TALinkedList&, TALinkedList&, int, taboolean, taboolean, taboolean, taboolean) ()
-#8  0x000000001f3ede0c in TATimer::processLoop(TALinkedList&, TALinkedList&, TALinkedList&, taboolean, taboolean, taboolean, taboolean) ()
-#9  0x000000001f3da842 in TATimer::_slackStealAndDynamicLoop(TABoundary*, TALinkedList*, TALinkedList*, taboolean, taboolean, taboolean) ()
-#10 0x000000001f3dae23 in TATimer::reevaluateNonIncrementalTimingComputationPrivate(TABoundary*, taboolean, taboolean, taboolean, TAPrunedRequiredInfo*) ()
-#11 0x000000001f3dbc6d in TATimer::reevaluateNonIncrementalTimingComputation(TABoundary*, taboolean, taboolean, taboolean, TAPrunedRequiredInfo*) ()
-#12 0x000000001e800216 in TAExtApi::reevaluateNonIncrementalComputation(TADbBoundary*, TAAnalysisId*, TADbContext*, taboolean, taboolean, taboolean, taboolean, taboolean, TAPrunedRequiredInfo*) [clone .part.0] ()
-#13 0x000000001e8007e5 in TAExtApi::reevaluateNonIncrementalComputation(TADbBoundary*, TAAnalysisId*, TADbContext*, taboolean) ()
-#14 0x000000001a2a4f2c in tomRunLatchSTA() ()
-#15 0x000000000ecfae6a in coePathGroup::createPathGroupsIfNotPresentAndCategories(coeDesignState, bool&) ()
-#16 0x0000000012fb0cbd in spd_ignore_low_effort_path_group_init() ()
-#17 0x0000000012fb60dc in spd_map_PathGroup2net() ()
-#18 0x0000000012e621e3 in spIPlaceForNP(dbsHead*, spsSecHead*, char*, int) ()
-#19 0x00000000130998bd in spMain(dbsHead*) ()
-#20 0x000000000ba98522 in rdaiPlaceCmd ()
-#21 0x000000003059e65b in TclInvokeStringCommand ()
-#22 0x00000000305a3152 in TclNRRunCallbacks ()
-#23 0x00000000305a5364 in TclEvalEx ()
-#24 0x00000000305a5db3 in Tcl_EvalEx ()
-#25 0x00000000305a5e62 in TclNREvalObjEx ()
-#26 0x000000003065b9b0 in TclNREvalFile ()
-#27 0x00000000305b94e5 in TclNRSourceObjCmd ()
-#28 0x00000000305a3152 in TclNRRunCallbacks ()
-#29 0x0000000030640e14 in Tcl_RecordAndEvalObj ()
-#30 0x0000000030640f89 in Tcl_RecordAndEval ()
-#31 0x000000000b918ee7 in rdaEditCmdLineEnd(char*) ()
-#32 0x000000001a3ade21 in seConsole::sesMode::DoExecute(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void*) ()
-#33 0x000000001bbd3fe0 in Redline::EmacsMode::AcceptLine() ()
-#34 0x000000001bbdc3a1 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
-#35 0x000000001bbeb46b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
-#36 0x000000001bbeac8c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
-#37 0x000000001bbd1077 in Redline::Editor::Internals::Run(bool) ()
-#38 0x00000000306a732e in FileHandlerEventProc ()
-#39 0x0000000030667b29 in Tcl_ServiceEvent ()
-#40 0x0000000030667e39 in Tcl_DoOneEvent ()
-#41 0x00007f6ab85e323a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#42 0x00007f6ab79b4abb in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#43 0x00007f6ab79bc27e in QCoreApplication::exec() () from /eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
-#44 0x00007f6ab85e2897 in TqApplication::exec() () from /mnt/cae_storage_sw/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
-#45 0x000000000b8f2adc in edi_app_init(Tcl_Interp*) ()
-#46 0x000000003066257c in Tcl_MainEx ()
-#47 0x0000000006b69781 in main ()
-A debugging session is active.
-
-	Inferior 1 [process 1669801] will be detached.
-
-Quit anyway? (y or n) [answered Y; input not from terminal]
-[Inferior 1 (process 1669801) detached]
-Crashed in AAE on net Unknown net.
-
-*** Memory Usage v#1 (Current mem = 3069.648M, initial mem = 635.109M) ***
-*** Message Summary: 62 warning(s), 0 error(s)
-
---- Ending "Innovus" (totcpu=0:00:43.0, real=0:02:13, mem=3069.6M) ---
+<CMD> loadIoFile Multi_Row_IO_PAD.io
+Reading IO assignment file "Multi_Row_IO_PAD.io" ...
+**WARN: (IMPFP-4008):	The ring number '1' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+**WARN: (IMPFP-4008):	The ring number '2' is specified at sides ' top  left  bottom  right ' , so all IO pads defined in this ring honor margins for these sides to calculate the location.
+Type 'man IMPFP-4008' for more detail.
+WARNING (IMPFP-3997): The Floorplan box has been changed from {(0.0000000000 , 0.0000000000) (2098.6650000000 , 2098.6650000000)} to {(-230.0000000000 , -230.0000000000) (2328.6650000000 , 2328.6650000000)}.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+<CMD> floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :40.02
+Adjusting core size to PlacementGrid : width :444.36 height : 442.98
+Adjusting Core to Left to: 40.2200. Core to Bottom to: 40.2200.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> fit
+<CMD> zoomBox -39.14900 212.36600 230.76900 -33.01500
+<CMD> uiSetTool ruler
+<CMD> uiSetTool select
+<CMD> fit
+<CMD> zoomBox -41.60300 256.53400 267.57600 -57.55300
+<CMD> uiSetTool ruler
+<CMD> uiSetTool select
+<CMD> fit
+<CMD> floorPlan -site CoreSite -b 0 0 1543.665 1543.665 437.33 437.33 1106,335 1106,335 467.33 467.33 1076.335 1076.335
+**WARN: (IMPFP-4031):	Adjusting 'coreBox'(according to PlacementGrid) from {(467.3300000000 , 467.3300000000) (1076.3350000000 , 1076.3350000000)} to {(467.3600000000 , 467.3600000000) (1076.4000000000 , 1076.4000000000)} due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+**WARN: (IMPFP-4031):	Adjusting 'DieBox'(according to PlacementGrid) from {(0.0000000000 , 0.0000000000) (1543.6650000000 , 1543.6650000000)} to {(0.0000000000 , 0.0000000000) (1543.7600000000 , 1543.7600000000)} due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+**WARN: (IMPFP-4031):	Adjusting 'ioBox'(according to PlacementGrid) from {(437.3300000000 , 437.3300000000) (1106.0000000000 , 1106.0000000000)} to {(437.4600000000 , 437.4600000000) (1105.8400000000 , 1105.8400000000)} due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.22 defined in technology file in preferred direction.
+Generated pitch 0.615 in met4 is different from 0.69 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.69 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> fit
+<CMD> zoomBox 95.08000 -38.53800 1707.45000 1404.87700
+<CMD> fit
