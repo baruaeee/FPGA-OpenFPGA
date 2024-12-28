@@ -1,20 +1,21 @@
-source fabric_comb_test.globals
+#source fabric_comb_test.globals
+source fabric_comb_test_IO.globals
 init_design
 
-loadIoFile IO_PAD.io
+#loadIoFile IO_PAD.io
 #loadIoFile IO_PAD_corner_edited.io
-#loadIoFile Multi_Row_IO_PAD.io
+loadIoFile Multi_Row_IO_PAD.io
 
 
 ## Specify floorplan
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-#floorPlan -site CoreSite -b 0 0 1543.665 1543.665 437.33 437.33 1106,335 1106,335 467.33 467.33 1076.335 1076.335
+#floorPlan -coreMarginsBy io -r 1.00 0.71 40.02 40.02 40.02 40.02
+floorPlan -site CoreSite -b 0.0 0.0 1584.24 1596.2 440.12 440.12 1144.12 1156.08 479.32 479.32 1104.92 1116.42
 #floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
-#floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
-# 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
+#floorPlan -site CoreSite -d 1584.24 1596.2 39.4 39.4 39.86 39.86
+#floorPlan -site CoreSite -b 0 0 1584.24 1596.2 440.22 447.58 1144.02 1148.62 480.24 487.6 1104 1108.6
 
 ## Check Floorplan
-#checkDesign -floorplan
+checkDesign -floorplan
 
 
 ## IO filler
