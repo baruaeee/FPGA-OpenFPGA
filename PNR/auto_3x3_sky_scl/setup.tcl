@@ -1,5 +1,5 @@
-#source fabric_comb_test.globals
-source fabric_comb_test_IO.globals
+source fabric_comb_test.globals
+#source fabric_comb_test_IO.globals
 init_design
 
 #loadIoFile IO_PAD.io
@@ -132,6 +132,7 @@ optDesign -preCTS
 #create_ccopt_clock_tree_spec
 #get_ccopt_clock_trees * 
 #ccopt_design
+#clock_ccopt_design
 
 ## Post CTS Optimization
 #timeDesign -postCTS

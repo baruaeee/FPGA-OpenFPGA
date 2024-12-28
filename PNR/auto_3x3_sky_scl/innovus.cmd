@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Fri Dec 27 18:24:04 2024                
+#  Created on Sat Dec 28 21:10:40 2024                
 #                                                     
 #######################################################
 
@@ -15,45 +15,6 @@
 
 set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
 suppressMessage ENCEXT-2799
-getVersion
-getVersion
-getVersion
-define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
-        {-window "window coordinates" "" list optional}
-        {-window_size "window size in microns" "" string optional}
-    
-    }
-define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
-    {-fillInfo "Design Fill data" "" list required}
-				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
-				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
-    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
-}
-define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
-    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
-				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
-				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
-    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
-}
-define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
-    {-fillInfo "Design Fill data" "" list required}
-				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
-				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
-    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
-}
-define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
-    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
-				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
-				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
-    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
-}
-define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
-    {-fillInfo "Design Fill data" "" list required}
-	
-}
-define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
-    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
-}
 win
 set ::TimeLib::tsgMarkCellLatchConstructFlag 1
 set conf_qxconf_file NULL
@@ -69,7 +30,7 @@ set enc_enable_print_mode_command_reset_options 1
 set init_design_uniquify 1
 set init_gnd_net {VSS VSSA VSSD VSSIO_Q VSSIO G_CORE}
 set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/IO/sky130_fd_io__corner_bus_overlay.lef lef/IO/sky130_fd_io__top_gpio_ovtv2.lef lef/IO/sky130_fd_io__top_ground_hvc_wpad.lef lef/IO/sky130_fd_io__top_power_hvc_wpadv2.lef}
-set init_mmmc_file Fabric1.view
+set init_mmmc_file Fabric.view
 set init_original_verilog_files SRC/comb_fabric.v
 set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B}
 set init_verilog SRC/post_synth_fabric_netlist.v
@@ -95,34 +56,48 @@ set lefdefInputCheckColoredShape 0
 set load_netlist_ignore_undefined_cell 1
 init_design
 loadIoFile Multi_Row_IO_PAD.io
-floorPlan -site CoreSite -b 0.0 0.0 1584.24 1596.2 440.12 440.12 1144.12 1156.08 479.32 479.32 1104.92 1116.42
+selectInst grid_io_bottom_1__0_/logical_tile_io_mode_io__2/logical_tile_io_mode_physical__iopad_0/GPIO_0_/gpio
+zoomBox -642.55700 -283.91500 1978.38800 2226.67400
+floorPlan -coreMarginsBy io -r 1.00 0.71 40.02 40.02 40.02 40.02
+deselectAll
+zoomBox -439.08900 -228.73800 1788.71400 1905.26300
+zoomBox -266.14200 -181.83700 1627.49100 1632.06400
+zoomBox -113.15600 -120.54300 1496.43200 1421.27300
+zoomBox 16.88200 -68.44400 1385.03200 1242.10000
+zoomBox 214.70500 40.79200 1203.19400 987.66000
+zoomBox 291.96300 83.45300 1132.17900 888.29100
+zoomBox 123.81300 -9.39800 1286.74100 1104.56500
+zoomBox 16.88100 -68.44500 1385.03200 1242.10000
+zoomBox -108.92200 -137.91200 1500.66800 1403.90600
+zoomBox -256.92500 -219.63800 1636.71100 1594.26600
 checkDesign -floorplan
-setDesignMode -process 130
-globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-globalNetConnect P_CORE -type pgpin -pin VDD -override -verbose -netlistOverride
-globalNetConnect G_CORE -type pgpin -pin VSS -override -verbose -netlistOverride
-globalNetConnect AMUXBUS_A -type pgpin -pin AMUXBUS_A -override -verbose -netlistOverride
-globalNetConnect AMUXBUS_B -type pgpin -pin AMUXBUS_B -override -verbose -netlistOverride
-globalNetConnect VSSA -type pgpin -pin VSSA -override -verbose -netlistOverride
-globalNetConnect VDDA -type pgpin -pin VDDA -override -verbose -netlistOverride
-globalNetConnect VSWITCH -type pgpin -pin VSWITCH -override -verbose -netlistOverride
-globalNetConnect VDDIO_Q -type pgpin -pin VDDIO_Q -override -verbose -netlistOverride
-globalNetConnect VCCHIB -type pgpin -pin VCCHIB -override -verbose -netlistOverride
-globalNetConnect VDDIO -type pgpin -pin VDDIO -override -verbose -netlistOverride
-globalNetConnect VCCD -type pgpin -pin VCCD -override -verbose -netlistOverride
-globalNetConnect VSSIO -type pgpin -pin VSSIO -override -verbose -netlistOverride
-globalNetConnect VSSD -type pgpin -pin VSSD -override -verbose -netlistOverride
-globalNetConnect VSSIO_Q -type pgpin -pin VSSIO_Q -override -verbose -netlistOverride
-globalNetConnect P_CORE -type pgpin -pin P_CORE -override -verbose -netlistOverride
-globalNetConnect G_CORE -type pgpin -pin G_CORE -override -verbose -netlistOverride
-addRing -nets {P_CORE G_CORE} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width {top 4 bottom 4 left 4 right 4} -spacing {top 4 bottom 4 left 4 right 4} -offset {top 10 bottom 10 left 10 right 10} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-sroute -connect { corePin floatingStripe } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { P_CORE G_CORE } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { met1(1) met5(5) }
-sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
-addStripe -nets {P_CORE G_CORE} -layer met4 -direction vertical -width 5 -spacing 5 -set_to_set_distance 130 -start_from left -start_offset 110 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit met5 -padcore_ring_bottom_layer_limit met1 -block_ring_top_layer_limit met5 -block_ring_bottom_layer_limit met1 -use_wire_group 0 -snap_wire_center_to_grid None
-setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 0 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxRouteLayer 5 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
-setMultiCpuUsage -localCpu 8 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
-setPlaceMode -fp false
-place_design
+zoomBox 414.15300 517.88300 5178.14300 -399.03500
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+zoomBox 504.49600 455.73900 450.77400 492.49600
+selectMarker 475.3400 475.3400 485.3400 485.3400 -1 0 0
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false -displayByLayer
+violationBrowserClose
+deselectAll
+selectMarker 475.3400 475.3400 485.3400 485.3400 -1 0 0
+get_snap_grid_info
+get_snap_grid_info -type placement
+get_snap_grid_info -type manufacturing
+get_snap_grid_info -type inst
+deselectAll
+fit
+floorPlan -site CoreSite -b 0.0 0.0 1584.24 1596.2 440.12 440.12 1144.12 1156.08 479.32 479.32 1104.92 1116.42
+fit
+loadIoFile Multi_Row_IO_PAD.io
+floorPlan -site CoreSite -b 0.0 0.0 1584.24 1596.2 440.12 440.12 1144.12 1156.08 479.32 479.32 1104.92 1116.42
+zoomBox -437.06900 -227.35800 1719.40100 1838.31300
+zoomBox -124.38100 -79.81100 1708.61900 1676.01000
+fit
+checkDesign -floorplan
