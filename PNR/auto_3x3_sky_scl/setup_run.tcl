@@ -127,38 +127,39 @@ optDesign -preCTS
 
 ## CTS
 ##without specification file
-#set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8"
+set_ccopt_property buffer_cells "BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8"
 ## create specification file from SDC file
-#create_ccopt_clock_tree_spec
+create_ccopt_clock_tree_spec
 #get_ccopt_clock_trees * 
 #ccopt_design
-#clock_opt_design
+clock_opt_design
 
 ## Post CTS Optimization
 #timeDesign -postCTS
-#optDesign -postCTS
+optDesign -postCTS
 #timeDesign -postCTS
 
 ## Routing
-#setNanoRouteMode -quiet -drouteFixAntenna 1
-#setNanoRouteMode -quiet -routeInsertAntennaDiode 0
-#setNanoRouteMode -quiet -routeWithTimingDriven 1
-#setNanoRouteMode -quiet -routeWithEco 0
-#setNanoRouteMode -quiet -routeWithLithoDriven 0
-#setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
-#setNanoRouteMode -quiet -routeWithSiDriven 0
-#setNanoRouteMode -quiet -drouteAutoStop 1
-#setNanoRouteMode -quiet -routeSelectedNetOnly 0
-#setNanoRouteMode -quiet -routeTopRoutingLayer 5
-#setNanoRouteMode -quiet -routeBottomRoutingLayer 1
-#setNanoRouteMode -quiet -drouteEndIteration 1
-#setNanoRouteMode -quiet -routeWithTimingDriven true
-#setNanoRouteMode -quiet -routeWithSiDriven false
-#routeDesign -globalDetail
+setNanoRouteMode -quiet -drouteFixAntenna 1
+setNanoRouteMode -quiet -routeInsertAntennaDiode 0
+setNanoRouteMode -quiet -routeWithTimingDriven 1
+setNanoRouteMode -quiet -routeWithEco 0
+setNanoRouteMode -quiet -routeWithLithoDriven 0
+setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
+setNanoRouteMode -quiet -routeWithSiDriven 0
+setNanoRouteMode -quiet -drouteAutoStop 1
+setNanoRouteMode -quiet -routeSelectedNetOnly 0
+setNanoRouteMode -quiet -routeTopRoutingLayer 5
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
 
 ## Post Routing
-#setDelayCalMode -SIAware false
-#setAnalysisMode -analysisType onChipVariation
+setDelayCalMode -SIAware false
+setAnalysisMode -analysisType onChipVariation
+
 #timeDesign -postRoute
 #optDesign -postRoute
 #exit
