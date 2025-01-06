@@ -1,5 +1,5 @@
-#source fabric_comb_test_IO.globals
-source fabric_comb_test.globals
+source fabric_comb_test_IO.globals
+#source fabric_comb_test.globals
 init_design
 
 #loadIoFile IO_PAD.io
@@ -155,6 +155,11 @@ optDesign -preCTS
 #setNanoRouteMode -quiet -routeWithTimingDriven true
 #setNanoRouteMode -quiet -routeWithSiDriven false
 #routeDesign -globalDetail
+
+## Correct DRC errors
+#editDelete -regular_wire_with_drc
+#globalDetailRoute
+
 
 ## Post Routing
 #setDelayCalMode -SIAware false
