@@ -3,7 +3,7 @@
 //	Description: Verilog modules for pb_type: frac_logic
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov 21 02:53:53 2024
+//	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 // ----- BEGIN Physical programmable logic block Verilog module: frac_logic -----
 //----- Default net type -----

@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Dec 29 22:32:15 2024                
+#  Created on Tue Jan  7 18:07:21 2025                
 #                                                     
 #######################################################
 
@@ -56,6 +56,134 @@ define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill
 }
 win
 set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+set ::dft::debug_attribute 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_constraint_efficient_block_write_sdc 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_constraint_efficient_clock_for_write_sdc 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_constraint_enable_improved_timing_update_flow 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_constraint_enable_reset_clock_exception_flow 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_constraint_improve_collection_hash_function 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_constraint_performance_statistics_precision 2
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_disable_backward_compatible_spatial_derate_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_disable_backward_compatible_term_voltage_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_disk_caching_reporting_el_aware_filesize 524288
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_efficient_set_timing_derate 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_backward_compatible_aocv_slack_based_mode 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_backward_compatible_arrival_mode 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_backward_compatible_parallel_arcs 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_diskcaching_io_performance 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_dump_reset_clock 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_eco_group_based_worst_path 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_efficient_clocks_collection 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_efficient_get_lib_objects 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_efficient_hier_obj 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_efficient_save_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_ignore_group_path_from_sdc 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_input_port_path_group_tag 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_input_port_path_group_tag 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_new_hierarchical_startpoints 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_enable_view_pruning_enhancements 4
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_is_imm_info_cached 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_latch_period_based_threshold 0.0001
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_remove_edge_time_in_unconstraind_reporting 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_remove_edge_time_in_unconstraind_reporting 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_coverage_use_cached_real_gba_arrival 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_disable_calculate_arrival_assert 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_enable_capacitance_fetching_per_rf 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_enable_clock_to_clock_false_paths_MT 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_enable_efficient_float_to_string_converter 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_enable_mtiohandler_efficient_register 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_enable_multithread_drv_reporting 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_ipd_max_paths_lookahead_factor 10000
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_ipd_nworst_lookahead_factor 10000
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_report_prt_optimize_unconstraint_handling_for_to_pins 1
 set conf_qxconf_file NULL
 set conf_qxlib_file NULL
 set dbgDualViewAwareXTree 1
@@ -64,6 +192,7 @@ set defHierChar /
 set distributed_client_message_echo 1
 set distributed_mmmc_disable_reports_auto_redirection 0
 set enable_ilm_dual_view_gui_and_attribute 1
+set enc_before_startup_file 0
 set enc_check_rename_command_name 1
 set enc_enable_print_mode_command_reset_options 1
 set init_design_uniquify 1
@@ -72,7 +201,7 @@ set init_lef_file {lef/sky130_scl_9T.tlef lef/sky130_scl_9T.lef lef/IO/sky130_fd
 set init_mmmc_file Fabric.view
 set init_original_verilog_files SRC/comb_fabric.v
 set init_pwr_net {VDD VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B}
-set init_verilog SRC/post_synth_fabric_netlist.v
+set init_verilog SRC/fabric_netlists.v
 get_message -id GLOBAL-100 -suppress
 get_message -id GLOBAL-100 -suppress
 set latch_time_borrow_mode max_borrow
@@ -84,10 +213,169 @@ get_message -id GLOBAL-100 -suppress
 get_message -id GLOBAL-100 -suppress
 set report_inactive_arcs_format {from to when arc_type sense reason}
 set spgUnflattenIlmInCheckPlace 2
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_aocv_efficient_accurate_mode 1
+get_message -id GLOBAL-100 -suppress
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+unsuppressMessage -silent GLOBAL-100
+set timing_aocv_enable_gba_combine_launch_capture 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_clock_root_frequency_compatibility 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_efficient_lib_pin 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_enable_add_brackets_name 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_enable_efficient_all_register_flow 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_enable_efficient_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_enable_efficient_timing_update 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_enable_multi_thread_timing_update 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_enable_property_keywords_with_filter_expression 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_ignore_invalid_objects_for_drv 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_constraint_mmmc_get_lib_objects_reset 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_disable_backward_compatible_hierarchical_context_latch_thru_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_disable_backward_compatible_save_restore_flow 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_disable_backward_compatible_ssi_derate_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_disable_efficient_derate_mode 1
+get_message -id GLOBAL-100 -suppress
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_backward_compatible_latch_thru_mt_mode 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_backward_compatible_mmmc_mode 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_efficient_unconstrained_report_timing 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_get_objects_vertical_filtering_auto_batch_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_latch_borrow_mode_for_si_snalysis 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_multi_threaded_reporting 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_new_power_view_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_view_based_tlatch_mode 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_enable_warning_on_partially_search_failure 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_clock_style_backward_compatible 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_d2d_check_as_non_seq_check 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_disable_3d_arcs 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_improved_waveform_cache 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_internal_power_ground_rails 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_invalidate_auto_validation 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_validate_unconstrained_paths 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_extract_model_write_asymmetric_lvf 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_ipd_ignore_internal_pin_voltage_crossings 1
 set timing_library_ca_derate_data_consistency 0
+set timing_library_derate_thermal_upper_bound 3.40282e+38
+set timing_library_refactor_db_arc_processing 1
+set timing_library_refactor_db_arc_processing3 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_path_based_enable_high_slack_threshold 1e+30
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_path_based_override_distance 1e+30
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_pba_coverage_mode_depth_limit 10
 get_message -id GLOBAL-100 -suppress
 get_message -id GLOBAL-100 -suppress
 set timing_remove_data_path_pessimism_min_slack_threshold -1.70141e+38
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_all_fanout_fanin_bit_based_node_coloring 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_backward_compatible_to_adjust 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_disable_backward_compatible_socv_cppr_in_time_given 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_backward_compatible_pin_load_lookup 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_eco_socv_derating_guardband 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_efficient_collection_handling 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_efficient_cone_marking 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_efficient_dc_update_for_reporting 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_improved_drv_reporting 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_enable_variable_verbose_fields 0
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_latch_analysis_compatibility 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_path_collection_ignore_unsupported_argument 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set timing_report_property_is_clock_new_flow_efficient 0
 set defStreamOutCheckUncolored false
 set init_lef_check_antenna 1
 set init_verilog_tolerate_port_mismatch 0
@@ -128,52 +416,34 @@ setPlaceMode -fp false
 place_design
 timeDesign -preCTS
 optDesign -preCTS
-fit
 set_ccopt_property buffer_cells {BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8}
 create_ccopt_clock_tree_spec
 clock_opt_design
 optDesign -postCTS
 setNanoRouteMode -quiet -drouteFixAntenna 1
 setNanoRouteMode -quiet -routeInsertAntennaDiode 0
-setNanoRouteMode -quiet -routeWithTimingDriven 0
+setNanoRouteMode -quiet -routeWithTimingDriven 1
 setNanoRouteMode -quiet -routeWithEco 0
 setNanoRouteMode -quiet -routeWithLithoDriven 0
 setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
 setNanoRouteMode -quiet -routeWithSiDriven 0
-setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -drouteAutoStop 1
 setNanoRouteMode -quiet -routeSelectedNetOnly 0
 setNanoRouteMode -quiet -routeTopRoutingLayer 5
 setNanoRouteMode -quiet -routeBottomRoutingLayer 1
 setNanoRouteMode -quiet -drouteEndIteration 1
-setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithTimingDriven true
 setNanoRouteMode -quiet -routeWithSiDriven false
 routeDesign -globalDetail
 editDelete -regular_wire_with_drc
 globalDetailRoute
-zoomBox 321.21900 69.45900 1738.29000 1338.04000
-zoomBox 520.30600 127.75500 1724.81600 1206.04900
-fit
-getMultiCpuUsage -localCpu
-get_verify_drc_mode -disable_rules -quiet
-get_verify_drc_mode -quiet -area
-get_verify_drc_mode -quiet -layer_range
-get_verify_drc_mode -check_ndr_spacing -quiet
-get_verify_drc_mode -check_only -quiet
-get_verify_drc_mode -check_same_via_cell -quiet
-get_verify_drc_mode -exclude_pg_net -quiet
-get_verify_drc_mode -ignore_trial_route -quiet
-get_verify_drc_mode -max_wrong_way_halo -quiet
-get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
-get_verify_drc_mode -limit -quiet
-set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report fpga_top.drc.rpt -limit 1000
-verify_drc
-set_verify_drc_mode -area {0 0 0 0}
-verifyConnectivity -type all -geomConnect -error 1000 -warning 50
-timeDesign -postRoute
+editDelete -regular_wire_with_drc
+globalDetailRoute
+saveNetlist fpga_top.v
+setDelayCalMode -SIAware falsesetDelayCalMode -SIAware false
 setDelayCalMode -SIAware false
 setAnalysisMode -analysisType onChipVariation
 timeDesign -postRoute
-optDesign -postRoute
-streamOut fpga -mapFile /eda/cadence/pdks/sky130/sky130_scl_9T_0_0_5/gds/sky130_stream.mapFile -libName DesignLib -units 1000 -mode ALL
-streamOut fpga.gds -mapFile /eda/cadence/pdks/sky130/sky130_scl_9T_0_0_5/gds/sky130_stream.mapFile -libName DesignLib -units 1000 -mode ALL
-saveNetlist post_layout_fpga.v
+all_hold_analysis_views 
+all_setup_analysis_views 
+write_sdf  -ideal_clock_network fpga_top.sdf

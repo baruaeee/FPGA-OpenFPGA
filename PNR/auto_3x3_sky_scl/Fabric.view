@@ -29,12 +29,7 @@ create_constraint_mode -name CONSTRAINTS \
 	SDC/disable_configure_ports.sdc \
 	SDC/disable_routing_multiplexer_outputs.sdc \
 	SDC/disable_sb_outputs.sdc \
-	SDC/genus.dont_touch.sdc}
-
-#	 \
-#	}
-
-
+	SDC/dont_touch.sdc}
 
 create_delay_corner -name MAX_DELAY -library_set {MAX_LIB} -rc_corner {RC_CORNER}
 create_delay_corner -name MIN_DELAY -library_set {MIN_LIB} -rc_corner {RC_CORNER}

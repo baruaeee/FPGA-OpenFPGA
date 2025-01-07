@@ -3,18 +3,16 @@
 //	Description: Fabric Netlist Summary
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Thu Nov 21 02:53:53 2024
+//	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 // ------ Include defines: preproc flags -----
 `include "./SRC/fpga_defines.v"
 
 // ------ Include user-defined netlists -----
 //`include "/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v"
-`include "/run/media/exotic/Cadence/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/sky130_fd_io/latest/cells/top_ground_hvc_wpad/sky130_fd_io__top_ground_hvc_wpad.behavioral.pp.v"
-`include "/run/media/exotic/Cadence/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130/sky130_fd_io/latest/cells/top_power_hvc_wpadv2/sky130_fd_io__top_power_hvc_wpadv2.behavioral.pp.v"
-`include "/run/media/exotic/Cadence/FPGA-OpenFPGA/Synthesis/GPIO/outputs/inpad_netlist.v"
-`include "/run/media/exotic/Cadence/FPGA-OpenFPGA/Synthesis/GPIO/outputs/outpad_netlist.v"
-`include "/run/media/exotic/Cadence/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO/gpio_netlist_sky130_scl.v"
+`include "/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO/gpio_netlist_sky130_scl.v"
+`include "/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/outputs/inpad_netlist.v"
+`include "/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/outputs/outpad_netlist.v"
 // ------ Include primitive module netlists -----
 `include "./SRC/sub_module/inv_buf_passgate.v"
 `include "./SRC/sub_module/arch_encoder.v"
@@ -55,4 +53,4 @@
 
 // ------ Include fabric top-level netlists -----
 `include "./SRC/fpga_top.v"
-//`include "./SRC/fpga_top_pads.v"
+
