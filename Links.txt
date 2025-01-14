@@ -11,9 +11,12 @@ https://schaumont.dyn.wpi.edu/ece574f24/10fclayout.html
 IO pad placement
 https://www.reddit.com/r/chipdesign/comments/148bmgx/io_placement_of_a_netlist_using_innovus/
 
-https://openfpga.readthedocs.io/en/master/
+
 
 OpenFPGA Intro--
+
+https://openfpga.readthedocs.io/en/master/
+
 https://youtu.be/ocODUGcYGqo?list=PLs-JA7mhcMRO9demDFIgWmKwAgAI3Yjd4
 
 OpenFPGA overview-
@@ -23,6 +26,7 @@ https://www.youtube.com/watch?v=nwb5Yk5Uz5w&pp=ygUIb3BlbmZwZ2E%3D
 
 Tutorial on OpenFPGA
 https://sites.google.com/view/openfpgaatfpga23
+
 
 https://docs.verilogtorouting.org/en/latest/vpr/
 
@@ -362,93 +366,3 @@ dbGet top.fPlan.coreBox_sizey
 
 ----------------
 
-write me a python code to read the current cbbi value from https://colintalkscrypto.com/cbbi/ and calculate a the ratio of my crypto portfolio in way that it will keep btc/usd ratio to-
-uptrand => cbbi 0-60 => 0.9
-uptrand => cbbi 61-90 => 0.85
-uptrand => cbbi 91-96 => 0.80
-uptrand => cbbi > 96 => 0.1
-after cbbi>96 => bull market topped, take profit => wait for the market bottom => down trande keep ratio to 0.1
-downtrand => cbbi 10-100 => 0.1
-after cbbi <10 bear market bottomed, change ratio to 0.9 again and uptrand starts. repeat uptrand ratio again.
-
-	
-
-
-
-
-
-
-
-
-import requests
-import numpy as np
-import pandas as pd
-from scipy import stats
-
-class CBBITrendAnalyzer:
-    def __init__(self, lookback_periods=30):
-        self.lookback_periods = lookback_periods
-        self.historical_data = []
-
-    def fetch_cbbi_data(self):
-        try:
-            response = requests.get('https://colintalkscrypto.com/cbbi/data/latest.json')
-            return response.json()
-        except Exception as e:
-            print(f"Error fetching CBBI data: {e}")
-            return None
-
-    def determine_trend(self):
-        data = self.fetch_cbbi_data()
-        if not data:
-            return None
-
-        # Extract historical CBBI values
-        cbbi_values = [entry['value'] for entry in data['data'][-self.lookback_periods:]]
-        
-        # Trend determination methods
-        def linear_regression_trend():
-            x = np.arange(len(cbbi_values))
-            slope, _, _, _, _ = stats.linregress(x, cbbi_values)
-            return "uptrand" if slope > 0 else "downtrand"
-
-        def moving_average_trend():
-            series = pd.Series(cbbi_values)
-            ma_short = series.rolling(window=5).mean()
-            ma_long = series.rolling(window=15).mean()
-            return "uptrand" if ma_short.iloc[-1] > ma_long.iloc[-1] else "downtrand"
-
-        def derivative_trend():
-            derivatives = np.diff(cbbi_values)
-            return "uptrand" if np.mean(derivatives) > 0 else "downtrand"
-
-        # Combine multiple trend detection methods
-        trends = [
-            linear_regression_trend(),
-            moving_average_trend(),
-            derivative_trend()
-        ]
-
-        # Majority voting
-        trend = max(set(trends), key=trends.count)
-        
-        return {
-            'trend': trend,
-            'current_cbbi': cbbi_values[-1],
-            'methods_used': trends
-        }
-
-    def run_analysis(self):
-        trend_analysis = self.determine_trend()
-        if trend_analysis:
-            print(f"Trend: {trend_analysis['trend']}")
-            print(f"Current CBBI: {trend_analysis['current_cbbi']}")
-            print(f"Trend Detection Methods: {trend_analysis['methods_used']}")
-        return trend_analysis
-
-def main():
-    analyzer = CBBITrendAnalyzer()
-    analyzer.run_analysis()
-
-if __name__ == "__main__":
-    main()
