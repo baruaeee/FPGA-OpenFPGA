@@ -3,10 +3,10 @@
 //	Description: Top-level Verilog module for FPGA
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Nov 11 02:36:39 2024
+//	Date: Sun Nov  3 02:43:15 2024
 //-------------------------------------------
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for fpga_top -----
 module fpga_top(pReset,
@@ -196,27 +196,26 @@ wire [0:0] sb_1__1__0_ccff_tail;
 wire [0:9] sb_1__1__0_chanx_left_out;
 wire [0:9] sb_1__1__0_chany_bottom_out;
 
-// start adding input and output pads
+// Begin adding input and output pads
 // pReset, prog_clk, set, reset, clk, gfpga_pad_GPIO_PAD, ccff_head, ccff_tail
   wire padin_pReset, padin_prog_clk, padin_set, padin_reset, padin_clk, padin_ccff_head, padin_ccff_tail;
-// wire padout_pReset, padout_prog_clk, padout_set, padout_reset, padout_clk, padout_ccff_head, padout_ccff_tail;
+  wire padout_pReset, padout_prog_clk, padout_set, padout_reset, padout_clk, padout_ccff_head, padout_ccff_tail;
   
-//  assign padout_pReset = pReset;
-//  assign padout_prog_clk = prog_clk;
-//  assign padout_set = set;
-//  assign padout_reset = reset;
-//  assign padout_clk = clk;
-//  assign padout_ccff_head = ccff_head;
-//  assign padout_ccff_tail = ccff_tail;
+  assign padout_pReset = pReset;
+  assign padout_prog_clk = prog_clk;
+  assign padout_set = set;
+  assign padout_reset = reset;
+  assign padout_clk = clk;
+  assign padout_ccff_head = ccff_head;
+  assign padout_ccff_tail = ccff_tail;
 
-  GPIO_IN pad_pReset(.Y(pReset), .PAD(padin_pReset));
-  GPIO_IN pad_prog_clk(.Y(prog_clk), .PAD(padin_prog_clk));
-  GPIO_IN pad_set(.Y(set), .PAD(padin_set));
-  GPIO_IN pad_reset(.Y(reset), .PAD(padin_reset));
-  GPIO_IN pad_clk(.Y(clk), .PAD(padin_clk));
-  GPIO_IN pad_ccff_head(.Y(ccff_head), .PAD(padin_ccff_head));
-  GPIO_OUT pad_ccff_tail(.A(ccff_tail), .PAD(padin_ccff_tail));
-
+  GPIO_IN pad_pReset(.Y(padout_pReset), .PAD(padin_pReset));
+  GPIO_IN pad_prog_clk(.Y(padout_prog_clk), .PAD(padin_prog_clk));
+  GPIO_IN pad_set(.Y(padout_set), .PAD(padin_set));
+  GPIO_IN pad_reset(.Y(padout_reset), .PAD(padin_reset));
+  GPIO_IN pad_clk(.Y(padout_clk), .PAD(padin_clk));
+  GPIO_IN pad_ccff_head(.Y(padout_ccff_head), .PAD(padin_ccff_head));
+  GPIO_OUT pad_ccff_tail(.A(padout_ccff_tail), .PAD(padin_ccff_tail));
 // end adding input and output pads
 
 	grid_io_top grid_io_top_1__2_ (
@@ -641,7 +640,7 @@ endmodule
 // ----- END Verilog module for fpga_top -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 

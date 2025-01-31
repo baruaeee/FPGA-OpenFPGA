@@ -3,11 +3,11 @@
 //	Description: Verilog modules for pb_type: clb
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Nov 11 02:36:39 2024
+//	Date: Sun Nov  3 02:43:15 2024
 //-------------------------------------------
 // ----- BEGIN Physical programmable logic block Verilog module: clb -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for logical_tile_clb_mode_clb_ -----
 module logical_tile_clb_mode_clb_(pReset,
@@ -1411,7 +1411,7 @@ endmodule
 // ----- END Verilog module for logical_tile_clb_mode_clb_ -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 

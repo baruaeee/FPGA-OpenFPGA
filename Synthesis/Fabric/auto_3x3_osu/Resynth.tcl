@@ -7,8 +7,28 @@ elaborate fpga_top
 # set and read SDC files
 set sdc_dir "./SDC"
 
+#set sdc_files {
+#	"fabric.sdc"
+#}
+
 set sdc_files {
-	"fabric.sdc"
+	"dont_touch.sdc"
+	"global_ports.sdc"
+	"cbx_1__0_.sdc"
+	"cbx_1__1_.sdc"
+	"cby_0__1_.sdc"
+	"cby_1__1_.sdc"
+	"disable_configurable_memory_outputs.sdc"
+	"disable_configure_ports.sdc"
+	"disable_routing_multiplexer_outputs.sdc"
+	"disable_sb_outputs.sdc"
+	"logical_tile_clb_mode_clb_.sdc"
+	"logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc"
+	"logical_tile_io_mode_io_.sdc"
+	"sb_0__0_.sdc"
+	"sb_0__1_.sdc"
+	"sb_1__0_.sdc"
+	"sb_1__1_.sdc"
 }
 
 foreach sdc_file $sdc_files {

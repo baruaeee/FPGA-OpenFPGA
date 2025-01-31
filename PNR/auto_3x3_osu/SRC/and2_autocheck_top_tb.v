@@ -3,10 +3,10 @@
 //	Description: FPGA Verilog full testbench for top-level netlist of design: and2
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Nov 11 02:36:39 2024
+//	Date: Sun Nov  3 02:43:15 2024
 //-------------------------------------------
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 module and2_autocheck_top_tb;
 // ----- Local wires for global ports of FPGA fabric -----
@@ -82,7 +82,7 @@ initial
 	end
 always wait(~__greset__)
 	begin
-		#0.8885858059	__op_clock___reg__[0] = ~__op_clock___reg__[0];
+		#0.4730164707	__op_clock___reg__[0] = ~__op_clock___reg__[0];
 	end
 
 // ----- End raw operating clock signal generation -----
@@ -113,8 +113,8 @@ initial
 	begin
 		__greset__[0] = 1'b1;
 	wait(__config_all_done__)
-	#1.777171612	__greset__[0] = 1'b1;
-	#3.554343224	__greset__[0] = 1'b0;
+	#0.9460329413	__greset__[0] = 1'b1;
+	#1.892065883	__greset__[0] = 1'b0;
 	end
 
 // ----- End operating reset signal generation -----
@@ -145,18 +145,17 @@ initial
 		.ccff_tail(ccff_tail[0]));
 
 // ----- Link BLIF Benchmark I/Os to FPGA I/Os -----
-// ----- Blif Benchmark input a is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[11] -----
-	assign gfpga_pad_GPIO_PAD[11] = a_shared_input[0];
+// ----- Blif Benchmark input a is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[30] -----
+	assign gfpga_pad_GPIO_PAD[30] = a_shared_input[0];
 
-// ----- Blif Benchmark input b is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[14] -----
-	assign gfpga_pad_GPIO_PAD[14] = b_shared_input[0];
+// ----- Blif Benchmark input b is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[31] -----
+	assign gfpga_pad_GPIO_PAD[31] = b_shared_input[0];
 
-// ----- Blif Benchmark output c is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[12] -----
-	assign c_fpga[0] = gfpga_pad_GPIO_PAD[12];
+// ----- Blif Benchmark output c is mapped to FPGA IOPAD gfpga_pad_GPIO_PAD[1] -----
+	assign c_fpga[0] = gfpga_pad_GPIO_PAD[1];
 
 // ----- Wire unused FPGA I/Os to constants -----
 	assign gfpga_pad_GPIO_PAD[0] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[1] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[2] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[3] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[4] = 1'b0;
@@ -166,7 +165,10 @@ initial
 	assign gfpga_pad_GPIO_PAD[8] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[9] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[10] = 1'b0;
+	assign gfpga_pad_GPIO_PAD[11] = 1'b0;
+	assign gfpga_pad_GPIO_PAD[12] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[13] = 1'b0;
+	assign gfpga_pad_GPIO_PAD[14] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[15] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[16] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[17] = 1'b0;
@@ -182,8 +184,6 @@ initial
 	assign gfpga_pad_GPIO_PAD[27] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[28] = 1'b0;
 	assign gfpga_pad_GPIO_PAD[29] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[30] = 1'b0;
-	assign gfpga_pad_GPIO_PAD[31] = 1'b0;
 
 // ----- Reference Benchmark Instanication -------
 	and2 REF_DUT(
@@ -28619,7 +28619,7 @@ initial begin
 	$timeformat(-9, 2, "ns", 20);
 	$display("Simulation start");
 // ----- Can be changed by the user for his/her need -------
-	#14618
+	#14614
 	if(nb_error == 0) begin
 		$display("Simulation Succeed");
 	end else begin
@@ -28632,5 +28632,5 @@ endmodule
 // ----- END Verilog module for and2_autocheck_top_tb -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 

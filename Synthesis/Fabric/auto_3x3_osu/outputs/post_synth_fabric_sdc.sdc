@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Mon Dec 16 23:51:48 CET 2024
+#  Created by Genus(TM) Synthesis Solution 22.13-s093_1 on Tue Jan 07 23:01:20 CET 2025
 
 # ####################################################################
 
@@ -12,272 +12,8 @@ set_units -time 1000ps
 # Set the current design
 current_design fpga_top
 
-create_clock -name "clk[0]" -period 1.77717 -waveform {0.0 0.8885858} [get_ports {clk[0]}]
+create_clock -name "clk[0]" -period 0.94603 -waveform {0.0 0.4730165} [get_ports {clk[0]}]
 create_clock -name "prog_clk[0]" -period 10.0 -waveform {0.0 5.0} [get_ports {prog_clk[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_11_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[1]}] ] -to [get_pins {sb_0__0_/chany_top_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_15_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[2]}] ] -to [get_pins {sb_0__0_/chany_top_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_19_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[3]}] ] -to [get_pins {sb_0__0_/chany_top_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[4]}] ] -to [get_pins {sb_0__0_/chany_top_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[5]}] ] -to [get_pins {sb_0__0_/chany_top_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[6]}] ] -to [get_pins {sb_0__0_/chany_top_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[7]}] ] -to [get_pins {sb_0__0_/chany_top_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[8]}] ] -to [get_pins {sb_0__0_/chany_top_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_3_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[9]}] ] -to [get_pins {sb_0__0_/chany_top_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_7_[0]}]  \
-  [get_pins {sb_0__0_/chanx_right_in[0]}] ] -to [get_pins {sb_0__0_/chany_top_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[9]}] ] -to [get_pins {sb_0__0_/chanx_right_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[0]}] ] -to [get_pins {sb_0__0_/chanx_right_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[1]}] ] -to [get_pins {sb_0__0_/chanx_right_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[2]}] ] -to [get_pins {sb_0__0_/chanx_right_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[3]}] ] -to [get_pins {sb_0__0_/chanx_right_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[4]}] ] -to [get_pins {sb_0__0_/chanx_right_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[5]}] ] -to [get_pins {sb_0__0_/chanx_right_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[6]}] ] -to [get_pins {sb_0__0_/chanx_right_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[7]}] ] -to [get_pins {sb_0__0_/chanx_right_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__0_/chany_top_in[8]}] ] -to [get_pins {sb_0__0_/chanx_right_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_[0]}]  \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[8]}] ] -to [get_pins {sb_0__1_/chanx_right_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]}]  \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[7]}] ] -to [get_pins {sb_0__1_/chanx_right_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]}]  \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[6]}] ] -to [get_pins {sb_0__1_/chanx_right_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[5]}] ] -to [get_pins {sb_0__1_/chanx_right_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[4]}] ] -to [get_pins {sb_0__1_/chanx_right_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[3]}] ] -to [get_pins {sb_0__1_/chanx_right_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[2]}] ] -to [get_pins {sb_0__1_/chanx_right_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[1]}] ] -to [get_pins {sb_0__1_/chanx_right_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[0]}] ] -to [get_pins {sb_0__1_/chanx_right_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_[0]}]  \
-  [get_pins {sb_0__1_/chany_bottom_in[9]}] ] -to [get_pins {sb_0__1_/chanx_right_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_3_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[8]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_7_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[7]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_11_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[6]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_15_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[5]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_19_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[4]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[3]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[2]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[1]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[0]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_0__1_/chanx_right_in[9]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]}]  \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[0]}] ] -to [get_pins {sb_1__0_/chany_top_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]}]  \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[9]}] ] -to [get_pins {sb_1__0_/chany_top_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]}]  \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[8]}] ] -to [get_pins {sb_1__0_/chany_top_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_13_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[7]}] ] -to [get_pins {sb_1__0_/chany_top_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_17_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[6]}] ] -to [get_pins {sb_1__0_/chany_top_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[5]}] ] -to [get_pins {sb_1__0_/chany_top_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[4]}] ] -to [get_pins {sb_1__0_/chany_top_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[3]}] ] -to [get_pins {sb_1__0_/chany_top_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[2]}] ] -to [get_pins {sb_1__0_/chany_top_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chanx_left_in[1]}] ] -to [get_pins {sb_1__0_/chany_top_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[0]}] ] -to [get_pins {sb_1__0_/chanx_left_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[9]}] ] -to [get_pins {sb_1__0_/chanx_left_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[8]}] ] -to [get_pins {sb_1__0_/chanx_left_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[7]}] ] -to [get_pins {sb_1__0_/chanx_left_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[6]}] ] -to [get_pins {sb_1__0_/chanx_left_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[5]}] ] -to [get_pins {sb_1__0_/chanx_left_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[4]}] ] -to [get_pins {sb_1__0_/chanx_left_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[3]}] ] -to [get_pins {sb_1__0_/chanx_left_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[2]}] ] -to [get_pins {sb_1__0_/chanx_left_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__0_/chany_top_in[1]}] ] -to [get_pins {sb_1__0_/chanx_left_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]}]  \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[1]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_13_[0]}]  \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[2]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_17_[0]}]  \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[3]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[4]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[5]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[6]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[7]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[8]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[9]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]}]  \
-  [get_pins {sb_1__1_/chanx_left_in[0]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[9]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_[0]}]  \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[9]}] ] -to [get_pins {sb_1__1_/chanx_left_out[0]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]}]  \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[0]}] ] -to [get_pins {sb_1__1_/chanx_left_out[1]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]}]  \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[1]}] ] -to [get_pins {sb_1__1_/chanx_left_out[2]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[2]}] ] -to [get_pins {sb_1__1_/chanx_left_out[3]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[3]}] ] -to [get_pins {sb_1__1_/chanx_left_out[4]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[4]}] ] -to [get_pins {sb_1__1_/chanx_left_out[5]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[5]}] ] -to [get_pins {sb_1__1_/chanx_left_out[6]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[6]}] ] -to [get_pins {sb_1__1_/chanx_left_out[7]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[7]}] ] -to [get_pins {sb_1__1_/chanx_left_out[8]}]
-set_max_delay 0.0602 -from [list \
-  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_[0]}]  \
-  [get_pins {sb_1__1_/chany_bottom_in[8]}] ] -to [get_pins {sb_1__1_/chanx_left_out[9]}]
 set_max_delay 0.0023 -from [get_pins {cbx_1__0_/chanx_left_in[0]}] -to [get_pins {cbx_1__0_/chanx_left_out[0]}]
 set_max_delay 0.0023 -from [get_pins {cbx_1__0_/chanx_right_in[0]}] -to [get_pins {cbx_1__0_/chanx_right_out[0]}]
 set_max_delay 0.0023 -from [get_pins {cbx_1__0_/chanx_left_in[1]}] -to [get_pins {cbx_1__0_/chanx_left_out[1]}]
@@ -570,8 +306,6 @@ set_max_delay 0.0725 -from [list \
 set_max_delay 0.0725 -from [list \
   [get_pins {cby_1__1_/chany_bottom_in[7]}]  \
   [get_pins {cby_1__1_/chany_top_in[7]}] ] -to [get_pins {cby_1__1_/left_grid_right_width_0_height_0_subtile_0__pin_I_37_[0]}]
-set_max_delay 0.0424 -from [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/iopad_inpad[0]}] -to [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/io_inpad[0]}]
-set_max_delay 0.0139 -from [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/io_outpad[0]}] -to [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/iopad_outpad[0]}]
 set_max_delay 0.095 -from [list \
   [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/clb_I[0]}]  \
   [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/clb_I[1]}]  \
@@ -758,6 +492,272 @@ set_max_delay 0.045 -from [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0
 set_max_delay 0.025 -from [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/frac_logic_out[0]}] -to [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/fabric_out[0]}]
 set_max_delay 0.045 -from [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1/ff_Q[0]}] -to [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/fabric_out[1]}]
 set_max_delay 0.025 -from [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/frac_logic_out[1]}] -to [get_pins {grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/fabric_out[1]}]
+set_max_delay 0.0424 -from [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/iopad_inpad[0]}] -to [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/io_inpad[0]}]
+set_max_delay 0.0139 -from [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/io_outpad[0]}] -to [get_pins {grid_io_left_0__1_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/iopad_outpad[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_11_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[1]}] ] -to [get_pins {sb_0__0_/chany_top_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_15_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[2]}] ] -to [get_pins {sb_0__0_/chany_top_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_19_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[3]}] ] -to [get_pins {sb_0__0_/chany_top_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[4]}] ] -to [get_pins {sb_0__0_/chany_top_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[5]}] ] -to [get_pins {sb_0__0_/chany_top_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[6]}] ] -to [get_pins {sb_0__0_/chany_top_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[7]}] ] -to [get_pins {sb_0__0_/chany_top_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[8]}] ] -to [get_pins {sb_0__0_/chany_top_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_3_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[9]}] ] -to [get_pins {sb_0__0_/chany_top_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_O_7_[0]}]  \
+  [get_pins {sb_0__0_/chanx_right_in[0]}] ] -to [get_pins {sb_0__0_/chany_top_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[9]}] ] -to [get_pins {sb_0__0_/chanx_right_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[0]}] ] -to [get_pins {sb_0__0_/chanx_right_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[1]}] ] -to [get_pins {sb_0__0_/chanx_right_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[2]}] ] -to [get_pins {sb_0__0_/chanx_right_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[3]}] ] -to [get_pins {sb_0__0_/chanx_right_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[4]}] ] -to [get_pins {sb_0__0_/chanx_right_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[5]}] ] -to [get_pins {sb_0__0_/chanx_right_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[6]}] ] -to [get_pins {sb_0__0_/chanx_right_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[7]}] ] -to [get_pins {sb_0__0_/chanx_right_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__0_/right_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__0_/chany_top_in[8]}] ] -to [get_pins {sb_0__0_/chanx_right_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_[0]}]  \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[8]}] ] -to [get_pins {sb_0__1_/chanx_right_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]}]  \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[7]}] ] -to [get_pins {sb_0__1_/chanx_right_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]}]  \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[6]}] ] -to [get_pins {sb_0__1_/chanx_right_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[5]}] ] -to [get_pins {sb_0__1_/chanx_right_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[4]}] ] -to [get_pins {sb_0__1_/chanx_right_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[3]}] ] -to [get_pins {sb_0__1_/chanx_right_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[2]}] ] -to [get_pins {sb_0__1_/chanx_right_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[1]}] ] -to [get_pins {sb_0__1_/chanx_right_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[0]}] ] -to [get_pins {sb_0__1_/chanx_right_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_[0]}]  \
+  [get_pins {sb_0__1_/chany_bottom_in[9]}] ] -to [get_pins {sb_0__1_/chanx_right_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_3_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[8]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_7_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[7]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_11_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[6]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_15_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[5]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_O_19_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[4]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[3]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[2]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[1]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[0]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_0__1_/bottom_left_grid_right_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_0__1_/chanx_right_in[9]}] ] -to [get_pins {sb_0__1_/chany_bottom_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]}]  \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[0]}] ] -to [get_pins {sb_1__0_/chany_top_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]}]  \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[9]}] ] -to [get_pins {sb_1__0_/chany_top_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]}]  \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[8]}] ] -to [get_pins {sb_1__0_/chany_top_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_13_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[7]}] ] -to [get_pins {sb_1__0_/chany_top_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_17_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[6]}] ] -to [get_pins {sb_1__0_/chany_top_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[5]}] ] -to [get_pins {sb_1__0_/chany_top_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[4]}] ] -to [get_pins {sb_1__0_/chany_top_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[3]}] ] -to [get_pins {sb_1__0_/chany_top_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[2]}] ] -to [get_pins {sb_1__0_/chany_top_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/top_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chanx_left_in[1]}] ] -to [get_pins {sb_1__0_/chany_top_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_2_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[0]}] ] -to [get_pins {sb_1__0_/chanx_left_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_6_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[9]}] ] -to [get_pins {sb_1__0_/chanx_left_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_10_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[8]}] ] -to [get_pins {sb_1__0_/chanx_left_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_14_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[7]}] ] -to [get_pins {sb_1__0_/chanx_left_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_O_18_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[6]}] ] -to [get_pins {sb_1__0_/chanx_left_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[5]}] ] -to [get_pins {sb_1__0_/chanx_left_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[4]}] ] -to [get_pins {sb_1__0_/chanx_left_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[3]}] ] -to [get_pins {sb_1__0_/chanx_left_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[2]}] ] -to [get_pins {sb_1__0_/chanx_left_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__0_/left_bottom_grid_top_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__0_/chany_top_in[1]}] ] -to [get_pins {sb_1__0_/chanx_left_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]}]  \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[1]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_13_[0]}]  \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[2]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_17_[0]}]  \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[3]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[4]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[5]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[6]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[7]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_right_grid_left_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[8]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[9]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]}]  \
+  [get_pins {sb_1__1_/chanx_left_in[0]}] ] -to [get_pins {sb_1__1_/chany_bottom_out[9]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_8_[0]}]  \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_0__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[9]}] ] -to [get_pins {sb_1__1_/chanx_left_out[0]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]}]  \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_1__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[0]}] ] -to [get_pins {sb_1__1_/chanx_left_out[1]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]}]  \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_2__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[1]}] ] -to [get_pins {sb_1__1_/chanx_left_out[2]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_3__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[2]}] ] -to [get_pins {sb_1__1_/chanx_left_out[3]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_4__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[3]}] ] -to [get_pins {sb_1__1_/chanx_left_out[4]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_5__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[4]}] ] -to [get_pins {sb_1__1_/chanx_left_out[5]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_6__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[5]}] ] -to [get_pins {sb_1__1_/chanx_left_out[6]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_top_grid_bottom_width_0_height_0_subtile_7__pin_inpad_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[6]}] ] -to [get_pins {sb_1__1_/chanx_left_out[7]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[7]}] ] -to [get_pins {sb_1__1_/chanx_left_out[8]}]
+set_max_delay 0.0602 -from [list \
+  [get_pins {sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_4_[0]}]  \
+  [get_pins {sb_1__1_/chany_bottom_in[8]}] ] -to [get_pins {sb_1__1_/chanx_left_out[9]}]
 set_clock_gating_check -setup 0.0 
 set_disable_timing [get_pins grid_io_top_1__2_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_0_/DIR]
 set_disable_timing -from RN -to Q [get_cells grid_io_top_1__2_/logical_tile_io_mode_io__0/logical_tile_io_mode_physical__iopad_0/GPIO_sky130_osu_sc_18T_hs__dffr_1_mem/sky130_osu_sc_18T_hs__dffr_1_0_]
@@ -11260,3 +11260,255 @@ set_disable_timing -from QN -to Q [get_cells cby_1__1_/mem_right_ipin_9/sky130_o
 set_disable_timing -from RN -to QN [get_cells cby_1__1_/mem_right_ipin_9/sky130_osu_sc_18T_hs__dffr_1_1_]
 set_disable_timing -from CK -to QN [get_cells cby_1__1_/mem_right_ipin_9/sky130_osu_sc_18T_hs__dffr_1_1_]
 set_wire_load_mode "enclosed"
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_1/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_1/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_1/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_1/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_2/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_2/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_2/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_2/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_3/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_3/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_3/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_3/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_4/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_4/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_4/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_4/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_5/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_5/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_5/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_5/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_6/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_6/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_6/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_6/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_7/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_7/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_7/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_7/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_8/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_8/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_8/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_8/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_9/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut6_0/frac_lut6_0_/frac_lut6_mux_0_]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_9/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0/mux_frac_logic_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_9/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/logical_tile_clb_mode_default__fle_9/logical_tile_clb_mode_default__fle_mode_physical__fabric_0/mux_fabric_out_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_0_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_1_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_1_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_1_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_1_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_1_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_1_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_2_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_2_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_2_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_2_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_2_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_2_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_3_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_3_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_3_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_3_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_3_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_3_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_4_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_4_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_4_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_4_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_4_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_4_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_5_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_5_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_5_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_5_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_5_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_5_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_6_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_6_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_6_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_6_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_6_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_6_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_7_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_8_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_8_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_8_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_8_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_8_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_8_in_5]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_9_in_0]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_9_in_1]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_9_in_2]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_9_in_3]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_9_in_4]
+set_dont_touch [get_cells grid_clb_1__1_/logical_tile_clb_mode_clb__0/mux_fle_9_in_5]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_0]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_2]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_4]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_0]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_2]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_4]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_6]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_8]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_10]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_12]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_14]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_16]
+set_dont_touch [get_cells sb_0__0_/mux_top_track_18]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_6]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_8]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_10]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_12]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_14]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_16]
+set_dont_touch [get_cells sb_0__0_/mux_right_track_18]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_0]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_2]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_4]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_1]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_3]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_5]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_6]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_8]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_10]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_12]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_14]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_16]
+set_dont_touch [get_cells sb_0__1_/mux_right_track_18]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_7]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_9]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_11]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_13]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_15]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_17]
+set_dont_touch [get_cells sb_0__1_/mux_bottom_track_19]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_0]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_2]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_4]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_1]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_3]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_5]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_6]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_8]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_10]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_12]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_14]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_16]
+set_dont_touch [get_cells sb_1__0_/mux_top_track_18]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_7]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_9]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_11]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_13]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_15]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_17]
+set_dont_touch [get_cells sb_1__0_/mux_left_track_19]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_1]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_3]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_5]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_1]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_3]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_5]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_7]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_9]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_11]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_13]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_15]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_17]
+set_dont_touch [get_cells sb_1__1_/mux_bottom_track_19]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_7]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_9]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_11]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_13]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_15]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_17]
+set_dont_touch [get_cells sb_1__1_/mux_left_track_19]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_0]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_1]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_2]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_3]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_4]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_0]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_1]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_2]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_3]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_4]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_5]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_6]
+set_dont_touch [get_cells cbx_1__0_/mux_top_ipin_7]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_5]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_6]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_7]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_8]
+set_dont_touch [get_cells cbx_1__0_/mux_bottom_ipin_9]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_0]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_1]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_2]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_3]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_4]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_5]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_6]
+set_dont_touch [get_cells cbx_1__1_/mux_bottom_ipin_7]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_0]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_1]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_2]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_3]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_4]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_5]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_6]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_7]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_8]
+set_dont_touch [get_cells cbx_1__1_/mux_top_ipin_9]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_0]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_1]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_2]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_3]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_4]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_0]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_1]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_2]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_3]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_4]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_5]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_6]
+set_dont_touch [get_cells cby_0__1_/mux_right_ipin_7]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_5]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_6]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_7]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_8]
+set_dont_touch [get_cells cby_0__1_/mux_left_ipin_9]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_0]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_1]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_2]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_3]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_4]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_5]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_6]
+set_dont_touch [get_cells cby_1__1_/mux_left_ipin_7]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_0]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_1]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_2]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_3]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_4]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_5]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_6]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_7]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_8]
+set_dont_touch [get_cells cby_1__1_/mux_right_ipin_9]

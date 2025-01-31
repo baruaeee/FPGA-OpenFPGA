@@ -8,6 +8,7 @@ elaborate fpga_top
 set sdc_dir "./SDC"
 
 #set sdc_files {
+#	"global_ports.sdc"
 #	"cbx_1__0_.sdc"
 #	"cbx_1__1_.sdc"
 #	"cby_0__1_.sdc"

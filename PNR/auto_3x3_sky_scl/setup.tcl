@@ -18,9 +18,6 @@ floorPlan -site CoreSite -b 0.0 0.0 1584.24 1596.2 440.12 440.12 1144.12 1156.08
 checkDesign -floorplan
 
 
-## IO filler
-# no IO filler cell in sky 130
-
 setDesignMode -process 130
 
 ## P/G connect

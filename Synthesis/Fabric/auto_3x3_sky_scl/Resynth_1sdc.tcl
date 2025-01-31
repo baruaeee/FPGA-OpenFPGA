@@ -1,8 +1,9 @@
 
-read_libs LIB/sky130_ff_1.98_0_nldm.lib \
-	LIB/sky130_ss_1.62_125_nldm.lib \
-	LIB/sky130_tt_1.8_25_nldm.lib
+#read_libs LIB/sky130_ff_1.98_0_nldm.lib \
+#	LIB/sky130_ss_1.62_125_nldm.lib \
+#	LIB/sky130_tt_1.8_25_nldm.lib
 
+read_libs LIB/sky130_tt_1.8_25_nldm.lib
 
 #read_hdl flat.v
 read_hdl SRC/fabric_netlists.v

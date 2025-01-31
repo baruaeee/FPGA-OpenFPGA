@@ -1,31 +1,21 @@
-## Specify floorplan
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-loadIoFile Multi_Row_IO_PAD.io
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-loadIoFile Multi_Row_IO_PAD.io
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-loadIoFile Multi_Row_IO_PAD.io
-floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
+source fabric_comb_test.globals
+init_design
 
-#floorPlan -coreMarginsBy io -r 0.99 0.21 98 98 98 98
-#floorPlan -coreMarginsBy io -r 1.00 0.71 40 40 40 40
-#floorPlan -site 18T -b 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
-#floorPlan -site 18T -noSnapToGrid -d 1468.665 1468.665 80 80 80 80
-#floorPlan -site CoreSite -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
-#floorPlan -site 18T -noSnapToGrid -d 2118.665 2118.665 80 80 80 80
-# 0 0 1468.665 1468.665 199.856 200.098 1265 1265 220.016 220.078 1245 1245
+loadIoFile Multi_Row_IO_PAD.io
+
+
+## Specify floorplan
+floorPlan -site 18T -b 0.0 0.0 1584.24 1596.2 440.12 440.12 1144.12 1156.08 479.32 479.32 1104.92 1116.42
+
+## Check Floorplan
+checkDesign -floorplan
 
 setDesignMode -process 130
 
-
-
-## IO filler
-# no IO filler cell in sky 130
+#vdd VDDIO VDDIO_Q VDDA VCCD VSWITCH VCCHIB P_CORE AMUXBUS_A AMUXBUS_B
+#gnd VSSA VSSD VSSIO_Q VSSIO G_CORE
 
 ## P/G connect
-#globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
-#globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
-
 #globalNetConnect VDD -type pgpin -pin VDD -override -verbose -netlistOverride
 #globalNetConnect VSS -type pgpin -pin VSS -override -verbose -netlistOverride
 
@@ -90,7 +80,7 @@ addStripe -nets {P_CORE G_CORE} \
 	-layer met4 \
 	-direction vertical \
 	-width 5 -spacing 5 \
-	-set_to_set_distance 120 \
+	-set_to_set_distance 130 \
 	-start_from left \
 	-start_offset 110 \
 	-switch_layer_over_obs false \

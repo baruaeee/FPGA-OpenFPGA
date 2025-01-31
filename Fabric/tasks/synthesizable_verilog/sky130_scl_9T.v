@@ -1204,8 +1204,8 @@ module DFFRX1 (Q, QN, CK, D, RN);
 	wire xcr_0;
 
 	not (int_fwire_r, RN);
-	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
-	altos_dff_r (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	altos_dff_r_err pri_altos_dff_r_err(xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r pri_altos_dff_r(int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1262,8 +1262,8 @@ module DFFRX4 (Q, QN, CK, D, RN);
 	wire xcr_0;
 
 	not (int_fwire_r, RN);
-	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
-	altos_dff_r (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	altos_dff_r_err pri_altos_dff_r_err(xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r pri_altos_dff_r(int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1321,8 +1321,8 @@ module DFFSRX1 (Q, QN, CK, D, RN, SN);
 
 	not (int_fwire_s, delayed_SN);
 	not (int_fwire_r, delayed_RN);
-	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
-	altos_dff_sr_1 (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	altos_dff_sr_err pri_altos_dff_sr_err(xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 pri_altos_dff_sr_1(int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1430,8 +1430,8 @@ module DFFSRX4 (Q, QN, CK, D, RN, SN);
 
 	not (int_fwire_s, delayed_SN);
 	not (int_fwire_r, delayed_RN);
-	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
-	altos_dff_sr_1 (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	altos_dff_sr_err pri_altos_dff_sr_err(xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 pri_altos_dff_sr_1(int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1538,8 +1538,8 @@ module DFFSX1 (Q, QN, CK, D, SN);
 	wire xcr_0;
 
 	not (int_fwire_s, SN);
-	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
-	altos_dff_s (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	altos_dff_s_err pri_altos_dff_s_err(xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s pri_altos_dff_s(int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1596,8 +1596,8 @@ module DFFSX4 (Q, QN, CK, D, SN);
 	wire xcr_0;
 
 	not (int_fwire_s, SN);
-	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
-	altos_dff_s (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	altos_dff_s_err pri_altos_dff_s_err(xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s pri_altos_dff_s(int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1652,8 +1652,8 @@ module DFFX1 (Q, QN, CK, D);
 	// Function
 	wire int_fwire_IQ, int_fwire_IQN, xcr_0;
 
-	altos_dff_err (xcr_0, delayed_CK, delayed_D);
-	altos_dff (int_fwire_IQ, notifier, delayed_CK, delayed_D, xcr_0);
+	altos_dff_err pri_altos_dff_err(xcr_0, delayed_CK, delayed_D);
+	altos_dff pri_altos_dff(int_fwire_IQ, notifier, delayed_CK, delayed_D, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1682,8 +1682,8 @@ module DFFX4 (Q, QN, CK, D);
 	// Function
 	wire int_fwire_IQ, int_fwire_IQN, xcr_0;
 
-	altos_dff_err (xcr_0, delayed_CK, delayed_D);
-	altos_dff (int_fwire_IQ, notifier, delayed_CK, delayed_D, xcr_0);
+	altos_dff_err pri_altos_dff_err(xcr_0, delayed_CK, delayed_D);
+	altos_dff pri_altos_dff(int_fwire_IQ, notifier, delayed_CK, delayed_D, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -1780,7 +1780,7 @@ module ICGX1 (Y, D, G);
 	// Function
         wire  int_fwire_A, int_fwire_B;
    
-        altos_latch (int_fwire_A, notifier, delayed_G, delayed_D);
+        altos_latch pri_altos_latch(int_fwire_A, notifier, delayed_G, delayed_D);
         buf (int_fwire_B, G);   
         and (Y, int_fwire_A, int_fwire_B);
    	     
@@ -1896,16 +1896,40 @@ module MX2X1 (Y, A, B, S0);
 	and (int_fwire_1, A, S0__bar);
 	or (Y, int_fwire_1, int_fwire_0);
 
-	// Timing
+// Note: 
+//	 MUX2 appears will appear in LUTs, routing multiplexers,
+//   being a component in combinational loops
+//   To help convergence in simulation 
+//   i.e., to avoid the X (undetermined) signals,
+//   the following timing constraints and signal initialization 
+//   has to be added!
+
+`ifdef ENABLE_TIMING
+// ------ BEGIN Pin-to-pin Timing constraints -----
 	specify
-		(A => Y) = 0;
-		(B => Y) = 0;
-		if ((~A & B))
-			(S0 => Y) = 0;
-		ifnone (S0 => Y) = 0;
-		if ((A & ~B))
-			(S0 => Y) = 0;
+		(A => Y) = (0.001, 0.001);
+		(B => Y) = (0.001, 0.001);
+		(S0 => Y) = (0.001, 0.001);
 	endspecify
+// ------ END Pin-to-pin Timing constraints -----
+`endif
+
+`ifdef ENABLE_SIGNAL_INITIALIZATION
+// ------ BEGIN driver initialization -----
+	initial begin
+	`ifdef ENABLE_FORMAL_VERIFICATION
+		$deposit(A, 1'b0);
+		$deposit(B, 1'b0);
+		$deposit(S0, 1'b0);
+	`else
+		$deposit(A, $random);
+		$deposit(B, $random);
+		$deposit(S0, $random);
+	`endif
+
+	end
+// ------ END driver initialization -----
+`endif
 endmodule
 `endcelldefine
 
@@ -3307,8 +3331,8 @@ module SDFFRX1 (Q, QN, CK, D, RN, SE, SI);
 	and (int_fwire_2, delayed_D, delayed_SE__bar);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
 	not (int_fwire_r, RN);
-	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
-	altos_dff_r (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	altos_dff_r_err pri_altos_dff_r_err(xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r pri_altos_dff_r(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -3396,8 +3420,8 @@ module SDFFRX4 (Q, QN, CK, D, RN, SE, SI);
 	and (int_fwire_2, delayed_D, delayed_SE__bar);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
 	not (int_fwire_r, RN);
-	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
-	altos_dff_r (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	altos_dff_r_err pri_altos_dff_r_err(xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r pri_altos_dff_r(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -3487,8 +3511,8 @@ module SDFFSRX1 (Q, QN, CK, D, RN, SE, SI, SN);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
 	not (int_fwire_s, delayed_SN);
 	not (int_fwire_r, delayed_RN);
-	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
-	altos_dff_sr_1 (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	altos_dff_sr_err pri_altos_dff_sr_err(xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 pri_altos_dff_sr_1(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -3631,8 +3655,8 @@ module SDFFSRX4 (Q, QN, CK, D, RN, SE, SI, SN);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
 	not (int_fwire_s, delayed_SN);
 	not (int_fwire_r, delayed_RN);
-	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
-	altos_dff_sr_1 (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	altos_dff_sr_err pri_altos_dff_sr_err(xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 pri_altos_dff_sr_1(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -3773,8 +3797,8 @@ module SDFFSX1 (Q, QN, CK, D, SE, SI, SN);
 	and (int_fwire_2, delayed_D, delayed_SE__bar);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
 	not (int_fwire_s, SN);
-	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
-	altos_dff_s (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	altos_dff_s_err pri_altos_dff_s_err(xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s pri_altos_dff_s(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -3862,8 +3886,8 @@ module SDFFSX4 (Q, QN, CK, D, SE, SI, SN);
 	and (int_fwire_2, delayed_D, delayed_SE__bar);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
 	not (int_fwire_s, SN);
-	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
-	altos_dff_s (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	altos_dff_s_err pri_altos_dff_s_err(xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s pri_altos_dff_s(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -3950,8 +3974,8 @@ module SDFFX1 (Q, QN, CK, D, SE, SI);
 	not (delayed_SE__bar, delayed_SE);
 	and (int_fwire_2, delayed_D, delayed_SE__bar);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
-	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
-	altos_dff (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, xcr_0);
+	altos_dff_err pri_altos_dff_err(xcr_0, delayed_CK, int_fwire_d);
+	altos_dff pri_altos_dff(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -4015,8 +4039,8 @@ module SDFFX4 (Q, QN, CK, D, SE, SI);
 	not (delayed_SE__bar, delayed_SE);
 	and (int_fwire_2, delayed_D, delayed_SE__bar);
 	or (int_fwire_d, int_fwire_2, int_fwire_1, int_fwire_0);
-	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
-	altos_dff (int_fwire_IQ, notifier, delayed_CK, int_fwire_d, xcr_0);
+	altos_dff_err pri_altos_dff_err(xcr_0, delayed_CK, int_fwire_d);
+	altos_dff pri_altos_dff(int_fwire_IQ, notifier, delayed_CK, int_fwire_d, xcr_0);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);
@@ -4247,7 +4271,7 @@ module TLATX1 (Q, QN, D, G);
 	// Function
 	wire int_fwire_IQ, int_fwire_IQN;
 
-	altos_latch (int_fwire_IQ, notifier, delayed_G, delayed_D);
+	altos_latch pri_altos_latch(int_fwire_IQ, notifier, delayed_G, delayed_D);
 	buf (Q, int_fwire_IQ);
 	not (int_fwire_IQN, int_fwire_IQ);
 	buf (QN, int_fwire_IQN);

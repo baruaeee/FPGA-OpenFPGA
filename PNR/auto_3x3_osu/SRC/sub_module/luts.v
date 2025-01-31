@@ -3,10 +3,10 @@
 //	Description: Look-Up Tables
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Nov 11 02:36:39 2024
+//	Date: Sun Nov  3 02:43:15 2024
 //-------------------------------------------
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for frac_lut6 -----
 module frac_lut6(in,
@@ -125,7 +125,7 @@ endmodule
 // ----- END Verilog module for frac_lut6 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 

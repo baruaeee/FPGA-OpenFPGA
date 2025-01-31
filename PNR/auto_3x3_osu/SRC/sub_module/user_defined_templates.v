@@ -3,11 +3,11 @@
 //	Description: Template for user-defined Verilog modules
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Nov 11 02:36:39 2024
+//	Date: Sun Nov  3 02:43:15 2024
 //-------------------------------------------
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
 module sky130_osu_sc_18T_hs__inv_1(A,
@@ -32,12 +32,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__inv_1 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__buf_4 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__buf_4 -----
 module sky130_osu_sc_18T_hs__buf_4(A,
@@ -62,12 +62,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__buf_4 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__inv_4 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__inv_4 -----
 module sky130_osu_sc_18T_hs__inv_4(A,
@@ -92,12 +92,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__inv_4 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__or2_1 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__or2_1 -----
 module sky130_osu_sc_18T_hs__or2_1(A,
@@ -125,12 +125,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__or2_1 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__mux2_1 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__mux2_1 -----
 module sky130_osu_sc_18T_hs__mux2_1(A1,
@@ -161,12 +161,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__mux2_1 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__dffsr_1 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__dffsr_1 -----
 module sky130_osu_sc_18T_hs__dffsr_1(SN,
@@ -200,12 +200,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__dffsr_1 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for sky130_osu_sc_18T_hs__dffr_1 -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for sky130_osu_sc_18T_hs__dffr_1 -----
 module sky130_osu_sc_18T_hs__dffr_1(RN,
@@ -239,12 +239,12 @@ endmodule
 // ----- END Verilog module for sky130_osu_sc_18T_hs__dffr_1 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 // ----- Template Verilog module for GPIO -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for GPIO -----
 module GPIO(PAD,
@@ -275,6 +275,6 @@ endmodule
 // ----- END Verilog module for GPIO -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 

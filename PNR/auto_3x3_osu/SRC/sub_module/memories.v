@@ -3,10 +3,10 @@
 //	Description: Memories used in FPGA
 //	Author: Xifan TANG
 //	Organization: University of Utah
-//	Date: Mon Nov 11 02:36:39 2024
+//	Date: Sun Nov  3 02:43:15 2024
 //-------------------------------------------
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size4_mem -----
 module mux_tree_tapbuf_size4_mem(pReset,
@@ -68,13 +68,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size4_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size2_mem -----
 module mux_tree_tapbuf_size2_mem(pReset,
@@ -129,13 +129,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size2_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size3_mem -----
 module mux_tree_tapbuf_size3_mem(pReset,
@@ -190,13 +190,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size3_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_size60_mem -----
 module mux_tree_size60_mem(pReset,
@@ -279,13 +279,13 @@ endmodule
 // ----- END Verilog module for mux_tree_size60_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_size2_mem -----
 module mux_tree_size2_mem(pReset,
@@ -340,13 +340,13 @@ endmodule
 // ----- END Verilog module for mux_tree_size2_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for frac_lut6_sky130_osu_sc_18T_hs__dffr_1_mem -----
 module frac_lut6_sky130_osu_sc_18T_hs__dffr_1_mem(pReset,
@@ -842,13 +842,13 @@ endmodule
 // ----- END Verilog module for frac_lut6_sky130_osu_sc_18T_hs__dffr_1_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for GPIO_sky130_osu_sc_18T_hs__dffr_1_mem -----
 module GPIO_sky130_osu_sc_18T_hs__dffr_1_mem(pReset,
@@ -896,7 +896,7 @@ endmodule
 // ----- END Verilog module for GPIO_sky130_osu_sc_18T_hs__dffr_1_mem -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 

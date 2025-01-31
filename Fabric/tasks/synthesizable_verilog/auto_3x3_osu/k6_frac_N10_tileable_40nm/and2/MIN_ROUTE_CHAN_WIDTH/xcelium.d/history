@@ -2,5 +2,4 @@
 // File created by:  xrun
 // Do not modify this file
 
-s1::(03Nov2024:03:39:17):( xrun ./SRC/and2_include_netlists.v -access +rwc -64bit -gui )
-s2::(03Nov2024:03:42:41):( xrun ./SRC/and2_include_netlists.v -access +rwc -64bit -gui )
+s1::(28Jan2025:17:50:19):( xrun SRC/and2_include_netlists.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.28Jan2025_17_50_19)

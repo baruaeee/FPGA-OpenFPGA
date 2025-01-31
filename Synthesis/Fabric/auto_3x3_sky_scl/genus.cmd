@@ -1,7 +1,7 @@
-# Cadence Genus(TM) Synthesis Solution, Version 22.13-s093_1, built Sep  5 2023 17:56:02
+# Cadence Genus(TM) Synthesis Solution, Version 23.11-s100_1, built Apr 22 2024 11:28:10
 
-# Date: Wed Dec 18 03:34:25 2024
-# Host: ei-vm-011 (x86_64 w/Linux 4.18.0-553.30.1.el8_10.x86_64) (24cores*24cpus*1physical cpu*AMD Ryzen Threadripper PRO 5965WX 24-Cores 512KB)
-# OS:   Red Hat Enterprise Linux release 8.10 (Green Obsidian)
+# Date: Fri Jan 31 20:23:40 2025
+# Host: cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*16physical cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
+# OS:   Red Hat Enterprise Linux release 8.10 (Ootpa)
 
-source Resynth_1sdc.tcl
+read_hdl SRC/fabric_netlists.v

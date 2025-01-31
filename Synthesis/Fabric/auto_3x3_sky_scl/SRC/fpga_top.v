@@ -199,7 +199,7 @@ wire [0:9] sb_1__1__0_chany_bottom_out;
 // Begin adding input and output pads
 // pReset, prog_clk, set, reset, clk, gfpga_pad_GPIO_PAD, ccff_head, ccff_tail
   wire padin_pReset, padin_prog_clk, padin_set, padin_reset, padin_clk, padin_ccff_head, padin_ccff_tail;
-  wire pReset, prog_clk, set, reset, clk, ccff_head, ccff_tail;
+  wire padout_pReset, padout_prog_clk, padout_set, padout_reset, padout_clk, padout_ccff_head, padout_ccff_tail;
   
   assign padout_pReset = pReset;
   assign padout_prog_clk = prog_clk;
