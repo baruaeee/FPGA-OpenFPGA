@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
-`include "/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_osu_sc_18T_hs.v"
-`include "/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/GPIO/outputs/gpio_netlist.v"
+`include "/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v"
+`include "../outputs/gpio_iopad_netlist.v"
 
 module tb_GPIO;
 

@@ -1,0 +1,2 @@
+#e1(02Feb2025:00:19:13): source ./xcelium.d/env.d/env.history.02Feb2025_00_19_13
+s1(02Feb2025:00:19:13):  xrun gpio_tb.v -access +rwc -gui 
