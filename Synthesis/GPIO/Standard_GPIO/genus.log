@@ -1001,3 +1001,11 @@ Warning : No clock. [RPT-10]
 @file(synthesis.tcl) 30: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > delays.sdf
 #@ End verbose source ./synthesis.tcl
 WARNING: This version of the tool is 285 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[15:40:58.407794] Cdslmd servers: hs-lic3
+[15:40:58.407810] Feature usage summary:
+[15:40:58.407811] Genus_Synthesis
+
+Normal exit.
