@@ -333,3 +333,11 @@ Error   : Parsing error. [VLOGPT-1] [read_hdl]
         : Expecting token ';', found 'number' in file '/home/cae1/Desktop/PDK/skywater-pdk/libraries/sky130_fd_io/latest/cells/top_gpio_ovtv2/sky130_fd_io__top_gpio_ovtv2.behavioral.v' on line 432, column 49.
         : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
 1
+@genus:root: 2> exit
+
+Lic Summary:
+[14:06:23.030907] Cdslmd servers: hs-lic3
+[14:06:23.556306] Feature usage summary:
+[14:06:23.556307] Genus_Synthesis
+
+Normal exit.
