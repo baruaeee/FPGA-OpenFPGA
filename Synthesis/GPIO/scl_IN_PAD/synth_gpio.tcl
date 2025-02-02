@@ -1,8 +1,8 @@
 read_libs sky130_scl_9T_0_0_5/sky130_tt_1.8_25_nldm.lib
 
-read_hdl gpio_sky130_v1.v
+read_hdl gpio_inpad_sky130_1.v
 
-elaborate GPIO
+elaborate GPIO_IN
 
 set_db syn_generic_effort medium
 set_db syn_map_effort medium
@@ -21,7 +21,7 @@ report_area   > reports/report_area.rpt
 report_qor    > reports/report_qor.rpt
 
 #Outputs
-write_hdl > outputs/gpio_iopad_netlist.v
+write_hdl > outputs/gpio_inpad_netlist.v
 #write_sdc > outputs/post_synth_fabric_sdc.sdc
 #write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
 exit
