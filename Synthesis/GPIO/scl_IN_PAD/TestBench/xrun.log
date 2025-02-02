@@ -1,0 +1,25 @@
+xrun(64): 24.03-s004: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s004: Started on Feb 02, 2025 at 13:42:42 CET
+xrun
+	io_in_tb.v
+	-access +rwc
+	-gui
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /eda/cadence/2024-25/RHELx86/XCELIUM_24.03.004/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm IO_IN_tb.dut.PAD IO_IN_tb.dut.Y
+Created probe 1
+xcelium> run
+Test Case 1: Y=0, PAD=0, pad=0
+Test Case 2: Y=1, PAD=1, pad=1
+Test Case 3: Y=0, PAD=0, pad=0
+Simulation complete via $finish(1) at time 30 NS + 0
+./io_in_tb.v:37         $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s004: Exiting on Feb 02, 2025 at 14:51:22 CET  (total: 01:08:40)
