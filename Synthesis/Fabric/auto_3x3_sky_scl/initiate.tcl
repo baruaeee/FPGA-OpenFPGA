@@ -1,5 +1,3 @@
-# This script is to use recursively for checking the OpenFPGA
-# generated SDC files
 
 read_libs LIB/sky130_ff_1.98_0_nldm.lib \
 	LIB/sky130_ss_1.62_125_nldm.lib \

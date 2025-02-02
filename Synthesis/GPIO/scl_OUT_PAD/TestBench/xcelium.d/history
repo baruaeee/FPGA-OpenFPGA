@@ -5,3 +5,4 @@
 s1::(02Feb2025:12:19:03):( xrun io_in_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.02Feb2025_12_19_03)
 s2::(02Feb2025:12:23:09):( xrun io_in_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.02Feb2025_12_23_09)
 s3::(02Feb2025:13:42:43):( xrun io_in_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.02Feb2025_13_42_43)
+s4::(02Feb2025:17:04:04):( xrun io_out_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.02Feb2025_17_04_04)
