@@ -1,0 +1,1 @@
+technology "sky130_pvs" -ruleSet "default" -techLib "/home/cae1/Desktop/FPGA-OpenFPGA/DRC/Sky130_DRC/pvtech.lib";

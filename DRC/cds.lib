@@ -1,0 +1,15 @@
+# File Created by Sajib Barua (Student MA about OpenFPGA) at Thu Feb  6 19:50:01 2025
+# assisted by CdsLibEditor
+# File Created by Standard CAE user at Sat Nov 16 10:23:16 2024
+# assisted by CdsLibEditor
+# File Created by Sajib Barua (Student MA about OpenFPGA) at Sun Oct 13 12:38:17 2024
+# assisted by CdsLibEditor
+# File Created by Standard CAE user at Fri Oct 11 02:31:15 2024
+# assisted by CdsLibEditor
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE sky130_fd_pr_main /eda/cadence/pdks/sky130/sky130_release_004a/libs/sky130_fd_pr_main
+
+DEFINE avTech /eda/cadence/2023-24/RHELx86/ASSURA_04.16.115_231/tools.lnx86/assura/etc/avtech/avTech
+DEFINE sky130_scl_9T /eda/cadence/pdks/sky130/sky130_scl_9T_0_0_5/oa/sky130_scl_9T
+DEFINE FPGA_TOP /home/cae1/Desktop/FPGA-OpenFPGA/DRC/FPGA_TOP

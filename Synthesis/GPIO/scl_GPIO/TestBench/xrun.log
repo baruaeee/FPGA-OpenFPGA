@@ -1,5 +1,5 @@
 xrun(64): 24.03-s004: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	24.03-s004: Started on Feb 02, 2025 at 00:30:23 CET
+TOOL:	xrun(64)	24.03-s004: Started on Feb 08, 2025 at 14:46:29 CET
 xrun
 	gpio_tb.v
 	-access +rwc
@@ -22,4 +22,4 @@ Simulation complete via $finish(1) at time 60 NS + 0
 ./gpio_tb.v:57         $finish;
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	24.03-s004: Exiting on Feb 02, 2025 at 00:52:26 CET  (total: 00:22:03)
+TOOL:	xrun(64)	24.03-s004: Exiting on Feb 08, 2025 at 14:47:27 CET  (total: 00:00:58)

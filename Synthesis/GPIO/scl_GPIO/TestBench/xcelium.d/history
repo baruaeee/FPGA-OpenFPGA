@@ -4,3 +4,4 @@
 
 s1::(02Feb2025:00:19:13):( xrun gpio_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.02Feb2025_00_19_13)
 s2::(02Feb2025:00:30:24):( xrun gpio_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.02Feb2025_00_30_24)
+s3::(08Feb2025:14:46:29):( xrun gpio_tb.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.08Feb2025_14_46_29)

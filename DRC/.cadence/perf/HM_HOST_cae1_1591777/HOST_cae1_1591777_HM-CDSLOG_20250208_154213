@@ -1,0 +1,92 @@
+\# Program start time:     UTC 2025.02.08 14:42:06.166
+\# Local time: GMT+01:00 (UTC+01:00) 2025.02.08 15:42:06.166
+\o Program:		@(#)$CDS: Virtuoso Studio version IC23.1-64b 05/22/2024 07:43 (cpgbld16) $
+\o Hierarchy:		/mnt/cae_storage_sw/eda/cadence/2024-25/RHELx86/IC_23.10.070/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC23.1-64b.ISR7.27  (64-bit addresses)
+\# Command line:	/eda/cadence/2024-25/RHELx86/IC_23.10.070/tools/dfII/bin/64bit/virtuoso
+\# Host name (type):	cae-europractice1.othr.de (x86_64)
+\# Operating system:	Linux 5.15.0-210.163.7.el8uek.x86_64 #2 SMP Tue Sep 10 18:31:09 PDT 2024
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:10.0 (1680x1050)
+\# Available geometry:			TL(0:27) BR(1679:1049)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 12011000)
+\# X resource pool:	base 0x3e00000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        723 MB
+\# Available memory:	     28,052 MB
+\# System memory:	     31,807 MB
+\# Maximum memory size:	     31,257 MB
+\# Max mem available:	     28,226 MB
+\# Initial memory used:	        173 MB
+\#        process size:	      1,687 MB
+\# Thread usage limits (effective/default):	maxthreads 127001/127001 maxload 16.00/16.00
+\# Qt version:		5.15.9
+\# Window Manager:	Xfwm4
+\# User Name:		cae1
+\o Working Directory:	cae-europractice1.othr.de:/home/cae1/Desktop/FPGA-OpenFPGA/DRC
+\# Process Id:		1591777
+\o 
+\o COPYRIGHT (C) 1992-2024  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2024  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading im.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Load shared object file /eda/cadence/2024-25/RHELx86/PEGASUSDFM_24.10.000/tools.lnx86/ret/lib/64bit/libretboot.so
+\o Load shared object file /eda/cadence/2024-25/RHELx86/PEGASUSDFM_24.10.000/tools.lnx86/lpa/lib/64bit/libretclef.so
+\o 
+\o Load shared object file /eda/cadence/2024-25/RHELx86/PEGASUSDFM_24.10.000/tools.lnx86/lpa/lib/64bit/libretmb.so
+\o 
+\o Hotspot Browser 1.0.0 (May  5 2016 12:15:38)
+\o Loading /eda/cadence/2024-25/RHELx86/PEGASUSDFM_24.10.000/tools.lnx86/mmg/bin/64bit/etc/context/6.1.0/64bit/ccp.cxt
+\o Loading pegasusui.cxt
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading layers.cxt 
+\o Loading drv.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\# Memory report: using         284 MB, process size 1,868 MB at UTC 2025.02.08 14:42:11.023
+\o Loading lp.cxt 
+\o Loading sipLayout.cxt 
+\o Loading diagCenter.cxt 
+\# [15:42:06.432532] Configured Lic search path (23.02-s006): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.02s.
+\p > 
+\o Loading le.cxt 
+\o Loading tilp.cxt 
+\o Loading validator.cxt 
+\o Loading vrf.cxt 
+\o Loading multiTechPlugin.cxt 
+\o Loading exportDie.cxt 
+\# Loading perfDiag...
+\# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
+\o The Health Monitor tool is installed. You can access it from CIW - Tools - Diagnostic Center or use the shell command 'cdsPerfDiag -p 1591777' to open it when Virtuoso freezes.
+\# (PerfDiag): Use backtrace from GLIBC.
+\o 2025/02/08 15:42:12 An error occurred. We don't recognize OS 
+\o 2025/02/08 15:42:12 WARNING (/mnt/cae_storage_sw/eda/cadence/2024-25/RHELx86/IC_23.10.070/tools.lnx86/bin/cdnsEnvCheck): This OS does not appear to be a Cadence supported Linux configuration (set environment variable CDS_SKIP_OS_CHECK_ON_STARTUP to suppress). For more info, please run <cdsroot>/tools/bin/checkSysConf <productId>
+\o 2025/02/08 15:42:12 An error occurred. We don't recognize OS 
+\o 2025/02/08 15:42:12 WARNING (/mnt/cae_storage_sw/eda/cadence/2024-25/RHELx86/IC_23.10.070/tools.lnx86/bin/cdnsEnvCheck): This OS does not appear to be a Cadence supported Linux configuration (set environment variable CDS_SKIP_OS_CHECK_ON_STARTUP to suppress). For more info, please run <cdsroot>/tools/bin/checkSysConf <productId>

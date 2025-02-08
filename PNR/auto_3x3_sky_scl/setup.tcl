@@ -1,5 +1,5 @@
-source fabric_comb_test_IO.globals
 #source fabric_comb_test.globals
+source fabric_comb_test_IO.globals
 init_design
 
 #loadIoFile IO_PAD.io
@@ -71,11 +71,22 @@ sroute -connect { corePin floatingStripe } \
 	-targetViaLayerRange { met1(1) met5(5) }
 
 ## Add Special Route in PAD Ring
-sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+sroute -connect { padRing } -layerChangeRange { met1(1) met5(5) } \
+	-blockPinTarget { nearestTarget } -allowJogging 1 \
+	-crossoverViaLayerRange { met1(1) met5(5) } \
+	-nets { AMUXBUS_A AMUXBUS_B VCCD VCCHIB \
+	VDDA VDDIO VDDIO_Q VSSA VSSD VSSIO VSSIO_Q VSWITCH } \
+	-allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
 
 ## Add Special Route between PADs and Power Ring
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { met1(1) met5(5) } -nets { G_CORE P_CORE } -allowLayerChange 1 -targetViaLayerRange { met1(1) met5(5) }
+setSrouteMode -viaConnectToShape { noshape } 
+sroute -connect { padPin } -layerChangeRange { met1(1) met5(5) } \
+	-blockPinTarget { nearestTarget } \
+	-padPinPortConnect { allPort oneGeom } \
+	-padPinTarget { nearestTarget } -allowJogging 1 \
+	-crossoverViaLayerRange { met1(1) met5(5) } \
+	-nets { G_CORE P_CORE } -allowLayerChange 1 \
+	-targetViaLayerRange { met1(1) met5(5) }
 
 
 ## Add Power Stripes

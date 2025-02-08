@@ -1,0 +1,13 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Sky130 PVS Rule Set File
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+pvsRuleSet( "default"
+       (DrcRules             "./sky130_rev_0.0_1.0.drc.pvl" )
+       (LvsRules             "./sky130.lvs.pvl" )
+)
+ 
+ruleSet( "rcx_typical"
+       (RcxSetupDir          "/eda/cadence/pdks/sky130/sky130_release_004a/quantus/extraction/typical" )
+)
+

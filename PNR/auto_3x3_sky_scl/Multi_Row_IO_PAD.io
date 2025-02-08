@@ -25,7 +25,7 @@
 (iopad
   (topleft
     (locals ring_number=2)
-    (inst name="Corner_TL2" cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R90 place_status = placed)
+    (inst name="Corner_TL2" cell=sky130_fd_io__corner_bus_overlay orientation=R90 place_status = placed)
     (locals ring_number=1)
     #(endspace gap=20)
     (inst name="Corner_TL1" cell=sky130_fd_io__corner_bus_overlay orientation=R90 place_status = placed)
@@ -33,7 +33,7 @@
 
   (topright
     (locals ring_number=2)
-    (inst name="Corner_TR2" cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R0 place_status = placed)
+    (inst name="Corner_TR2" cell=sky130_fd_io__corner_bus_overlay orientation=R0 place_status = placed)
     (locals ring_number=1)
     #(endspace gap=20)
     (inst name="Corner_TR1" cell=sky130_fd_io__corner_bus_overlay orientation=R0 place_status = placed)
@@ -41,14 +41,14 @@
 
   (bottomright
     (locals ring_number=2)
-    (inst name="Corner_BR2" cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R270 place_status = placed)
+    (inst name="Corner_BR2" cell=sky130_fd_io__corner_bus_overlay orientation=R270 place_status = placed)
     (locals ring_number=1)
     #(endspace gap=20)
     (inst name="Corner_BR1" cell=sky130_fd_io__corner_bus_overlay orientation=R270 place_status = placed)
   )
   (bottomleft
     (locals ring_number=2)
-    (inst name="Corner_BL2" cell=sky130_fd_io__corner_bus_overlay offset=0 orientation=R180 place_status = placed)
+    (inst name="Corner_BL2" cell=sky130_fd_io__corner_bus_overlay orientation=R180 place_status = placed)
     (locals ring_number=1)
     #(endspace gap=20)
     (inst name="Corner_BL1" cell=sky130_fd_io__corner_bus_overlay orientation=R180 place_status = placed)

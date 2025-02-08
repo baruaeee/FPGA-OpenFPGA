@@ -1,0 +1,81 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream In
+Program   : @(#)$CDS: strmin version IC23.1-64b 05/22/2024 07:39 (cpgbld16) $
+          : sub-version  IC23.1-64b.ISR7.27 
+Started at: 06-Feb-2025  21:24:15
+User Name : cae1
+Host Name : cae-europractice1.othr.de
+Directory : /home/cae1/Desktop/FPGA-OpenFPGA/DRC
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-75): Target library 'FPGA_TOP' is attached to the technology library 'sky130_fd_pr_main'. Therefore, the technology file is opened in read-only mode. All the undefined layer-purpose pairs will be dropped.
+WARNING (XSTRM-107): Existing cells in the target library will be overwritten if the cell names in the Stream file and the target library are the same. To prevent this, set the '-writeMode' option to 'noOverwrite'.
+INFO (XSTRM-217): Reading the layer map file, /mnt/cae_storage_sw/eda/cadence/pdks/sky130/sky130_release_004a/libs/sky130_fd_pr_main/sky130_fd_pr_main.layermap
+INFO (XSTRM-69): All the libraries specified in 'cds.lib' will be considered as reference libraries. This is because '-refLibList' option is specified as "XST_CDS_LIB".
+WARNING (XSTRM-333): The '-enableColoring' option will be ignored during XStream In. This is because there is no color entry in the layer map and the object map file.
+INFO (XSTRM-163): You have not used the '-viaMap' option. If a viaMap file, corresponding technology file or technology library exist, then use the '-viaMap' option for creating oaVia instances in the Streamed-In library. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options:
+	library				FPGA_TOP
+	strmFile			/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/fpga.gds
+	logFile				strmIn.log
+	topCell				fpga_top
+	view				layout
+	case				Preserve
+	layerMap			/mnt/cae_storage_sw/eda/cadence/pdks/sky130/sky130_release_004a/libs/sky130_fd_pr_main/sky130_fd_pr_main.layermap
+	propSeparator			,
+	refLibList				XST_CDS_LIB
+	snapToGrid			
+	attachTechFileOfLib				sky130_fd_pr_main
+
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "fpga_top_VIA11" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+INFO (XSTRM-81000): Via detection cannot create new via definition for "fpga_top_VIA11" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "fpga_top_VIA12" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+INFO (XSTRM-81000): Via detection cannot create new via definition for "fpga_top_VIA12" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-287): The STRUCTURE 'CLKBUFX8' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/CLKBUFX8/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'CLKINVX2' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/CLKINVX2/layout'.
+INFO (XSTRM-287): The STRUCTURE 'BUFX8' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/BUFX8/layout'.
+INFO (XSTRM-287): The STRUCTURE 'OR2X1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/OR2X1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'BUFX16' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/BUFX16/layout'.
+INFO (XSTRM-287): The STRUCTURE 'CLKINVX4' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/CLKINVX4/layout'.
+INFO (XSTRM-287): The STRUCTURE 'DFFRX1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/DFFRX1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'INVX16' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/INVX16/layout'.
+INFO (XSTRM-287): The STRUCTURE 'BUFX4' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/BUFX4/layout'.
+INFO (XSTRM-287): The STRUCTURE 'INVX2' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/INVX2/layout'.
+INFO (XSTRM-287): The STRUCTURE 'CLKINVX1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/CLKINVX1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'INVX1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/INVX1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'MX2X1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/MX2X1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'INVX4' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/INVX4/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL64' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL64/layout'.
+INFO (XSTRM-287): The STRUCTURE 'BUFX2' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/BUFX2/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL2' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL2/layout'.
+INFO (XSTRM-287): The STRUCTURE 'DFFSRX1' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/DFFSRX1/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL32' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL32/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL4' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL4/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL8' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL8/layout'.
+INFO (XSTRM-287): The STRUCTURE 'CLKBUFX4' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/CLKBUFX4/layout'.
+INFO (XSTRM-287): The STRUCTURE 'FILL16' in the input GDSII/Stream file will not be translated. This is because either the '-refLibList' option is used and the cellview is available in the reference library 'sky130_scl_9T' or the STRUCTURE is not mapped to the target library using the cell map file/piCellMap SKILL function. Therefore, all the instances of the cellview will be referenced from 'sky130_scl_9T/FILL16/layout'.
+INFO (XSTRM-220): 1. Translating STRUCTURE fpga_top_VIA11 as cellView FPGA_TOP/fpga_top_VIA11/layout.
+INFO (XSTRM-220): 2. Translating STRUCTURE fpga_top_VIA12 as cellView FPGA_TOP/fpga_top_VIA12/layout.
+INFO (XSTRM-220): 3. Translating STRUCTURE fpga_top as cellView FPGA_TOP/fpga_top/layout.
+
+Summary of Objects Translated:
+	Instances:                              33413
+	CustomVias:                             0
+	StandardVias:                           58305
+	CdsGenVias:                             0
+	Arrays:                                 0
+	Polygons:                               0
+	Paths:                                  116673
+	PathSegs:                               0
+	Rectangles:                             4321
+	Text:                                   39
+	Node:                                   0
+	Line:                                   0
+	Cells:                                  3
+
+Elapsed Time: 0.8s   User Time: 0.6s   CPU Time: 0.1s   Peak VM: 24324KB  CPUs Used: 2
+INFO (XSTRM-234): Translation completed. '0' error(s) and '3' warning(s) found.

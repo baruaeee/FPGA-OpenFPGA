@@ -1,0 +1,35 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 23.1 - CAT38 04/15/2024 12:26 (sjfdcl749) $
+\o Sub version:		sub-version  p323 
+\o Arguments:		-display :10.0 -mpssession virtuoso883507 -mpshost cae-europractice1.othr.de -mpsversion 23.1 -namespace CDBA -cdslib /home/cae1/Desktop/FPGA-OpenFPGA/DRC/cds.lib 
+\o Working Directory:	cae-europractice1.othr.de:/home/cae1/Desktop/FPGA-OpenFPGA/DRC
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		5.15.9
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrResizeWindow(cdsLibEditor list(585 321 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 6 0)
+\o Active cell: 6 0 "adc"
+\a nrListItemAction(cdsLibEditor->mainTable 6 1)
+\o Active cell: 6 1 "/home/cae3/Desktop/ADC/ASIC_ADC/Cadence_sky/adc"
+\a nrListItemAction(cdsLibEditor->mainTable 6 0)
+\o Active cell: 6 0 "adc"
+\a nrListItemAction(cdsLibEditor->mainTable 6 1)
+\o Active cell: 6 1 "/home/cae3/Desktop/ADC/ASIC_ADC/Cadence_sky/adc"
+\a nrListItemAction(cdsLibEditor->mainTable 6 0)
+\o Active cell: 6 0 "adc"
+\a nrListItemAction(cdsLibEditor->mainTable 6 1)
+\o Active cell: 6 1 "/home/cae3/Desktop/ADC/ASIC_ADC/Cadence_sky/adc"
+\a cdsLibEditor->editDeletePopupButton->value = t
+\a nrListItemAction(cdsLibEditor->mainTable 7 0)
+\o Active cell: 7 0 ""
+\a nrListItemAction(cdsLibEditor->mainTable 3 1)
+\o Active cell: 3 1 "./ADC"
+\a nrListItemAction(cdsLibEditor->mainTable 3 0)
+\o Active cell: 3 0 "ADC"
+\a cdsLibEditor->editDeletePopupButton->value = t
+\a nrListItemAction(cdsLibEditor->mainTable 3 1)
+\o Active cell: 3 1 "./ADC"
+\a nrListItemAction(cdsLibEditor->mainTable 2 1)
+\o Active cell: 2 1 "/eda/cadence/pdks/sky130/sky130_release_004a/libs/sky130_fd_pr_main"
+\a cdsLibEditor->fileSaveButton->value = t
+\a exit(0)
