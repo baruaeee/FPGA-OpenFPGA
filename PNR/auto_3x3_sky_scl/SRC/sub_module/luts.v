@@ -6,7 +6,7 @@
 //	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for frac_lut6 -----
 module frac_lut6(in,
@@ -125,7 +125,7 @@ endmodule
 // ----- END Verilog module for frac_lut6 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 

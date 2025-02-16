@@ -12438,4 +12438,6 @@ Simulation start
 Simulation Succeed
 Simulation complete via $finish(1) at time 14618 NS + 0
 ./and2_autocheck_top_tb.v:28634 	$finish;
-xcelium> 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s004: Exiting on Feb 09, 2025 at 17:50:40 CET  (total: 26:14:51)

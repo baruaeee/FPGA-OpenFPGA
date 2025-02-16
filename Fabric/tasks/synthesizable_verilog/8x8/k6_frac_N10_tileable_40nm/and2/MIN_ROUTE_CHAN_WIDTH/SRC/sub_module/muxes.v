@@ -6,7 +6,7 @@
 //	Date: Sun Nov  3 16:14:39 2024
 //-------------------------------------------
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size4 -----
 module mux_tree_tapbuf_size4(in,
@@ -96,13 +96,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size4 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size2 -----
 module mux_tree_tapbuf_size2(in,
@@ -168,13 +168,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size2 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size3 -----
 module mux_tree_tapbuf_size3(in,
@@ -252,13 +252,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size3 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size9 -----
 module mux_tree_tapbuf_size9(in,
@@ -408,13 +408,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size9 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size7 -----
 module mux_tree_tapbuf_size7(in,
@@ -540,13 +540,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size7 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size8 -----
 module mux_tree_tapbuf_size8(in,
@@ -684,13 +684,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size8 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size12 -----
 module mux_tree_tapbuf_size12(in,
@@ -876,13 +876,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size12 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_tapbuf_size5 -----
 module mux_tree_tapbuf_size5(in,
@@ -984,13 +984,13 @@ endmodule
 // ----- END Verilog module for mux_tree_tapbuf_size5 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_size60 -----
 module mux_tree_size60(in,
@@ -1752,13 +1752,13 @@ endmodule
 // ----- END Verilog module for mux_tree_size60 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for mux_tree_size2 -----
 module mux_tree_size2(in,
@@ -1824,13 +1824,13 @@ endmodule
 // ----- END Verilog module for mux_tree_size2 -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 
 
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for frac_lut6_mux -----
 module frac_lut6_mux(in,
@@ -2740,7 +2740,7 @@ endmodule
 // ----- END Verilog module for frac_lut6_mux -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 

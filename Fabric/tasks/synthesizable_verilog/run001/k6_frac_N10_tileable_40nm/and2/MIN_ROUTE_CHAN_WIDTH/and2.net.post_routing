@@ -5,7 +5,7 @@
 	<clocks></clocks>
 	<block name="c" instance="clb[0]" mode="default">
 		<inputs>
-			<port name="I">open a open open open open open open open open open open open b open open open open open open open open open open open open open open open open open open open open open open open open open open</port>
+			<port name="I">open a open open open open open open open open b open open open open open open open open open open open open open open open open open open open open open open open open open open open open open</port>
 		</inputs>
 		<outputs>
 			<port name="O">open open open open open open open open open open open open open open open open open open open fle[9].out[1]-&gt;clbouts2</port>
@@ -24,7 +24,7 @@
 		<block name="open" instance="fle[8]" />
 		<block name="c" instance="fle[9]" mode="n2_lut5">
 			<inputs>
-				<port name="in">clb.I[13]-&gt;crossbar clb.I[1]-&gt;crossbar open open open open</port>
+				<port name="in">clb.I[10]-&gt;crossbar clb.I[1]-&gt;crossbar open open open open</port>
 			</inputs>
 			<outputs>
 				<port name="out">open lut5inter[0].out[1]-&gt;direct2</port>

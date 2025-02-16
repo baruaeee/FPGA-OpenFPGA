@@ -7,7 +7,7 @@
 //-------------------------------------------
 // ----- Template Verilog module for INVX1 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for INVX1 -----
 module INVX1(A,
@@ -32,12 +32,12 @@ endmodule
 // ----- END Verilog module for INVX1 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for BUFX4 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for BUFX4 -----
 module BUFX4(A,
@@ -62,12 +62,12 @@ endmodule
 // ----- END Verilog module for BUFX4 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for INVX4 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for INVX4 -----
 module INVX4(A,
@@ -92,12 +92,12 @@ endmodule
 // ----- END Verilog module for INVX4 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for OR2X1 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for OR2X1 -----
 module OR2X1(A,
@@ -125,12 +125,12 @@ endmodule
 // ----- END Verilog module for OR2X1 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for MX2X1 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for MX2X1 -----
 module MX2X1(B,
@@ -161,12 +161,12 @@ endmodule
 // ----- END Verilog module for MX2X1 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for DFFSRX1 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for DFFSRX1 -----
 module DFFSRX1(SN,
@@ -200,12 +200,12 @@ endmodule
 // ----- END Verilog module for DFFSRX1 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for DFFRX1 -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for DFFRX1 -----
 module DFFRX1(RN,
@@ -239,12 +239,12 @@ endmodule
 // ----- END Verilog module for DFFRX1 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 // ----- Template Verilog module for GPIO -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for GPIO -----
 module GPIO(PAD,
@@ -275,6 +275,6 @@ endmodule
 // ----- END Verilog module for GPIO -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 

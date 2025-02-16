@@ -7,7 +7,7 @@
 //-------------------------------------------
 // ----- BEGIN Physical programmable logic block Verilog module: clb -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for logical_tile_clb_mode_clb_ -----
 module logical_tile_clb_mode_clb_(pReset,
@@ -1411,7 +1411,7 @@ endmodule
 // ----- END Verilog module for logical_tile_clb_mode_clb_ -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 

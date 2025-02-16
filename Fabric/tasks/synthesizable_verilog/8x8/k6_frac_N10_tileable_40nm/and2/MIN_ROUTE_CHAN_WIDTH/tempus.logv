@@ -1,0 +1,819 @@
+[02/12 15:24:52      0s] 
+[02/12 15:24:52      0s] Cadence Tempus(TM) Timing Solution.
+[02/12 15:24:52      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/12 15:24:52      0s] 
+[02/12 15:24:52      0s] Version:	v23.11-s111_1, built Thu May 16 09:07:16 PDT 2024
+[02/12 15:24:52      0s] Options:	
+[02/12 15:24:52      0s] Date:		Wed Feb 12 15:24:52 2025
+[02/12 15:24:52      0s] Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
+[02/12 15:24:52      0s] OS:		Oracle Linux Server 8.10
+[02/12 15:24:52      0s] 
+[02/12 15:24:52      0s] License:
+[02/12 15:24:52      0s] 		[15:24:52.483228] Configured Lic search path (23.02-s005): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+
+[02/12 15:24:52      0s] 		tpsxl	Tempus Timing Signoff Solution XL	23.1	checkout succeeded
+[02/12 15:24:52      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[02/12 15:24:54      1s] {{{ isCertus 0,  isCertusOrDistOptClient = 0, isInnovusCertusClient = 0}}}
+[02/12 15:25:17     14s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Tempus Timing Solution v23.11-s111_1 (64bit) 05/16/2024 09:07 (Linux 3.10.0-693.el7.x86_64)
+[02/12 15:25:19     16s] @(#)CDS: NanoRoute 23.11-s111_1 NR240401-0735/23_11-UB (database version 18.20.622) {superthreading v2.20}
+[02/12 15:25:19     16s] @(#)CDS: AAE 23.11-s031 (64bit) 05/16/2024 (Linux 3.10.0-693.el7.x86_64)
+[02/12 15:25:19     16s] @(#)CDS: CTE 23.11-s025_1 () May 16 2024 01:47:36 ( )
+[02/12 15:25:19     16s] @(#)CDS: SYNTECH 23.11-s010_1 () Apr  5 2024 04:21:08 ( )
+[02/12 15:25:19     16s] @(#)CDS: CPE v23.11-s059
+[02/12 15:25:19     16s] @(#)CDS: OA 22.61-p011 Thu Nov 30 12:26:13 2023
+[02/12 15:25:19     16s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[02/12 15:25:19     16s] @(#)CDS: RCDB 11.15.0
+[02/12 15:25:19     16s] @(#)CDS: STYLUS 23.10-a010_1 (02/06/2024 03:59 PST)
+[02/12 15:25:19     16s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[02/12 15:25:19     16s] **INFO: (TMPDIR-1001): Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_2034963_SzSyqT'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_2034963_SzSyqT'.
+[02/12 15:25:20     17s] <CMD> ::stop_gui -keepDgui
+[02/12 15:25:20     17s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:20     17s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:34     18s] <CMD> read_lib -max ../../../../../../../PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib ../../../../../../../PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib
+[02/12 15:25:34     18s] <CMD> read_lib -min ../../../../../../../PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib ../../../../../../../PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ff_1P95_100C.ccs.lib
+[02/12 15:25:34     18s] <CMD> read_lib ../../../../../../../PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib ../../../../../../../../PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib
+[02/12 15:25:35     19s] <CMD> read_verilog SRC/fabric_netlists.v
+[02/12 15:25:35     19s] <CMD> set_top_module fpga_top
+[02/12 15:25:35     19s] #% Begin Load MMMC data ... (date=02/12 15:25:35, mem=1720.9M)
+[02/12 15:25:35     19s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[02/12 15:25:35     19s] #% End Load MMMC data ... (date=02/12 15:25:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1722.2M, current mem=1722.2M)
+[02/12 15:25:35     19s] Loading view definition file from .ssv_emulate_view_definition_2034963_0ff2002f-568c-491c-96ca-d6747bb3c629.tcl
+[02/12 15:25:35     19s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib' ...
+[02/12 15:25:35     19s] Read 109 cells in library 'sky130_ss_1.62_125' 
+[02/12 15:25:35     19s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib' ...
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__ant', pin 'A', is negative ('-733.147339'). Check capacitance tables in library starting at line '95420' and review the library characterization setup, if needed. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 95420)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '27.590000'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.972701' and the first time point ignored is '27.590000'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120447)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '40.226601'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.602232' and the first time point ignored is '40.226601'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120501)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '60.382000'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.920190' and the first time point ignored is '60.382000'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120555)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '28.247499'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.411848' and the first time point ignored is '28.247499'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120456)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '25.915400'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.613514' and the first time point ignored is '25.915400'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120510)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '44.171902'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.622320' and the first time point ignored is '44.171902'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120564)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '63.104599'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.336250' and the first time point ignored is '63.104599'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120411)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '63.104401'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.389690' and the first time point ignored is '63.104401'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120465)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '30.038200'. The last '2' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.377448' and the first time point ignored is '30.038200'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120773)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '12.340700'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.565454' and the first time point ignored is '12.340700'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120827)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '48.437401'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.494010' and the first time point ignored is '48.437401'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120881)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '50.133598'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.295113' and the first time point ignored is '50.133598'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120782)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '25.736300'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.564052' and the first time point ignored is '25.736300'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120836)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '45.675201'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.496440' and the first time point ignored is '45.675201'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120890)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '50.133499'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.803768' and the first time point ignored is '50.133499'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120737)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_fall' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_1' has very long tail with time value reaching '50.133400'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.886726' and the first time point ignored is '50.133400'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 120791)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_l' has very long tail with time value reaching '29.661400'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.337382' and the first time point ignored is '29.661400'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 123296)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_l' has very long tail with time value reaching '32.231800'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.392906' and the first time point ignored is '32.231800'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 123350)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_l' has very long tail with time value reaching '63.390800'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '0.521642' and the first time point ignored is '63.390800'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 123404)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1398):	The 'output_current_rise' waveform specified in cell 'sky130_osu_sc_18T_hs__dff_l' has very long tail with time value reaching '60.527802'. The last '1' points in waveform will be ignored and tool will complete the waveform using extrapolation for timing analysis. The last time point considered is '1.433840' and the first time point ignored is '60.527802'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 123458)
+[02/12 15:25:36     19s] Message <TECHLIB-1398> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dff_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002502' and slew '0.016960' is '93.4%', should be within five percent of 'vss'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 123625)
+[02/12 15:25:36     19s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002502' and slew '0.060748' is '93.6%', should be within five percent of 'vss'. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib, Line 133529)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_osu_sc_18T_hs__ant'. The cell will only be used for analysis. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ss_1P60_100C.ccs.lib)
+[02/12 15:25:36     20s] Read 55 cells in library 'sky130_osu_sc_18T_hs_ss_1P60_100C.ccs' 
+[02/12 15:25:36     20s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib' ...
+[02/12 15:25:36     20s] Read 109 cells in library 'sky130_tt_1.8_25' 
+[02/12 15:25:36     20s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib' ...
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__ant', pin 'A', is negative ('-1166.953491'). Check capacitance tables in library starting at line '95420' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 95420)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dff_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002283' and slew '0.013217' is '94.9%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 123625)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dff_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002283' and slew '0.049764' is '92.8%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 123679)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dff_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002283' and slew '0.705435' is '90.8%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 123787)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dff_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.008913' and slew '0.013217' is '94.9%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 123634)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dff_l', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.034787' and slew '0.013217' is '94.9%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 123643)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_rise', voltage swing on pin/bus/bundle 'Q' with load '0.009560' and slew '0.013217' is '94.9%', should be within five percent of 'vdd'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126251)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_rise', voltage swing on pin/bus/bundle 'Q' with load '0.009560' and slew '0.187364' is '94.9%', should be within five percent of 'vdd'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126359)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_rise', voltage swing on pin/bus/bundle 'Q' with load '0.040020' and slew '0.187364' is '94.9%', should be within five percent of 'vdd'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126368)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002283' and slew '0.013217' is '94.0%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126568)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002283' and slew '0.049764' is '94.1%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126622)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.002283' and slew '0.187364' is '94.0%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126676)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.009560' and slew '0.013217' is '83.5%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126577)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.009560' and slew '0.049764' is '93.7%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126631)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.009560' and slew '0.187364' is '93.9%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126685)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.040020' and slew '0.013217' is '93.3%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126586)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.040020' and slew '0.049764' is '93.7%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126640)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.040020' and slew '0.187364' is '93.5%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126694)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1279):	For cell 'sky130_osu_sc_18T_hs__dffr_1', in group 'output_current_fall', voltage swing on pin/bus/bundle 'Q' with load '0.040020' and slew '0.705435' is '93.5%', should be within five percent of 'vss'. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 126748)
+[02/12 15:25:36     20s] Message <TECHLIB-1279> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 2, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'Q', is negative ('-1096.010742'). Check capacitance tables in library starting at line '189725' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 189725)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 4, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'Q', is negative ('-43.982502'). Check capacitance tables in library starting at line '189375' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 189375)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 2, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'Q', is negative ('-1096.010742'). Check capacitance tables in library starting at line '188217' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 188217)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 4, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'Q', is negative ('-43.982502'). Check capacitance tables in library starting at line '187867' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 187867)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 5, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'QN', is negative ('-43.769955'). Check capacitance tables in library starting at line '192509' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 192509)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 2, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'QN', is negative ('-1097.063477'). Check capacitance tables in library starting at line '192859' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 192859)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 5, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'QN', is negative ('-43.769955'). Check capacitance tables in library starting at line '191001' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 191001)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 2, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_1', timing arc from pin 'D' to pin 'QN', is negative ('-1097.063477'). Check capacitance tables in library starting at line '191351' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 191351)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 6, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'Q', is negative ('-1096.084961'). Check capacitance tables in library starting at line '195428' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 195428)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 3, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'Q', is negative ('-43.953773'). Check capacitance tables in library starting at line '195078' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 195078)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 6, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'Q', is negative ('-1096.084961'). Check capacitance tables in library starting at line '193920' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 193920)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 3, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'Q', is negative ('-43.953773'). Check capacitance tables in library starting at line '193570' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 193570)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 3, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'QN', is negative ('-43.691216'). Check capacitance tables in library starting at line '198212' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 198212)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 2, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'QN', is negative ('-1097.210815'). Check capacitance tables in library starting at line '198562' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 198562)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 3, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'QN', is negative ('-43.691216'). Check capacitance tables in library starting at line '196704' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 196704)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6 and load point 2, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__dlat_l', timing arc from pin 'D' to pin 'QN', is negative ('-1097.210815'). Check capacitance tables in library starting at line '197054' and review the library characterization setup, if needed. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib, Line 197054)
+[02/12 15:25:36     20s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_osu_sc_18T_hs__ant'. The cell will only be used for analysis. (File /home/cae1/Desktop/PDK/sky130_cds/sky130_osu_sc_t18/18T_hs/lib/tt/sky130_osu_sc_18T_hs_TT_1P8_25C.ccs.lib)
+[02/12 15:25:36     20s] Read 67 cells in library 'sky130_osu_sc_18T_hs_TT_1P8_25C.ccs' 
+[02/12 15:25:36     20s] Reading default_emulate_libset_min timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
+[02/12 15:25:36     20s] Read 109 cells in library 'sky130_ff_1.98_0' 
+[02/12 15:25:36     20s] Reading default_emulate_libset_min timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ff_1P95_100C.ccs.lib' ...
+[02/12 15:25:37     21s] **WARN: (TECHLIB-1469):	The total net capacitance for slew point 6, in receiver capacitance table for cell 'sky130_osu_sc_18T_hs__ant', pin 'A', is negative ('-2127.519287'). Check capacitance tables in library starting at line '95420' and review the library characterization setup, if needed. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ff_1P95_100C.ccs.lib, Line 95420)
+[02/12 15:25:37     21s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_osu_sc_18T_hs__ant'. The cell will only be used for analysis. (File /home/cae1/Desktop/FPGA-OpenFPGA/PNR/8x8_osu/lib/sky130_osu_sc_18T_hs_ff_1P95_100C.ccs.lib)
+[02/12 15:25:37     21s] Read 55 cells in library 'sky130_osu_sc_18T_hs_ff_1P95_100C.ccs' 
+[02/12 15:25:37     21s] Ending "PreSetAnalysisView" (total cpu=0:00:01.6, real=0:00:02.0, peak res=1819.3M, current mem=1730.4M)
+[02/12 15:25:37     21s] *** End library_loading (cpu=0.03min, real=0.03min, mem=45.0M, fe_cpu=0.35min, fe_real=0.75min, fe_mem=1696.0M) ***
+[02/12 15:25:37     21s] #% Begin Load netlist data ... (date=02/12 15:25:37, mem=1730.4M)
+[02/12 15:25:37     21s] *** Begin netlist parsing (mem=1696.0M) ***
+[02/12 15:25:37     21s] Reading verilog netlist 'SRC/fabric_netlists.v'
+[02/12 15:25:37     21s] 
+[02/12 15:25:37     21s] *** Memory Usage v#2 (Current mem = 2084.047M, initial mem = 832.258M) ***
+[02/12 15:25:37     21s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=2084.0M) ***
+[02/12 15:25:37     21s] #% End Load netlist data ... (date=02/12 15:25:37, total cpu=0:00:00.4, real=0:00:00.0, peak res=1890.4M, current mem=1882.4M)
+[02/12 15:25:37     21s] Set top cell to fpga_top.
+[02/12 15:25:37     21s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:37     21s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:37     21s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[02/12 15:25:37     21s] late library set: default_emulate_libset_max
+[02/12 15:25:37     21s] early library set: default_emulate_libset_min
+[02/12 15:25:37     21s] Completed consistency checks. Status: Successful
+[02/12 15:25:37     21s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[02/12 15:25:37     21s] late library set: default_emulate_libset_max
+[02/12 15:25:37     21s] early library set: default_emulate_libset_min
+[02/12 15:25:37     21s] Completed consistency checks. Status: Successful
+[02/12 15:25:37     21s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1919.0M, current mem=1919.0M)
+[02/12 15:25:37     21s] *** Estimate the number of flat objects and h-objects before Flatten ***
+[02/12 15:25:37     21s] 	flat insts : 419077
+[02/12 15:25:37     21s] 	flat terms : 1305551
+[02/12 15:25:37     21s] 	HNets : 912956
+[02/12 15:25:37     21s] 	HInsts : 31732
+[02/12 15:25:37     21s] 	HTerms : 455055
+[02/12 15:25:37     21s] Building hierarchical netlist for Cell fpga_top ...
+[02/12 15:25:37     21s] ***** UseNewTieNetMode *****.
+[02/12 15:25:38     24s] *** Netlist is NOT unique.
+[02/12 15:25:38     24s] ** info: there are 561 modules.
+[02/12 15:25:38     24s] ** info: there are 393912 stdCell insts.
+[02/12 15:25:38     24s] ** info: there are 393912 stdCell insts with at least one signal pin.
+[02/12 15:25:38     24s] 
+[02/12 15:25:38     24s] *** Memory Usage v#2 (Current mem = 2742.289M, initial mem = 832.258M) ***
+[02/12 15:25:38     24s] Set Default Input Pin Transition as 0.1 ps.
+[02/12 15:25:38     24s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:38     24s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:38     24s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:38     24s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:38     24s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:38     24s] Has not load the powerDB, will keep enalbed
+[02/12 15:25:39     24s] Extraction setup Started for TopCell fpga_top 
+[02/12 15:25:39     24s] Summary of Active RC-Corners : 
+[02/12 15:25:39     24s]  
+[02/12 15:25:39     24s]  Analysis View: default_emulate_view
+[02/12 15:25:39     24s]     RC-Corner Name        : default_emulate_rc_corner
+[02/12 15:25:39     24s]     RC-Corner Index       : 0
+[02/12 15:25:39     24s]     RC-Corner Temperature : 25 Celsius
+[02/12 15:25:39     24s]     RC-Corner Cap Table   : ''
+[02/12 15:25:39     24s]     RC-Corner PostRoute Res Factor        : 1
+[02/12 15:25:39     24s]     RC-Corner PostRoute Cap Factor        : 1
+[02/12 15:25:39     24s]     RC-Corner PostRoute XCap Factor       : 1
+[02/12 15:25:39     24s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[02/12 15:25:39     24s] late library set: default_emulate_libset_max
+[02/12 15:25:39     24s] early library set: default_emulate_libset_min
+[02/12 15:25:39     24s] Completed consistency checks. Status: Successful
+[02/12 15:25:39     24s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2723.6M, current mem=2475.7M)
+[02/12 15:25:39     25s] Reading timing constraints file '/dev/null' ...
+[02/12 15:25:39     25s] Current (total cpu=0:00:25.3, real=0:00:47.0, peak res=2842.3M, current mem=2803.4M)
+[02/12 15:25:39     25s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[02/12 15:25:39     25s] Summary for sequential cells identification: 
+[02/12 15:25:39     25s]   Identified SBFF number: 24
+[02/12 15:25:39     25s]   Identified MBFF number: 0
+[02/12 15:25:39     25s]   Identified SB Latch number: 2
+[02/12 15:25:39     25s]   Identified MB Latch number: 0
+[02/12 15:25:39     25s]   Not identified SBFF number: 0
+[02/12 15:25:39     25s]   Not identified MBFF number: 0
+[02/12 15:25:39     25s]   Not identified SB Latch number: 0
+[02/12 15:25:39     25s]   Not identified MB Latch number: 0
+[02/12 15:25:39     25s]   Number of sequential cells which are not FFs: 1
+[02/12 15:25:39     25s] Total number of combinational cells: 141
+[02/12 15:25:39     25s] Total number of sequential cells: 27
+[02/12 15:25:39     25s] Total number of tristate cells: 7
+[02/12 15:25:39     25s] Total number of level shifter cells: 0
+[02/12 15:25:39     25s] Total number of power gating cells: 0
+[02/12 15:25:39     25s] Total number of isolation cells: 0
+[02/12 15:25:39     25s] Total number of power switch cells: 0
+[02/12 15:25:39     25s] Total number of pulse generator cells: 0
+[02/12 15:25:39     25s] Total number of always on buffers: 0
+[02/12 15:25:39     25s] Total number of retention cells: 0
+[02/12 15:25:39     25s] Total number of physical cells: 0
+[02/12 15:25:39     25s] List of usable buffers: sky130_osu_sc_18T_hs__buf_1 sky130_osu_sc_18T_hs__buf_2 sky130_osu_sc_18T_hs__buf_4 sky130_osu_sc_18T_hs__buf_8 sky130_osu_sc_18T_hs__buf_l BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8
+[02/12 15:25:39     25s] Total number of usable buffers: 12
+[02/12 15:25:39     25s] List of unusable buffers:
+[02/12 15:25:39     25s] Total number of unusable buffers: 0
+[02/12 15:25:39     25s] List of usable inverters: sky130_osu_sc_18T_hs__inv_1 sky130_osu_sc_18T_hs__inv_10 sky130_osu_sc_18T_hs__inv_2 sky130_osu_sc_18T_hs__inv_3 sky130_osu_sc_18T_hs__inv_4 sky130_osu_sc_18T_hs__inv_6 sky130_osu_sc_18T_hs__inv_8 sky130_osu_sc_18T_hs__inv_l CLKINVX1 CLKINVX2 CLKINVX4 CLKINVX8 INVX1 INVX16 INVX2 INVX8 INVX4
+[02/12 15:25:39     25s] Total number of usable inverters: 17
+[02/12 15:25:39     25s] List of unusable inverters:
+[02/12 15:25:39     25s] Total number of unusable inverters: 0
+[02/12 15:25:39     25s] List of identified usable delay cells: DLY1X1 DLY1X4 DLY4X4 DLY2X4
+[02/12 15:25:39     25s] Total number of identified usable delay cells: 4
+[02/12 15:25:39     25s] List of identified unusable delay cells:
+[02/12 15:25:39     25s] Total number of identified unusable delay cells: 0
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Deleting Cell Server Begin ...
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Deleting Cell Server End ...
+[02/12 15:25:39     25s] Ending "Cell type marking" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2832.0M, current mem=2832.0M)
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[02/12 15:25:39     25s] Summary for sequential cells identification: 
+[02/12 15:25:39     25s]   Identified SBFF number: 24
+[02/12 15:25:39     25s]   Identified MBFF number: 0
+[02/12 15:25:39     25s]   Identified SB Latch number: 2
+[02/12 15:25:39     25s]   Identified MB Latch number: 0
+[02/12 15:25:39     25s]   Not identified SBFF number: 0
+[02/12 15:25:39     25s]   Not identified MBFF number: 0
+[02/12 15:25:39     25s]   Not identified SB Latch number: 0
+[02/12 15:25:39     25s]   Not identified MB Latch number: 0
+[02/12 15:25:39     25s]   Number of sequential cells which are not FFs: 1
+[02/12 15:25:39     25s]  Visiting view : default_emulate_view
+[02/12 15:25:39     25s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = 0
+[02/12 15:25:39     25s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = -1
+[02/12 15:25:39     25s]  Visiting view : default_emulate_view
+[02/12 15:25:39     25s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = 0
+[02/12 15:25:39     25s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = -1
+[02/12 15:25:39     25s] TLC MultiMap info (StdDelay):
+[02/12 15:25:39     25s]   : default_emulate_delay_corner + default_emulate_libset_max + 1 + no RcCorner := 48ps
+[02/12 15:25:39     25s]   : default_emulate_delay_corner + default_emulate_libset_max + 1 + default_emulate_rc_corner := 48ps
+[02/12 15:25:39     25s]  Setting StdDelay to: 48ps
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Deleting Cell Server Begin ...
+[02/12 15:25:39     25s] 
+[02/12 15:25:39     25s] TimeStamp Deleting Cell Server End ...
+[02/12 15:25:40     25s] Extraction setup Started for TopCell fpga_top 
+[02/12 15:25:40     25s] Summary of Active RC-Corners : 
+[02/12 15:25:40     25s]  
+[02/12 15:25:40     25s]  Analysis View: default_emulate_view
+[02/12 15:25:40     25s]     RC-Corner Name        : default_emulate_rc_corner
+[02/12 15:25:40     25s]     RC-Corner Index       : 0
+[02/12 15:25:40     25s]     RC-Corner Temperature : 125 Celsius
+[02/12 15:25:40     25s]     RC-Corner Cap Table   : ''
+[02/12 15:25:40     25s]     RC-Corner PostRoute Res Factor        : 1
+[02/12 15:25:40     25s]     RC-Corner PostRoute Cap Factor        : 1
+[02/12 15:25:40     25s]     RC-Corner PostRoute XCap Factor       : 1
+[02/12 15:25:40     25s] Extraction setup Started for TopCell fpga_top 
+[02/12 15:25:40     25s] Summary of Active RC-Corners : 
+[02/12 15:25:40     25s]  
+[02/12 15:25:40     25s]  Analysis View: default_emulate_view
+[02/12 15:25:40     25s]     RC-Corner Name        : default_emulate_rc_corner
+[02/12 15:25:40     25s]     RC-Corner Index       : 0
+[02/12 15:25:40     25s]     RC-Corner Temperature : 125 Celsius
+[02/12 15:25:40     25s]     RC-Corner Cap Table   : ''
+[02/12 15:25:40     25s]     RC-Corner PostRoute Res Factor        : 1
+[02/12 15:25:40     25s]     RC-Corner PostRoute Cap Factor        : 1
+[02/12 15:25:40     25s]     RC-Corner PostRoute XCap Factor       : 1
+[02/12 15:25:40     25s] Extraction setup Started for TopCell fpga_top 
+[02/12 15:25:40     25s] Summary of Active RC-Corners : 
+[02/12 15:25:40     25s]  
+[02/12 15:25:40     25s]  Analysis View: default_emulate_view
+[02/12 15:25:40     25s]     RC-Corner Name        : default_emulate_rc_corner
+[02/12 15:25:40     25s]     RC-Corner Index       : 0
+[02/12 15:25:40     25s]     RC-Corner Temperature : 125 Celsius
+[02/12 15:25:40     25s]     RC-Corner Cap Table   : ''
+[02/12 15:25:40     25s]     RC-Corner PostRoute Res Factor        : 1
+[02/12 15:25:40     25s]     RC-Corner PostRoute Cap Factor        : 1
+[02/12 15:25:40     25s]     RC-Corner PostRoute XCap Factor       : 1
+[02/12 15:25:40     25s] <CMD> read_sdc SDC/cbx_1__0_.sdc SDC/cbx_1__1_.sdc SDC/cbx_1__6_.sdc SDC/cby_0__1_.sdc SDC/cby_1__1_.sdc SDC/cby_6__1_.sdc SDC/disable_configurable_memory_outputs.sdc SDC/disable_configure_ports.sdc SDC/disable_routing_multiplexer_outputs.sdc SDC/disable_sb_outputs.sdc SDC/global_ports.sdc SDC/logical_tile_clb_mode_clb_.sdc SDC/logical_tile_clb_mode_default__fle.sdc SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc SDC/logical_tile_io_mode_io_.sdc SDC/sb_0__0_.sdc SDC/sb_0__1_.sdc SDC/sb_0__6_.sdc SDC/sb_1__0_.sdc SDC/sb_1__1_.sdc SDC/sb_1__6_.sdc SDC/sb_6__0_.sdc SDC/sb_6__1_.sdc SDC/sb_6__6_.sdc
+[02/12 15:25:40     25s] Current (total cpu=0:00:25.9, real=0:00:48.0, peak res=2842.3M, current mem=2769.5M)
+[02/12 15:25:40     25s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__0_.sdc, Line 13).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_in[0]' (File SDC/cbx_1__0_.sdc, Line 15).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_out[0]' (File SDC/cbx_1__0_.sdc, Line 15).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 15).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_in[0]' (File SDC/cbx_1__0_.sdc, Line 16).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_out[0]' (File SDC/cbx_1__0_.sdc, Line 16).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 16).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_in[1]' (File SDC/cbx_1__0_.sdc, Line 17).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_out[1]' (File SDC/cbx_1__0_.sdc, Line 17).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 17).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_in[1]' (File SDC/cbx_1__0_.sdc, Line 18).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_out[1]' (File SDC/cbx_1__0_.sdc, Line 18).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 18).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_in[2]' (File SDC/cbx_1__0_.sdc, Line 19).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_out[2]' (File SDC/cbx_1__0_.sdc, Line 19).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 19).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_in[2]' (File SDC/cbx_1__0_.sdc, Line 20).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_out[2]' (File SDC/cbx_1__0_.sdc, Line 20).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 20).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_in[3]' (File SDC/cbx_1__0_.sdc, Line 21).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_out[3]' (File SDC/cbx_1__0_.sdc, Line 21).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 21).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_in[3]' (File SDC/cbx_1__0_.sdc, Line 22).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_out[3]' (File SDC/cbx_1__0_.sdc, Line 22).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 22).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_in[4]' (File SDC/cbx_1__0_.sdc, Line 23).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_left_out[4]' (File SDC/cbx_1__0_.sdc, Line 23).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 23).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_in[4]' (File SDC/cbx_1__0_.sdc, Line 24).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'fpga_top/cbx_1__0_/chanx_right_out[4]' (File SDC/cbx_1__0_.sdc, Line 24).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 24).
+
+Message <TCLCMD-513> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File SDC/cbx_1__0_.sdc, Line 25).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] **ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 25).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 26).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 27).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 28).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 29).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 30).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 31).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 32).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 33).
+
+**ERROR: (TCLCMD-1170):	Invalid path description specified for command set_max_delay (File SDC/cbx_1__0_.sdc, Line 34).
+
+Message <TCLCMD-1170> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File SDC/cbx_1__0_.sdc, Line 35).
+[02/12 15:25:40     25s] 
+[02/12 15:25:40     25s] INFO (CTE): Reading of timing constraints file SDC/cbx_1__0_.sdc completed, with 21 Warnings and 20 Errors.
+[02/12 15:25:40     25s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2777.0M, current mem=2777.0M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.0, real=0:00:48.0, peak res=2842.3M, current mem=2777.0M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.1, real=0:00:48.0, peak res=2842.3M, current mem=2777.0M)
+[02/12 15:25:40     26s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__1_.sdc, Line 13).
+[02/12 15:25:40     26s] 
+[02/12 15:25:40     26s] INFO (CTE): Reading of timing constraints file SDC/cbx_1__1_.sdc completed, with 1 WARNING
+[02/12 15:25:40     26s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2777.3M, current mem=2777.3M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.2, real=0:00:48.0, peak res=2842.3M, current mem=2777.3M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.2, real=0:00:48.0, peak res=2842.3M, current mem=2777.3M)
+[02/12 15:25:40     26s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cbx_1__6_.sdc, Line 13).
+[02/12 15:25:40     26s] 
+[02/12 15:25:40     26s] INFO (CTE): Reading of timing constraints file SDC/cbx_1__6_.sdc completed, with 1 WARNING
+[02/12 15:25:40     26s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2777.6M, current mem=2777.6M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.4, real=0:00:48.0, peak res=2842.3M, current mem=2777.6M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.4, real=0:00:48.0, peak res=2842.3M, current mem=2777.6M)
+[02/12 15:25:40     26s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_0__1_.sdc, Line 13).
+[02/12 15:25:40     26s] 
+[02/12 15:25:40     26s] INFO (CTE): Reading of timing constraints file SDC/cby_0__1_.sdc completed, with 1 WARNING
+[02/12 15:25:40     26s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2778.0M, current mem=2778.0M)
+[02/12 15:25:40     26s] Current (total cpu=0:00:26.5, real=0:00:48.0, peak res=2842.3M, current mem=2778.0M)
+[02/12 15:25:41     26s] Current (total cpu=0:00:26.5, real=0:00:49.0, peak res=2842.3M, current mem=2778.0M)
+[02/12 15:25:41     26s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_1__1_.sdc, Line 13).
+[02/12 15:25:41     26s] 
+[02/12 15:25:41     26s] INFO (CTE): Reading of timing constraints file SDC/cby_1__1_.sdc completed, with 1 WARNING
+[02/12 15:25:41     26s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2778.3M, current mem=2778.3M)
+[02/12 15:25:41     26s] Current (total cpu=0:00:26.6, real=0:00:49.0, peak res=2842.3M, current mem=2778.3M)
+[02/12 15:25:41     26s] Current (total cpu=0:00:26.7, real=0:00:49.0, peak res=2842.3M, current mem=2778.3M)
+[02/12 15:25:41     26s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/cby_6__1_.sdc, Line 13).
+[02/12 15:25:41     26s] 
+[02/12 15:25:41     26s] INFO (CTE): Reading of timing constraints file SDC/cby_6__1_.sdc completed, with 1 WARNING
+[02/12 15:25:41     26s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2778.7M, current mem=2778.7M)
+[02/12 15:25:41     26s] Current (total cpu=0:00:26.8, real=0:00:49.0, peak res=2842.3M, current mem=2778.7M)
+[02/12 15:25:41     26s] Current (total cpu=0:00:26.9, real=0:00:49.0, peak res=2842.3M, current mem=2778.7M)
+[02/12 15:25:41     26s] **ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 10).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 11).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 12).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 13).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 14).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 15).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 16).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 17).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 18).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 19).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 20).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 22).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 23).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 24).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_top_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 25).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 26).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 27).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/Q' (File SDC/disable_configurable_memory_outputs.sdc, Line 28).
+
+**ERROR: (TCLCMD-917):	Cannot find 'instance, pin, library cell, library cell pin, library arc or timing arc collection' that match 'fpga_top/sb_*__*_/mem_right_track_*/sky*_osu_sc_*T_hs__dffr_*_*_/QN' (File SDC/disable_configurable_memory_outputs.sdc, Line 29).
+
+Message <TCLCMD-917> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File SDC/disable_configurable_memory_outputs.sdc, Line 30).
+[02/12 15:25:41     26s] 
+[02/12 15:25:41     26s] INFO (CTE): Reading of timing constraints file SDC/disable_configurable_memory_outputs.sdc completed, with 0 Warnings and 20 Errors.
+[02/12 15:25:41     26s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2779.1M, current mem=2779.1M)
+[02/12 15:25:41     26s] Current (total cpu=0:00:27.0, real=0:00:49.0, peak res=2842.3M, current mem=2779.1M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.0, real=0:00:49.0, peak res=2842.3M, current mem=2779.1M)
+[02/12 15:25:41     27s] INFO (CTE): Constraints read successfully.
+[02/12 15:25:41     27s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2779.5M, current mem=2779.5M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.1, real=0:00:49.0, peak res=2842.3M, current mem=2779.5M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.2, real=0:00:49.0, peak res=2842.3M, current mem=2779.5M)
+[02/12 15:25:41     27s] INFO (CTE): Constraints read successfully.
+[02/12 15:25:41     27s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2779.8M, current mem=2779.8M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.3, real=0:00:49.0, peak res=2842.3M, current mem=2779.8M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.3, real=0:00:49.0, peak res=2842.3M, current mem=2779.8M)
+[02/12 15:25:41     27s] INFO (CTE): Constraints read successfully.
+[02/12 15:25:41     27s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2780.2M, current mem=2780.2M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.4, real=0:00:49.0, peak res=2842.3M, current mem=2780.2M)
+[02/12 15:25:41     27s] Current (total cpu=0:00:27.5, real=0:00:49.0, peak res=2842.3M, current mem=2780.2M)
+[02/12 15:25:41     27s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/global_ports.sdc, Line 13).
+[02/12 15:25:41     27s] 
+[02/12 15:25:41     27s] INFO (CTE): Reading of timing constraints file SDC/global_ports.sdc completed, with 1 WARNING
+[02/12 15:25:41     27s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2780.9M, current mem=2780.9M)
+[02/12 15:25:42     27s] Current (total cpu=0:00:27.6, real=0:00:50.0, peak res=2842.3M, current mem=2780.9M)
+[02/12 15:25:42     27s] Current (total cpu=0:00:27.6, real=0:00:50.0, peak res=2842.3M, current mem=2780.9M)
+[02/12 15:25:42     27s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_clb_.sdc, Line 13).
+[02/12 15:25:42     27s] 
+[02/12 15:25:42     27s] INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_clb_.sdc completed, with 1 WARNING
+[02/12 15:25:42     27s] Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=2781.3M, current mem=2781.3M)
+[02/12 15:25:42     27s] Current (total cpu=0:00:27.8, real=0:00:50.0, peak res=2842.3M, current mem=2781.3M)
+[02/12 15:25:42     27s] Current (total cpu=0:00:27.9, real=0:00:50.0, peak res=2842.3M, current mem=2781.3M)
+[02/12 15:25:42     27s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle.sdc, Line 13).
+[02/12 15:25:42     27s] 
+[02/12 15:25:42     27s] INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle.sdc completed, with 1 WARNING
+[02/12 15:25:42     27s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2781.6M, current mem=2781.6M)
+[02/12 15:25:42     27s] Current (total cpu=0:00:28.0, real=0:00:50.0, peak res=2842.3M, current mem=2781.6M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.0, real=0:00:50.0, peak res=2842.3M, current mem=2781.6M)
+[02/12 15:25:42     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc, Line 13).
+[02/12 15:25:42     28s] 
+[02/12 15:25:42     28s] INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc completed, with 1 WARNING
+[02/12 15:25:42     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2782.0M, current mem=2782.0M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.1, real=0:00:50.0, peak res=2842.3M, current mem=2782.0M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.2, real=0:00:50.0, peak res=2842.3M, current mem=2782.0M)
+[02/12 15:25:42     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc, Line 13).
+[02/12 15:25:42     28s] 
+[02/12 15:25:42     28s] INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc completed, with 1 WARNING
+[02/12 15:25:42     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2782.4M, current mem=2782.4M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.3, real=0:00:50.0, peak res=2842.3M, current mem=2782.4M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.3, real=0:00:50.0, peak res=2842.3M, current mem=2782.4M)
+[02/12 15:25:42     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc, Line 13).
+[02/12 15:25:42     28s] 
+[02/12 15:25:42     28s] INFO (CTE): Reading of timing constraints file SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc completed, with 1 WARNING
+[02/12 15:25:42     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2782.7M, current mem=2782.7M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.4, real=0:00:50.0, peak res=2842.3M, current mem=2782.7M)
+[02/12 15:25:42     28s] Current (total cpu=0:00:28.5, real=0:00:50.0, peak res=2842.3M, current mem=2782.7M)
+[02/12 15:25:42     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/logical_tile_io_mode_io_.sdc, Line 13).
+[02/12 15:25:42     28s] 
+[02/12 15:25:42     28s] INFO (CTE): Reading of timing constraints file SDC/logical_tile_io_mode_io_.sdc completed, with 1 WARNING
+[02/12 15:25:42     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2783.1M, current mem=2783.1M)
+[02/12 15:25:43     28s] Current (total cpu=0:00:28.6, real=0:00:51.0, peak res=2842.3M, current mem=2783.1M)
+[02/12 15:25:43     28s] Current (total cpu=0:00:28.6, real=0:00:51.0, peak res=2842.3M, current mem=2783.1M)
+[02/12 15:25:43     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__0_.sdc, Line 13).
+[02/12 15:25:43     28s] 
+[02/12 15:25:43     28s] INFO (CTE): Reading of timing constraints file SDC/sb_0__0_.sdc completed, with 1 WARNING
+[02/12 15:25:43     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2783.5M, current mem=2783.5M)
+[02/12 15:25:43     28s] Current (total cpu=0:00:28.7, real=0:00:51.0, peak res=2842.3M, current mem=2783.5M)
+[02/12 15:25:43     28s] Current (total cpu=0:00:28.8, real=0:00:51.0, peak res=2842.3M, current mem=2783.5M)
+[02/12 15:25:43     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__1_.sdc, Line 13).
+[02/12 15:25:43     28s] 
+[02/12 15:25:43     28s] INFO (CTE): Reading of timing constraints file SDC/sb_0__1_.sdc completed, with 1 WARNING
+[02/12 15:25:43     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2783.8M, current mem=2783.8M)
+[02/12 15:25:43     28s] Current (total cpu=0:00:28.9, real=0:00:51.0, peak res=2842.3M, current mem=2783.8M)
+[02/12 15:25:43     28s] Current (total cpu=0:00:28.9, real=0:00:51.0, peak res=2842.3M, current mem=2783.8M)
+[02/12 15:25:43     28s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_0__6_.sdc, Line 13).
+[02/12 15:25:43     28s] 
+[02/12 15:25:43     28s] INFO (CTE): Reading of timing constraints file SDC/sb_0__6_.sdc completed, with 1 WARNING
+[02/12 15:25:43     28s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2784.2M, current mem=2784.2M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.0, real=0:00:51.0, peak res=2842.3M, current mem=2784.2M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.1, real=0:00:51.0, peak res=2842.3M, current mem=2784.2M)
+[02/12 15:25:43     29s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__0_.sdc, Line 13).
+[02/12 15:25:43     29s] 
+[02/12 15:25:43     29s] INFO (CTE): Reading of timing constraints file SDC/sb_1__0_.sdc completed, with 1 WARNING
+[02/12 15:25:43     29s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2784.6M, current mem=2784.6M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.1, real=0:00:51.0, peak res=2842.3M, current mem=2784.6M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.2, real=0:00:51.0, peak res=2842.3M, current mem=2784.6M)
+[02/12 15:25:43     29s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__1_.sdc, Line 13).
+[02/12 15:25:43     29s] 
+[02/12 15:25:43     29s] INFO (CTE): Reading of timing constraints file SDC/sb_1__1_.sdc completed, with 1 WARNING
+[02/12 15:25:43     29s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2784.9M, current mem=2784.9M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.3, real=0:00:51.0, peak res=2842.3M, current mem=2784.9M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.3, real=0:00:51.0, peak res=2842.3M, current mem=2784.9M)
+[02/12 15:25:43     29s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_1__6_.sdc, Line 13).
+[02/12 15:25:43     29s] 
+[02/12 15:25:43     29s] INFO (CTE): Reading of timing constraints file SDC/sb_1__6_.sdc completed, with 1 WARNING
+[02/12 15:25:43     29s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2785.3M, current mem=2785.3M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.5, real=0:00:51.0, peak res=2842.3M, current mem=2785.3M)
+[02/12 15:25:43     29s] Current (total cpu=0:00:29.5, real=0:00:51.0, peak res=2842.3M, current mem=2785.3M)
+[02/12 15:25:43     29s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File SDC/sb_6__0_.sdc, Line 13).
+[02/12 15:25:43     29s] 
+[02/12 15:25:43     29s] INFO (CTE): Reading of timing constraints file SDC/sb_6__0_.sdc completed, with 1 WARNING
+[02/12 15:25:44     29s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:01.0, peak res=2785.7M, current mem=2785.7M)
+[02/12 15:25:44     29s] Current (total cpu=0:00:29.6, real=0:00:52.0, peak res=2842.3M, current mem=2785.7M)
+[02/12 15:25:44     29s] Current (total cpu=0:00:29.6, real=0:00:52.0, peak res=2842.3M, current mem=2785.7M)
+[02/12 15:25:44     29s] Message <TCLCMD-1461> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File SDC/sb_6__1_.sdc, Line 13).
+[02/12 15:25:44     29s] 
+[02/12 15:25:44     29s] INFO (CTE): Constraints read successfully.
+[02/12 15:25:44     29s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2786.0M, current mem=2786.0M)
+[02/12 15:25:44     29s] Current (total cpu=0:00:29.8, real=0:00:52.0, peak res=2842.3M, current mem=2786.0M)
+[02/12 15:25:44     29s] Current (total cpu=0:00:29.8, real=0:00:52.0, peak res=2842.3M, current mem=2786.0M)
+[02/12 15:25:44     29s] INFO (CTE): Constraints read successfully.
+[02/12 15:25:44     29s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2786.4M, current mem=2786.4M)
+[02/12 15:25:44     29s] Current (total cpu=0:00:29.9, real=0:00:52.0, peak res=2842.3M, current mem=2786.4M)
+[02/12 15:25:44     29s] Loading  (fpga_top)
+[02/12 15:25:44     29s] Traverse HInst (fpga_top)
+[02/12 15:26:01     34s] <CMD> report_timing
+[02/12 15:26:01     34s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 15:26:02     34s] AAE DB initialization (MEM=3316.86 CPU=0:00:00.0 REAL=0:00:00.0) 
+[02/12 15:26:02     35s] #################################################################################
+[02/12 15:26:02     35s] # Design Name: fpga_top
+[02/12 15:26:02     35s] # Design Mode: 65nm
+[02/12 15:26:02     35s] # Analysis Mode: MMMC OCV 
+[02/12 15:26:02     35s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 15:26:02     35s] # Signoff Settings: SI Off 
+[02/12 15:26:02     35s] #################################################################################
+[02/12 15:26:11     44s] **WARN: (TA-146):	A combinational timing loop(s) was found in the design. You can find detailed information about all timing loops in the file './CTE_loops.rpt'. You should examine loop break points chosen automatically by the tool to ensure they are the most appropriate break locations. It is further recommended that validated loop break points be added to the constraint set via set_disable_timing to ensure consistent handling during the design flow.
+[02/12 15:28:33    186s] Topological Sorting (REAL = 0:00:01.0, MEM = 3473.0M, InitMEM = 3469.8M)
+[02/12 15:28:33    186s] Start delay calculation (fullDC) (1 T). (MEM=2926.27)
+[02/12 15:28:33    186s] Start AAE Lib Loading. (MEM=3472.95)
+[02/12 15:28:33    186s] End AAE Lib Loading. (MEM=3673.95 CPU=0:00:00.0 Real=0:00:00.0)
+[02/12 15:28:33    186s] End AAE Lib Interpolated Model. (MEM=3673.95 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 15:30:27    300s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 15:30:29    302s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 15:30:29    302s] End delay calculation. (MEM=3274.82 CPU=0:01:52 REAL=0:01:53)
+[02/12 15:30:29    302s] Begin loading slews from CTE ...
+[02/12 15:30:29    302s] Loading slews from CTE completed...
+[02/12 15:30:29    302s] End delay calculation (fullDC). (MEM=3272.23 CPU=0:01:56 REAL=0:01:56)
+[02/12 15:30:29    302s] *** CDM Built up (cpu=0:04:28  real=0:04:27  mem= 3891.9M) ***
+[02/12 15:30:29    302s] Has not load the powerDB, will keep enalbed
+[02/12 15:30:29    302s] Has not load the powerDB, will keep enalbed
+[02/12 15:34:47    319s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 15:34:47    319s] Current (total cpu=0:05:19, real=0:09:55, peak res=3278.9M, current mem=3109.0M)
+[02/12 15:34:47    319s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 15:34:47    319s] 
+[02/12 15:34:48    320s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 15:34:48    320s] 
+[02/12 15:34:48    320s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 15:34:48    320s] 
+[02/12 15:34:48    320s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 15:34:48    320s] 
+[02/12 15:34:48    320s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 15:34:48    320s] Ending "Constraint file reading stats" (total cpu=0:00:00.9, real=0:00:01.0, peak res=3109.0M, current mem=2913.7M)
+[02/12 15:34:48    320s] Current (total cpu=0:05:20, real=0:09:56, peak res=3278.9M, current mem=2913.7M)
+[02/12 15:34:52    320s] <CMD> report_timing
+[02/12 15:34:52    320s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 15:34:52    320s] #################################################################################
+[02/12 15:34:52    320s] # Design Name: fpga_top
+[02/12 15:34:52    320s] # Design Mode: 65nm
+[02/12 15:34:52    320s] # Analysis Mode: MMMC OCV 
+[02/12 15:34:52    320s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 15:34:52    320s] # Signoff Settings: SI Off 
+[02/12 15:34:52    320s] #################################################################################
+[02/12 15:37:27    476s] Topological Sorting (REAL = 0:00:01.0, MEM = 3833.1M, InitMEM = 3833.1M)
+[02/12 15:37:27    476s] Start delay calculation (fullDC) (1 T). (MEM=3048.86)
+[02/12 15:37:27    476s] End AAE Lib Interpolated Model. (MEM=3833.07 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 15:37:46    700s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 15:37:48    702s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 15:37:48    702s] End delay calculation. (MEM=3565.37 CPU=0:03:43 REAL=0:00:18.0)
+[02/12 15:37:48    702s] Begin loading slews from CTE ...
+[02/12 15:37:48    702s] Loading slews from CTE completed...
+[02/12 15:37:48    702s] End delay calculation (fullDC). (MEM=3565.37 CPU=0:03:46 REAL=0:00:21.0)
+[02/12 15:37:48    702s] *** CDM Built up (cpu=0:06:22  real=0:02:56  mem= 4057.2M) ***
+[02/12 15:37:48    702s] Has not load the powerDB, will keep enalbed
+[02/12 15:37:48    702s] Has not load the powerDB, will keep enalbed
+[02/12 15:51:16    745s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 15:51:16    745s] Current (total cpu=0:12:26, real=0:26:24, peak res=3580.7M, current mem=3200.3M)
+[02/12 15:51:16    745s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 15:51:16    745s] 
+[02/12 15:51:16    745s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 15:51:16    745s] 
+[02/12 15:51:17    746s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 15:51:17    746s] 
+[02/12 15:51:17    746s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 15:51:17    746s] 
+[02/12 15:51:17    746s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 15:51:17    746s] Ending "Constraint file reading stats" (total cpu=0:00:00.9, real=0:00:01.0, peak res=3200.3M, current mem=3010.0M)
+[02/12 15:51:17    746s] Current (total cpu=0:12:27, real=0:26:25, peak res=3580.7M, current mem=3010.0M)
+[02/12 15:51:31    747s] <CMD> report_timing
+[02/12 15:51:31    747s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 15:51:31    747s] #################################################################################
+[02/12 15:51:31    747s] # Design Name: fpga_top
+[02/12 15:51:31    747s] # Design Mode: 65nm
+[02/12 15:51:31    747s] # Analysis Mode: MMMC OCV 
+[02/12 15:51:31    747s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 15:51:31    747s] # Signoff Settings: SI Off 
+[02/12 15:51:31    747s] #################################################################################
+[02/12 15:54:06    902s] Topological Sorting (REAL = 0:00:01.0, MEM = 3955.6M, InitMEM = 3955.6M)
+[02/12 15:54:06    902s] Start delay calculation (fullDC) (1 T). (MEM=3138.94)
+[02/12 15:54:06    902s] End AAE Lib Interpolated Model. (MEM=3955.62 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 15:54:25   1125s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 15:54:27   1127s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 15:54:27   1127s] End delay calculation. (MEM=3638.29 CPU=0:03:41 REAL=0:00:18.0)
+[02/12 15:54:27   1127s] Begin loading slews from CTE ...
+[02/12 15:54:27   1127s] Loading slews from CTE completed...
+[02/12 15:54:27   1127s] End delay calculation (fullDC). (MEM=3638.29 CPU=0:03:45 REAL=0:00:21.0)
+[02/12 15:54:27   1127s] *** CDM Built up (cpu=0:06:20  real=0:02:56  mem= 4140.4M) ***
+[02/12 15:54:27   1127s] Has not load the powerDB, will keep enalbed
+[02/12 15:54:27   1127s] Has not load the powerDB, will keep enalbed
+[02/12 16:03:40   1157s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 16:03:40   1157s] Current (total cpu=0:19:18, real=0:38:48, peak res=3652.6M, current mem=3288.4M)
+[02/12 16:03:40   1157s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:03:40   1157s] 
+[02/12 16:03:41   1158s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:03:41   1158s] 
+[02/12 16:03:41   1158s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:03:41   1158s] 
+[02/12 16:03:41   1158s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:03:41   1158s] 
+[02/12 16:03:41   1158s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 16:03:41   1158s] Ending "Constraint file reading stats" (total cpu=0:00:00.9, real=0:00:01.0, peak res=3288.4M, current mem=3102.1M)
+[02/12 16:03:41   1158s] Current (total cpu=0:19:19, real=0:38:49, peak res=3652.6M, current mem=3102.1M)
+[02/12 16:03:44   1159s] <CMD> report_timing
+[02/12 16:03:44   1159s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 16:03:44   1159s] #################################################################################
+[02/12 16:03:44   1159s] # Design Name: fpga_top
+[02/12 16:03:44   1159s] # Design Mode: 65nm
+[02/12 16:03:44   1159s] # Analysis Mode: MMMC OCV 
+[02/12 16:03:44   1159s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 16:03:44   1159s] # Signoff Settings: SI Off 
+[02/12 16:03:44   1159s] #################################################################################
+[02/12 16:06:18   1314s] Topological Sorting (REAL = 0:00:00.0, MEM = 4054.6M, InitMEM = 4054.6M)
+[02/12 16:06:18   1314s] Start delay calculation (fullDC) (1 T). (MEM=3229.31)
+[02/12 16:06:18   1314s] End AAE Lib Interpolated Model. (MEM=4054.58 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 16:06:38   1538s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 16:06:39   1539s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 16:06:39   1539s] End delay calculation. (MEM=3735.06 CPU=0:03:43 REAL=0:00:18.0)
+[02/12 16:06:39   1539s] Begin loading slews from CTE ...
+[02/12 16:06:39   1540s] Loading slews from CTE completed...
+[02/12 16:06:39   1540s] End delay calculation (fullDC). (MEM=3735.06 CPU=0:03:46 REAL=0:00:21.0)
+[02/12 16:06:40   1540s] *** CDM Built up (cpu=0:06:21  real=0:02:56  mem= 4236.5M) ***
+[02/12 16:06:40   1540s] Has not load the powerDB, will keep enalbed
+[02/12 16:06:40   1540s] Has not load the powerDB, will keep enalbed
+[02/12 16:07:46   1548s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 16:07:47   1548s] Current (total cpu=0:25:48, real=0:42:55, peak res=3749.4M, current mem=3374.6M)
+[02/12 16:07:47   1548s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:07:47   1548s] 
+[02/12 16:07:47   1549s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:07:47   1549s] 
+[02/12 16:07:47   1549s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:07:47   1549s] 
+[02/12 16:07:47   1549s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:07:47   1549s] 
+[02/12 16:07:47   1549s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 16:07:47   1549s] Ending "Constraint file reading stats" (total cpu=0:00:01.0, real=0:00:00.0, peak res=3374.6M, current mem=3187.3M)
+[02/12 16:07:48   1549s] Current (total cpu=0:25:49, real=0:42:56, peak res=3749.4M, current mem=3187.3M)
+[02/12 16:07:50   1549s] <CMD> report_timing
+[02/12 16:07:50   1549s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 16:07:50   1549s] #################################################################################
+[02/12 16:07:50   1549s] # Design Name: fpga_top
+[02/12 16:07:50   1549s] # Design Mode: 65nm
+[02/12 16:07:50   1549s] # Analysis Mode: MMMC OCV 
+[02/12 16:07:50   1549s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 16:07:50   1549s] # Signoff Settings: SI Off 
+[02/12 16:07:50   1549s] #################################################################################
+[02/12 16:10:26   1705s] Topological Sorting (REAL = 0:00:01.0, MEM = 4153.7M, InitMEM = 4153.7M)
+[02/12 16:10:26   1705s] Start delay calculation (fullDC) (1 T). (MEM=3323.94)
+[02/12 16:10:26   1705s] End AAE Lib Interpolated Model. (MEM=4153.7 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 16:10:45   1928s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 16:10:46   1930s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 16:10:46   1930s] End delay calculation. (MEM=3829.96 CPU=0:03:42 REAL=0:00:17.0)
+[02/12 16:10:46   1930s] Begin loading slews from CTE ...
+[02/12 16:10:47   1930s] Loading slews from CTE completed...
+[02/12 16:10:47   1930s] End delay calculation (fullDC). (MEM=3829.96 CPU=0:03:45 REAL=0:00:21.0)
+[02/12 16:10:47   1930s] *** CDM Built up (cpu=0:06:21  real=0:02:57  mem= 4316.4M) ***
+[02/12 16:10:47   1930s] Has not load the powerDB, will keep enalbed
+[02/12 16:10:47   1930s] Has not load the powerDB, will keep enalbed
+[02/12 16:13:02   1942s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 16:13:02   1942s] Current (total cpu=0:32:22, real=0:48:10, peak res=3842.2M, current mem=3457.5M)
+[02/12 16:13:02   1942s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:13:02   1942s] 
+[02/12 16:13:03   1943s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:13:03   1943s] 
+[02/12 16:13:03   1943s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:13:03   1943s] 
+[02/12 16:13:03   1943s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:13:03   1943s] 
+[02/12 16:13:03   1943s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 16:13:03   1943s] Ending "Constraint file reading stats" (total cpu=0:00:01.0, real=0:00:01.0, peak res=3457.5M, current mem=3271.3M)
+[02/12 16:13:03   1943s] Current (total cpu=0:32:23, real=0:48:11, peak res=3842.2M, current mem=3271.3M)
+[02/12 16:13:05   1943s] <CMD> report_timing
+[02/12 16:13:05   1943s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 16:13:05   1943s] #################################################################################
+[02/12 16:13:05   1943s] # Design Name: fpga_top
+[02/12 16:13:05   1943s] # Design Mode: 65nm
+[02/12 16:13:05   1943s] # Analysis Mode: MMMC OCV 
+[02/12 16:13:05   1943s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 16:13:05   1943s] # Signoff Settings: SI Off 
+[02/12 16:13:05   1943s] #################################################################################
+[02/12 16:15:40   2098s] Topological Sorting (REAL = 0:00:01.0, MEM = 4237.6M, InitMEM = 4237.6M)
+[02/12 16:15:40   2098s] Start delay calculation (fullDC) (1 T). (MEM=3400.75)
+[02/12 16:15:40   2098s] End AAE Lib Interpolated Model. (MEM=4237.59 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 16:15:59   2323s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 16:16:01   2324s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 16:16:01   2324s] End delay calculation. (MEM=3907.91 CPU=0:03:43 REAL=0:00:18.0)
+[02/12 16:16:01   2324s] Begin loading slews from CTE ...
+[02/12 16:16:01   2325s] Loading slews from CTE completed...
+[02/12 16:16:01   2325s] End delay calculation (fullDC). (MEM=3907.91 CPU=0:03:47 REAL=0:00:21.0)
+[02/12 16:16:01   2325s] *** CDM Built up (cpu=0:06:22  real=0:02:56  mem= 4406.8M) ***
+[02/12 16:16:01   2325s] Has not load the powerDB, will keep enalbed
+[02/12 16:16:01   2325s] Has not load the powerDB, will keep enalbed
+[02/12 16:19:23   2339s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 16:19:23   2339s] Current (total cpu=0:39:00, real=0:54:31, peak res=3922.2M, current mem=3540.8M)
+[02/12 16:19:23   2339s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:19:23   2339s] 
+[02/12 16:19:24   2340s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:19:24   2340s] 
+[02/12 16:19:24   2340s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:19:24   2340s] 
+[02/12 16:19:24   2340s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:19:24   2340s] 
+[02/12 16:19:24   2340s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 16:19:24   2340s] Ending "Constraint file reading stats" (total cpu=0:00:00.9, real=0:00:01.0, peak res=3540.8M, current mem=3356.2M)
+[02/12 16:19:24   2340s] Current (total cpu=0:39:01, real=0:54:32, peak res=3922.2M, current mem=3356.2M)
+[02/12 16:19:26   2340s] <CMD> report_timing
+[02/12 16:19:26   2340s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 16:19:26   2340s] #################################################################################
+[02/12 16:19:26   2340s] # Design Name: fpga_top
+[02/12 16:19:26   2340s] # Design Mode: 65nm
+[02/12 16:19:26   2340s] # Analysis Mode: MMMC OCV 
+[02/12 16:19:26   2340s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 16:19:26   2340s] # Signoff Settings: SI Off 
+[02/12 16:19:26   2340s] #################################################################################
+[02/12 16:22:01   2495s] Topological Sorting (REAL = 0:00:01.0, MEM = 4322.5M, InitMEM = 4322.5M)
+[02/12 16:22:01   2495s] Start delay calculation (fullDC) (1 T). (MEM=3490.32)
+[02/12 16:22:01   2495s] End AAE Lib Interpolated Model. (MEM=4322.48 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 16:22:20   2720s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 16:22:22   2721s] End Timing Check Calculation. (CPU Time=0:00:01.4, Real Time=0:00:02.0)
+[02/12 16:22:22   2721s] End delay calculation. (MEM=3962.02 CPU=0:03:43 REAL=0:00:18.0)
+[02/12 16:22:22   2721s] Begin loading slews from CTE ...
+[02/12 16:22:22   2722s] Loading slews from CTE completed...
+[02/12 16:22:22   2722s] End delay calculation (fullDC). (MEM=3962.02 CPU=0:03:46 REAL=0:00:21.0)
+[02/12 16:22:23   2722s] *** CDM Built up (cpu=0:06:22  real=0:02:57  mem= 4489.6M) ***
+[02/12 16:22:23   2722s] Has not load the powerDB, will keep enalbed
+[02/12 16:22:23   2722s] Has not load the powerDB, will keep enalbed
+[02/12 16:28:19   2744s] <CMD> read_sdc /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc
+[02/12 16:28:19   2744s] Current (total cpu=0:45:45, real=1:03:27, peak res=3976.3M, current mem=3624.1M)
+[02/12 16:28:19   2744s] **WARN: (TCLCMD-1594):	A clock with name clk[0] was already defined in the design. Previously defined clock definition of clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:28:19   2744s] 
+[02/12 16:28:19   2744s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 18).
+[02/12 16:28:19   2744s] 
+[02/12 16:28:20   2745s] **WARN: (TCLCMD-1594):	A clock with name prog_clk[0] was already defined in the design. Previously defined clock definition of prog_clk[0] will be overwritten. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:28:20   2745s] 
+[02/12 16:28:20   2745s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'prog_clk[0]' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc, Line 22).
+[02/12 16:28:20   2745s] 
+[02/12 16:28:20   2745s] INFO (CTE): Reading of timing constraints file /home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/8x8/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc completed, with 4 WARNING
+[02/12 16:28:20   2745s] Ending "Constraint file reading stats" (total cpu=0:00:00.9, real=0:00:01.0, peak res=3624.1M, current mem=3440.5M)
+[02/12 16:28:20   2745s] Current (total cpu=0:45:46, real=1:03:28, peak res=3976.3M, current mem=3440.5M)
+[02/12 16:28:23   2745s] <CMD> report_timing
+[02/12 16:28:23   2746s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[02/12 16:28:23   2746s] #################################################################################
+[02/12 16:28:23   2746s] # Design Name: fpga_top
+[02/12 16:28:23   2746s] # Design Mode: 65nm
+[02/12 16:28:23   2746s] # Analysis Mode: MMMC OCV 
+[02/12 16:28:23   2746s] # Parasitics Mode: No SPEF/RCDB 
+[02/12 16:28:23   2746s] # Signoff Settings: SI Off 
+[02/12 16:28:23   2746s] #################################################################################
+[02/12 16:30:58   2901s] Topological Sorting (REAL = 0:00:00.0, MEM = 4408.4M, InitMEM = 4408.4M)
+[02/12 16:30:58   2901s] Start delay calculation (fullDC) (1 T). (MEM=3572.64)
+[02/12 16:30:58   2901s] End AAE Lib Interpolated Model. (MEM=4408.41 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/12 16:31:18   3125s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:02.0)
+[02/12 16:31:19   3127s] End Timing Check Calculation. (CPU Time=0:00:01.5, Real Time=0:00:01.0)
+[02/12 16:31:19   3127s] End delay calculation. (MEM=4051.86 CPU=0:03:43 REAL=0:00:18.0)
+[02/12 16:31:19   3127s] Begin loading slews from CTE ...
+[02/12 16:31:19   3127s] Loading slews from CTE completed...
+[02/12 16:31:19   3127s] End delay calculation (fullDC). (MEM=4051.86 CPU=0:03:46 REAL=0:00:21.0)
+[02/12 16:31:20   3127s] *** CDM Built up (cpu=0:06:22  real=0:02:57  mem= 4584.6M) ***
+[02/12 16:31:20   3127s] Has not load the powerDB, will keep enalbed
+[02/12 16:31:20   3127s] Has not load the powerDB, will keep enalbed

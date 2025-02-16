@@ -134,7 +134,7 @@
       <port type="sram" prefix="sram" size="1"/>
     </circuit_model>
     <!--DFF subckt ports should be defined as <D> <Q> <CLK> <RESET> <SET>  -->
-    <circuit_model type="ff" name="DFFSRX1" prefix="DFFSRX1" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
+    <circuit_model type="ff" name="DFFSRX4" prefix="DFFSRX4" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/dff.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/sky130_scl_9T.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>
@@ -169,7 +169,7 @@
       <port type="output" prefix="QN" size="1"/>
       <port type="clock" prefix="prog_clk" lib_name="CK" size="1" is_global="true" default_val="0" is_prog="true"/>
     </circuit_model>
-    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO/gpio_netlist_sky130_scl.v">
+    <circuit_model type="iopad" name="GPIO" prefix="GPIO" spice_netlist="/home/cae1/Desktop/OpenFPGA/openfpga_flow/openfpga_cell_library/spice/gpio.sp" verilog_netlist="/home/cae1/Desktop/FPGA-OpenFPGA/Fabric/tasks/synthesizable_verilog/GPIO_netlist_sky_scl.v">
       <design_technology type="cmos"/>
       <input_buffer exist="true" circuit_model_name="INVX1"/>
       <output_buffer exist="true" circuit_model_name="INVX1"/>
@@ -206,7 +206,7 @@
     </pb_type>
     <pb_type name="clb.fle" physical_mode_name="physical"/>
     <pb_type name="clb.fle[physical].fabric.frac_logic.frac_lut6" circuit_model_name="frac_lut6" mode_bits="0"/>
-    <pb_type name="clb.fle[physical].fabric.ff" circuit_model_name="DFFSRX1"/>
+    <pb_type name="clb.fle[physical].fabric.ff" circuit_model_name="DFFSRX4"/>
     <!-- Binding operating pb_type to physical pb_type -->
     <pb_type name="clb.fle[n2_lut5].lut5inter.ble5.lut5" physical_pb_type_name="clb.fle[physical].fabric.frac_logic.frac_lut6" mode_bits="1" physical_pb_type_index_factor="0.5">
       <!-- Binding the lut5 to the first 5 inputs of fracturable lut6 -->

@@ -7,7 +7,7 @@ read_hdl dff.v
 # Elaborate the desired module
 elaborate DFFSRQ
 
-#read_sdc gpio_sdc.sdc
+read_sdc dffsrq.sdc
 
 set_db syn_generic_effort medium
 set_db syn_map_effort medium
@@ -25,6 +25,6 @@ report_qor    > reports/report_qor.rpt
 
 
 #Outputs
-write_hdl > dffsrq_netlist.v
+write_hdl > dffsr_netlist.v
 #write_sdc > dffsrq_post_sdc.sdc
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > delays.sdf

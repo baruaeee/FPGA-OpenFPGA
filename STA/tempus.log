@@ -4,17 +4,17 @@ Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v23.11-s111_1, built Thu May 16 09:07:16 PDT 2024
 Options:	
-Date:		Sun Feb  2 22:30:20 2025
+Date:		Mon Feb 10 16:59:26 2025
 Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
 OS:		Oracle Linux Server 8.10
 
 License:
-		[22:30:20.483148] Configured Lic search path (23.02-s005): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+		[16:59:26.483308] Configured Lic search path (23.02-s005): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
 		tpsxl	Tempus Timing Signoff Solution XL	23.1	checkout succeeded
 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
-environment variable TMPDIR is '/tmp/ssv_tmpdir_3872135_tSPQAN'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_1905918_VoCkbM'.
 <CMD> ::stop_gui -keepDgui
 Has not load the powerDB, will keep enalbed
 Has not load the powerDB, will keep enalbed
@@ -22,209 +22,46 @@ Has not load the powerDB, will keep enalbed
 <CMD> read_lib -min ../PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib
 <CMD> read_lib ../PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib
 <CMD> read_verilog SRC/fabric_netlists.v
-<CMD> set_top_module fpga_top -ignore_undefined_cell
-#% Begin Load MMMC data ... (date=02/02 22:31:23, mem=1269.3M)
+<CMD> set_top_module fpga_top
+#% Begin Load MMMC data ... (date=02/10 17:02:35, mem=1741.0M)
 Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
-#% End Load MMMC data ... (date=02/02 22:31:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1271.8M, current mem=1271.8M)
+#% End Load MMMC data ... (date=02/10 17:02:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1742.2M, current mem=1742.2M)
 default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
-Loading view definition file from .ssv_emulate_view_definition_3872135_db6918f0-2383-4e43-9292-c2c16449b49d.tcl
+Loading view definition file from .ssv_emulate_view_definition_1905918_c402deef-840f-4cd3-b632-1670033e35f6.tcl
 Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib' ...
 Read 109 cells in library 'sky130_ss_1.62_125' 
 Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib' ...
 Read 109 cells in library 'sky130_tt_1.8_25' 
 Reading default_emulate_libset_min timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
 Read 109 cells in library 'sky130_ff_1.98_0' 
-*** End library_loading (cpu=0.01min, real=0.02min, mem=39.0M, fe_cpu=0.39min, fe_real=1.07min, fe_mem=1691.5M) ***
-#% Begin Load netlist data ... (date=02/02 22:31:24, mem=1289.3M)
-*** Begin netlist parsing (mem=1691.5M) ***
+*** End library_loading (cpu=0.01min, real=0.00min, mem=32.0M, fe_cpu=0.48min, fe_real=3.15min, fe_mem=1690.5M) ***
+#% Begin Load netlist data ... (date=02/10 17:02:35, mem=1749.1M)
+*** Begin netlist parsing (mem=1690.5M) ***
 Reading verilog netlist 'SRC/fabric_netlists.v'
 Module sky130_fd_io__top_gpio_ovtv2 is not defined and will be treated as an empty module.
 
-*** Memory Usage v#2 (Current mem = 2079.477M, initial mem = 832.258M) ***
-*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=2079.5M) ***
-#% End Load netlist data ... (date=02/02 22:31:25, total cpu=0:00:00.4, real=0:00:01.0, peak res=1416.9M, current mem=1416.9M)
+*** Memory Usage v#2 (Current mem = 2080.477M, initial mem = 840.258M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=2080.5M) ***
+#% End Load netlist data ... (date=02/10 17:02:36, total cpu=0:00:00.4, real=0:00:01.0, peak res=1903.9M, current mem=1895.9M)
 **WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'sky130_fd_io__top_gpio_ovtv2' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
-**WARN: (UI-418):	Undefined cells that are instantiated in the netlist are allowed because load_netlist_ignore_undefined_cell is true. Unexpected results may occur due to missing library data or missing netlist data. For accurate results, provide a consistent library and netlist.
-Set top cell to fpga_top.
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
-late library set: default_emulate_libset_max
-early library set: default_emulate_libset_min
-Completed consistency checks. Status: Successful
-Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
-late library set: default_emulate_libset_max
-early library set: default_emulate_libset_min
-Completed consistency checks. Status: Successful
-1 empty module found.
-Building hierarchical netlist for Cell fpga_top ...
-***** UseNewTieNetMode *****.
-*** Netlist is NOT unique.
-** info: there are 370 modules.
-** info: there are 11566 stdCell insts.
-** info: there are 11566 stdCell insts with at least one signal pin.
-
-*** Memory Usage v#2 (Current mem = 2526.430M, initial mem = 832.258M) ***
-Set Default Input Pin Transition as 0.1 ps.
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-/dev/null
-Extraction setup Started for TopCell fpga_top 
-Summary of Active RC-Corners : 
- 
- Analysis View: default_emulate_view
-    RC-Corner Name        : default_emulate_rc_corner
-    RC-Corner Index       : 0
-    RC-Corner Temperature : 25 Celsius
-    RC-Corner Cap Table   : ''
-    RC-Corner PostRoute Res Factor        : 1
-    RC-Corner PostRoute Cap Factor        : 1
-    RC-Corner PostRoute XCap Factor       : 1
-Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
-late library set: default_emulate_libset_max
-early library set: default_emulate_libset_min
-Completed consistency checks. Status: Successful
-Reading timing constraints file '/dev/null' ...
-Current (total cpu=0:00:29.8, real=0:01:16, peak res=2093.1M, current mem=2054.1M)
-Total number of combinational cells: 87
-Total number of sequential cells: 19
-Total number of tristate cells: 3
-Total number of level shifter cells: 0
-Total number of power gating cells: 0
-Total number of isolation cells: 0
-Total number of power switch cells: 0
-Total number of pulse generator cells: 0
-Total number of always on buffers: 0
-Total number of retention cells: 0
-Total number of physical cells: 0
-List of usable buffers: BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8
-Total number of usable buffers: 7
-List of unusable buffers:
-Total number of unusable buffers: 0
-List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX4 CLKINVX8 INVX1 INVX16 INVX2 INVX8 INVX4
-Total number of usable inverters: 9
-List of unusable inverters:
-Total number of unusable inverters: 0
-List of identified usable delay cells: DLY1X1 DLY1X4 DLY4X4 DLY2X4
-Total number of identified usable delay cells: 4
-List of identified unusable delay cells:
-Total number of identified unusable delay cells: 0
-default_emulate_constraint_mode
-**ERROR: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_gpio_ovtv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
-Extraction setup Started for TopCell fpga_top 
-Summary of Active RC-Corners : 
- 
- Analysis View: default_emulate_view
-    RC-Corner Name        : default_emulate_rc_corner
-    RC-Corner Index       : 0
-    RC-Corner Temperature : 125 Celsius
-    RC-Corner Cap Table   : ''
-    RC-Corner PostRoute Res Factor        : 1
-    RC-Corner PostRoute Cap Factor        : 1
-    RC-Corner PostRoute XCap Factor       : 1
-Extraction setup Started for TopCell fpga_top 
-Summary of Active RC-Corners : 
- 
- Analysis View: default_emulate_view
-    RC-Corner Name        : default_emulate_rc_corner
-    RC-Corner Index       : 0
-    RC-Corner Temperature : 125 Celsius
-    RC-Corner Cap Table   : ''
-    RC-Corner PostRoute Res Factor        : 1
-    RC-Corner PostRoute Cap Factor        : 1
-    RC-Corner PostRoute XCap Factor       : 1
-Extraction setup Started for TopCell fpga_top 
-Summary of Active RC-Corners : 
- 
- Analysis View: default_emulate_view
-    RC-Corner Name        : default_emulate_rc_corner
-    RC-Corner Index       : 0
-    RC-Corner Temperature : 125 Celsius
-    RC-Corner Cap Table   : ''
-    RC-Corner PostRoute Res Factor        : 1
-    RC-Corner PostRoute Cap Factor        : 1
-    RC-Corner PostRoute XCap Factor       : 1
-default_emulate_libset_max default_emulate_libset_min
-**ERROR: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_gpio_ovtv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
-Loading  (fpga_top)
-Traverse HInst (fpga_top)
-AAE_INFO: opIsDesignInPostRouteState() is 0
-AAE DB initialization (MEM=2939.66 CPU=0:00:00.0 REAL=0:00:01.0) 
-#################################################################################
-# Design Name: fpga_top
-# Design Mode: 65nm
-# Analysis Mode: MMMC OCV 
-# Parasitics Mode: No SPEF/RCDB 
-# Signoff Settings: SI Off 
-#################################################################################
-<CMD> get_capacitance_unit
-**WARN: (TA-146):	A combinational timing loop(s) was found in the design. You can find detailed information about all timing loops in the file './CTE_loops.rpt'. You should examine loop break points chosen automatically by the tool to ensure they are the most appropriate break locations. It is further recommended that validated loop break points be added to the constraint set via set_disable_timing to ensure consistent handling during the design flow.
-Start delay calculation (fullDC) (1 T). (MEM=1984.94)
-<CMD> all_setup_analysis_views
-<CMD> all_hold_analysis_views
-<CMD> all_setup_analysis_views
-<CMD> get_analysis_view $view -delay_corner
-<CMD> get_delay_corner $dcCorner -library_set
-<CMD> get_delay_corner $dcCorner -late_library_set
-<CMD> get_library_set $lateLibSetName -timing
-<CMD> get_library_set $lateLibSetName -si
-<CMD> get_delay_corner $dcCorner -early_library_set
-<CMD> get_library_set $earlyLibSetName -timing
-<CMD> get_library_set $earlyLibSetName -si
-<CMD> get_delay_corner $dcCorner -power_domain_list
-<CMD> get_analysis_view $view -constraint_mode
-<CMD> get_constraint_mode $conMode -sdc_files
-/dev/null
-<CMD> all_setup_analysis_views
-<CMD> all_hold_analysis_views
-<CMD> get_analysis_view $view -delay_corner
-<CMD> get_delay_corner $dcCorner -power_domain_list
-<CMD> get_delay_corner $dcCorner -library_set
-<CMD> get_delay_corner $dcCorner -late_library_set
-<CMD> get_library_set $lateLibSetName -si
-<CMD> get_delay_corner $dcCorner -early_library_set
-<CMD> get_library_set $earlyLibSetName -si
-End delay calculation. (MEM=2096.41 CPU=0:00:02.8 REAL=0:00:03.0)
-Begin loading slews from CTE ...
-Loading slews from CTE completed...
-End delay calculation (fullDC). (MEM=2094.24 CPU=0:00:03.1 REAL=0:00:04.0)
-Has not load the powerDB, will keep enalbed
-Has not load the powerDB, will keep enalbed
-<CMD> report_slack_histogram
-
-#####################################################################
-# report_slack_histogram at Sun Feb 02 22:40:52 CET 2025
-#   slack file: /tmp/ssv_tmpdir_3872135_tSPQAN/.histogram.3872135.slk
-#   format    : not compact, step=0.5 ns
-#   slack (ns): target=0.000  violating_only
-#####################################################################
-
----------------------------------------------
-| Slack Range (ns)     |  Count  |     Sum  |
-+----------------------+---------+----------+
----------------------------------------------
-<CMD> setLayerPreference timingMap -isVisible 1
+**ERROR: (UI-49):	Undefined cells in the design are not allowed, exiting.  Review the log file for undefined cell warning messages.  Provide the cell definitions or set load_netlist_ignore_undefined_cell to true and re-run.
+**ERROR: (UI-172):	set_top_module to fpga_top  failed
 
 --------------------------------------------------------------------------------
-Exiting Tempus Timing Solution on Sun Feb  2 23:51:39 2025
-  Total CPU time:     0:04:26
-  Total real time:    1:21:46
-  Peak memory (main): 2098.18MB
+Exiting Tempus Timing Solution on Mon Feb 10 17:03:07 2025
+  Total CPU time:     0:00:31
+  Total real time:    0:03:48
+  Peak memory (main): 1896.39MB
 
 
-*** Memory Usage v#2 (Current mem = 3427.594M, initial mem = 832.258M) ***
+*** Memory Usage v#2 (Current mem = 2073.484M, initial mem = 840.258M) ***
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
-WARNING   UI-418               1  Undefined cells that are instantiated in...
-ERROR     IMPSYC-2             2  Timing information is not defined for ce...
+ERROR     UI-49                1  Undefined cells in the design are not al...
+ERROR     UI-93                2  %s                                       
+ERROR     UI-172               1  set_top_module to %s  failed             
 WARNING   IMPDB-2504           1  Unable to find netlist cell in the desig...
-WARNING   TA-112              20  A timing loop was found in the design. T...
-WARNING   TA-146               1  A combinational timing loop(s) was found...
-*** Message Summary: 23 warning(s), 2 error(s)
+*** Message Summary: 1 warning(s), 4 error(s)
 
---- Ending "Tempus Timing Solution" (totcpu=0:04:27, real=1:21:19, mem=3427.6M) ---
+--- Ending "Tempus Timing Solution" (totcpu=0:00:31.6, real=0:03:41, mem=2073.5M) ---

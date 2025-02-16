@@ -4,11 +4,7 @@
 #	Description: Timing constraints for Grid logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff in PnR
 #	Author: Xifan TANG 
 #	Organization: University of Utah 
-#	Date: Tue Jan 28 17:56:52 2025
-#############################################
+#	Date: Thu Feb 13 03:41:30 2025
 
-#############################################
 #	Define time unit 
-#############################################
 set_units -time s
-

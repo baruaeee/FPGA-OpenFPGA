@@ -1,5 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-
-s1::(08Feb2025:14:34:03):( xrun ./SRC/and2_include_netlists.v -access +rwc -gui )&&(./xcelium.d/env.d/env.history.08Feb2025_14_34_03)

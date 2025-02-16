@@ -234,20 +234,20 @@
 "object":"/designs/DFFSRQ/instances_seq/q_reg_reg",
 "type":"instance"},
 {"index": "1", 
- "date": "Fri Jan 31 17:58:34 UTC 2025",
- "seconds": 1738346314.608104,
+ "date": "Thu Feb 13 01:56:20 UTC 2025",
+ "seconds": 1739411780.067039,
  "netlist": "fv/DFFSRQ/fv_map.v.gz", 
  "netlist_exists": "1", 
  "netlist_normalize": "/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/DFF/fv/DFFSRQ/fv_map.v.gz", 
- "netlist_mtime": "1738346313", 
- "netlist_timestamp": "Fri Jan 31 17:58:33 UTC 2025", 
+ "netlist_mtime": "1739411779", 
+ "netlist_timestamp": "Thu Feb 13 01:56:19 UTC 2025", 
  "netlist_size": "332", 
- "netlist_cksum": "1756621158", 
+ "netlist_cksum": "2204607055", 
  "design_name": "DFFSRQ", 
  "synth_workdir": "/home/cae1/Desktop/FPGA-OpenFPGA/Synthesis/DFF", 
  "synthesis_command":"",
  "current_label": "fv_map", 
  "previous_label": "rtl", 
- "write_verif_file_runtime": 0.7904789999999999 
+ "write_verif_file_runtime": 0.674754 
  }
 ]

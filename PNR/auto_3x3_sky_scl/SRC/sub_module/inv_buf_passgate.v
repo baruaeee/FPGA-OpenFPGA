@@ -6,7 +6,7 @@
 //	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for const0 -----
 module const0(const0);
@@ -25,10 +25,10 @@ endmodule
 // ----- END Verilog module for const0 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for const1 -----
 module const1(const1);
@@ -47,5 +47,5 @@ endmodule
 // ----- END Verilog module for const1 -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 

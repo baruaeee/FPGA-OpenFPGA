@@ -8816,3 +8816,12 @@ INFO: No filler could be restored
 For 21008 new insts, <CMD> selectInst FILLER_T_2_5147
 <CMD> fit
 <CMD> zoomBox -10.83900 1627.90100 1602.89100 -26.42600
+<CMD> deselectAll
+<CMD> zoomBox -438.04100 -135.69300 1736.04200 1810.57500
+<CMD> zoomBox -1232.02000 -415.47700 1777.09100 2278.32000
+<CMD> fit
+
+*** Memory Usage v#2 (Current mem = 6284.914M, initial mem = 835.574M) ***
+*** Message Summary: 374 warning(s), 90 error(s)
+
+--- Ending "Innovus" (totcpu=1:31:29, real=26:45:07, mem=6284.9M) ---

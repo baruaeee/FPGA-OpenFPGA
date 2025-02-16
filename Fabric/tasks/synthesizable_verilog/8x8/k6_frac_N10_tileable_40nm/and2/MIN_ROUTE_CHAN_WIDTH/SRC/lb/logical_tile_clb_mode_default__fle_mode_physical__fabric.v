@@ -7,7 +7,7 @@
 //-------------------------------------------
 // ----- BEGIN Physical programmable logic block Verilog module: fabric -----
 //----- Default net type -----
-`default_nettype none
+// `default_nettype none
 
 // ----- Verilog module for logical_tile_clb_mode_default__fle_mode_physical__fabric -----
 module logical_tile_clb_mode_default__fle_mode_physical__fabric(pReset,
@@ -173,7 +173,7 @@ endmodule
 // ----- END Verilog module for logical_tile_clb_mode_default__fle_mode_physical__fabric -----
 
 //----- Default net type -----
-`default_nettype wire
+// `default_nettype wire
 
 
 

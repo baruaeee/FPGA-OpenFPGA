@@ -7,7 +7,7 @@
 //-------------------------------------------
 // ----- BEGIN Physical programmable logic block Verilog module: io -----
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 // ----- Verilog module for logical_tile_io_mode_io_ -----
 module logical_tile_io_mode_io_(pReset,
@@ -71,7 +71,7 @@ endmodule
 // ----- END Verilog module for logical_tile_io_mode_io_ -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 
 
 

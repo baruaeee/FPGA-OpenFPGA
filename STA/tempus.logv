@@ -1,306 +1,84 @@
-[02/02 22:30:20      0s] 
-[02/02 22:30:20      0s] Cadence Tempus(TM) Timing Solution.
-[02/02 22:30:20      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
-[02/02 22:30:20      0s] 
-[02/02 22:30:20      0s] Version:	v23.11-s111_1, built Thu May 16 09:07:16 PDT 2024
-[02/02 22:30:20      0s] Options:	
-[02/02 22:30:20      0s] Date:		Sun Feb  2 22:30:20 2025
-[02/02 22:30:20      0s] Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
-[02/02 22:30:20      0s] OS:		Oracle Linux Server 8.10
-[02/02 22:30:20      0s] 
-[02/02 22:30:20      0s] License:
-[02/02 22:30:20      0s] 		[22:30:20.483148] Configured Lic search path (23.02-s005): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
+[02/10 16:59:26      0s] 
+[02/10 16:59:26      0s] Cadence Tempus(TM) Timing Solution.
+[02/10 16:59:26      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/10 16:59:26      0s] 
+[02/10 16:59:26      0s] Version:	v23.11-s111_1, built Thu May 16 09:07:16 PDT 2024
+[02/10 16:59:26      0s] Options:	
+[02/10 16:59:26      0s] Date:		Mon Feb 10 16:59:26 2025
+[02/10 16:59:26      0s] Host:		cae-europractice1.othr.de (x86_64 w/Linux 5.15.0-210.163.7.el8uek.x86_64) (1core*16cpus*AMD Ryzen Threadripper PRO 5975WX 32-Cores 512KB)
+[02/10 16:59:26      0s] OS:		Oracle Linux Server 8.10
+[02/10 16:59:26      0s] 
+[02/10 16:59:26      0s] License:
+[02/10 16:59:26      0s] 		[16:59:26.483308] Configured Lic search path (23.02-s005): 5280@hs-lic3.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:27003@hs-lic1.oth-regensburg.de:
 
-[02/02 22:30:20      0s] 		tpsxl	Tempus Timing Signoff Solution XL	23.1	checkout succeeded
-[02/02 22:30:20      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
-[02/02 22:30:27      1s] {{{ isCertus 0,  isCertusOrDistOptClient = 0, isInnovusCertusClient = 0}}}
-[02/02 22:30:55     15s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Tempus Timing Solution v23.11-s111_1 (64bit) 05/16/2024 09:07 (Linux 3.10.0-693.el7.x86_64)
-[02/02 22:31:01     17s] @(#)CDS: NanoRoute 23.11-s111_1 NR240401-0735/23_11-UB (database version 18.20.622) {superthreading v2.20}
-[02/02 22:31:01     17s] @(#)CDS: AAE 23.11-s031 (64bit) 05/16/2024 (Linux 3.10.0-693.el7.x86_64)
-[02/02 22:31:01     17s] @(#)CDS: CTE 23.11-s025_1 () May 16 2024 01:47:36 ( )
-[02/02 22:31:01     17s] @(#)CDS: SYNTECH 23.11-s010_1 () Apr  5 2024 04:21:08 ( )
-[02/02 22:31:01     17s] @(#)CDS: CPE v23.11-s059
-[02/02 22:31:01     17s] @(#)CDS: OA 22.61-p011 Thu Nov 30 12:26:13 2023
-[02/02 22:31:01     17s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
-[02/02 22:31:01     17s] @(#)CDS: RCDB 11.15.0
-[02/02 22:31:01     17s] @(#)CDS: STYLUS 23.10-a010_1 (02/06/2024 03:59 PST)
-[02/02 22:31:01     17s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
-[02/02 22:31:01     17s] **INFO: (TMPDIR-1001): Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_3872135_tSPQAN'.
-environment variable TMPDIR is '/tmp/ssv_tmpdir_3872135_tSPQAN'.
-[02/02 22:31:04     19s] <CMD> ::stop_gui -keepDgui
-[02/02 22:31:05     19s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:05     19s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:21     20s] <CMD> read_lib -max ../PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib
-[02/02 22:31:22     20s] <CMD> read_lib -min ../PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib
-[02/02 22:31:22     21s] <CMD> read_lib ../PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib
-[02/02 22:31:22     21s] <CMD> read_verilog SRC/fabric_netlists.v
-[02/02 22:31:22     21s] <CMD> set_top_module fpga_top -ignore_undefined_cell
-[02/02 22:31:23     21s] #% Begin Load MMMC data ... (date=02/02 22:31:23, mem=1269.3M)
-[02/02 22:31:23     21s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
-[02/02 22:31:23     21s] #% End Load MMMC data ... (date=02/02 22:31:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1271.8M, current mem=1271.8M)
-[02/02 22:31:23     21s] Loading view definition file from .ssv_emulate_view_definition_3872135_db6918f0-2383-4e43-9292-c2c16449b49d.tcl
-[02/02 22:31:23     21s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib' ...
-[02/02 22:31:23     22s] Read 109 cells in library 'sky130_ss_1.62_125' 
-[02/02 22:31:23     22s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib' ...
-[02/02 22:31:24     22s] Read 109 cells in library 'sky130_tt_1.8_25' 
-[02/02 22:31:24     22s] Reading default_emulate_libset_min timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
-[02/02 22:31:24     22s] Read 109 cells in library 'sky130_ff_1.98_0' 
-[02/02 22:31:24     22s] Ending "PreSetAnalysisView" (total cpu=0:00:00.7, real=0:00:01.0, peak res=1289.1M, current mem=1289.1M)
-[02/02 22:31:24     22s] *** End library_loading (cpu=0.01min, real=0.02min, mem=39.0M, fe_cpu=0.39min, fe_real=1.07min, fe_mem=1691.5M) ***
-[02/02 22:31:24     22s] #% Begin Load netlist data ... (date=02/02 22:31:24, mem=1289.3M)
-[02/02 22:31:24     22s] *** Begin netlist parsing (mem=1691.5M) ***
-[02/02 22:31:24     22s] Reading verilog netlist 'SRC/fabric_netlists.v'
-[02/02 22:31:24     22s] Module sky130_fd_io__top_gpio_ovtv2 is not defined and will be treated as an empty module.
-[02/02 22:31:24     22s] Undeclared bus IB_MODE_SEL in module sky130_fd_io__top_gpio_ovtv2 ... created as [1:0].
-[02/02 22:31:24     22s] Undeclared bus DM in module sky130_fd_io__top_gpio_ovtv2 ... created as [2:0].
-[02/02 22:31:24     22s] 
-[02/02 22:31:24     22s] *** Memory Usage v#2 (Current mem = 2079.477M, initial mem = 832.258M) ***
-[02/02 22:31:24     22s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=2079.5M) ***
-[02/02 22:31:25     22s] #% End Load netlist data ... (date=02/02 22:31:25, total cpu=0:00:00.4, real=0:00:01.0, peak res=1416.9M, current mem=1416.9M)
-[02/02 22:31:25     22s] **WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'sky130_fd_io__top_gpio_ovtv2' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
-[02/02 22:31:25     22s] Cell 'sky130_fd_io__top_gpio_ovtv2' is referenced in the netlist but not defined in netlist, lef or timing library. Using the net connection data to mark the pin 'IN' of cell 'sky130_fd_io__top_gpio_ovtv2' as output for net 'Y' in module 'GPIO_IN'.
-[02/02 22:31:25     22s] Cell 'sky130_fd_io__top_gpio_ovtv2' is referenced in the netlist but not defined in netlist, lef or timing library. Using the net connection data to mark the pin 'TIE_HI_ESD' of cell 'sky130_fd_io__top_gpio_ovtv2' as output for net 'tie_hi_esd' in module 'GPIO_OUT'.
-[02/02 22:31:25     22s] Cell 'sky130_fd_io__top_gpio_ovtv2' is referenced in the netlist but not defined in netlist, lef or timing library. Using the net connection data to mark the pin 'VTRIP_SEL' of cell 'sky130_fd_io__top_gpio_ovtv2' as output for net 'tie_lo_esd' in module 'GPIO_OUT'.
-[02/02 22:31:25     22s] **WARN: (UI-418):	Undefined cells that are instantiated in the netlist are allowed because load_netlist_ignore_undefined_cell is true. Unexpected results may occur due to missing library data or missing netlist data. For accurate results, provide a consistent library and netlist.
-[02/02 22:31:25     22s] Set top cell to fpga_top.
-[02/02 22:31:25     22s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:25     22s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:25     23s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
-[02/02 22:31:25     23s] late library set: default_emulate_libset_max
-[02/02 22:31:25     23s] early library set: default_emulate_libset_min
-[02/02 22:31:25     23s] Completed consistency checks. Status: Successful
-[02/02 22:31:25     23s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
-[02/02 22:31:25     23s] late library set: default_emulate_libset_max
-[02/02 22:31:25     23s] early library set: default_emulate_libset_min
-[02/02 22:31:25     23s] Completed consistency checks. Status: Successful
-[02/02 22:31:25     23s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1454.7M, current mem=1454.7M)
-[02/02 22:31:25     23s] *** Estimate the number of flat objects and h-objects before Flatten ***
-[02/02 22:31:25     23s] 	flat insts : 12572
-[02/02 22:31:25     23s] 	flat terms : 39949
-[02/02 22:31:25     23s] 	HNets : 28889
-[02/02 22:31:25     23s] 	HInsts : 1319
-[02/02 22:31:25     23s] 	HTerms : 15124
-[02/02 22:31:25     23s] 1 empty module found.
-[02/02 22:31:25     23s] Building hierarchical netlist for Cell fpga_top ...
-[02/02 22:31:25     23s] ***** UseNewTieNetMode *****.
-[02/02 22:31:25     24s] *** Netlist is NOT unique.
-[02/02 22:31:26     24s] ** info: there are 370 modules.
-[02/02 22:31:26     24s] ** info: there are 11566 stdCell insts.
-[02/02 22:31:26     24s] ** info: there are 11566 stdCell insts with at least one signal pin.
-[02/02 22:31:26     24s] 
-[02/02 22:31:26     24s] *** Memory Usage v#2 (Current mem = 2526.430M, initial mem = 832.258M) ***
-[02/02 22:31:27     24s] Set Default Input Pin Transition as 0.1 ps.
-[02/02 22:31:27     24s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:27     24s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:27     24s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:27     24s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:27     24s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:27     24s] Has not load the powerDB, will keep enalbed
-[02/02 22:31:35     28s] Extraction setup Started for TopCell fpga_top 
-[02/02 22:31:35     28s] Summary of Active RC-Corners : 
-[02/02 22:31:35     28s]  
-[02/02 22:31:35     28s]  Analysis View: default_emulate_view
-[02/02 22:31:35     28s]     RC-Corner Name        : default_emulate_rc_corner
-[02/02 22:31:35     28s]     RC-Corner Index       : 0
-[02/02 22:31:35     28s]     RC-Corner Temperature : 25 Celsius
-[02/02 22:31:35     28s]     RC-Corner Cap Table   : ''
-[02/02 22:31:35     28s]     RC-Corner PostRoute Res Factor        : 1
-[02/02 22:31:35     28s]     RC-Corner PostRoute Cap Factor        : 1
-[02/02 22:31:35     28s]     RC-Corner PostRoute XCap Factor       : 1
-[02/02 22:31:35     28s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
-[02/02 22:31:35     28s] late library set: default_emulate_libset_max
-[02/02 22:31:35     28s] early library set: default_emulate_libset_min
-[02/02 22:31:35     28s] Completed consistency checks. Status: Successful
-[02/02 22:31:35     28s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1962.9M, current mem=1724.5M)
-[02/02 22:31:36     28s] Reading timing constraints file '/dev/null' ...
-[02/02 22:31:36     28s] Current (total cpu=0:00:29.8, real=0:01:16, peak res=2093.1M, current mem=2054.1M)
-[02/02 22:31:36     28s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
-[02/02 22:31:36     28s] Summary for sequential cells identification: 
-[02/02 22:31:36     28s]   Identified SBFF number: 16
-[02/02 22:31:36     28s]   Identified MBFF number: 0
-[02/02 22:31:36     28s]   Identified SB Latch number: 2
-[02/02 22:31:36     28s]   Identified MB Latch number: 0
-[02/02 22:31:36     28s]   Not identified SBFF number: 0
-[02/02 22:31:36     28s]   Not identified MBFF number: 0
-[02/02 22:31:36     28s]   Not identified SB Latch number: 0
-[02/02 22:31:36     28s]   Not identified MB Latch number: 0
-[02/02 22:31:36     28s]   Number of sequential cells which are not FFs: 1
-[02/02 22:31:36     28s] Total number of combinational cells: 87
-[02/02 22:31:36     28s] Total number of sequential cells: 19
-[02/02 22:31:36     28s] Total number of tristate cells: 3
-[02/02 22:31:36     28s] Total number of level shifter cells: 0
-[02/02 22:31:36     28s] Total number of power gating cells: 0
-[02/02 22:31:36     28s] Total number of isolation cells: 0
-[02/02 22:31:36     28s] Total number of power switch cells: 0
-[02/02 22:31:36     28s] Total number of pulse generator cells: 0
-[02/02 22:31:36     28s] Total number of always on buffers: 0
-[02/02 22:31:36     28s] Total number of retention cells: 0
-[02/02 22:31:36     28s] Total number of physical cells: 0
-[02/02 22:31:36     28s] List of usable buffers: BUFX16 BUFX2 BUFX4 BUFX8 CLKBUFX2 CLKBUFX4 CLKBUFX8
-[02/02 22:31:36     28s] Total number of usable buffers: 7
-[02/02 22:31:36     28s] List of unusable buffers:
-[02/02 22:31:36     28s] Total number of unusable buffers: 0
-[02/02 22:31:36     28s] List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX4 CLKINVX8 INVX1 INVX16 INVX2 INVX8 INVX4
-[02/02 22:31:36     28s] Total number of usable inverters: 9
-[02/02 22:31:36     28s] List of unusable inverters:
-[02/02 22:31:36     28s] Total number of unusable inverters: 0
-[02/02 22:31:36     28s] List of identified usable delay cells: DLY1X1 DLY1X4 DLY4X4 DLY2X4
-[02/02 22:31:36     28s] Total number of identified usable delay cells: 4
-[02/02 22:31:36     28s] List of identified unusable delay cells:
-[02/02 22:31:36     28s] Total number of identified unusable delay cells: 0
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Deleting Cell Server Begin ...
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Deleting Cell Server End ...
-[02/02 22:31:36     28s] Ending "Cell type marking" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2094.1M, current mem=2094.1M)
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
-[02/02 22:31:36     28s] Summary for sequential cells identification: 
-[02/02 22:31:36     28s]   Identified SBFF number: 16
-[02/02 22:31:36     28s]   Identified MBFF number: 0
-[02/02 22:31:36     28s]   Identified SB Latch number: 2
-[02/02 22:31:36     28s]   Identified MB Latch number: 0
-[02/02 22:31:36     28s]   Not identified SBFF number: 0
-[02/02 22:31:36     28s]   Not identified MBFF number: 0
-[02/02 22:31:36     28s]   Not identified SB Latch number: 0
-[02/02 22:31:36     28s]   Not identified MB Latch number: 0
-[02/02 22:31:36     28s]   Number of sequential cells which are not FFs: 1
-[02/02 22:31:36     28s]  Visiting view : default_emulate_view
-[02/02 22:31:36     28s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = 0
-[02/02 22:31:36     28s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = -1
-[02/02 22:31:36     28s]  Visiting view : default_emulate_view
-[02/02 22:31:36     28s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = 0
-[02/02 22:31:36     28s]    : PowerDomain = none : Weighted F : unweighted  = 48.00 (1.000) with rcCorner = -1
-[02/02 22:31:36     28s] TLC MultiMap info (StdDelay):
-[02/02 22:31:36     28s]   : default_emulate_delay_corner + default_emulate_libset_max + 1 + no RcCorner := 48ps
-[02/02 22:31:36     28s]   : default_emulate_delay_corner + default_emulate_libset_max + 1 + default_emulate_rc_corner := 48ps
-[02/02 22:31:36     28s]  Setting StdDelay to: 48ps
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Deleting Cell Server Begin ...
-[02/02 22:31:36     28s] 
-[02/02 22:31:36     28s] TimeStamp Deleting Cell Server End ...
-[02/02 22:31:36     28s] **ERROR: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_gpio_ovtv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
-Extraction setup Started for TopCell fpga_top 
-[02/02 22:31:36     28s] Summary of Active RC-Corners : 
-[02/02 22:31:36     28s]  
-[02/02 22:31:36     28s]  Analysis View: default_emulate_view
-[02/02 22:31:36     28s]     RC-Corner Name        : default_emulate_rc_corner
-[02/02 22:31:36     28s]     RC-Corner Index       : 0
-[02/02 22:31:36     28s]     RC-Corner Temperature : 125 Celsius
-[02/02 22:31:36     28s]     RC-Corner Cap Table   : ''
-[02/02 22:31:36     28s]     RC-Corner PostRoute Res Factor        : 1
-[02/02 22:31:36     28s]     RC-Corner PostRoute Cap Factor        : 1
-[02/02 22:31:36     28s]     RC-Corner PostRoute XCap Factor       : 1
-[02/02 22:31:36     28s] Extraction setup Started for TopCell fpga_top 
-[02/02 22:31:36     29s] Summary of Active RC-Corners : 
-[02/02 22:31:36     29s]  
-[02/02 22:31:36     29s]  Analysis View: default_emulate_view
-[02/02 22:31:36     29s]     RC-Corner Name        : default_emulate_rc_corner
-[02/02 22:31:36     29s]     RC-Corner Index       : 0
-[02/02 22:31:36     29s]     RC-Corner Temperature : 125 Celsius
-[02/02 22:31:36     29s]     RC-Corner Cap Table   : ''
-[02/02 22:31:36     29s]     RC-Corner PostRoute Res Factor        : 1
-[02/02 22:31:36     29s]     RC-Corner PostRoute Cap Factor        : 1
-[02/02 22:31:36     29s]     RC-Corner PostRoute XCap Factor       : 1
-[02/02 22:31:36     29s] Extraction setup Started for TopCell fpga_top 
-[02/02 22:31:36     29s] Summary of Active RC-Corners : 
-[02/02 22:31:36     29s]  
-[02/02 22:31:36     29s]  Analysis View: default_emulate_view
-[02/02 22:31:36     29s]     RC-Corner Name        : default_emulate_rc_corner
-[02/02 22:31:36     29s]     RC-Corner Index       : 0
-[02/02 22:31:36     29s]     RC-Corner Temperature : 125 Celsius
-[02/02 22:31:36     29s]     RC-Corner Cap Table   : ''
-[02/02 22:31:36     29s]     RC-Corner PostRoute Res Factor        : 1
-[02/02 22:31:36     29s]     RC-Corner PostRoute Cap Factor        : 1
-[02/02 22:31:36     29s]     RC-Corner PostRoute XCap Factor       : 1
-[02/02 22:31:36     29s] **ERROR: (IMPSYC-2):	Timing information is not defined for cell sky130_fd_io__top_gpio_ovtv2; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
-Loading  (fpga_top)
-[02/02 22:31:36     29s] Traverse HInst (fpga_top)
-[02/02 22:40:45     63s] AAE_INFO: opIsDesignInPostRouteState() is 0
-[02/02 22:40:46     64s] AAE DB initialization (MEM=2939.66 CPU=0:00:00.0 REAL=0:00:01.0) 
-[02/02 22:40:46     64s] #################################################################################
-[02/02 22:40:46     64s] # Design Name: fpga_top
-[02/02 22:40:46     64s] # Design Mode: 65nm
-[02/02 22:40:46     64s] # Analysis Mode: MMMC OCV 
-[02/02 22:40:46     64s] # Parasitics Mode: No SPEF/RCDB 
-[02/02 22:40:46     64s] # Signoff Settings: SI Off 
-[02/02 22:40:46     64s] #################################################################################
-[02/02 22:40:46     64s] <CMD> get_capacitance_unit
-[02/02 22:40:46     64s] **WARN: (TA-146):	A combinational timing loop(s) was found in the design. You can find detailed information about all timing loops in the file './CTE_loops.rpt'. You should examine loop break points chosen automatically by the tool to ensure they are the most appropriate break locations. It is further recommended that validated loop break points be added to the constraint set via set_disable_timing to ensure consistent handling during the design flow.
-[02/02 22:40:47     64s] Topological Sorting (REAL = 0:00:00.0, MEM = 3029.6M, InitMEM = 3027.6M)
-[02/02 22:40:47     64s] Start delay calculation (fullDC) (1 T). (MEM=1984.94)
-[02/02 22:40:48     64s] <CMD> all_setup_analysis_views
-[02/02 22:40:48     64s] <CMD> all_hold_analysis_views
-[02/02 22:40:48     64s] <CMD> all_setup_analysis_views
-[02/02 22:40:48     64s] <CMD> get_analysis_view $view -delay_corner
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -library_set
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -late_library_set
-[02/02 22:40:48     64s] <CMD> get_library_set $lateLibSetName -timing
-[02/02 22:40:48     64s] <CMD> get_library_set $lateLibSetName -si
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -early_library_set
-[02/02 22:40:48     64s] <CMD> get_library_set $earlyLibSetName -timing
-[02/02 22:40:48     64s] <CMD> get_library_set $earlyLibSetName -si
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -power_domain_list
-[02/02 22:40:48     64s] <CMD> get_analysis_view $view -constraint_mode
-[02/02 22:40:48     64s] <CMD> get_constraint_mode $conMode -sdc_files
-[02/02 22:40:48     64s] <CMD> all_setup_analysis_views
-[02/02 22:40:48     64s] <CMD> all_hold_analysis_views
-[02/02 22:40:48     64s] <CMD> get_analysis_view $view -delay_corner
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -power_domain_list
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -library_set
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -late_library_set
-[02/02 22:40:48     64s] <CMD> get_library_set $lateLibSetName -si
-[02/02 22:40:48     64s] <CMD> get_delay_corner $dcCorner -early_library_set
-[02/02 22:40:48     64s] <CMD> get_library_set $earlyLibSetName -si
-[02/02 22:40:48     64s] Start AAE Lib Loading. (MEM=3039.16)
-[02/02 22:40:48     64s] End AAE Lib Loading. (MEM=3259.24 CPU=0:00:00.0 Real=0:00:00.0)
-[02/02 22:40:48     64s] End AAE Lib Interpolated Model. (MEM=3259.24 CPU Time=0:00:00.0, Real Time=0:00:00.0)
-[02/02 22:40:51     67s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
-[02/02 22:40:51     67s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
-[02/02 22:40:51     67s] End delay calculation. (MEM=2096.41 CPU=0:00:02.8 REAL=0:00:03.0)
-[02/02 22:40:51     67s] Begin loading slews from CTE ...
-[02/02 22:40:51     67s] Loading slews from CTE completed...
-[02/02 22:40:51     67s] End delay calculation (fullDC). (MEM=2094.24 CPU=0:00:03.1 REAL=0:00:04.0)
-[02/02 22:40:51     68s] *** CDM Built up (cpu=0:00:04.0  real=0:00:05.0  mem= 3425.8M) ***
-[02/02 22:40:52     68s] Has not load the powerDB, will keep enalbed
-[02/02 22:40:52     68s] Has not load the powerDB, will keep enalbed
-[02/02 22:40:52     68s] <CMD> report_slack_histogram
-[02/02 22:40:52     68s] 
-[02/02 22:40:52     68s] #####################################################################
-[02/02 22:40:52     68s] # report_slack_histogram at Sun Feb 02 22:40:52 CET 2025
-[02/02 22:40:52     68s] #   slack file: /tmp/ssv_tmpdir_3872135_tSPQAN/.histogram.3872135.slk
-[02/02 22:40:52     68s] #   format    : not compact, step=0.5 ns
-[02/02 22:40:52     68s] #   slack (ns): target=0.000  violating_only
-[02/02 22:40:52     68s] #####################################################################
-[02/02 22:40:52     68s] 
-[02/02 22:40:52     68s] ---------------------------------------------
-[02/02 22:40:52     68s] | Slack Range (ns)     |  Count  |     Sum  |
-[02/02 22:40:52     68s] +----------------------+---------+----------+
-[02/02 22:40:52     68s] ---------------------------------------------
-[02/02 22:56:37    113s] <CMD> setLayerPreference timingMap -isVisible 1
-[02/02 23:51:39    265s] 
+[02/10 16:59:26      0s] 		tpsxl	Tempus Timing Signoff Solution XL	23.1	checkout succeeded
+[02/10 16:59:26      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[02/10 16:59:29      1s] {{{ isCertus 0,  isCertusOrDistOptClient = 0, isInnovusCertusClient = 0}}}
+[02/10 16:59:53     14s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Tempus Timing Solution v23.11-s111_1 (64bit) 05/16/2024 09:07 (Linux 3.10.0-693.el7.x86_64)
+[02/10 16:59:55     16s] @(#)CDS: NanoRoute 23.11-s111_1 NR240401-0735/23_11-UB (database version 18.20.622) {superthreading v2.20}
+[02/10 16:59:55     16s] @(#)CDS: AAE 23.11-s031 (64bit) 05/16/2024 (Linux 3.10.0-693.el7.x86_64)
+[02/10 16:59:55     16s] @(#)CDS: CTE 23.11-s025_1 () May 16 2024 01:47:36 ( )
+[02/10 16:59:55     16s] @(#)CDS: SYNTECH 23.11-s010_1 () Apr  5 2024 04:21:08 ( )
+[02/10 16:59:55     16s] @(#)CDS: CPE v23.11-s059
+[02/10 16:59:55     16s] @(#)CDS: OA 22.61-p011 Thu Nov 30 12:26:13 2023
+[02/10 16:59:55     16s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[02/10 16:59:55     16s] @(#)CDS: RCDB 11.15.0
+[02/10 16:59:55     16s] @(#)CDS: STYLUS 23.10-a010_1 (02/06/2024 03:59 PST)
+[02/10 16:59:55     16s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[02/10 16:59:55     16s] **INFO: (TMPDIR-1001): Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_1905918_VoCkbM'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_1905918_VoCkbM'.
+[02/10 16:59:56     17s] <CMD> ::stop_gui -keepDgui
+[02/10 16:59:57     17s] Has not load the powerDB, will keep enalbed
+[02/10 16:59:57     17s] Has not load the powerDB, will keep enalbed
+[02/10 17:02:34     26s] <CMD> read_lib -max ../PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib
+[02/10 17:02:34     26s] <CMD> read_lib -min ../PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib
+[02/10 17:02:34     26s] <CMD> read_lib ../PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib
+[02/10 17:02:34     26s] <CMD> read_verilog SRC/fabric_netlists.v
+[02/10 17:02:35     27s] <CMD> set_top_module fpga_top
+[02/10 17:02:35     27s] #% Begin Load MMMC data ... (date=02/10 17:02:35, mem=1741.0M)
+[02/10 17:02:35     27s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[02/10 17:02:35     27s] #% End Load MMMC data ... (date=02/10 17:02:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1742.2M, current mem=1742.2M)
+[02/10 17:02:35     27s] Loading view definition file from .ssv_emulate_view_definition_1905918_c402deef-840f-4cd3-b632-1670033e35f6.tcl
+[02/10 17:02:35     27s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib' ...
+[02/10 17:02:35     27s] Read 109 cells in library 'sky130_ss_1.62_125' 
+[02/10 17:02:35     27s] Reading default_emulate_libset_max timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib' ...
+[02/10 17:02:35     27s] Read 109 cells in library 'sky130_tt_1.8_25' 
+[02/10 17:02:35     27s] Reading default_emulate_libset_min timing library '/home/cae1/Desktop/FPGA-OpenFPGA/PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib' ...
+[02/10 17:02:35     28s] Read 109 cells in library 'sky130_ff_1.98_0' 
+[02/10 17:02:35     28s] Ending "PreSetAnalysisView" (total cpu=0:00:00.6, real=0:00:00.0, peak res=1801.7M, current mem=1749.1M)
+[02/10 17:02:35     28s] *** End library_loading (cpu=0.01min, real=0.00min, mem=32.0M, fe_cpu=0.48min, fe_real=3.15min, fe_mem=1690.5M) ***
+[02/10 17:02:35     28s] #% Begin Load netlist data ... (date=02/10 17:02:35, mem=1749.1M)
+[02/10 17:02:36     28s] *** Begin netlist parsing (mem=1690.5M) ***
+[02/10 17:02:36     28s] Reading verilog netlist 'SRC/fabric_netlists.v'
+[02/10 17:02:36     28s] Module sky130_fd_io__top_gpio_ovtv2 is not defined and will be treated as an empty module.
+[02/10 17:02:36     28s] Undeclared bus IB_MODE_SEL in module sky130_fd_io__top_gpio_ovtv2 ... created as [1:0].
+[02/10 17:02:36     28s] Undeclared bus DM in module sky130_fd_io__top_gpio_ovtv2 ... created as [2:0].
+[02/10 17:02:36     28s] 
+[02/10 17:02:36     28s] *** Memory Usage v#2 (Current mem = 2080.477M, initial mem = 840.258M) ***
+[02/10 17:02:36     28s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=2080.5M) ***
+[02/10 17:02:36     28s] #% End Load netlist data ... (date=02/10 17:02:36, total cpu=0:00:00.4, real=0:00:01.0, peak res=1903.9M, current mem=1895.9M)
+[02/10 17:02:36     28s] **WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'sky130_fd_io__top_gpio_ovtv2' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+[02/10 17:02:36     28s] Cell 'sky130_fd_io__top_gpio_ovtv2' is referenced in the netlist but not defined in netlist, lef or timing library. Using the net connection data to mark the pin 'IN' of cell 'sky130_fd_io__top_gpio_ovtv2' as output for net 'Y' in module 'GPIO_IN'.
+[02/10 17:02:36     28s] Cell 'sky130_fd_io__top_gpio_ovtv2' is referenced in the netlist but not defined in netlist, lef or timing library. Using the net connection data to mark the pin 'TIE_HI_ESD' of cell 'sky130_fd_io__top_gpio_ovtv2' as output for net 'tie_hi_esd' in module 'GPIO_OUT'.
+[02/10 17:02:36     28s] Cell 'sky130_fd_io__top_gpio_ovtv2' is referenced in the netlist but not defined in netlist, lef or timing library. Using the net connection data to mark the pin 'VTRIP_SEL' of cell 'sky130_fd_io__top_gpio_ovtv2' as output for net 'tie_lo_esd' in module 'GPIO_OUT'.
+[02/10 17:02:36     28s] **ERROR: (UI-49):	Undefined cells in the design are not allowed, exiting.  Review the log file for undefined cell warning messages.  Provide the cell definitions or set load_netlist_ignore_undefined_cell to true and re-run.
+[02/10 17:02:36     28s] **ERROR: (UI-172):	set_top_module to fpga_top  failed
+[02/10 17:03:07     30s] 
 --------------------------------------------------------------------------------
-Exiting Tempus Timing Solution on Sun Feb  2 23:51:39 2025
-  Total CPU time:     0:04:26
-  Total real time:    1:21:46
-  Peak memory (main): 2098.18MB
+Exiting Tempus Timing Solution on Mon Feb 10 17:03:07 2025
+  Total CPU time:     0:00:31
+  Total real time:    0:03:48
+  Peak memory (main): 1896.39MB
 
-[02/02 23:51:39    265s] 
-[02/02 23:51:39    265s] *** Memory Usage v#2 (Current mem = 3427.594M, initial mem = 832.258M) ***
-[02/02 23:51:39    265s] 
-[02/02 23:51:39    265s] *** Summary of all messages that are not suppressed in this session:
-[02/02 23:51:39    265s] Severity  ID               Count  Summary                                  
-[02/02 23:51:39    265s] WARNING   UI-418               1  Undefined cells that are instantiated in...
-[02/02 23:51:39    265s] ERROR     IMPSYC-2             2  Timing information is not defined for ce...
-[02/02 23:51:39    265s] WARNING   IMPDB-2504           1  Unable to find netlist cell in the desig...
-[02/02 23:51:39    265s] WARNING   TA-112              20  A timing loop was found in the design. T...
-[02/02 23:51:39    265s] WARNING   TA-146               1  A combinational timing loop(s) was found...
-[02/02 23:51:39    265s] *** Message Summary: 23 warning(s), 2 error(s)
-[02/02 23:51:39    265s] 
-[02/02 23:51:39    265s] --- Ending "Tempus Timing Solution" (totcpu=0:04:27, real=1:21:19, mem=3427.6M) ---
+[02/10 17:03:07     30s] 
+[02/10 17:03:07     30s] *** Memory Usage v#2 (Current mem = 2073.484M, initial mem = 840.258M) ***
+[02/10 17:03:07     30s] 
+[02/10 17:03:07     30s] *** Summary of all messages that are not suppressed in this session:
+[02/10 17:03:07     30s] Severity  ID               Count  Summary                                  
+[02/10 17:03:07     30s] ERROR     UI-49                1  Undefined cells in the design are not al...
+[02/10 17:03:07     30s] ERROR     UI-93                2  %s                                       
+[02/10 17:03:07     30s] ERROR     UI-172               1  set_top_module to %s  failed             
+[02/10 17:03:07     30s] WARNING   IMPDB-2504           1  Unable to find netlist cell in the desig...
+[02/10 17:03:07     30s] *** Message Summary: 1 warning(s), 4 error(s)
+[02/10 17:03:07     30s] 
+[02/10 17:03:07     30s] --- Ending "Tempus Timing Solution" (totcpu=0:00:31.6, real=0:03:41, mem=2073.5M) ---

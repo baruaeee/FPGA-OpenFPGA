@@ -6,7 +6,7 @@
 //	Date: Thu Nov 21 16:42:28 2024
 //-------------------------------------------
 //----- Default net type -----
-// `default_nettype none
+// // `default_nettype none
 
 module and2_autocheck_top_tb;
 // ----- Local wires for global ports of FPGA fabric -----
@@ -28632,5 +28632,5 @@ endmodule
 // ----- END Verilog module for and2_autocheck_top_tb -----
 
 //----- Default net type -----
-// `default_nettype wire
+// // `default_nettype wire
 

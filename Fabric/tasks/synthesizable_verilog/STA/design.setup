@@ -1,0 +1,52 @@
+#
+# Tempus Flow Saved Design Data
+# Please do not edit.
+#
+
+#### physical data ####
+read_physical_data 0
+#### End of physical data ####
+
+#### Design Data: "General" Section ####
+#### End of "General" Section ####
+
+#### Design Data: "Library" Section ####
+set ::design_setup(timelib) {../../../../PNR/auto_3x3_sky_scl/lib/sky130_tt_1.8_25_nldm.lib}
+set ::design_setup(timelib,max) {../../../../PNR/auto_3x3_sky_scl/lib/sky130_ss_1.62_125_nldm.lib}
+set ::design_setup(timelib,min) {../../../../PNR/auto_3x3_sky_scl/lib/sky130_ff_1.98_0_nldm.lib}
+set ::design_setup(cdb_file,max) {}
+set ::design_setup(cdb_file,min) {}
+set ::design_setup(cdb_file) {}
+#### End of "Library" Section ####
+
+#### Design Data: "Design" Section ####
+set ::design_setup(data_type) {verilog}
+set ::design_setup(netlist) {SRC/fabric_netlists.v}
+set ::design_setup(topcell) {fpga_top}
+set ::design_setup(library) {}
+set ::design_setup(cell) {}
+set ::design_setup(view) {}
+set ::design_setup(timingcon_file) {../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/cbx_1__0_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/cbx_1__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/cbx_1__2_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/cby_0__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/cby_1__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/cby_2__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/disable_configurable_memory_outputs.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/disable_configure_ports.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/disable_routing_multiplexer_outputs.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/disable_sb_outputs.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/global_ports.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/logical_tile_clb_mode_clb_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/logical_tile_clb_mode_default__fle.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/logical_tile_io_mode_io_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_0__0_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_0__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_0__2_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_1__0_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_1__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_1__2_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_2__0_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_2__1_.sdc ../run001/k6_frac_N10_tileable_40nm/and2/MIN_ROUTE_CHAN_WIDTH/SDC/sb_2__2_.sdc}
+set ::design_setup(spef_file) {}
+set ::design_setup(sdf_file) {}
+#### End of "Design" Section ####
+
+#### Design Data: "QX "Sign-Off RC Extraction"" Section ####
+set ::design_setup(qxtech_file) {}
+set ::design_setup(qxlib_file) {}
+set ::design_setup(qxconf_file) {}
+#### End of "QX "Sign-Off RC Extraction"" Section ####
+
+#### Design Data: "Low Power" Section ####
+#### End of "Low Power" Section ####
+
+#### Design Data: "Physical" Section ####
+#### End of "Physical" Section ####
+
+#### Design Data: "Multi-Mode Multi-Corner" Section ####
+set ::design_setup(view_definition_file) {}
+#### End of "Multi-Mode Multi-Corner" Section ####
+
+#### Design Data: "Statistical Static Timing Analysis" Section ####
+#### End of "Statistical Static Timing Analysis" Section ####
+

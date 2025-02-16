@@ -1,5 +1,5 @@
 # Read Liberty file
-read_libs sky130_scl_9T_0_0_5_LIB/sky130_tt_1.8_25_nldm.lib
+read_libs sky130_scl_9T_0_0_5_LIB/sky130_tt_1.8_25_no_dff.lib
 
 # Read HDL/Verilod file
 read_hdl dff.v

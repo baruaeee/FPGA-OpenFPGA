@@ -51,7 +51,7 @@ fpga_top:
               - DFFRX1
             direct_interc:
           logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff:
-            - DFFSRX1
+            - DFFSRX4
           mux_tree_size2:
             - INVX1
             - const1
@@ -83,6 +83,42 @@ fpga_top:
     mux_tree_tapbuf_size2_mem:
       - DFFRX1
   sb_0__1_:
+    mux_tree_tapbuf_size8:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size8_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size7:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size7_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size3:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size3_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size4:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size4_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size2:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size2_mem:
+      - DFFRX1
+  sb_0__2_:
     mux_tree_tapbuf_size3:
       - INVX1
       - const1
@@ -98,6 +134,20 @@ fpga_top:
     mux_tree_tapbuf_size2_mem:
       - DFFRX1
   sb_1__0_:
+    mux_tree_tapbuf_size5:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size5_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size4:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size4_mem:
+      - DFFRX1
     mux_tree_tapbuf_size3:
       - INVX1
       - const1
@@ -112,7 +162,137 @@ fpga_top:
       - MX2X1
     mux_tree_tapbuf_size2_mem:
       - DFFRX1
+    mux_tree_tapbuf_size8:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size8_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size7:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size7_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size9:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size9_mem:
+      - DFFRX1
   sb_1__1_:
+    mux_tree_tapbuf_size12:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size12_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size9:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size9_mem:
+      - DFFRX1
+  sb_1__2_:
+    mux_tree_tapbuf_size8:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size8_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size7:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size7_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size4:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size4_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size3:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size3_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size2:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size2_mem:
+      - DFFRX1
+  sb_2__0_:
+    mux_tree_tapbuf_size3:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size3_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size2:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size2_mem:
+      - DFFRX1
+  sb_2__1_:
+    mux_tree_tapbuf_size9:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size9_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size7:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size7_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size8:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size8_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size4:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size4_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size3:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size3_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size2:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size2_mem:
+      - DFFRX1
+  sb_2__2_:
     mux_tree_tapbuf_size3:
       - INVX1
       - const1
@@ -157,6 +337,21 @@ fpga_top:
       - MX2X1
     mux_tree_tapbuf_size2_mem:
       - DFFRX1
+  cbx_1__2_:
+    mux_tree_tapbuf_size4:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size4_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size2:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size2_mem:
+      - DFFRX1
   cby_0__1_:
     mux_tree_tapbuf_size4:
       - INVX1
@@ -173,6 +368,21 @@ fpga_top:
     mux_tree_tapbuf_size2_mem:
       - DFFRX1
   cby_1__1_:
+    mux_tree_tapbuf_size4:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size4_mem:
+      - DFFRX1
+    mux_tree_tapbuf_size2:
+      - INVX1
+      - const1
+      - INVX4
+      - MX2X1
+    mux_tree_tapbuf_size2_mem:
+      - DFFRX1
+  cby_2__1_:
     mux_tree_tapbuf_size4:
       - INVX1
       - const1
